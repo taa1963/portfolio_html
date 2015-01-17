@@ -1,136 +1,224 @@
-﻿<html>
-
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <title>Site title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="site description">
+    <meta name="author" content="aleksandr.tupichenkov.com">
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-<div class="wrapper">
-    <div class="header">
-        <div class="header_logo">
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-1">
+            <img alt="140x140" src="img/Logo.png" class="img-responsive">
         </div>
-        <div class="header_search">
-            <div class="search">
-                <input type="search" name="q">
-                <input type="submit" value="">
+        <div class="col-md-11">
+            <div class="clearfix pull-right">
+
+                <div class="header-block header-block-search">
+                    <form role="form" class="form-inline" style="display: inline-block;">
+                        <input type="search" class="header-input search" placeholder="">
+                        <div class="vertical-line"></div>
+                        <button type="submit" class="header-input button">Search</button>
+                    </form>
+                </div>
+
+                <div class="header-block header-block-basket">
+                    <div class="header-input header-block-basket-text">
+                        <img class="header-input" src="http://lorempixel.com/31/31/sports/1">
+                        Basket 0 items - £0.00
+                    </div>
+                    <div class="vertical-line" style="height: 32px;"></div>
+                    <a class="btn header-input button" href="#">Checkout</a>
+                </div>
+
+                <div class="header-block header-block-auth">
+                    <a class="btn button" href="#">Search</a>
+                    or
+                    <a class="btn button" href="#">Search</a>
+                </div>
+
+                <div class="header-block header-block-currency">
+                    <a class="btn header-input button" href="#" role="button">£</a>
+                </div>
+
+                <div class="header-block header-block-setting">
+                    <a class="btn header-input button" href="#" role="button">B</a>
+                </div>
+
+                <!--
+
+                <div class="header_search">
+                    <div class="search">
+                        <input type="search" name="q">
+                        <input type="submit" value="">
+                    </div>
+
+                </div>
+
+                <div class="header_checkout">
+                    <div class="checkout">
+                        <input type="checkout" name="d">
+                        <input type="check"    value="Checkout">
+                    </div>
+                </div>
+
+                <div class="header_login">
+                    <div class="header_login_text">
+                        Sign Up or Log in
+                    </div>
+                </div>
+
+                <div class="header_icon1">
+                </div>
+                <div class="header_icon2">
+                </div>
+                !-->
             </div>
+            <div class="row clearfix pull-right">
+                <nav class="navbar navbar-collapse" role="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Class Packs<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Headline Example</a></li>
+                                <li><a href="#">Consectetur adipiscing elit</a></li>
+                                <li><a href="#">Praesent ut sapien</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Consectetur adipiscing elit</a></li>
+                            </ul>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Headline Example</a></li>
+                                <li><a href="#">Consectetur adipiscing elit</a></li>
+                                <li><a href="#">Praesent ut sapien</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Consectetur adipiscing elit</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Instruments & Accessories</a></li>
+                        <li><a href="#">Teaching Support</a></li>
+                        <li><a href="#">The Knowledge</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
 
-        </div>
-
-        <div class="header_checkout">
-            <div class="checkout">
-                <input type="checkout" name="d">
-                <input type="check"    value="Checkout">
             </div>
         </div>
-
-        <div class="header_login">
-            <div class="header_login_text">
-              Sign Up or Log in
-            </div>
-        </div>
-
-        <div class="header_icon1">
-        </div>
-        <div class="header_icon2">
-        </div>
-
-        <div class="header_text1">
-            Class Packs &nbsp &nbsp |
-
-            <div  class="header_text1_popup">
-            </div>
-            <div  class="header_text1_1_popup">
-            </div>
-
-        </div>
-
-        <div class="header_text2">
-            &nbsp &nbsp Instruments & Accessories &nbsp &nbsp |
-        </div>
-
-        <div class="header_text3">
-            &nbsp &nbsp Teaching Support &nbsp &nbsp |
-        </div>
-
-        <div class="header_text4">
-            &nbsp &nbsp The Knowledge &nbsp &nbsp |
-        </div>
-
-        <div class="header_text5">
-            &nbsp &nbsp Blog
-        </div>
-
     </div>
 
+    <div class="row clearfix">
+        <div class="col-md-12">
+            <div class="carousel slide" id="carousel-156765">
+                <ol class="carousel-indicators">
+                    <li data-slide-to="0" data-target="#carousel-156765" class="active" ></li>
+                    <li data-slide-to="1" data-target="#carousel-156765" class=""></li>
+                    <li data-slide-to="2" data-target="#carousel-156765" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img alt="" src="img/header.png">
+                        <div class="carousel-caption">
+                            <h4>First Thumbnail label</h4>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="http://lorempixel.com/960/534/sports/1">
+                        <div class="carousel-caption">
+                            <h4>Second Thumbnail label</h4>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="http://lorempixel.com/960/534/sports/2">
+                        <div class="carousel-caption">
+                            <h4>Third Thumbnail label</h4>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="content">
-        <div class="content1">
-            <img src="images/Content1.jpg">
+                <a class="left carousel-control" href="#carousel-156765" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-156765" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
         </div>
+    </div>
 
-
-        <div class="picture1">
-            <img src="images/Picture1.jpg">
+    <div class="row clearfix" style="margin-top: 25px">
+        <div class="col-md-3">
+            <img src="http://lorempixel.com/220/207/people/1">
             <div class="picture1_text">
                 AfricanDrumming
             </div>
         </div>
-
-            <div class="picture1">
-                <img src="images/Picture2.jpg">
-                <div class="picture1_text">
-                    IndonesianGamelan
-                </div>
-            </div>
-
-        <div class="picture1">
-            <img src="images/Picture3.jpg">
+        <div class="col-md-3">
+            <img src="http://lorempixel.com/220/207/people/2">
             <div class="picture1_text">
-                Brazilian Samba
+                AfricanDrumming
             </div>
         </div>
-
-        <div class="picture1">
-            <img src="images/Picture4.jpg">
+        <div class="col-md-3">
+            <img src="http://lorempixel.com/220/207/people/3">
             <div class="picture1_text">
-                Caribbean Steel Pans
+                AfricanDrumming
             </div>
         </div>
-
-        <div class="picture1">
-            <img src="images/Picture5.jpg">
+        <div class="col-md-3">
+            <img src="http://lorempixel.com/220/207/people/4">
             <div class="picture1_text">
-                World Percussion
+                AfricanDrumming
             </div>
         </div>
-
-        <div class="picture1">
-            <img src="images/Picture6.jpg">
+    </div>
+    <div class="row clearfix" style="margin-top: 25px">
+        <div class="col-md-3">
+            <img src="http://lorempixel.com/220/207/people/5">
             <div class="picture1_text">
-                JapaneseTaiko
+                AfricanDrumming
             </div>
         </div>
-
-        <div class="picture1">
-            <img src="images/Picture7.jpg">
+        <div class="col-md-3">
+            <img src="http://lorempixel.com/220/207/people/6">
             <div class="picture1_text">
-                EarlyYears
+                AfricanDrumming
             </div>
         </div>
-
-        <div class="picture1">
-            <img src="images/Picture8.jpg">
+        <div class="col-md-3">
+            <img src="http://lorempixel.com/220/207/people/7">
             <div class="picture1_text">
-                Teaching Support
+                AfricanDrumming
             </div>
         </div>
+        <div class="col-md-3">
+            <img src="http://lorempixel.com/220/207/people/8">
+            <div class="picture1_text">
+                AfricanDrumming
+            </div>
+        </div>
+    </div>
 
-
-
-        <div class="Content_content3">
+    <div class="row clearfix" style="margin-top: 25px">
+        <div class="col-md-6">
             <div class="Content_content3_text1">
                 Need some advice?
             </div>
@@ -144,16 +232,16 @@
             </div>
 
             <div class="Content_content3_button1">
-                <img src="images/Button1.jpg">
+                <img src="img/Button1.jpg">
             </div>
 
             <div class="Content_content3_button2">
-                <img src="images/Button2.jpg">
+                <img src="img/Button2.jpg">
             </div>
          </div>
 
 
-        <div class="Content_content3">
+        <div class="col-md-6">
             <div class="Content_content3_text1">
                 International
             </div>
@@ -167,96 +255,102 @@
             </div>
 
             <div class="Content_content3_button1">
-                <img src="images/Button1.jpg">
+                <img src="img/Button1.jpg">
             </div>
 
             <div class="Content_content3_button2">
-                <img src="images/Button2.jpg">
+                <img src="img/Button2.jpg">
             </div>
 
         </div>
+    </div>
 
-
-
-        <div class="Content_adres">
+    <div class="row clearfix" style="margin-top: 25px">
+        <div class="col-md-4">
             <div class="Content_adres_picture1">
-                <img src="images/Emal1.jpg">
+                <img src="img/Emal1.jpg">
             </div>
 
             <div class="Content_adres_text1">
                 Sign up for the latest news, offers and ideas:
             </div>
+        </div>
 
+        <div class="col-md-4">
             <div class="Content_adres_checkout">
                 <div class="Conten_checkout">
                     <input type="Conten_checkout" name="d">
                     <input type="Conten_check"    value="Sign Up">
                 </div>
             </div>
+        </div>
 
+        <div class="col-md-4">
             <div class="Content_adres_text2">
                 Follow us on:
             </div>
 
             <div class="Content_adres_icon1">
-                <img src="images/Cont_Icon1.jpg">
+                <img src="img/Cont_Icon1.jpg">
             </div>
 
             <div class="Content_adres_icon2">
-                <img src="images/Cont_Icon2.jpg">
+                <img src="img/Cont_Icon2.jpg">
             </div>
 
             <div class="Content_adres_icon3">
-                <img src="images/Cont_Icon3.jpg">
+                <img src="img/Cont_Icon3.jpg">
             </div>
 
             <div class="Content_adres_icon4">
-                <img src="images/Cont_Icon4.jpg">
+                <img src="img/Cont_Icon4.jpg">
             </div>
 
         </div>
+    </div>
 
+    <div class="row clearfix" style="margin-top: 25px">
 
         <div class="Content_icon">
 
             <div class="Content_icon_icon1">
-                <img src="images/Cont_Icon_icon1.jpg">
+                <img src="img/Cont_Icon_icon1.jpg">
             </div>
 
             <div class="Content_icon_icon2">
-                <img src="images/Cont_Icon_icon2.jpg">
+                <img src="img/Cont_Icon_icon2.jpg">
             </div>
 
             <div class="Content_icon_icon3">
-                <img src="images/Cont_Icon_icon3.jpg">
+                <img src="img/Cont_Icon_icon3.jpg">
             </div>
 
             <div class="Content_icon_icon4">
-                <img src="images/Cont_Icon_icon4.jpg">
+                <img src="img/Cont_Icon_icon4.jpg">
             </div>
 
             <div class="Content_icon_icon5">
-                <img src="images/Cont_Icon_icon5.jpg">
+                <img src="img/Cont_Icon_icon5.jpg">
             </div>
 
             <div class="Content_icon_icon6">
-                <img src="images/Cont_Icon_icon6.jpg">
+                <img src="img/Cont_Icon_icon6.jpg">
             </div>
 
             <div class="Content_icon_icon7">
-                <img src="images/Cont_Icon_icon7.jpg">
+                <img src="img/Cont_Icon_icon7.jpg">
             </div>
 
             <div class="Content_icon_icon8">
-                <img src="images/Cont_Icon_icon8.jpg">
+                <img src="img/Cont_Icon_icon8.jpg">
             </div>
 
             <div class="Content_icon_icon9">
-                <img src="images/Cont_Icon_icon9.jpg">
+                <img src="img/Cont_Icon_icon9.jpg">
             </div>
 
             <div class="Content_icon_icon10">
-                <img src="images/Cont_Icon_icon10.jpg">
+                <img src="img/Cont_Icon_icon10.jpg">
             </div>
 
         </div>
@@ -375,8 +469,6 @@
     </div>
 
 </div>
-
-
 </body>
 
 </html>

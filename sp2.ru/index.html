@@ -27,6 +27,13 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
 
+    <script>
+        lp.jQuery().ready(function() {lp.jQuery("#lp-pom-button-339").click( function(e){e.preventDefault();e.stopPropagation();
+            lp.jQuery("div.lp-pom-form form").submit();});});
+    </script>
+
+
+
 
 </head>
 
@@ -85,7 +92,7 @@
                     <div class="contact3_text_abzaz1">
                         Наш специалист приедет со всем необходимым <br>
                         оборудованием и медикаментами, сделает <br>
-                        диагностику, окажет первую помощь,<br>
+                        диагностику, окажет первую помощь, даст<br>
                         консультации и назначит дальнейшее лечение.
                     </div>
 
@@ -120,22 +127,61 @@
                     Цены:
                 </div>
                 <div class="contact_zena_array_row">
-                    <ul>
 
-                        <li>
-                            <b1> В дневное время,<br>с 9 до 22:800 р.</b1>
-                            <b2> В ночное время,<br>с 9 до 22:1600 р.</b2>
-                        </li>
+                    <table class="table">
+                        <tr>
+                            <th>
+                            </th>
+                            <th>
+                            </th>
 
-                        <li><img src="img/contact_array.png"><a>Текстильщики, Печатники,<br> Кузьминки, Люблино —</a>
-                            <b> 800 &nbsp; р. </b>
-                            <b3> 1600 р.</b3>
-                        </li>
+                            <th class="first1">
+                                <a1>
+                                В дневное время,<br>
+                                с 9 до 22:
+                                </a1>
+                            </th>
+                            <th class="first1">
+                                <a1>
+                                В ночное время,<br>
+                                с 9 до 22:
+                                </a1>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="img/contact_array.png">.
+                            </td>
+                            <td class="first">
+                                Текстильщики, Печатники,<br>
+                                Кузьминки, Люблино —
+                            </td>
+                            <td class="first_color">
+                                <a>800 p.</a>
+                            </td>
+                            <td class="first_color">
+                                <a>1600 р.</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="img/contact_array.png">
+                            </td>
+                            <td class="first">
+                                Остальные районы —
+                            </td>
+                            <td class="first_color">
+                                <a>1500 р.</a>
+                            </td>
+                            <td class="first_color">
+                                <a>3000 р.</a>
+                            </td>
+                        </tr>
+                    </table>
 
-                        <li><img src="img/contact_array.png"><a>Остальные районы —</a> <b> 1500 р.</b>
-                            <b3> 3000 р.</b3>
-                        </li>
-                    </ul>
+
+
+
 
                 </div>
             </div>
@@ -573,11 +619,14 @@
             Заказать звонок:
         </div>
 
+        <div class="content_order_telefon" id="lp-pom-form-338"   >
+            <form action="http://www.veterinarniy-vrach-na-dom.ru/fsg?pageId=ea2ec640-314b-11e4-b46f-123140013162&variant=a" method="POST">
 
-        <div class="content_order_telefon">
+                <input type="hidden" name="pageId" value="ea2ec640-314b-11e4-b46f-123140013162"><input type="hidden" name="pageVariant" value="a">
             <label for="telefon" class="main" id="label_телефон">Телефон&nbsp;*</label>
             <input type="text" id="telefon" name="телефон" class="text form_elem_телефон">
             <input type="button" id="button" name="button_телефон" class="label" value="Отправить">
+            </form>
         </div>
 
         <div class="content_order_text1">

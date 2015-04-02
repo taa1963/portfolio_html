@@ -14,7 +14,7 @@
 }
 
 .contact {
-    height: 948px;
+    height: 1010px;
     width: 960px;
     display: block;
     margin-left: auto;
@@ -41,6 +41,7 @@
     height: 96px;
     position: absolute;
     margin-left: 40px;
+    margin-top: 11px;
 }
 
 .contact_tex1 {
@@ -54,7 +55,7 @@
     width: auto;
     position: absolute;
     left: 172px;
-    top: 22px;
+    top: 29px;
     z-index: 65;
 }
 
@@ -76,20 +77,23 @@
     display: block;
     position: absolute;
     color: rgb(42, 105, 153);
-    font-family: helvetica, arial, 'sans serif';
+    font-family: 'trebuchet ms', helvetica, sans-serif;
     font-size: 28px;
     font-style: normal;
     font-weight: bold;
+    height: auto;
+    line-height: 0px;
+    width: auto;
     left: 702px;
-    top: 24px;
+    top: 52px;
     z-index: 118;
 }
 
 .contact_marker {
     width: 269px;
     height: 23px;
-    left: 722px;
-    top: 54px;
+    left: 750px;
+    top: 70px;
     display: block;
     position: absolute;
 }
@@ -593,7 +597,7 @@
     font-family: 'trebuchet ms', helvetica, sans-serif;
     font-size: 22px;
     line-height: 25px;
-    margin-left: 45px;
+    margin-left: 30px;
     margin-top: -35px;
 }
 
@@ -735,8 +739,8 @@
 .content_reviews {
     display: block;
     width: auto;
-    height: auto;
-}
+    height: 1426px;
+ }
 
 .content_reviews_bloc {
     display: block;
@@ -846,7 +850,6 @@
 .content_order_bloc {
     display: block;
     width: 960px;
-    background-color: rgba(255, 255, 255, 1);
     height: auto;
     margin-right: auto;
     margin-left: auto;
@@ -872,7 +875,8 @@
     margin-right: auto;
 }
 
-.content_order_telefon > label {
+
+.content_order_telefon >form> label {
     color: rgb(42, 105, 153);
     cursor: default;
     display: block;
@@ -887,7 +891,7 @@
     margin-top: 10px;
 }
 
-.content_order_telefon > input#telefon {
+.content_order_telefon >form > input#telefon {
     display: block;
     border-style: solid;
     border-width: 1px;
@@ -899,7 +903,7 @@
     border-radius: 5px;
 }
 
-.content_order_telefon > input#button {
+.content_order_telefon  >form > input#button {
     display: block;
     width: 230px;
     height: 40px;
@@ -911,12 +915,19 @@
     font-weight: bold;
     text-align: center;
     text-shadow: rgb(92, 22, 10) 1px 1px 0px;
-    background-color: rgb(255, 160, 122);
+    background: linear-gradient(#ffa07a,#e66540);
+    border-width: 1px;
+}
+
+.content_order_telefon  >form > input#button:hover{
+    background-color: #f2825d;
+    background: linear-gradient(#f2825d,#db5131);
+    box-shadow: inset 0px 1px 0px #ffc2ae,inset 0 -1px 2px #a73e25;
 }
 
 .content_order_text1 {
     display: block;
-    font-family: helvetica, arial, 'sans serif';
+    font-family: 'trebuchet ms', helvetica, sans-serif;
     color: rgb(42, 105, 153);
     font-size: 20px;
     height: 64px;
@@ -924,21 +935,24 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 449px;
+    width: 960px;
+    text-align: center;
     margin-top: 50px;
 }
 
 .content_order_text2 {
     display: block;
-    font-family: helvetica, arial, 'sans serif';
+    font-family: 'trebuchet ms', helvetica, sans-serif;
     color: rgb(42, 105, 153);
     font-size: 20px;
+    font-weight: 900;
     height: 64px;
     line-height: 32px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 490px;
+    width: 960px;
+    text-align: center;
     margin-top: 100px;
 
 }

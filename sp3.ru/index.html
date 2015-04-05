@@ -119,21 +119,51 @@
                     Цены:
                 </div>
                 <div class="contact_zena_array_row">
-                    <ul>
 
-                        <li>
-                            <b1> В клинике</b1>
-                            <b2> На дому</b2>
-                        </li>
+                    <table class="table">
+                        <tr>
+                            <th style="width:5%"> </th>
+                            <th style="width:30%" > </th>
 
-                        <li><img src="img/contact_array.png"><a>Механическая чистка</a> <b> 500 &nbsp; р. </b>
-                            <b3> 1500 р.</b3>
-                        </li>
+                            <th  style="width:30%">
+                                <span> В клинике </span>
+                            </th>
+                            <th  style="width:30%">
+                                <span> На дому </span>
+                            </th>
 
-                        <li><img src="img/contact_array.png"><a>Ультразвуковая чистка</a> <b> 1500 р.</b>
-                            <b3> 2500 р.</b3>
-                        </li>
-                    </ul>
+                        </tr>
+                        <tr>
+                            <td style="width:5%" >
+                                <img src="img/contact_array.png">.
+                            </td>
+                            <td style="width:30%">
+                                <span>Механическая чистка</span>
+                            </td>
+                            <td style="width:30%">
+                                <a>500 p.</a>
+                            </td>
+                            <td style="width:30%">
+                                <a>1500 р.</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:5%">
+                                <img src="img/contact_array.png">
+                            </td>
+                            <td style="width:30%">
+                                <span>
+                                Ультразвуковая чистка
+                                    </span>
+                            </td>
+                            <td style="width:30%">
+                                <a>1500 р.</a>
+                            </td>
+                            <td style="width:30%">
+                                <a>2500 р.</a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -206,7 +236,7 @@
 
         <div class="content_attention_futer">
             Регулярная чистка зубов позволит избежать этих проблем и продлит здоровую жизнь вашего питомца.
-        </div>
+         </div>
 
 
     </div>
@@ -239,10 +269,10 @@
 
         <div class="content_services_block2">
 
-            <div class="content_services_block_title">
+            <div class="content_services_block2_title">
                 Дополнительные услуги:
             </div>
-            <div class="content_services_block_text">
+            <div class="content_services_block2_text">
                 <ul>
                     <li><img src="img/contact_array2.png"><a>Стрижка когтей</a><b>100p</b></li>
                     <li><img src="img/contact_array2.png"><a>Обработка ушных раковин</a> <b>200p</b></li>
@@ -314,6 +344,9 @@
             <br>
             Наши врачи:
         </div>
+
+      <div class="content_foto_foto">
+
         <div class="content_foto1">
             <img src="img/foto_vraz1.jpg">
 
@@ -379,6 +412,8 @@
                 маникюр для животных
             </div>
         </div>
+      </div>
+
 
     </div>
 
@@ -562,7 +597,7 @@
             Делайте профессиональную чистку зубов животного регулярно и своевременно.
         </div>
 
-        <div class="content_attention2_block_text">
+        <div class="content_attention2_block_text2">
             Продлите здоровую жизнь своего питомца!
         </div>
 
@@ -589,11 +624,11 @@
         <div class="content_order_title">
             Заказать звонок:
         </div>
-        <div class="content_order_telefon" id="lp-pom-form-338"   >
-            <form action="http://www.veterinarniy-vrach-na-dom.ru/fsg?pageId=ea2ec640-314b-11e4-b46f-123140013162&variant=a" method="POST">
+        <div class="content_order_telefon" id="content_order_telefon"   >
+            <form action="handler.php"  target="handler.php"  method="POST">
 
-                <input type="hidden" name="pageId" value="ea2ec640-314b-11e4-b46f-123140013162"><input type="hidden" name="pageVariant" value="a">
-                <label for="telefon" class="main" id="label_телефон">Телефон&nbsp;*</label>
+                <input type="hidden" name="pageId" value="62"><input type="hidden" name="pageVariant" value="a">
+                <label for="telefon" class="main" id="label_телефон">Телефон</label>
                 <input type="text" id="telefon" name="телефон" class="text form_elem_телефон">
                 <input type="button" id="button" name="button_телефон" class="label" value="Отправить">
             </form>

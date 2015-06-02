@@ -9,6 +9,9 @@
     margin: 0 auto;
     display: block;
 }
+.bloc{
+    height: 386px;
+}
 
 .navbar-fixed-top {
     width: 1170px;

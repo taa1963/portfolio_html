@@ -1,0 +1,208 @@
+.container{
+width: auto;
+height: auto;
+}
+
+.header{
+   background-color: beige;
+    height: 80px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.Menu{
+    border-bottom: none;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs >ul{
+    border-bottom: none;
+}
+
+.nav-tabs >li >a{
+    color: #000000;
+    border-right: 1px solid #bbbbbb;
+}
+
+.nav-tabs  >li>a:hover{
+    color: beige;
+    background-color: red;
+}
+
+.firm_adress{
+    display: block;
+    float: right;
+}
+
+.name_firm{
+    display: inline;
+    font-family: Arial-Black;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.firm_tel{
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 16px;
+    margin-right: 25px;
+    float: right;
+}
+
+
+.bloc1{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background: url("../img/fon1.png") repeat;
+}
+
+.bloc1_opis{
+    padding-top: 20px;
+    margin-left: 50px;
+    width: auto;
+    height: auto;
+ }
+
+.bloc1_opis_text1{
+    font-family: Arial;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.bloc1_opis_text2{
+    font-family: Arial;
+    font-size: 24px;
+    color: #d8c67c;
+}
+
+.bloc1_telefon{
+    float: right;
+    position: relative;
+}
+
+.bloc1_telefon_text1{
+    font-family: Arial;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.bloc1_zajv_text1{
+    font-family: Arial;
+    font-size: 22px;
+    color: #e54c3a;
+    margin-left: 250px;
+    height: 45px;
+}
+
+
+.bloc1_zajv{
+    width: 400px;
+    height: 342px;
+    background-color: #ffffff;
+}
+
+.bloc1_zajv_text2{
+    font-family: Arial;
+    font-size: 22px;
+    color:#6e6e6e;
+    margin-left: 30px;
+ }
+
+
+.bloc1_zajv_text3 > input{
+    width: 350px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.bloc1_zajv_text4 > input{
+    width: 350px;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.bloc1_zajv_button > button{
+    width: 250px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 2px;
+    margin-left: 30px;
+    background: linear-gradient(to top,#e54e3d,#ec7b6d);
+    color: #fffffd;
+}
+
+.company{
+    display: inline-block;
+    background: #dae8f1;
+    width: 100%;
+}
+
+.company_text1{
+  font-family: Arial-Black;
+  font-size: 24px;
+  color:#313131;
+}
+
+.company_text2{
+    font-family: Arial-Black;
+    font-size: 20px;
+    color:#313131;
+}
+
+.company_text3{
+    font-family: Arial-Black;
+    font-size: 20px;
+    color:#a5aeb5;
+}
+
+.products{
+    display: inline-block;
+    width: 100%;
+}
+
+.products_text1{
+    font-family: Arial-Black;
+    font-size: 28px;
+    color:#313131;
+}
+
+.price{
+    display: inline-block;
+    background: #dae8f1;
+    width: 100%;
+}
+
+.table {
+    border: 1px #ff0000 solid;
+}
+.table>thead>tr>th{
+    border: 1px #ff0000 solid;
+}
+
+.table>tbody>tr.success>td{
+    border: 1px #ff0000 solid;
+}
+
+.footers{
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    background-color: #25364a;
+}
+
+.footers_text1{
+    font-family: Arial-Black;
+    font-size: 16px;
+    color:#fffffd;
+}

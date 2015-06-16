@@ -8,10 +8,19 @@
     max-width: 200px;
     margin: 0 auto;
     display: block;
+    text-align: center;
 }
 .bloc{
-    height: 386px;
+    height: 486px;
+    border: 2px solid black;
+    margin-top: 10px;
 }
+.bloc h3{
+   text-align: center;
+    color: darkblue;
+}
+
+
 
 .navbar-fixed-top {
     width: 1170px;
@@ -29,6 +38,8 @@
     border-color: #e7e7e7;
     text-align: center;
     white-space: normal;
+    display: block;
+
 }
 
 .portfolio {
@@ -37,4 +48,7 @@
 
 .portfolio_description {
     color: #333;
+    display: block;
+    margin-top: 20px;
+
 }

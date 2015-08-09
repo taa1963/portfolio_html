@@ -1,0 +1,429 @@
+.body {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/*Описание header и его компонентов */
+
+.header {
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.header_logo_contact {
+    width: 960px;
+    height: 110px;
+    margin: 0 auto;
+}
+
+
+.header_logo {
+    padding: 10px 0 0 20px;
+    display: inline-block;
+}
+
+.header_titel {
+    display: inline-block;
+    font-size: 33px;
+    font-family: "Myriad Pro";
+    color: #039dea;
+    padding: 15px 0 0 20px;
+    position: absolute;
+}
+
+.header_telefon {
+    display: inline-block;
+    font-size: 25px;
+    font-family: "Myriad Pro";
+    color: #fe8900;
+    padding: 25px 30px 0 0;
+    float: right;
+}
+
+.header_text1 {
+    display: block;
+    font-size: 17px;
+    font-family: "Myriad Pro";
+    color: #000000;
+    margin-top: -45px;
+    margin-left: 130px;
+}
+
+/*		slider		*/
+
+.slider_contact {
+    display: inline-block;
+    width: 960px;
+    height: 539px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#slider {
+    display: block;
+    position: relative;
+    float: left;
+    margin: 0 0 0 20px;
+    width: 960px;
+    height: 529px;
+}
+
+#cyclePager {
+    position: absolute;
+    display: inline-block;
+    height: 18px;
+    overflow: hidden;
+    left: 50%;
+    bottom: 50px;
+    z-index: 99;
+}
+
+
+#cyclePager a {
+    background: transparent url("../img/pager-gal1.png") 0 0 no-repeat;
+    display: inline-block;
+     height: 18px;
+    width: 30px;
+    overflow: hidden;
+    left: 50%;
+    bottom: 50px;
+    text-indent: -9999px;
+
+}
+
+#cyclePager a:hover,
+#cyclePager a.activeSlide {
+    background-position: -17px 0;
+}
+
+
+.header_form {
+    display: inline-block;
+    position: absolute;
+    width: 325px;
+    height: 330px;
+
+    float: right;
+    z-index: 99;
+    margin-top: 210px;
+    margin-left: -330px;
+}
+
+.header_form_text1{
+
+    font: 17px "Myriad Pro";
+    color: #000000;
+    text-align: center;
+}
+
+.header_name {
+    width: 270px;
+    height: 38px;
+     margin-left: 30px;
+    float: left;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search {
+    height: 38px;
+    display: inline-block;
+}
+
+input[type="search"] {
+    height: 38px;
+    width: 40px;
+    border: none;
+    float: left;
+    display: inline-block;
+    background: url("../img/Form_img1.jpg") no-repeat 50% 50%;
+}
+input[type="text"] {
+    border: none;
+    height: 38px;
+    width: 228px;
+    display: inline-block;
+    background-color: #f1f1f1;
+}
+
+.header_tel{
+    width: 270px;
+    height: 38px;
+    margin-left: 30px;
+    float: left;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header_tel input[type="search"] {
+    height: 38px;
+    width: 40px;
+    border: none;
+    float: left;
+    display: inline-block;
+    background: url("../img/Form_img2.jpg") no-repeat 50% 50%;
+}
+
+
+.input_name{
+    width: 270px;
+    height: 40px;
+    background-color: #f1f1f1;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.input-group{
+    width: 270px;
+    height: 40px;
+    background-color: #ffa07a;
+    margin-top: 30px;
+
+
+}
+
+
+/*		Меню и его комопоненты */
+
+.menu {
+    width: auto;
+    height: 105px;
+    background-color: #21bfa3;
+    overflow: hidden;
+    list-style: none;
+
+}
+
+.menu_punkt {
+    width: 960px;
+    height: 105px;
+    margin: 0 auto;
+
+}
+
+.menu_punkt1 {
+    display: inline-block;
+    padding-left: 200px;
+    padding-top: 20px;
+}
+
+.menu_punkt1 img {
+    border-radius: 30px;
+}
+
+.menu_punkt1 a {
+    font: 14px "Myriad Pro";
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu_punkt1 a:hover {
+    text-decoration: underline;
+}
+
+.menu_punkt2 {
+    display: inline-block;
+    padding-left: 200px;
+}
+
+.menu_punkt2 img {
+    padding-left: 35px;
+}
+
+.menu_punkt2 a {
+    font: 27px "Myriad Pro";
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu_punkt3 {
+
+    display: inline-block;
+    padding-left: 200px;
+}
+
+.menu_punkt3 img {
+    border-radius: 30px;
+}
+
+.menu_punkt3 a {
+    font: 14px "Myriad Pro";
+    color: #000000;
+    text-decoration: none;
+}
+
+/*		Контент сайта */
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+    display: block;
+    background-color: #ffffff;
+}
+
+.content_titel img {
+
+    padding-top: 10px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.content_titel p {
+    font: 24px "Myriad Pro";
+    color: #000000;
+    display: inline-block;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.post-main {
+
+    height: 450px;
+    width: 200px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+
+}
+
+.post-main img {
+    margin: 0;
+    padding: 0;
+    height: 272px;
+    width: 196px;
+    border: 1px solid #7d7b7c;
+}
+
+.header_form .item-post{
+    width: 270px;
+    height: 58px;
+    background-image: url("../img/button_head.png");
+    display: inline-block;
+}
+
+.header_form p{
+    font: 13px "Myriad Pro";
+    color: #dadada;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.post-main p {
+    font: 20px "Myriad Pro";
+    color: #000000;
+    text-align: center;
+}
+
+.post-main .item-buy {
+    width: 190px;
+    height: 42px;
+    background-image: url("../img/button_buy.png");
+    font: 23px "Myriad Pro";
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 42px;
+}
+
+.content p {
+    font: 20px "Myriad Pro";
+    color: #000000;
+    text-align: center;
+    margin-top: 7px;
+}
+
+/*		Футер (подвал) сайта и его комопоненты */
+
+.footer_menu {
+    width: auto;
+    height: 105px;
+    background-color: #21bfa3;
+    overflow: hidden;
+    list-style: none;
+}
+
+.footer_menu_img {
+    display: inline-block;
+    padding-left: 550px;
+    padding-top: 20px;
+}
+
+.footer_menu_text {
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 30px;
+    font: 27px "Myriad Pro";
+    color: #ffffff;
+    position: absolute;
+}
+
+.footer_contact {
+    width: 960px;
+    margin: 0 auto;
+    height: 500px;
+    background-color: #ffffff;
+}
+
+.footer_contact_card {
+    display: inline-block;
+    padding-top: 50px;
+
+}
+
+.footer_contact_text1 {
+    display: inline-block;
+    position: absolute;
+    font: 20px "Myriad Pro";
+    color: #000000;
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 20px;
+}
+
+.footer_contact_text1 p {
+    font: 36px "Myriad Pro";
+    color: #000000;
+    margin: 0;
+}
+
+.footer_contact_text2 {
+    display: block;
+    height: 128px;
+}
+
+.footer_contact_titel {
+    display: inline-block;
+    font-size: 33px;
+    font-family: "Myriad Pro";
+    color: #039dea;
+    padding-top: 50px;
+    padding-left: 150px;
+}
+
+.footer_contact_logo {
+    display: inline-block;
+    position: absolute;
+    padding-left: 100px;
+    padding-top: 30px;
+}
+
+
+

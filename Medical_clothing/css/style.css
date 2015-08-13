@@ -50,14 +50,22 @@
     float: right;
 }
 
-.header_text1 {
+.header_text1{
     display: block;
     font-size: 17px;
+     margin-top: -45px;
+    margin-left: 130px;
+
+}
+
+.header_text1 a{
     font-family: "Myriad Pro";
     color: #000000;
-    margin-top: -45px;
-    margin-left: 130px;
+    text-decoration: none;
 }
+
+
+
 
 /*		slider		*/
 
@@ -80,23 +88,24 @@
 
 #cyclePager {
     position: absolute;
-    display: inline-block;
     height: 18px;
     overflow: hidden;
     left: 50%;
     bottom: 50px;
     z-index: 99;
+
 }
 
 
 #cyclePager a {
-    background: transparent url("../img/pager-gal1.png") 0 0 no-repeat;
+    background: transparent url("../img/pager-gal2.png") 0 0 no-repeat;
     display: inline-block;
-     height: 18px;
-    width: 30px;
+     height: 17px;
+    width: 17px;
     overflow: hidden;
     left: 50%;
     bottom: 50px;
+    margin-left: 10px;
     text-indent: -9999px;
 
 }
@@ -211,7 +220,12 @@ input[type="text"] {
     width: 960px;
     height: 105px;
     margin: 0 auto;
+}
 
+.menu_punkt_bloc{
+    width: 580px;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .menu_punkt1 {
@@ -276,7 +290,7 @@ input[type="text"] {
 
 .content_titel img {
 
-    padding-top: 10px;
+
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -343,6 +357,23 @@ input[type="text"] {
     line-height: 42px;
 }
 
+.post-main .poplight {
+    width: 190px;
+    height: 42px;
+    background-image: url("../img/button_buy.png");
+    font: 23px "Myriad Pro";
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 42px;
+
+
+}
+
+
+
+
 .content p {
     font: 20px "Myriad Pro";
     color: #000000;
@@ -358,21 +389,27 @@ input[type="text"] {
     background-color: #21bfa3;
     overflow: hidden;
     list-style: none;
+    display: block;
+    position: relative;
+}
+
+.footer_menu_content{
+    width: 190px;
+    display: block;
+    margin: 0 auto;
 }
 
 .footer_menu_img {
-    display: inline-block;
-    padding-left: 550px;
+    width: 52px;
     padding-top: 20px;
+    display: inline-block;
 }
 
 .footer_menu_text {
-    display: inline-block;
-    padding-left: 10px;
-    padding-top: 30px;
     font: 27px "Myriad Pro";
     color: #ffffff;
-    position: absolute;
+    display: inline-block;
+
 }
 
 .footer_contact {
@@ -424,6 +461,3 @@ input[type="text"] {
     padding-left: 100px;
     padding-top: 30px;
 }
-
-
-

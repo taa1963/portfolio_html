@@ -125,17 +125,7 @@
     color: #313132;
     padding: 10px 0 0 20px;
 }
-.slider_info{
-    display: block;
-    position: absolute;
-    margin: 30px 20px 25px 412px;
-}
 
-.slider_info p{
-    font-size: 46px;
-    font-family: "Myriad Pro";
-    color: #046b91;
-}
 
 #slider {
     display: block;
@@ -335,8 +325,6 @@ input[type="text"] {
     color: #ff0000;
     text-align: center;
     padding-top: 50px;
-    padding-left: 35px;
-
 }
 
 .post-main img {
@@ -511,7 +499,6 @@ input[type="text"] {
 
 .footer_menu {
     width: auto;
-    height: 105px;
     background-color: #21bfa3;
     overflow: hidden;
     list-style: none;
@@ -541,18 +528,20 @@ input[type="text"] {
 .footer_contact {
     width: 960px;
     margin: 0 auto;
-    height: 500px;
     background-color: #ffffff;
 }
 
 .footer_contact_card {
     display: inline-block;
+    width: 491px;
     padding-top: 50px;
+    padding-bottom: 50px;
 
 }
 
 .footer_contact_text1 {
     display: inline-block;
+    width: 469px;
     position: absolute;
     font: 20px "Myriad Pro";
     color: #000000;
@@ -569,7 +558,7 @@ input[type="text"] {
 
 .footer_contact_text2 {
     display: block;
-    height: 128px;
+
 }
 
 .footer_contact_titel {
@@ -586,4 +575,21 @@ input[type="text"] {
     position: absolute;
     padding-left: 100px;
     padding-top: 30px;
+}
+.thumb img {
+    filter: none; /* IE6-9 */
+    height: 267px;
+    width: 280px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+
+}
+.thumb img:hover {
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1);
+}
+.thumb {
+    padding:5px;
 }

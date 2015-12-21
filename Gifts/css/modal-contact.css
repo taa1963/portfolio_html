@@ -22,28 +22,27 @@
 /*--Модальное окно--*/
 .popup_block{
 	position: fixed;
-    height: 500px;
 	top: 50%;
     left: 50%;
 	z-index: 99999;
 	display: none; /*--по умолчанию скрыт--*/
 	float: left;
     -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
+    -moz-box-sizing: content-box; 
     box-sizing: content-box;
-    padding: 15px;
-
-    /*-- скругленные углы--*/
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    background: #fff;
-    /*--тени для блока--*/
-    -webkit-box-shadow: 0px 0px 20px #000;
-    -moz-box-shadow: 0px 0px 20px #000;
-    box-shadow: 0px 0px 20px #000;
+	padding: 15px;
+	border: 10px solid #6e6e6e;
+/*-- скругленные углы--*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #fff;
+/*--тени для блока--*/
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
     color: #000;
-    font-size: .9em;
+	font-size: .9em;
 }
 /*--Фиксированное позиционирование для тупого IE6--*/
 *html #fade {
@@ -54,72 +53,19 @@
 }
 /*--Блок содержания--*/
 .note{
-	display: block;
-    float: right;
-    width: 50%;
-
+	margin:0 0 30px 0;
 }
-
+.note img{
+    float:left;
+	margin:5px 10px 5px 0;
+	width: 100px;
+	height: 100px;
+}
 .note h1{
-	color: red;
-    font-family:PTsans;
-    font-size: 18px;
-    font-weight:bold;
-}
-
-.note p{
-    color: black;
-    font-family:PTsans;
-    font-size: 14px;
-}
-
-.line{
-    display: inline-block;
-    width: 100%;
-    min-height: 40px;
-    background-color: #ce1e0f;
-}
-.line a{
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    text-decoration:underline;
-    margin-top: 10px;
-    color: #f6f6f6;
-}
-
-.line2{
-    display: inline-block;
-    width: 100%;
-    min-height: 40px;
-}
-.line2 a{
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    margin-top: 10px;
-    color: #d5d5d5;
-    text-decoration:none;
-}
-
-.note2{
-    width: 100%;
-    display: inline-block;
-    height: auto;
- }
-
-.note2 b{
-    display: block;
-    width: auto;
-}
-
-.note2 p{
-    display: block;
-    width: auto;
-
-}
-
-
+	color: #008000;
+	text-shadow: 0 1px 3px rgba(0,0,0,.3);
+    font:24px Monotype Corsiva, Arial;      
+	}
 /* формируем кнопку закрытия */
 .close {
     position: absolute;
@@ -169,19 +115,23 @@
     padding-top: 10px;
 /* устанавливаем необходимую ширину формы в зависимости от дизайна
  ** форма отлично растягивается */
-    width: 50%;
-
+    width: 100%;
+    border: 1px solid #D3D3D3;
+/* закругляем углы */
+    border-radius:8px;
+    background: none repeat scroll 0 0 #FFFFFF;
+/* добавляем тени для блока*/
+    box-shadow: 0 0 5px #CCCCCC, 1px 1px 0 #FFFFFF inset, -1px -1px 0 #FFFFFF inset, 0 0 15px #DDDDDD inset;
     text-align: left;
-    float: left;
 }
 /* формируем элементы внутри формы */
 #form fieldset{
     display:inline;
     float:left;
     margin:0;
-    margin-left:2px;
+    margin-left:26px;
     padding:0;
-    width: 62%;
+    width: 42%;
     border:none;	
 }		
  
@@ -195,13 +145,13 @@
     color:#5B5B5B;
 }	
 #form input, #form textarea{
-    padding:0px;
+    padding:3px;
 /* отключаем бордюры у инпутов и текстового поля */
     border: none;
 /* закругляем углы полей ввода */
-    -webkit-border-radius:.0em;
-    -moz-border-radius:.0em;
-    border-radius:.0em;
+    -webkit-border-radius:.3em;
+    -moz-border-radius:.3em;
+    border-radius:.3em;		
     background-color: #F7F7F7;
 /* добавляем внутренние тени у инпутов и текстового поля */
     box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
@@ -210,10 +160,7 @@
 }
 #form input {
 /* устанавливаем ширину инпутов */
-    width: 205px;
-}
-#first_radio p input{
-    width: 12px;
+width:90%;
 }
 /* изменяем оформление полей ввода при фокусе */
 #form input:focus, #form textarea:focus {
@@ -227,15 +174,15 @@
 /* устанавливаем ширину текстового поля */
     height:120px;
 }
-/* формируем нижний сектор формы */
-.popup_block p.submit{
+/* формируем нижний сектор формы */					
+#form p.submit{
     clear:both;
     margin:0;
     padding: 10px 25px 20px;
     text-align:right;
 }
-/* оформляем кнопку отправки */
-.popup_block button{
+/* оформляем кнопку отправки */	
+#form button{
 /* устанавливаем необходимую ширину кнопки */
     border: solid 1px #2f96b4;
 /* закругляем углы кнопки */
@@ -257,7 +204,8 @@
     cursor:pointer;
 }
 /* изменяем оформление кнопки при наведении */
-.popup_block{ border-color: #2C8BA5;
+#form button:hover {
+    border-color: #2C8BA5;
     box-shadow: none;
 }
 /* изменяем оформление кнопки при нажатии */

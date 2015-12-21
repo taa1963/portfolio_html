@@ -62,17 +62,37 @@
     width: 17%;
     height: auto;
     display: inline-block;
-    background: url("../img/button1.png") no-repeat 50% 50%;
     padding: 55px 0px 20px 40px;
 }
+
+.header_button1 .btnExample{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    padding: 55px 0px 20px 40px;
+    background: url("../img/button1.png") no-repeat 50% 50%;
+    border: 0;
+}
+
+
 
 .header_button2{
     width: 17%;
     height: auto;
     display: inline-block;
-    background: url("../img/button2.png") no-repeat 50% 100%;
     padding: 55px 0px 20px 40px;
 }
+
+.header_button2 .btnExample{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    padding: 55px 0px 0px 40px;
+    background: url("../img/button2.png") no-repeat 50% 100%;
+    border: 0;
+}
+
+
 
 
 /*Описание transfer (Профессиональный перевод) и его компонентов */
@@ -176,14 +196,21 @@
     width: 100%;
 }
 
-.search-main button{
+
+.transfer_bloc_form_button .btnExample{
+
     width: 40%;
     height: 50px;
     display: inline-block;
     margin-left: 10px;
     margin-top: 30px;
-    background: url("../img/buttonForm1.png") no-repeat 50% 50%;
+    background-color: #e38d13;
+    color: #080808;
+    border-radius: 20px;
+    border: 0;
 }
+
+
 
 .transfer_bloc_text3{
     width: 50%;
@@ -381,11 +408,27 @@
 }
 
 .cost_of_translation_button1{
-   display: inline-block;
+   display: block;
     margin-left: 10px;
     margin-top: 30px;
-    background: url("../img/button1_Cost.png") no-repeat 50% 50%;
+
 }
+
+.cost_of_translation_button1 .btnExample{
+    width: 60%;
+    height: 50px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 30px;
+    background-color:darkslateblue;
+    font-size: 20px;
+    font-family: "Myriad Pro";
+    color: #f6f6f8;
+    border-radius: 20px;
+    border: 0;
+}
+
+
 
 .cost_of_translation_bloc2{
     display: block;

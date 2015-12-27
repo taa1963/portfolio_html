@@ -1,0 +1,18 @@
+@font-face {
+    font-family: DINPro-Bold; /* Гарнитура шрифта */
+    src: url(../fonts/DINPro-Bold.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+    font-family: DINPro-Regular; /* Гарнитура шрифта */
+    src: url(../fonts/DINPro-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+    font-family: DINPro; /* Гарнитура шрифта */
+    src: url(../fonts/DINPro.otf); /* Путь к файлу со шрифтом */
+}
+@font-face{
+    font-family: Arial-Regular; /* Гарнитура шрифта */
+    src: url(../fonts/Arial-Regular.ttf); /* Путь к файлу со шрифтом */
+}

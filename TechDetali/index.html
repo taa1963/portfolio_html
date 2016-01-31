@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Детали для бытовой техники</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+     <meta name="description" content="">
+    <meta name="author" content="taa">
+
+    <link href="css/reset200802.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="container">
+
+<div   class="header" id="header" >
+    <div class="row">
+       <div class="col-md-12">
+
+
+           <div class="header_menu">
+               <a href="#home"> Главная </a>
+               <a href="#catalog"> Каталог </a>
+               <a href="#About us"> О нас </a>
+               <a href="#Contacts"> Контакты </a>
+           </div>
+
+           <div class="header_telefon">
+
+               <div class="header_telefon_p">
+                   <p>Позвоните нам:</p>
+               </div>
+
+               <div class="header_telefon_img">
+                   <img src="img/Tel_1.png" alt="">
+               </div>
+
+               <div class="header_telefon_span">
+                   <span>+7 812 336 22 44  </span> </p>
+               </div>
+
+           </div>
+
+
+
+       </div>
+     </div>
+</div>
+
+    <div class="header_menu_klic">
+
+        <a href="#" onclick="openbox('box'); return false">Меню</a>
+
+
+    </div>
+
+    <script type="text/javascript">
+       function openbox(header){
+        display = document.getElementById(id="header").style.display;
+        if(display=='none'){
+        document.getElementById(id="header").style.display='block';
+        }else{
+        document.getElementById(id="header").style.display='none';
+        }
+        }
+        </script>
+
+
+
+
+
+<div class="content" id="content">
+        <div class="row">
+            <div class="col-md-12">
+
+
+              <div class="content_logo_text">
+                <div class="content_logo">
+                    <img src="img/Logo_1.png" alt="">
+
+                </div>
+
+
+                <div class="content_text">
+                    <div class="content_text_bloc">
+
+                    <h1>Детали для крупной</h1>
+
+
+                    <p> и мелкой бытовой техники  </p>
+
+                    <h2>
+                        Успешно работаем более 5 лет на Российском рынке деталей на <br>
+                        мелкую и крупную бытовую технику. Только у нас качественные детали <br>
+                        к ведущим маркам: Samsung, Indesit, Bosch и иным. Все поставки из<br>
+                        Европы и стран производителей бытовой техники.
+                    </h2>
+                    </div>
+                </div>
+              </div>
+
+
+              <div class="content_Search1">
+                <div class="content_Search">
+                    <div class="search">
+                        <input type="search" name="q" value="Какую деталь ищем?">
+                        <input type="submit" value="">
+                      <div class="content_Search_text">
+                        <p>Например: <span>Шланг для стиральной машины Indesit</span>       </p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+
+                <div class="content_form">
+
+                    <h2>Лень искать?</h2>
+
+                    <span>_____________________________</span>
+
+                    <h1>
+                        Заполните поля в форме ниже и мы <br>
+                        перезвоним Вам и найдем, то, что Вы ищете!
+
+                    </h1>
+
+                    <form id="form" action="send.php" method="post">
+
+                   <div class="content_pole">
+                       <p class="first">
+                        <input type="text" name="name" id="name" placeholder="Ваше имя" size="30" />
+                       </p>
+                        <p>
+                        <input type="text" name="tel" id="tel" placeholder="Ваш телефон"   size="30" />
+                      </p>
+
+                    </div>
+
+
+                    <div class="content_button">
+
+                        <a  rel="popup_contact" class="poplight"><span class="submit"></span> </a>
+                    </div>
+
+                    </form>
+
+                    <div class="content_form_text">
+                        <img src="img/Tel_icon_1.png" alt="">
+
+                        <p>Или позвоните нам сами: <br> <br><span> +7 812 336 22 44</span>    </p>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+        <div class="content_icon">
+                    <h1>Популярные категории </h1>
+
+            <div class="post-main">
+                <img src="img/Stiral_m.png">
+                <div class="post-main-text">
+                    <p> Для стиральных и <br>
+                    сушильных машин </p>
+                </div>
+                </div>
+
+            <div class="post-main">
+                <img src="img/Posud.png">
+                <div class="post-main-text">
+                    <p> Для посудомоечных машин </p>
+                </div>
+
+            </div>
+
+            <div class="post-main">
+                <img src="img/ButTex.png">
+              <div class="post-main-text">
+                <p> Для мелкой бытовой техники </p>
+              </div>
+            </div>
+
+            <div class="post-main">
+                <img src="img/MikroVol.png">
+                <div class="post-main-text">
+                    <p> Для микроволновок </p>
+                </div>
+            </div>
+            <div class="post-main">
+                <img src="img/Pulesos.png">
+                <div class="post-main-text">
+                    <p> Для пылесосов </p>
+                </div>
+            </div>
+
+
+
+        </div>
+   </div>
+  </div>
+ </div>
+
+
+<div class="content_text2" id="content_text2">
+        <div class="row">
+            <div class="col-md-12">
+
+            <div class="content_text2_text">
+                <h1>Купить детали для бытовой техники</h1>
+                <p>   Хотите купить детали для Вашей стиральной машины или пылесоса? Обновить <br>
+                    барабан в сушилке? Или поменять ножи у блендера? Вы попали по адресу! Только у <br>
+                    нас все детали для абсолютно любой домашней бытовой техники в наличии или под <br>
+                    заказ. Сломалась посудомоечная машина? Не спешите покупать новую! Лучше <br>
+                    сэкономить и купить детали, а наши специалисты их доставят и по Вашему желанию <br>
+                    сделают весь ремонт.</p>
+
+
+            </div>
+
+
+            </div>
+
+
+        </div>
+
+
+</div>
+
+
+ <div class="line">
+
+  </div>
+
+
+
+
+
+
+
+
+ <div class="carta">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ToGdyru7ibA51uP2Sz9D9c_XvepNC3tm&width=100%&height=400&lang=ru_UA&sourceType=constructor"></script>
+
+
+                <div class="cart_text">
+
+
+                        <h2>Контакты</h2>
+
+                    <span>_______________________</span>
+
+                    <p> Адрес: <span> Санкт-Петербурге, ул. Хошимина,<br>
+                        дом 7, корпус 1  </span> </p>
+
+                    <p> Время работы: <span>10:00 - 22:00 без выходных </span> </p>
+
+                    <div class="cart_text_img">
+                        <img src="img/Tel_2.png">
+                        <p>Наши менеджеры на связи: <br> <span>+7 812 336 22 44 </span> </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+ <div class="line">
+
+
+    </div>
+
+ <div class="footer" id="footer">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="footer_text">
+                    <p>TechDetali.ru  ©   Все права защищены - 2016 г.</p>
+
+                </div>
+
+
+
+
+                    <div class="footer_text2">
+                        <p>Создание сайта - веб студия “Круэлтен”</p>
+
+                    </div>
+
+
+
+
+
+            </div>
+        </div>
+ </div>
+</div>
+</body>
+</html>

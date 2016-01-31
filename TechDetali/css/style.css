@@ -1,0 +1,582 @@
+@import"reset200802.css";
+
+
+.body {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/*Описание header и его компонентов */
+
+.header {
+    display:block;
+    width: auto;
+    min-height: 53px;
+    margin: 0 auto;
+    background-color: #fdcc00;
+}
+
+.header_menu{
+    display: block;
+    width: 40%;
+    max-height: 53px;
+    padding: 10px 0px 3px 89px;
+    float: left;
+}
+
+.header_menu a{
+    display: block;
+    width: auto;
+    font-size: 21px;
+    font-family:Arial;
+    font-weight: bold;
+    color: #413300;
+    margin-left:23px;
+    float: left;
+
+}
+
+.header_menu a:hover {
+    background-color: #00000d;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+
+.header_telefon {
+    width: 39%;
+    min-height: 53px;
+    display: inline-block;
+    float: right;
+    padding: 0px 0px 0px 57px;
+
+}
+
+.header_telefon_p{
+    display: block;
+    width: 36%;
+    padding-top: 13px;
+    padding-left: 5px;
+    font-size: 22px;
+    font-family:Arial;
+    color: #413300;
+    float: left;
+}
+
+.header_telefon_img{
+    display: block;
+    width: 8%;
+    float: left;
+    padding-top: 3px;
+}
+
+
+.header_telefon_span{
+    display: block;
+    width: 40%;
+    padding-top: 13px;
+    font-size: 22px;
+    font-family:Kozuka Gothic Pro;
+    font-weight: bold;
+    color: #413300;
+    float: left;
+}
+
+.header_menu_klic{
+    display: block;
+    width: 14%;
+    margin: 0 auto;
+    background: transparent url("../img/Menu_1.png") 0 0 no-repeat;
+    z-index: 999;
+    position: relative;
+}
+
+.header_menu_klic a{
+    font-size: 17px;
+    font-family:Arial;
+    font-weight: bold;
+    text-decoration: none;
+    color: #413300;
+    margin-left: 65px;
+}
+
+
+/*Описание content (Профессиональный перевод) и его компонентов */
+
+.content{
+    display: block;
+    min-width: 100%;
+    min-height: 550px;
+    background: transparent url("../img/Fon_1.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    position: relative;
+    margin-top: -17px;
+    z-index: 1;
+
+}
+
+.content_logo_text{
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.content_logo{
+    display: block;
+    width: 50%;
+    float: left;
+    min-height: 190px;
+}
+
+.content_logo img{
+    padding-left: 94px;
+    padding-top: 10px;
+}
+
+
+.content_text{
+    display: block;
+    width: 50%;
+    float: right;
+    min-height: 190px;
+ }
+
+.content_text_bloc{
+    display: block;
+    width: 70%;
+    height: auto;
+    margin-left: 191px;
+    margin-top: 16px;
+}
+
+
+.content_text_bloc h1{
+    font-size: 31px;
+    font-family:Arial;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.content_text_bloc p{
+    font-size: 28px;
+    font-family:Arial;
+    font-weight: bold;
+    color: #9ab7d9;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+.content_text_bloc h2{
+    font-size: 12px;
+    font-family:Arial;
+    font-weight: Regular;
+    line-height: 16px;
+    color: #ffffff;
+    margin-top: 12px;
+    margin-left: 2px;
+}
+
+.content_Search1{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+
+}
+
+.content_Search{
+    display: block;
+    width: 50%;
+    min-height: 70px;
+    margin: 0 auto;
+    background-color: #d3b214;
+
+
+}
+
+input[type="search"] {
+    height: 40px;
+    width: 590px;
+    border: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    display: inline-block;
+    color: #cecece;
+ }
+
+input[type="submit"] {
+    border: none;
+    height: 56px;
+    width: 61px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: url("../img/Poisk.png") no-repeat;
+    float: left;
+    display: inline-block;
+}
+
+.content_Search_text{
+    display: block;
+    position: absolute;
+    margin-top: 55px;
+    width: auto;
+    height: auto;
+}
+
+.content_Search p{
+    font-size: 12px;
+    font-family:Arial;
+    color: #282100;
+    padding-bottom: 3px;
+    margin-left: 10px;
+}
+
+.content_Search p span{
+    font-size: 12px;
+    font-family:Arial;
+    color: #6e623b;
+}
+
+.content_form{
+    display: block;
+    float: right;
+    width: 22%;
+    margin-right: 186px;
+    margin-top: 20px;
+    height: 246px;
+    background-color: #d0d6dc;
+
+}
+
+.content_form h2{
+    font-size: 20px;
+    font-family:Arial;
+    font-weight: bold;
+    color: #272d32;
+    margin-left: 17px;
+    margin-top: 21px;
+
+}
+
+.content_form span{
+    display: block;
+    margin-left: 17px;
+    color:#aab1b8;
+    margin-top: -8px;
+
+}
+
+.content_form h1{
+    font-size: 12px;
+    font-family:Arial;
+    color: #272d32;
+    margin-left: 17px;
+    margin-top: 8px;
+   line-height: 16px;
+}
+
+#form{
+    display: block;
+    width: 100%;
+    height: 50px;
+
+}
+.first{
+    margin-top: 5px;
+}
+
+.content_pole{
+    display: block;
+    float: left;
+    width: 70%;
+    height: 50px;
+}
+
+.content_button{
+    display: block;
+    float: right;
+    width: 22%;
+    height: 50px;
+    margin-top: 14px;
+    margin-right: 5px;
+}
+
+#form input {
+    /* устанавливаем ширину инпутов */
+    display: block;
+    width:100%;
+    background-color: #fefefe;
+    font-size: 12px;
+    font-family:Arial;
+    color:#aab1b8;
+    height: 24px;
+    margin-left: 17px;
+    margin-top: 3px;
+    float: left;
+
+}
+
+#form a.poplight{
+     display: block;
+    background-image: url("../img/Button_1.png");
+    height: 50px;
+
+}
+
+.content_form_text{
+    display: block;
+    width: 90%;
+    margin-left: 17px;
+    margin-top: 20px;
+}
+
+.content_form_text img{
+    float: left;
+}
+
+.content_form_text p{
+    float: left;
+    margin-left: 10px;
+    font-size: 12px;
+    font-family:Arial;
+    color: #272d32;
+}
+
+.content_form_text p span{
+    font-size: 22px;
+    font-family:Kozuka Gothic Pro;
+    color: #272d32;
+    font-weight: bold;
+    margin-left: 0px;
+}
+
+.content_icon{
+    display: block;
+    position: absolute;
+    width: 56%;
+    float: left;
+    min-height: 300px;
+    z-index: 999;
+
+    margin-left: 65px;
+    margin-top: 50px;
+}
+
+.content_icon h1{
+    font-size: 42px;
+    font-family:Arial;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.post-main{
+    display: block;
+    position: relative;
+    width: 30%;
+    min-height: 193px;
+    background-color:#ffffff;
+    border-radius: 6px;
+    float: left;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 0px 11px 33px -7px #000000;
+
+}
+
+.post-main img{
+    display: block;
+    margin: 0 auto;
+}
+
+.post-main p{
+    display: block;
+    font-size: 16px;
+    font-family:Arial;
+    color: #000000;
+    bottom: 1px;
+    text-align: center;
+}
+
+.post-main-text{
+    position:absolute;
+    width:100%;
+    bottom:15px;
+
+}
+/*Описание content_text2 (Второй блок контента) и его компонентов */
+
+.content_text2 {
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    background-color: #ffffff;
+    position: relative;
+
+
+}
+
+.content_text2_text{
+    display: block;
+    float: right;
+    margin-top: 60px;
+    margin-right: 80px;
+
+}
+
+.content_text2_text h1{
+    font-size: 34px;
+    font-family:Arial;
+    font-weight: bold;
+    color: #000000;
+}
+
+.content_text2_text p{
+    font-size: 17px;
+    font-family:Arial;
+    color: #000000;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+
+
+/*Описание блока "ЛИНИЯ" и его омпонентов */
+
+.line{
+    display:block;
+    width: 100%;
+    height: 7px;
+   background-color: #fdcc00;
+
+}
+
+
+
+/*Описание блока "Карта" и его омпонентов */
+
+.carta{
+    display:block;
+    width: 100%;
+    min-height: 395px;
+
+}
+
+.cart_text{
+    display:block;
+    width: 20%;
+    min-height: 193px;
+    background-color: #f6faf4;
+    position: relative;
+    margin-top: -300px;
+    margin-left: 100px;
+}
+
+.cart_text h2{
+    font-size: 17px;
+    font-family:Arial;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.cart_text span{
+    margin-left: 10px;
+ }
+
+.cart_text p{
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.cart_text p span{
+    font-size: 11px;
+    font-family: Arial;
+    color: #000000;
+}
+
+.cart_text_img{
+    display: block;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 85%;
+    float: left;
+
+}
+
+.cart_text_img p{
+    float: right;
+    font-size: 12px;
+    font-family: Arial;
+    color: #000000;
+    width: 72%;
+}
+
+
+.cart_text_img p span{
+    font-size: 20px;
+    font-family: Kozuka Gothic Pro;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 0px;
+   }
+
+    /*Описание блока "Футер" и его омпонентов */
+
+.footer{
+    display:inline-block;
+    width: 100%;
+    min-height: 40px;
+    background-color: #000000;
+}
+
+
+
+.footer_text{
+    display: block;
+    width: 30%;
+    font-size: 12px;
+    font-family: "Arial";
+    color: #ffffff;
+    float: left;
+}
+
+.footer_text p{
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.footer_text2{
+    display: block;
+    width: 30%;
+    font-size: 12px;
+    font-family: "Arial";
+    color: #ffffff;
+    float: right;
+
+}
+
+.footer_text2 p{
+    margin-top: 10px;
+    text-align: center;
+}
+

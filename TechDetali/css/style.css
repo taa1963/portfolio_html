@@ -25,22 +25,30 @@
     background-color: #fdcc00;
 }
 
+.header_menu_bloc{
+    display:block;
+    width: 1160px;
+    min-height: 53px;
+    margin: 0 auto;
+}
+
+
 .header_menu{
     display: block;
-    width: 40%;
+    width: 450px;
     max-height: 53px;
-    padding: 10px 0px 3px 89px;
+    padding: 19px 0px 7px 15px;
     float: left;
 }
 
 .header_menu a{
     display: block;
     width: auto;
-    font-size: 21px;
+    font-size: 20px;
     font-family:Arial;
     font-weight: bold;
     color: #413300;
-    margin-left:23px;
+    margin-right:29px;
     float: left;
 
 }
@@ -54,20 +62,17 @@
 
 
 .header_telefon {
-    width: 39%;
+    width: 370px;
     min-height: 53px;
     display: inline-block;
     float: right;
-    padding: 0px 0px 0px 57px;
-
 }
 
 .header_telefon_p{
     display: block;
-    width: 36%;
-    padding-top: 13px;
-    padding-left: 5px;
-    font-size: 22px;
+    padding-top: 16px;
+    padding-left: 3px;
+    font-size: 21px;
     font-family:Arial;
     color: #413300;
     float: left;
@@ -75,17 +80,17 @@
 
 .header_telefon_img{
     display: block;
-    width: 8%;
     float: left;
-    padding-top: 3px;
+    padding-top: 10px;
+    padding-left: 6px;
 }
 
 
 .header_telefon_span{
     display: block;
-    width: 40%;
-    padding-top: 13px;
-    font-size: 22px;
+    padding-top: 16px;
+    padding-left: 3px;
+    font-size: 21px;
     font-family:Kozuka Gothic Pro;
     font-weight: bold;
     color: #413300;
@@ -107,7 +112,7 @@
     font-weight: bold;
     text-decoration: none;
     color: #413300;
-    margin-left: 65px;
+    margin-left: 68px;
 }
 
 
@@ -125,6 +130,12 @@
     position: relative;
     margin-top: -17px;
     z-index: 1;
+}
+
+.content_bloc{
+    display:block;
+    width: 1160px;
+    margin: 0 auto;
 
 }
 
@@ -136,30 +147,31 @@
 
 .content_logo{
     display: block;
-    width: 50%;
+    width: 410px;
     float: left;
     min-height: 190px;
 }
 
 .content_logo img{
-    padding-left: 94px;
-    padding-top: 10px;
+    padding-left: 1px;
+    padding-top: 14px;
+
 }
 
 
 .content_text{
     display: block;
-    width: 50%;
+    width: 400px;
     float: right;
     min-height: 190px;
  }
 
 .content_text_bloc{
     display: block;
-    width: 70%;
+    width: 400px;
     height: auto;
-    margin-left: 191px;
-    margin-top: 16px;
+    margin-left: 14px;
+    margin-top: 20px;
 }
 
 
@@ -176,14 +188,13 @@
     font-weight: bold;
     color: #9ab7d9;
     margin-top: 10px;
-    margin-left: 4px;
+    margin-left: 2px;
 }
 
 .content_text_bloc h2{
-    font-size: 12px;
-    font-family:Arial;
-    font-weight: Regular;
-    line-height: 16px;
+    font-size: 11px;
+    font-family:Arial-Regular;
+    line-height: 18px;
     color: #ffffff;
     margin-top: 12px;
     margin-left: 2px;
@@ -193,39 +204,51 @@
     display: inline-block;
     width: 100%;
     height: auto;
-
 }
 
 .content_Search{
     display: block;
-    width: 50%;
-    min-height: 70px;
-    margin: 0 auto;
+    width: 721px;
+    height: 76px;
+    margin-left: 243px;
+    margin-top: 0px;
+    opacity: 0.95; /* Значение прозрачности */
+    filter: alpha(Opacity=95); /* Прозрачность в IE */
     background-color: #d3b214;
 
 
 }
 
 input[type="search"] {
-    height: 40px;
-    width: 590px;
+    height: 42px;
+    width: 625px;
     border: none;
+    border-radius: 6px;
     margin-left: 10px;
     margin-top: 10px;
     float: left;
     display: inline-block;
+    opacity: 1;
     color: #cecece;
  }
+
+input[type="search"].value
+{
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
 
 input[type="submit"] {
     border: none;
     height: 56px;
     width: 61px;
-    margin-left: 10px;
+    margin-left: 17px;
     margin-top: 10px;
     background: url("../img/Poisk.png") no-repeat;
     float: left;
     display: inline-block;
+    opacity: 1;
 }
 
 .content_Search_text{
@@ -241,7 +264,7 @@ input[type="submit"] {
     font-family:Arial;
     color: #282100;
     padding-bottom: 3px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .content_Search p span{
@@ -253,22 +276,24 @@ input[type="submit"] {
 .content_form{
     display: block;
     float: right;
-    width: 22%;
-    margin-right: 186px;
-    margin-top: 20px;
-    height: 246px;
-    background-color: #d0d6dc;
+    height:244px ;
+    width: 299px;
+    border-radius: 6px;
+    margin-right: 93px;
+    margin-top: 18px;
+    background-image: linear-gradient(#d0d6dc, #ffffff);
+    opacity: 0.93; /* Значение прозрачности */
+    filter: alpha(Opacity=93); /* Прозрачность в IE */
 
 }
 
 .content_form h2{
-    font-size: 20px;
+    font-size: 17px;
     font-family:Arial;
     font-weight: bold;
     color: #272d32;
-    margin-left: 17px;
-    margin-top: 21px;
-
+    margin-left: 19px;
+    margin-top: 22px;
 }
 
 .content_form span{
@@ -285,7 +310,7 @@ input[type="submit"] {
     color: #272d32;
     margin-left: 17px;
     margin-top: 8px;
-   line-height: 16px;
+   line-height: 17px;
 }
 
 #form{
@@ -317,12 +342,13 @@ input[type="submit"] {
 #form input {
     /* устанавливаем ширину инпутов */
     display: block;
-    width:100%;
+    width:189px;
     background-color: #fefefe;
     font-size: 12px;
     font-family:Arial;
+    border-radius: 2px;
     color:#aab1b8;
-    height: 24px;
+    height: 30px;
     margin-left: 17px;
     margin-top: 3px;
     float: left;
@@ -331,20 +357,25 @@ input[type="submit"] {
 
 #form a.poplight{
      display: block;
-    background-image: url("../img/Button_1.png");
-    height: 50px;
+    background: url("../img/Button_1.png") no-repeat;
+    width: 70px;
+    height: 64px;
+    margin-left: -18px;
+    margin-top: 2px;
 
 }
 
 .content_form_text{
     display: block;
     width: 90%;
-    margin-left: 17px;
-    margin-top: 20px;
+    margin-left: 18px;
+    margin-top: 38px;
+
 }
 
 .content_form_text img{
     float: left;
+    margin-top: -7px;
 }
 
 .content_form_text p{
@@ -360,7 +391,8 @@ input[type="submit"] {
     font-family:Kozuka Gothic Pro;
     color: #272d32;
     font-weight: bold;
-    margin-left: 0px;
+    margin-left: -2px;
+    margin-top: -4px;
 }
 
 .content_icon{
@@ -370,29 +402,31 @@ input[type="submit"] {
     float: left;
     min-height: 300px;
     z-index: 999;
+    margin-left: 0px;
+    margin-top: 32px;
 
-    margin-left: 65px;
-    margin-top: 50px;
 }
 
 .content_icon h1{
-    font-size: 42px;
+    font-size: 37px;
     font-family:Arial;
     color: #ffffff;
     font-weight: bold;
+    margin-left: 3px;
+    margin-top: 7px;
 }
 
 .post-main{
     display: block;
     position: relative;
-    width: 30%;
-    min-height: 193px;
+    width: 236px;
+    height: 191px;
     background-color:#ffffff;
     border-radius: 6px;
     float: left;
-    margin-top: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 7px;
+    margin-top: 38px;
+    margin-bottom: -26px;
     box-shadow: 0px 11px 33px -7px #000000;
 
 }
@@ -400,6 +434,8 @@ input[type="submit"] {
 .post-main img{
     display: block;
     margin: 0 auto;
+    padding-top: 6px;
+    padding-left: 9px;
 }
 
 .post-main p{
@@ -432,24 +468,27 @@ input[type="submit"] {
 .content_text2_text{
     display: block;
     float: right;
-    margin-top: 60px;
-    margin-right: 80px;
+    margin-top: 46px;
+    margin-right: 66px;
+
 
 }
 
 .content_text2_text h1{
-    font-size: 34px;
+    font-size: 32px;
     font-family:Arial;
     font-weight: bold;
     color: #000000;
+    margin-top: 0px;
 }
 
 .content_text2_text p{
+    font-family:Arial-Regular;
     font-size: 17px;
-    font-family:Arial;
     color: #000000;
-    line-height: 24px;
-    margin-top: 20px;
+    line-height: 29px;
+    margin-top: 13px;
+
 }
 
 
@@ -473,16 +512,20 @@ input[type="submit"] {
     width: 100%;
     min-height: 395px;
 
+
 }
 
 .cart_text{
     display:block;
-    width: 20%;
-    min-height: 193px;
+    width: 297px;
+    height: 191px;
     background-color: #f6faf4;
     position: relative;
-    margin-top: -300px;
-    margin-left: 100px;
+    margin-top: -322px;
+    margin-left: 184px;
+    opacity: 0.9; /* Значение прозрачности */
+    filter: alpha(Opacity=90); /* Прозрачность в IE */
+
 }
 
 .cart_text h2{
@@ -490,53 +533,67 @@ input[type="submit"] {
     font-family:Arial;
     font-weight: bold;
     color: #000000;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 16px;
+    margin-top: -7px;
+    margin-bottom: -10px;
 }
 
 .cart_text span{
     margin-left: 10px;
+    color: #848b8f;
  }
 
 .cart_text p{
-    font-size: 12px;
-    font-family: Arial;
+    font-size: 13px;
+    font-family: Arial-Regular;
     font-weight: bold;
     color: #000000;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 16px;
+     margin-top: 10px;
+    line-height: 14px ;
 }
 
 .cart_text p span{
-    font-size: 11px;
-    font-family: Arial;
-    color: #000000;
+    font-size: 12px;
+    font-family: Arial-Regular;
+    color: #848b8f;
+    margin-left: 1px;
 }
 
 .cart_text_img{
     display: block;
     margin-left: 10px;
     margin-top: 10px;
-    width: 85%;
+    width: 275px;
+    float: left;
+}
+
+.cart_text_img img{
+    margin-left: 6px;
+    margin-top: 1px;
     float: left;
 
 }
 
 .cart_text_img p{
-    float: right;
     font-size: 12px;
     font-family: Arial;
     color: #000000;
-    width: 72%;
+    width: 178px;
+    float: left;
+    margin-left: 9px;
+    margin-top: 9px;
 }
 
 
 .cart_text_img p span{
-    font-size: 20px;
+    font-size: 21px;
     font-family: Kozuka Gothic Pro;
     font-weight: bold;
     color: #000000;
+    display: block;
     margin-left: 0px;
+    margin-top: 8px;
    }
 
     /*Описание блока "Футер" и его омпонентов */
@@ -552,11 +609,14 @@ input[type="submit"] {
 
 .footer_text{
     display: block;
-    width: 30%;
+    width: 303px;
     font-size: 12px;
     font-family: "Arial";
     color: #ffffff;
     float: left;
+    margin-left: 73px;
+    margin-top: -4px;
+
 }
 
 .footer_text p{
@@ -572,7 +632,7 @@ input[type="submit"] {
     font-family: "Arial";
     color: #ffffff;
     float: right;
-
+    margin-top: -4px;
 }
 
 .footer_text2 p{

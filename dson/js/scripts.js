@@ -14,5 +14,19 @@ $(function() {
         }
         displayCount();
     });
+
 });
+
+
+$(function Checked () {
+    $('.form_order #link1').click(function () {
+
+        x1.checked = x1.checked ? false : true;
+        displayCount();
+    });
+
+});
+
+
+
 

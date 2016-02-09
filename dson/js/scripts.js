@@ -5,11 +5,20 @@ $(function() {
 
     function displayCount() {
         var count = checkboxCalculate();
+
+
+
+
         if (count > 0) {
+
             $('.form_order_bloc1').show();
+            $('.form_order_bloc2').hide();
         } else {
             $('.form_order_bloc1').hide();
+            $('.form_order_bloc2').show();
+
         }
+
 
         $('#count').text(count);
     }

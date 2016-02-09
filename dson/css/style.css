@@ -1269,6 +1269,7 @@
     margin: 0 auto;
     position: relative;
 
+
 }
 
 .form_order_bloc2 h2{
@@ -1288,7 +1289,7 @@
     min-height: 75px;
     background-color:#4f73d1;
     margin: 0 auto;
-    position: absolute;
+
    display: none;
 }
 

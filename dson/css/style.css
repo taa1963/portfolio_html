@@ -1268,7 +1268,7 @@
     background-color:#ffffff;
     margin: 0 auto;
     position: relative;
-    visibility: hidden;
+
 }
 
 .form_order_bloc2 h2{
@@ -1289,8 +1289,7 @@
     background-color:#4f73d1;
     margin: 0 auto;
     position: absolute;
-
-
+   display: none;
 }
 
 .form_order_bloc1 img{

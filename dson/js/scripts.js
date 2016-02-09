@@ -1,4 +1,16 @@
 $(function() {
+
+    $('.form_order #link1').click(function () {
+
+        $('.form_order #link1').click(function () {
+            x1 = $('#x1');
+            x1.prop('checked', !x1.prop("checked"));
+        });
+        displayCount()
+    });
+
+
+
     var count = $('.form_order input:checked').length;
 
     function displayCount() {
@@ -6,7 +18,7 @@ $(function() {
     }
 
     displayCount();
-    $('.form_order input[type=checkbox]').click(function () {
+    $('.form_order input[type=checkbox]').click(function() {
         if (this.checked) {
             count++;
         } else {
@@ -15,15 +27,5 @@ $(function() {
         displayCount();
     });
 
- {
 
-        $('.form_order #link1').click(function () {
-            x1.prop('checked', !x1.prop("checked"));
-        });
-        $('.form_order #link1').click(function () {
-            x1 = $('#x1');
-            x1.prop('checked', !x1.prop("checked"));
-        });
-
-    });
 });

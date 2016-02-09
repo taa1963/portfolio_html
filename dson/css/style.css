@@ -222,13 +222,32 @@
     margin-left: 524px;
 }
 
+
 .video_button .poplight{
+    display: block;
     width: 231px;
     height: 48px;
-    background-image: url("../img/Button_video.png");
-    display: block;
+    clear:both;
+    margin: 0 auto;
+    border: solid 1px #2f96b4;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#fff;
+    font:13px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #3050a4;
+}
+
+.video_button .poplight:hover, .video_button .poplight:active{
+    background-color:#3050a4;
 
 }
+
+
+
 
 
 /*Описание training (Обучайте сотрудников) и его компонентов */
@@ -928,8 +947,24 @@
 .lesson_form_button .poplight{
     width: 230px;
     height: 50px;
-    background-image: url("../img/Button_lesson.png");
     display: block;
+    clear:both;
+    margin: 0 auto;
+    border: solid 1px #ffffff;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #ffffff;
+    color:#343434;
+    font:13px "Ubuntu";
+    font-weight: bold;
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #e4e4e4;
+}
+
+.lesson_form_button .poplight:hover, .lesson_form_button .poplight:active{
+    background-color: #e4e4e4;
 }
 
 
@@ -1171,10 +1206,23 @@
 .encyclopedia_button .poplight{
     width: 230px;
     height: 50px;
-    background-image: url("../img/Button_encyclopedia.png");
     display: block;
     margin-top: 21px;
     margin-left: 5px;
+    border: solid 1px #2f96b4;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#fff;
+    font:13px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #3050a4;
+}
+
+.encyclopedia_button .poplight:hover, .encyclopedia_button .poplight:active{
+    background-color:#3050a4;
 }
 
 .encyclopedia_bonus{
@@ -1213,12 +1261,36 @@
     margin: 0 auto;
 }
 
+.form_order_bloc2{
+    display: block;
+    width: 1280px;
+    min-height: 75px;
+    background-color:#ffffff;
+    margin: 0 auto;
+    position: relative;
+    visibility: hidden;
+}
+
+.form_order_bloc2 h2{
+    font:30px "Ubuntu";
+    color: #000000;
+    padding-left: 336px;
+    padding-top: 20px;
+
+}
+
+
+
+
 .form_order_bloc1{
     display: block;
     width: 1280px;
     min-height: 75px;
     background-color:#4f73d1;
     margin: 0 auto;
+    position: absolute;
+
+
 }
 
 .form_order_bloc1 img{
@@ -1243,12 +1315,24 @@
 }
 
 .form_order_bloc1 p.submit button{
-    background-image: url("../img/Button_zakaz.png");
     display: block;
     width: 251px;
     height: 51px;
-    border: none;
+    border: solid 1px #ffffff;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#ffffff;
+    font:13px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
 }
+
+.form_order_bloc1 p.submit button:hover, .form_order_bloc1 p.submit button:active{
+    background-color:#3050a4;
+}
+
 
 .form_order img{
     display: block;
@@ -1265,6 +1349,18 @@
     padding-top: 25px;
     line-height: 19px;
 }
+
+.form_order a{
+    display: block;
+    font:14px "Ubuntu";
+    font-weight: bold;
+    color: #000000;
+    padding-left: 3px;
+    padding-top: 25px;
+    line-height: 19px;
+}
+
+
 
 .form_order b{
     display: block;
@@ -1613,10 +1709,27 @@
 .delivery_button .submit button{
     width: 231px;
     height: 55px;
-    background-image: url("../img/Button_delivery.png");
     display: block;
-
+    clear:both;
+    margin: 0 auto;
+    border: solid 1px #2f96b4;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#fff;
+    font:13px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #3050a4;
 }
+
+.delivery_button .submit button:hover, .delivery_button .submit button:active{
+    background-color:#3050a4;
+}
+
+
+
 
 /*Описание блока useless "СОЧТЕТЕ ПРОГРАММУ БЕСПОЛЕЗНОЙ" и его омпонентов */
 
@@ -1760,12 +1873,24 @@
     display: block;
     width: 192px;
     height: 56px;
-    background-image: url("../img/Button_make.png");
-   margin-left: -390px;
+    margin-left: -390px;
     margin-top: 57px;
+    clear:both;
+    border: solid 1px #2f96b4;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#fff;
+    font:15px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #3050a4;
+ }
+
+.make_bloc2 .poplight:hover, .make_bloc2 .poplight:active{
+    background-color:#3050a4;
 }
-
-
 
 
 
@@ -1778,10 +1903,25 @@
     background-color: #ffffff;
     margin: 0 auto;
 }
-
-
-.footer img{
+.footer_bloc{
     display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.footer_bloc b{
+    display: block;
+    font: 14px "Ubuntu";
+    color: #8e8e8e;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.footer_bloc img{
+    display: block;
+    width: 163px;
+    height: 55px;
     margin: 0 auto;
 }
 

@@ -2,8 +2,6 @@
 * Оформление контактной формы
 * без дополительных изображений;
 * исключительно средствами CSS;
-*
-*  @dobrovoi dbmast.ru
 */
 
 /*--Слой затемнения фона--*/
@@ -22,7 +20,7 @@
 /*--Модальное окно--*/
 .popup_block{
 	position: fixed;
-	top: 50%;
+   	top: 50%;
     left: 50%;
 	z-index: 99999;
 	display: none; /*--по умолчанию скрыт--*/
@@ -31,17 +29,11 @@
     -moz-box-sizing: content-box; 
     box-sizing: content-box;
 	padding: 15px;
-	border: 10px solid #6e6e6e;
+    background-color: #ffffff;
+
 /*-- скругленные углы--*/
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	background: #fff;
-/*--тени для блока--*/
-	-webkit-box-shadow: 0px 0px 20px #000;
-	-moz-box-shadow: 0px 0px 20px #000;
-	box-shadow: 0px 0px 20px #000;
-    color: #000;
+
+    color: #ffffff;
 	font-size: .9em;
 }
 /*--Фиксированное позиционирование для тупого IE6--*/
@@ -53,19 +45,27 @@
 }
 /*--Блок содержания--*/
 .note{
-	margin:0 0 30px 0;
+    display: block;
+    overflow: hidden;
+    float: right;
+    /* устанавливаем необходимую ширину формы в зависимости от дизайна
+     ** форма отлично растягивается */
+    width: 100%;
+    background: none repeat scroll 0 0 #FFFFFF;
+    background-color: #FFFFFF;
 }
-.note img{
-    float:left;
-	margin:5px 10px 5px 0;
-	width: 100px;
-	height: 100px;
+
+.note p{
+    color: #343434;
+    font:30px "Ubuntu";
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
 }
-.note h1{
-	color: #008000;
-	text-shadow: 0 1px 3px rgba(0,0,0,.3);
-    font:24px Monotype Corsiva, Arial;      
-	}
+
+
 /* формируем кнопку закрытия */
 .close {
     position: absolute;
@@ -112,26 +112,20 @@
 #form{
     overflow: hidden;
     margin: 0 auto;
-    padding-top: 10px;
-/* устанавливаем необходимую ширину формы в зависимости от дизайна
+    padding-top: 50px;
+   /* устанавливаем необходимую ширину формы в зависимости от дизайна
  ** форма отлично растягивается */
     width: 100%;
-    border: 1px solid #D3D3D3;
-/* закругляем углы */
-    border-radius:8px;
-    background: none repeat scroll 0 0 #FFFFFF;
-/* добавляем тени для блока*/
-    box-shadow: 0 0 5px #CCCCCC, 1px 1px 0 #FFFFFF inset, -1px -1px 0 #FFFFFF inset, 0 0 15px #DDDDDD inset;
-    text-align: left;
+
 }
-/* формируем элементы внутри формы */
+
+
 #form fieldset{
     display:inline;
     float:left;
     margin:0;
-    margin-left:26px;
     padding:0;
-    width: 42%;
+    width: 99%;
     border:none;	
 }		
  
@@ -139,28 +133,23 @@
     margin:.5em 0;
 }
 /* подписи к полям ввода */	
-#form label{
-    display:block;
-    margin-bottom:1px;
-    color:#5B5B5B;
-}	
+
 #form input, #form textarea{
     padding:3px;
-/* отключаем бордюры у инпутов и текстового поля */
-    border: none;
-/* закругляем углы полей ввода */
-    -webkit-border-radius:.3em;
-    -moz-border-radius:.3em;
-    border-radius:.3em;		
-    background-color: #F7F7F7;
-/* добавляем внутренние тени у инпутов и текстового поля */
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
-    color: #5B5B5B;
-    font:13px Trebuchet MS, Arial, Helvetica, Sans-Serif;
+    border: 1px solid  #343434;
+    background-color: #FFFFFF;
+    color: #343434;
+    font:13px "Ubuntu";
+    text-indent:20px;
 }
 #form input {
 /* устанавливаем ширину инпутов */
-width:90%;
+    display: block;
+    width:270px;
+    height: 40px;
+    bottom: 15px;
+    margin: 0 auto;
+
 }
 /* изменяем оформление полей ввода при фокусе */
 #form input:focus, #form textarea:focus {
@@ -168,40 +157,33 @@ width:90%;
   box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
   color: #333;
 }
-#form textarea{
-    overflow:auto;
-    width:100%;
-/* устанавливаем ширину текстового поля */
-    height:120px;
-}
-/* формируем нижний сектор формы */					
+
+
+
 #form p.submit{
+    display: block;
     clear:both;
-    margin:0;
-    padding: 10px 25px 20px;
+    width: 230px;
+    height: 80px;
+    padding: 10px 0 20px;
     text-align:right;
+    margin: 0 auto;
 }
 /* оформляем кнопку отправки */	
 #form button{
 /* устанавливаем необходимую ширину кнопки */
+    width: 230px;
+    height: 50px;
     border: solid 1px #2f96b4;
 /* закругляем углы кнопки */
     border-radius: 5px;
-    background-color: #49AFCD;
-/* градиентная заливка для современных браузеров */	
-    background-image:-moz-linear-gradient(center top , #5BC0DE, #2F96B4);
-    background-image: -webkit-linear-gradient(center top, #5bc0de, #2f96b4);
-    background-image: -ms-linear-gradient(#5bc0de, #2f96b4);
-    background-image:-o-linear-gradient(center top , #5BC0DE, #2F96B4);
-/* добавляем внешние тени */
-    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    background-color: #4f73d1;
     color:#fff;
-    padding:0 12px;
+    font:13px "Ubuntu";
+    padding:14px 12px;
     text-align:center;
-    line-height:28px;
-/* градиент для IE6-9 */
-    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#5BC0DE', EndColorStr='#2F96B4', GradientType=0); 
     cursor:pointer;
+    border-bottom: 8px solid #3050a4;
 }
 /* изменяем оформление кнопки при наведении */
 #form button:hover {

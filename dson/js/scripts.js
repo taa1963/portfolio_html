@@ -49,6 +49,26 @@ $(function() {
 
     displayCount();
 
+    $('.form_order .popup_1 b').click(function() {
+
+        var block = $(this).parents('.popup_1');
+        var input = block.find('input[type=checkbox]');
+        input.prop('checked', !input.prop("checked"));
+        displayCount();
+    });
+
+    displayCount();
+
+    $('.form_order .popup_2 b').click(function() {
+
+        var block = $(this).parents('.popup_2');
+        var input = block.find('input[type=checkbox]');
+        input.prop('checked', !input.prop("checked"));
+        displayCount();
+    });
+
+    displayCount();
+
 
 
 });

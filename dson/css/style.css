@@ -19,9 +19,9 @@
 .header {
     display:block;
     width: 1280px;
-    min-height: 670px;
+    min-height: 492px;
     margin: 0 auto;
-    background: url("../img/Fon_1.png") no-repeat;
+    background: url("../img/Fon1_0.png") no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -41,7 +41,7 @@
 
 .header_menu a{
     font:16px "ubuntu_regular";
-    color: #ffffff;
+    color: #4f73d1;
     margin-left: 17px;
     margin-right: 5px;
     padding-bottom: 5px;
@@ -57,7 +57,7 @@
 
 .header_text p{
     font:30px "ubuntu_regular";
-    color: #ffffff;
+    color: #4f73d1;
     text-align: center;
     line-height: 39px;
 }
@@ -241,11 +241,22 @@
     border-bottom: 8px solid #3050a4;
 }
 
-.video_button .poplight:hover, .video_button .poplight:active{
+.video_button .poplight:hover{
     background-color:#3050a4;
-
+    text-decoration: none;
 }
 
+.video_button .poplight:active{
+    border-bottom: 1px solid #5BC0DE;
+    background-image:-moz-linear-gradient(#2F96B4, #5BC0DE); /* Firefox */
+    background-image: -webkit-linear-gradient(#2F96B4, #5BC0DE); /* Chrome, Safari */
+    background-image: -ms-linear-gradient(#2F96B4, #5BC0DE); /* IE-10 */
+    background-image:-o-linear-gradient(#2F96B4, #5BC0DE); /* Opera */
+    /* добавляем внутренние тени */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+    /* градиент для IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
+ }
 
 
 
@@ -820,7 +831,7 @@
     margin-top: 8px;
 }
 .lesson_text li{
-    display: inline-block;
+    display:block;
     font:15px "ubuntu_regular";
     font-weight: bold;
     color: #676767;
@@ -963,9 +974,26 @@
     border-bottom: 8px solid #e4e4e4;
 }
 
-.lesson_form_button .poplight:hover, .lesson_form_button .poplight:active{
+.lesson_form_button .poplight:hover{
     background-color: #e4e4e4;
+    text-decoration: none;
 }
+
+.lesson_form_button .poplight:active{
+
+    border-bottom: 1px solid #e4e4e4;
+    background-image:-moz-linear-gradient(#ffffff, #e4e4e4); /* Firefox */
+    background-image: -webkit-linear-gradient(#ffffff, #e4e4e4); /* Chrome, Safari */
+    background-image: -ms-linear-gradient(#ffffff, #e4e4e4); /* IE-10 */
+    background-image:-o-linear-gradient(#ffffff, #e4e4e4); /* Opera */
+    /* добавляем внутренние тени */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+    /* градиент для IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
+}
+
+
+
 
 
 /*Описание lesson (Каждый урок это....) и его компонентов */
@@ -1188,6 +1216,10 @@
     padding-left: 3px;
 }
 
+.encyclopedia_zena h1 span img{
+    margin-left: 4px;
+}
+
 .encyclopedia_button{
     display: block;
     width: auto;
@@ -1221,8 +1253,23 @@
     border-bottom: 8px solid #3050a4;
 }
 
-.encyclopedia_button .poplight:hover, .encyclopedia_button .poplight:active{
+.encyclopedia_button .poplight:hover{
     background-color:#3050a4;
+    text-decoration: none;
+}
+
+
+.encyclopedia_button .poplight:active{
+    border-bottom: 1px solid #5BC0DE;
+    background-image:-moz-linear-gradient(#2F96B4, #5BC0DE); /* Firefox */
+    background-image: -webkit-linear-gradient(#2F96B4, #5BC0DE); /* Chrome, Safari */
+    background-image: -ms-linear-gradient(#2F96B4, #5BC0DE); /* IE-10 */
+    background-image:-o-linear-gradient(#2F96B4, #5BC0DE); /* Opera */
+    /* добавляем внутренние тени */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+    /* градиент для IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
+
 }
 
 .encyclopedia_bonus{
@@ -1283,14 +1330,12 @@
 
 
 
-.form_order_bloc1{
-    display: block;
+.form_order_bloc1 {
     width: 1280px;
     min-height: 75px;
-    background-color:#4f73d1;
+    background-color: #4f73d1;
     margin: 0 auto;
-
-   display: none;
+    display: none;
 }
 
 .form_order_bloc1 img{
@@ -1724,8 +1769,22 @@
     border-bottom: 8px solid #3050a4;
 }
 
-.delivery_button .submit button:hover, .delivery_button .submit button:active{
+.delivery_button .submit button:hover{
     background-color:#3050a4;
+    text-decoration: none;
+}
+
+
+.delivery_button .submit button:active{
+    border-bottom: 1px solid #5BC0DE;
+    background-image:-moz-linear-gradient(#2F96B4, #5BC0DE); /* Firefox */
+    background-image: -webkit-linear-gradient(#2F96B4, #5BC0DE); /* Chrome, Safari */
+    background-image: -ms-linear-gradient(#2F96B4, #5BC0DE); /* IE-10 */
+    background-image:-o-linear-gradient(#2F96B4, #5BC0DE); /* Opera */
+    /* добавляем внутренние тени */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+    /* градиент для IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
 }
 
 
@@ -1888,10 +1947,23 @@
     border-bottom: 8px solid #3050a4;
  }
 
-.make_bloc2 .poplight:hover, .make_bloc2 .poplight:active{
+.make_bloc2 .poplight:hover{
     background-color:#3050a4;
+    text-decoration: none;
 }
 
+.make_bloc2 .poplight:active{
+    border-bottom: 1px solid #5BC0DE;
+    background-image:-moz-linear-gradient(#2F96B4, #5BC0DE); /* Firefox */
+    background-image: -webkit-linear-gradient(#2F96B4, #5BC0DE); /* Chrome, Safari */
+    background-image: -ms-linear-gradient(#2F96B4, #5BC0DE); /* IE-10 */
+    background-image:-o-linear-gradient(#2F96B4, #5BC0DE); /* Opera */
+    /* добавляем внутренние тени */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+    /* градиент для IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
+
+}
 
 
     /*Описание блока "Футер" и его омпонентов */

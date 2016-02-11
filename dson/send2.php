@@ -10,7 +10,7 @@ $name = htmlspecialchars($name);
 $email = stripslashes($email);
 $email = htmlspecialchars($email);
 
-$address = "alexandr.tupichenkov@yandex.ru";
+$address = "as@2eng.ru";
 
 
 
@@ -30,9 +30,9 @@ if ($verify == 'true')
  <tr>
  <td class='warning_table' width='220' align='center' valign='middle'>
 
- <img align='center' src='img/warning.png'>
+ <img align='center' src='img/screens.png'>
  <div align='center' class='warning_font_big'>Поздравляем!</div>
- <div align='center' class='warning_font' align='left'>Ваше Ваша заявка доставлена администратору. Через некоторое время Вы получите ответ!</div>
+ <div align='center' class='warning_font' align='left'>Ваше Ваша заявка на звонок доставлена администратору. Через некоторое время Мы с Вами свяжемся!</div>
  <p align='center'><a href='index.html' class='all_links'>Вернуться назад</a></div></p>
 
  </td>

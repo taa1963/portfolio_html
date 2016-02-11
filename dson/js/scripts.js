@@ -12,10 +12,9 @@ $(function() {
         if (count > 0) {
 
             $('.form_order_bloc1').show();
-            $('.form_order_bloc2').hide();
+
         } else {
             $('.form_order_bloc1').hide();
-            $('.form_order_bloc2').show();
 
         }
 
@@ -49,7 +48,7 @@ $(function() {
 
     displayCount();
 
-    $('.form_order .popup_1 b').click(function() {
+    $('.form_order .popup_1 b span').click(function() {
 
         var block = $(this).parents('.popup_1');
         var input = block.find('input[type=checkbox]');
@@ -59,7 +58,7 @@ $(function() {
 
     displayCount();
 
-    $('.form_order .popup_2 b').click(function() {
+    $('.form_order .popup_2 b span').click(function() {
 
         var block = $(this).parents('.popup_2');
         var input = block.find('input[type=checkbox]');

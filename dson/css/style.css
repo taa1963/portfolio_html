@@ -1329,13 +1329,15 @@
 
 
 
-
 .form_order_bloc1 {
     width: 1280px;
     min-height: 75px;
     background-color: #4f73d1;
     margin: 0 auto;
     display: none;
+    position: fixed;
+    top: 10%;
+    z-index: 999;
 }
 
 .form_order_bloc1 img{
@@ -1979,6 +1981,7 @@
     display: block;
     margin: 0 auto;
     padding-top: 10px;
+    padding-left: 71px;
 }
 
 .footer_bloc b{

@@ -1,3 +1,3 @@
 <?
-   mail("свой@yandex.ru", "Тема", "Сообщение");
+   mail("alexandr.tupichenkov@yandex.ru", "Тема", "Сообщение");
 ?>

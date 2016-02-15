@@ -1,0 +1,205 @@
+/*
+* Оформление контактной формы
+* без дополительных изображений;
+* исключительно средствами CSS;
+*/
+
+/*--Слой затемнения фона--*/
+#fade {
+	position: fixed;
+    top: 0;
+    left: 0; 
+	z-index: 9999; 
+	display: none; /*--по умолчанию скрыт--*/
+	width: 100%;
+    height: 100%;
+	background: #000;
+	opacity: .70;/* Полупрозрачность слоя затемнения */
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+/*--Модальное окно--*/
+.popup_block{
+	position: fixed;
+   	top: 50%;
+    left: 50%;
+	z-index: 99999;
+	display: none; /*--по умолчанию скрыт--*/
+	float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box; 
+    box-sizing: content-box;
+	padding: 15px;
+    background-color: #ffffff;
+
+/*-- скругленные углы--*/
+
+    color: #ffffff;
+	font-size: .9em;
+}
+/*--Фиксированное позиционирование для тупого IE6--*/
+*html #fade {
+	position: absolute;
+}
+*html .popup_block {
+	position: absolute;
+}
+/*--Блок содержания--*/
+.note{
+    display: block;
+    overflow: hidden;
+    float: right;
+    /* устанавливаем необходимую ширину формы в зависимости от дизайна
+     ** форма отлично растягивается */
+    width: 100%;
+    background: none repeat scroll 0 0 #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.note p{
+    color: #343434;
+    font:30px "Ubuntu";
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 20px;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+/*--крутим кнопку при наведении--*/
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);    
+}
+/* контактная форма */
+#form{
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 50px;
+   /* устанавливаем необходимую ширину формы в зависимости от дизайна
+ ** форма отлично растягивается */
+    width: 100%;
+
+}
+
+
+#form fieldset{
+    display:inline;
+    float:left;
+    margin:0;
+    padding:0;
+    width: 99%;
+    border:none;	
+}		
+ 
+#form p{
+    margin:.5em 0;
+}
+/* подписи к полям ввода */	
+
+#form input, #form textarea{
+    padding:3px;
+    border: 1px solid  #343434;
+    background-color: #FFFFFF;
+    color: #343434;
+    font:13px "Ubuntu";
+    text-indent:20px;
+}
+#form input {
+/* устанавливаем ширину инпутов */
+    display: block;
+    width:270px;
+    height: 40px;
+    bottom: 15px;
+    margin: 0 auto;
+
+}
+/* изменяем оформление полей ввода при фокусе */
+#form input:focus, #form textarea:focus {
+  background: #F2F2F2;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+  color: #333;
+}
+
+
+
+#form p.submit{
+    display: block;
+    clear:both;
+    width: 230px;
+    height: 80px;
+    padding: 10px 0 20px;
+    text-align:right;
+    margin: 0 auto;
+}
+/* оформляем кнопку отправки */	
+#form button{
+/* устанавливаем необходимую ширину кнопки */
+    width: 230px;
+    height: 50px;
+    border: solid 1px #2f96b4;
+/* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#fff;
+    font:13px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #3050a4;
+}
+/* изменяем оформление кнопки при наведении */
+#form button:hover {
+    border-color: #2C8BA5;
+    box-shadow: none;
+}
+/* изменяем оформление кнопки при нажатии */
+#form button:active {
+    border-bottom: 1px solid #5BC0DE;
+    background-image:-moz-linear-gradient(#2F96B4, #5BC0DE); /* Firefox */
+    background-image: -webkit-linear-gradient(#2F96B4, #5BC0DE); /* Chrome, Safari */
+    background-image: -ms-linear-gradient(#2F96B4, #5BC0DE); /* IE-10 */
+    background-image:-o-linear-gradient(#2F96B4, #5BC0DE); /* Opera */
+/* добавляем внутренние тени */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+/* градиент для IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
+}
+/* конец формы */

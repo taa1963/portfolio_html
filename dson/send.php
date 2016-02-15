@@ -28,11 +28,11 @@ if (
  $verify = mail($name, $email, "Content-type:text/plain; Charset=windows-1251\r\n");
 
  if ($verify == 'true')
-
+ {
 
    {echo 'Сообщение успешно отправлено';}
 }
-else {echo 'Ошибка отправки сообщения';
+else {echo 'Ошибка отправки сообщения';}
 }
 
 ?>

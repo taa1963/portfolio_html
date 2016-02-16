@@ -202,4 +202,21 @@
 /* градиент для IE6-9 */
     filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
 }
+
+.err {
+    border: 1px solid #2C8BA5;
+    padding: 10px;
+    background: #FFDF97;
+    text-align: left;
+    border-radius: 3px;
+}
+.ok {
+    border: 1px #2C8BA5 solid;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f5f9fd;
+    text-align: center;
+    border-radius: 3px;
+}
+
 /* конец формы */

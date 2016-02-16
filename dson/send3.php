@@ -12,6 +12,9 @@ $address = "as@2eng.ru";
 $subject = "subject";
 $message = "disks: ".var_export($discs, true);
 
+
+mail($address,  $subject, $message);
+
 $verify = mail(
     $address,
     $subject,
@@ -20,10 +23,11 @@ $verify = mail(
 );
 
 if ($verify == 'true')
+
 {
     {echo 'Сообщение успешно отправлено';}
 }
-else {echo 'Ошибка отправки сообщения';}
+else {echo '<div class="err">'.$error.'</div>';}
 
 
 ?>

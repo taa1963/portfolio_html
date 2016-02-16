@@ -16,22 +16,6 @@
 
 /*Описание header и его компонентов */
 
-
-.header_1{
-    display: block;
-    width: 1280px;
-    margin: 0 auto;
-    height: 80px;
-    background: #dbdad6; /* Old browsers */
-    background: -moz-linear-gradient(left,   #dededc 18%,#e1e1e1 90%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,   #dededc 18%,#e1e1e1 90% ); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,   #dededc 18%,#e1e1e1 90%) ; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#dad8d9',GradientType=1 ); /* IE6-9 */
-
-
-
-}
-
 .header {
     display:block;
     width: 1280px;
@@ -45,23 +29,6 @@
 
 }
 
-
-
-.header_menu{
-    display: block;
-    width: 562px;
-    margin: 0 auto;
-    height: auto;
-    padding: 20px 0px 20px 40px;
-}
-
-.header_menu a{
-    font:16px "ubuntu_regular";
-    color: #313131;
-    margin-left: 17px;
-    margin-right: 5px;
-    padding-bottom: 5px;
-}
 
 .header_text{
     display: block;
@@ -2000,7 +1967,7 @@
     display: block;
     margin: 0 auto;
     padding-top: 10px;
-    padding-left: 68px;
+    padding-left: 118px;
 }
 
 .footer_bloc b{

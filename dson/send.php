@@ -12,8 +12,6 @@ if (
  $user_phone = iconv("utf-8", "windows-1251", $user_phone);
 
 
-
-
  $to = 'as@2eng.ru';
 
 
@@ -24,15 +22,16 @@ if (
 
  ";
  // функция, которая отправляет наше письмо
+
  mail($to, $title, $message);
- $verify = mail($name, $email, "Content-type:text/plain; Charset=windows-1251\r\n");
+ $verify = mail($user_name, $user_phone, "Content-type:text/plain; Charset=windows-1251\r\n");
 
  if ($verify == 'true')
  {
 
    {echo 'Сообщение успешно отправлено';}
 }
-else {echo 'Ошибка отправки сообщения';}
+else {echo '<div class="err">'.$error.'</div>';}
 }
 
 ?>

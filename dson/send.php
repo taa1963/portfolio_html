@@ -12,7 +12,7 @@ if (
  $user_phone = iconv("utf-8", "windows-1251", $user_phone);
 
 
- $to = 'as@2eng.ru';
+ $to = 'alexandr.tupichenkov@yandex.ru';
 
 
  $title = 'Был получен заказ с сайта';

@@ -8,12 +8,12 @@ for($i = 0; $i < 11; $i++) {
  }
 }
 
-$address = "as@2eng.ru";
+$address = "alexandr.tupichenkov@yandex.ru";
 $subject = "subject";
 $message = "disks: ".var_export($discs, true);
 
 
-mail($address,  $subject, $message);
+
 
 $verify = mail(
     $address,
@@ -23,11 +23,10 @@ $verify = mail(
 );
 
 if ($verify == 'true')
-
 {
     {echo 'Сообщение успешно отправлено';}
 }
-else {echo '<div class="err">'.$error.'</div>';}
+else {echo 'Ошибка отправки сообщения';}
 
 
 ?>

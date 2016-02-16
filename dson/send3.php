@@ -8,12 +8,9 @@ for($i = 0; $i < 11; $i++) {
  }
 }
 
-$address = "alexandr.tupichenkov@yandex.ru";
+$address = "as@2eng.ru";
 $subject = "subject";
 $message = "disks: ".var_export($discs, true);
-
-
-
 
 $verify = mail(
     $address,
@@ -29,6 +26,6 @@ if ($verify == 'true')
 else {echo 'Ошибка отправки сообщения';}
 
 
-
+?>
 
 

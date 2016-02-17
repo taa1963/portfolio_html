@@ -19,7 +19,7 @@ $verify = mail(
     "Content-type:text/plain; Charset=windows-1251\r\n"
 );
 
-if ($verify == 'true')
+if ($verify)
 {
     {echo 'Сообщение успешно отправлено';}
 }

@@ -32,7 +32,7 @@
 
 .header_text{
     display: block;
-    width: 1000px;
+    width: 1010px;
     height: 171px;
     margin-top: 271px;
     margin-left: 154px;
@@ -46,6 +46,7 @@
     color: red;
     text-align: center;
     line-height: 39px;
+    padding-top: 35px;
 }
 
 
@@ -100,8 +101,7 @@
 .doing_post1 p{
     display: block;
     float: left;
-    font-family: Telvetica;
-    font-size:14px;
+    font:13px "exo_2_regular";
     color: #343434;
     margin-top: 12px;
     margin-left: 20px;
@@ -130,8 +130,7 @@
 .doing_post2 p{
     display: block;
     float: left;
-    font-family: Telvetica;
-    font-size:14px;
+    font:13px "exo_2_regular";
     color: #343434;
     margin-top: 12px;
     margin-left: 30px;
@@ -162,11 +161,10 @@
 .doing_post3 p{
     display: block;
     float: left;
-    font-family: Telvetica;
-    font-size:14px;
+    font:13px "exo_2_regular";
     color: #343434;
     margin-top: 12px;
-    margin-left: 25px;
+    margin-left: 72px;
 }
 
 .doing_post3 img{

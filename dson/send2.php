@@ -6,27 +6,34 @@ if (
 
     $name1 = substr(htmlspecialchars(trim($_POST['name1'])), 0, 1000);
     $email2 = substr(htmlspecialchars(trim($_POST['email2'])), 0, 1000000);
-    $name1 = iconv("utf-8", "windows-1251", $name1);
-    $email2 = iconv("utf-8", "windows-1251", $email2);
+
 
     $to = "as@2eng.ru";
-    $title = 'Êëèåíò ïîäïèñàëñÿ íà ðàññûëêó';
+    $title = 'ÐšÐ»Ð¸ÐµÐ½Ñ‚ Ð¿Ð¾Ð´Ð¿Ð¸ÑÐ°Ð»ÑÑ Ð½Ð° Ñ€Ð°ÑÑÑ‹Ð»ÐºÑƒ';
     $message = "
-        Èìÿ: $name1
+    ÐšÐ»Ð¸ÐµÐ½Ñ‚ Ð¿Ð¾Ð´Ð¿Ð¸ÑÐ°Ð»ÑÑ Ð½Ð° Ñ€Ð°ÑÑÑ‹Ð»ÐºÑƒ
+        Ð˜Ð¼Ñ: $name1
         E_mal: $email2
      ";
-  // ôóíêöèÿ, êîòîðàÿ îòïðàâëÿåò íàøå ïèñüìî
+    // Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð°Ñ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÑÐµÑ‚ Ð½Ð°ÑˆÐµ Ð¿Ð¸ÑÑŒÐ¼Ð¾
 
 
-    $verify = mail($to, $title, $message,"Content-type:text/plain; Charset=windows-1251\r\n");
+    $verify = mail($to, $title, $message,
+        "Content-type:text/plain; Charset=utf-8\r\n"
+    );
 
     if ($verify)
-    {
 
-        {echo 'Ñîîáùåíèå óñïåøíî îòïðàâëåíî';}
-    }
-    else echo 'Îøèáêà îòïðàâêè ñîîáùåíèÿ';
+        if ($verify) {
+
+            header('Location: http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/#success', true, 302);
+            exit;
+        } else {
+            header('Location: http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/?form_error=1', true, 302);
+            exit;
+        }
 }
+?>
 
 
 

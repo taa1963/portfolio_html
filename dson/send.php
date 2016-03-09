@@ -1,30 +1,32 @@
 <?
-// если была нажата кнопка "Отправить"
+// РµСЃР»Рё Р±С‹Р»Р° РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° "РћС‚РїСЂР°РІРёС‚СЊ"
 if (
     isset($_POST['user_name']) && !empty($_POST['user_name']) &&
     isset($_POST['user_phone']) && !empty($_POST['user_phone'])) {
 
     $user_name = substr(htmlspecialchars(trim($_POST['user_name'])), 0, 1000);
     $user_phone = substr(htmlspecialchars(trim($_POST['user_phone'])), 0, 1000000);
-    $user_name = iconv("utf-8", "windows-1251", $user_name);
-    $user_phone = iconv("utf-8", "windows-1251", $user_phone);
+
 
     $to = 'as@2eng.ru';
-    $title = 'Был получен заказ с сайта';
-      $message = "
-        Имя: $user_name
-        Телефон: $user_phone
+    $title = 'РќРѕРІС‹Р№ Р·Р°РєР°Р·';
+    $message = "
+        Р‘С‹Р» РїРѕР»СѓС‡РµРЅ Р·Р°РєР°Р· СЃ СЃР°Р№С‚Р°
+        РРјСЏ: $user_name
+        РўРµР»РµС„РѕРЅ: $user_phone
        ";
- // функция, которая отправляет наше письмо
 
-   $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=windows-1251\r\n");
+    $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8");
 
-    if ($verify)
-    {
+    if ($verify) {
 
-        {echo 'Сообщение успешно отправлено';}
+        header('Location: http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/#success', true, 302);
+        exit;
+    } else {
+        header('Location: http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/?form_error=1', true, 302);
+        exit;
     }
-    else echo 'Ошибка отправки сообщения';
-    }
+}
+
 
 

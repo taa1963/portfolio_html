@@ -9,21 +9,28 @@ for($i = 0; $i < 11; $i++) {
 }
 
 $address = "as@2eng.ru";
-$subject = "subject";
-$message = "disks: ".var_export($discs, true);
+$subject = "Ð—Ð°ÐºÐ°Ð· Ð´Ð¸ÑÐºÐ¾Ð²";
+$message = "Ð—Ð°ÐºÐ°Ð·Ð°Ð½Ñ‹ Ð´Ð¸ÑÐºÐ¸: ".var_export($discs, true);
 
+$verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
 $verify = mail(
     $address,
     $subject,
     $message,
-    "Content-type:text/plain; Charset=windows-1251\r\n"
+    "Content-type:text/plain; Charset=utf-8\r\n"
 );
 
+
 if ($verify)
-{
-    {echo 'Ñîîáùåíèå óñïåøíî îòïðàâëåíî';}
-}
-else {echo 'Îøèáêà îòïðàâêè ñîîáùåíèÿ';}
+
+    if ($verify) {
+
+        header('Location: http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/#success', true, 302);
+        exit;
+    } else {
+        header('Location: http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/?form_error=1', true, 302);
+        exit;
+    }
 
 
 ?>

@@ -17,7 +17,6 @@ if (
      ";
     // функция, которая отправляет наше письмо
 
-
     $verify = mail($to, $title, $message,
         "Content-type:text/plain; Charset=utf-8\r\n"
     );

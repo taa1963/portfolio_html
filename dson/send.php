@@ -7,7 +7,6 @@ if (
     $user_name = substr(htmlspecialchars(trim($_POST['user_name'])), 0, 1000);
     $user_phone = substr(htmlspecialchars(trim($_POST['user_phone'])), 0, 1000000);
 
-
     $to = 'as@2eng.ru';
     $title = 'Новый заказ';
     $message = "

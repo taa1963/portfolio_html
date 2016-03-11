@@ -68,6 +68,7 @@ $(function() {
 
     displayCount();
 
+
     //показываем popup по hash-у
     if (window.location.hash == '#success') {
         $('#popup_success').show();

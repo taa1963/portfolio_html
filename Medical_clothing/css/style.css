@@ -289,8 +289,6 @@ input[type="text"] {
 }
 
 .content_titel img {
-
-
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -324,6 +322,14 @@ input[type="text"] {
     border: 1px solid #7d7b7c;
 }
 
+.header_form button{
+    width: 270px;
+    height: 58px;
+    background-image: url("../img/button_head.png");
+    display: inline-block;
+
+}
+
 .header_form .item-post{
     width: 270px;
     height: 58px;
@@ -331,7 +337,7 @@ input[type="text"] {
     display: inline-block;
 }
 
-.header_form p{
+.header_form h1{
     font: 13px "Myriad Pro";
     color: #dadada;
     text-align: center;

@@ -1,4 +1,4 @@
-<?
+<?php
 
 if (
     isset($_POST['name1']) && !empty($_POST['name1']) &&
@@ -17,15 +17,15 @@ if (
      ";
     // функция, которая отправляет наше письмо
 
+
     $verify = mail($to, $title, $message,
         "Content-type:text/plain; Charset=utf-8\r\n"
     );
-
-    if ($verify)
+  
 
         if ($verify) {
 
-            header('Location: http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/#success', true, 302);
+            header('Location: http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/#success2', true, 302);
             exit;
         } else {
             header('Location: http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/?form_error=1', true, 302);
@@ -33,7 +33,7 @@ if (
         }
 }
 
-
+?>
 
 
 

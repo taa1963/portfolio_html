@@ -1,4 +1,4 @@
-<?
+<?php
 // если была нажата кнопка "Отправить"
 if (
     isset($_POST['user_name']) && !empty($_POST['user_name']) &&
@@ -7,6 +7,7 @@ if (
     $user_name = substr(htmlspecialchars(trim($_POST['user_name'])), 0, 1000);
     $user_phone = substr(htmlspecialchars(trim($_POST['user_phone'])), 0, 1000000);
 
+
     $to = 'as@2eng.ru';
     $title = 'Новый заказ';
     $message = "
@@ -14,7 +15,8 @@ if (
         Имя: $user_name
         Телефон: $user_phone
        ";
-    $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8");
+
+    $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
 
     if ($verify) {
 
@@ -25,6 +27,6 @@ if (
         exit;
     }
 }
-
+?>
 
 

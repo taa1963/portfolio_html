@@ -20,6 +20,24 @@ $(function() {
 
 
         $('#count').text(count);
+
+        var disk;
+        if (count > 0) {disk = 'РґРёСЃРє'
+            $('#disk').text(disk);
+        }
+
+            if (count > 1) {
+                disk = 'РґРёСЃРєР°'
+                $('#disk').text(disk);
+
+            }
+        if (count > 4) {
+            disk = 'РґРёСЃРєРѕРІ'
+            $('#disk').text(disk);
+
+        }
+
+
     }
 
 
@@ -69,9 +87,14 @@ $(function() {
     displayCount();
 
 
-    //показываем popup по hash-у
+
     if (window.location.hash == '#success') {
         $('#popup_success').show();
     }
+
+    if (window.location.hash == '#success2') {
+        $('#popup_success2').show();
+    }
+
 
 });

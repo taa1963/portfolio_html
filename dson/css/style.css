@@ -1315,7 +1315,7 @@
 
 .form_order_bloc1 {
     width: 1280px;
-    min-height: 75px;
+    min-height: 90px;
     background-color: #4f73d1;
     margin: 0 auto;
     display: none;
@@ -1324,25 +1324,80 @@
     z-index: 999;
 }
 
+
+
 .form_order_bloc1 img{
     display: block;
     float: right;
 }
 
 .form_order_bloc1 h2{
+    display: block;
+    width: 300px;
     font:14px "Ubuntu";
     color: #ffffff;
-    padding-left: 336px;
-    padding-top: 20px;
+    margin-left: 99px;
+    margin-top: 35px;
+    float: left;
+
 }
+
+.form_order_contact{
+    display: block;
+    width: 500px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.order1{
+    display: block;
+    float: left;
+    margin-top: 25px;
+}
+
+.order1 input{
+    border: 1px solid #343434;
+    background-color: #f6f6f6;
+    color: #343434;
+    font: 13px "Ubuntu";
+    margin-left: 17px;
+    margin-top: 3px;
+    text-indent: 15px;
+    float: left;
+    width: 200px;
+    height: 30px;
+
+}
+
+
+.order2{
+    display: block;
+    float: right;
+    margin-top: 25px;
+}
+
+.order2 input{
+    border: 1px solid #343434;
+    background-color: #f6f6f6;
+    color: #343434;
+    font: 13px "Ubuntu";
+    margin-left: 17px;
+    margin-top: 3px;
+    text-indent: 15px;
+    float: left;
+    width: 200px;
+    height: 30px;
+
+}
+
+
 
 .form_order_bloc1 .submit{
     display: block;
-    width: 251px;
+    width: 330px;
     height: 51px;
     float: right;
-    margin-top: -28px;
-    margin-right: 400px;
+    margin-top: -75px;
 }
 
 .form_order_bloc1 p.submit button{
@@ -1984,4 +2039,88 @@
     margin: 0 auto;
 }
 
+.popup_success{
+   display: none;
+    position: fixed;
+    top: 30px;
+    left: 28%;
+    width: 40%;
+    height: 200px;
+    background-color:#ffffff;
+    margin: 0 auto;
+    z-index: 9999999;
+    border: 1px solid  #343434;
+}
 
+.popup_success p{
+    display: block;
+    font: 25px "exo_2_regular";
+    font-weight: bold;
+    color: #343434;
+    text-align: center;
+    line-height: 39px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.popup_success .poplight{
+    display: block;
+    width: 192px;
+    height: 56px;
+   margin: 0 auto;
+    clear:both;
+    border: solid 1px #2f96b4;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#fff;
+    font:15px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #3050a4;
+
+}
+
+.popup_success2{
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 28%;
+    width: 40%;
+    height: 200px;
+    background-color:#ffffff;
+    margin: 0 auto;
+    z-index: 9999999;
+    border: 1px solid  #343434;
+}
+
+.popup_success2 p{
+    display: block;
+    font: 25px "exo_2_regular";
+    font-weight: bold;
+    color: #343434;
+    text-align: center;
+    line-height: 39px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.popup_success2 .poplight{
+    display: block;
+    width: 192px;
+    height: 56px;
+    margin: 0 auto;
+    clear:both;
+    border: solid 1px #2f96b4;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#fff;
+    font:15px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #3050a4;
+
+}

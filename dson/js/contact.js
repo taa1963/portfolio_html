@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 		var str = $(this).serialize();
 		$.ajax({
 			type: "POST",
-			url: "send.php",
+			url: "../send.php",
 			data: str,
 			success: function(msg) {
 				if(msg == 'OK') {

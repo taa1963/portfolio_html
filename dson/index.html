@@ -474,22 +474,9 @@
                         </div>
                     </div>
 
-
-
-
-
-
                 </div>
 
-
-
-
-
             </div>
-
-
-
-
 
             </div>
         </div>
@@ -544,12 +531,23 @@
 
         <div class="row">
             <div class="col-md-12">
-                <form   id="form12" action="send3.php" method="post">
+                <form   id="form12" action="send3.php" method="post"  >
 
 
-                <div class="form_order_bloc1" id="form2" action="send.php" method="post"   >
+                <div class="form_order_bloc1" id="form2" action="send3.php" method="post"   >
 
-                    <h2>Вы выбрали к заказу  <span id="count"></span> дисков  </h2>
+                    <h2>Вы выбрали к заказу  <span id="count"></span> <span id ="disk"></span>   </h2>
+
+                    <div class="form_order_contact">
+                        <div class="order1">
+                            <input type="text" name="user_name2" id="user_name2" placeholder="Ваше имя"  required>
+                        </div>
+
+                        <div class="order2">
+                            <input type="text" name="user_phone2" id="user_phone2" placeholder="Номер телефона" required >
+                        </div>
+                    </div>
+
 
 
                     <p class="submit"><button type="submit">ЗАКАЗАТЬ ВЫБРАННЫЕ ДИСКИ</button></p>
@@ -1326,6 +1324,35 @@
 
         <p class="submit"><button type="submit">ЗАКАЗАТЬ СЕЙЧАС</button></p>
     </form>
+</div>
+
+
+<div id="popup_success" class="popup_success">
+
+        <p>
+
+            Заказ оформлен! <br>
+
+            Мы свяжемся с вами в ближайшее время.
+        </p>
+    <br>
+
+    <a href="http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/" rel="popup_success" class="poplight"><span class="submit">ЗАКРЫТЬ ОКНО</span> </a>
+
+</div>
+
+<div id="popup_success2" class="popup_success2">
+
+    <p>
+
+        Спасибо! <br>
+
+        Подписка успешно оформлена.
+    </p>
+    <br>
+
+    <a href="http://xn--b1aafccte5ahahmiiee2dvg.xn--p1ai/" rel="popup_success" class="poplight"><span class="submit">ЗАКРЫТЬ ОКНО</span> </a>
+
 </div>
 
 

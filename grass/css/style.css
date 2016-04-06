@@ -1,0 +1,372 @@
+@import"reset200802.css";
+
+.body {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/*Описание header и его компонентов */
+
+
+
+
+
+.header {
+    display:block;
+    width: 100%;
+    min-height: 333px
+    margin: 0 auto;
+    background: url("../img/Fon1.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+
+}
+
+.text1{
+    display:block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.text1 h1{
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.advantages{
+    display:block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+
+
+}
+
+.bloc_advantages{
+
+    display:block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.bloc_advantages_text{
+    display:block;
+    width: 80%;
+    height: 245px;
+    margin: 0 auto;
+
+    margin-bottom: 30px;
+ }
+
+.bloc_advantages_text img{
+    display: block;
+    margin: 0 auto;
+}
+
+.bloc_advantages_text h1{
+    display: block;
+    text-align: center;
+    font-family:Helvetica;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    margin-top: 10px;
+}
+
+.bloc_advantages_text p{
+    display: block;
+    text-align: center;
+    font-family:Helvetica;
+    font-size: 14px;
+    color: black;
+    margin-top: 10px;
+}
+
+.text2{
+    display:block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.text2 h1{
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+.form{
+
+    display:block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+}
+.form1{
+
+    display:block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+}
+
+
+.delivery_bloc2{
+    display: block;
+    width: 50%;
+    min-height: 150px;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: #f3f3f3;
+}
+
+.first{
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+
+.first input  {
+    /* устанавливаем ширину инпутов */
+    display: block;
+    width:231px;
+    height: 39px;
+    border: 1px solid  #343434;
+    background-color:#f6f6f6;
+    color: #343434;
+    font: 13px "Ubuntu";
+    margin: 0 auto;
+    text-indent:15px;
+
+}
+
+
+
+.delivery_button{
+    display: block;
+    margin: 0 auto;
+     width: 231px;
+    height: 55px;
+}
+
+.delivery_button .submit button{
+    width: 231px;
+    height: 55px;
+    display: block;
+    clear:both;
+    margin: 0 auto;
+    border: solid 1px #2f96b4;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#fff;
+    font:13px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #3050a4;
+}
+
+.delivery_button .submit button:hover{
+    background-color:#3050a4;
+    text-decoration: none;
+}
+
+
+.delivery_button .submit button:active{
+    border-bottom: 1px solid #5BC0DE;
+    background-image:-moz-linear-gradient(#2F96B4, #5BC0DE); /* Firefox */
+    background-image: -webkit-linear-gradient(#2F96B4, #5BC0DE); /* Chrome, Safari */
+    background-image: -ms-linear-gradient(#2F96B4, #5BC0DE); /* IE-10 */
+    background-image:-o-linear-gradient(#2F96B4, #5BC0DE); /* Opera */
+    /* добавляем внутренние тени */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+    /* градиент для IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
+}
+
+
+.contact{
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    background-color:  #5BC0DE;
+
+}
+
+.contact_tex2{
+    display: block;
+    float: left;
+    padding-top: 20px;
+    padding-left: 20px;
+    color: #343434;
+    font: 14px "Helvetica";
+    font-weight: bold;
+
+
+}
+
+.contact_bloc2{
+    display: block;
+    float: right;
+    padding-top: 20px;
+    padding-right: 20px;
+    font: 14px "Helvetica";
+    font-weight: bold;
+
+}
+
+
+
+@media  only screen  and (max-width: 1600px)
+{
+    .header
+    {
+       min-height: 417px
+    }
+
+    .text1 h1{
+        font-size: 24px;
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    .text2 h1{
+        font-size: 24px;
+        color: black;
+        text-align: center;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    .contact_tex2{
+        font: 14px "Helvetica";
+        font-weight: bold;
+    }
+    .contact_bloc2{
+        font: 14px "Helvetica";
+        font-weight: bold;
+    }
+ }
+
+
+@media only screen  and (max-width: 1200px)
+{
+    .header {
+        min-height: 333px
+    }
+    .text1 h1{
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .text2 h1{
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    .contact_tex2{
+        font: 14px "Helvetica";
+        font-weight: bold;
+    }
+    .contact_bloc2{
+        font: 14px "Helvetica";
+        font-weight: bold;
+    }
+
+}
+
+@media only screen  and (max-width: 768px)
+{
+    .header {
+        min-height: 200px
+    }
+    .text1 h1{
+        margin-top: 30px;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .text2 h1{
+        margin-top: 30px;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    .contact_tex2{
+        font: 12px "Helvetica";
+        font-weight: bold;
+    }
+    .contact_bloc2{
+        font: 12px "Helvetica";
+        font-weight: bold;
+    }
+
+}
+
+@media only screen  and (max-width: 320px){
+
+    .header {
+        min-height: 83px
+    }
+    .text1 h1{
+        margin-top: 20px;
+        font-size: 12px;
+        color: black;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+    .text2 h1{
+        margin-top: 20px;
+        font-size: 12px;
+        color: black;
+        text-align: center;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+    .contact_tex2{
+        font: 10px "Helvetica";
+        font-weight: bold;
+        padding-left:5px;
+    }
+    .contact_bloc2{
+        font: 10px  "Helvetica";
+        font-weight: bold;
+        padding-right:5px;
+    }
+
+}
+
+
+/*Описание doing (Что делаете вы) и его компонентов */
+
+

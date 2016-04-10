@@ -17,6 +17,9 @@ $(function() {
     var rows = $('.rows'),
         blocks = $('.block'),
         window_height = $(window).height();
+    rows.each(function(index, value) {
+        $(value).attr('index', index);
+    });
 
     function resizeBlock() {
         window_height = $(window).height();
@@ -28,11 +31,13 @@ $(function() {
     resizeBlock();
 
     var showLineLock = false;
-    function showLine(row, fast) {
+    function showLine(row, fast, revert_animation) {
         if (fast) {
             blocks.hide();
             row.find('.block').show();
             showLineLock = false;
+            curr_index = '#row_' + row.attr('index');
+            curr_row = row;
         } else {
             var next_row = row,
                 duration = 500,
@@ -44,6 +49,16 @@ $(function() {
                     $(next_row.find('.block')[0]),
                     $(next_row.find('.block')[1])
                 ];
+            if (revert_animation) {
+                curr_blocks = [
+                    $(curr_row.find('.block')[1]),
+                    $(curr_row.find('.block')[0])
+                ];
+                next_blocks = [
+                    $(next_row.find('.block')[1]),
+                    $(next_row.find('.block')[0])
+                ];
+            }
 
             next_row.insertAfter(curr_row);
 
@@ -72,11 +87,39 @@ $(function() {
                     resizeBlock();
 
                     setTimeout(function() {
+                        curr_index = '#row_' + row.attr('index');
+                        curr_row = row;
                         showLineLock = false;
                     }, 100);
                 }
             });
         }
+    }
+
+    function showNextLine() {
+        if (showLineLock) return;
+        showLineLock = true;
+
+        var index = parseInt(curr_row.attr('index')) + 1;
+        var row = rows.filter('#row_'+index);
+        if (row.length <= 0) {
+            showLineLock = false;
+            return;
+        }
+        showLine(row, false, false);
+    }
+
+    function showPrewLine() {
+        if (showLineLock) return;
+        showLineLock = true;
+
+        var index = parseInt(curr_row.attr('index')) - 1;
+        var row = rows.filter('#row_'+index);
+        if (row.length <= 0) {
+            showLineLock = false;
+            return;
+        }
+        showLine(row, false, true);
     }
 
     var curr_index = '#row_0';
@@ -93,30 +136,42 @@ $(function() {
             return;
         }
         var row = $(index);
-        showLine(row);
-        curr_index = index;
-        curr_row = row;
+        var revert_animation = curr_row.attr('index') > row.attr('index');
+        showLine(row, false, revert_animation);
     });
 
-    /*var prevTime = new Date().getTime(),
-        lastScrollTop = 0;
-    var f = function(e){
+    var prevTime = new Date().getTime();
+    $(window).on( 'DOMMouseScroll mousewheel', function ( event ) {
+        if (Math.abs(event.originalEvent.detail) < 15 && Math.abs(event.originalEvent.wheelDelta) < 15) return;
+
         var curTime = new Date().getTime();
-        if(typeof prevTime !== 'undefined'){
-            var timeDiff = curTime-prevTime;
-            if(timeDiff>200) {
-                var st = $(window).scrollTop();
-                if (st > lastScrollTop){
-                    console.log('UP')
-                } else {
-                    console.log('DOWN')
-                }
-                lastScrollTop = st;
+        if(curTime - prevTime > 500) {
+            prevTime = curTime;
+            if( event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0 ) {
+                showNextLine();
+            } else {
+                showPrewLine();
             }
         }
-        prevTime = curTime;
-    };
-    window.onscroll=f;*/
+
+        return false;
+    });
+
+
+    $(document).keydown(function(e) {
+        switch(e.which) {
+            case 37: // left
+            case 38: // up
+                showPrewLine();
+                break;
+            case 39: // right
+            case 40: // down
+                showNextLine();
+                break;
+            default: return; // exit this handler for other keys
+        }
+        e.preventDefault(); // prevent the default action (scroll / move caret)
+    });
 
     showLine(curr_row, true);
 });

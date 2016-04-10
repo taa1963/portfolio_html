@@ -14,84 +14,71 @@
     padding: 0;
 }
 
-.slide_one_left{
-    display: block;
-    width: 50%;
-    height:654px;
-    margin: 0 auto;
-    float: left;
-    background-color: #ffffff;
+.block {
+    height: 100%;
 }
 
-.slide_one_richt img{
-    max-width:100%;
-    height:auto;
+.rows {
+    width: 100%;
 }
 
-.slide_one_left img{
-    max-width:100%;
-    height:auto;
+.navigation {
+    position: absolute;
+    right: 20%;
+    top: 2%;
+    display: inline-block;
+    z-index: 99999;
 }
 
+.navigation a {
+    font:13px "UbuntuBold";
+    padding-right: 14px;
+    color: black;
+}
 
-.slide_one_richt{
+.logo {
+    position: absolute;
+    z-index: 99999;
+    top: 20px;
+    left: 55px;
+}
+
+.slide_text{
     display: block;
-    width: 50%;
-    height:654px;
-    margin: 0 auto;
-    float: right;
-
- }
-
-.slide_one_logo{
-    display: block;
-    padding-left: 55px;
-    margin-left: 55px;
+    text-align: center;
     margin-top: 20px;
 }
-.slide_one_logo_Mob{
-    display: none;
-}
 
-
-.slide_one_text1{
-    display: block;
-    width: auto;
-    height: auto;
-    margin-left: 165px;
-    margin-top: 150px;
-}
-
-.slide_one_text1 h1{
+.slide_text h1{
     font:30px "UbuntuBold";
 }
-.slide_one_text_inc{
+.slide_text_inc{
     display: block;
 }
 
-.slide_one_text1 p{
+.slide_text p{
     font:13px "DroidSerifRegular";
     color: #cfcfd1;
     margin-top: 45px;
 }
 
-.slide_one_text1 b{
+.slide_text b{
     display: block;
     font:13px "UbuntuBold";
     margin-top: 45px;
 }
-.slide_one_text1 span{
+.slide_text span{
     margin-top: 5px;
     margin-left: 5px;
 }
 
 
 
-.slide_one_text_full{
+.slide_text_full{
     display: none;
 }
 
-.slide_one_text_full p{
+.slide_text_full p{
     font:13px "DroidSerifRegular";
     width: 340px;
     height: 230px;
@@ -99,20 +86,17 @@
     margin-top: 45px;
     overflow-y: scroll;
 }
-/*		Меню и его комопоненты */
-.menu{
-    display: inline-block;
-    position: absolute;
-    padding-left: 68%;
-    margin-top: 2%;
-}
 
-.menu a{
-    font:13px "UbuntuBold";
-    padding-right: 14px;
-    color: black;
-}
 
+
+
+
+
+
+
+
+
+/* это я уже не знаю */
 .slide_two{
     display: block;
     width: 100%;

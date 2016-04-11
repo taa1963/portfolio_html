@@ -189,6 +189,25 @@ $(function() {
         showLine(row, false, revert_animation);
     });
 
+
+    $('.navigation2 a').click(function(event) {
+        event.stopPropagation();
+
+        if (showLineLock) return;
+        showLineLock = true;
+
+        var index = $(this).attr('href');
+        if (curr_index == index) {
+            showLineLock = false;
+            return;
+        }
+        var row = $(index);
+        var revert_animation = curr_row.attr('index') > row.attr('index');
+        showLine(row, false, revert_animation);
+    });
+
+
+
     var prevTime = new Date().getTime();
     $(window).on( 'DOMMouseScroll mousewheel', function ( event ) {
         if (Math.abs(event.originalEvent.detail) < 15 && Math.abs(event.originalEvent.wheelDelta) < 15) return;
@@ -206,6 +225,8 @@ $(function() {
         return false;
     });
 
+
+  //Нажатие клавиатуры  вверх-вниз  //
 
     $(document).keydown(function(e) {
         switch(e.which) {

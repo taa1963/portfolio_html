@@ -2,14 +2,14 @@
 
 .body {
     width: auto;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
 .container {
     width: auto;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -24,6 +24,7 @@
 
 .rows {
     width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -57,12 +58,14 @@
     left: 53px;
 }
 
+/*		первый  блок слайдера */
 
 .slide_foto1{
     display:block;
-    vertical-align: middle;
+    position: absolute;
     width: 100%;
     height: 100%;
+    min-height: 654px;
     margin: 0 auto;
     background: url("../img/slide1.png") no-repeat;
 }
@@ -72,6 +75,7 @@
     display: block;
     padding-left: 65px;
     padding-top: 10%;
+
 }
 
 .slide_text h1{
@@ -116,21 +120,26 @@
 
 .slide_foto2{
     display:block;
-    vertical-align: middle;
     width: 100%;
+    position: absolute;
+   min-height: 654px;
     height: 100%;
     margin: 0 auto;
     background: url("../img/slide2N.png") no-repeat;
+    float: left;
+
 }
 
 .slide2_text{
     display: block;
-    padding-left: 65px;
+    width: auto;
     padding-top: 20%;
+    float: right;
 }
 
 .slide2_text h1{
     font:30px "UbuntuBold";
+    margin-left: 65px;
 }
 .slide2_text_inc{
     display: block;
@@ -140,12 +149,14 @@
     font:13px "DroidSerifRegular";
     color: #cfcfd1;
     margin-top: 45px;
+    margin-left: 65px;
 }
 
 .slide2_text b{
     display: block;
     font:13px "UbuntuBold";
     margin-top: 45px;
+    margin-left: 65px;
 }
 .slide2_text span{
     margin-top: 5px;

@@ -68,6 +68,10 @@
     min-height: 654px;
     margin: 0 auto;
     background: url("../img/slide1W.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
 }
 
 
@@ -122,19 +126,22 @@
     display:block;
     width: 100%;
     position: absolute;
-   min-height: 654px;
+    min-height: 654px;
     height: 100%;
     margin: 0 auto;
-    background: url("../img/slide1W.png") no-repeat;
-    float: left;
-
+    background: url("../img/slide2W.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
 }
 
 .slide2_text{
     display: block;
     width: auto;
     padding-top: 20%;
-    float: right;
+    padding-left: 65px;
+
 }
 
 .slide2_text h1{
@@ -182,11 +189,15 @@
 .slide_foto3{
     display:block;
     width: 100%;
-    vertical-align: middle;
+    position: absolute;
     height: 100%;
     min-height: 654px;
     margin: 0 auto;
-    background: url("../img/slide1W.png") no-repeat;
+    background: url("../img/slide3W.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
 }
 
 .slide3_text{
@@ -236,10 +247,15 @@
 .slide_foto4{
     display:block;
     width: 100%;
-    vertical-align: middle;
+    position: absolute;
     height: 100%;
+    min-height: 654px;
     margin: 0 auto;
-    background: url("../img/slide1W.png") no-repeat;
+    background: url("../img/slide4W.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
 }
 
 .slide4_text{
@@ -288,11 +304,15 @@
 /*		Пятый  блок слайдера */
 .slide_foto5{
     display:block;
+    position: absolute;
     width: 100%;
-    vertical-align: middle;
     height: 100%;
     margin: 0 auto;
-    background: url("../img/slide1W.png") no-repeat;
+    background: url("../img/slide5W.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
    }
 
 

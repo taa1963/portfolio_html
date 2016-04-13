@@ -128,10 +128,6 @@
     height: 100%;
     margin: 0 auto;
     background: url("../img/slide2W.png") no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
     background-position: right;
 }
 
@@ -193,10 +189,6 @@
     min-height: 654px;
     margin: 0 auto;
     background: url("../img/slide3W.png") no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
 }
 
 .slide3_text{
@@ -251,10 +243,6 @@
     min-height: 654px;
     margin: 0 auto;
     background: url("../img/slide4W.png") no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
 }
 
 .slide4_text{
@@ -309,10 +297,6 @@
     height: 100%;
     margin: 0 auto;
     background: url("../img/slide5W.png") no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
     background-position: right;
    }
 

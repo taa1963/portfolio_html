@@ -45,9 +45,10 @@
 
 .navigation2{
     display: block;
-    float: right;
+    position:absolute;
+    margin-left: 90%;
     padding-top: 230px;
-    padding-right: 30px;
+    z-index: 999;
 }
 
 
@@ -62,22 +63,26 @@
 
 .slide_foto1{
     display:block;
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     min-height: 654px;
     margin: 0 auto;
-    background: url("../img/slide1W.png") no-repeat;
-    background-position: right;
+}
+
+.slide_foto1 img{
+   height: 100%;
 
 }
+
+
 
 
 .slide_text{
     display: block;
     padding-left: 65px;
-    padding-top: 10%;
-
+    padding-top: 5%;
+    height: 90%;
 }
 
 .slide_text h1{
@@ -88,9 +93,13 @@
 }
 
 .slide_text p{
-    font:13px "DroidSerifRegular";
+
+    font: 16px "DroidSerifRegular";
     color: #cfcfd1;
     margin-top: 45px;
+    width: 90%;
+
+
 }
 
 .slide_text b{
@@ -109,26 +118,27 @@
 }
 
 .slide_text_full p{
-    font:13px "DroidSerifRegular";
-    width: 340px;
-    height: 230px;
+    font: 16px "DroidSerifRegular";
     color: #cfcfd1;
     margin-top: 45px;
+    width: 90%;
     overflow-y: scroll;
 }
 
 /*		Второй  блок слайдера */
 
 
-.slide_foto2{
-    display:block;
+.slide_foto2 {
+    display: block;
     width: 100%;
-    position: absolute;
+    position: relative;
     min-height: 654px;
     height: 100%;
     margin: 0 auto;
-    background: url("../img/slide2W.png") no-repeat;
-    background-position: right;
+}
+.slide_foto2 img{
+    height: 100%;
+
 }
 
 .slide2_text{
@@ -182,13 +192,16 @@
 /*		Третий  блок слайдера */
 
 .slide_foto3{
-    display:block;
+    display: block;
     width: 100%;
-    position: absolute;
-    height: 100%;
+    position: relative;
     min-height: 654px;
+    height: 100%;
     margin: 0 auto;
-    background: url("../img/slide3W.png") no-repeat;
+}
+.slide_foto3 img{
+    height: 100%;
+
 }
 
 .slide3_text{
@@ -236,13 +249,16 @@
 /*		Четвертый   блок слайдера */
 
 .slide_foto4{
-    display:block;
+    display: block;
     width: 100%;
     position: relative;
-    height: 100%;
     min-height: 654px;
+    height: 100%;
     margin: 0 auto;
-    background: url("../img/slide4W.png") no-repeat;
+}
+.slide_foto4 img{
+    height: 100%;
+
 }
 
 .slide4_text{
@@ -291,14 +307,18 @@
 
 /*		Пятый  блок слайдера */
 .slide_foto5{
-    display:block;
-    position: relative;
+    display: block;
     width: 100%;
+    position: relative;
+    min-height: 654px;
     height: 100%;
     margin: 0 auto;
-    background: url("../img/slide5W.png") no-repeat;
-    background-position: right;
-   }
+ }
+
+.slide_foto5 img{
+    height: 100%;
+
+}
 
 
 

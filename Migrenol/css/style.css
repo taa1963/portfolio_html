@@ -8,14 +8,31 @@
 }
 
 .container {
+    display: block;
     width: auto;
     height: 100%;
     margin: 0;
     padding: 0;
+    -webkit-backface-visibility: hidden;
 }
+
+.container_mob{
+    display: none;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
 .col-lg-6{
     padding: 0 0 0 0 ;
     margin: 0 auto;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: skewX(0deg) translate3d(0, 0, 0);
 }
 
 .block {
@@ -27,6 +44,7 @@
     min-height: 100%;
     margin: 0;
     padding: 0;
+    -webkit-transform: skewX(0deg) translate3d(0, 0, 0);
 }
 
 .navigation {
@@ -456,3 +474,376 @@
 }
 
 
+@media only screen  and (max-width: 768px) {
+
+    .container {
+        display: none;
+}
+
+    .container_mob{
+        display: block;
+        width: auto;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logoM {
+        display: block;
+        top: 26px;
+    }
+
+    ul.vmenu {
+        background-color: #ffffff;
+        width:200px;
+        height:auto;
+        margin-top:10px;
+        list-style: none;
+        font: 13px Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow:hidden;
+        padding-bottom: 10px;
+    }
+
+    ul.vmenu li{
+       width:200px;
+        min-height:17px;
+        margin-bottom: 5px;
+    }
+
+
+
+
+    ul.vmenu li a {
+
+        font: 15px "UbuntuBold";
+        font-weight: bold;
+        color: #ffffff;
+        display:block;
+        text-decoration:none;
+        padding-left: 25px;
+        height:21px;
+    }
+    ul.vmenu li:first-child a {box-shadow:none}
+    ul.vmenu li a:hover {}
+    ul.vmenu li.parent a span {
+        display:block;
+        width: 270px;
+        background-color:#202221;
+    }
+    ul.vmenu li.parent a.selected span {
+        font: 14px Tahoma, sans-serif;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    /******************************* Выпадающие пункты */
+    ul.vmenu li ul.dropdown {
+        height:0;
+        background-color: #ffffff;
+        overflow:hidden;
+    }
+    ul.vmenu li ul {
+        list-style:none;
+        margin:0;
+        padding:0;
+        background-color: #ffffff;
+        padding-bottom: 10px;
+    }
+
+    ul.vmenu li ul li a {
+        background-color: #ffffff;
+        padding:0;
+        min-height:10px
+    }
+    ul.vmenu li ul li a span {
+        background-color: #ffffff;
+        display:block;
+        padding-left:35px;
+        padding-top: 20px;
+        font: 15px "UbuntuBold";
+        font-weight: bold;
+        color: #ffffff;
+        line-height:27px;
+        margin-top: 15px;
+
+
+    }
+
+
+
+    .akkordeon{
+        display: block;
+        margin-left: 20px;
+    }
+
+
+    .slide1_mob{
+        display: block;
+    }
+    .slide1_text_mob{
+        display: block;
+        width: 100%;
+        min-height: 314px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .slide_text_mob{
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        padding-left: 5px;
+        padding-top: 10%;
+    }
+
+    .slide_text_mob h1{
+        font:19px "UbuntuBold";
+    }
+    .slide_text_inc_mob{
+        display: block;
+    }
+
+    .slide_text_mob p{
+        font:13px "DroidSerifRegular";
+        color: #cfcfd1;
+        margin-top: 45px;
+    }
+
+    .slide_text_mob b{
+        display: block;
+        font:13px "UbuntuBold";
+        margin-top: 45px;
+    }
+    .slide_text_mob span{
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .slide_text_full_mob{
+        display: none;
+        width: 250px;
+    }
+
+    .slide_text_full_mob p{
+        font:13px "DroidSerifRegular";
+        width: 250px;
+        height: 130px;
+        color: #cfcfd1;
+        margin-top: 45px;
+        overflow-y: scroll;
+    }
+
+    .slide_foto1_mob{
+        display:block;
+        width: 100%;
+        min-height: 325px;
+        padding-top: 20px;
+        margin: 0 auto;
+        background: url("../img/slide1.png") no-repeat;
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+    }
+    .slide2_mob{
+        display: block;
+    }
+    /*		Второй  блок слайдера */
+
+
+    .slide_foto2_mob{
+        display:block;
+        width: 100%;
+        min-height: 325px;
+        margin: 0 auto;
+        background: url("../img/slide2N.png") no-repeat;
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+    }
+
+     .slide3_mob{
+         display: block;
+     }
+
+    .slide_foto3_mob{
+        display:block;
+        width: 100%;
+        min-height: 325px;
+        margin: 0 auto;
+        background: url("../img/slide3N.png") no-repeat;
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+
+    }
+    .slide4_mob{
+        display: block;
+    }
+
+
+    .slide_foto4_mob{
+        display:block;
+        width: 100%;
+        min-height: 325px;
+        margin: 0 auto;
+        background: url("../img/slide4N.png") no-repeat;
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+    }
+    .slide5_mob{
+        display: block;
+    }
+
+
+    .slide_foto5_mob{
+        display:block;
+        width: 100%;
+        min-height: 325px;
+        margin: 0 auto;
+        background: url("../img/slide5.png") no-repeat;
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+    }
+
+    .slide_five_mob{
+        display: block;
+        width: 100%;
+        height:314px;
+    }
+
+    .slide_five_text1_mob{
+        display: block;
+        width: auto;
+        height: auto;
+        margin-left: 65px;
+        margin-top: 20%;
+        margin-bottom: 516px;
+    }
+
+    .slide_five_text1_mob h1{
+        font:31px "UbuntuBold";
+    }
+
+    .slide_five_text1_mob h2{
+        display: block;
+        font:16px "UbuntuBold";
+        margin-top: 35px;
+    }
+
+    .slide_five_text1_mob p{
+        display: block;
+        font:13px "UbuntuRegular";
+        margin-top: 15px;
+        color: #131313;
+    }
+
+    .slide_five_text1_mob b{
+        display: block;
+        font:13px "UbuntuBold";
+        margin-top: 15px;
+        color: #131313;
+    }
+
+    .slide_five_text1_mob b span{
+        font:13px "UbuntuRegular";
+        color: #131313;
+        margin-left: 10px;
+    }
+
+    .slide_five_bloc_button1_mob{
+        display: block;
+        width: auto;
+        margin-top: 55px;
+        float: left;
+    }
+
+    .slide_five_bloc_button1_mob .button{
+        display: block;
+        width: 160px;
+        height: 44px;
+        clear:both;
+        margin: 0 auto;
+        /* закругляем углы кнопки */
+        border-radius: 25px;
+        background-color: #edc201;
+        color:#ffffff;
+        font:17px "UbuntuBold";
+        padding:10px 12px;
+        text-align:center;
+        cursor:pointer;
+    }
+
+    .slide_five_bloc_button1_mob .button:hover{
+        background-color:#e38d13;
+        text-decoration: none;
+    }
+
+
+    .slide_five_bloc_button1_mob .button:active{
+        background-color:#edc201;
+        color:black;
+        text-decoration: none;
+    }
+
+    .slide_five_bloc_button1_mob img{
+        display: block;
+        margin-top: 29px;
+        margin-left: 10px;
+    }
+
+
+    .slide_five_bloc_button2_mob{
+        display: block;
+        width: auto;
+        margin-top: 55px;
+        margin-right: 95px;
+        float: left;
+    }
+
+    .slide_five_bloc_button2_mob .button{
+        display: block;
+        width: 160px;
+        height: 44px;
+        clear:both;
+        margin: 0 auto;
+        /* закругляем углы кнопки */
+        border-radius: 25px;
+        background-color: #028eef;
+        color:#ffffff;
+        font:17px "UbuntuBold";
+        padding:10px 12px;
+        text-align:center;
+        cursor:pointer;
+    }
+
+    .slide_five_bloc_button2_mob .button:hover{
+        background-color:#165c8d;
+        text-decoration: none;
+    }
+
+
+    .slide_five_bloc_button2_mob .button:active{
+        background-color:#165c8d;
+        color:black;
+        text-decoration: none;
+    }
+
+    .slide_five_bloc_button2_mob img{
+        display: block;
+        margin-top: 29px;
+        margin-left: 10px;
+    }
+
+
+
+
+}

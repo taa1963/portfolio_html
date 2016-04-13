@@ -1,15 +1,15 @@
 $(function() {
     $('.button_hide').click(function(){
-        var block = $(this).parents('.slide1_text');
-        block.find('.slide_text_inc').show();
-        block.find('.slide_text_full').hide();
+        var block = $(this).parents('.slide1_text_mob');
+        block.find('.slide_text_inc_mob').show();
+        block.find('.slide_text_full_mob').hide();
     });
 
 
     $('.button_show').click(function(){
-        var block = $(this).parents('.slide1_text');
-        block.find('.slide_text_inc').hide();
-        block.find('.slide_text_full').show();
+        var block = $(this).parents('.slide1_text_mob');
+        block.find('.slide_text_inc_mob').hide();
+        block.find('.slide_text_full_mob').show();
     });
 });
 

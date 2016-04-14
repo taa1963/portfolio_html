@@ -56,6 +56,27 @@ $(function() {
         block.find('.slide4_text_inc').hide();
         block.find('.slide4_text_full').show();
     });
+
+    $('.button_show').click(function(){
+        var block = $(this).parents('.slide4_text');
+        block.find('.slide4_text_inc').hide();
+        block.find('.slide4_text_full').show();
+    });
+
+
+    $('.show_menu').click(function(){
+        var block = $(this).parents('.header_mob');
+        block.find('.popup_success').show();
+    });
+
+    $('.close_menu').click(function(){
+        var block = $(this).parents('.header_mob');
+        block.find('.popup_success').hide();
+    });
+
+
+
+
 });
 
 

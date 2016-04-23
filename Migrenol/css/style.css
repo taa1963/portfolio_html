@@ -115,7 +115,7 @@
 .slide_text p{
 
     font: 16px "DroidSerifRegular";
-    color: #cfcfd1;
+    color: #4b4b4b;
     margin-top: 45px;
     width: 90%;
 
@@ -139,7 +139,7 @@
 
 .slide_text_full p{
     font: 16px "DroidSerifRegular";
-    color: #cfcfd1;
+    color: #4b4b4b;
     height: 350px;
     margin-top: 45px;
     width: 85%;
@@ -159,8 +159,9 @@
     padding: 0 0 0 0;
 }
 .slide_foto2 img{
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    min-height: 654px;
+
 }
 
 .slide2_text{
@@ -180,7 +181,7 @@
 
 .slide2_text p{
     font: 16px "DroidSerifRegular";
-    color: #cfcfd1;
+    color: #4b4b4b;
     margin-top: 45px;
     width: 90%;
 }
@@ -202,7 +203,7 @@
 
 .slide2_text_full p{
     font: 16px "DroidSerifRegular";
-    color: #cfcfd1;
+    color: #4b4b4b;
     margin-top: 45px;
     width: 80%;
     overflow-y: scroll;
@@ -242,7 +243,7 @@
 
 .slide3_text p{
     font: 16px "DroidSerifRegular";
-    color: #cfcfd1;
+    color: #4b4b4b;
     margin-top: 45px;
     width: 90%;
 
@@ -264,7 +265,7 @@
 
 .slide3_text_full p{
     font: 16px "DroidSerifRegular";
-    color: #cfcfd1;
+    color: #4b4b4b;
     height: 350px;
     margin-top: 45px;
     width: 85%;
@@ -306,7 +307,7 @@
 
 .slide4_text p{
     font: 16px "DroidSerifRegular";
-    color: #cfcfd1;
+    color: #4b4b4b;
     margin-top: 45px;
     width: 90%;
 }
@@ -327,7 +328,7 @@
 
 .slide4_text_full p{
     font: 16px "DroidSerifRegular";
-    color: #cfcfd1;
+    color: #4b4b4b;
     margin-top: 45px;
     width: 80%;
     overflow-y: scroll;
@@ -358,7 +359,7 @@
     position: relative;
     width: auto;
     height: auto;
-    margin-left: 65px;
+    margin-left: 165px;
     margin-top: 20%;
 }
 
@@ -812,15 +813,5 @@
         line-height:27px;
         margin-top: 15px;
     }
-
-
-
-
-
-
-
-
-
-
 
 }

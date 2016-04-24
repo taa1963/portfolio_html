@@ -90,9 +90,7 @@
 }
 
 .slide_foto1 img{
-    max-width: 100%;
-    height: 100%;
-
+    width: 100%;
 }
 
 
@@ -117,8 +115,6 @@
     color: #4b4b4b;
     margin-top: 45px;
     width: 90%;
-
-
 }
 
 .slide_text b{
@@ -133,7 +129,6 @@
 
 .slide_text_full{
     display: none;
-
 }
 
 .slide_text_full p{
@@ -158,8 +153,7 @@
     padding: 0 0 0 0;
 }
 .slide_foto2 img{
-    background-size: cover;
-
+    width: 100%;
 }
 
 .slide2_text{
@@ -220,9 +214,7 @@
     margin: 0 auto;
 }
 .slide_foto3 img{
-    max-width: 100%;
-    height: 100%;
-
+    width: 100%;
 }
 
 .slide3_text{
@@ -281,11 +273,8 @@
     margin: 0 auto;
 }
 .slide_foto4 img{
-    max-width: 100%;
-    height: 100%;
-
-
-}
+    width: 100%;
+ }
 
 .slide4_text{
     display: block;
@@ -345,9 +334,7 @@
  }
 
 .slide_foto5 img{
-    height: 100%;
-    max-width: 100%;
-
+  width: 100%;
 }
 
 
@@ -539,7 +526,7 @@
 
     .slide_text_mob p{
         font:19px "DroidSerifRegular";
-        color: #cfcfd1;
+        color: #4b4b4b;
         margin-top: 45px;
     }
 
@@ -562,7 +549,7 @@
         font:19px "DroidSerifRegular";
         width: 250px;
         height: 130px;
-        color: #cfcfd1;
+        color: #4b4b4b;
         margin-top: 45px;
         overflow-y: scroll;
     }
@@ -573,7 +560,7 @@
         min-height: 325px;
         padding-top: 20px;
         margin: 0 auto;
-        background: url("../img/slide1.png") no-repeat;
+        background: url("../img/slide1W21.png") no-repeat;
         -moz-background-size: 100%; /* Firefox 3.6+ */
         -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
         -o-background-size: 100%; /* Opera 9.6+ */

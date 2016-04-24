@@ -88,19 +88,13 @@
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
-
-
-
+    background-size: cover;
 }
 
 .slide_foto1 img{
     max-width: 100%;
     height: 100%;
-
 }
-
-
 
 .slide_text{
     display: block;
@@ -117,13 +111,10 @@
 }
 
 .slide_text p{
-
     font: 16px "DroidSerifRegular";
     color: #4b4b4b;
     margin-top: 45px;
     width: 90%;
-
-
 }
 
 .slide_text b{
@@ -154,16 +145,19 @@
 
 
 .slide_foto2 {
-    display: block;
-    max-width: 100%;
-    position: relative;
-    min-height: 654px;
+    display:block;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
-    padding: 0 0 0 0;
-}
-.slide_foto2 img{
+    background: url("../img/slide2W.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
     background-size: cover;
+}
+
+.slide_foto2 img{
+
 
 }
 
@@ -217,16 +211,15 @@
 /*		Третий  блок слайдера */
 
 .slide_foto3{
-    display: block;
-    max-width: 100%;
-    position: relative;
-    min-height: 654px;
+    display:block;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
-}
-.slide_foto3 img{
-    max-width: 100%;
-    height: 100%;
+    background: url("../img/slide3new.jpg") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: cover;
 
 }
 
@@ -278,16 +271,18 @@
 /*		Четвертый   блок слайдера */
 
 .slide_foto4{
-    display: block;
-    max-width: 100%;
-    position: relative;
-    min-height: 654px;
+    display:block;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
+    background: url("../img/slide4W.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: cover;
 }
 .slide_foto4 img{
-    max-width: 100%;
-    height: 100%;
+
 
 
 }
@@ -341,17 +336,20 @@
 
 /*		Пятый  блок слайдера */
 .slide_foto5{
-    display: block;
-    max-width: 100%;
-    position: relative;
-    min-height: 654px;
+    display:block;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
+    background: url("../img/slide5W.png") no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: cover;
+
  }
 
 .slide_foto5 img{
-    height: 100%;
-    max-width: 100%;
+
 
 }
 

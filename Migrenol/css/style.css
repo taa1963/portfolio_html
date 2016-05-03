@@ -346,8 +346,8 @@
 
 .slide3_text{
     display: block;
-    padding-left: 120px;
-    padding-top: 15%;
+    padding-left: 65px;
+    padding-top: 25%;
     height: 90%;
 }
 
@@ -370,11 +370,74 @@
     display: block;
     font:13px "UbuntuBold";
     margin-top: 45px;
+    color: #2b669a;
 }
 .slide2_text span{
     margin-top: 5px;
     margin-left: 5px;
 }
+
+
+.slide3_text_inc:hover .popup_1_3, .popup_1_3:hover{
+    opacity:1;
+    visibility: visible;
+}
+
+.popup_1_3 p{
+    font: 14px "DroidSerifRegular";
+    color: #000000;
+    margin-top:18px;
+    text-align: center;
+}
+
+
+.popup_1_3{
+    position: absolute;
+    width: 218px;
+    height: 100px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    top: 230px;
+    left: 451px;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 16px 0px #000000;
+    background: #ffffff;
+}
+
+.popup_1_3:after, .popup_1_3:before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #ffffff;
+
+}
+
+.popup_1_3:after {
+    border-color:rgba(255, 255, 255, 0);
+    border-right-color: #000000;
+    border-width: 30px;
+    margin-top: -30px;
+
+
+}
+.popup_1_3:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 30px;
+    margin-top: -36px;
+}
+
+
+
+
+
+
+
 
 .slide3_text_full{
     display: none;
@@ -459,8 +522,8 @@
     z-index: 100;
     opacity: 0;
     visibility: hidden;
-    top: 40%;
-    left: -20%;
+    top: 250px;
+    left: -110px;
     border: 1px solid #000000;
     box-shadow: 0px 0px 16px 0px #000000;
     background: #ffffff;
@@ -538,7 +601,7 @@
     position: relative;
     width: auto;
     height: auto;
-    margin-left: 165px;
+    margin-left: 130px;
     margin-top: 20%;
 }
 
@@ -619,7 +682,7 @@
     width: auto;
     margin-top: 55px;
     float: right;
-    margin-right: 210px;
+    margin-right: 185px;
 }
 
 .slide_five_bloc_button2 .button{

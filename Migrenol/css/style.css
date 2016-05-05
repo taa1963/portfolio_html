@@ -26,8 +26,6 @@
 }
 
 
-
-
 .col-lg-6{
     padding: 0 0 0 0 ;
     margin: 0 auto;
@@ -104,7 +102,7 @@
 .slide_text{
     display: block;
     padding-left: 90px;
-    padding-top: 25%;
+    padding-top: 40%;
     height: 90%;
 }
 
@@ -201,7 +199,7 @@
     font: 16px "DroidSerifRegular";
     color: #4b4b4b;
     height: 350px;
-    margin-top: 45px;
+    margin-top: 20px;
     width: 85%;
     overflow-y: scroll;
 }
@@ -229,7 +227,7 @@
 .slide2_text{
     display: block;
     padding-left: 45px;
-    padding-top: 25%;
+    padding-top: 40%;
     height: 90%;
  }
 
@@ -322,7 +320,7 @@
 .slide2_text_full p{
     font: 16px "DroidSerifRegular";
     color: #4b4b4b;
-    margin-top: 45px;
+    margin-top: 20px;
     width: 80%;
     overflow-y: scroll;
     height: 350px;
@@ -347,7 +345,7 @@
 .slide3_text{
     display: block;
     padding-left: 45px;
-    padding-top: 25%;
+    padding-top: 40%;
     height: 90%;
 }
 
@@ -442,7 +440,7 @@
     font: 16px "DroidSerifRegular";
     color: #4b4b4b;
     height: 350px;
-    margin-top: 45px;
+    margin-top: 20px;
     width: 85%;
     overflow-y: scroll;
 }
@@ -466,7 +464,7 @@
 .slide4_text{
     display: block;
     padding-left: 190px;
-    padding-top: 25%;
+    padding-top: 40%;
     height: 90%;
 }
 
@@ -560,7 +558,7 @@
 .slide4_text_full p{
     font: 16px "DroidSerifRegular";
     color: #4b4b4b;
-    margin-top: 45px;
+    margin-top: 20px;
     width: 80%;
     overflow-y: scroll;
     height: 350px;

@@ -6,11 +6,15 @@ $(function() {
     });
 
 
+
+
+
+
     $('.button_show').click(function(){
         var block = $(this).parents('.slide_text');
         block.find('.slide_text_inc').hide();
         block.find('.slide_text_full').show();
-    });
+       });
 });
 
 $(function() {

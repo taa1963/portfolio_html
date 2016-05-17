@@ -51,6 +51,15 @@
     top: 26px;
     display: inline-block;
     z-index: 99999;
+    width: 330px;
+    height: 43px;
+    background-color:#f3f3f3 ;
+    opacity: 0.7; /* Полупрозрачный фон */
+    filter: alpha(Opacity=70); /* Прозрачность в IE */
+}
+
+.navigation ul{
+    padding-left: 10px;
 }
 
 .navigation a {
@@ -65,6 +74,9 @@
     margin-left: 90%;
     padding-top: 230px;
     z-index: 999;
+
+
+
 }
 
 
@@ -198,10 +210,10 @@
 .slide_text_full p{
     font: 16px "DroidSerifRegular";
     color: #4b4b4b;
-    height: 350px;
+    height: auto;
     margin-top: 20px;
     width: 85%;
-    overflow-y: scroll;
+
 }
 
 /*		Второй  блок слайдера */
@@ -322,8 +334,7 @@
     color: #4b4b4b;
     margin-top: 20px;
     width: 80%;
-    overflow-y: scroll;
-    height: 350px;
+    height: auto;
 }
 
 
@@ -439,10 +450,9 @@
 .slide3_text_full p{
     font: 16px "DroidSerifRegular";
     color: #4b4b4b;
-    height: 350px;
+    height: auto;
     margin-top: 20px;
     width: 85%;
-    overflow-y: scroll;
 }
 
 /*		Четвертый   блок слайдера */
@@ -560,8 +570,7 @@
     color: #4b4b4b;
     margin-top: 20px;
     width: 80%;
-    overflow-y: scroll;
-    height: 350px;
+    height: auto;
 }
 
 
@@ -709,7 +718,15 @@
 
 
 
-@media only screen  and (max-height: 1200px) {
+@media only screen  and (device-height: 1200px) {
+
+    .slide_five_text1{
+
+        margin-top: 40%;
+    }
+
+
+
     .slide_foto1 {
         display: block;
         width: 100%;

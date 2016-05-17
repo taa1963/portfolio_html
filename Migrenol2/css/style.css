@@ -107,7 +107,6 @@
 }
 
 .slide_foto1 img{
-    width: 100%;
     min-height: 100%;
 }
 
@@ -230,8 +229,7 @@
 }
 
 .slide_foto2 img{
-     width: 100%;
-    min-height: 100%;
+     min-height: 100%;
 
 }
 
@@ -723,7 +721,7 @@ width: 100%;
 
 
 
-@media only screen  and (device-height: 1200px) {
+@media only screen  and (max-height: 1200px) {
 
     .slide_five_text1{
 

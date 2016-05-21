@@ -1,0 +1,20 @@
+@font-face {
+    font-family: UbuntuBold; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/Ubuntu/UbuntuBold.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+
+@font-face{
+    font-family: DroidSerifRegular; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/DroidSerif/DroidSerifRegular.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/DroidSerif/DroidSerifRegular.eot); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/DroidSerif/DroidSerifRegular.woff); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+
+@font-face{
+    font-family: UbuntuRegular; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/Ubuntu/UbuntuRegular.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+@font-face{
+    font-family: Arial-Regular; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/Arial-Regular.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}

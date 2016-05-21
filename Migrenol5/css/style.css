@@ -324,7 +324,7 @@
     width: 90%;
 }
 
-.slide2_text b{
+.slide2_text a{
     display: block;
     font:13px "UbuntuBold";
     margin-top: 45px;
@@ -465,7 +465,7 @@
 
 }
 
-.slide3_text b{
+.slide3_text a{
     display: block;
     font:13px "UbuntuBold";
     margin-top: 45px;
@@ -599,7 +599,7 @@
     width: 90%;
 }
 
-.slide4_text b{
+.slide4_text a{
     display: block;
     font:13px "UbuntuBold";
     margin-top: 45px;

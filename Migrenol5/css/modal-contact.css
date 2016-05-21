@@ -20,7 +20,7 @@
 /*--Модальное окно--*/
 .popup_block{
 	position: fixed;
-   	top: 385px;
+   	top: 55%;;
     left: 45%;
   	z-index: 99999;
 	display: none; /*--по умолчанию скрыт--*/

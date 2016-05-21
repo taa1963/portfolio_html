@@ -1,7 +1,7 @@
 $(function() {
     $('.button_hide').click(function(){
-        var block = $(this).parents('.slide_text');
-        block.find('.slide_text_inc').show();
+        var block = $(this).parents('.slide');
+        block.find('.slide_text').show();
         block.find('.slide_text_full').hide();
     });
 
@@ -11,8 +11,8 @@ $(function() {
 
 
     $('.button_show').click(function(){
-        var block = $(this).parents('.slide_text');
-        block.find('.slide_text_inc').hide();
+        var block = $(this).parents('.slide');
+        block.find('.slide_text').hide();
         block.find('.slide_text_full').show();
        });
 });

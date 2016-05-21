@@ -108,6 +108,7 @@
 
 .slide_foto1 img{
     min-height: 100%;
+    width: 100%;
 }
 
 .slide_text{
@@ -138,6 +139,15 @@
     margin-top: 45px;
     color: #2b669a;
 }
+
+.slide b{
+    display: block;
+    font:13px "UbuntuBold";
+    margin-top: 45px;
+    color: #2b669a;
+}
+
+
 .slide_text span{
     margin-top: 5px;
     margin-left: 5px;
@@ -199,19 +209,27 @@
     margin-top: -36px;
 }
 
-
+.slide{
+    display: block;
+    height: 100%;
+}
 
 .slide_text_full{
     display: none;
+    padding-left: 90px;
+    padding-top: 10%;
+    height: 95%;
+
 
 }
 
 .slide_text_full p{
     font: 16px "DroidSerifRegular";
     color: #4b4b4b;
-    height: auto;
+    height: 90%;
     margin-top: 20px;
     width: 85%;
+    overflow-y: scroll;
 
 }
 

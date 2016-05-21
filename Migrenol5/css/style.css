@@ -109,6 +109,7 @@
 .slide_foto1 img{
     min-height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .slide_text{
@@ -295,10 +296,12 @@
     height: 100%;
     margin: 0 auto;
     padding: 0 0 0 0;
+
 }
 
 .slide_foto2 img{
      min-height: 100%;
+    object-fit: cover;
 
 }
 

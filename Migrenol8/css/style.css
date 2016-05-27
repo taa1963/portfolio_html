@@ -479,9 +479,6 @@
    display: block;
     margin-top: 29px;
     margin-left: 10px;
-    -webkit-transform: rotate(1deg); /* Chrome y Safari */
-    -moz-transform: rotate(1deg); /* Firefox */
-    -o-transform: rotate(1deg); /* Opera */
 }
 
 

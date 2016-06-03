@@ -1,0 +1,45 @@
+@font-face {
+    font-family: ABFlockHeadline-Bold; /* Гарнитура шрифта */
+    src: url(../fonts/ABFlockHeadline-Bold.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+    font-family: ABFlockText-BoldItalic; /* Гарнитура шрифта */
+    src: url(../fonts/ABFlockText-BoldItalic.otf); /* Путь к файлу со шрифтом */
+
+}
+
+@font-face{
+    font-family: ABFlockHeadline-BoldItalic; /* Гарнитура шрифта */
+    src: url(../fonts/ABFlockHeadline-BoldItalic.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+    font-family: ABFlockHeadline-Regular; /* Гарнитура шрифта */
+    src: url(../fonts/ABFlockHeadline-Regular.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+    font-family: ABFlockPoster; /* Гарнитура шрифта */
+    src: url(../fonts/ABFlockPoster.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+    font-family: ABFlockText-Bold; /* Гарнитура шрифта */
+    src: url(../fonts/ABFlockText-Bold.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+    font-family: ABFlockText-Bold; /* Гарнитура шрифта */
+    src: url(../fonts/ABFlockText-Bold.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+    font-family: ABFlockText-Italic; /* Гарнитура шрифта */
+    src: url(../fonts/ABFlockText-Italic.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face{
+    font-family: ABFlockText-Regular; /* Гарнитура шрифта */
+    src: url(../fonts/ABFlockText-Regular.otf); /* Путь к файлу со шрифтом */
+}

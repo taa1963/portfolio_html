@@ -24,6 +24,7 @@
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
+	background-size: 100%; /* Современные браузеры */
 }
 
 .header_contact{
@@ -230,8 +231,8 @@
     position: absolute;
     width: 200px;
     height: auto;
-    margin-top: 3%;
     margin-left: 30%;
+	bottom: -65px;
 }
 
 .Journal_button .poplight{
@@ -358,7 +359,7 @@
     position: absolute;
     width: 300px;
     height: auto;
-    margin-top: 3%;
+    bottom: -65px;
     margin-left: 25%;
 }
 
@@ -447,7 +448,7 @@
     position: absolute;
     width: 200px;
     height: auto;
-    margin-top: 3%;
+   bottom: -65px;
     margin-left: 51%;
 }
 
@@ -516,7 +517,7 @@
     position: absolute;
     width: 300px;
     height: auto;
-    margin-top: 3%;
+    bottom: -65px;
     margin-left: 25%;
 }
 

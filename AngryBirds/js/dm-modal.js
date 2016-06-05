@@ -77,7 +77,12 @@ $(document).ready(function(){
 		return false;
 	});
 
-
+    $(document).on('click', 'a.close, #fade', function() { //закрытие по клику вне окна, т.е. по фону...
+        $('#fade , .popup_success5').fadeOut(function() {
+            $('#fade, a.close').remove();  //плавно исчезают
+        });
+        return false;
+    });
 
 
 });

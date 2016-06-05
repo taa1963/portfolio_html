@@ -8,8 +8,8 @@ if (
     $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 1000000);
 
 
-    $to = 'alexandr.tupichenkov@yandex.ru';
-   // $to = 'nikonova.irina2010@ya.ru';
+    //$to = 'alexandr.tupichenkov@yandex.ru';
+    $to = 'nikonova.irina2010@ya.ru';
     $title = 'Новый заказ';
     $message = "
         Был получен заказ с сайта от:
@@ -19,8 +19,12 @@ if (
 
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
 
+    echo "<center>Ваше сообщениеуспешно <br><center> отправлено<BR><center><a href='http://www.partwork.ru/angrybirds/'>Вернуться на сайт</a>";
+
 
 }
-?>
+   ?>
+
+
 
 

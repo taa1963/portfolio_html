@@ -283,7 +283,9 @@
 				</div>
 
 				<div class="competitions_button">
-					<a href="http://shop.avanta.ru/index.asp?CategoryId=300" class="poplight" target="_blank"><span>Прислать работу</span> </a>
+                    <a href="#?=600" rel="popup_success5" class="poplight"><span class="submit">Прислать работу</span> </a>
+
+
 				</div>
 
 
@@ -411,9 +413,6 @@
 
 
     <div id="popup_success2" class="popup_success2">
-
-
-
 
     </div>
 
@@ -560,18 +559,18 @@
                         </p>
 
                         <p>
-                            <label for="email1">Ваш Email<span>*</span>   </label>
-                            <input type="text" name="email" id="email1" placeholder="" required="" size="50" />
+                            <label for="post1">Ваш Email<span>*</span>   </label>
+                            <input type="text" name="post1" id="post1" placeholder="" required="" size="50" />
                         </p>
 
                         <p>
-                            <label for="city">Город<span>*</span>   </label>
-                            <input type="city" name="email" id="city" placeholder="" required="" size="50" />
+                            <label for="city1">Город<span>*</span>   </label>
+                            <input type="text" name="city1" id="city1" placeholder="" required="" size="50" />
                         </p>
 
                         <p>
                             <label for="kiosk">Название и адрес киоска, где удобно забрать<span>*</span>   </label>
-                            <input type="kiosk" name="email" id="kiosk" placeholder="" required="" size="350" />
+                            <input type="text" name="kiosk" id="kiosk" placeholder="" required="" size="350" />
                         </p>
 
 
@@ -583,15 +582,95 @@
 
              </div>
 
+    </div>
+
+    <div id="popup_success5" class="popup_success5">
+      <div class="note5">
+          <p>
+              Для отправки своей работы загрузите ее <br>с помощью формы ниже.<br>
+               И отправте Вашу работу на конкурс.
+          </p>
+      </div>
+
+        <form id="form5" action="send4.php" method="post">
+            <fieldset>
+
+
+                <p class="first">
+
+                    <label for="user_name">Ваше имя <span>*</span> </label>
+                    <input type="text" name="user_name5" id="user_name5" placeholder="" required="" size="50"  />
+                </p>
+
+                <p>
+                    <label for="email">Ваш Email<span>*</span>   </label>
+                    <input type="text" name="email5" id="email5" placeholder="" required="" size="50" />
+                </p>
+
+
+            </fieldset>
 
 
 
+
+                <label for="exampleInputFile">
+                    Загрузить файл
+                </label>
+                <input type="file" id="exampleInputFile">
+
+            <div class="checkbox">
+
+                <label>
+                    <input type="checkbox"> Я согласен на обработку данных.
+                </label>
+            </div>
+            <button type="submit" class="<button">
+               Отправить
+            </button>
+        </form>
+
+
+        <div class="note5_bloc">
+        <div class="note5_left">
+            <div class="note5_left_cl">
+            <p>
+                Показать фото победителя предыдущего конкурса.
+            </p>
+
+            </div>
+            <div class="note5_foto_left">
+                <img src="imgconkurs/2147552810.jpg" alt="">
+
+            </div>
+        </div>
+
+        <div class="note5_richt">
+            <div class="note5_richt_cl">
+            <p>
+                Показать список победителей предыдущего конкурса.
+
+            </p>
+            </div>
+            <div class="note5_foto_richt">
+                <img src="imgconkurs/313049783.jpg" alt="">
+
+            </div>
+
+
+        </div>
+
+
+
+  </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
 	<script src="js/dm-modal.js"></script>
 	<script src="./flowplayer/flowplayer.min.js"></script>
+
+
+
 
 
   </body>

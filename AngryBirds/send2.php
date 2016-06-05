@@ -41,7 +41,7 @@ if (
 
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
 
-
+    echo "<center>Ваше сообщениеуспешно <br><center> отправлено<BR><center><a href='http://www.partwork.ru/angrybirds/'>Вернуться на сайт</a>";
 }
 ?>
 

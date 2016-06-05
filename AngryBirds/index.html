@@ -22,8 +22,7 @@
   </head>
   <body>
 
-    <div class="container">
-
+  <div class="container">
 
 	<div class="header" id="header">
 	     <div class="row">
@@ -33,13 +32,17 @@
 				<p> номер горячей линии <br> <span>8 800 100 34 13</span> </p>
 			</div>
 
+            <script type="text/javascript">
+                var delay_popup = 3000;
+                setTimeout("document.getElementById('popup_success4').style.display='block'", delay_popup);
+            </script>
+
 			<div class="header_logo">
 				<img src="img/Logo1.png" alt="">
 
 			</div>
 
-
-				<div class="header_video">
+            <div class="header_video">
 
 				<a href="#?w=400" rel="popup_contact" class="poplight"><img src="img/Video1.png" alt=""> <span class="submit"></span> </a>
 
@@ -423,7 +426,7 @@
             </p>
         </div>
 
-        <form id="form2" action="send.php" method="post">
+        <form id="form2" action="send2.php" method="post">
 
 
             <fieldset>
@@ -438,7 +441,7 @@
                     <input type="text" name="user_name" id="user_name2" placeholder="" required="" size="50"  />
 
 
-                    <label for="user_name">Пол</label>
+                    <label for="pol">Пол</label>
                     <select name="pol" id="pol" required="">
                         <option>Мужской</option>
                         <option>Женский</option>
@@ -448,22 +451,22 @@
                     <label for="age">Возраст</label>
                     <input type="text" name="age" id="age" placeholder="" required="" size="50"  />
 
-                    <fieldset2>
+                    <fieldset>
                         <legend class="h2">Откуда узнали о партворке «Angry birds в кино. Энциклопедическая коллекция»?</legend>
                         <fieldset class="inner">
                             <legend class="h3">Реклама по ТВ (отметить каналы)</legend>
-                            <input type="checkbox" name="otkuda[]" value="Россия 1">Россия 1<br>
-                            <input type="checkbox" name="otkuda[]" value="Карусель">НТВ<br>
-                            <input type="checkbox" name="otkuda[]" value="СТС">СТС<br>
+                            <input class="checkbox"  type="checkbox" name="otkuda[]" value="Россия 1">Россия 1<br>
+                            <input class="checkbox" type="checkbox" name="otkuda[]" value="Карусель">НТВ<br>
+                            <input class="checkbox" type="checkbox" name="otkuda[]" value="СТС">СТС<br>
                         </fieldset>
 
-                        <input type="checkbox" name="otkuda[]" value="Получил листовку в киоске">Получил листовку в киоске<br>
-                        <input type="checkbox" name="otkuda[]" value="Увидел плакат на киоске">Увидел плакат на киоске<br>
+                        <input class="checkbox" type="checkbox" name="otkuda[]" value="Получил листовку в киоске">Получил листовку в киоске<br>
+                        <input class="checkbox" type="checkbox" name="otkuda[]" value="Увидел плакат на киоске">Увидел плакат на киоске<br>
 
-                        <input type="checkbox" name="otkuda[]" value="Реклама в АиФ">Увидел ролик в кинотеатре <br>
-                        <input type="checkbox" name="otkuda[]" value="Увидел рекламу в Интернете" checked="">Увидел рекламу в Интернете<br>
+                        <input class="checkbox" type="checkbox" name="otkuda[]" value="Реклама в АиФ">Увидел ролик в кинотеатре <br>
+                        <input class="checkbox" type="checkbox" name="otkuda[]" value="Увидел рекламу в Интернете" checked="">Увидел рекламу в Интернете<br>
 
-                    </fieldset2>
+                    </fieldset>
 
                 </div>
 
@@ -492,13 +495,96 @@
 
             </fieldset>
 
-            <p class="submit"><button type="submit">Купить</button></p>
+
+
+            <p class="submit"><button type="submit"> <a href="download/AngryBirds.pdf" target="_blank"></a>  Купить</button></p>
         </form>
 
 
 
 
     </div>
+
+
+    <div id="popup_success4" class="popup_success4">
+        <div class="note4">
+            <a class="close" title="Закрыть" onclick="document.getElementById('popup_success4').style.display='none';">X</a>
+
+            <p>
+                Не успел купить первый номер? <br> Мы привезем его специально для тебя!
+            </p>
+        </div>
+
+        <div class="zakas1">
+          <div class="zakas">
+            <p class="submit"><button type="submit">Привезти ?</button></p>
+          </div>
+
+           <div class="close_form">
+              <input type="button" id="btnClose" value="Нет, спасибо" onclick="document.getElementById('popup_success4').style.display='none';">
+           </div>
+        </div>
+
+
+
+        <div class="zakas2">
+            <p>
+                Для заказа журнала нажмите "Заполнить анекету?" <br>
+                Заполните заявку на журнал. <br>
+                Наш менеджер свжется с Вами в ближайшее время и <br>
+                обсудит сроки и варианты доставки товара.
+            </p>
+            <div class="anketa1">
+                <div class="anketa">
+                    <p class="submit"><button type="submit">Заполнить анекету?</button></p>
+                </div>
+
+                <div class="close_form2">
+                    <input type="button" id="btnClose1" value="Нет, спасибо" onclick="document.getElementById('popup_success4').style.display='none';">
+                </div>
+            </div>
+        </div>
+
+
+            <div class="zakas3">
+                <form id="form3" action="send3.php" method="post">
+                    <fieldset>
+                        <p class="first">
+                            <label for="user_name1">ФИО <span>*</span> </label>
+                            <input type="text" name="user_name1" id="user_name1" placeholder="" required="" size="150"  />
+                        </p>
+
+                        <p class="fon1">
+                            <label for="fon1">Телефон <span>*</span> </label>
+                            <input type="text" name="fon1" id="fon1" placeholder="" required="" size="150"  />
+                        </p>
+
+                        <p>
+                            <label for="email1">Ваш Email<span>*</span>   </label>
+                            <input type="text" name="email" id="email1" placeholder="" required="" size="50" />
+                        </p>
+
+                        <p>
+                            <label for="city">Город<span>*</span>   </label>
+                            <input type="city" name="email" id="city" placeholder="" required="" size="50" />
+                        </p>
+
+                        <p>
+                            <label for="kiosk">Название и адрес киоска, где удобно забрать<span>*</span>   </label>
+                            <input type="kiosk" name="email" id="kiosk" placeholder="" required="" size="350" />
+                        </p>
+
+
+                    </fieldset>
+
+                    <p class="submit"><button type="submit">Отправить</button></p>
+                </form>
+
+
+             </div>
+
+
+
 
 
     <script src="js/jquery.min.js"></script>

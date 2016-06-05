@@ -71,7 +71,10 @@
 
 			<div class="header_button">
 
-			<a href="http://shop.avanta.ru/index.asp?CategoryId=300"   class="poplight" target="_blank"><span>КУПИТЬ</span> </a>
+               <a href="#?=500" rel="popup_success" class="poplight"><span class="submit">КУПИТЬ</span> </a>
+
+
+
 			</div>
 
 			<div class="menu_nav">
@@ -131,8 +134,8 @@
 			</div>
 
 			<div class="Journal_button">
-				<a href="http://shop.avanta.ru/index.asp?CategoryId=300" class="poplight" target="_blank"><span>КУПИТЬ</span> </a>
-			</div>
+                <a href="#?=500" rel="popup_success" class="poplight"><span class="submit">КУПИТЬ</span> </a>
+            </div>
 
 		</div>
 	</div>
@@ -199,7 +202,9 @@
 			</div>
 
 			<div class="boardgame_button">
-				<a href="http://shop.avanta.ru/index.asp?CategoryId=300" class="poplight" target="_blank"><span>ПРАВИЛА ИГРЫ</span> </a>
+                <a href="#?=800" rel="popup_success2" class="poplight"><span class="submit">ПРАВИЛА ИГРЫ</span> </a>
+
+
 			</div>
 
 
@@ -236,7 +241,8 @@
 			</div>
 
 			<div class="Gift_button">
-				<a href="http://shop.avanta.ru/index.asp?CategoryId=300" class="poplight" target="_blank"><span>Скачать</span> </a>
+                <a href="#?=900" rel="popup_success3" class="poplight"><span class="submit">Скачать</span> </a>
+
 			</div>
 
 
@@ -304,8 +310,8 @@
 				</div>
 
 				<div class="buy_button">
-					<a href="http://shop.avanta.ru/index.asp?CategoryId=300" class="poplight" target="_blank"><span>Купить</span> </a>
-				</div>
+                    <a href="#?=500" rel="popup_success" class="poplight"><span class="submit">КУПИТЬ</span> </a>
+                </div>
 
 				<div class="buy_text2">
 					<p>
@@ -347,6 +353,8 @@
 
 	</div>
 
+
+
 	<div id="popup_contact" class="popup_block">
 		<div class="flowplayer" style="width: 100%; height: 400px;">
 			<video>
@@ -359,6 +367,138 @@
 	</div>
 
 
+    <div id="popup_success" class="popup_success">
+        <div class="note">
+            <p>
+            Оставьте свои<br>
+            контактные данные
+            </p>
+        </div>
+
+        <form id="form" action="send.php" method="post">
+
+
+            <fieldset>
+
+
+                <p class="first">
+
+                   <label for="user_name">Ваше имя <span>*</span> </label>
+                   <input type="text" name="user_name" id="user_name" placeholder="" required="" size="50"  />
+                </p>
+
+
+
+                <p>
+                    <label for="email">Ваш Email<span>*</span>   </label>
+                    <input type="text" name="email" id="email" placeholder="" required="" size="50" />
+                </p>
+
+
+            </fieldset>
+
+            <p class="submit"><button type="submit">Купить</button></p>
+        </form>
+
+
+
+
+    </div>
+
+
+
+    <div id="popup_success2" class="popup_success2">
+
+
+
+
+    </div>
+
+
+    <div id="popup_success3" class="popup_success3">
+        <div class="note3">
+            <p>
+                Заполните анкету
+
+            </p>
+        </div>
+
+        <form id="form2" action="send.php" method="post">
+
+
+            <fieldset>
+
+                <div class="note3">
+
+                </div>
+
+                <div class="form2_left">
+
+                    <label for="user_name">ФИО</label>
+                    <input type="text" name="user_name" id="user_name2" placeholder="" required="" size="50"  />
+
+
+                    <label for="user_name">Пол</label>
+                    <select name="pol" id="pol" required="">
+                        <option>Мужской</option>
+                        <option>Женский</option>
+
+                    </select>
+
+                    <label for="age">Возраст</label>
+                    <input type="text" name="age" id="age" placeholder="" required="" size="50"  />
+
+                    <fieldset2>
+                        <legend class="h2">Откуда узнали о партворке «Angry birds в кино. Энциклопедическая коллекция»?</legend>
+                        <fieldset class="inner">
+                            <legend class="h3">Реклама по ТВ (отметить каналы)</legend>
+                            <input type="checkbox" name="otkuda[]" value="Россия 1">Россия 1<br>
+                            <input type="checkbox" name="otkuda[]" value="Карусель">НТВ<br>
+                            <input type="checkbox" name="otkuda[]" value="СТС">СТС<br>
+                        </fieldset>
+
+                        <input type="checkbox" name="otkuda[]" value="Получил листовку в киоске">Получил листовку в киоске<br>
+                        <input type="checkbox" name="otkuda[]" value="Увидел плакат на киоске">Увидел плакат на киоске<br>
+
+                        <input type="checkbox" name="otkuda[]" value="Реклама в АиФ">Увидел ролик в кинотеатре <br>
+                        <input type="checkbox" name="otkuda[]" value="Увидел рекламу в Интернете" checked="">Увидел рекламу в Интернете<br>
+
+                    </fieldset2>
+
+                </div>
+
+
+
+                <div class="form2_rucht">
+
+
+                    <label for="interess">Ваши интересы    </label>
+                    <input type="text" name="interess" id="interess" placeholder="" required="" size="250" />
+
+                    <label for="sites">Какие сайты (форумы, социальные сети) вы <br> посещаете в  Интернете  </label>
+                    <input type="text" name="sites" id="sites" placeholder="" required="" size="250" />
+
+                    <label for="freetime">Как проводите свободное время  </label>
+                    <input type="text" name="freetime" id="freetime" placeholder="" required="" size="250" />
+
+                    <label for="pawo">Какие партворки собирали в течение последних <br> двух лет  </label>
+                    <input type="text" name="pawo" id="pawo" placeholder="" required="" size="250" />
+
+                    <label for="tema">Тематики партворков, которые вы бы хотели<br>  увидеть в продаже в будущем  </label>
+                    <input type="text" name="tema" id="tema" placeholder="" required="" size="250" />
+
+
+              </div>
+
+            </fieldset>
+
+            <p class="submit"><button type="submit">Купить</button></p>
+        </form>
+
+
+
+
+    </div>
 
 
     <script src="js/jquery.min.js"></script>
@@ -366,5 +506,7 @@
     <script src="js/scripts.js"></script>
 	<script src="js/dm-modal.js"></script>
 	<script src="./flowplayer/flowplayer.min.js"></script>
+
+
   </body>
 </html>

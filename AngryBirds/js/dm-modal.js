@@ -12,7 +12,8 @@
 $(document).ready(function(){
 	//При нажатии на ссылку с классом poplight и href атрибута тега <a> с #
 	$('a.poplight[href^=#]').click(function() {
-		var popID = $(this).attr('rel'); //получаем имя окна, важно не забывать при добавлении новых менять имя в атрибуте rel ссылки
+
+        var popID = $(this).attr('rel'); //получаем имя окна, важно не забывать при добавлении новых менять имя в атрибуте rel ссылки
 		var popURL = $(this).attr('href'); //получаем размер из href атрибута ссылки
 				
 		//запрос и переменные из href url
@@ -47,5 +48,26 @@ $(document).ready(function(){
     });   
     return false;    
    });
-    
+
+	$(document).on('click', 'a.close, #fade', function() { //закрытие по клику вне окна, т.е. по фону...
+		$('#fade , .popup_success').fadeOut(function() {
+			$('#fade, a.close').remove();  //плавно исчезают
+		});
+		return false;
+	});
+
+    $(document).on('click', 'a.close, #fade', function() { //закрытие по клику вне окна, т.е. по фону...
+        $('#fade , .popup_success2').fadeOut(function() {
+            $('#fade, a.close').remove();  //плавно исчезают
+        });
+        return false;
+    });
+
+    $(document).on('click', 'a.close, #fade', function() { //закрытие по клику вне окна, т.е. по фону...
+        $('#fade , .popup_success3').fadeOut(function() {
+            $('#fade, a.close').remove();  //плавно исчезают
+        });
+        return false;
+    });
+
 });

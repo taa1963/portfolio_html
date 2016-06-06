@@ -48,15 +48,28 @@
     margin-top: 5px;
 }
 
+.header_contact_coz{
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: -15%;
+    margin-left:20px ;
+
+}
+.header_contact a{
+    margin-left:5px ;
+
+}
+
 .menu_nav{
     display:block;
     position: relative;
-    width: 60%;
+    width: 53%;
     z-index: 999;
     height: auto;
     background-color: #9cd574;
     border-radius: 5px;
-    margin-left:24%;
+    margin:0 auto;
     margin-top:5% ;
     border: 2px solid #edd9c8;
 }
@@ -641,6 +654,39 @@
     font:11px "ABFlockHeadline-Regular" ;
     color: #ffffff;
     text-align: center;
+
+}
+
+.footer_contact{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    margin-top: 15%;
+}
+
+.footer_contact p{
+
+    font:25px "ABFlockHeadline-Regular" ;
+    color: #ffffff;
+}
+
+.footer_contact p span{
+    font:30px "ABFlockHeadline-Bold" ;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.footer_contact_coz{
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: -15%;
+    margin-left:20px ;
+
+}
+.footer_contact a{
+    margin-left:5px ;
 
 }
 

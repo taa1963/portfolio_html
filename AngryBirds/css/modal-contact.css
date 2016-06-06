@@ -163,8 +163,8 @@
 
 .popup_success4{
     position: fixed;
-    top: 10%;
-    left: 30%;
+    top: 5%;
+    left: 32%;
     z-index: 99999;
     height: 550px;
     display: none; /*--по умолчанию скрыт--*/
@@ -186,12 +186,17 @@
     width: 400px;
     height: auto;
 }
-.note4 p{
-    font:25px 'franklin-demi', sans-serif;
-    font-weight: bold;
-    color: #1a1a1a;
-    text-align: center;
-    margin-top: 20px;
+
+
+.zakas1_img{
+    display: block;
+    width: 400px;
+    height: 400px;
+}
+
+.zakas1_img img{
+    width: 100%;
+    height: 100%;
 }
 
 .zakas1{
@@ -199,7 +204,7 @@
     position: absolute;
     width: 100%;
     height: 50px;
-    margin-top: 100px;
+
 
 }
 
@@ -209,6 +214,7 @@
     width: 200px;
     height: 50px;
     float: left;
+    margin-top: 30px;
     margin-left: 10px;
 }
 
@@ -237,6 +243,7 @@
     width: 200px;
     height: 50px;
     float: right;
+    margin-top: 30px;
     margin-right: 10px;
 }
 
@@ -484,23 +491,81 @@
 
 .popup_success2{
     position: fixed;
-    top: 80%;
+    top: 55%;
     left: 50%;
     z-index: 99999;
-    height: 800px;
+    height: 540px;
     display: none; /*--по умолчанию скрыт--*/
     background-color: #ffffff;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    background: url("../img/regulations.jpg") no-repeat;
-    /*-- скругленные углы--*/
-    border-radius: 10px;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
+       /*-- скругленные углы--*/
+   }
+
+.regulations1{
+   display: block;
+    width: 800px;
+    height: 540px;
 }
+.regulations1_list1{
+    display: block;
+    width: 800px;
+    height: 480px;
+}
+
+.regulations1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.regulations1_button button{
+    display: block;
+    width: 180px;
+    height: 50px;
+    border: solid 4px #ffffff;
+    /* закругляем углы кнопки */
+    border-radius: 10px;
+    background-color: #f06060;
+    color:#ffffff;
+    font:24px "ABFlockHeadline-Bold" ;
+    padding:14px 12px;
+    text-align:center;
+    -webkit-box-shadow: 4px 3px 3px 0px rgba(62, 50, 50, 0.23);
+    -moz-box-shadow:    4px 3px 3px 0px rgba(62, 50, 50, 0.23);
+    box-shadow:         4px 3px 3px 0px rgba(62, 50, 50, 0.23);
+    margin-top: 5px;
+    margin:0 auto;
+}
+
+.regulations2{
+    display: none;
+    width: 800px;
+    height: 540px;
+}
+
+.regulations2 img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.popup_success6{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    z-index: 99999;
+    height: 540px;
+    display: none; /*--по умолчанию скрыт--*/
+    background-color: #ffffff;
+    /*-- скругленные углы--*/
+}
+
+.popup_success6 p{
+    font:13px 'franklin-demi', sans-serif;
+    color: #1a1a1a;
+    text-align:left;
+    margin-top: 10px;
+}
+
 
 .popup_success3{
     position: fixed;

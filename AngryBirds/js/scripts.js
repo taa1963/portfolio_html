@@ -21,6 +21,12 @@ $(function() {
         block.find('.note5_foto_richt').show();
     });
 
+    $('.submit').click(function(){
+        var block = $(this).parents('.popup_success2');
+        block.find('.regulations2').show();
+        block.find('.regulations1').hide();
+    });
+
 
 
    });// Empty JS for your own code to be here

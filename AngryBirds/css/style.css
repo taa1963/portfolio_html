@@ -20,7 +20,7 @@
     width: 100%;
     min-height: 590px;
     margin: 0 auto;
-    background: url("../img/Fon1.png") no-repeat;
+    background: url("../img/Fon1.png") 100% 100% no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ è Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -189,7 +189,7 @@
     width: auto;
     min-height: 390px;
     margin: 0 auto;
-    background: url("../img/Fon2.png") no-repeat;
+    background: url("../img/Fon2.png") 100% 100% no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ è Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -258,7 +258,7 @@
     width: auto;
     min-height: 347px;
     margin: 0 auto;
-    background: url("../img/Fon3.png") no-repeat;
+    background: url("../img/Fon3.png") 100% 100% no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ è Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -317,7 +317,7 @@
     width: auto;
     min-height: 348px;
     margin: 0 auto;
-    background: url("../img/Fon4_1.png") no-repeat;
+    background: url("../img/Fon4_1.png") 100% 100% no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ è Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -386,7 +386,7 @@
     width: auto;
     min-height: 346px;
     margin: 0 auto;
-    background: url("../img/Fon5_1.png") no-repeat;
+    background: url("../img/Fon5_1.png") 100% 100% no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ è Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -475,7 +475,7 @@
     width: auto;
     min-height: 348px;
     margin: 0 auto;
-    background: url("../img/Fon6_1.png") no-repeat;
+    background: url("../img/Fon6_1.png") 100% 100% no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ è Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -544,7 +544,7 @@
     width: auto;
     min-height: 348px;
     margin: 0 auto;
-    background: url("../img/Fon7.png") no-repeat;
+    background: url("../img/Fon7.png") 100% 100% no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ è Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */

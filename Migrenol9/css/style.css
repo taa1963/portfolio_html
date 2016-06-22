@@ -63,10 +63,18 @@
 }
 
 .navigation a {
+    display: inline-block;
     font:13px "UbuntuBold";
     padding-right: 14px;
     color: black;
+    margin-top: 13px;
 }
+
+
+.navigation a:first-child {
+    padding-left: 10px;
+}
+
 
 .navigation2{
     display: block;

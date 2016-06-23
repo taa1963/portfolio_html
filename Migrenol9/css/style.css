@@ -48,18 +48,14 @@
 .navigation {
     position: absolute;
     right: 30px;
-    top: 26px;
+    top: 22px;
     display: inline-block;
     z-index: 99999;
     width: 330px;
-    height: 43px;
+    height: 33px;
     background-color:#f3f3f3 ;
     opacity: 0.7; /* Полупрозрачный фон */
     filter: alpha(Opacity=70); /* Прозрачность в IE */
-}
-
-.navigation ul{
-    padding-left: 10px;
 }
 
 .navigation a {
@@ -487,6 +483,9 @@
    display: block;
     margin-top: 29px;
     margin-left: 10px;
+    width: 152px;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -530,6 +529,9 @@
     display: block;
     margin-top: 29px;
     margin-left: 10px;
+    width: 152px;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -645,7 +647,7 @@
         width: 100%;
         min-height: 675px;
         margin: 0 auto;
-        background: url("../img/slide2N.png") no-repeat;
+        background: url("../img/slide2WNew20.png") no-repeat;
         -moz-background-size: 100%; /* Firefox 3.6+ */
         -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
         -o-background-size: 100%; /* Opera 9.6+ */
@@ -662,7 +664,7 @@
         width: 100%;
         min-height: 675px;
         margin: 0 auto;
-        background: url("../img/slide3new22.png") no-repeat;
+        background: url("../img/slide4N.png") no-repeat;
         -moz-background-size: 100%; /* Firefox 3.6+ */
         -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
         -o-background-size: 100%; /* Opera 9.6+ */
@@ -678,9 +680,9 @@
     .slide_foto4_mob{
         display:block;
         width: 100%;
-        min-height: 675px;
+        min-height: 720px;
         margin: 0 auto;
-        background: url("../img/slide4N.png") no-repeat;
+        background: url("../img/slide3new23_1.png") no-repeat;
         -moz-background-size: 100%; /* Firefox 3.6+ */
         -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
         -o-background-size: 100%; /* Opera 9.6+ */
@@ -788,6 +790,9 @@
         display: block;
         margin-top: 29px;
         margin-left: 10px;
+        width: 152px;
+        height: auto;
+        object-fit: contain;
     }
 
 
@@ -831,6 +836,9 @@
         display: block;
         margin-top: 29px;
         margin-left: 10px;
+        width: 152px;
+        height: auto;
+        object-fit: contain;
     }
 
     .popup_success{
@@ -998,7 +1006,7 @@
         width: 100%;
         min-height: 325px;
         margin: 0 auto;
-        background: url("../img/slide3N.png") no-repeat;
+        background: url("../img/slide4N.png") no-repeat;
         -moz-background-size: 100%; /* Firefox 3.6+ */
         -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
         -o-background-size: 100%; /* Opera 9.6+ */
@@ -1016,7 +1024,7 @@
         width: 100%;
         min-height: 325px;
         margin: 0 auto;
-        background: url("../img/slide4N.png") no-repeat;
+        background: url("../img/slide3N.png") no-repeat;
         -moz-background-size: 100%; /* Firefox 3.6+ */
         -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
         -o-background-size: 100%; /* Opera 9.6+ */

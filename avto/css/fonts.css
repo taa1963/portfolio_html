@@ -1,0 +1,10 @@
+@font-face {
+    font-family: NotoSana-Regular; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/NotoSans-Regular.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+@font-face {
+    font-family: notosanabold; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/notosansbold.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/notosansbold.woff); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/notosansbold.woff2); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}

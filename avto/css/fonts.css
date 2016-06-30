@@ -1,6 +1,7 @@
 @font-face {
     font-family: NotoSana-Regular; /* Гарнитура шрифта */
-    src: url(../fonts/NotoSans-Regular.ttf); /* Путь к файлу со шрифтом */
+    src: local("NotoSana-Regular"),
+    url(../fonts/NotoSans-Regular.ttf); /* Путь к файлу со шрифтом */
 }
 @font-face {
     font-family: notosanabold; /* Гарнитура шрифта */

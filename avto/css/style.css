@@ -5,6 +5,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    margin-right: 0;
 }
 
 .container {
@@ -12,6 +13,7 @@
     width: 100%;
     height: 100%;
     margin: 0;
+    margin-right: 10px;
     padding: 0;
     -webkit-backface-visibility: hidden;
 }
@@ -41,7 +43,16 @@
 }
 
 
-.left_menu img{
+
+.nav > li > a:focus{
+    background-color: #080808;
+}
+
+.nav > li > a:hover{
+    background-color: #080808;
+}
+
+.left_menu a img{
     width: 100%;
 }
 
@@ -94,8 +105,16 @@
 
 .tel p img{
     margin-right: 25px;
+    float: left;
+
 }
 .tel p{
+    color:#353535;
+    font: 15px "NotoSana-Regular" ;
+    height: 25px;
+    float: left;
+}
+.tel p span{
     color:#353535;
     font: 15px "NotoSana-Regular" ;
     height: 25px;
@@ -131,7 +150,6 @@
     position: relative;
     width: 25%;
     height: 100%;
-
     float: left;
     margin-left: 90px;
 }
@@ -140,6 +158,8 @@
     display: block;
     position: relative;
     float: left;
+    margin-top: 30px;
+    margin-right: 20px;
 }
 
 
@@ -185,11 +205,12 @@
     width: 80%;
     float: right;
     position: relative;
-    background: url("../img/fon2bloc.png") no-repeat;
+    background: url("../img/fon2bloc.png") 100% no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
     background-size: 100%; /* Современные браузеры */
+    margin-top: -10px;
 }
 
 .bloc2_titel{
@@ -231,7 +252,8 @@
     color:#ffffff;
     font: 14px "notosanabold";
     text-align: center;
-    margin-top: 10px;
+    margin-top: 14px;
+
 }
 
 /*Описание Типы работ и его компонентов */
@@ -263,8 +285,14 @@
     width: 30%;
     min-height: 160px;
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-bottom: 10px;
+}
+
+
+#trapezoid span {
+    margin-top:-100px;
+    position: absolute;
 }
 
 .jobs img{
@@ -272,39 +300,44 @@
 }
 .jobs_titel{
     display: block;
-    min-height: 40px;
-    margin-top: -10px;
-    background: url("../img/Maket_1N.png") no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
+    position: absolute;
+    width: 210px;
+    bottom: 0px;
+    margin-left: 15px;
+    border-top: 40px solid #ed2024;
+    border-right: 20px solid transparent;
 }
 
-.jobs_titel{
-    text-align: center;
+.jobs_titel p {
+    display: block;
+    position: relative;
+     margin-left: 20px;
     color:#ffffff;
     font: 13px "NotoSana-Regular" ;
     padding-top: 15px;
+    margin-top: -45px;
+
 }
 
 .jobs6_titel{
     display: block;
-    min-height: 40px;
+    position: absolute;
+    height: 40px;
     margin-top: -10px;
-    background: url("../img/Maket_6N.png") no-repeat;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
+    margin-left: 10px;
+    width: 230px;
+    bottom: 0px;
+    background-color:#ed2024 ;
 }
 
-.jobs6_titel{
+.jobs6_titel p{
+    display: block;
+    position: relative;
     text-align: center;
     color:#ffffff;
     font: 13px "NotoSana-Regular" ;
-    padding-top: 15px;
-}
+    padding-top: 10px;
+ }
 
 /*Описание Кузовной ремонт */
 .body_repair{
@@ -314,6 +347,7 @@
     background-color: #f6f6f6;
     float: right;
     position: relative;
+    margin-bottom: 0px;
 }
 
 .bloc_repair{
@@ -325,12 +359,17 @@
     margin-right: 10px;
     margin-left: 12%;
     background-color: #ffffff;
+    margin-bottom: 29px;
 
 }
 
 .bloc_repair_titel{
     color:#242424;
     font: 20px "notosanabold" ;
+}
+.bloc_repair_titel h1{
+    margin-left: 10px;
+   padding-top: 30px;
 }
 
 .bloc_repair_line1{
@@ -438,7 +477,7 @@
     padding-top: 10px;
 }
 
-.bloc_guarantees_icon b{
+.bloc_guarantees_icon h2{
     display: block;
     font: 12px "NotoSana-Regular";
     color: #6a6a6a;
@@ -460,6 +499,7 @@
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
     background-size: 100%; /* Современные браузеры */
+
 }
 
 .bloc_cost{
@@ -526,6 +566,14 @@
     width: 490px;
 }
 
+.content_text1 h2{
+    color: #242424;
+    font: 13px "NotoSana-Regular";
+    padding-top: 30px;
+    padding-left: 10px;
+
+}
+
 .bloc_cost_content_text{
     display: block;
     float: left;
@@ -554,7 +602,7 @@
    display: block;
     margin: 0 auto;
     padding-top: 20px;
-
+    margin-left: 35%;
 }
 
 /*Описание Обратиться к нам */
@@ -622,8 +670,6 @@
     height: 300px;
 }
 
-
-
 .bloc_apply_icon{
     display: block;
     position: relative;
@@ -632,7 +678,7 @@
     height: 345px;
     float: left;
     margin-top: 50px;
-    margin-left: 20px;
+    margin-left: 10px;
     background-color: #ffffff;
 }
 
@@ -642,9 +688,6 @@
    width: 100%;
 }
 
-
-
-
 .bloc_apply_icon p{
     font: 13px "notosanabold";
     color: #6a6a6a;
@@ -652,7 +695,7 @@
     text-align: center;
 }
 
-.bloc_apply_icon b{
+.bloc_apply_icon h2{
     display: block;
     font: 12px "NotoSana-Regular";
     color: #6a6a6a;
@@ -792,7 +835,7 @@
     width: 65%;
     height: 100px;
     top: -100px;
-    padding-left: 38%;
+    padding-left: 33%;
   }
        /* навигация вперед/назад */
 .navy {
@@ -809,6 +852,7 @@
     position: relative;
    background: url(../slider/left.png) 50px 50px no-repeat;
     float: left;
+    left: 20px;
 
 
 }
@@ -818,6 +862,7 @@ display: block;
     background:  url(../slider/richt.png) 50px 50px no-repeat;
     width: 100px;
     float: left;
+    right: 20px;
 
 }
 .navy.disable {
@@ -841,11 +886,13 @@ display: block;
     width: 80%;
     float: right;
     position: relative;
-    background: url("../img/Fon10.png") no-repeat;
+    background: url("../img/Fon10.png") 100% 100% no-repeat;
     -moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
     background-size: 100%; /* Современные браузеры */
+    margin-top: 1px;
+    margin-bottom: 1px;
 
 }
 
@@ -859,7 +906,7 @@ display: block;
     border-width: 1px;
     border-color: #ffffff;
     margin-top: 100px;
-    margin-left:40% ;
+    margin-left:30% ;
 
 }
 
@@ -867,8 +914,8 @@ display: block;
     display: block;
     color:#ffffff;
     font: 14px "notosanabold";
-    margin-left: 10%;
-    margin-top: 10px;
+    margin-left: 13%;
+    margin-top: 13px;
 }
 
 /* Блок Футера и его элементы */
@@ -880,6 +927,8 @@ display: block;
     background-color: #f6f6f6;
     float: right;
     position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .contact_futer_deck{
@@ -910,6 +959,7 @@ display: block;
     display: block;
     position: relative;
     float: left;
+    margin-top: 30px;
 }
 
 
@@ -918,8 +968,9 @@ display: block;
     color:#353535;
     font: 12px "NotoSana-Regular" ;
     float: left;
-    margin-top: 20px;
+    margin-top: 30px;
     position: relative;
+    margin-left: 20px;
 
 }
 
@@ -995,14 +1046,23 @@ display: block;
 
 .tel_futer p img{
     margin-right: 25px;
+    float: left;
 }
 .tel_futer p{
     color:#ffffff;
     font: 15px "NotoSana-Regular" ;
     height: 25px;
     float: left;
-
 }
+
+.tel_futer p span{
+    color:#ffffff;
+    font: 15px "NotoSana-Regular" ;
+    height: 25px;
+    float: left;
+}
+
+
 
 
 
@@ -1107,16 +1167,41 @@ display: block;
         width: 79%;
     }
 
-    .jobs_titel {
-
-        font: 12px "NotoSana-Regular";
-        padding-top: 10px;
+    .jobs_titel{
+        display: block;
+        position: absolute;
+        width: 150px;
+        bottom: 45px;
+        margin-left: 15px;
+        border-top: 30px solid #ed2024;
+        border-right: 18px solid transparent;
     }
 
-    .jobs6_titel {
-        font: 12px "NotoSana-Regular";
-        padding-top: 10px;
+    .jobs_titel p {
+        display: block;
+        position: relative;
+        color:#ffffff;
+        font: 9px "NotoSana-Regular" ;
+        top: 10px;
+
     }
+    .jobs6_titel{
+        display: block;
+        position: absolute;
+        height: 30px;
+        width: 160px;
+        bottom: 45px;
+        margin-left: 15px;
+        border-color:#ed2024;
+
+    }
+
+    .jobs6_titel p {
+        display: block;
+        position: relative;
+        color:#ffffff;
+        font: 9px "NotoSana-Regular" ;
+      }
 
     .guarantees {
         width: 79%;
@@ -1316,6 +1401,17 @@ display: block;
         width: 30%;
         float: right;
     }
+    .tel p span{
+        color:#353535;
+        font: 12px "NotoSana-Regular" ;
+        height: 25px;
+        float: left;
+    }
+    .tel p img {
+        margin-right: 10px;
+        float: left;
+    }
+
     .contact {
         width: 79%;
     }
@@ -1332,7 +1428,7 @@ display: block;
         color: #353535;
         font: 10px "NotoSana-Regular";
         float: left;
-        margin-top: 10px;
+        margin-top: 25px;
     }
 
     .contact_adres {
@@ -1342,22 +1438,27 @@ display: block;
         height: 100%;
         float: left;
         margin-left: 10px;
+        margin-top: -27px;
     }
     .contact_adres p {
         display: block;
         color: #353535;
         font: 10px "NotoSana-Regular";
-        margin-top: 10px;
+        margin-top: -27px;
+        margin-left: 20px;
+        float: right;
 
     }
     .contact_adres img {
-       height: 60px;
+       height: 55px;
+       padding-top: 30px;
     }
 
     .contact_data p{
         color: #353535;
         font: 10px "NotoSana-Regular";
         margin-top: 10px;
+
     }
 
 
@@ -1368,6 +1469,7 @@ display: block;
         height: 100%;
         float: left;
         margin-left: 25px;
+        margin-top: 20px;
     }
     .contact_data img {
         height: 60px;
@@ -1389,21 +1491,94 @@ display: block;
         margin-left: 30px;
         margin-top: 10px;
     }
+    .bloc2_titel p{
+        color:#ffffff;
+        font: 28px "notosanabold" ;
+        line-height: 60px;
+    }
+
+    .bloc2_titel p span{
+        color:#f41318;
+        font: 28px "notosanabold" ;
+    }
+    .bloc_repair_titel {
+        color: #242424;
+        font: 18px "notosanabold";
+    }
+    .bloc_guarantees_titel {
+        color: #242424;
+        font: 18px "notosanabold";
+    }
+    .bloc_cost_titel {
+        color: #242424;
+        font: 18px "notosanabold";
+    }
+    .bloc_apply_titel {
+        color: #242424;
+        font: 18px "notosanabold";
+    }
+    .bloc_work_titel {
+        color: #242424;
+        font: 18px "notosanabold";
+    }
+
     .types_jobs {
         width: 79%;
     }
     .body_repair {
         width: 79%;
     }
-    .jobs_titel {
+    .jobs {
+        display: block;
+        position: relative;
+        width: 30%;
+        min-height: 160px;
+        float: left;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
 
-        font: 9px "NotoSana-Regular";
-        padding-top: 7px;
+    .jobs_titel{
+        display: block;
+        position: absolute;
+        width: 110px;
+        top: 60px;
+        margin-left: 15px;
+        border-top: 30px solid #ed2024;
+        border-right: 18px solid transparent;
     }
-    .jobs6_titel {
-        font: 9px "NotoSana-Regular";
-        padding-top: 7px;
+
+    .jobs_titel p {
+        display: block;
+        position: relative;
+        color:#ffffff;
+        font: 7px "NotoSana-Regular" ;
+        top: 8px;
+        margin-left: 2px;
+
     }
+    .jobs6_titel{
+        display: block;
+        position: absolute;
+        height: 30px;
+        width: 120px;
+       top: 71px;
+        margin-left: 15px;
+        border-color:#ed2024;
+
+    }
+
+    .jobs6_titel p {
+        display: block;
+        position: relative;
+        color:#ffffff;
+        font: 7px "NotoSana-Regular" ;
+        top: 2px;
+        margin-left: 2px;
+    }
+
+
+
     .guarantees {
         width: 79%;
     }
@@ -1493,6 +1668,7 @@ display: block;
         display: block;
         position: relative;
         width: 500px;
+        margin-left: -8%;
     }
     .find_cost {
         width: 79%;
@@ -1500,8 +1676,8 @@ display: block;
         background-color:#f6f6f6 ;
     }
     .find_cost_button {
-        margin-top: 50px;
-        margin-left: 30%;
+        margin-top: 24%;
+        margin-left: 14%;
     }
 
     .contact_futer {
@@ -1514,6 +1690,7 @@ display: block;
         width: 30%;
         height: 100%;
         margin-left: 20px;
+        margin-top: 10px;
     }
 
     .contact_futer_deck p {
@@ -1535,11 +1712,13 @@ display: block;
         display: block;
         color: #353535;
         font: 10px "NotoSana-Regular";
-        margin-top: 10px;
+        float: right;
+        margin-top: -30px;
     }
 
     .contact_futer_adres img{
-        height: 60px;
+        height: 25px;
+        margin-top: 17px;
     }
 
     .contact_futer_data p{
@@ -1595,6 +1774,13 @@ display: block;
         min-height: 50px;
         width: 79%;
     }
+    .tel_futer p span{
+        color:#ffffff;
+        font: 15px "NotoSana-Regular" ;
+        height: 20px;
+        float: left;
+    }
+
 
 }
 
@@ -1626,9 +1812,17 @@ display: block;
         display: block;
         position: relative;
         margin-top: 10px;
-        width: 65%;
+        width: 173px;
         float: left;
     }
+    .tel p span {
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        height: 25px;
+        float: left;
+    }
+
+
 
     .menu ul a:first-child {
         margin-left: 1px;
@@ -1646,12 +1840,12 @@ display: block;
         display: block;
         position: relative;
         margin-top: 10px;
-        width: 25%;
+        width: 30%;
         float: right;
     }
 
     .tel p img {
-        margin-left: 46%;
+        margin-left: 30%;
         width: 20px;
         display: block;
     }
@@ -1667,11 +1861,12 @@ display: block;
     }
 
     .contact_deck {
-        display: block;
+        display: inline-block;
         position: relative;
         width: 100%;
         height: 100%;
         margin-left: 20px;
+        margin-bottom: 10px;
     }
 
     .contact_deck p {
@@ -1682,18 +1877,21 @@ display: block;
     }
 
     .contact_adres {
-        display: block;
+        display: inline-block;
         position: relative;
         width: 100%;
         height: 100%;
         float: left;
         margin-left: 10px;
+
     }
     .contact_adres p {
         display: block;
         color: #353535;
         font: 10px "NotoSana-Regular";
-        margin-top: 10px;
+        margin-top: 30px;
+        margin-left: -10px;
+        float: left;
 
     }
 
@@ -1702,7 +1900,10 @@ display: block;
         font: 10px "NotoSana-Regular";
         margin-top: 10px;
     }
-
+    .contact_adres img {
+        height: 25px;
+        padding-top: 10px;
+    }
 
     .contact_data {
         display: block;
@@ -1712,11 +1913,21 @@ display: block;
         float: left;
         margin-left: 10px;
     }
-    .bloc2 {
-        width: 100%;
+    .bloc2{
+        display: block;
         min-height: 295px;
+        width: 100%;
         margin-bottom: -140px;
+        float: right;
+        position: relative;
+        background: url("../img/fon2bloc.png")  no-repeat;
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
     }
+
+
 
     .bloc2_titel {
         display: block;
@@ -1762,15 +1973,51 @@ display: block;
         width: 100%;
         min-height: 500px;
     }
-    .jobs_titel {
 
-        font: 9px "NotoSana-Regular";
-        padding-top: 7px;
+    .jobs_titel{
+        display: block;
+        position: absolute;
+        width: 210px;
+        top: 100px;
+        margin-left: 15px;
+        border-top: 40px solid #ed2024;
+        border-right: 20px solid transparent;
     }
-    .jobs6_titel {
-        font: 9px "NotoSana-Regular";
-        padding-top: 7px;
+
+    .jobs_titel p {
+        display: block;
+        position: relative;
+        margin-left: 20px;
+        color:#ffffff;
+        font: 13px "NotoSana-Regular" ;
+        padding-top: 15px;
+        margin-top: -45px;
+
+
     }
+
+    .jobs6_titel{
+        display: block;
+        position: absolute;
+        height: 40px;
+        margin-top: -10px;
+        margin-left: 10px;
+        width: 230px;
+        top: 120px;
+        background-color:#ed2024 ;
+    }
+
+    .jobs6_titel p{
+        display: block;
+        position: relative;
+        text-align: center;
+        color:#ffffff;
+        font: 13px "NotoSana-Regular" ;
+        padding-top: 10px;
+    }
+
+
+
     .guarantees {
         width: 100%;
 
@@ -1879,12 +2126,16 @@ display: block;
         padding-left: 10px;
     }
     .find_cost {
+        display: block;
+        position: relative;
         width: 100%;
         min-height: 240px;
         background-color:#f6f6f6 ;
     }
     .find_cost_button {
-        margin-top: 30px;
+        display: block;
+        position: absolute;
+        bottom: 13px;
         margin-left: 5%;
         width: 300px;
         height: 30px;
@@ -1929,13 +2180,17 @@ display: block;
         color: #353535;
         font: 10px "NotoSana-Regular";
         margin-top: 10px;
-
+        float: left;
     }
 
+    .contact_futer_adres img {
+        height: 20px;
+    }
     .contact_futer_data p{
         color: #353535;
         font: 10px "NotoSana-Regular";
         margin-top: 10px;
+        margin-left: 10px;
     }
 
 
@@ -1953,7 +2208,7 @@ display: block;
         display: block;
         position: relative;
         margin-top: 10px;
-        width: 65%;
+        width: 173px;
         float: left;
     }
 
@@ -1978,11 +2233,11 @@ display: block;
     }
 
     .tel_futer p img {
-        margin-left: 46%;
+        margin-left: 30%;
         width: 20px;
         display: block;
     }
-    .tel_futer p {
+    .tel_futer p span {
         color: #ffffff;
         font: 10px "NotoSana-Regular";
         height: 25px;

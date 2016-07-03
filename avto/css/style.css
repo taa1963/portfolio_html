@@ -1,22 +1,27 @@
 @import"reset200802.css";
 
 .body {
-    width: auto;
+    width: 105%;
     height: 100%;
     margin: 0;
     padding: 0;
-    margin-right: 0;
+
 }
 
-.container {
+.container-fluid {
     display: block;
     width: 100%;
     height: 100%;
+   -webkit-backface-visibility: hidden;
     margin: 0;
-    margin-right: 10px;
-    padding: 0;
-    -webkit-backface-visibility: hidden;
 }
+
+.col-md-12{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
 
 .left_menu{
 
@@ -26,6 +31,7 @@
     width: 20%;
     float: left;
     position: fixed;
+
 }
 
 .nav{
@@ -201,7 +207,7 @@
 
 .bloc2{
     display: block;
-    min-height: 542px;
+    min-height: 522px;
     width: 80%;
     float: right;
     position: relative;
@@ -210,7 +216,7 @@
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
     background-size: 100%; /* Современные браузеры */
-    margin-top: -10px;
+    margin-top: 0px;
 }
 
 .bloc2_titel{
@@ -367,9 +373,11 @@
     color:#242424;
     font: 20px "notosanabold" ;
 }
-.bloc_repair_titel h1{
-    margin-left: 10px;
-   padding-top: 30px;
+.bloc_repair_titel a h1{
+    color:#242424;
+    font: 20px "notosanabold" ;
+     margin-left: 10px;
+     padding-top: 30px;
 }
 
 .bloc_repair_line1{
@@ -422,6 +430,12 @@
     color: #242424;
     font: 20px "notosanabold";
 }
+
+.bloc_guarantees_titel a h1 {
+    color: #242424;
+    font: 20px "notosanabold";
+}
+
 
 
 .bloc_guarantees_line1{
@@ -519,11 +533,13 @@
     padding-top: 30px;
     padding-left: 10px;
 }
-.bloc_cost_titel a{
+
+
+
+.bloc_cost_titel a h1 {
     color:#242424;
     font: 20px "notosanabold" ;
-    text-decoration: none;
- }
+}
 
 .bloc_cost_line1{
     display: block;
@@ -635,12 +651,14 @@
     padding-top: 30px;
     padding-left: 10px;
 }
-.bloc_apply_titel a{
-    text-decoration: none;
+
+
+.bloc_apply_titel a h1{
     color:#242424;
     font: 20px "notosanabold" ;
-
 }
+
+
 
 .bloc_apply_line1{
     display: block;
@@ -758,6 +776,13 @@
     padding-left: 10px;
 }
 
+.bloc_work_titel h1{
+    color:#242424;
+    font: 20px "notosanabold" ;
+}
+
+
+
 .bloc_work_line1{
     display: block;
     position: relative;
@@ -853,16 +878,18 @@
    background: url(../slider/left.png) 50px 50px no-repeat;
     float: left;
     left: 20px;
+    cursor: pointer;
 
 
 }
 .next-slide {
-display: block;
+    display: block;
     position: relative;
     background:  url(../slider/richt.png) 50px 50px no-repeat;
     width: 100px;
     float: left;
     right: 20px;
+    cursor: pointer;
 
 }
 .navy.disable {
@@ -882,7 +909,7 @@ display: block;
 
 .find_cost{
     display: block;
-    min-height: 240px;
+    min-height: 220px;
     width: 80%;
     float: right;
     position: relative;
@@ -1521,9 +1548,53 @@ display: block;
         color: #242424;
         font: 18px "notosanabold";
     }
+    .bloc_repair_line1 {
+        margin-left: 10px;
+        width: 44%;
+    }
+    .bloc_guarantees_titel a h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+    .bloc_guarantees_line1 {
+        width: 23%;
+    }
+
+    .bloc_apply_titel  a h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+    .bloc_apply_line1 {
+        display: block;
+        position: relative;
+        height: 2px;
+        width: 67%;
+        background-color: #ed2024;
+        float: left;
+        margin-left: 10px;
+    }
+    .bloc_apply_line2 {
+        float: right;
+    }
+    .bloc_work_titel h1{
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+
+    .bloc_repair_titel a h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+
+    .bloc_cost_titel a h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+
 
     .types_jobs {
         width: 79%;
+        min-height: 400px;
     }
     .body_repair {
         width: 79%;
@@ -1577,11 +1648,26 @@ display: block;
         margin-left: 2px;
     }
 
-
-
     .guarantees {
         width: 79%;
     }
+    .guarantees_icon{
+        margin-top: -20px;
+    }
+
+    .bloc_guarantees_icon{
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+
+    .bloc_guarantees_icon img{
+        padding-left: 0;
+    }
+    .bloc_guarantees_icon p{
+        text-align: center;
+    }
+
     .cost {
         display: block;
         min-height: 885px;
@@ -1974,6 +2060,18 @@ display: block;
         min-height: 500px;
     }
 
+    .bloc_repair_titel a h1{
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+
+    .bloc_repair_line1 {
+        margin-left: 10px;
+        width: 87%;
+    }
+
+
+
     .jobs_titel{
         display: block;
         position: absolute;
@@ -2020,8 +2118,21 @@ display: block;
 
     .guarantees {
         width: 100%;
-
     }
+
+    .bloc_guarantees_titel a h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+    .bloc_guarantees_line1 {
+        width: 45%;
+    }
+    .bloc_guarantees_icon p {
+        margin-left: 0;
+        text-align: left;
+    }
+
+
     .bloc_guarantees_icon {
         display: block;
         position: relative;
@@ -2040,6 +2151,14 @@ display: block;
         width: 100%;
         background-color:#f6f6f6 ;
     }
+
+    .bloc_cost_titel a h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+
+
+
     .bloc_cost_content_text {
         display: inline-block;
         width: 90%;
@@ -2086,6 +2205,12 @@ display: block;
         min-height: 720px;
         width: 100%;
     }
+
+    .bloc_apply_titel a h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+
     .bloc_apply_icon {
         display: block;
         position: relative;
@@ -2103,6 +2228,29 @@ display: block;
         height: 550px;
         width: 100%;
     }
+    .bloc_work_titel h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+    .bloc_work_line1 {
+        display: block;
+        position: relative;
+        height: 2px;
+        width: 38%;
+        background-color: #ed2024;
+        float: left;
+        margin-left: 10px;
+    }
+    .bloc_work_line2 {
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 62%;
+        background-color: #d8d8d8;
+        float: right;
+    }
+
+
     .slide-item  {
         width: 200px;
         padding: 50px;

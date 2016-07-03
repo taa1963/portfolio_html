@@ -1,0 +1,1174 @@
+@import"reset200802.css";
+
+.body {
+    width: 105%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container-fluid {
+    display: block;
+    width: 100%;
+    height: 100%;
+   -webkit-backface-visibility: hidden;
+    margin: 0;
+}
+
+.col-md-12{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.apply_left_menu{
+
+    display: block;
+    background-color: #d82526 ;
+    height: 100%;
+    width: 20%;
+    float: left;
+    position: fixed;
+
+}
+
+.apply_nav{
+    display: block;
+    margin-left: 50px;
+}
+
+
+.apply_nav > li > a{
+    color:#ffffff;
+    font: 12px "NotoSana-Regular" ;
+    height: 20px;
+    padding: 0 0;
+    line-height: 24px;
+}
+
+
+
+.apply_nav > li > a:focus{
+    background-color: #080808;
+}
+
+.apply_nav > li > a:hover{
+    background-color: #080808;
+}
+
+.apply_left_menu a img{
+    width: 100%;
+}
+
+
+.apply_menu_tel{
+   display: block;
+    min-height: 50px;
+    width: 80%;
+    background-color: #ececec;
+    float: right;
+    position: relative;
+}
+
+.apply_menu{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    width: 75%;
+    float: left;
+}
+
+.apply_menu  ul{
+    margin: 0 auto;
+}
+
+.apply_menu ul a{
+    color:#353535;
+    font: 13px "NotoSana-Regular" ;
+    height: 20px;
+    line-height: 24px;
+    padding-right: 50px;
+}
+
+.apply_menu ul a:first-child {
+    margin-left: 115px;
+}
+
+.apply_menu ul a img{
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.apply_tel{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    width: 20%;
+    float: right;
+}
+
+.apply_tel p img{
+    margin-right: 25px;
+    float: left;
+
+}
+.apply_tel p{
+    color:#353535;
+    font: 15px "NotoSana-Regular" ;
+    height: 25px;
+    float: left;
+}
+.apply_tel p span{
+    color:#353535;
+    font: 15px "NotoSana-Regular" ;
+    height: 25px;
+    float: left;
+}
+/*Описание Блок контакты дата работ и его компонентов */
+.apply_contact{
+    display: block;
+    min-height: 90px;
+    width: 80%;
+    background-color: #f6f6f6;
+    float: right;
+    position: relative;
+}
+
+.apply_contact_deck{
+    display: block;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin-left: 120px;
+}
+
+.apply_contact_deck p{
+    color:#353535;
+    font: 12px "NotoSana-Regular" ;
+    float: left;
+    margin-top: 30px;
+}
+
+.apply_contact_adres{
+    display: block;
+    position: relative;
+    width: 25%;
+    height: 100%;
+    float: left;
+    margin-left: 90px;
+}
+
+.apply_contact_adres img{
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+
+.apply_contact_adres p{
+    display: block;
+    color:#353535;
+    font: 12px "NotoSana-Regular" ;
+    float: left;
+    margin-top: 20px;
+    position: relative;
+}
+
+.apply_contact_data{
+    display: block;
+    position: relative;
+    width: 18%;
+    height: 100%;
+    float: left;
+    margin-left: 125px;
+}
+
+.apply_contact_data img{
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.apply_contact_data p{
+    display: block;
+    color:#353535;
+    font: 12px "NotoSana-Regular" ;
+    float: left;
+    margin-top: 30px;
+    position: relative;
+}
+
+/*Описание Блок с фото и его компонентов */
+
+
+
+/*Описание Гарантии и его компоненты */
+
+
+/*Описание Обратиться к нам */
+.apply{
+    display: block;
+    min-height: 800px;
+    width: 80%;
+    background-color: #f6f6f6;
+    float: right;
+    position: relative;
+    margin-top: 0;
+}
+
+.bloc_apply{
+    display: block;
+    position: relative;
+    width: 75%;
+    min-height: 800px;
+    margin: 0 auto;
+    margin-right: 10px;
+    margin-left: 12%;
+}
+
+.bloc_apply_titel{
+    color:#242424;
+    font: 20px "notosanabold" ;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.bloc_apply_titel a h1{
+    color:#242424;
+    font: 20px "notosanabold" ;
+}
+
+.bloc_apply_line1{
+    display: block;
+    position: relative;
+    height: 2px;
+    width: 63%;
+    background-color:#ed2024;
+    float: left;
+    margin-left: 10px;
+}
+
+.bloc_apply_line2{
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 35%;
+    background-color:#d8d8d8;
+    float: left;
+}
+
+.apply_icon{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    margin: 0 auto;
+    height: 300px;
+}
+
+.bloc_apply_icon{
+    display: block;
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+    height: 345px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 10px;
+    background-color: #ffffff;
+}
+
+
+.bloc_apply_icon img{
+    margin: 0 auto;
+   width: 100%;
+}
+
+.bloc_apply_icon p{
+    font: 13px "notosanabold";
+    color: #6a6a6a;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.bloc_apply_icon h2{
+    display: block;
+    font: 12px "NotoSana-Regular";
+    color: #6a6a6a;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+}
+
+.apply_icon_line1{
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color:#ed2024;
+    bottom: 0;
+}
+
+.bloc_apply_text{
+    display: block;
+    position: relative;
+    width: 100%;
+    top:50px;
+    margin-left: 20px;
+}
+
+.bloc_apply_text p{
+    font: 12px "NotoSana-Regular";
+    color: #6a6a6a;
+    float: left;
+}
+
+
+
+/* Блок Футера и его элементы */
+
+.apply_contact_futer{
+    display: block;
+    min-height: 90px;
+    width: 80%;
+    background-color: #f6f6f6;
+    float: right;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.apply_contact_futer_deck{
+    display: block;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin-left: 120px;
+}
+
+.apply_contact_futer_deck p{
+    color:#353535;
+    font: 12px "NotoSana-Regular" ;
+    float: left;
+    margin-top: 30px;
+}
+
+.apply_contact_futer_adres{
+    display: block;
+    position: relative;
+    width: 25%;
+    height: 100%;
+    float: left;
+    margin-left: 90px;
+}
+
+.apply_contact_futer_adres img{
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: 30px;
+}
+
+
+.apply_contact_futer_adres p{
+    display: block;
+    color:#353535;
+    font: 12px "NotoSana-Regular" ;
+    float: left;
+    margin-top: 30px;
+    position: relative;
+    margin-left: 20px;
+
+}
+
+.apply_contact_futer_data{
+    display: block;
+    position: relative;
+    width: 18%;
+    height: 100%;
+    float: left;
+    margin-left: 125px;
+}
+
+.apply_contact_futer_data img{
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.apply_contact_futer_data p{
+    display: block;
+    color:#353535;
+    font: 12px "NotoSana-Regular" ;
+    float: left;
+    margin-top: 30px;
+    position: relative;
+}
+
+.apply_menu_tel_futer{
+    display: block;
+    min-height: 50px;
+    width: 80%;
+    background-color: #282828;
+    float: right;
+    position: relative;
+}
+
+.apply_menu_futer{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    width: 75%;
+    float: left;
+}
+
+.apply_menu_futer  ul{
+    margin: 0 auto;
+}
+
+.apply_menu_futer ul a{
+    color:#ffffff;
+    font: 13px "NotoSana-Regular" ;
+    height: 20px;
+    line-height: 24px;
+    padding-right: 50px;
+}
+
+.apply_menu_futer ul a:first-child {
+    margin-left: 115px;
+}
+
+.apply_menu_futer ul a img{
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.apply_tel_futer{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    width: 20%;
+    float: right;
+}
+
+.apply_tel_futer p img{
+    margin-right: 25px;
+    float: left;
+}
+.apply_tel_futer p{
+    color:#ffffff;
+    font: 15px "NotoSana-Regular" ;
+    height: 25px;
+    float: left;
+}
+
+.apply_tel_futer p span{
+    color:#ffffff;
+    font: 15px "NotoSana-Regular" ;
+    height: 25px;
+    float: left;
+}
+
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+
+    .apply_menu_tel {
+        width: 79%;
+    }
+
+    .apply_menu {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 65%;
+        float: left;
+    }
+
+    .apply_menu ul a:first-child {
+        margin-left: 85px;
+    }
+
+    .apply_menu ul a {
+        color: #353535;
+        font: 13px "NotoSana-Regular";
+        height: 20px;
+        line-height: 24px;
+        padding-right: 30px;
+    }
+
+    .apply_tel {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 30%;
+        float: right;
+    }
+
+    .apply_contact {
+        width: 79%;
+    }
+
+    .apply_contact_deck {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        margin-left: 20px;
+    }
+
+    .apply_contact_deck p {
+        color: #353535;
+        font: 12px "NotoSana-Regular";
+        float: left;
+        margin-top: 20px;
+    }
+
+    .apply_contact_adres {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        float: left;
+        margin-left: 30px;
+    }
+
+    .apply_contact_data {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        float: left;
+        margin-left: 25px;
+    }
+
+    .apply_contact_data p {
+        margin-top: 20px;
+    }
+
+
+
+    .apply {
+        display: block;
+        min-height: 720px;
+        width: 79%;
+    }
+
+
+
+    .apply_contact_futer {
+        display: block;
+        min-height: 90px;
+        width: 79%;
+    }
+
+    .apply_contact_futer_deck {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        margin-left: 20px;
+    }
+
+    .apply_contact_futer_adres {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        float: left;
+        margin-left: 30px;
+    }
+
+    .apply_contact_futer_data {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        float: left;
+        margin-left: 25px;
+    }
+
+    .apply_menu_tel_futer {
+        display: block;
+        min-height: 50px;
+        width: 79%;
+    }
+
+    .apply_menu_futer {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 65%;
+        float: left;
+    }
+
+    .apply_menu_futer ul a:first-child {
+        margin-left: 85px;
+    }
+
+    .apply_menu_futer ul a {
+        color: #ffffff;
+        font: 13px "NotoSana-Regular";
+        height: 20px;
+        line-height: 24px;
+        padding-right: 30px;
+    }
+
+    .apply_tel_futer {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 30%;
+        float: right;
+    }
+}
+
+@media only screen  and (max-width: 768px) {
+
+    .apply_left_menu {
+        display: block;
+        background-color: #d82526;
+        height: 100%;
+        width: 160px;
+    }
+    .apply_left_menu img {
+        width: 155px;
+        object-fit: contain;
+    }
+
+    .apply_nav > li > a {
+        color: #ffffff;
+        font: 11px "NotoSana-Regular";
+    }
+
+    .apply_nav {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .apply_menu_tel {
+        width: 79%;
+    }
+    .apply_menu {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 65%;
+        float: left;
+    }
+
+    .apply_menu ul a:first-child {
+        margin-left: 15px;
+    }
+
+    .apply_menu ul a {
+        color: #353535;
+        font: 12px "NotoSana-Regular";
+        height: 20px;
+        line-height: 24px;
+        padding-right: 10px;
+    }
+
+    .apply_tel {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 30%;
+        float: right;
+    }
+    .apply_tel p{
+        color:#353535;
+        font: 12px "NotoSana-Regular" ;
+        height: 25px;
+        float: left;
+    }
+    .apply_tel p span{
+        color:#353535;
+        font: 12px "NotoSana-Regular" ;
+        height: 25px;
+        float: left;
+    }
+
+
+    .apply_tel p img {
+        margin-right: 10px;
+        float: left;
+    }
+
+    .apply_contact {
+        width: 79%;
+    }
+
+    .apply_contact_deck {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        margin-left: 20px;
+    }
+
+    .apply_contact_deck p {
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        float: left;
+        margin-top: 25px;
+    }
+
+    .apply_contact_adres {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        float: left;
+        margin-left: 10px;
+        margin-top: -27px;
+    }
+    .apply_contact_adres p {
+        display: block;
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        margin-top: -27px;
+        margin-left: 20px;
+        float: right;
+
+    }
+    .apply_contact_adres img {
+       height: 25px;
+       padding-top: 30px;
+    }
+
+    .apply_contact_data p{
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        margin-top: 10px;
+    }
+
+
+    .apply_contact_data {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        float: left;
+        margin-left: 25px;
+        margin-top: 20px;
+    }
+    .apply_contact_data img {
+        height: 60px;
+    }
+
+
+
+    .bloc_apply_titel  a h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+    .bloc_apply_line1 {
+        display: block;
+        position: relative;
+        height: 2px;
+        width: 67%;
+        background-color: #ed2024;
+        float: left;
+        margin-left: 10px;
+    }
+    .bloc_apply_line2 {
+        float: right;
+    }
+
+
+    .apply {
+        display: block;
+        min-height: 720px;
+        width: 79%;
+    }
+
+
+    .apply_contact_futer {
+        width: 79%;
+    }
+
+    .apply_contact_futer_deck {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .apply_contact_futer_deck p {
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        float: left;
+        margin-top: 10px;
+    }
+
+    .apply_contact_futer_adres {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        float: left;
+        margin-left: 10px;
+    }
+    .apply_contact_futer_adres p {
+        display: block;
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        float: right;
+        margin-top: -30px;
+    }
+
+    .apply_contact_futer_adres img{
+        height: 25px;
+        margin-top: 17px;
+    }
+
+    .apply_contact_futer_data p{
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        margin-top: 10px;
+    }
+
+
+    .apply_contact_futer_data {
+        display: block;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        float: left;
+        margin-left: 25px;
+    }
+    .apply_contact_futer_data img{
+        height: 60px;
+    }
+
+    .apply_menu_futer {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 65%;
+        float: left;
+    }
+
+    .apply_menu_futer ul a:first-child {
+        margin-left: 15px;
+    }
+
+    .apply_menu_futer ul a {
+        color: #ffffff;
+        font: 12px "NotoSana-Regular";
+        height: 20px;
+        line-height: 24px;
+        padding-right: 10px;
+    }
+
+    .apply_tel_futer {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 30%;
+        float: right;
+    }
+
+
+    .apply_menu_tel_futer {
+        display: block;
+        min-height: 50px;
+        width: 79%;
+    }
+    .apply_tel_futer p{
+        color:#ffffff;
+        font: 12px "NotoSana-Regular" ;
+        height: 20px;
+        float: left;
+    }
+    .apply_tel_futer p span{
+        color:#ffffff;
+        font: 12px "NotoSana-Regular" ;
+        height: 20px;
+        float: left;
+    }
+
+}
+
+@media only screen  and (max-width: 425px) {
+
+    .apply_left_menu {
+        display: none;
+
+    }
+
+    .apply_menu_tel {
+        width: 100%;
+    }
+
+    .apply_nav > li > a {
+        color: #ffffff;
+        font: 10px "NotoSana-Regular";
+    }
+
+    .apply_nav {
+        display: block;
+        margin-left: 5px;
+    }
+
+    .apply_menu_tel {
+        width: 100%;
+    }
+    .apply_menu {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 173px;
+        float: left;
+    }
+    .apply_tel p span {
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        height: 25px;
+        float: left;
+    }
+
+
+
+    .apply_menu ul a:first-child {
+        margin-left: 1px;
+    }
+
+    .apply_menu ul a {
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        height: 20px;
+        line-height: 24px;
+        padding-right: 5px;
+    }
+
+    .apply_tel {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 30%;
+        float: right;
+    }
+
+    .apply_tel p img {
+        margin-left: 30%;
+        width: 20px;
+        display: block;
+    }
+    .apply_tel p {
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        height: 25px;
+        float: left;
+    }
+    .apply_tel p span {
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        height: 25px;
+        float: left;
+    }
+
+
+
+
+    .apply_contact {
+        width: 100%;
+    }
+
+    .apply_contact_deck {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .apply_contact_deck p {
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        float: left;
+        margin-top: 10px;
+    }
+
+    .apply_contact_adres {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin-left: 10px;
+
+    }
+    .apply_contact_adres p {
+        display: block;
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        margin-top: 30px;
+        margin-left: -10px;
+        float: left;
+    }
+
+    .apply_contact_data p{
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        margin-top: 10px;
+    }
+    .apply_contact_adres img {
+        height: 25px;
+        padding-top: 10px;
+    }
+
+    .apply_contact_data {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin-left: 10px;
+    }
+
+
+    .apply {
+        display: block;
+        min-height: 720px;
+        width: 100%;
+    }
+
+    .bloc_apply_titel a h1 {
+        color: #242424;
+        font: 12px "notosanabold";
+    }
+
+    .bloc_apply_icon {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        height: 345px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 10px;
+        background-color: #ffffff;
+    }
+
+
+
+    .apply_contact_futer {
+        width: 100%;
+    }
+
+    .apply_contact_futer_deck {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-left: 20px;
+    }
+
+    .apply_contact_futer_deck p {
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        float: left;
+        margin-top: 10px;
+    }
+
+    .apply_contact_futer_adres {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin-left: 10px;
+    }
+    .apply_contact_futer_adres p {
+        display: block;
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        margin-top: 10px;
+        float: left;
+    }
+
+    .apply_contact_futer_adres img {
+        height: 20px;
+    }
+    .apply_contact_futer_data p{
+        color: #353535;
+        font: 10px "NotoSana-Regular";
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+
+    .apply_contact_futer_data {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin-left: 10px;
+    }
+
+
+    .apply_menu_futer {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 173px;
+        float: left;
+    }
+
+    .apply_menu_futer ul a:first-child {
+        margin-left: 1px;
+    }
+
+    .apply_menu_futer ul a {
+        color: #ffffff;
+        font: 10px "NotoSana-Regular";
+        height: 20px;
+        line-height: 24px;
+        padding-right: 5px;
+    }
+
+    .apply_tel_futer {
+        display: block;
+        position: relative;
+        margin-top: 10px;
+        width: 30%;
+        float: right;
+    }
+
+    .apply_tel_futer p img {
+        margin-left: 30%;
+        width: 20px;
+        display: block;
+    }
+    .apply_tel_futer p span {
+        color: #ffffff;
+        font: 10px "NotoSana-Regular";
+        height: 25px;
+        float: left;
+    }
+
+    .apply_menu_tel_futer {
+        display: block;
+        min-height: 50px;
+        width: 100%;
+    }
+
+}
+
+
+
+
+

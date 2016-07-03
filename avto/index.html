@@ -12,6 +12,9 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
       <link href="css/fonts.css" rel="stylesheet">
+      <link href="css/modal-contact.css" rel="stylesheet">
+
+
 
 
 
@@ -19,7 +22,7 @@
   <body>
 
 
-    <div class="container" id="container">
+    <div class="container-fluid" id="container-fluid">
 
 	  <div class="row">
 
@@ -29,7 +32,7 @@
 
              <div class="left_menu">
 
-                 <a href="index.html"><img src="img/logo_left1.png" alt=""> </a>
+                 <a href="index.html"><img src="img/logo/logo_left1.png" alt=""> </a>
 
 
 
@@ -107,8 +110,7 @@
                  </div>
 
                  <div class="bloc2_button">
-                     <a href="index_bodyrepair.html"><span class="submit">Узнать стоимость ремонта по фото</span> </a>
-
+                     <a href="#?=500" rel="popup_success" class="poplight"><span class="submit">Узнать стоимость ремонта по фото</span> </a>
                  </div>
 
 
@@ -179,7 +181,9 @@
 
                  <div class="bloc_repair">
                      <div class="bloc_repair_titel">
-                          <h1>Кузовной ремонт автомобиля</h1>
+                        <a href="index_bodyrepair.html"> <h1>Кузовной ремонт автомобиля</h1></a>
+
+
                       </div>
 
                      <div class="bloc_repair_line1">
@@ -206,7 +210,9 @@
 
                  <div class="bloc_guarantees">
                      <div class="bloc_guarantees_titel">
-                         <h1>Мы гарантируем</h1>
+
+                         <a href="index_guarantees.html"><h1>Мы гарантируем</h1> </a>
+
                      </div>
 
                      <div class="bloc_guarantees_line1">
@@ -414,9 +420,6 @@
 
 
 
-
-
-
                  </div>
              </div>
 
@@ -424,7 +427,8 @@
 
                  <div class="bloc_work">
                      <div class="bloc_work_titel">
-                         <h1>Наши работы</h1>
+                         <a href="index_work.html"> <h1>Наши работы</h1></a>
+
                      </div>
 
                      <div class="bloc_work_line1">
@@ -476,7 +480,7 @@
 
              <div class="find_cost">
                  <div class="find_cost_button">
-                     <a href="index_bodyrepair.html"><span class="submit">Узнать стоимость ремонта по фото</span> </a>
+                     <a href="#?=500" rel="popup_success" class="poplight"><span class="submit">Узнать стоимость ремонта по фото</span> </a>
 
                  </div>
 
@@ -527,13 +531,56 @@
 
 		   </div>
 	   </div>
+
+
     </div>
+
+
+
+        <div id="popup_success" class="popup_success">
+            <div class="note">
+                <p>
+                    Для выполнения оценки приложите<br>
+                    фото своего авто к письму и укажите контактные данные. <br>
+                    Мы с Вами обязательно свяжемся.
+
+                </p>
+            </div>
+            <form id="form5" action="send.php" method="post">
+                <fieldset>
+
+
+                    <p class="first">
+
+                        <label for="user_name">Ваше имя <span>*</span> </label>
+                        <input type="text" name="user_name" id="user_name" placeholder="" required="" size="50"  />
+                    </p>
+
+                    <p>
+                        <label for="fon1">Телефон <span>*</span> </label>
+                        <input type="text" name="fon1" id="fon1" placeholder="" required="" size="50"  />
+                    </p>
+                </fieldset>
+
+                <label for="exampleInputFile">
+                    Загрузить файл
+                </label>
+                <input type="file" id="exampleInputFile">
+
+                <button type="submit" class="<button">
+                    Отправить
+                </button>
+            </form>
+
+        </div>
+
 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/dm-modal.js"></script>
 
   </body>
 </html>

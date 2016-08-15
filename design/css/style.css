@@ -638,16 +638,40 @@
 .blog_text1 {
     display: block;
     position: relative;
+    width: 100px;
     top: -20px;
     margin: 0 auto;
-    left: 47%;
+    left: 17%;
 }
 
-.blog_text1 img{
+.blog_text1 h1{
+    display: block;
+    width: 100px;
+    font:18px "HelveticaNeueCyr-Roman";
+    color:#6e6e6e;
+
+}
+
+
+
+
+.blog_adr{
     display: block;
     position: relative;
-    top: -20px;
-    margin-left: 130px;
+    width: 22px;
+    height: 22px;
+    top: -40px;
+    float: right;
+   margin-left: 10px;
+    margin-right: 20px;
+    background: url("../img/blog_img1.png") no-repeat 100% 100%;
+
+}
+
+.blog{
+    display: block;
+    position: relative;
+    margin-top: 20px;
 }
 
 .bloc_blog_search{
@@ -731,32 +755,101 @@
     padding-top:5px
 }
 
-
+/*	Страница "БЛОГ" - "СТРАНИЦА ПОИСКА" и ее компоненты */
 .popup_contact3{
     position: fixed;
-    width: 400px;
-    height: 200px;
+    width: 320px;
+    height: 745px;
     margin: 0 auto;
-    top: 5%;
-    left: 0;
     z-index: 99999;
-
-    display: none; /*--по умолчанию скрыт--*/
     background-color: #ffffff;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+    display: none; /*--по умолчанию скрыт--*/
+    top:50px;
 }
 
-.note3{
+.popup_seach{
     display: block;
-    width: 400px;
-    height: 200px;
-    background-color: #002DFF;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color:#ffffff;
+    margin-left: 20px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
 
+.search{
+    height: 36px;
+    display: inline-block;
+}
+
+input[type="search"] {
+    height: 36px;
+    width: 42px;
+    border: none;
+    float: left;
+    display: inline-block;
+    background: url("../img/blog_seach2.png") no-repeat 50% 50%;
+}
+input[type="text"] {
+
+    height: 36px;
+    width: 198px;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #afafae;
+}
+
+.popup_seach img{
+    display: block;
+    position: relative;
+    float: right;
+    margin-right: 20px;
+}
+
+.popup_titel{
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.popup_titel h1{
+    display:inline-block;
+    width: auto;
+    background: #080808;
+    font:15px "HelveticaNeueCyr-Roman";
+    color:#ffffff;
+}
+
+.popup_text{
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.popup_text h2{
+    display: block;
+    font:15px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
 }
 
 
+/*	Страница "БЛОГ" - "СТРАНИЦА ПОИСКА" и ее компоненты */
+
+
+.popup_contact4{
+    position: fixed;
+    width: 320px;
+    height: 430px;
+    margin: 0 auto;
+    z-index: 99999;
+    background-color: #79b5a9;
+    display: none; /*--по умолчанию скрыт--*/
+    top:50px;
+}
 
 
 
@@ -793,10 +886,10 @@
    margin-left: 40px;
 }
 
-.bloc_contact img{
+.popup3_close{
     display: block;
     position: relative;
-    float: left;
+    float: right;
 }
 
 .contact_content_text{

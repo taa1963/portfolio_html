@@ -2,8 +2,6 @@
 * Оформление контактной формы
 * без дополительных изображений;
 * исключительно средствами CSS;
-*
-*  @dobrovoi dbmast.ru
 */
 
 /*--Слой затемнения фона--*/
@@ -221,26 +219,7 @@ width:90%;
     filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
 }
 
-.popup_contact2{
-    position: fixed;
-    top: 5%;
-    left: 0;
-    z-index: 99999;
-    height: 550px;
-    display: none; /*--по умолчанию скрыт--*/
-    background-color: #ffffff;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
 
-.note2{
-    display: block;
-    width: 400px;
-    height: auto;
-    background-color: #002DFF;
-
-}
 
 
 

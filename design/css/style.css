@@ -2,7 +2,7 @@
 
 .body {
     width: auto;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
     padding: 0;
 }
@@ -12,7 +12,7 @@
     display: block;
     position: relative;
     width: 320px;
-    height: 100%;
+    min-height: 700px;
     margin: 0 auto;
     padding: 0;
 
@@ -649,10 +649,7 @@
     width: 100px;
     font:18px "HelveticaNeueCyr-Roman";
     color:#6e6e6e;
-
 }
-
-
 
 
 .blog_adr{
@@ -755,6 +752,13 @@
     padding-top:5px
 }
 
+.blog_further{
+    display: block;
+    position: relative;
+    bottom: 0;
+    top: 180px;
+}
+
 /*	Страница "БЛОГ" - "СТРАНИЦА ПОИСКА" и ее компоненты */
 .popup_contact3{
     position: fixed;
@@ -851,6 +855,202 @@ input[type="text"] {
     top:50px;
 }
 
+
+
+/*	Страница "БЛОГ" - "СТРАНИЦА ДАЛЕЕ" и ее компоненты */
+
+
+.popup_contact5{
+    position: relative;
+    width: 320px;
+    min-height: 700px;
+    margin: 0 auto;
+    z-index: 99999;
+    background-color: red;
+    display: none; /*--по умолчанию скрыт--*/
+    top:20px;
+}
+
+.popup5_further_img{
+    display: block;
+    position: relative;
+}
+
+.further_ttt{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 120px;
+  }
+
+.further_ttt h1{
+    display: block;
+    font:11px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
+    margin-bottom: 10px;
+ }
+
+.popup5_further_date{
+    display: block;
+    position: relative;
+    background: #afafae;
+    margin: 0 auto;
+    width: 60px;
+}
+
+.popup5_further_date h1{
+    display: block;
+    font:11px "HelveticaNeueCyr-Roman";
+    color:#f4f4f4;
+}
+
+.further_ttt2{
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.further_ttt2 h1{
+    display: block;
+    font:28px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
+}
+
+.further_text1{
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.further_text1 h2{
+    display: block;
+    font:15px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
+ }
+
+
+.further_ttt3{
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 25px;
+ }
+
+.further_ttt3 h1{
+    display: block;
+    font:20px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
+}
+
+.popup5_close{
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+}
+
+.popup5_close_text{
+    display: block;
+    position: relative;
+    float: right;
+}
+
+.popup5_close_text{
+    display: block;
+    font:11px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
+   margin-top: 25px;
+}
+
+.popup5_addr{
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #002DFF;
+}
+
+.popup5_addr h1{
+    display: block;
+    font:20px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
+    float: left;
+}
+.comment{
+    display: block;
+    position: relative;
+    width: 280px;
+    height: 230px;
+    border: 1px solid #a7a7a7 ;
+    font:14px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
+}
+
+.comment input{
+    border: none;
+}
+
+.comment input [type="text"]  {
+    border: none;
+    width: 278px;
+    height: 220px;
+    padding-top:-100px;
+}
+
+.comment2{
+    display: block;
+    position: relative;
+    width: 280px;
+    height: 130px;
+    border: 1px solid #a7a7a7 ;
+    font:14px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
+    margin-top: 20px;
+}
+.comment2 input{
+    border: none;
+}
+
+.name2{
+    display: block;
+    position: relative;
+    width: 280px;
+    height: 230px;
+    border: 1px solid #a7a7a7 ;
+
+}
+
+
+#form{
+    float: left;
+    margin-top: 20px;
+}
+
+.submit{
+    display: block;
+     margin-top: 20px;
+ }
+
+.popup5_furrep{
+    display: block;
+    position: relative;
+}
+.popup5_furrep img{
+    display: block;
+    float: right;
+}
+
+.popup5_furrep p{
+    display: block;
+    float: left;
+    margin-left: 20px;
+    font:11px "HelveticaNeueCyr-Roman";
+    color:#a7a7a7;
+    margin-top: 50px;
+}
 
 
 /*	Страница "КОНТАКТЫ" и ее компоненты */

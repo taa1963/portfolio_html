@@ -77,6 +77,8 @@ $(function() {
         var block = $(this).parents('.container_mob');
         block.find('.popup_contact3').hide();
         block.find('.popup_contact4').hide();
+        block.find('.popup_contact5').hide();
+
         block.find('.blog').show();
         $(".header_blog").css("background","#ffffff");
 
@@ -113,8 +115,24 @@ $(function() {
         block.find('.blog').show();
         $(".header_blog").css("background","#ffffff");
 
+    });
+
+
+
+    $('.blog_further').click(function(){
+        var block = $(this).parents('.container_mob');
+        block.find('.blog').hide();
+        block.find('.popup_contact5').show();
+    });
+
+    $('.popup5_close').click(function(){
+        var block = $(this).parents('.container_mob');
+        block.find('.popup_contact5').hide();
+        block.find('.blog').show();
+        $(".header_blog").css("background","#ffffff");
 
     });
+
 
 
 

@@ -1,0 +1,68 @@
+.previous, .next {opacity: 0.6;}
+.previous:hover, .next:hover {opacity: 1;}
+.liquid .previous {
+	display:block;
+	height:126px;
+	width:64px;
+	background-image:url('../img/previous.png');
+	float:left;
+	margin:0;
+	padding:0;
+	margin-top: 20px;
+	cursor: pointer !important;
+}
+.liquid2 .previous {
+	display:block;
+	height:126px;
+	width:64px;
+	background-image:url('../img/previous2.png');
+	float:left;
+	margin:0;
+	padding:0;
+	margin-top: 20px;
+	cursor: pointer !important;
+}
+
+.liquid .next {
+	display:block;
+	height:126px;
+	width:64px;
+	background-image:url('../img/next.png');
+	float:right;
+	margin:0;
+	padding:0;
+	margin-top: 20px;
+	cursor: pointer !important;
+}
+.liquid2 .next {
+	display:block;
+	height:126px;
+	width:64px;
+	background-image:url('../img/next2.png');
+	float:right;
+	margin:0;
+	padding:0;
+	margin-top: 20px;
+	cursor: pointer !important;
+}
+.liquid ul li {
+	width:126px;
+	padding:0 2px;
+	opacity: 0.8;
+	margin-left: 15px; margin-right: 15px;
+}
+.liquid ul li:hover {
+	opacity: 1 !important;
+}
+.liquid2 ul li {
+	width:900px;
+	padding:0 2px;
+}
+
+
+.liquid ul li a img {
+	-moz-box-shadow: 5px 5px 3px #222;
+   	-webkit-box-shadow: 5px 5px 3px #222;
+   	box-shadow: 5px 5px 3px #222;
+}
+.gallery img {} 

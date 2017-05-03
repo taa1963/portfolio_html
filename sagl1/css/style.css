@@ -1,0 +1,91 @@
+@import"reset200802.css";
+
+.body {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: block;
+	 position: relative;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-backface-visibility: hidden;
+}
+.container_mob{
+    display: none;
+}
+
+.content{
+	 display: block;
+	 position: relative;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-backface-visibility: hidden;
+	
+}
+
+
+.content  img{
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.logo{
+	 position: absolute;
+    display: block;
+    z-index: 99999;
+    top: 69%;
+    left: 42%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+}
+
+
+
+
+.logo1 a img{
+    display: block;
+    object-fit: contain;
+    float: left;
+   }
+
+
+@media only screen  and (max-width: 425px) {
+
+
+    .container_mob {
+        display: block;
+        position: relative;
+        width: auto;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        -webkit-backface-visibility: hidden;
+    }
+    .container{
+        display: none;
+    }
+
+    .content_mob  img{
+        min-height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+}
+
+
+
+

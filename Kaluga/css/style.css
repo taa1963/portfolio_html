@@ -8,16 +8,18 @@
 
 /*Описание header и его компонентов */
 
+
+
 .header {
     width: 100%;
-    height: 240px;
+    height: 160px;
     margin: 0 auto;
 }
 
 .header_logo {
     display: block;
     width: 175px;
-    height: 240px;
+    height: 170px;
     float: left;
 }
 .header_logom img{
@@ -29,7 +31,7 @@
 .header_titel {
     display: block;
     width: 534px;
-    height: 240px;
+    height: 170px;
     float: left;
 }
 
@@ -43,7 +45,7 @@
     font-size:20.48px ;
     color: #757575;
     text-align: center;
-    padding-top: 126px;
+    padding-top: 46px;
     padding-bottom: 24px;
  }
 
@@ -62,14 +64,14 @@
 .header_cont {
     display: block;
     width: 315px;
-    height: 240px;
+    height: 170px;
     float: left;
  }
 
 .header_cont_tel{
     display: block;
-    margin-top: 107px;
-    margin-bottom: 12px;
+    margin-top: 31px;
+    margin-bottom: 8px;
 }
 
 .header_cont_tel p{
@@ -80,11 +82,12 @@
 }
 .header_cont_tel p img{
     margin-right: 19px;
+    margin-left: -5px;
 }
 
 .header_cont_siti{
     display: block;
-   margin-bottom: 12px;
+   margin-bottom: 4px;
 }
 
 .header_cont_siti p span{
@@ -222,8 +225,8 @@
     width: 290px;
     height: 15px;
     position: absolute;
-    margin-top: 50px;
-    margin-left: 20px;
+    margin-top: 45px;
+    margin-left: 45px;
 }
 
 .Glazing .poplight{
@@ -336,10 +339,10 @@
     float: left;
     margin-right: 10px;
 }
-
+/*
 .zena_block_prod:hover{
     background-color: #eaeaea;
-}
+}*/
 
 
 .zena_block_prod:last-child{
@@ -482,23 +485,36 @@
     margin-right: 10px;
 }
 
+.casement_block_prod_s{
+    display: block;
+    width: 302px;
+    height: 525px;
+    float: left;
+    margin-right: 10px;
+    background-color: #eaeaea;
+    border-left: 1px solid #acacac;
+    border-right: 1px solid #acacac;
+}
+
 
 .casement_block_prod:last-child{
     margin-right: 0px;
 }
 
 
-.casement_block_prod:hover{
+/*.casement_block_prod:hover{
     background-color: #eaeaea;
     border-left: 1px solid #acacac;
     border-right: 1px solid #acacac;
-}
+}*/
 
 .casement_block_prod_titel{
     display: block;
     width: 100%;
     height: auto;
 }
+
+
 
 .casement_block_prod_titel h1{
     text-align: center;
@@ -732,6 +748,12 @@
     color: #ffffff;
     padding-bottom: 50px;
 }
+.order_form{
+    display: block;
+    width: 944px;
+    margin-left: 130px;
+    height: auto;
+}
 
 #form3{
     display: block;
@@ -752,7 +774,7 @@
 }
 
 
-#form3 input::-moz-placeholder {
+#form3 input:-moz-placeholder {
     color: #1b1b1b;
     padding-left: 15px;
 }
@@ -781,8 +803,8 @@
     background-color: #eb5c00;
     border: none;
     color: #FFFFFF;
-    font-family: "UbuntuRegular";
-    font-size:13px ;
+    font-family: "UbuntuBold";
+    font-size:17px ;
     padding-top: 11px;
 }
 
@@ -812,7 +834,7 @@
 
 .working_block_text1{
     display: block;
-    width: 762px;
+    width: 781px;
     height: 60px;
     position: absolute;
     margin-top:150px ;
@@ -822,7 +844,8 @@
 .block_text1{
     display: block;
     float: left;
-    margin-right: 17px;
+    margin-right: 19px;
+    width: 239px;
 }
 
 .block_text1 h1{
@@ -835,15 +858,14 @@
 .block_text1 p{
     text-align: left;
     font: 12px "UbuntuRegular";
-    font-weight: bold;
-     color: #10100f;
+    color: #10100f;
     padding-top: 5px;
 }
 
 
 .working_block_text2{
     display: block;
-    width: 762px;
+    width: 781px;
     height: 60px;
     position: absolute;
     margin-top:350px ;
@@ -899,7 +921,7 @@
 }
 
 
-#form4 input::-moz-placeholder {
+#form4 input:-moz-placeholder {
     color: #1b1b1b;
     padding-left: 15px;
 }
@@ -929,8 +951,8 @@
     background-color: #eb5c00;
     border: none;
     color: #FFFFFF;
-    font-family: "UbuntuRegular";
-    font-size:13px ;
+    font-family: "UbuntuBold";
+    font-size:17px ;
     padding-top: 11px;
 }
 
@@ -1086,7 +1108,7 @@
 }
 
 
-#form5 input::-moz-placeholder {
+#form5 input:-moz-placeholder {
     color: #a1a1a1;
     padding-left: 15px;
     font-family: "UbuntuBold";
@@ -1119,8 +1141,8 @@
     background-color: #eb5c00;
     border: none;
     color: #FFFFFF;
-    font-family: "UbuntuRegular";
-    font-size:13px ;
+    font-family: "UbuntuBold";
+    font-size:17px ;
     padding-top: 11px;
 }
 
@@ -1159,9 +1181,9 @@
     margin-right: 10px;
 }
 
-.door_block_prod:hover{
+/*.door_block_prod:hover{
     background-color: #eaeaea;
-}
+}*/
 
 
 .door_block_prod:last-child{
@@ -1252,8 +1274,8 @@
 .ceiling h1{
     text-align: center;
     font-family: "RobotoBold";
-    font-size:25px ;
-    color: #000000;
+    font-size:41px ;
+    color: #444444;
     padding-top: 3px;
     padding-bottom: 55px;
 }

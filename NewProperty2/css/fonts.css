@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: robotoblack; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/robotoblack/robotoblack.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+
+@font-face {
+    font-family: RobotoRegular; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/RobotoRegular/RobotoRegular.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/RobotoRegular/RobotoRegular.woff); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/RobotoRegular/RobotoRegular.eot); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+
+@font-face {
+    font-family: RobotoBold; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/RobotoBold/RobotoBold.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/RobotoBold/RobotoBold.woff); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/RobotoBold/RobotoBold.eot); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+
+@font-face {
+    font-family: RobotoMedium; /* ֳאנםטעףנא רנטפעא */
+    src: url(../fonts/RobotoMedium/RobotoMedium.ttf); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/RobotoMedium/RobotoMedium.woff); /* ֿףעü ך פאיכף סמ רנטפעמל */
+    src: url(../fonts/RobotoMedium/RobotoMedium.eot); /* ֿףעü ך פאיכף סמ רנטפעמל */
+}
+
+
+
+

@@ -47,6 +47,7 @@
 
   }
 
+
 .header_slaider_logo{
     display: block;
     position: absolute;
@@ -56,6 +57,7 @@
     top: 0px;
     z-index: 100;
 }
+
 
 .header_slaider_logo img{
     display: block;

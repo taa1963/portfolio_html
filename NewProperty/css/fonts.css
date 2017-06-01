@@ -1,28 +1,38 @@
 
 @font-face {
     font-family: robotoblack; /* Гарнитура шрифта */
-    src: url(../fonts/robotoblack/robotoblack.ttf); /* Путь к файлу со шрифтом */
+    src: local("robotoblack"),
+    url(../fonts/robotoblack/robotoblack.ttf) format("truetype"); /* Путь к файлу со шрифтом */
+
 }
 
 @font-face {
     font-family: RobotoRegular; /* Гарнитура шрифта */
-    src: url(../fonts/RobotoRegular/RobotoRegular.ttf); /* Путь к файлу со шрифтом */
-    src: url(../fonts/RobotoRegular/RobotoRegular.woff); /* Путь к файлу со шрифтом */
-    src: url(../fonts/RobotoRegular/RobotoRegular.eot); /* Путь к файлу со шрифтом */
+    src:local("RobotoRegular"),/* Локальный шрифт */
+    url(../fonts/RobotoRegular/RobotoRegular.ttf) format("truetype"); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+    src: url(../fonts/RobotoRegular/RobotoRegular.woff) format("woff"); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+
+    src:url(../fonts/RobotoRegular/RobotoRegular.eot);
+    src: url(../fonts/RobotoRegular/RobotoRegular.eot) format("embedded-opentype");
 }
 
 @font-face {
     font-family: RobotoBold; /* Гарнитура шрифта */
-    src: url(../fonts/RobotoBold/RobotoBold.ttf); /* Путь к файлу со шрифтом */
-    src: url(../fonts/RobotoBold/RobotoBold.woff); /* Путь к файлу со шрифтом */
-    src: url(../fonts/RobotoBold/RobotoBold.eot); /* Путь к файлу со шрифтом */
+    src: local("RobotoBold"),
+    url(../fonts/RobotoBold/RobotoBold.ttf) format("truetype"); /* Путь к файлу со шрифтом */
+    src:url(../fonts/RobotoBold/RobotoBold.woff) format("woff"); /* Путь к файлу со шрифтом */
+    src:url(../fonts/RobotoBold/RobotoBold.eot); /* Путь к файлу со шрифтом */
+    src: url(../fonts/RobotoBold/RobotoBold.eot) format("embedded-opentype");
 }
 
 @font-face {
     font-family: RobotoMedium; /* Гарнитура шрифта */
-    src: url(../fonts/RobotoMedium/RobotoMedium.ttf); /* Путь к файлу со шрифтом */
-    src: url(../fonts/RobotoMedium/RobotoMedium.woff); /* Путь к файлу со шрифтом */
+    src: local("RobotoMedium"),
+    url(../fonts/RobotoMedium/RobotoMedium.ttf) format("truetype"); /* Путь к файлу со шрифтом */
+    src: url(../fonts/RobotoMedium/RobotoMedium.woff) format("woff")); /* Путь к файлу со шрифтом */
     src: url(../fonts/RobotoMedium/RobotoMedium.eot); /* Путь к файлу со шрифтом */
+    src: url(../fonts/RobotoMedium/RobotoMedium.eot) format("embedded-opentype");
+
 }
 
 

@@ -44,9 +44,7 @@
 .header_slaider img{
     display: block;
     width: 100%;
-    height: 100%;
-
-  }
+}
 
 
 
@@ -69,16 +67,20 @@
     margin-top: 30px;
 }
 
+
 .header_slaider_text{
     display: block;
     position: absolute;
-    width: 10.7%;
-    height: auto;
-    margin-left: 8.5%;
-    margin-top: -26%;
-    z-index: 500;
+    width: 46.7%;
+    height: 36%;
+    margin-left: 30%;
+    top: 29%;
+    z-index: 100;
     background-color: #ffe400;
 }
+
+
+
 
 .header_slaider_text h1{
 
@@ -133,18 +135,14 @@
     padding-left: 15px;
 }
 
-
 .header_slaider_video{
     display: block;
     position: absolute;
-    width: 5.9%;
-    height: auto;
-    float: right;
-    margin-left: 19.15%;
-   /* margin-right: 0;*/
-    margin-top: -20.8%;
-  /*  bottom: -25%;*/
-    z-index: 500;
+    width: 23.3%;
+    height: 35.4%;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
     background-color: #2297d8;
 }
 
@@ -872,6 +870,19 @@
 
     }
 
+    .header_slaider_text h1 {
+        font-size: 16pt;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .header_slaider_text p {
+        font-size: 8px;
+        line-height: 14px;
+    }
+
+
+
 
     .sl1{
         display: block;
@@ -981,35 +992,10 @@
         color:#000000;
 
     }
-    .header_slaider_text {
-        display: block;
-        position: absolute;
-        width: 10.7%;
-        height: auto;
-        margin-left: 8.5%;
-        margin-top: -18%;
-    }
-    .header_slaider_video {
-
-        margin-left: 19.15%;
-
-        margin-top: -10.8%;
-
-    }
 
 
 
 
-    .header_slaider_text h1 {
-        font-size: 16pt;
-        padding-top: 20px;
-        padding-left: 20px;
-    }
-
-    .header_slaider_text p {
-        font-size: 8px;
-        line-height: 14px;
-    }
 
     .header_richt_icon {
 
@@ -1141,9 +1127,9 @@
         display: block;
         text-align: center;
         font-family:"RobotoBold" ;
-        font-size: 14px;
+        font-size: 12px;
         color:#ffffff;
-        padding-top: 40px;
+        padding-top: 20px;
         padding-bottom: 17px;
     }
 
@@ -1180,10 +1166,14 @@
         min-height: 331px;
     }
     .header_slaider_video img {
-        width: 60px;
-        min-height: 60px;
-        height: 60px;
+        width: 40px;
+        min-height: 40px;
+        height: 40px;
+        margin: 0 auto;
     }
+
+
+
 
     .prev-slide {
         display: block;
@@ -1238,47 +1228,26 @@
         color:#000000;
 
     }
-    .header_slaider_text {
-        display: block;
-        position: absolute;
-        width: 10.7%;
-        height: auto;
-        margin-left: 8.5%;
-        margin-top: -14%;
-    }
-    .header_slaider_video {
-
-        margin-left: 19.15%;
-        margin-top: -7.2%;
-
-    }
-
-
-
-
-    .header_slaider_text h1 {
-        font-size: 16pt;
-        padding-top: 20px;
-        padding-left: 20px;
-    }
-
-    .header_slaider_text p {
-        font-size: 8px;
-        line-height: 14px;
-    }
-
-
-
 
     .header_slaider_text h1 {
         font-size: 12pt;
-        padding-top: 20px;
-        padding-left: 20px;
+        padding-top: 10px;
+        padding-left: 10px;
     }
 
     .header_slaider_text p {
         font-size: 6px;
-        line-height: 14px;
+        line-height: 8px;
+        padding-top: 4px;
+        padding-left: 10px;
+    }
+    .header_slaider_line {
+        display: block;
+        width: 10%;
+        height: 4px;
+        background-color: #131842;
+        margin-top: 5px;
+        margin-left: 10px;
     }
 
     .header_richt_icon {
@@ -1444,7 +1413,7 @@
     .sl1{
         display: block;
         width: 100%;
-        min-height: 184px;
+        min-height: 211px;
         background-color:#384a58 ;
         float: left;
     }
@@ -1466,7 +1435,7 @@
 
         display: block;
         width: 100%;
-        height: 184px;
+        height: 211px;
         /* ¬нешние тступы сверху и снизу */
         margin: 0px 0px;
         margin-left: 0px;
@@ -1483,13 +1452,13 @@
         /* ¬нутренние отступы */
         /* padding: 50px;
          margin-right: 20px;*/
-        height: 184px;
+        height: 211px;
         /* ќбтекание */
         float: left;
     }
     .slide-item img {
         width: 25%;
-        min-height: 184px;
+        min-height: 211px;
     }
     .header_slaider_video img {
         width: 60px;
@@ -1562,19 +1531,6 @@
         color:#000000;
 
     }
-    .header_slaider_text {
-        display: block;
-        position: absolute;
-        width: 10.7%;
-        height: auto;
-        margin-left: 8.5%;
-        margin-top: -8%;
-    }
-    .header_slaider_video {
-
-        margin-left: 19.15%;
-        margin-top: -4.2%;
-    }
 
 
     .header {
@@ -1589,6 +1545,7 @@
         width: 100%;
         height: 211px;
     }
+
 
 
     .header_slaider_text h1 {
@@ -1622,9 +1579,10 @@
     }
 
     .header_slaider_video img {
-        width: 25px;
-        height: 25px;
+        width: 31px;
+        height: 31px;
     }
+
 
 
     .header_richt_menu {

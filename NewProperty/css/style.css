@@ -33,6 +33,7 @@
 
 }
 
+
 .header_slaider{
     display: block;
     position: relative;
@@ -44,15 +45,19 @@
 .header_slaider img{
     display: block;
     width: 100%;
+    height: 100%;
 }
+
 
 
 
 .header_slaider_logo{
     display: block;
     position: absolute;
-    width: 14%;
-    height: 2%;
+   /* width: 14%;
+    height: 2%;*/
+    width: 211px;
+    height: 31px;
     margin-left: 18.3%;
     top: 0px;
     z-index: 100;
@@ -147,9 +152,6 @@
 }
 
 
-
-
-
 .header_slaider_video a{
     display: block;
     width: 60px;
@@ -168,12 +170,8 @@
     padding-bottom: 30px;
 }
 
-/*
-.header_slaider_video img{
-    width: 71px;
-    min-height: 71px;
-    height: 71px;
-}*/
+
+/*Описание Блок Шапка и слайдера и его компонентов */
 
 
 .header_richt_menu{
@@ -388,161 +386,6 @@
     float: right;
 }
 
-/* Слайдер и его компоненты */
-
-/*Описание Контент и его компонентов */
-.sl1{
-    display: block;
-    width: 100%;
-    min-height: 621px;
-    background-color:#384a58 ;
-    float: left;
-}
-
-
-
-/* —лайдер и его компоненты */
-
-.slider {
-    /* Ўирина контейнера */
-
-    display: block;
-    width: 100%;
-    height: 621px;
-    /* ¬нешние тступы сверху и снизу */
-    margin: 0px 0px;
-    margin-left: 0px;
-    /* ¬нутренние отступы дл¤ ссылок navy */
- /*   padding: 0 10px;*/
-    /* ѕозиционирование */
-    position: relative;
-    /* —кроем то что выходит за границы */
-    overflow: hidden;
-}
-/* ?войной клик по ссылкам вперед/назад вызывает выделение всех элементов слайдера,
-поэтому предотвращаем это */
-.slider::-moz-selection { background: transparent; color: #fff; text-shadow: none; }
-.slider::selection { background: transparent; color: #fff; text-shadow: none; }
-
-.slide-list {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-.slide-wrap {
-    position: relative;
-    left: 0px;
-    top: 0;
-    /* максимально возможна¤ ширина обертки слайдера */
-    width: 400%;
-}
-.slide-item {
-    /* Ўирина слайда */
-    width: 100%;
-    /* ¬нутренние отступы */
-   /* padding: 50px;
-    margin-right: 20px;*/
-    height: 621px;
-    /* ќбтекание */
-    float: left;
-}
-.slide-item img {
-    width: 25%;
-    min-height: 621px;
-}
-
-
-.header_slaider_video img{
-    width: 60px;
-    min-height: 60px;
-    height: 60px;
-}
-
-.slaider_nav {
-    display: block;
-    position: absolute;
-    width: 24%;
-    height: 32%;
-    background-color: #FFFFFF;
-    top: 42%;
-    margin-left: 100%;
-    z-index: 500;
-}
-
-
-/* навигаци¤ вперед/назад */
-.navy {
-    display: inline-block;
-    position: relative;
-    height: 100%;
-    /* ширина ссылок */
-    width: 40%;
-    margin: 0 auto;
-}
-.prev-slide {
-    display: block;
-    width: 20%;
-    position: absolute;
-    background: url(../slider/previous.png) 21px 28px no-repeat;
-    float: left;
-    left: 32%;
-    cursor: pointer;
-
-
-}
-.next-slide {
-    display: block;
-    position: absolute;
-    background:  url(../slider/next.png) 21px 28px no-repeat;
-    width: 20%;
-    float: left;
-    right: 47%;
-    top: 70%;
-    cursor: pointer;
-
-}
-.navy.disable {
-    background: #FFFFFF;
-}
-
-.vav_sl_text{
-    display: block;
-    position: absolute;
-    float: left;
-    right: 47%;
-    top: 50%;
- }
-
-.vav_sl_text p{
-    font-family: "RobotoBold";
-    font-size: 23px;
-    font-weight: bold;
-    color:#000000;
-
-}
-
-.vav_sl_text p span{
-    display:block;
-    float: right;
-    font-family: "RobotoBold";
-    font-size: 15px;
-    font-weight: bold;
-    padding-top: -10px;
-
-    color:#000000;
-
-}
-
-/* навигаци¤ старт/пауза */
-.auto {
-    display: block;
-    position: relative;
-    width: 17px;
-    height: 11px;
-    margin: 10px auto;
-}
-
-
 
 /*Описание Контент и его компонентов */
 
@@ -746,114 +589,10 @@
 
     }
 
+    .header_slaider_logo{
 
-    .sl1{
-        display: block;
-        width: 100%;
-        min-height: 585px;
-        background-color:#384a58 ;
-        float: left;
-    }
-
-    .header_slaider_video p{
-        display: block;
-        text-align: center;
-        font-family:"RobotoBold" ;
-        font-size: 14px;
-        color:#ffffff;
-        padding-top: 40px;
-        padding-bottom: 17px;
-    }
-
-    /* —лайдер и его компоненты */
-
-    .slider {
-        /* Ўирина контейнера */
-
-        display: block;
-        width: 100%;
-        height: 585px;
-        /* ¬нешние тступы сверху и снизу */
-        margin: 0px 0px;
-        margin-left: 0px;
-        /* ¬нутренние отступы дл¤ ссылок navy */
-        /*   padding: 0 10px;*/
-        /* ѕозиционирование */
-        position: relative;
-        /* —кроем то что выходит за границы */
-        overflow: hidden;
-    }
-    .slide-item {
-        /* Ўирина слайда */
-        width: 100%;
-        /* ¬нутренние отступы */
-        /* padding: 50px;
-         margin-right: 20px;*/
-        height: 585px;
-        /* ќбтекание */
-        float: left;
-    }
-    .slide-item img {
-        width: 25%;
-        min-height: 585px;
-    }
-    .header_slaider_video img {
-        width: 60px;
-        min-height: 60px;
-        height: 60px;
-    }
-
-    .prev-slide {
-        display: block;
-        width: 20%;
-        position: absolute;
-        background: url(../slider/previous.png) 21px 28px no-repeat;
-        float: left;
-        left: 32%;
-        cursor: pointer;
-
-
-    }
-    .next-slide {
-        display: block;
-        position: absolute;
-        background:  url(../slider/next.png) 21px 28px no-repeat;
-        width: 20%;
-        float: left;
-        right: 47%;
-        top: 70%;
-        cursor: pointer;
-
-    }
-    .navy.disable {
-        background: #FFFFFF;
-    }
-
-    .vav_sl_text{
-        display: block;
-        position: absolute;
-        float: left;
-        right: 47%;
-        top: 50%;
-    }
-
-    .vav_sl_text p{
-        font-family: "RobotoBold";
-        font-size: 23px;
-        font-weight: bold;
-        color:#000000;
-
-    }
-
-    .vav_sl_text p span{
-        display:block;
-        float: right;
-        font-family: "RobotoBold";
-        font-size: 15px;
-        font-weight: bold;
-        padding-top: -10px;
-        color:#000000;
-
+        width: 198px;
+        height: 26px;
     }
 
 
@@ -865,9 +604,11 @@
         min-height: 439px;
     }
     .header_richt_menu{
-
         min-height: 439px;
-
+    }
+    .header_slaider_logo{
+        width: 151px;
+        height: 21px;
     }
 
     .header_slaider_text h1 {
@@ -880,122 +621,6 @@
         font-size: 8px;
         line-height: 14px;
     }
-
-
-
-
-    .sl1{
-        display: block;
-        width: 100%;
-        min-height: 439px;
-        background-color:#384a58 ;
-        float: left;
-    }
-
-    .header_slaider_video p{
-        display: block;
-        text-align: center;
-        font-family:"RobotoBold" ;
-        font-size: 14px;
-        color:#ffffff;
-        padding-top: 40px;
-        padding-bottom: 17px;
-    }
-
-    /* —лайдер и его компоненты */
-
-    .slider {
-        /* Ўирина контейнера */
-
-        display: block;
-        width: 100%;
-        height: 439px;
-        /* ¬нешние тступы сверху и снизу */
-        margin: 0px 0px;
-        margin-left: 0px;
-        /* ¬нутренние отступы дл¤ ссылок navy */
-        /*   padding: 0 10px;*/
-        /* ѕозиционирование */
-        position: relative;
-        /* —кроем то что выходит за границы */
-        overflow: hidden;
-    }
-    .slide-item {
-        /* Ўирина слайда */
-        width: 100%;
-        /* ¬нутренние отступы */
-        /* padding: 50px;
-         margin-right: 20px;*/
-        height: 439px;
-        /* ќбтекание */
-        float: left;
-    }
-    .slide-item img {
-        width: 25%;
-        min-height: 585px;
-    }
-    .header_slaider_video img {
-        width: 60px;
-        min-height: 60px;
-        height: 60px;
-    }
-
-    .prev-slide {
-        display: block;
-        width: 29%;
-        position: absolute;
-        background: url(../slider/previous.png) 21px 28px no-repeat;
-        float: left;
-        left: 32%;
-        cursor: pointer;
-
-
-    }
-    .next-slide {
-        display: block;
-        position: absolute;
-        background:  url(../slider/next.png) 21px 28px no-repeat;
-        width: 28%;
-        float: left;
-        right: 40%;
-        top: 54%;
-        cursor: pointer;
-
-    }
-    .navy.disable {
-        background: #FFFFFF;
-    }
-
-    .vav_sl_text{
-        display: block;
-        position: absolute;
-        float: left;
-        right: 47%;
-        top: 50%;
-    }
-
-    .vav_sl_text p{
-        font-family: "RobotoBold";
-        font-size: 23px;
-        font-weight: bold;
-        color:#000000;
-
-    }
-
-    .vav_sl_text p span{
-        display:block;
-        float: right;
-        font-family: "RobotoBold";
-        font-size: 15px;
-        font-weight: bold;
-        padding-top: -10px;
-        color:#000000;
-
-    }
-
-
-
-
 
     .header_richt_icon {
 
@@ -1108,125 +733,13 @@
     .header{
         min-height: 331px;
     }
+    .header_slaider_logo{
+        width: 113px;
+        height: 17px;
+    }
+
     .header_richt_menu{
-
         min-height: 331px;
-
-    }
-
-
-    .sl1{
-        display: block;
-        width: 100%;
-        min-height: 331px;
-        background-color:#384a58 ;
-        float: left;
-    }
-
-    .header_slaider_video p{
-        display: block;
-        text-align: center;
-        font-family:"RobotoBold" ;
-        font-size: 12px;
-        color:#ffffff;
-        padding-top: 20px;
-        padding-bottom: 17px;
-    }
-
-    /* —лайдер и его компоненты */
-
-    .slider {
-        /* Ўирина контейнера */
-
-        display: block;
-        width: 100%;
-        height: 331px;
-        /* ¬нешние тступы сверху и снизу */
-        margin: 0px 0px;
-        margin-left: 0px;
-        /* ¬нутренние отступы дл¤ ссылок navy */
-        /*   padding: 0 10px;*/
-        /* ѕозиционирование */
-        position: relative;
-        /* —кроем то что выходит за границы */
-        overflow: hidden;
-    }
-    .slide-item {
-        /* Ўирина слайда */
-        width: 100%;
-        /* ¬нутренние отступы */
-        /* padding: 50px;
-         margin-right: 20px;*/
-        height: 331px;
-        /* ќбтекание */
-        float: left;
-    }
-    .slide-item img {
-        width: 25%;
-        min-height: 331px;
-    }
-    .header_slaider_video img {
-        width: 40px;
-        min-height: 40px;
-        height: 40px;
-        margin: 0 auto;
-    }
-
-
-
-
-    .prev-slide {
-        display: block;
-        width: 37%;
-        position: absolute;
-        background: url(../slider/previous.png) 21px 28px no-repeat;
-        float: left;
-        left: 22%;
-        top: -21%;
-      cursor: pointer;
-
-
-    }
-    .next-slide {
-        display: block;
-        position: absolute;
-        background:  url(../slider/next.png) 21px 28px no-repeat;
-        width: 37%;
-        float: left;
-        right: 40%;
-        top: 46%;
-        cursor: pointer;
-
-    }
-    .navy.disable {
-        background: #FFFFFF;
-    }
-
-    .vav_sl_text{
-        display: block;
-        position: absolute;
-        float: left;
-        right: 47%;
-        top: 50%;
-    }
-
-    .vav_sl_text p{
-        font-family: "RobotoBold";
-        font-size: 23px;
-        font-weight: bold;
-        color:#000000;
-
-    }
-
-    .vav_sl_text p span{
-        display:block;
-        float: right;
-        font-family: "RobotoBold";
-        font-size: 15px;
-        font-weight: bold;
-        padding-top: -10px;
-        color:#000000;
-
     }
 
     .header_slaider_text h1 {
@@ -1408,135 +921,44 @@
 
 @media only screen  and (max-width: 425px) {
 
-
-
-    .sl1{
+    .header_slaider_logo{
+        width: 65px;
+        height: 9px;
+    }
+    .header_slaider_logo img{
         display: block;
         width: 100%;
-        min-height: 211px;
-        background-color:#384a58 ;
-        float: left;
+        height: 100%;
+        position: absolute;
+        margin-top: 10px;
     }
 
-    .header_slaider_video p{
-        display: block;
-        text-align: center;
-        font-family:"RobotoBold" ;
-        font-size: 14px;
-        color:#ffffff;
-        padding-top: 40px;
-        padding-bottom: 17px;
-    }
 
-    /* —лайдер и его компоненты */
-
-    .slider {
-        /* Ўирина контейнера */
-
-        display: block;
-        width: 100%;
-        height: 211px;
-        /* ¬нешние тступы сверху и снизу */
-        margin: 0px 0px;
-        margin-left: 0px;
-        /* ¬нутренние отступы дл¤ ссылок navy */
-        /*   padding: 0 10px;*/
-        /* ѕозиционирование */
-        position: relative;
-        /* —кроем то что выходит за границы */
-        overflow: hidden;
-    }
-    .slide-item {
-        /* Ўирина слайда */
-        width: 100%;
-        /* ¬нутренние отступы */
-        /* padding: 50px;
-         margin-right: 20px;*/
-        height: 211px;
-        /* ќбтекание */
-        float: left;
-    }
-    .slide-item img {
-        width: 25%;
-        min-height: 211px;
-    }
     .header_slaider_video img {
-        width: 60px;
-        min-height: 25px;
-        height: 60px;
-    }
-
-    .slaider_nav {
-        display: block;
-        position: absolute;
-        width: 24%;
-        height: 32%;
-        background-color: #FFFFFF;
-        top: 22%;
-        margin-left: 100%;
-        z-index: 500;
+        width: 31px;
+        height: 31px;
     }
 
 
-    .prev-slide {
-        display: block;
-        width: 37%;
-        position: absolute;
-        background: url(../slider/previous.png) 16px 18px no-repeat;
-        float: left;
-        left: 22%;
-        top: -21%;
-        cursor: pointer;
-
-
-    }
-    .next-slide {
-        display: block;
-        position: absolute;
-        background:  url(../slider/next.png) 16px 18px no-repeat;
-        width: 37%;
-        float: left;
-        right: 40%;
-        top: 46%;
-        cursor: pointer;
-
-    }
-    .navy.disable {
-        background: #FFFFFF;
+    .header_slaider_video p {
+        font-size: 8px;
+        color: #ffffff;
+        padding-top: 10px;
     }
 
-    .vav_sl_text{
-        display: block;
-        position: absolute;
-        float: left;
-        right: 47%;
-        top: 50%;
+    .header_slaider_video p {
+        font-size: 8px;
+        color: #ffffff;
+        padding-top: 10px;
     }
 
-    .vav_sl_text p{
-        font-family: "RobotoBold";
-        font-size: 23px;
-        font-weight: bold;
-        color:#000000;
-
-    }
-
-    .vav_sl_text p span{
-        display:block;
-        float: right;
-        font-family: "RobotoBold";
-        font-size: 15px;
-        font-weight: bold;
-        padding-top: -8px;
-        color:#000000;
-
-    }
 
 
     .header {
         display: block;
         width: 100%;
         height: 265px;
+        min-height: 265px;
     }
 
     .header_slaider {

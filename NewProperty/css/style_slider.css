@@ -64,19 +64,15 @@
 }
 
 
-.header_slaider_video img{
-    width: 60px;
-    min-height: 60px;
-    height: 60px;
-}
+
 
 .slaider_nav {
     display: block;
     position: absolute;
-    width: 24%;
+    width: 23%;
     height: 32%;
     background-color: #FFFFFF;
-    top: 33%;
+    top: 28%;
     margin-left: 100%;
     z-index: 500;
 }
@@ -155,15 +151,7 @@
         float: left;
     }
 
-    .header_slaider_video p{
-        display: block;
-        text-align: center;
-        font-family:"RobotoBold" ;
-        font-size: 14px;
-        color:#ffffff;
-        padding-top: 40px;
-        padding-bottom: 17px;
-    }
+
 
     /* —лайдер и его компоненты */
 
@@ -256,6 +244,73 @@
     }
 }
 
+.slaider_nav {
+    display: block;
+    position: absolute;
+    width: 24%;
+    height: 36%;
+    background-color: #FFFFFF;
+    top: 29%;
+    margin-left: 100%;
+    z-index: 500;
+}
+
+
+/* навигаци¤ вперед/назад */
+.navy {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    /* ширина ссылок */
+    width: 40%;
+    margin: 0 auto;
+}
+.prev-slide {
+    display: block;
+    width: 30%;
+    position: absolute;
+    background: url(../slider/next1366.png) 30px 30px no-repeat;
+    float: left;
+    left: 32%;
+    cursor: pointer;
+
+
+}
+.next-slide {
+    display: block;
+    position: absolute;
+    background:  url(../slider/previous1366.png) 30px 28px no-repeat;
+    width: 30%;
+    float: left;
+    right: 37%;
+    top: 55%;
+    cursor: pointer;
+
+}
+.navy.disable {
+    background: #FFFFFF;
+}
+
+.vav_sl_text{
+    display: block;
+    position: absolute;
+    float: left;
+    right: 40%;
+    top: 43%;
+}
+
+.vav_sl_text p{
+    font-family: "RobotoBold";
+    font-size: 26px;
+     color:#000000;
+}
+
+
+
+
+
+
+
 
 @media only screen  and (max-width: 1024px) {
     .sl1 {
@@ -266,15 +321,7 @@
         float: left;
     }
 
-    .header_slaider_video p {
-        display: block;
-        text-align: center;
-        font-family: "RobotoBold";
-        font-size: 14px;
-        color: #ffffff;
-        padding-top: 40px;
-        padding-bottom: 17px;
-    }
+
 
     /* —лайдер и его компоненты */
     .slider {
@@ -320,7 +367,7 @@
         display: block;
         width: 29%;
         position: absolute;
-        background: url(../slider/previous.png) 21px 28px no-repeat;
+        background: url(../slider/next1366.png) 21px 28px no-repeat;
         float: left;
         left: 32%;
         cursor: pointer;
@@ -329,7 +376,7 @@
     .next-slide {
         display: block;
         position: absolute;
-        background: url(../slider/next.png) 21px 28px no-repeat;
+        background: url(../slider/previous1366.png) 21px 28px no-repeat;
         width: 28%;
         float: left;
         right: 40%;

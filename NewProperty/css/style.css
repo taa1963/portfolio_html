@@ -195,7 +195,7 @@
     display: block;
     height: 25px;
     width: 140px;
-    margin-left: 100px;
+    margin-left: 18%;
     margin-top: 45px;
 
 }
@@ -651,7 +651,7 @@
     .header_slaider_text p{
 
         font-family:"RobotoRegular" ;
-        font-size: 9pt;
+        font-size: 8pt;
         line-height: 14pt;
         color:#363636;
         padding-top: 8px;
@@ -735,7 +735,7 @@
         display: block;
         height: 25px;
         width: 140px;
-        margin-left: 90px;
+        margin-left: 18%;
         margin-top: 42px;
 
     }

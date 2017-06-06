@@ -479,7 +479,7 @@
 
 .content2_block1{
     display: block;
-    width: 209px;
+    width: 19%;
     height: 209px;
     float: left;
     background-color: #ffe400;
@@ -507,7 +507,7 @@
 
 .content2_block2{
     display: block;
-    width: 209px;
+    width: 19%;
     height: 209px;
     float: left;
    /* background-color: #f5f5f5;*/
@@ -537,7 +537,7 @@
 .content2_block3{
     display: block;
     height: 209px;
-    width: 61.2%;
+    width: 60.2%;
     position: relative;
     overflow: hidden;
     float: left;
@@ -700,7 +700,7 @@
         width: 50px;
         height: 50px;
         margin: 0 auto;
-        padding-top: 60px;
+        padding-top: 50px;
     }
     .header_slaider_video a img{
         width: 50px;

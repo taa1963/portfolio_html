@@ -1,0 +1,944 @@
+@import"reset200802.css";
+
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-12{
+    margin: 0;
+    padding: 0;
+}
+.col-md-4{
+    margin: 0;
+    padding: 0;
+}
+.col-md-3{
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-6{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+    font-family: "Arial";
+    line-height: 1.4;
+
+}
+
+
+.body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color:#ffffff;
+}
+
+.container {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*Описание header и его компонентов */
+
+.header {
+    display:block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.header_logo{
+    display: block;
+    width: 22%;
+    margin: 0 auto;
+    z-index: 10;
+    margin-bottom:-10px;
+}
+
+.header_logo img{
+    display: block;
+    width: 100%;
+    margin-bottom:-10px;
+    position: sticky;
+}
+
+.header_block{
+    display: block;
+
+    width: 100%;
+    height: auto;
+     /*min-height: 621px;*/
+    /*min-height: 800px;*/
+    /*!*min-height: 569px;*!*/
+    background: url("../img/fonNew.jpg") 100% 100% no-repeat;
+
+    background-size: cover;
+
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    /*background-size: 100%; !* Современные браузеры *!*/
+}
+
+
+
+.header_block_text{
+
+    display: block;
+    position: relative;
+    width: 40%;
+    min-height: 621px;
+    height: auto;
+    margin: 0 auto;
+}
+.header_block_text_button{
+    display: block;
+    float: left;
+    background: rgba(255,255,255,0.9);
+    width: 100%;
+    min-height: 50px;
+    margin-top: 22%;
+    margin-left: 20px;
+    text-align: center;
+}
+
+
+.header_block_text_button h1{
+    color: #080808;
+    font: 43px Arial;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.header_block_text_button h6{
+    color: #0570b7;
+    font: 28px Arial;
+    text-align: center;
+    padding-top: 40px;
+}
+.header_block_text_button p{
+    display: inline-block;
+    color: #f6690c;
+    font: 24px Arial;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    border-bottom: 1px solid #f6690c;
+    border-top: 1px solid #f6690c;
+
+}
+
+.header_block_button{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.header_block_button button{
+    display: block;
+    width: 265px;
+    height: 65px;
+    background-color: #0570b6;
+    color: #FFFFFF;
+    font: 30px Arial;
+    text-align: center;
+}
+
+
+.header_block_button1{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.header_block_text_img{
+    display: block;
+    /*position: absolute;*/
+    float: right;
+
+
+}
+
+.header_block_text_img img{
+    display: block;
+    position:absolute;
+    z-index: 100;
+    bottom: 0;
+}
+
+.header_block_line{
+    display: block;
+    width: 100%;
+}
+.header_block_line img{
+    width: 100%;
+}
+
+.header_block_text_mob{
+    display: none;
+}
+
+/*Описаниеb block_icons(Иконки) и его компонентов */
+
+.block_icons{
+    display: block;
+    width: 100%;
+    position: relative;
+    height: auto;
+    margin-top: 50px;
+}
+
+
+.block_icon{
+    display: block;
+
+    margin-bottom: 50px;
+}
+
+.block_icon_img{
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    /* не забываем о кроссбраузерности */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    margin: 0 auto;
+    border: 2px solid #eaf0f4;
+    border-bottom: 0px;
+}
+
+.block2_icon_img{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    /* не забываем о кроссбраузерности */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -html-border-radius: 50%;
+    background-color: #eaf0f4;
+    margin-top: 8px;
+    background-size: cover;
+}
+
+.block2_icon_img img{
+    display: block;
+    margin: 0 auto;
+    /*width: 50%;*/
+    /*height: 50%;*/
+    background-size: cover;
+    padding-top: 44px;
+}
+
+
+
+.block_icon_text{
+    display: block;
+    margin-top: 40px;
+}
+
+.block_icon_text p{
+    text-align: center;
+     font-size: 20px;
+     color: rgb(0, 0, 0);
+    font-family: "Arial";
+    line-height: 1.4;
+
+}
+
+
+
+/*Описание Line (Линия)  */
+.line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color:#f1f1f1;
+}
+
+/*Описание piping (Трубы) и его компоненто  */
+
+
+
+.block_pipings{
+    display: block;
+    margin-top: 40px;
+}
+
+
+.block_pipings_text{
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.block_piping{
+    display: block;
+    /*background-color: #8a6d3b;*/
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.block_piping_img{
+    display: block;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.block_piping_img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.block_piping_number{
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 4px solid #eaf0f4;
+    margin-bottom: 15px;
+}
+
+.block_piping_number h2{
+    text-align: center;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+    font-family: "Arial";
+}
+
+.block_piping_text{
+    display: block;
+    margin: 0 auto;
+}
+
+.block_piping_text p{
+    text-align: center;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    font-family: "Arial";
+    line-height: 1.4;
+
+}
+
+
+/*Описание video (Видео) и его компонентов */
+
+.block_video{
+    display: block;
+    position: relative;
+    margin-top: 80px;
+    background-color:#eaf0f4 ;
+    margin-bottom: 70px;
+}
+
+.block_video_img{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /*height: 100%;*/
+}
+
+.block_video_img iframe{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+
+.block_video_text{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.block_piping_text p{
+    font-size: 18px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 180px;
+
+}
+
+
+
+/*Описание forms (Форма обратной связи) и его компонентов */
+
+.block_fomrs{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../img/background2.png") 100% 100% no-repeat;
+    background-size: cover;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+}
+
+
+.block_fomr_text{
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.block_fomr_text h1{
+    color: #0070b9;
+}
+
+
+.block_fomr_text h3{
+    text-align: center;
+    font-size: 23px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    padding-top: 15px;
+
+}
+
+.block_fomr img{
+    display: block;
+    float: left;
+    bottom: 0;
+    width: 25%;
+}
+
+.block_fomr #form1{
+    display: block;
+    float: left;
+    height: 100%;
+    width: 75%;
+    margin-left: -50px;
+}
+
+
+.first{
+    display:inline-block;
+    margin-left: 0;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.first p{
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 11px;
+    width: 25%;
+}
+
+.first input  {
+    /* устанавливаем ширину инпутов */
+    display: inline-block;
+    /*width:380px;*/
+    height: 50px;
+    border: 1px solid  #343434;
+    background-color:#ffffff;
+    color: #343434;
+    font: 13px "Ubuntu";
+    margin-left: 40px;
+    text-indent:15px;
+    float: left;
+    width: 50%;
+}
+
+.block_fomr_button{
+    display: block;
+    margin: 0 auto;
+}
+
+
+.block_fomr_button .submit{
+    display: block;
+    width: 265px;
+    height: 65px;
+    margin: 0 auto;
+    background-color: #0070b9;
+    color: #fff;
+    font: 24px Arial;
+    padding: 14px 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.block_fomr_button .submit button{
+    background-color: #0070b9;
+    border: 0;
+}
+
+
+/*Описание features (Особенности) и его компонентов */
+
+.features{
+    display: block;
+    width: 100%;
+}
+
+.features_caption{
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.features_block{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eaf0f4;
+}
+
+.features_block_r{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eaf0f4;
+}
+.features_block_h{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eaf0f4;
+}
+
+
+.features_img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.features_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.features_block h4{
+    display: block;
+    color: #000000;
+    font: 22px Arial;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.features_block p{
+    display: block;
+    color: #000000;
+    font: 17px Arial;
+    text-align: left;
+    padding-bottom: 25px;
+
+}
+
+.features_trumpet2.png{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eaf0f4;
+}
+
+
+.features_block_r h4{
+    display: block;
+    color: #000000;
+    font: 22px Arial;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 25px;
+}
+
+.features_block_r p{
+    display: block;
+    color: #000000;
+    font: 17px Arial;
+    text-align: left;
+    /*padding-bottom: 25px;*/
+}
+
+.features_block_h h4{
+    display: block;
+    color: #000000;
+    font: 22px Arial;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 25px;
+}
+
+.features_block_h p{
+    display: block;
+    color: #000000;
+    font: 17px Arial;
+    text-align: left;
+    /*padding-bottom: 25px;*/
+}
+
+
+.features_caption2{
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.features_advantage{
+    display: block;
+    margin-bottom: 50px;
+}
+
+.features_advantage_img{
+    display:block;
+    margin-bottom: 30px;
+}
+
+.features_advantage_img img{
+    display: block;
+    margin: 0 auto;
+}
+
+.features_advantage_text{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.features_advantage_text p{
+    color: #000000;
+    font: 19px Arial;
+    text-align: center;
+
+}
+
+/*Описание buy (Где купить) и его компонентов */
+.buy{
+    display: block;
+    width: 100%;
+    background-color: #0070b9;
+}
+
+.buy_caption{
+    display: block;
+    margin-top: 65px;
+    margin-bottom: 50px;
+}
+
+.buy_caption h1{
+    color: #FFFFFF;
+    font: 48px Arial;
+    text-align: center;
+}
+
+.buy_button{
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 35px;
+
+}
+
+.buy_button .text{
+    color: #060606;
+    font: 30px Arial;
+    text-align: center;
+}
+
+.buy_button button{
+    display: block;
+    width: 265px;
+    height: 65px;
+    background-color: #ffffff;
+    border:2px solid #f77f36;
+    margin: 0 auto;
+    color: #060606;
+    font: 30px Arial;
+    text-align: center;
+}
+
+/*Описание specification(Тексовый блок описаний) и его компонентов */
+
+.specification{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.specification_caption{
+    display: block;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.specification_caption h1{
+    color: #0070b9;
+}
+
+.specification_block1{
+    display: block;
+}
+
+.specification_block1_text{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.specification_block1_text_img{
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #eaf0f4;
+    float: left;
+
+}
+
+.specification_block1_text img{
+    display: block;
+    margin: 0 auto;
+    padding-top: 15px;
+
+
+}
+
+
+.specification_block1_text p{
+    display: block;
+    float: left;
+    width: 65%;
+    color: #060606;
+    font: 21px Arial;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.specification_block2{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    margin-top: 60px;
+    border: 4px solid #eaf0f4;
+}
+
+
+.specification_block2_text{
+    display: block;
+    padding-left: 25px;
+}
+
+.specification_block2_text p{
+    color: #060606;
+    font: 26px Arial;
+    text-align: left;
+    padding-top: 105px;
+}
+
+.pointer{
+    display: block;
+    margin-top: 50px;
+}
+
+.pointer img{
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*Описание card (Карта) и его компонентов */
+.card{
+    display: block;
+    margin-top: 40px;
+}
+
+
+.card_caption{
+    display: block;
+    margin-bottom: 90px;
+}
+
+.card_text{
+    display: block;
+    float: left;
+}
+.card_celect1{
+    display: block;
+}
+
+.card_celect1 select{
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.card_celect2 select{
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+
+
+    /*Описание блока "Футер" и его омпонентов */
+
+.footer{
+    display:block;
+    width: 100%;
+    background-color: #0070b9;
+    margin-top: 115px;
+
+}
+
+.footer_bloc{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.footer_bloc1{
+    display: block;
+    width: 30%;
+    margin-left: 55px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.footer_bloc1 p{
+    color: #ffffff;
+    font: 14px Arial;
+    text-align: left;
+}
+
+.footer_bloc2{
+    display: block;
+}
+
+.footer_bloc2_mail{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.footer_bloc2_mail img{
+    display: block;
+    float: left;
+    padding-top: 5px;
+}
+
+.footer_bloc2_mail p{
+    display: block;
+    float: left;
+    color: #ffffff;
+    font: 28px Arial;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.footer_bloc3{
+    display: block;
+}
+
+.footer_bloc3 img{
+    display: block;
+    float: left;
+    padding-top: 5px;
+}
+
+.footer_bloc3 p{
+    display: block;
+    float: left;
+    color: #ffffff;
+    font: 16px Arial;
+    text-align: left;
+    padding-left: 15px;
+}
+.footer_bloc3 p span{
+    font-weight: bold;
+}
+
+
+
+.popup_success{
+   display: none;
+    position: fixed;
+    top: 30px;
+    left: 28%;
+    width: 40%;
+    height: 200px;
+    background-color:#ffffff;
+    margin: 0 auto;
+    z-index: 9999999;
+    border: 1px solid  #343434;
+}
+
+.popup_success p{
+    display: block;
+    font: 25px "exo_2_regular";
+    font-weight: bold;
+    color: #343434;
+    text-align: center;
+    line-height: 39px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.popup_success .poplight{
+    display: block;
+    width: 192px;
+    height: 56px;
+   margin: 0 auto;
+    clear:both;
+    border: solid 1px #2f96b4;
+    /* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #4f73d1;
+    color:#fff;
+    font:15px "Ubuntu";
+    padding:14px 12px;
+    text-align:center;
+    cursor:pointer;
+    border-bottom: 8px solid #3050a4;
+
+}
+

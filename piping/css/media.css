@@ -1,0 +1,367 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .header_block_text_button h1 {
+        font: 25px Arial;
+        padding-top: 20px;
+    }
+
+    .header_block_text_button h6 {
+        color: #0570b7;
+        font: 28px Arial;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .header_block_text_button h6 {
+        font: 18px Arial;
+        padding-top: 27px;
+    }
+
+    .header_block_text_button p {
+        font: 15px Arial;
+        margin-top: 15px;
+    }
+
+    .block_piping_img {
+       height: auto;
+    }
+
+    .block_piping_text p {
+        text-align: center;
+    }
+    .header_block_text {
+     min-height: 400px;
+     }
+
+    .header_block_text_img img{
+      height: 370px;
+    }
+
+    .header_block_button button {
+       width: 173px;
+       font: 19px Arial;
+    }
+
+    .footer_bloc2_mail {
+        padding-left: 55px;
+        padding-bottom: 20px;
+    }
+    .footer_bloc3 {
+        padding-left: 55px;
+        padding-bottom: 20px;
+    }
+    .footer_bloc {
+        bottom: 30px;
+    }
+
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+    .header_block{
+        width: auto;
+        height: 316px;
+    }
+
+    .header_block_text_img {
+        display: none;
+    }
+
+    .header_block_text_button {
+        display: block;
+        background: rgb(255,255,255);
+        width: 100%;
+        min-height: 50px;
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+        border-bottom: 2px solid #eaf0f4;
+    }
+
+    .header_block_text{
+        display: none;
+    }
+
+    .header_block_text_mob{
+        display: block;
+    }
+
+
+    .header_block_text_button h1 {
+        font: 25px Arial;
+        padding-top: 20px;
+    }
+
+    .header_block_text_button h6 {
+        color: #0570b7;
+        font: 28px Arial;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .header_block_text_button h6 {
+        font: 18px Arial;
+        padding-top: 27px;
+    }
+
+    .header_block_text_button p {
+        font: 15px Arial;
+        margin-top: 15px;
+    }
+
+    .block_piping_img {
+        height: auto;
+    }
+
+    .block_piping_text p {
+        text-align: center;
+    }
+    .header_block_text {
+        min-height: 400px;
+    }
+
+    .header_block_text_img img{
+        height: 370px;
+    }
+
+    .header_block_button button {
+        width: 173px;
+        font: 19px Arial;
+    }
+    .block_fomr #form1 {
+        width: 75%;
+        margin-left: 0;
+    }
+
+    .first {
+         margin-bottom: 0;
+    }
+    .first p {
+        width: 30%;
+    }
+
+    .first input {
+      height: 30px;
+    }
+
+
+    .block_fomr_button .submit {
+        width: 146px;
+        height: 32px;
+        font: 13px Arial;
+        padding: 7px 12px;
+    }
+
+    .block_fomr_button {
+       padding-left: 66px;
+    }
+
+    .block_piping_text p{
+        margin-bottom: 20px;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+    .header_block{
+        width: auto;
+        height: 200px;
+    }
+    h1{
+        font-size: 25px;
+    }
+
+    .buy_caption h1 {
+        font: 25px Arial;
+    }
+
+    .header_block_text_img {
+        display: none;
+    }
+
+    .header_block_text_button {
+        display: block;
+        background: rgb(255,255,255);
+        width: 100%;
+        min-height: 50px;
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+        border-bottom: 2px solid #eaf0f4;
+    }
+
+    .buy_button button {
+        width: 150px;
+        height: 35px;
+        background-color: #ffffff;
+        border: 2px solid #f77f36;
+        margin: 0 auto;
+        color: #060606;
+        font: 16px Arial;
+        text-align: center;
+    }
+
+
+
+    .header_block_text{
+        display: none;
+    }
+
+    .header_block_text_mob{
+        display: block;
+    }
+
+
+    .header_block_text_button h1 {
+        font: 25px Arial;
+        padding-top: 20px;
+    }
+
+    .header_block_text_button h6 {
+        color: #0570b7;
+        font: 28px Arial;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .header_block_text_button h6 {
+        font: 18px Arial;
+        padding-top: 27px;
+    }
+
+    .header_block_text_button p {
+        font: 15px Arial;
+        margin-top: 15px;
+    }
+
+    .block_piping_img {
+        height: auto;
+    }
+
+    .block_piping_text p {
+        text-align: center;
+    }
+    .header_block_text {
+        min-height: 400px;
+    }
+
+    .header_block_text_img img{
+        height: 370px;
+    }
+
+    .header_block_button button {
+        width: 173px;
+        font: 19px Arial;
+    }
+    .block_fomr #form1 {
+        width: 75%;
+        margin-left: 0;
+    }
+
+    .first {
+        margin-bottom: 0;
+    }
+    .first p {
+        width: 30%;
+        font-size: 14px;
+    }
+
+    .first input {
+        height: 20px;
+    }
+    .first input {
+        margin-left: 10px;
+    }
+
+    .specification_block1_text p {
+         width: 83%;
+         font: 16px Arial;
+         padding-left: 15px;
+    }
+
+
+    .block_fomr_button .submit {
+        width: 146px;
+        height: 32px;
+        font: 13px Arial;
+        padding: 7px 12px;
+    }
+
+    .block_fomr_button {
+        padding-left: 66px;
+    }
+
+    .block_piping_text p{
+        margin-bottom: 20px;
+    }
+    .specification_block2_text p {
+        font: 20px Arial;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .footer_bloc2_mail {
+        padding-left: 55px;
+        padding-bottom: 20px;
+    }
+    .footer_bloc3 {
+        padding-left: 55px;
+        padding-bottom: 20px;
+    }
+    .footer_bloc {
+      bottom: 30px;
+    }
+
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .top_links{
+        display: inline-block !important;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .main_menu ul{
+        display: block !important;
+    }
+
+
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

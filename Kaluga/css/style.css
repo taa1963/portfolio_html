@@ -1,0 +1,1499 @@
+@import"reset200802.css";
+
+.container {
+    width: 1024px;
+    height: auto;
+    margin: 0 auto;
+ }
+
+/*Описание header и его компонентов */
+
+.header {
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+}
+
+.header_logo {
+    display: block;
+    width: 175px;
+    height: 170px;
+    float: left;
+}
+.header_logom img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.header_titel {
+    display: block;
+    width: 534px;
+    height: 170px;
+    float: left;
+}
+
+.header_titel_bloc1{
+    display: block;
+}
+
+
+.header_titel_bloc1 p{
+    font-family: "RobotoLight";
+    font-size:20.48px ;
+    color: #757575;
+    text-align: center;
+    padding-top: 46px;
+    padding-bottom: 24px;
+ }
+
+.header_titel_bloc2{
+    display: block;
+}
+.header_titel_bloc2 p {
+    font-family: "RobotoLight";
+    font-size:25.6px ;
+    color: #757575;
+    text-align: center;
+}
+
+
+
+.header_cont {
+    display: block;
+    width: 315px;
+    height: 170px;
+    float: left;
+ }
+
+.header_cont_tel{
+    display: block;
+    margin-top: 31px;
+    margin-bottom: 8px;
+}
+
+.header_cont_tel p{
+    font-family: "RobotoMedium";
+    font-size:28px ;
+    color: #080808;
+    font-weight: bold;
+}
+.header_cont_tel p img{
+    margin-right: 19px;
+    margin-left: -5px;
+}
+
+.header_cont_siti{
+    display: block;
+   margin-bottom: 4px;
+}
+
+.header_cont_siti p span{
+    font-family: "RobotoLight";
+    font-size:15px ;
+    color: #6b6b6b;
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.header_cont_siti p img{
+    margin-right: 19px;
+}
+
+.header_cont_time{
+    display: block;
+}
+
+.header_cont_time p span{
+    font-family: "RobotoLight";
+    font-size:15px ;
+    color: #6b6b6b;
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.header_cont_time p img{
+    margin-right: 19px;
+}
+
+
+/*		Линия во весь экран, повторяется несколько раз, описывается  1раз		*/
+.line{
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;
+    margin: 0;
+    padding: 0;
+
+}
+
+/*		Блок меню и его компоненты		*/
+.menu{
+    display: block;
+    width: 100%;
+    height:47px;
+}
+
+.menu ul{
+    margin-left: 59px;
+    margin-top: 10px;
+}
+
+.menu ul li{
+    display: inline;
+    padding-right: 35px;
+    float: left;
+    font-family: "RobotoLight";
+    font-size:14px ;
+    color: #363636;
+    text-align: center;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-family: "RobotoLight";
+    font-size:14px ;
+    color: #363636;
+}
+
+
+/*		Блок Остекление котеджей и его компоненты		*/
+.Glazing{
+    display: block;
+    width: 100%;
+    min-height: 478px;
+    background: transparent url("../img/background.png") 0 0 no-repeat;
+    padding: 0;
+    margin-top: -4px;
+    margin-bottom: -13px;
+ }
+
+
+.Glazing_img{
+    display: block;
+    position: absolute;
+    width: auto;
+    margin-top: 88px;
+    margin-left: 43px;
+
+}
+.Glazing_text{
+    display: block;
+    width: 465px;
+    float: right;
+    height: 465px;
+}
+
+.Glazing_text_block{
+    display: block;
+    width: 422px;
+    height: 305px;
+    background: transparent url("../img/frame.png") 0 0 no-repeat;
+    margin-top: 58px;
+}
+.Glazing_text_block h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:28px ;
+    color: #ffffff;
+    padding-top: 55px;
+    padding-bottom: 40px;
+
+}
+
+.Glazing_text_block h2{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:38px ;
+    color: #ffed00;
+    padding-bottom: 26px;
+
+}
+
+.Glazing_text_block p{
+    text-align: center;
+    font-family: "RobotoMedium";
+    font-size:20px ;
+    color: #ffffff;
+}
+
+.timer{
+    display: block;
+    width: 290px;
+    height: 15px;
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 45px;
+}
+
+.Glazing .poplight{
+    display: block;
+    position: absolute;
+    width: 247px;
+    height: 52px;
+    background-image: url("../img/button1.png");
+    margin-top: 120px;
+    margin-left: 120px;
+    font-family: "RobotoRegular";
+    font-size:25px ;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+ .poplight .submit{
+     display: block;
+     margin-top: 16px;
+}
+
+
+
+/*		Блок Остекление котеджей и его компоненты		*/
+ .partners{
+     display: block;
+     width: 100%;
+     height: 278px;
+ }
+.partners h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 35px;
+    padding-bottom: 47px;
+}
+
+.partners_block{
+    display: block;
+    width: 50%;
+    min-height: 180px;
+    margin: 0 auto;
+  }
+
+.partners_block_img{
+    display: block;
+    width: 100%;
+   padding-bottom: 15px;
+}
+
+.partners_block_img a{
+    display: block;
+    float: left;
+    margin-right: 63px;
+}
+.partners_block_img2{
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    float: left;
+}
+
+.partners_block_img2 a{
+    display: block;
+    float: left;
+    margin-right: 68px;
+}
+
+.partners_block_img2 a:last-child {
+    display: block;
+    float: left;
+    margin-right: 0px;
+}
+
+
+/*		Блок Цены на готовую продукцию и его компоненты		*/
+
+.zena{
+    display: block;
+    width: 100%;
+    height: 642px;
+}
+
+.zena h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+}
+.zena h1 span{
+    color: #eb5c00;
+}
+.zena_block{
+    display: block;
+    width: 934px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.zena_block_prod{
+    display: block;
+    width: 302px;
+    height: 530px;
+    border: 1px solid #9d9d9d;
+    float: left;
+    margin-right: 10px;
+}
+/*
+.zena_block_prod:hover{
+    background-color: #eaeaea;
+}*/
+
+
+.zena_block_prod:last-child{
+    margin-right: 0px;
+}
+
+.zena_block_prod_titel{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 55px;
+    background-color: #eb5c00;
+}
+
+.zena_block_prod_titel h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:20px ;
+    color: #FFFFFF;
+    padding-top: 19px;
+}
+
+.zena_block_prod_img{
+    display: block;
+    width: 100%;
+}
+
+.zena_block_prod_text{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-bottom: 30px;
+    padding-top: -10px;
+}
+
+.zena_block_prod_text p{
+    text-align: left;
+    font-family: "RobotoLight";
+    font-size:12px ;
+    color: #000000;
+    line-height: 18px;
+
+}
+
+.zena_block_prod_temp{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding-left: 40px;
+
+}
+
+.zena_block_prod_temp1{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+.zena_block_prod_sound1{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+.zena_block_prod_text2{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.zena_block_prod_text2 p{
+    text-align: center;
+    font-family: "RobotoLight";
+    font-size:17px ;
+    color: #b3b3b3;
+}
+
+.zena_block_prod_text2 p span{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-weight: bold;
+    font-size:19px ;
+    color: #444444;
+}
+
+
+.zena_block_prod_button .poplight{
+    display: block;
+    margin: 0 auto;
+    width: 168px;
+    height: 28px;
+    background-color: #eb5c00;
+    border-radius: 8px;
+    font-family: "RobotoMedium";
+    font-size:20px ;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.zena_block_prod_button .poplight .submit{
+    display: block;
+   padding-top: 3px;
+}
+
+/*		Блок Подбор окон для квартир и его компоненты		*/
+
+.casement{
+    display: block;
+    width: 100%;
+    height: 700px;
+}
+
+
+.casement h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 35px;
+    padding-bottom: 40px;
+
+}
+
+.casement_block{
+    display: block;
+    width: 934px;
+    margin: 0 auto;
+    height: auto;
+}
+
+
+
+.casement_block_prod{
+    display: block;
+    width: 302px;
+    height: 525px;
+    float: left;
+    margin-right: 10px;
+}
+
+.casement_block_prod_s{
+    display: block;
+    width: 302px;
+    height: 525px;
+    float: left;
+    margin-right: 10px;
+    background-color: #eaeaea;
+    border-left: 1px solid #acacac;
+    border-right: 1px solid #acacac;
+}
+
+
+.casement_block_prod:last-child{
+    margin-right: 0px;
+}
+
+
+/*.casement_block_prod:hover{
+    background-color: #eaeaea;
+    border-left: 1px solid #acacac;
+    border-right: 1px solid #acacac;
+}*/
+
+.casement_block_prod_titel{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.casement_block_prod_titel h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:17px ;
+    color: #eb5c00;
+    padding-top: 27px;
+}
+
+.casement_block_prod_img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.casement_block_prod_text{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.casement_block_prod_text p{
+    font-family: "RobotoBold";
+    font-size:17px ;
+    color: #777676;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.casement_block_prod_text2{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.casement_block_prod_text2 p{
+    font-family: "RobotoBold";
+    font-size:15px ;
+    font-weight: bold;
+    color: #1b1b1b;
+    text-align: center;
+    padding-bottom: 34px;
+
+}
+
+.casement_block_prod_text2 p span{
+    font-family: "RobotoBold";
+    font-size:30px ;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+
+.casement_block_prod_button .poplight{
+    display: block;
+    margin: 0 auto;
+    width: 257px;
+    height: 54px;
+    background-color: #eb5c00;
+    border-radius: 28px;
+    font-family: "RobotoMedium";
+    font-size:14px ;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.casement_block_prod_button .poplight .submit{
+    display: block;
+    padding-top: 23px;
+}
+
+.casement_block_line1{
+    display: block;
+    width: 934px;
+    position: absolute;
+    height: 1px;
+    background-color: #acacac;
+    z-index: 100;
+    margin-top: 84px;
+}
+.casement_block_line2{
+    display: block;
+    width: 934px;
+    position: absolute;
+    height: 1px;
+    background-color: #acacac;
+    z-index: 100;
+    margin-top:324px;
+}
+
+/*		Блок Приемущества и его компоненты		*/
+.advantage{
+    display: block;
+    width: 100%;
+    height: 601px;
+    background-color: #f7f7f7;
+}
+
+.advantage h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:30px ;
+    color: #000000;
+    padding-top: 50px;
+    padding-bottom: 38px;
+}
+
+
+
+.advantage_block{
+    display: block;
+    width: 944px;
+    margin: 0 auto;
+    height: auto;
+}
+
+
+
+.advantage_block_adv{
+    display: block;
+    width: 302px;
+    height: 195px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 45px;
+}
+
+
+.advantage_block_adv:last-child{
+    margin-right: 0px;
+}
+
+
+
+.advantage_block_img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.advantage_block_img img{
+    display: block;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto;
+}
+
+.advantage_block_adv h2{
+    text-align: center;
+    font-family: "UbuntuBold";
+    font-size:14px ;
+    color: #000000;
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+}
+
+.advantage_block_adv p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #000000;
+    line-height: 15px;
+}
+
+
+
+.advantage_block_adv2{
+    display: block;
+    width: 302px;
+    height: 195px;
+    float: left;
+    margin-right: 10px;
+}
+
+.advantage_block_adv2:last-child{
+    margin-right: 0px;
+}
+
+.advantage_block_img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.advantage_block_img img{
+    display: block;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto;
+}
+
+.advantage_block_adv2 h2{
+    text-align: center;
+    font-family: "UbuntuBold";
+    font-size:14px ;
+    color: #000000;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.advantage_block_adv2 p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #000000;
+    line-height: 15px;
+}
+
+/*		Блок Закажите окно и его компоненты		*/
+.order{
+    display: block;
+    width: 100%;
+    height: 295px;
+    background-color: #313138;
+}
+
+.order h1{
+    text-align: center;
+    font-family: "UbuntuBold";
+    font-size:30px ;
+    color: #ffffff;
+    padding-top: 70px;
+    padding-bottom: 22px;
+}
+
+.order p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #ffffff;
+    padding-bottom: 50px;
+}
+.order_form{
+    display: block;
+    width: 944px;
+    margin-left: 130px;
+    height: auto;
+}
+
+#form3{
+    display: block;
+    width: 944px;
+    margin: 0 auto;
+    height: auto;
+}
+
+#form3 input{
+    border: none;
+    height: 43px;
+    width: 277px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    float: left;
+    margin-right: 25px;
+}
+
+
+#form3 input:-moz-placeholder {
+    color: #1b1b1b;
+    padding-left: 15px;
+}
+#form3 input::-webkit-input-placeholder {
+    color: #1b1b1b;
+    padding-left: 15px;
+}
+
+#form3 .submit{
+    display: block;
+    width: 145px;
+    height: 43px;
+    border-radius: 8px;
+    background-color: #eb5c00;
+    border: 1px solid #FFFFFF ;
+    float: left;
+}
+#form3 p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #ffffff;
+    padding-bottom: 0px;
+   }
+#form3 button{
+    background-color: #eb5c00;
+    border: none;
+    color: #FFFFFF;
+    font-family: "UbuntuBold";
+    font-size:17px ;
+    padding-top: 11px;
+}
+
+/*		Блок Как мы работаем и его компоненты		*/
+.working{
+    display: block;
+    width: 100%;
+    height: 588px;
+    background-color: #e5e2d9;
+    background-image: url("../img/substrate.png");
+}
+
+.working h1{
+    text-align: center;
+    font-family: "UbuntuBold";
+    font-size:30px ;
+    color: #000000;
+    padding-top: 60px;
+
+}
+
+.working_block{
+    display: block;
+    width: 100%;
+
+}
+
+.working_block_text1{
+    display: block;
+    width: 781px;
+    height: 60px;
+    position: absolute;
+    margin-top:150px ;
+    margin-left: 130px;
+}
+
+.block_text1{
+    display: block;
+    float: left;
+    margin-right: 19px;
+    width: 239px;
+}
+
+.block_text1 h1{
+    text-align: left;
+    font: 12px "UbuntuBold";
+    color: #ea7d35;
+    padding-top: 0;
+}
+
+.block_text1 p{
+    text-align: left;
+    font: 12px "UbuntuRegular";
+    color: #10100f;
+    padding-top: 5px;
+}
+
+
+.working_block_text2{
+    display: block;
+    width: 781px;
+    height: 60px;
+    position: absolute;
+    margin-top:350px ;
+    margin-left: 130px;
+}
+
+/*		Блок Оставте зеявку и его компоненты		*/
+.application{
+    display: block;
+    width: 100%;
+    height: 584px;
+    background-color: #e5e2d9;
+    background-image: url("../img/substrate2.png");
+}
+
+.application_form{
+    display: block;
+    position: absolute;
+    width: 303px;
+    height: 365px;
+    margin-top: 144px;
+    margin-left: 637px;
+    background: rgba(0, 0, 0, 0.7); /* Цвет фона */
+}
+
+.application_form h1{
+    text-align: center;
+    font: 24px "UbuntuBold";
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    z-index: 100;
+}
+
+#form4{
+    display: block;
+    width: 303px;
+    margin: 0 auto;
+    height: auto;
+    z-index: 100;
+}
+
+#form4 input{
+    border: none;
+    height: 43px;
+    width: 276px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+
+}
+
+
+#form4 input:-moz-placeholder {
+    color: #1b1b1b;
+    padding-left: 15px;
+}
+#form4 input::-webkit-input-placeholder {
+    color: #1b1b1b;
+    padding-left: 15px;
+}
+
+#form4 .submit{
+    display: block;
+    width: 145px;
+    height: 43px;
+    border-radius: 8px;
+    background-color: #eb5c00;
+    border: 1px solid #FFFFFF ;
+    margin: 0 auto;
+
+}
+#form4 p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #ffffff;
+    padding-bottom: 0px;
+}
+#form4 button{
+    background-color: #eb5c00;
+    border: none;
+    color: #FFFFFF;
+    font-family: "UbuntuBold";
+    font-size:17px ;
+    padding-top: 11px;
+}
+
+/*		Блок Ремонт окон и его компоненты		*/
+.repairs{
+    display: block;
+    width: 100%;
+    height: 506px;
+    background-color: #e3e0e0;
+}
+
+.repairs h1{
+    font-family: 'Roboto-Black';
+    color: #FFFFFF;
+    font-size: 50px;
+    background-color: rgb(227, 224, 224);
+    text-shadow: #9a999a 4px 8px 13px;
+    text-align: center;
+    padding-top: 39px;
+}
+
+.repairs_img{
+    display: block;
+    position: absolute;
+    margin-left: 22px;
+    margin-top: -35px;
+}
+
+.repairs_icon{
+    display: block;
+    position: absolute;
+    width: 595px;
+    height: 380px;
+    margin-left: 382px;
+    margin-top: 21px;
+
+}
+
+.repairs_icon h2{
+    text-align: center;
+    font-family: "RobotoMedium";
+    font-size:25px ;
+    color: #2f4152;
+    padding-bottom: 18px;
+}
+
+.repairs_icon_block1{
+    display: block;
+    margin-left: 25px;
+    margin-top: 15px;
+    float: left;
+    width: 262px;
+}
+
+
+.repairs_icon_block1 img{
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.repairs_icon_block1 p{
+    text-align: left;
+    font-family: "RobotoMedium";
+    font-size:19px ;
+    color: #2f4152;
+    text-transform: uppercase;
+    float: left;
+    line-height: 22px;
+}
+
+.repairs_icon_block2{
+    display: block;
+     margin-top: 15px;
+    float: left;
+    width: 292px;
+}
+
+
+.repairs_icon_block2 img{
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.repairs_icon_block2 p{
+    text-align: left;
+    font-family: "RobotoMedium";
+    font-size:19px ;
+    color: #2f4152;
+    text-transform: uppercase;
+    float: left;
+    line-height: 22px;
+}
+
+.repairs_img2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.repairs_icon h3{
+    font-family: "RobotoMedium";
+    font-size:31px ;
+    color: #2f4152;
+    text-align: center;
+}
+
+.repairs_icon h3 span{
+    font-family: "RobotoMedium";
+    font-size:35px ;
+    color: #2f4152;
+}
+
+/*		Блок Срочный вызов и его компоненты		*/
+
+.urgent{
+    display: block;
+    width: 100%;
+    height: 106px;
+    background-color: #2f4152;
+}
+
+.urgent h1{
+    font-family:"RobotoRegular";
+    color: #f9d84f;
+    font-size: 34px;
+    line-height: 42px;
+    padding-top: 15px;
+    padding-left: 20px;
+    float: left;
+}
+
+
+#form5{
+    display: block;
+    width: 670px;
+    margin: 0 auto;
+    height: auto;
+    float: left;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+#form5 input{
+    border: none;
+    height: 37px;
+    width: 220px;
+    display: inline-block;
+    background-color: #2f4152;
+    border: 1px solid #FFFFFF;
+    float: left;
+    margin-right: 25px;
+}
+
+
+#form5 input:-moz-placeholder {
+    color: #a1a1a1;
+    padding-left: 15px;
+    font-family: "UbuntuBold";
+    font-size:17px ;
+}
+#form5 input::-webkit-input-placeholder {
+    color: #a1a1a1;
+    padding-left: 15px;
+    font-family: "UbuntuBold";
+    font-size:17px ;
+}
+
+#form5 .submit{
+    display: block;
+    width: 145px;
+    height: 43px;
+    border-radius: 8px;
+    background-color: #eb5c00;
+    border: 1px solid #FFFFFF ;
+    float: left;
+}
+#form5 p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #ffffff;
+    padding-bottom: 0px;
+}
+#form5 button{
+    background-color: #eb5c00;
+    border: none;
+    color: #FFFFFF;
+    font-family: "UbuntuBold";
+    font-size:17px ;
+    padding-top: 11px;
+}
+
+
+/*		Блок Вхдные двери и его компоненты		*/
+
+.door{
+    display: block;
+    width: 100%;
+    height: 625px;
+}
+
+
+.door h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 63px;
+    padding-bottom: 55px;
+
+}
+
+.door_block{
+    display: block;
+    width: 988px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.door_block_prod{
+    display: block;
+    width: 237px;
+    height: 430px;
+    float: left;
+    margin-right: 10px;
+}
+
+/*.door_block_prod:hover{
+    background-color: #eaeaea;
+}*/
+
+
+.door_block_prod:last-child{
+    margin-right: 0px;
+}
+
+.door_block_prod_titel{
+    display: block;
+    margin: 0 auto;
+    height: 60px;
+
+}
+
+.door_block_prod_titel h1{
+    text-align: center;
+    font-family: "RobotoLight";
+    font-size:20px ;
+    color: #525151;
+    padding-top: 10px;
+}
+
+.door_block_prod_img{
+    display: block;
+    margin: 0 auto;
+}
+
+.door_block_prod_img img{
+    display: block;
+    margin: 0 auto;
+}
+
+
+.door_block_prod_text{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.door_block_prod_text p{
+    text-align: left;
+    font-family: "RobotoLight";
+    font-size:16px ;
+    color: #989898;
+    line-height: 18px;
+}
+
+
+.door_block_prod_text p span{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-weight: bold;
+    font-size:21px ;
+    color: #e0430b;
+}
+
+
+.door_block_prod_button .poplight{
+    display: block;
+    margin: 0 auto;
+    width: 168px;
+    height: 28px;
+    background-color: #eb5c00;
+    font-family: "RobotoLight";
+    font-size:20px ;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.door_block_prod_button .poplight .submit{
+    display: block;
+    padding-top: 3px;
+}
+
+/*		Блок Натяжные потолки его компоненты		*/
+
+.ceiling{
+    display: block;
+    width: 100%;
+    height: 541px;
+}
+
+
+.ceiling h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:41px ;
+    color: #444444;
+    padding-top: 3px;
+    padding-bottom: 55px;
+}
+
+.ceiling_block_button{
+    display: block;
+    position: absolute;
+    width: 269px;
+    height: 45px;
+    margin-left: 601px;
+    margin-top: -218px;
+    z-index: 100;
+
+
+}
+
+.ceiling_block_button .poplight{
+    display: block;
+    margin: 0 auto;
+    width: 269px;
+    height: 45px;
+    background-color: #eb5c00;
+    font-family: "RobotoLight";
+    font-size:20px ;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+
+.ceiling_block_button .poplight .submit{
+    display: block;
+    padding-top: 10px;
+}
+
+/*		Блок Отзывы и его компоненты		*/
+
+.Reviews{
+    display: block;
+    width: 100%;
+    height: 502px;
+}
+
+
+.Reviews h1{
+    text-align: center;
+    font-family: "RobotoLight";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.Reviews_block{
+    display: block;
+    width: 100%;
+}
+
+/*		Блок Втрого слайдера и его компоненты		*/
+
+.foto{
+    display: block;
+    width: 100%;
+    height: 502px;
+}
+
+
+/*		slider		*/
+
+.slider_contact {
+    display: inline-block;
+    width: 1024px;
+    height: 539px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#slider {
+    display: block;
+    position: relative;
+    float: left;
+    margin: 0;
+    width: 960px;
+    height: 529px;
+}
+
+#cyclePager {
+    position: absolute;
+    height: 18px;
+    overflow: hidden;
+    left: 50%;
+    bottom: 50px;
+    z-index: 99;
+
+}
+
+
+#cyclePager a {
+    background: transparent url("../img/Buttons.png") 0 0 no-repeat;
+    display: inline-block;
+     height: 17px;
+    width: 29px;
+    overflow: hidden;
+    left: 50%;
+    bottom: 50px;
+    margin-left: 10px;
+    text-indent: -9999px;
+
+}
+
+#cyclePager a:hover,
+#cyclePager a.activeSlide {
+    background-position: -17px 0;
+}
+
+/*		Блок Подвала (последнего блока сайта и его компоненты		*/
+
+.footer{
+    display: block;
+    width: 100%;
+    height: 675px;
+}
+
+.footer h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #444444;
+    padding-top: 30px;
+    padding-bottom: 5px;
+
+}
+
+.footer_left{
+    width: 495px;
+    min-height: 300px;
+    float: left;
+}
+
+.footer_left img{
+    display: block;
+    margin-left: 126px;
+    margin-bottom: 30px;
+}
+
+.footer_left h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:40px ;
+    color: #eb5c00;
+    padding-bottom: 30px;
+}
+.footer_left_siti{
+    display: block;
+    margin-left: 60px;
+    padding-top: 20px;
+}
+
+.footer_left_siti img{
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.footer_left_siti p{
+    font-family: "RobotoRegular";
+    font-size:25px ;
+    color: #000000;
+}
+
+.footer_left_time{
+    display: block;
+    margin-left: 60px;
+    padding-top: 20px;
+}
+
+.footer_left_time img{
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.footer_left_time p{
+    font-family: "RobotoLight";
+    font-size:21px ;
+    color: #5e5e5e;
+}
+
+.footer_left_tel{
+    display: block;
+    margin-left: 60px;
+    padding-top: 20px;
+
+}
+
+.footer_left_tel img{
+    float: left;
+    margin-left:-40px;
+    margin-right: 15px;
+}
+
+.footer_left_tel p{
+    font-family: "RobotoRegular";
+    font-size:37px ;
+    color: #000000;
+}
+
+
+
+
+.footer_rigt{
+    min-height: 300px;
+    float: left;
+}
+
+.footer_rigt_map{
+    display: block;
+    width: 472px;
+    height: 362px;
+    border: 10px solid #eb5c00;
+    margin-top: 140px;
+}

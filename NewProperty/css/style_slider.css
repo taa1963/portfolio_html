@@ -1,0 +1,649 @@
+@import"reset200802.css";
+
+/* Слайдер и его компоненты */
+
+/*Описание Контент и его компонентов */
+.sl1{
+    display: block;
+    width: 100%;
+    min-height: 621px;
+    background-color:#384a58 ;
+    float: left;
+}
+
+
+
+/* —лайдер и его компоненты */
+
+.slider {
+    /* Ўирина контейнера */
+
+    display: block;
+    width: 100%;
+    height: 621px;
+    /* ¬нешние тступы сверху и снизу */
+    margin: 0px 0px;
+    margin-left: 0px;
+    /* ¬нутренние отступы дл¤ ссылок navy */
+    /*   padding: 0 10px;*/
+    /* ѕозиционирование */
+    position: relative;
+    /* —кроем то что выходит за границы */
+    overflow: hidden;
+}
+/* ?войной клик по ссылкам вперед/назад вызывает выделение всех элементов слайдера,
+поэтому предотвращаем это */
+.slider::-moz-selection { background: transparent; color: #fff; text-shadow: none; }
+.slider::selection { background: transparent; color: #fff; text-shadow: none; }
+
+.slide-list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.slide-wrap {
+    position: relative;
+    left: 0px;
+    top: 0;
+    /* максимально возможна¤ ширина обертки слайдера */
+    width: 400%;
+}
+.slide-item {
+    /* Ўирина слайда */
+    width: 100%;
+    /* ¬нутренние отступы */
+    /* padding: 50px;
+     margin-right: 20px;*/
+    height: 621px;
+    /* ќбтекание */
+    float: left;
+}
+.slide-item img {
+    width: 25%;
+    min-height: 621px;
+}
+
+
+
+
+.slaider_nav {
+    display: block;
+    position: absolute;
+    width: 23%;
+    height: 32%;
+    background-color: #FFFFFF;
+    top: 28%;
+    margin-left: 100%;
+    z-index: 500;
+}
+
+
+/* навигаци¤ вперед/назад */
+.navy {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    /* ширина ссылок */
+    width: 40%;
+    margin: 0 auto;
+}
+.prev-slide {
+    display: block;
+    width: 20%;
+    position: absolute;
+    background: url(../slider/previous.png) 21px 28px no-repeat;
+    float: left;
+    left: 32%;
+    cursor: pointer;
+
+
+}
+.next-slide {
+    display: block;
+    position: absolute;
+    background:  url(../slider/next.png) 21px 28px no-repeat;
+    width: 20%;
+    float: left;
+    right: 47%;
+    top: 60%;
+    cursor: pointer;
+
+}
+.navy.disable {
+    background: #FFFFFF;
+}
+
+.vav_sl_text{
+    display: block;
+    position: absolute;
+    float: left;
+    right: 47%;
+    top: 50%;
+}
+
+.vav_sl_text p{
+    font-family: "RobotoBold";
+    font-size: 23px;
+    font-weight: bold;
+    color:#000000;
+}
+
+
+/* навигаци¤ старт/пауза */
+.auto {
+    display: block;
+    position: relative;
+    width: 17px;
+    height: 11px;
+    margin: 10px auto;
+}
+
+
+
+
+
+@media only screen  and (max-width: 1366px) {
+    .sl1{
+        display: block;
+        width: 100%;
+        min-height: 585px;
+        background-color:#384a58 ;
+        float: left;
+    }
+
+
+
+    /* —лайдер и его компоненты */
+
+    .slider {
+        /* Ўирина контейнера */
+
+        display: block;
+        width: 100%;
+        height: 585px;
+        /* ¬нешние тступы сверху и снизу */
+        margin: 0px 0px;
+        margin-left: 0px;
+        /* ¬нутренние отступы дл¤ ссылок navy */
+        /*   padding: 0 10px;*/
+        /* ѕозиционирование */
+        position: relative;
+        /* —кроем то что выходит за границы */
+        overflow: hidden;
+    }
+    .slide-item {
+        /* Ўирина слайда */
+        width: 100%;
+        /* ¬нутренние отступы */
+        /* padding: 50px;
+         margin-right: 20px;*/
+        height: 585px;
+        /* ќбтекание */
+        float: left;
+    }
+    .slide-item img {
+        width: 25%;
+        min-height: 585px;
+    }
+    .header_slaider_video img {
+        width: 60px;
+        min-height: 60px;
+        height: 60px;
+    }
+
+    .prev-slide {
+        display: block;
+        width: 20%;
+        position: absolute;
+        background: url(../slider/previous.png) 21px 28px no-repeat;
+        float: left;
+        left: 32%;
+        cursor: pointer;
+
+
+    }
+    .next-slide {
+        display: block;
+        position: absolute;
+        background:  url(../slider/next.png) 21px 28px no-repeat;
+        width: 20%;
+        float: left;
+        right: 47%;
+        top: 60%;
+        cursor: pointer;
+
+    }
+    .navy.disable {
+        background: #FFFFFF;
+    }
+
+    .vav_sl_text{
+        display: block;
+        position: absolute;
+        float: left;
+        right: 47%;
+        top: 50%;
+    }
+
+    .vav_sl_text p{
+        font-family: "RobotoBold";
+        font-size: 23px;
+        font-weight: bold;
+        color:#000000;
+
+    }
+
+    .vav_sl_text p span{
+        display:block;
+        float: right;
+        font-family: "RobotoBold";
+        font-size: 15px;
+        font-weight: bold;
+        padding-top: -10px;
+        color:#000000;
+    }
+}
+
+.slaider_nav {
+    display: block;
+    position: absolute;
+    width: 24%;
+    height: 36%;
+    background-color: #FFFFFF;
+    top: 29%;
+    margin-left: 100%;
+    z-index: 500;
+}
+
+
+/* навигаци¤ вперед/назад */
+.navy {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    /* ширина ссылок */
+    width: 40%;
+    margin: 0 auto;
+}
+.prev-slide {
+    display: block;
+    width: 30%;
+    position: absolute;
+    background: url(../slider/next1366.png) 30px 30px no-repeat;
+    float: left;
+    left: 32%;
+    cursor: pointer;
+
+
+}
+.next-slide {
+    display: block;
+    position: absolute;
+    background:  url(../slider/previous1366.png) 30px 28px no-repeat;
+    width: 30%;
+    float: left;
+    right: 37%;
+    top: 55%;
+    cursor: pointer;
+
+}
+.navy.disable {
+    background: #FFFFFF;
+}
+
+.vav_sl_text{
+    display: block;
+    position: absolute;
+    float: left;
+    right: 40%;
+    top: 43%;
+}
+
+.vav_sl_text p{
+    font-family: "RobotoBold";
+    font-size: 26px;
+     color:#000000;
+}
+
+
+
+
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+    .sl1 {
+        display: block;
+        width: 100%;
+        min-height: 439px;
+        background-color: #384a58;
+        float: left;
+    }
+
+
+
+    /* —лайдер и его компоненты */
+    .slider {
+        /* Ўирина контейнера */
+
+        display: block;
+        width: 100%;
+        height: 439px;
+        /* ¬нешние тступы сверху и снизу */
+        margin: 0px 0px;
+        margin-left: 0px;
+        /* ¬нутренние отступы дл¤ ссылок navy */
+        /*   padding: 0 10px;*/
+        /* ѕозиционирование */
+        position: relative;
+        /* —кроем то что выходит за границы */
+        overflow: hidden;
+    }
+
+    .slide-item {
+        /* Ўирина слайда */
+        width: 100%;
+        /* ¬нутренние отступы */
+        /* padding: 50px;
+         margin-right: 20px;*/
+        height: 439px;
+        /* ќбтекание */
+        float: left;
+    }
+
+    .slide-item img {
+        width: 25%;
+        min-height: 585px;
+    }
+
+    .header_slaider_video img {
+        width: 60px;
+        min-height: 60px;
+        height: 60px;
+    }
+
+    .prev-slide {
+        display: block;
+        width: 29%;
+        position: absolute;
+        background: url(../slider/next1366.png) 21px 28px no-repeat;
+        float: left;
+        left: 32%;
+        cursor: pointer;
+    }
+
+    .next-slide {
+        display: block;
+        position: absolute;
+        background: url(../slider/previous1366.png) 21px 28px no-repeat;
+        width: 28%;
+        float: left;
+        right: 40%;
+        top: 54%;
+        cursor: pointer;
+    }
+
+    .navy.disable {
+        background: #FFFFFF;
+    }
+
+    .vav_sl_text {
+        display: block;
+        position: absolute;
+        float: left;
+        right: 47%;
+        top: 50%;
+    }
+
+    .vav_sl_text p {
+        font-family: "RobotoBold";
+        font-size: 23px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .vav_sl_text p span {
+        display: block;
+        float: right;
+        font-family: "RobotoBold";
+        font-size: 15px;
+        font-weight: bold;
+        padding-top: -10px;
+        color: #000000;
+    }
+
+}
+
+
+
+@media only screen  and (max-width: 768px) {
+
+    .sl1{
+        display: block;
+        width: 100%;
+        min-height: 331px;
+        background-color:#384a58 ;
+        float: left;
+    }
+
+    .header_slaider_video p{
+        display: block;
+        text-align: center;
+        font-family:"RobotoBold" ;
+        font-size: 12px;
+        color:#ffffff;
+        padding-top: 20px;
+        padding-bottom: 17px;
+    }
+
+    /* Слайдер и его компоненты */
+
+    .slider {
+        /* Ширина контейнера */
+
+        display: block;
+        width: 100%;
+        height: 331px;
+        /* Внешние оступы сверху и снизу */
+        margin: 0px 0px;
+        margin-left: 0px;
+        /* Внутренние отступы дл¤ ссылок navy */
+        /*   padding: 0 10px;*/
+        /* Позиционирование */
+        position: relative;
+        /* —Скроем то что выходит за границы */
+        overflow: hidden;
+    }
+    .slide-item {
+        /* Ширина слайда */
+        width: 100%;
+        /* Внутренние отступы */
+        /* padding: 50px;
+         margin-right: 20px;*/
+        height: 331px;
+
+        float: left;
+    }
+    .slide-item img {
+        width: 25%;
+        min-height: 331px;
+    }
+    .header_slaider_video img {
+        width: 40px;
+        min-height: 40px;
+        height: 40px;
+        margin: 0 auto;
+    }
+    .prev-slide {
+        display: block;
+        width: 37%;
+        position: absolute;
+        background: url(../slider/previous.png) 21px 28px no-repeat;
+        float: left;
+        left: 22%;
+        top: -21%;
+      cursor: pointer;
+
+
+    }
+    .next-slide {
+        display: block;
+        position: absolute;
+        background:  url(../slider/next.png) 21px 28px no-repeat;
+        width: 37%;
+        float: left;
+        right: 40%;
+        top: 46%;
+        cursor: pointer;
+
+    }
+    .navy.disable {
+        background: #FFFFFF;
+    }
+
+    .vav_sl_text{
+        display: block;
+        position: absolute;
+        float: left;
+        right: 47%;
+        top: 50%;
+    }
+
+    .vav_sl_text p{
+        font-family: "RobotoBold";
+        font-size: 23px;
+        font-weight: bold;
+        color:#000000;
+
+    }
+
+    .vav_sl_text p span{
+        display:block;
+        float: right;
+        font-family: "RobotoBold";
+        font-size: 15px;
+        font-weight: bold;
+        padding-top: -10px;
+        color:#000000;
+
+    }
+}
+
+@media only screen  and (max-width: 425px) {
+    .header_slaider_video p {
+        font-size: 8px;
+        color: #ffffff;
+        padding-top: 10px;
+    }
+
+    .sl1{
+        display: block;
+        width: 100%;
+        min-height: 211px;
+        background-color:#384a58 ;
+        float: left;
+    }
+
+
+    /* —лайдер и его компоненты */
+
+    .slider {
+        /* Ўирина контейнера */
+
+        display: block;
+        width: 100%;
+        height: 211px;
+        /* ¬нешние тступы сверху и снизу */
+        margin: 0px 0px;
+        margin-left: 0px;
+        /* ¬нутренние отступы дл¤ ссылок navy */
+        /*   padding: 0 10px;*/
+        /* ѕозиционирование */
+        position: relative;
+        /* —кроем то что выходит за границы */
+        overflow: hidden;
+    }
+    .slide-item {
+        /* Ўирина слайда */
+        width: 100%;
+        /* ¬нутренние отступы */
+        /* padding: 50px;
+         margin-right: 20px;*/
+        height: 211px;
+        /* ќбтекание */
+        float: left;
+    }
+    .slide-item img {
+        width: 25%;
+        min-height: 211px;
+    }
+
+
+    .slaider_nav {
+        display: none;
+        position: absolute;
+        width: 24%;
+        height: 32%;
+        background-color: #FFFFFF;
+        top: 22%;
+        margin-left: 100%;
+        z-index: 500;
+    }
+    .prev-slide {
+        display: block;
+        width: 37%;
+        position: absolute;
+        background: url(../slider/previous.png) 16px 18px no-repeat;
+        float: left;
+        left: 22%;
+        top: -21%;
+        cursor: pointer;
+    }
+    .next-slide {
+        display: block;
+        position: absolute;
+        background:  url(../slider/next.png) 16px 18px no-repeat;
+        width: 37%;
+        float: left;
+        right: 40%;
+        top: 46%;
+        cursor: pointer;
+
+    }
+    .navy.disable {
+        background: #FFFFFF;
+    }
+
+    .vav_sl_text{
+        display: block;
+        position: absolute;
+        float: left;
+        right: 47%;
+        top: 50%;
+    }
+
+    .vav_sl_text p{
+        font-family: "RobotoBold";
+        font-size: 23px;
+        font-weight: bold;
+        color:#000000;
+
+    }
+
+    .vav_sl_text p span{
+        display:block;
+        float: right;
+        font-family: "RobotoBold";
+        font-size: 15px;
+        font-weight: bold;
+        padding-top: -8px;
+        color:#000000;
+
+    }
+}
+
+
+
+
+

@@ -1,18 +1,21 @@
 <?php
 // если была нажата кнопка "Отправить"
 if (
-    isset($_POST['user_name']) && !empty($_POST['user_name']) &&
-    isset($_POST['user_phone']) && !empty($_POST['user_phone'])) {
+    isset($_POST['name1']) && !empty($_POST['name1']) &&
+    isset($_POST['mail1']) && !empty($_POST['mail1']) &&
+    isset($_POST['tel1']) && !empty($_POST['tel1'])) {
 
-    $user_name = substr(htmlspecialchars(trim($_POST['user_name'])), 0, 1000);
-    $user_phone = substr(htmlspecialchars(trim($_POST['user_phone'])), 0, 1000000);
+    $user_name = substr(htmlspecialchars(trim($_POST['name1'])), 0, 1000);
+    $user_mail = substr(htmlspecialchars(trim($_POST['mail1'])), 0, 1000);
+    $user_phone = substr(htmlspecialchars(trim($_POST['tel1'])), 0, 1000000);
 
 
-    $to = 'as@2eng.ru';
+    $to = 'as333@2333e3ng.ru';
     $title = 'Новый заказ';
     $message = "
         Был получен заказ с сайта
         Имя: $user_name
+        Маил: $user_name        
         Телефон: $user_phone
        ";
 

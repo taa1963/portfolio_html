@@ -1,0 +1,2180 @@
+@import"reset200802.css";
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+ }
+
+.row{
+    margin: 0;
+}
+
+
+/*Описание header и его компонентов */
+
+/*.animated {*/
+    /*-webkit-animation-duration: 5s;*/
+    /*-moz-animation-duration: 5s;*/
+    /*-o-animation-duration: 5s;*/
+    /*animation-duration: 5s;*/
+    /*-webkit-animation-fill-mode: both;*/
+    /*-moz-animation-fill-mode: both;*/
+    /*-o-animation-fill-mode: both;*/
+    /*animation-fill-mode: both;*/
+/*}*/
+
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #e38d13 ;
+}
+
+.header_logo {
+    display: block;
+    width: 100px;
+}
+
+
+.header_logo img{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+
+.header_titel {
+    display: block;
+    width: 100%;
+    background: transparent url("../img/1465223292.821.jpeg") 0 0 no-repeat;
+    background-position: top;
+    background-size: cover;
+    -o-background-size:cover;
+    -webkit-background-size:cover;
+    padding-bottom: 125px;
+}
+
+
+
+
+.header_titel p{
+    font-family: "RobotoLight";
+    font-size:40px ;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 46px;
+    padding-bottom: 24px;
+ }
+
+
+.header_titel_bloc2{
+    display: block;
+}
+.header_titel_bloc2 p {
+    font-family: "RobotoLight";
+    font-size:25.6px ;
+    color: #757575;
+    text-align: center;
+}
+
+
+
+.header_cont {
+    display: block;
+    width: 100%;
+    float: left;
+ }
+
+.header_cont_tel{
+    display: block;
+    margin-top: 31px;
+    margin-bottom: 8px;
+}
+
+.header_cont_tel p{
+    font-family: "RobotoMedium";
+    font-size:28px ;
+    color: #080808;
+    font-weight: bold;
+}
+.header_cont_tel p img{
+    margin-right: 19px;
+    margin-left: -5px;
+}
+
+.header_cont_siti{
+    display: block;
+   margin-bottom: 4px;
+}
+
+.header_cont_siti p span{
+    font-family: "RobotoLight";
+    font-size:15px ;
+    color: #6b6b6b;
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.header_cont_siti p img{
+    margin-right: 19px;
+}
+
+.header_cont_time{
+    display: block;
+}
+
+.header_cont_time p span{
+    font-family: "RobotoLight";
+    font-size:15px ;
+    color: #6b6b6b;
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.header_cont_time p img{
+    margin-right: 19px;
+}
+
+/*		Линия во весь экран, повторяется несколько раз, описывается  1раз		*/
+
+.line_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+}
+
+.line2_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+    margin-bottom: 10px;
+}
+
+.line3_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/*		Первый блок. Выбор размеров бани		*/
+
+
+.zakas{
+    display: block;
+    width: 100%;
+}
+
+.zakas_block1 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+
+.zakas h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:28px ;
+    color: #000000;
+    padding-top: 5px;
+    padding-bottom: 10px;
+ }
+
+.zakas_block1{
+    display: block;
+    position: relative;
+    width: 100%;
+    max-height: 25%;
+    min-height: 25%;
+    /*height: auto;*/
+    /*padding-bottom: 50em;*/
+}
+
+.zakas_block_control{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    background-color: #f0ad4e;
+    font-size:24px ;
+}
+
+.zakas_block_control h1{
+    color: #4cae4c;
+}
+
+.zakas_block_control_up{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+
+.fa-angle-up{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    /*font-size:24px ;*/
+}
+
+.zakas_block_control_left_rigt{
+    display: block;
+    width: 60%;
+    min-height: 30px;
+    margin: 0 auto;
+}
+
+.fa-angle-left{
+    display: block;
+    width: auto;
+    float: left;
+}
+
+.zakas_block_scale{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.zakas_block_scale input{
+    width: 40%;
+}
+.beam{
+    float: right;
+}
+
+
+
+.fa-angle-right{
+    display: block;
+    width: auto;
+    float: right;
+    margin-top: -30px;
+}
+
+.zakas_block_control_down{
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.fa-angle-down{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+.zakas_foundation{
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: block;
+    border: solid #000000 10px;
+}
+
+
+.calc_rict_bloc1_st{
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.calc_rict_bloc1_st b{
+    display: block;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.button_block2{
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+}
+
+.but_block2{
+    margin: 0 auto;
+    display: block;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+.zakas_block_h{
+    display: block;
+    margin: 0 auto;
+}
+
+.zakas_block_h p{
+    font-family: "RobotoRegular";
+    text-align: center;
+    font-size:15px ;
+    color: #000000;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    font-weight: bold;
+
+
+}
+
+.zakas_block1 p{
+    font-family: "RobotoLight";
+    text-align: center;
+    font-size:18px ;
+    color: #000000;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.zakas_block1 a{
+    display: block;
+    position: relative;
+    width: 247px;
+    height: 52px;
+    margin: 0 auto;
+    background-color: #e38d13;
+    /*background-image: url(../img/button1.png);*/
+    /*margin-top: 10px;*/
+    /*margin-left: 120px;*/
+    font-family: "RobotoRegular";
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.zakas_block1 .submit{
+    padding-top: 15px;
+}
+
+
+/*		Второй блок. Выбор типа фундамента		*/
+
+.zakas_block2{
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+
+.zakas_block2 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+
+.zakas_block2_type{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    /*background-color: #f0ad4e;*/
+    font-size:24px ;
+}
+
+
+.zakas_block2_type h1{
+    color: #0f0f0f;
+}
+
+.zakas_block2_type_img{
+    display: block;
+    float: left;
+    width: 60%;
+}
+
+.zakas_block2_type_img img{
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    width: 80%;
+}
+
+
+
+.zakas_block2_type_vubor{
+    display: block;
+    float: left;
+    width: 40%;
+    margin-top: 30px;
+}
+
+.zakas_block2_type_opis_all{
+    display: block;
+    width: 100%;
+    height: 120%;
+    margin-bottom: 30px;
+}
+
+
+
+.zakas_block2_type_vubor label{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.zakas_block2_type_opis1 img{
+    display: block;
+    width: 50%;
+}
+
+.zakas_block2_type_opis2 img{
+    display: block;
+    width: 50%;
+  }
+
+.zakas_block2_type_opis3 img{
+    display: block;
+    width: 70%;
+}
+
+
+
+.zakas_block2_type_opis1{
+    display: block;
+   /*visibility:visible;*/
+}
+
+.zakas_block2_type_opis2{
+    display: none;
+   /*visibility:hidden;*/
+}
+
+.zakas_block2_type_opis3{
+    display: none;
+    /*visibility:hidden;*/
+}
+
+
+.button_block3{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+
+
+.but_block2_1{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: left;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+
+.but_block2_3{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: right;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+/*		Третий. Выбор типа стен		*/
+
+.zakas_block3{
+    display: none;
+}
+
+
+.zakas_block3 h2{
+    text-align: center;
+    padding-top: 20px;
+    /*padding-bottom: 20px;*/
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+
+.zakas_block3_type{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    /*background-color: #f0ad4e;*/
+    font-size:24px ;
+}
+
+
+.zakas_block3_type h1{
+    color: #0f0f0f;
+}
+
+.zakas_block3_type_img{
+    display: block;
+    float: left;
+    width: 60%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+.zakas_block3_type_img img{
+    display: block;
+    padding-top: 10px;
+    /*padding-bottom: 30px;*/
+    /*padding-left: 20px;*/
+    width: 120%;
+}
+
+
+
+.zakas_block3_type_vubor{
+    display: block;
+    float: left;
+    width: 40%;
+    margin-top: 30px;
+}
+
+.zakas_block3_type_vubor label{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.zakas_block3_type_opis_all{
+    display: block;
+    width: 100%;
+    height: 120%;
+    margin-bottom: 30px;
+}
+
+
+
+.zakas_block3_type_opis1 img{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.zakas_block3_type_opis2 img{
+    display: block;
+    width: 70%;
+}
+
+.zakas_block3_type_opis3 img{
+    display: block;
+    width: 70%;
+}
+
+
+
+.zakas_block3_type_opis1{
+    display: block;
+    /*visibility:visible;*/
+}
+
+.zakas_block3_type_opis2{
+    display: none;
+    /*visibility:hidden;*/
+}
+
+.zakas_block3_type_opis3{
+    display: none;
+    /*visibility:hidden;*/
+}
+
+
+.button_block4{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+
+
+.but_block3_2{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: left;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+
+.but_block3_4{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: right;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+
+/*		Четвертый блок. Выбор типа печи		*/
+
+.zakas_block4{
+    display: none;
+}
+
+
+.zakas_block4 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+
+.zakas_block4_type{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    /*background-color: #f0ad4e;*/
+    font-size:24px ;
+}
+
+
+.zakas_block4_type h1{
+    color: #0f0f0f;
+}
+
+.zakas_block4_type_img{
+    display: block;
+    float: left;
+    width: 60%;
+}
+
+.zakas_block4_type_img img{
+    display: block;
+
+    /*padding-left: 20px;*/
+    width: 100%;
+    margin-top: -80px;
+    margin-left: -30px;
+}
+
+
+
+.zakas_block4_type_vubor{
+    display: block;
+    float: left;
+    width: 40%;
+    margin-top: 30px;
+}
+
+.zakas_block4_type_vubor label{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.zakas_block4_type_opis_all{
+    display: block;
+    padding-bottom: 50px;
+}
+
+.zakas_block4_type_opis1 img{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.zakas_block4_type_opis2 img{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
+
+.zakas_block4_type_opis3 img{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
+
+
+
+.zakas_block4_type_opis1{
+    display: block;
+    /*visibility:visible;*/
+}
+
+.zakas_block4_type_opis2{
+    display: none;
+    /*visibility:hidden;*/
+}
+
+.zakas_block4_type_opis3{
+    display: none;
+    /*visibility:hidden;*/
+}
+
+
+.button_block5{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+
+.but_block4_3{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+
+
+
+
+
+/*		Линия во весь экран, повторяется несколько раз, описывается  1раз		*/
+.line{
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;
+    margin: 0;
+    padding: 0;
+
+}
+
+/*		Блок итогов и предпросмотра		*/
+
+.prerposm{
+    display: block;
+    /*position: relative;
+	overflow: hidden;*/
+    position: static;
+    width: 100%;
+    height: 50px;
+    /*background-color: #e38d13;*/
+    /*margin-bottom: -50px;*/
+    /*margin-top: -50px;*/
+    bottom: 0;
+
+}
+
+.itog2{
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.itog2 a{
+    display: block;
+    position: relative;
+    width: 247px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #e38d13;
+    /* background-image: url(../img/button1.png); */
+    /* margin-top: 10px; */
+    /* margin-left: 120px; */
+    font-family: "RobotoRegular";
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.itog2 .submit{
+    padding-top: 14px;
+}
+
+
+/*		старая верстка на удаление		*/
+
+
+
+.itog1{
+    display: block;
+    /*background-color: #b4ffcb;*/
+    height: 50px;
+}
+
+.itog1 b{
+    display: block;
+    font-size: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+
+
+/*		Блок меню и его компоненты		*/
+.menu{
+    display: block;
+    width: 100%;
+    /*height:47px;*/
+}
+
+.menu ul{
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-left: 19%;
+    /*margin-left: 59px;*/
+    margin-top: 10px;
+}
+
+.menu ul li{
+    display: block;
+    padding-right: 35px;
+    float: left;
+    font-family: "RobotoLight";
+    font-size:14px ;
+    color: #363636;
+    text-align: center;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-family: "RobotoLight";
+    font-size:14px ;
+    color: #363636;
+}
+
+
+/*		Блок Остекление котеджей и его компоненты		*/
+.Glazing{
+    display: block;
+    width: 100%;
+    min-height: 478px;
+    background-color: red;
+    /*background: transparent url("../img/background.png") 0 0 no-repeat;*/
+    background-position: top;
+    background-size: cover;
+    -o-background-size:cover;
+    -webkit-background-size:cover;
+    padding: 0;
+    margin-top: -4px;
+    margin-bottom: -13px;
+ }
+
+
+.Glazing_img{
+    display: block;
+    position: absolute;
+    width: auto;
+    margin-top: 88px;
+    margin-left: 43px;
+
+}
+.Glazing_text{
+    display: block;
+    width: 465px;
+    float: right;
+    height: 465px;
+}
+
+.Glazing_text_block{
+    display: block;
+    width: 422px;
+    height: 305px;
+    background: transparent url("../img/frame.png") 100% 100% no-repeat;
+    margin-top: 58px;
+}
+.Glazing_text_block h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:28px ;
+    color: #ffffff;
+    padding-top: 55px;
+    padding-bottom: 40px;
+
+}
+
+.Glazing_text_block h2{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:38px ;
+    color: #ffed00;
+    padding-bottom: 26px;
+
+}
+
+.Glazing_text_block p{
+    text-align: center;
+    font-family: "RobotoMedium";
+    font-size:20px ;
+    color: #ffffff;
+}
+
+.timer{
+    display: block;
+    width: 290px;
+    height: 15px;
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 45px;
+}
+
+.Glazing .poplight{
+    display: block;
+    position: absolute;
+    width: 247px;
+    height: 52px;
+    background-image: url("../img/button1.png");
+    margin-top: 120px;
+    margin-left: 120px;
+    font-family: "RobotoRegular";
+    font-size:25px ;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+}
+
+ .poplight .submit{
+     display: block;
+     margin-top: 16px;
+}
+
+
+
+/*		Блок Остекление котеджей и его компоненты		*/
+ .partners{
+     display: block;
+     position: relative;
+     width: 100%;
+     /*height: 278px;*/
+ }
+.partners h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 35px;
+    padding-bottom: 47px;
+}
+
+.partners_block{
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 180px;
+    margin: 0 auto;
+  }
+
+.partners_block_img{
+    display: block;
+    width: 100%;
+   padding-bottom: 15px;
+    margin: 0 auto;
+}
+
+.partners_block_img a{
+    display: block;
+    /*float: left;*/
+    /*margin-right: 63px;*/
+}
+
+.partners_block_img a img{
+    width: 100%;
+}
+
+.partners_block_img2{
+    display: block;
+    margin-top: 45px;
+    width: 100%;
+
+}
+
+.partners_block_img2 a{
+    display: block;
+    /*float: left;*/
+    /*margin-right: 68px;*/
+}
+
+.partners_block_img2 a img{
+    width: 100%;
+}
+
+
+/*		Блок Цены на готовую продукцию и его компоненты		*/
+
+.zena{
+    display: block;
+    width: 100%;
+    /*height: 642px;*/
+}
+
+.zena h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+}
+.zena h1 span{
+    color: #eb5c00;
+}
+.zena_block{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.zena_block_prod{
+    display: block;
+    /*width: 302px;*/
+    /*height: 530px;*/
+    border: 1px solid #9d9d9d;
+    float: left;
+    margin-right: 10px;
+}
+/*
+.zena_block_prod:hover{
+    background-color: #eaeaea;
+}*/
+
+
+
+.zena_block_prod_titel{
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    /*width: 200px;*/
+    /*height: 55px;*/
+    background-color: #eb5c00;
+}
+
+.zena_block_prod_titel h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:20px ;
+    color: #FFFFFF;
+    padding-top: 19px;
+   padding-bottom:19px ;
+}
+
+.zena_block_prod_img{
+    display: block;
+    width: 100%;
+}
+
+.zena_block_prod_text{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-bottom: 30px;
+    padding-top: -10px;
+}
+
+.zena_block_prod_text p{
+    text-align: left;
+    font-family: "RobotoLight";
+    font-size:12px ;
+    color: #000000;
+    line-height: 18px;
+
+}
+
+.zena_block_prod_temp{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding-left: 40px;
+
+}
+
+.zena_block_prod_temp1{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+.zena_block_prod_sound1{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+.zena_block_prod_text2{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.zena_block_prod_text2 p{
+    text-align: center;
+    font-family: "RobotoLight";
+    font-size:17px ;
+    color: #b3b3b3;
+}
+
+.zena_block_prod_text2 p span{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-weight: bold;
+    font-size:19px ;
+    color: #444444;
+}
+
+.zena_block_prod_button{
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.zena_block_prod_button .poplight{
+    display: block;
+    margin: 0 auto;
+    width: 168px;
+    height: 28px;
+    background-color: #eb5c00;
+    border-radius: 8px;
+    font-family: "RobotoMedium";
+    font-size:20px ;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    bottom: 20px;
+}
+
+.zena_block_prod_button .poplight .submit{
+    display: block;
+   padding-top: 3px;
+}
+
+/*		Блок Подбор окон для квартир и его компоненты		*/
+
+.casement{
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    /*height: 700px;*/
+}
+
+
+.casement h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 35px;
+    padding-bottom: 40px;
+
+}
+
+.casement_block{
+    display: block;
+    /*width: 934px;*/
+
+    height: auto;
+   margin-bottom: 30px;
+}
+
+
+
+.casement_block_prod{
+    display: block;
+    /*width: 302px;*/
+    /*height: 525px;*/
+    /*float: left;*/
+    /*margin-right: 10px;*/
+    margin-bottom: 50px;
+}
+
+.casement_block_prod_s{
+    display: block;
+    /*width: 302px;*/
+    /*height: 525px;*/
+    /*float: left;*/
+    /*margin-right: 10px;*/
+    background-color: #eaeaea;
+    border-left: 1px solid #acacac;
+    border-right: 1px solid #acacac;
+}
+
+
+
+
+/*.casement_block_prod:hover{
+    background-color: #eaeaea;
+    border-left: 1px solid #acacac;
+    border-right: 1px solid #acacac;
+}*/
+
+.casement_block_prod_titel{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.casement_block_prod_titel h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:17px ;
+    color: #eb5c00;
+    padding-top: 27px;
+}
+
+.casement_block_prod_img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.casement_block_prod_text{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.casement_block_prod_text p{
+    font-family: "RobotoBold";
+    font-size:17px ;
+    color: #777676;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.casement_block_prod_text2{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.casement_block_prod_text2 p{
+    font-family: "RobotoBold";
+    font-size:15px ;
+    font-weight: bold;
+    color: #1b1b1b;
+    text-align: center;
+    padding-bottom: 34px;
+
+}
+
+.casement_block_prod_text2 p span{
+    font-family: "RobotoBold";
+    font-size:30px ;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+
+.casement_block_prod_button .poplight{
+    display: block;
+    margin: 0 auto;
+    width: 257px;
+    height: 54px;
+    background-color: #eb5c00;
+    border-radius: 28px;
+    font-family: "RobotoMedium";
+    font-size:14px ;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.casement_block_prod_button .poplight .submit{
+    display: block;
+    padding-top: 23px;
+}
+
+.casement_block_line1{
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    background-color: #acacac;
+    z-index: 100;
+    margin-top: 7%;
+}
+.casement_block_line2{
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    background-color: #acacac;
+    z-index: 100;
+    margin-top:36%;
+}
+
+/*		Блок Приемущества и его компоненты		*/
+.advantage{
+    display: block;
+    width: 100%;
+    height: 601px;
+    background-color: #f7f7f7;
+}
+
+.advantage h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:30px ;
+    color: #000000;
+    padding-top: 50px;
+    padding-bottom: 38px;
+}
+
+
+
+.advantage_block{
+    display: block;
+    width: 944px;
+    margin: 0 auto;
+    height: auto;
+}
+
+
+
+.advantage_block_adv{
+    display: block;
+    width: 302px;
+    height: 195px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 45px;
+}
+
+
+.advantage_block_adv:last-child{
+    margin-right: 0px;
+}
+
+
+
+.advantage_block_img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.advantage_block_img img{
+    display: block;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto;
+}
+
+.advantage_block_adv h2{
+    text-align: center;
+    font-family: "UbuntuBold";
+    font-size:14px ;
+    color: #000000;
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+}
+
+.advantage_block_adv p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #000000;
+    line-height: 15px;
+}
+
+
+
+.advantage_block_adv2{
+    display: block;
+    width: 302px;
+    height: 195px;
+    float: left;
+    margin-right: 10px;
+}
+
+.advantage_block_adv2:last-child{
+    margin-right: 0px;
+}
+
+.advantage_block_img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.advantage_block_img img{
+    display: block;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto;
+}
+
+.advantage_block_adv2 h2{
+    text-align: center;
+    font-family: "UbuntuBold";
+    font-size:14px ;
+    color: #000000;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.advantage_block_adv2 p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #000000;
+    line-height: 15px;
+}
+
+/*		Блок Закажите окно и его компоненты		*/
+.order{
+    display: block;
+    width: 100%;
+    height: 295px;
+    background-color: #313138;
+}
+
+.order h1{
+    text-align: center;
+    font-family: "UbuntuBold";
+    font-size:30px ;
+    color: #ffffff;
+    padding-top: 70px;
+    padding-bottom: 22px;
+}
+
+.order p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #ffffff;
+    padding-bottom: 50px;
+}
+.order_form{
+    display: block;
+    width: 944px;
+    margin-left: 130px;
+    height: auto;
+}
+
+#form3{
+    display: block;
+    width: 944px;
+    margin: 0 auto;
+    height: auto;
+}
+
+#form3 input{
+    border: none;
+    height: 43px;
+    width: 277px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    float: left;
+    margin-right: 25px;
+}
+
+
+#form3 input:-moz-placeholder {
+    color: #1b1b1b;
+    padding-left: 15px;
+}
+#form3 input::-webkit-input-placeholder {
+    color: #1b1b1b;
+    padding-left: 15px;
+}
+
+#form3 .submit{
+    display: block;
+    width: 145px;
+    height: 43px;
+    border-radius: 8px;
+    background-color: #eb5c00;
+    border: 1px solid #FFFFFF ;
+    float: left;
+}
+#form3 p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #ffffff;
+    padding-bottom: 0px;
+   }
+#form3 button{
+    background-color: #eb5c00;
+    border: none;
+    color: #FFFFFF;
+    font-family: "UbuntuBold";
+    font-size:17px ;
+    padding-top: 11px;
+}
+
+/*		Блок Как мы работаем и его компоненты		*/
+.working{
+    display: block;
+    width: 100%;
+    height: 588px;
+    background-color: #e5e2d9;
+    background-image: url("../img/substrate.png");
+}
+
+.working h1{
+    text-align: center;
+    font-family: "UbuntuBold";
+    font-size:30px ;
+    color: #000000;
+    padding-top: 60px;
+
+}
+
+.working_block{
+    display: block;
+    width: 100%;
+
+}
+
+.working_block_text1{
+    display: block;
+    width: 781px;
+    height: 60px;
+    position: absolute;
+    margin-top:150px ;
+    margin-left: 130px;
+}
+
+.block_text1{
+    display: block;
+    float: left;
+    margin-right: 19px;
+    width: 239px;
+}
+
+.block_text1 h1{
+    text-align: left;
+    font: 12px "UbuntuBold";
+    color: #ea7d35;
+    padding-top: 0;
+}
+
+.block_text1 p{
+    text-align: left;
+    font: 12px "UbuntuRegular";
+    color: #10100f;
+    padding-top: 5px;
+}
+
+
+.working_block_text2{
+    display: block;
+    width: 781px;
+    height: 60px;
+    position: absolute;
+    margin-top:350px ;
+    margin-left: 130px;
+}
+
+/*		Блок Оставте зеявку и его компоненты		*/
+.application{
+    display: block;
+    width: 100%;
+
+}
+
+.application_block{
+    display: block;
+    width: 100%;
+    padding-top: 65%; /* 150/350 */
+    /*height: 584px;*/
+    background-color: #e5e2d9;
+    background: url("../img/substrate2.png") top center;
+    background-position: top center;
+    /*background-attachment: fixed;*/
+    /*background-image: url(../img/substrate2.png);*/
+    /*background-image: url("../img/substrate2.png");*/
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    /*background-size: contain; !* Современные браузеры *!*/
+
+    background-size: cover; /* Масштабируем фон */
+
+
+}
+
+.application_form{
+    display: block;
+    width: 35%;
+    /*height: 365px;*/
+    margin-bottom: 0px;
+    margin-left: 60%;
+    background: rgba(0, 0, 0, 0.7); /* Цвет фона */
+}
+
+.application_form h1{
+    text-align: center;
+    font: 24px "UbuntuBold";
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    z-index: 100;
+}
+
+#form4{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    z-index: 100;
+    padding-bottom: 30px;
+}
+
+#form4 input{
+    border: none;
+    height: 43px;
+    width: 90%;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+
+}
+
+
+#form4 input:-moz-placeholder {
+    color: #1b1b1b;
+    padding-left: 15px;
+}
+#form4 input::-webkit-input-placeholder {
+    color: #1b1b1b;
+    padding-left: 15px;
+}
+
+#form4 .submit{
+    display: block;
+    width: 145px;
+    height: 43px;
+    border-radius: 8px;
+    background-color: #eb5c00;
+    border: 1px solid #FFFFFF ;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+#form4 p{
+    text-align: center;
+    font-family: "UbuntuRegular";
+    font-size:13px ;
+    color: #ffffff;
+    padding-bottom: 0px;
+}
+#form4 button{
+    background-color: #eb5c00;
+    border: none;
+    color: #FFFFFF;
+    font-family: "UbuntuBold";
+    font-size:17px ;
+    padding-top: 11px;
+}
+
+/*		Блок Ремонт окон и его компоненты		*/
+.repairs{
+    display: block;
+    width: 100%;
+    /*height: 506px;*/
+    background-color: #e3e0e0;
+}
+
+.repairs h1{
+    font-family: 'Roboto-Black';
+    color: #FFFFFF;
+    font-size: 50px;
+    background-color: rgb(227, 224, 224);
+    text-shadow: #9a999a 4px 8px 13px;
+    text-align: center;
+    padding-top: 39px;
+}
+
+.repairs_img {
+    display: block;
+    /*margin-left: 22px;*/
+    /*margin-top: -35px*/
+    bottom:0;
+}
+
+.repairs_img img{
+    display: block;
+    /*width: 100%;*/
+    /*height: 100%;*/
+}
+
+
+.repairs_icon{
+    display: block;
+    /*position: absolute;*/
+    /*width: 595px;*/
+    /*height: 380px;*/
+    /*margin-left: 382px;*/
+    margin-top: 21px;
+
+}
+
+.repairs_icon h2{
+    text-align: center;
+    font-family: "RobotoMedium";
+    font-size:25px ;
+    color: #2f4152;
+    padding-bottom: 18px;
+}
+
+.repairs_icon_block1{
+    display: block;
+    margin-left: 25px;
+    margin-top: 15px;
+    float: left;
+    width: 39%;
+    /*width: 262px;*/
+}
+
+.repairs_icon img{
+    width: 100%;
+}
+
+
+.repairs_icon_block1 img{
+    display: block;
+    float: left;
+    width: 37%;
+    margin-right: 10px;
+}
+
+.repairs_icon_block1 p{
+    text-align: left;
+    font-family: "RobotoMedium";
+    font-size:19px ;
+    color: #2f4152;
+    text-transform: uppercase;
+    float: left;
+    line-height: 22px;
+}
+
+.repairs_icon_block2{
+    display: block;
+     margin-top: 15px;
+    float: left;
+    margin-left: 50px;
+    width: 40%;
+    /*width: 292px;*/
+}
+
+
+.repairs_icon_block2 img{
+    display: block;
+    float: left;
+    width: 37%;
+    margin-right: 10px;
+}
+
+.repairs_icon_block2 p{
+    text-align: left;
+    font-family: "RobotoMedium";
+    font-size:19px ;
+    color: #2f4152;
+    text-transform: uppercase;
+    float: left;
+    line-height: 22px;
+}
+
+.repairs_img2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.repairs_icon h3{
+    font-family: "RobotoMedium";
+    font-size:31px ;
+    color: #2f4152;
+    text-align: center;
+}
+
+.repairs_icon h3 span{
+    font-family: "RobotoMedium";
+    font-size:35px ;
+    color: #2f4152;
+}
+
+/*		Блок Срочный вызов и его компоненты		*/
+
+
+
+/*		Блок Вхдные двери и его компоненты		*/
+
+.door{
+    display: block;
+    width: 100%;
+    height: 625px;
+}
+
+
+.door h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 63px;
+    padding-bottom: 55px;
+
+}
+
+.door_block{
+    display: block;
+    width: 988px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.door_block_prod{
+    display: block;
+    width: 237px;
+    height: 430px;
+    float: left;
+    margin-right: 10px;
+}
+
+/*.door_block_prod:hover{
+    background-color: #eaeaea;
+}*/
+
+
+.door_block_prod:last-child{
+    margin-right: 0px;
+}
+
+.door_block_prod_titel{
+    display: block;
+    margin: 0 auto;
+    height: 60px;
+
+}
+
+.door_block_prod_titel h1{
+    text-align: center;
+    font-family: "RobotoLight";
+    font-size:20px ;
+    color: #525151;
+    padding-top: 10px;
+}
+
+.door_block_prod_img{
+    display: block;
+    margin: 0 auto;
+}
+
+.door_block_prod_img img{
+    display: block;
+    margin: 0 auto;
+}
+
+
+.door_block_prod_text{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.door_block_prod_text p{
+    text-align: left;
+    font-family: "RobotoLight";
+    font-size:16px ;
+    color: #989898;
+    line-height: 18px;
+}
+
+
+.door_block_prod_text p span{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-weight: bold;
+    font-size:21px ;
+    color: #e0430b;
+}
+
+
+.door_block_prod_button .poplight{
+    display: block;
+    margin: 0 auto;
+    width: 168px;
+    height: 28px;
+    background-color: #eb5c00;
+    font-family: "RobotoLight";
+    font-size:20px ;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.door_block_prod_button .poplight .submit{
+    display: block;
+    padding-top: 3px;
+}
+
+/*		Блок Натяжные потолки его компоненты		*/
+
+.ceiling{
+    display: block;
+    width: 100%;
+    height: 541px;
+}
+
+
+.ceiling h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:41px ;
+    color: #444444;
+    padding-top: 3px;
+    padding-bottom: 55px;
+}
+
+.ceiling_block_button{
+    display: block;
+    position: absolute;
+    width: 269px;
+    height: 45px;
+    margin-left: 601px;
+    margin-top: -218px;
+    z-index: 100;
+
+
+}
+
+.ceiling_block_button .poplight{
+    display: block;
+    margin: 0 auto;
+    width: 269px;
+    height: 45px;
+    background-color: #eb5c00;
+    font-family: "RobotoLight";
+    font-size:20px ;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+
+.ceiling_block_button .poplight .submit{
+    display: block;
+    padding-top: 10px;
+}
+
+/*		Блок Отзывы и его компоненты		*/
+
+.Reviews{
+    display: block;
+    width: 100%;
+    height: 502px;
+}
+
+
+.Reviews h1{
+    text-align: center;
+    font-family: "RobotoLight";
+    font-size:25px ;
+    color: #000000;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.Reviews_block{
+    display: block;
+    width: 100%;
+}
+
+/*		Блок Втрого слайдера и его компоненты		*/
+
+.foto{
+    display: block;
+    width: 100%;
+    height: 502px;
+}
+
+
+/*		slider		*/
+
+.slider_contact {
+    display: inline-block;
+    width: 1024px;
+    height: 539px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#slider {
+    display: block;
+    position: relative;
+    float: left;
+    margin: 0;
+    width: 960px;
+    height: 529px;
+}
+
+#cyclePager {
+    position: absolute;
+    height: 18px;
+    overflow: hidden;
+    left: 50%;
+    bottom: 50px;
+    z-index: 99;
+
+}
+
+
+#cyclePager a {
+    background: transparent url("../img/Buttons.png") 0 0 no-repeat;
+    display: inline-block;
+     height: 17px;
+    width: 29px;
+    overflow: hidden;
+    left: 50%;
+    bottom: 50px;
+    margin-left: 10px;
+    text-indent: -9999px;
+
+}
+
+#cyclePager a:hover,
+#cyclePager a.activeSlide {
+    background-position: -17px 0;
+}
+
+/*		Блок Подвала (последнего блока сайта и его компоненты		*/
+
+.footer{
+    display: block;
+    width: 100%;
+    height: 675px;
+}
+
+.footer h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:25px ;
+    color: #444444;
+    padding-top: 30px;
+    padding-bottom: 5px;
+
+}
+
+.footer_left{
+    width: 495px;
+    min-height: 300px;
+    float: left;
+}
+
+.footer_left img{
+    display: block;
+    margin-left: 126px;
+    margin-bottom: 30px;
+}
+
+.footer_left h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:40px ;
+    color: #eb5c00;
+    padding-bottom: 30px;
+}
+.footer_left_siti{
+    display: block;
+    padding-top: 20px;
+}
+
+.footer_left_siti img{
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.footer_left_siti p{
+    font-family: "RobotoRegular";
+    font-size:25px ;
+    color: #000000;
+}
+
+.footer_left_time{
+    display: block;
+    padding-top: 20px;
+}
+
+.footer_left_time img{
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.footer_left_time p{
+    font-family: "RobotoLight";
+    font-size:21px ;
+    color: #5e5e5e;
+}
+
+.footer_left_tel{
+    display: block;
+    padding-top: 20px;
+
+}
+
+.footer_left_tel img{
+    float: left;
+    margin-right: 15px;
+}
+
+.footer_left_tel p{
+    font-family: "RobotoRegular";
+    font-size:37px ;
+    color: #000000;
+}
+
+
+

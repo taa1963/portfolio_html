@@ -1,0 +1,227 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+.header_titel_bloc1 p{
+    font-size: 17px;
+}
+
+.header_titel_bloc2 p{
+    font-size: 21px;
+}
+
+.header_cont_siti p span{
+    width: 80%;
+}
+
+    .header_logo img{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.header_cont_tel p {
+   font-size: 21px;
+}
+
+.partners_block_img a img{
+    width: 100%;
+}
+
+
+
+}
+
+@media only screen and (max-width: 959px) {
+
+
+
+.header_cont_tel p{
+    display: inline-block;
+    font-size: 22px;
+}
+    .Glazing_img{
+        position: relative;
+    }
+
+.header_cont_tel p img {
+    display: block;
+}
+
+
+
+.zena_block_prod:last-child{
+    margin-top: 30px;
+    float: none;
+}
+
+.footer_left_time img{
+    float: none;
+}
+
+
+
+.footer_left_tel img{
+    float: none;
+}
+
+.footer_left_tel p{
+    font-size: 25px;
+}
+
+}
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+.header_cont{
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+
+}
+
+    .Glazing{
+        height: 1000px;
+    }
+
+  .Glazing_img{
+      position: relative;
+
+  }
+
+ .Glazing_img img{
+     display: block;
+     margin: 0 auto;
+     width: 80%;
+     position: relative;
+ }
+
+ .Glazing_text{
+     width: 320px;
+     height: 320px;
+     /*width: 100%;*/
+     /*height: auto;*/
+ }
+
+ .poplight .submit {
+    display: block;
+   padding-top: 10px;
+ }
+
+  .Glazing .poplight{
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      top:75px;
+  }
+
+ .Glazing_text_block{
+     width: 320px;
+     height: 320px;
+     background: none;
+     border: solid 10px #ffed00;
+     /*background: transparent url(../img/frame.png) 100% 100% no-repeat;*/
+     /*background-size: cover;*/
+     /*webkit-background-size: cover;*/
+     /*-moz-background-size: cover;*/
+     /*-o-background-size: cover;*/
+     /*background-size: cover;*/
+     /*width: 100%;*/
+     /*height: 100%;*/
+
+ }
+
+.timer{
+    display: block;
+    width: 200px;
+    position: relative;
+    height: 15px;
+    /*margin: 0 auto;*/
+    padding-top: 55px;
+    margin-left: -20px;
+    font-size: 15px;
+    text-align: initial;
+}
+
+.timer span{
+    font-size: 50px;
+    text-align: initial;
+}
+
+
+#timerb3ed724a271420258637afce78ce224c{
+    min-width: 330px;
+    text-align: initial;
+
+}
+
+
+.container{
+        width: 100%;
+}
+
+.repairs_img img {
+    margin: 0 auto;
+}
+
+.header_logo{
+        margin: 0 auto;
+    }
+
+.Glazing_img{
+    position: relative;
+    margin-left: 0;
+}
+
+.Glazing_text{
+    float: none;
+    margin: 0 auto;
+}
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+.container{
+  width: 100%;
+ }
+
+.header_logo{
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+
+
+}

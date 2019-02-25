@@ -1,0 +1,333 @@
+/*
+* Оформление контактной формы
+* без дополительных изображений;
+* исключительно средствами CSS;
+*
+*  @dobrovoi dbmast.ru
+*/
+
+/*--Слой затемнения фона--*/
+#fade {
+	position: fixed;
+    top: 0;
+    left: 0; 
+	z-index: 9999; 
+	display: none; /*--по умолчанию скрыт--*/
+	width: 100%;
+    height: 100%;
+	background: #000;
+	opacity: .70;/* Полупрозрачность слоя затемнения */
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+
+/*--Модальное окно 1--*/
+.popup_block{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    display: none; /*--по умолчанию скрыт--*/
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 15px;
+    background-color: #f6f6ef;
+    font-size: .9em;
+}
+
+/*--Модальное окно 2--*/
+.popup_block2{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    display: none; /*--по умолчанию скрыт--*/
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 15px;
+    background-color: #FFFFFF;
+    font-size: .9em;
+}
+
+.popup_block2 h1{
+    font-family: 'Exo 2',sans-serif,Arial;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    color: #000000;
+    text-align: center;
+
+}
+
+.popup_block2 p{
+    margin: 0 0 10px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 21px;
+    color: #181818;
+    width: 90%;
+
+}
+
+.popup_block2 .perc-text{
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+    height: 400px;
+}
+
+
+
+/*--Фиксированное позиционирование для тупого IE6--*/
+*html #fade {
+	position: absolute;
+}
+*html .popup_block {
+	position: absolute;
+}
+/*--Блок содержания--*/
+.note{
+	margin:0 0 30px 0;
+}
+
+.note h1{
+    color: #181818;
+    font-size: 21px;
+    line-height: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Exo 2',sans-serif,Arial;
+    font-weight: 700;
+}
+
+.note span{
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3a3a3a;
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.note p{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    color: #8c8c8c;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 20px;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+/*--крутим кнопку при наведении--*/
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);    
+}
+
+
+/* контактная форма */
+#form{
+     overflow: hidden;
+     margin: 0 auto;
+     padding-top: 10px;
+     /* устанавливаем необходимую ширину формы в зависимости от дизайна
+      ** форма отлично растягивается */
+     width: 100%;
+     border: 1px solid #D3D3D3;
+     /* закругляем углы */
+     border-radius:8px;
+     background: none repeat scroll 0 0 #FFFFFF;
+     /* добавляем тени для блока*/
+     box-shadow: 0 0 5px #CCCCCC, 1px 1px 0 #FFFFFF inset, -1px -1px 0 #FFFFFF inset, 0 0 15px #DDDDDD inset;
+     text-align: left;
+ }
+
+#form2{
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 10px;
+    /* устанавливаем необходимую ширину формы в зависимости от дизайна
+     ** форма отлично растягивается */
+    width: 80%;
+   text-align: left;
+}
+
+
+/* формируем элементы внутри формы */
+
+#form2 .first{
+    display: block;
+    width: 90%;
+    background-color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 4px;
+    /*color: #FFFFFF;*/
+    border: 1px solid #8c8c8c;
+    margin-bottom: 10px;
+}
+
+#form2 .first>label{
+    width: 100%;
+    font-size: 12px;
+    line-height: 13px;
+    padding-top: 7px;
+    padding-left: 13px;
+    color: #8c8c8c;
+    padding-bottom: 10px;
+}
+
+#form2 .pers-cl{
+    display: block;
+    width: 90%;
+    /*background-color: #fff;*/
+    /*-webkit-border-radius: 5px;*/
+    /*-moz-border-radius: 5px;*/
+    /*border-radius: 4px;*/
+    /*color: #FFFFFF;*/
+    border: none;
+    margin-bottom: 10px;
+}
+
+/*.pers-cl input{*/
+    /*float: left;*/
+    /*width: 10px;*/
+    /*height: 10px;*/
+
+
+/*}*/
+
+.pers-cl input#pers{
+    float: left;
+    width: 16px;
+    height: 16px;
+
+
+}
+
+#form2 .pers-cl p{
+    float: left;
+    color: #8c8c8c;
+    font-size: 14px;
+    line-height: 20px;
+    width: 80%;
+    margin: 0;
+    padding-left: 10px;
+}
+
+
+#form2 input{
+    padding:3px;
+/* отключаем бордюры у инпутов и текстового поля */
+    border: none;
+    width: 100%;
+    color: #5B5B5B;
+    font:13px Trebuchet MS, Arial, Helvetica, Sans-Serif;
+}
+
+#form2 input:hover, #form2 input:focus{
+    border: none;
+}
+
+
+
+#form input {
+/* устанавливаем ширину инпутов */
+    width:90%;
+    height: 10px;
+
+}
+
+
+/* изменяем оформление полей ввода при фокусе */
+
+
+#form textarea{
+    overflow:auto;
+    width:100%;
+/* устанавливаем ширину текстового поля */
+    height:120px;
+}
+
+
+/* оформляем кнопку отправки */
+
+#form2 button{
+    /* устанавливаем необходимую ширину кнопки */
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #2285c4;
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 19px;
+    padding: 20px 40px;
+    border-radius: 25px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0 solid #2285c4;
+    white-space: nowrap;
+    cursor:pointer;
+}
+
+
+
+
+/* изменяем оформление кнопки при наведении */
+
+
+#form2 button:hover, #form2 button:active {
+    background-color: #0467a6;
+    border: 1px solid #761c19;
+}
+/* изменяем оформление кнопки при нажатии */
+
+
+/* конец формы */

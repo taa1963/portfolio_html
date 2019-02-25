@@ -679,6 +679,41 @@
        width: 100%;
     }
 
+    .calc_block1_text {
+        display: block;
+        width: 100%;
+        float: right;
+    }
+
+    .calc_block2_text {
+        display: block;
+        width: 100%;
+        float: right;
+    }
+    .calc_block1_pol {
+        display: block;
+        width: 70%;
+        float: left;
+    }
+    .calc_block2_pol {
+        display: block;
+        width: 70%;
+        float: left;
+    }
+
+    .calc_block1 {
+        margin-bottom: 50px;
+    }
+
+
+
     
 }
 
+@media only screen  and (max-width: 480px) {
+    .tarif_block_button .poplight {
+        font-size: 11px;
+        padding: 20px 0px;
+    }
+
+}

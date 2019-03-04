@@ -48,9 +48,34 @@ $(document).ready(function() {
         var NServmax = document.getElementById("serv").value;
 
         $('#NServmax').text(NServmax);
-        Zenaserv=NServmax*Kserv;
-        $('#Zenaserv').text(Zenaserv);
-        zena();
+
+        if (NServmax<=3) {Kserv=3000;
+            Zenaserv=NServmax*Kserv;
+            $('#Zenaserv').text(Zenaserv);
+            // alert(NServmax);
+            zena()
+        }
+
+        if (NServmax>3) {Kserv=2500;
+            Zenaserv=NServmax*Kserv;
+            $('#Zenaserv').text(Zenaserv);
+            // alert(NServmax);
+            zena()
+        }
+
+        if (NServmax>5) {Kserv=2500000;
+            Zenaserv=NServmax*Kserv;
+            $('#Zenaserv').text(Zenaserv);
+            // alert(NServmax);
+            zena()
+        }
+
+
+
+
+        // Zenaserv=NServmax*Kserv;
+        // $('#Zenaserv').text(Zenaserv);
+        // zena();
 
 
     });
@@ -65,9 +90,33 @@ $(document).ready(function() {
 
             var NServmax = document.getElementById("serv").value;
             $('#NServmax').text(NServmax);
-             Zenaserv=NServmax*Kserv;
-            $('#Zenaserv').text(Zenaserv);
-            zena();
+
+            if (NServmax<=3) {Kserv=3000;
+                Zenaserv=NServmax*Kserv;
+                $('#Zenaserv').text(Zenaserv);
+                // alert(NServmax);
+                zena()
+            }
+
+            if (NServmax>3) {Kserv=2500;
+                Zenaserv=NServmax*Kserv;
+                $('#Zenaserv').text(Zenaserv);
+                // alert(NServmax);
+                zena()
+            }
+
+            if (NServmax>5) {Kserv=2500000;
+                Zenaserv=NServmax*Kserv;
+                $('#Zenaserv').text(Zenaserv);
+                // alert(NServmax);
+                zena()
+            }
+
+
+
+            //  Zenaserv=NServmax*Kserv;
+            // $('#Zenaserv').text(Zenaserv);
+            // zena();
          })
     })
 
@@ -94,13 +143,42 @@ $(document).ready(function() {
 
         var NStanmax = document.getElementById("servst").value;
         $('#NStanmax').text(NStanmax);
-        // alert()
-        Zenastan=NStanmax*Kstanz;
-        $('#Zenastan').text(Zenastan);
-        zena();
+
+        if (NStanmax<=25) {Kstanz=1000;
+
+            Zenastan=NStanmax*Kstanz;
+            $('#Zenastan').text(Zenastan);
+            // alert(NServmax);
+            zena()
+        }
+
+        if (NStanmax>25) {Kstanz=800;
+            Zenastan=NStanmax*Kstanz;
+            $('#Zenastan').text(Zenastan);
+            // alert(NServmax);
+            zena()
+        }
+
+        if (NStanmax>30) {Kstanz=8000000;
+            Zenastan=NStanmax*Kstanz;
+            $('#Zenastan').text(Zenastan);
+            // alert(NServmax);
+            zena()
+        }
+
+
+
+
+        // Zenastan=NStanmax*Kstanz;
+        // $('#Zenastan').text(Zenastan);
+        // zena();
 
 
     });
+
+
+
+
 
     //===== Вычитка введеного значения и движение ползунка.
     // Определение цены обслуживания станций после ввода значения   =====//
@@ -116,13 +194,43 @@ $(document).ready(function() {
 
         var NStanmax = document.getElementById("servst").value;
         $('#NStanmax').text(NStanmax);
+
+        if (NStanmax<=25) {Kstanz=1000;
+
+            Zenastan=NStanmax*Kstanz;
+            $('#Zenastan').text(Zenastan);
+            // alert(NServmax);
+            zena()
+        }
+
+        if (NStanmax>25) {Kstanz=800;
+            Zenastan=NStanmax*Kstanz;
+            $('#Zenastan').text(Zenastan);
+            //alert(NStanmax);
+            zena()
+        }
+
+        if (NStanmax>30) {Kstanz=8000000;
+            Zenastan=NStanmax*Kstanz;
+            $('#Zenastan').text(Zenastan);
+            // alert(NServmax);
+            zena()
+        }
+
+
         // alert()
-        Zenastan=NStanmax*Kstanz;
-        $('#Zenastan').text(Zenastan);
-        zena();
+        // Zenastan=NStanmax*Kstanz;
+        // $('#Zenastan').text(Zenastan);
+        // zena();
 
 
-    });//===== Вычитка введеного значения при нажатие стрелок и движение ползунка.
+    });
+
+
+
+
+
+    //===== Вычитка введеного значения при нажатие стрелок и движение ползунка.
     // Определение цены обслуживания станций после ввода значения   =====//
 
     $('.ServmaxST').click(function () {
@@ -137,10 +245,32 @@ $(document).ready(function() {
 
         var NStanmax = document.getElementById("servst").value;
         $('#NStanmax').text(NStanmax);
+
+        if (NStanmax<=25) {Kstanz=1000;
+
+            Zenastan=NStanmax*Kstanz;
+            $('#Zenastan').text(Zenastan);
+            // alert(NServmax);
+            zena()
+        }
+
+        if (NStanmax>25) {Kstanz=800;
+            Zenastan=NStanmax*Kstanz;
+            $('#Zenastan').text(Zenastan);
+            //alert(NStanmax);
+            zena()
+        }
+
+        if (NStanmax>30) {Kstanz=8000000;
+            Zenastan=NStanmax*Kstanz;
+            $('#Zenastan').text(Zenastan);
+            // alert(NServmax);
+            zena()
+        }
         // alert()
-        Zenastan=NStanmax*Kstanz;
-        $('#Zenastan').text(Zenastan);
-        zena();
+        // Zenastan=NStanmax*Kstanz;
+        // $('#Zenastan').text(Zenastan);
+        // zena();
 
 
     });
@@ -158,6 +288,31 @@ $(document).ready(function() {
             $('#NStanmax').text(NStanmax);
             // alert()
             Zenastan=NStanmax*Kstanz;
+            if (NStanmax<=25) {Kstanz=1000;
+
+                Zenastan=NStanmax*Kstanz;
+                $('#Zenastan').text(Zenastan);
+                // alert(NServmax);
+                zena()
+            }
+
+            if (NStanmax>25) {Kstanz=800;
+                Zenastan=NStanmax*Kstanz;
+                $('#Zenastan').text(Zenastan);
+                //alert(NStanmax);
+                zena()
+            }
+
+            if (NStanmax>30) {Kstanz=8000000;
+                Zenastan=NStanmax*Kstanz;
+                $('#Zenastan').text(Zenastan);
+                // alert(NServmax);
+                zena()
+            }
+
+
+
+
             $('#Zenastan').text(Zenastan);
             zena();
         })
@@ -204,6 +359,9 @@ $(document).ready(function() {
     function zena() {
 
 
+        //alert(NServmax);
+
+
         Zena=(Zenaserv+Zenastan)*Kobsl;
         document.getElementById("bs").style.display="block";
 
@@ -226,5 +384,38 @@ $(document).ready(function() {
         $('#Zena').text(Zena);
 
     };
+
+    $('.menu_Left_mobil').click(function(){
+        var block = $(this).parents('.menu_left');
+        // block.find('.slide2_text_inc').hide();
+        block.find('.dropdown').show();
+    });
+
+
+    $('.leftm').click(function(){
+        var block = $(this).parents('.menu_left');
+        // block.find('.slide2_text_inc').hide();
+        block.find('.dropdown').hide();
+    });
+
+
+    $('.menu_right_mobil').click(function(){
+        var block = $(this).parents('.menu_right');
+        // block.find('.slide2_text_inc').hide();
+        block.find('.dropdown_right').show();
+    });
+
+
+    $('.rightm').click(function(){
+        var block = $(this).parents('.menu_right');
+        // block.find('.slide2_text_inc').hide();
+        block.find('.dropdown_right').hide();
+    });
+
+
+
 });
+
+
+
 

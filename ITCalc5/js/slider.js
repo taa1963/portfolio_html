@@ -9,8 +9,14 @@ jQuery(document).ready(function(){
 		var prevLink = jQuery('.prev-slide');
 
 		var playLink = jQuery('.auto');
+        // is_animate = true;
 		
 		var is_animate = false;
+        // play();
+        timer = setInterval(autoplay, 2000);
+        autoplay();
+
+         // var autoplay= true;
 		
 		/* ������ ������ � ��������� */
 		var slideWidth = jQuery('.slide-item').outerWidth();
@@ -34,7 +40,7 @@ jQuery(document).ready(function(){
 		});
 
 		/* ���� �� ������ �� ����������� ����� */
-		prevLink.click(function(){
+		prevLink.click(function (){
 			if(!slideWrap.is(':animated')) {
 			
 				slideWrap
@@ -68,9 +74,24 @@ jQuery(document).ready(function(){
 			if(playLink.hasClass('play')){
 				playLink.removeClass('play').addClass('pause');
 				jQuery('.navy').addClass('disable');
-				timer = setInterval(autoplay, 3000);
+				timer = setInterval(autoplay, 2000);
 			} else {
-				playLink.removeClass('pause').addClass('play');
+				//playLink.removeClass('pause').addClass('play');
+                playLink.removeClass('pause');
+
+                playLink.removeClass('pause');
+                playLink.removeClass('auto');
+                document.getElementById("next-slide").style.display="block";
+
+               // playLink.addClass('next-slide');
+
+
+            //.addClass('next-slide')
+
+
+                //result_block.find('.next-slide').show();
+
+            //.next-slide.show();
 				jQuery('.navy').removeClass('disable');
 				clearInterval(timer);
 			}

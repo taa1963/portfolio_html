@@ -25,6 +25,69 @@
 </head>
 <body>
 
+<div class="menu_left">
+
+    <div class="menu_Left_decktop">
+        <h1> Меню </h1>
+
+        <ul class="dropdown_decktop">
+            <li><a href="#"><span>Главная</span></a></li>
+            <li><a href="#"><span>Пункт1</span></a></li>
+            <li><a href="#"><span>Пункт2</span></a></li>
+            <li><a href="#"><span>Пункт3</span></a></li>
+            <li><a href="#"><span>Пункт4</span></a></li>
+            <li><a href="#"><span>Контакты</span></a></li>
+        </ul>
+    </div>
+
+         <div class="menu_Left_mobil">
+        Меню
+    </div>
+
+        <ul class="dropdown">
+        <li class="leftm"><a href="#"><span>Главная</span></a></li>
+        <li class="leftm"><a href="#"><span>Пункт1</span></a></li>
+        <li class="leftm"><a href="#"><span>Пункт2</span></a></li>
+        <li class="leftm"><a href="#"><span>Пункт3</span></a></li>
+        <li class="leftm"><a href="#"><span>Пункт4</span></a></li>
+        <li class="leftm"><a href="#"><span>Контакты</span></a></li>
+    </ul>
+
+</div>
+
+
+<div class="menu_right">
+
+    <div class="menu_right_decktop">
+        <h1> Статьи </h1>
+
+        <ul class="dropdown_decktop_right">
+            <li><a href="#"><span>Статья1</span></a></li>
+            <li><a href="#"><span>Статья2</span></a></li>
+            <li><a href="#"><span>Статья3</span></a></li>
+            <li><a href="#"><span>Статья4</span></a></li>
+            <li><a href="#"><span>Статья5</span></a></li>
+            <li><a href="#"><span>Статья6</span></a></li>
+        </ul>
+    </div>
+
+    <div class="menu_right_mobil">
+        Статьи
+    </div>
+
+    <ul class="dropdown_right">
+        <li class="rightm"><a href="#"><span>Статья1</span></a></li>
+        <li class="rightm"><a href="#"><span>Статья2</span></a></li>
+        <li class="rightm"><a href="#"><span>Статья3</span></a></li>
+        <li class="rightm"><a href="#"><span>Статья4</span></a></li>
+        <li class="rightm"><a href="#"><span>Статья5</span></a></li>
+        <li class="rightm"><a href="#"><span>Статья6</span></a></li>
+    </ul>
+
+</div>
+
+
+
 
 <section class="tapif" id="tarif">
 
@@ -405,11 +468,22 @@
         </div>
           <div class="slaider_nav">
 
-        <div class="navy prev-slide"></div>
-        <div class="navy next-slide"></div>
-        <div class="auto play"></div>
+        <div class="navy prev-slide">
+            Показать другие тарифы
+        </div>
+        <div class="navy next-slide" id="next-slide" >
+            Показать другие тарифы
+        </div>
+
+
+        <div class="auto pause next-slide ">
+            <!--<div class="navy next-slide">-->
+                <!--Показать другие тарифы-->
+            <!--</div>-->
+
+        </div>
       </div>
-    </div>
+    <!--</div>-->
 </section>
 
 
@@ -442,7 +516,7 @@
                         <script>
                             function sizeS() {
                                 var serv,ServmaxV;
-//
+
                                 var ServmaxV = document.getElementById('serv').value;
                                 $('#ServmaxV').text(ServmaxV);
 

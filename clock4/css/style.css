@@ -101,7 +101,9 @@
     display: none;
 }
 
-
+#vfan1{
+    display: none;
+}
 
 .content_fon2{
     display: block;

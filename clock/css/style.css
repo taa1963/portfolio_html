@@ -73,18 +73,13 @@
 }
 
 
-
-
 /*Описание контейнера и его компонентов  */
-.container {
-    position: relative;
-    word-wrap: break-word;
-    height: auto;
-    margin: 0 auto;
- }
 
 .container{
     display: block;
+    position: relative;
+    word-wrap: break-word;
+    height: auto;
     width: 90%;
     margin: 0 auto;
 }
@@ -92,38 +87,37 @@
 .content_img{
     display: block;
     position: relative;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 70px;
+	z-index:500;
 }
 
 .content_img img{
     width: 100%;
-
 }
 
-#fancyimage2{
+.vfan{
     display: none;
-    visibility: hidden;
 }
 
-#fancyimage3{
-    display: none;
-    visibility: hidden;
-}
+
 
 .content_fon2{
     display: block;
     position: relative;
-    width: 100%;
+    width: 120%;
     z-index: 100;
-    margin-top: -15%;
+    margin-top: -20%;
+    margin-left: -12.5%;
 
 }
 
 .content_fon2 img{
     display: block;
+    margin: 0 auto;
     width: 100%;
+	opacity: 0.15; /* Полупрозрачность для других браузеров */
 }
 
 .content_text{

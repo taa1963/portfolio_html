@@ -10,7 +10,7 @@ if (
     $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 100);
 
 
-    $to = 'alexandr.tupichenkov@yandex.ru';
+    $to = 'clublaser@mail.ru';
     //$to = 'info@partwork.ru';
     $title = 'Новый заказ';
     $message = "

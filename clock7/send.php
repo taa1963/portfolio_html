@@ -22,7 +22,7 @@ if (
 
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
 
-   echo "<center>Заявка отправлена<BR><center><a href='http://bigclock.centro.ru/'>Вернуться на сайт</a>";
+   echo "<center>Заявка отправлена<BR><center><a href='http://bigclock.centro.ru/'>Вернуться на сайт.</a>";
 
 
 }

@@ -17,14 +17,25 @@ if (
     $message = "
         Был получен заказ с сайта от:
         Имя: $name1
-        Телефон: telefon
-        E-mail: email
+        Телефон: $telefon
+        E-mail: $email
        ";
 
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
+    if ($verify) {
+    echo '<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
+    <body><center><font color="green"> Заявка отправлена.</font><br/> 
+   <center><a href="http://bigclock.centro.ru/">Вернуться на главную</a> 
+   </body>';}
+else {
 
-   echo "<center>Заявка отправлена<BR><center><a href='http://bigclock.centro.ru/'>Вернуться на сайт.</a>";
-
-
+    echo '<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
+    <body><center>Письмо не отправлено.<br/> <center>
+   <a href="http://bigclock.centro.ru/">Вернуться на главную</a> 
+   </body>';}
 }
+
+
 ?>

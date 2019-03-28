@@ -1,0 +1,733 @@
+
+/*Описание контейнера и его компонентов  */
+.container {
+    position: relative;
+   
+    height: auto;
+    margin: 0 auto;
+ }
+
+/*Описание первого блока, только для демонстрации на моем хосте */
+.block_v{
+    display: block;
+    width: 100%;
+    height:50px;
+    background-color: coral;
+}
+
+
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.calc{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+    /*min-height: 20px;*/
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+    background-color:#f8f8f8;
+
+}
+
+
+
+/*		Описание шапки блока калькулятора и его компонент		*/
+.calc_head{
+    display: block;
+    margin: 0 auto;
+}
+
+.calc_head h2{
+
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 2em;
+    /*font-weight: 700;*/
+
+    /*font-family: inherit;*/
+    font-weight: 500;
+    line-height: 1.1;
+    color: #5983B6;
+    text-transform: none;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+
+.calc_all{
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #761c19;
+
+}
+/*		Описание блока ввода параметров и его компонетнов		*/
+.calc_param{
+    display: block;
+    width: 50%;
+    height: auto;
+    position: relative;
+    float: left;
+
+}
+
+/*		Описание блока ввода Ваш статус и его компонетнов		*/
+.owner_type_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+}
+
+.param_title{
+    display: block;
+    width: 47%;
+    float: left;
+    text-align: left;
+    color: #000000;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0;
+    padding-left: 10px;
+    /*font-size: 14px;*/
+
+}
+
+.owner{
+    display: block;
+    width: 50%;
+    float: left;
+    border: 2px solid #73040b;
+}
+
+
+.calc_param input{
+    border: 2px solid #73040b;
+}
+
+
+/*		Описание блока ввода Услуга и его компонетнов		*/
+
+.type_work_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока ввода Вид межевания и его компонетнов		*/
+
+.mezhi_types_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока Площадь участка и его компонетнов		*/
+.land_area_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+.area{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+/*		Описание блока Количество точек участка и его компонетнов		*/
+.number_points_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока Тип объекта и его компонетнов		*/
+.object_type_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока Регион работ и его компонетнов		*/
+
+.region_work_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока Площадь помещения и его компонетнов		*/
+
+.room_area_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/*		Описание блока Шоссе и его компонетнов		*/
+
+.Highway_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/*		Описание блока Км от МКАД и его компонетнов		*/
+.distance_mkad_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/*		Описание блока Удаленность от Санкт-Петербурга и его компонетнов		*/
+
+.distance_sp_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+.l-hide {
+  display: none;
+  
+}
+
+
+
+
+/*		Описание блока итогов и его компонетнов		*/
+.calc_itog{
+    display: block;
+    width: 50%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+.calc_itog_zena{
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+.calc_itog_zena h3{
+    text-align: center;
+    color: #000000;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+
+}
+
+.calc_itog_zena p{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.calc_itog_zena span{
+    font-size: 2em;
+    font-weight: 700;
+    color: #47953e;
+    margin-left: 10px;
+
+
+}
+
+.calc_itog_zena p b{
+    font-size: 2em;
+    font-weight: 700;
+    color: #47953e;
+    margin-left: 10px;
+
+
+}
+
+
+
+
+
+
+
+    /*		Описание блока ввода объема газа и его компонент		*/
+
+
+
+
+
+
+.calc_block1_pol input{
+    display: block;
+    float: left;
+    width: 85%;
+}
+
+.calc_block1_zn{
+    display: block;
+    width: 17%;
+    float: left;
+}
+
+
+
+.VgasR{
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+     font-size: 1.6em;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+    width: 50%;
+    border: 2px solid #73040b;
+
+}
+/*		Описание блока процента остатка а газа и его компонент		*/
+
+.Vost{
+     font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+     font-size: 1.6em;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+    width: 50%;
+     border: 2px solid #73040b;
+}
+
+.calc_block1{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+.calc_block2{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.calc_block2_text{
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.calc_block2_text p{
+     font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.6em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 5px;
+    margin: 0;
+}
+
+.calc_block2_zn{
+    display: block;
+    width: 20%;
+    float: left;
+    margin-left: 5px;
+}
+
+.calc_block4_check{
+    display: block;
+    width: 50%;
+    float: left;
+  }
+
+.calc_block4_check input{
+    float: left;
+    
+}
+
+.calc_block4_check input#primary{
+   float: left;
+   transform:scale(1.7);
+   opacity:1;
+   cursor:pointer;
+   margin: 0;
+   margin-top: 8px;
+    border: 2px solid #73040b;
+}
+
+
+
+.calc_block4_check p{
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.6em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 25px;
+    margin: 0;
+   float: left;
+
+}
+
+
+
+/*		Описание блока вывода цены и объемаprimary		*/
+
+.calc_block5{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.calc_block5_zena{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    float: left;
+   margin-left: 20px;
+}
+
+.calc_block5_zena p{
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.6em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 25px;
+    margin: 0;
+    float: left;
+    margin-left: 10px;
+
+}
+
+
+.calc_block5_zena span{
+    font-size: 28px;
+    font-weight: 700;
+    color: #73040b;
+    margin-left: 10px;
+    text-decoration:underline;
+    /*float: right;*/
+}
+
+.calc_block5_zena p b{
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #73040b;
+    margin-left: 10px;
+    float: right;
+}
+
+/* ================= кнопка оформить    =============*/
+
+.calc button{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #73040b;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.6em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+
+}
+
+.calc_form{
+    display: none;
+}
+
+.line_form{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: #000000;
+    margin-top: 30px;
+}
+
+#form1{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #73040b;
+    margin-bottom: 30px;
+}
+
+#form1 .first{
+    display: block;
+    width: 90%;
+    /*background-color: #fff;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 4px;
+    /*color: #FFFFFF;*/
+    /*border: 1px solid #8c8c8c;*/
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#form1 .first>label{
+    width: 100%;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.6em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    line-height: 13px;
+    padding-top: 7px;
+    padding-left: 13px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+    
+.tarif-name{
+	font-size:1.8em;
+}
+.tarif-element ul{
+    margin-top: 20px;
+    padding: 2px 1px 2px;
+    font-size: 1em;
+    line-height: 1.5em;
+
+}
+
+    .tarif-element ul li{
+
+        font-size: 1.5em;
+
+    }
+
+    .tarif-element {
+        padding: 10px 5px;
+        margin-bottom: 130px;
+    }
+
+    .tarif-wrap p {
+        font-size: 2em;
+    }
+
+    .tarif_block_button .poplight {
+        font-size: 1.3em;
+         padding: 20px 30px;
+    }
+
+    .calc_block1_text p {
+
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    .calc_block2_text p {
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    .calc_block3_text p {
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    .calc_block4_check label{
+        font-size: 1em;
+    }
+
+
+
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+   
+.tarif-name{
+    font-size: 1.4em;
+}
+.tarif-element ul{
+    margin-top: 20px;
+    padding: 2px 1px 2px;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.tarif-element{
+	padding-left:5px;
+	padding-right:5px;
+    margin-bottom: 180px;
+}
+    .tarif-element ul {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+.tarif-element ul li {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+
+
+    .tarif-wrap p {
+        font-size: 16px;
+    }
+
+    .tarif_block_button .poplight {
+        font-size: 15px;
+        padding: 20px 0px;
+    }
+
+    .calc_block1_pol span{
+        font-size: 17px;
+    }
+
+
+    .calc_block2_pol span{
+        font-size: 17px;
+    }
+    .calc_block2_pol input {
+         width: 65%
+    }
+
+    .calc_block2_pol input {
+         width: 65%
+    }
+
+    #list1 {
+       width: 100%;
+    }
+
+    .calc_block1_text {
+        display: block;
+        width: 100%;
+        float: right;
+    }
+
+    .calc_block2_text {
+        display: block;
+        width: 100%;
+        float: right;
+    }
+    .calc_block1_pol {
+        display: block;
+        width: 70%;
+        float: left;
+    }
+    .calc_block2_pol {
+        display: block;
+        width: 70%;
+        float: left;
+    }
+
+    .calc_block1 {
+        margin-bottom: 50px;
+    }
+
+    .ServmaxR{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ServmaxST{
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    
+}
+
+@media only screen  and (max-width: 480px) {
+    .tarif_block_button .poplight {
+        font-size: 11px;
+        padding: 20px 0px;
+    }
+
+    .tapif_mob {
+        display: block;
+    }
+
+    .tapif {
+        display: none;
+    }
+    .ServmaxR{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ServmaxST{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .menu_Left_decktop{
+        display: none;
+
+    }
+
+    .menu_Left_mobil{
+        display: block;
+    }
+
+    .dropdown{
+        display: none;
+    }
+
+    .menu_right_decktop{
+        display: none;
+    }
+
+    .menu_right_mobil{
+        display: block;
+    }
+
+    .dropdown_right{
+        display: none;
+    }
+
+
+
+
+
+}

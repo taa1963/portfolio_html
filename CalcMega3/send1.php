@@ -2,21 +2,21 @@
 // если была нажата кнопка "Отправить"
 if (
     isset($_POST['name1']) && !empty($_POST['name1']) &&
-    isset($_POST['telefon']) && !empty($_POST['telefon']) &&
+    isset($_POST['tel1']) && !empty($_POST['tel1']) &&
     isset($_POST['Form_Zena']) && !empty($_POST['Form_Zena'])) {
 
     $name1 = substr(htmlspecialchars(trim($_POST['name1'])), 0, 1000);
-    $telefon = substr(htmlspecialchars(trim($_POST['telefon'])), 0, 100);
+    $tel1 = substr(htmlspecialchars(trim($_POST['tel1'])), 0, 100);
     $Form_Zena = substr(htmlspecialchars(trim($_POST['Form_Zena'])), 0, 1000);
 
-
+    //$to = 'alexandr.tupichenkov@yandex.ru';
     $to = 'alexandr.tupichenkov@yandex.ru';
     //$to = 'info@parrrrtwork.ru';
     $title = 'Новый заказ';
     $message = "
         Был получен заказ с сайта от:
         Имя: $name1
-        Телефон: $telefon
+        Телефон: $tel1
         Цена заказа: $Form_Zena
         
        ";

@@ -3,11 +3,14 @@
 if (
     isset($_POST['name1']) && !empty($_POST['name1']) &&
     isset($_POST['tel1']) && !empty($_POST['tel1']) &&
+    isset($_POST['TypeClient']) && !empty($_POST['TypeClient']) &&
     isset($_POST['Form_Zena']) && !empty($_POST['Form_Zena'])) {
 
     $name1 = substr(htmlspecialchars(trim($_POST['name1'])), 0, 1000);
     $tel1 = substr(htmlspecialchars(trim($_POST['tel1'])), 0, 100);
-    $Form_Zena = substr(htmlspecialchars(trim($_POST['Form_Zena'])), 0, 1000);
+
+    $TypeClient = substr(htmlspecialchars(trim($_POST['TypeClient'])), 0, 100);
+    $Form_Zena = substr(htmlspecialchars(trim($_POST['Form_Zena'])), 0, 100000);
 
     //$to = 'alexandr.tupichenkov@yandex.ru';
     $to = 'alexandr.tupichenkov@yandex.ru';
@@ -17,6 +20,7 @@ if (
         Был получен заказ с сайта от:
         Имя: $name1
         Телефон: $tel1
+        Тип клиент:$TypeClient
         Цена заказа: $Form_Zena
         
        ";

@@ -19,21 +19,9 @@
 </head>
 <body>
 
-
-
-
 <div class="block_v">
 
 </div>    
-
- 
-
-    
-
-
-
-
-
 
    <section class="calc" id="calc">
 
@@ -102,12 +90,6 @@
                            </select>
                        </div>
 
-
-
-
-
-
-
                        <!--/*		Описание блока Площадь участка и его компонетнов		*/-->
 
                        <div class="land_area_block" id="land_area_block">
@@ -127,9 +109,6 @@
 
                        </div>
 
-
-
-
                        <!--/*		Описание блока Количество точек участка и его компонетнов		*/-->
 
                        <div class="number_points_block" id="number_points_block">
@@ -138,7 +117,6 @@
                            <input type="number" class="area" id="number_points" value="3" min="0" max="200"   />
 
                        </div>
-
 
                        <!--/*		Описание блока Регион работ и его компонетнов		*/-->
                        <div class="region_work_block" id="region_work_block">
@@ -152,9 +130,6 @@
                            </select>
 
                        </div>
-
-
-
 
                        <!--/*		Описание блока Шоссе и его компонетнов		*/-->
                        <div class="Highway_block" id="Highway_block">
@@ -185,7 +160,6 @@
                        </div>
 
 
-
                        <!--/*		Описание блока Км от МКАД и его компонетнов		*/-->
 
                        <div class="distance_mkad_block" id="distance_mkad_block">
@@ -206,12 +180,6 @@
                        </div>
 
 
-
-
-
-
-
-
                    </div>
 
                     <div class="calc_itog">
@@ -224,11 +192,14 @@
                         </div>
 
 
-                        <form id="form1" action="send1.php" method="post">
+                        <form id="form1" action="send.php" method="post">
 
                             <div class="form_param">
 
-                                <span id="Form_Zena" name="Form_Zena"></span>
+                                <input type="text" name="FormZena" id="FormZena" />
+                                <input type="text" name="TypeClient" id="TypeClient" />
+                                <input type="text" name="ClientWork" id="ClientWork" />
+                                <input type="text" name="ClientRegion" id="ClientRegion" />
 
 
 
@@ -245,7 +216,7 @@
                             </div>
 
                             <div class="first">
-                                <input type="text" name="tel1" id="tel1"  placeholder="Номер телефона" size="30" required />
+                                <input type="text" name="telefon" id="telefon"  placeholder="Номер телефона" size="30" required />
                             </div>
 
 

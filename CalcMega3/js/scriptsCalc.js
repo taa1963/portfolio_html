@@ -1554,19 +1554,55 @@ $('#type_work').click(function (){
 
             //===================================
         }
+      //============ Блок подготовки данных к перчати  =======================//
+        if (document.getElementById("owner").value == 1) {
+            var TypeClient = "Физическое лицо";
+            $('#TypeClient').text(TypeClient);
+            document.getElementById("TypeClient").value = TypeClient;
+
+
+        }
+        if (document.getElementById("owner").value == 2) {
+            var TypeClient = "Юридическое  лицо";
+            $('#TypeClient').text(TypeClient);
+            document.getElementById("TypeClient").value = TypeClient;
+        }
 
         Form_Zena=+Zena;
         $('#Form_Zena').text(Form_Zena);
+        document.getElementById("FormZena").value = Form_Zena;
+
+
+      //--------------------------------------------------//
+        //document.getElementById("region_work").value == 1) {
+         var Form_work = document.getElementById("type_work").value;
+          if (Form_work==1) {Form_workP ="Межевание" };
+          if (Form_work==2) {Form_workP ="Вынос точек" };
+          if (Form_work==3) {Form_workP ="Технический план" };
+          if (Form_work==4) {Form_workP ="Акт обследования" };
+          if (Form_work==5) {Form_workP ="Подача документов в Росреестр" };
+          if (Form_work==6) {Form_workP ="Исправление кадастровых ошибок" };
+
+        $('#Form_workP').text(Form_workP);
+        document.getElementById("ClientWork").value = Form_workP;
+
+        //-------------------------------------//
+
+        var Form_region = document.getElementById("region_work").value;
+        if (Form_region==1) {Form_regionP ="Московская область" };
+        if (Form_region==2) {Form_regionP ="Москва (включая новую Москву)" };
+        if (Form_region==3) {Form_regionP ="Санкт-Петербург" };
+        if (Form_region==4) {Form_regionP ="Ленинградская область" };
+
+        $('#Form_regionP').text(Form_regionP);
+        document.getElementById("ClientRegion").value = Form_regionP;
+
+
+
+
 
 
     };
-
-    // Form_Zena=+Zena;
-    // $('#Form_Zena').text(Form_Zena);
-
-
-
-
 
 
 });

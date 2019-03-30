@@ -1543,8 +1543,8 @@ $('#type_work').click(function (){
                         ZenaR = KobV + 30 * KmkadKadstr + KchoseKadstrV;
 
                         Zena = +ZenaR;
-
                         $('#Zena').text(Zena);
+
 
                     }
 
@@ -1555,32 +1555,16 @@ $('#type_work').click(function (){
             //===================================
         }
 
-
-
-
-
-
-
-
+        Form_Zena=+Zena;
+        $('#Form_Zena').text(Form_Zena);
 
 
     };
 
+    // Form_Zena=+Zena;
+    // $('#Form_Zena').text(Form_Zena);
 
-  
-  
-  
-  
-    // $('#but1').click(function (){
-    //     var block = $(this).parents('.calc');
-    //     block.find('.calc_form').show();
-    //     // block.find('.zakas_block2').show();
-    //
-    //
-    // });
-	
-	
-	
+
 
 
 

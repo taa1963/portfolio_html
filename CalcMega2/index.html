@@ -217,11 +217,52 @@
                     <div class="calc_itog">
 
                         <div class="calc_itog_zena">
-                        <h3>Стоимость работ</h3>
+                              <h3>Стоимость работ</h3>
 
                             <p>ИТОГО:  <span id="Zena"></span> <b id="bs" class="bs">&#8381;</b>  </p>
 
                         </div>
+
+
+                        <form id="form1" action="send1.php" method="post">
+
+                            <div class="form_param">
+
+                                <span id="Form_Zena" name="Form_Zena"></span>
+
+
+
+
+                            </div>
+
+
+
+
+
+
+                            <div class="first">
+                                <input type="text" name="name1" id="name1" placeholder="Ф.И.О" size="30" />
+                            </div>
+
+                            <div class="first">
+                                <input type="text" name="telefon" id="telefon"  placeholder="Номер телефона" size="30" required />
+                            </div>
+
+
+
+
+                            <div class="futer_button">
+                                <div class="futer_button_s">
+                                    <p class="submit"><button type="submit">ЗАКАЗАТЬ</button></p>
+                                </div>
+                            </div>
+
+                        </form>
+
+
+
+
+
 
 
 
@@ -239,10 +280,6 @@
 
 
 
-       <!--<div class="block_v">-->
-
-       <!--</div>-->
-
 
 
    </section>
@@ -259,7 +296,7 @@
 <script src="js/scriptsCalc.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script>
-    $("#tel_prod").mask("+7(999)999-99-99");
+    $("#telefon").mask("+7(999)999-99-99");
 </script>
 
 </body>

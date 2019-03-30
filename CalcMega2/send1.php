@@ -1,27 +1,44 @@
 <?php
 // если была нажата кнопка "Отправить"
 if (
-    isset($_POST['name_client']) && !empty($_POST['name_client']) &&
-    isset($_POST['adr']) && !empty($_POST['adr']) &&
-    isset($_POST['tel_prod']) && !empty($_POST['tel_prod'])) {
+    isset($_POST['name1']) && !empty($_POST['name1']) &&
+    isset($_POST['telefon']) && !empty($_POST['telefon']) &&
+    isset($_POST['Form_Zena']) && !empty($_POST['Form_Zena'])) {
 
-    $name_client = substr(htmlspecialchars(trim($_POST['name_client'])), 0, 1000);
-    $tel_prod = substr(htmlspecialchars(trim($_POST['tel_prod'])), 0, 100);
-    $adr = substr(htmlspecialchars(trim($_POST['adr'])), 0, 1000);
+    $name1 = substr(htmlspecialchars(trim($_POST['name1'])), 0, 1000);
+    $telefon = substr(htmlspecialchars(trim($_POST['telefon'])), 0, 100);
+    $Form_Zena = substr(htmlspecialchars(trim($_POST['Form_Zena'])), 0, 1000);
 
 
-    //$to = 'alexandr.tupichenkov@yandex.ru';
-    $to = 'info@parrrrtwork.ru';
+    $to = 'alexandr.tupichenkov@yandex.ru';
+    //$to = 'info@parrrrtwork.ru';
     $title = 'Новый заказ';
     $message = "
         Был получен заказ с сайта от:
-        Имя: $tel_prod
-        Телефон: $email
-        Адрес: $adr
+        Имя: $name1
+        Телефон: $telefon
+        Цена заказа: $Form_Zena
         
        ";
 
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
+
+
+    if ($verify) {
+        echo '<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
+    <body><center><font color="green"> Заявка отправлена.</font><br/> 
+   <center><a href="https://aleksandr.tupichenkov.com/CalcMega2">Вернуться на главную</a> 
+   </body>';}
+    else {
+
+        echo '<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
+    <body><center>Письмо не отправлено.<br/> <center>
+   <a href="https://aleksandr.tupichenkov.com/CalcMega2">Вернуться на главную</a> 
+   </body>';}
+
+
 
 //    echo "<center>Ваше сообщениеуспешно <br><center> отправлено<BR><center><a href='http://www.partwork.ru/angrybirds/'>Вернуться на сайт</a>";
 

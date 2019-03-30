@@ -12,7 +12,7 @@ if (
     $TypeClient = substr(htmlspecialchars(trim($_POST['TypeClient'])), 0, 100);
     $ClientWork = substr(htmlspecialchars(trim($_POST['ClientWork'])), 0, 1000);
     $ClientRegion = substr(htmlspecialchars(trim($_POST['ClientRegion'])), 0, 1000);
-    $FormZena = substr(htmlspecialchars(trim($_POST['FormZena'])), 0, 1000);
+    $FormZena = substr(htmlspecialchars(trim($_POST['FormZena'])), 0, 1000000);
     //$to = 'clublaser@mail.ru';
     $to = 'alexandr.tupichenkov@yandex.ru';
     //$to = 'info@partwork.ru';

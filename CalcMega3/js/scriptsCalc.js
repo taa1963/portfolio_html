@@ -24,7 +24,10 @@ document.getElementById('type_work').value = 1;
 
 //================= Выбор "Регион работ".====================//
 
-$('#region_work').click(function (){
+
+    $('#region_work').on('click change mouseenter', function()
+
+    {
 
 	 var reg = document.getElementById("region_work").value;
 	 $('#reg').text(reg);
@@ -72,8 +75,7 @@ $('#region_work').click(function (){
 
 //================= Выбор УСЛУГИ.====================
 
-$('#type_work').click(function (){
-	
+    $('#type_work').on('click change mouseenter', function(){
 
 	 var work = document.getElementById("type_work").value;
 	 $('#work').text(work);
@@ -91,9 +93,6 @@ $('#type_work').click(function (){
         document.getElementById('region_work').value = 1;
         $(".distance_sp_block").addClass("l-hide");
         document.getElementById('Highway').value = 680;
-
-       // $(".distance_sp_block").addClass("l-hide");
-
    }
 
 //================= Выбор "Вынос точек"===================
@@ -161,20 +160,14 @@ $('#type_work').click(function (){
     if (work == 5){
         $(".mezhi_types_block").addClass("l-hide");
         $(".object_type_block").addClass("l-hide");
-        //document.getElementById('object_type').value = 1;
-
         $(".land_area_block").addClass("l-hide");
         $(".room_area_block").addClass("l-hide");
-        //document.getElementById('room_area').value = 30;
-
         $(".number_points_block").addClass("l-hide");
-
         $(".Highway_block").addClass("l-hide");
         $(".region_work_block").addClass("l-hide");
         $(".distance_mkad_block").addClass("l-hide");
         $(".distance_sp_block").addClass("l-hide");
-        //document.getElementById('region_work').value = 1;
-        //document.getElementById('number_points').value = 3;
+
 
     }
 
@@ -206,7 +199,7 @@ $('#type_work').click(function (){
 
 
 //===== Вызов расчета цены при выборе статуса клиента Физ или Юр   =====//
-    $('#owner').click(function (){
+    $('#owner').on('click change mouseenter', function(){
         zena();
     });
 
@@ -263,14 +256,15 @@ $('#type_work').click(function (){
 
     //===== Вызов расчета цены при выборе Шоссе  МКАД    =====//
 
-    $('#Highway').click(function (){
+    $('#Highway').on('click change mouseenter', function () {
+    //$('#Highway').click(function (){
       zena();
     });
 
 
     //===== Вызов расчета цены при выборе Вид межевания    =====//
-
-    $('#mezhi_types').click(function (){
+    $('#mezhi_types').on('click change mouseenter', function () {
+   // $('#mezhi_types').click(function (){
         zena();
     });
 
@@ -306,8 +300,8 @@ $('#type_work').click(function (){
 
 
     //===== Вызов расчета цены при выборе Вид объекта    =====//
-
-    $('#object_type').click(function (){
+    $('#object_type').on('click change mouseenter', function () {
+   // $('#object_type').click(function (){
         zena();
     });
 
@@ -1544,29 +1538,17 @@ $('#type_work').click(function (){
 
                         Zena = +ZenaR;
                         $('#Zena').text(Zena);
-
-
                     }
-
-
                 }
 
-
-            //===================================
         }
       //============ Блок подготовки данных к перчати  =======================//
-        if (document.getElementById("owner").value == 1) {
-            var TypeClient = "Физическое лицо";
-            $('#TypeClient').text(TypeClient);
-            document.getElementById("TypeClient").value = TypeClient;
 
+        var TypeClient = $("#owner option:selected").text();
+        $('#TypeClient').text(TypeClient);
+        document.getElementById("TypeClient").value = TypeClient;
 
-        }
-        if (document.getElementById("owner").value == 2) {
-            var TypeClient = "Юридическое  лицо";
-            $('#TypeClient').text(TypeClient);
-            document.getElementById("TypeClient").value = TypeClient;
-        }
+       //--------------------------------------------------//
 
         Form_Zena=+Zena;
         $('#Form_Zena').text(Form_Zena);
@@ -1574,37 +1556,17 @@ $('#type_work').click(function (){
 
 
       //--------------------------------------------------//
-        //document.getElementById("region_work").value == 1) {
-         var Form_work = document.getElementById("type_work").value;
-          if (Form_work==1) {Form_workP ="Межевание" };
-          if (Form_work==2) {Form_workP ="Вынос точек" };
-          if (Form_work==3) {Form_workP ="Технический план" };
-          if (Form_work==4) {Form_workP ="Акт обследования" };
-          if (Form_work==5) {Form_workP ="Подача документов в Росреестр" };
-          if (Form_work==6) {Form_workP ="Исправление кадастровых ошибок" };
 
-        $('#Form_workP').text(Form_workP);
+        var Form_workP = $("#type_work option:selected").text();
+         $('#Form_workP').text(Form_workP);
         document.getElementById("ClientWork").value = Form_workP;
 
         //-------------------------------------//
-
-        var Form_region = document.getElementById("region_work").value;
-        if (Form_region==1) {Form_regionP ="Московская область" };
-        if (Form_region==2) {Form_regionP ="Москва (включая новую Москву)" };
-        if (Form_region==3) {Form_regionP ="Санкт-Петербург" };
-        if (Form_region==4) {Form_regionP ="Ленинградская область" };
-
+        var Form_regionP = $("#region_work option:selected").text();
         $('#Form_regionP').text(Form_regionP);
         document.getElementById("ClientRegion").value = Form_regionP;
 
-
-
-
-
-
     };
-
-
 });
 
 

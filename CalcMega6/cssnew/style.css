@@ -239,14 +239,17 @@
     text-align: center;
     color: #000000;
     font-family: "Maven Pro", Arial, Tahoma, sans-serif;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 600;
+    font-style: italic;
 
 }
 
 .calc_itog_zena p{
     display: block;
     text-align: center;
+    /*font-size: 2em;*/
+    color: #000000;
     margin: 0 auto;
 }
 .calc_itog_zena span{

@@ -1,0 +1,386 @@
+
+/*Описание контейнера и его компонентов  */
+.container {
+    position: relative;
+   
+    height: auto;
+    margin: 0 auto;
+ }
+
+/*Описание первого блока, только для демонстрации на моем хосте */
+.block_v{
+    display: block;
+    width: 100%;
+    height:50px;
+    background-color: coral;
+}
+
+
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.calc{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 95%;
+    margin: 0 auto;
+    /*min-height: 20px;*/
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+    background-color:#658b01;
+	
+
+}
+
+
+
+/*		Описание шапки блока калькулятора и его компонент		*/
+.calc_head{
+    display: block;
+    margin: 0 auto;
+}
+
+.calc_head h2{
+
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 2em;
+    /*font-weight: 700;*/
+
+    /*font-family: inherit;*/
+    font-weight: 500;
+    line-height: 1.1;
+    color: azure;
+    text-transform: none;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+
+.calc_all{
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #761c19;
+
+}
+/*		Описание блока ввода параметров и его компонетнов		*/
+.calc_param{
+    display: block;
+    width: 50%;
+    height: auto;
+    position: relative;
+    float: left;
+
+}
+
+/*		Описание блока ввода Ваш статус и его компонетнов		*/
+.owner_type_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+}
+
+.param_title{
+    display: block;
+    width: 47%;
+    float: left;
+    text-align: left;
+    color: #000000;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0;
+    padding-left: 10px;
+	font-style: italic;
+    /*font-size: 14px;*/
+
+}
+
+.owner{
+    display: block;
+    width: 50%;
+    float: left;
+    border: 2px solid #73040b;
+	border-radius: 5px;
+}
+
+
+.calc_param input{
+    border: 2px solid #73040b;
+	border-radius: 5px;
+}
+
+
+/*		Описание блока ввода Услуга и его компонетнов		*/
+
+.type_work_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока ввода Вид межевания и его компонетнов		*/
+
+.mezhi_types_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока Площадь участка и его компонетнов		*/
+.land_area_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+.area{
+    display: block;
+    width: 10%;
+    float: left;
+}
+
+/*		Описание блока Количество точек участка и его компонетнов		*/
+.number_points_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока Тип объекта и его компонетнов		*/
+.object_type_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока Регион работ и его компонетнов		*/
+
+.region_work_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*		Описание блока Площадь помещения и его компонетнов		*/
+
+.room_area_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/*		Описание блока Шоссе и его компонетнов		*/
+
+.Highway_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/*		Описание блока Км от МКАД и его компонетнов		*/
+.distance_mkad_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/*		Описание блока Удаленность от Санкт-Петербурга и его компонетнов		*/
+
+.distance_sp_block{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+.l-hide {
+  display: none;
+  
+}
+
+
+
+
+/*		Описание блока итогов и его компонетнов		*/
+.calc_itog{
+    display: block;
+    width: 50%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+.calc_itog_zena{
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+.calc_itog_zena h3{
+    text-align: center;
+    color: #000000;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+
+}
+
+.calc_itog_zena p{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.calc_itog_zena span{
+    font-size: 2em;
+    font-weight: 700;
+    color: azure;
+    margin-left: 10px;
+
+
+}
+
+.calc_itog_zena p b{
+    font-size: 2em;
+    font-weight: 700;
+    color: azure;
+    margin-left: 10px;
+
+
+}
+
+
+
+/* ================= Форма отправки и кнопка оформить    =============*/
+
+.calc button{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #73040b;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.6em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+}
+
+.calc button:focus{
+    background-color: #0467a6;
+}
+
+
+
+
+
+#form1{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #73040b;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#form1 .first{
+    display: block;
+    width: 90%;
+    /*background-color: #fff;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 4px;
+    /*color: #FFFFFF;*/
+    /*border: 1px solid #8c8c8c;*/
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#form1 .first input{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+	font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1em;
+	color:#000000;
+}
+
+.form_param{
+
+    /*display: block;*/
+    display: none;
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+
+}
+
+#Form_Zena{
+   width: 100%;
+    height: 15px;
+}
+
+
+
+
+
+
+@media only screen  and (max-width: 990px) {
+
+    .area{
+        width: 48%;
+    }
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+    .calc_param {
+        display: block;
+        width: 100%;
+    }
+
+    .calc_itog{
+        display: block;
+        width: 100%;
+    }
+   
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+
+
+
+
+}

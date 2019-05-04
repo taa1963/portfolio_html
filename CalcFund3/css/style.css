@@ -1228,6 +1228,26 @@
     height: 410px;
 }
 
+.zena{
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.zena span{
+    font-weight: bold;
+    color: #2e6da4;
+}
+
+.zena_itog{
+    display: inline-block;
+    margin-top: 30px;
+}
+
+
+
+
 /*	=====================	Первая форма заказа	===============	*/
 
 .zakas_form1{

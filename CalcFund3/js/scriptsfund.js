@@ -2010,7 +2010,7 @@ $(document).ready(function() {
     // });
 
 
-    $('#sm1').click(function () {
+    $('#sm2').click(function () {
 
         if (VarFund==1) {
             var block = $(this).parents('.content');

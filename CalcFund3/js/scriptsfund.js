@@ -2155,6 +2155,8 @@ $(document).ready(function() {
 
 
         smeta();
+        block.find('.zena').show();
+
 
     });
 
@@ -2585,7 +2587,7 @@ $(document).ready(function() {
         // Обеспечение биотуалетом
         var kbiotual=1;
         kbiotual=Math.round(kbiotual);
-        $('#kvagon').text(kvagon);
+        $('#kbiotual').text(kbiotual);
 
         var zkbiotual=kbiotual*5000;
         zkbiotual=Math.round(zkbiotual);
@@ -2634,6 +2636,10 @@ $(document).ready(function() {
         // zitogM1
         zitogSM=Math.round(zitogSM);
         $('#zitogSM').text(zitogSM);
+
+        var zena_smetu=zitogSM;
+        zena_smetu=Math.round(zena_smetu);
+        $('#zena_smetu').text(zena_smetu);
 
 
 

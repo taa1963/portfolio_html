@@ -22,7 +22,7 @@ if (
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
     if ($verify) {
 
-        header('Location: https://aleksandr.tupichenkov.com/CalcFund3/#success', true, 302);
+        header('Location: https://aleksandr.tupichenkov.com/CalcFund3/#popup_block', true, 302);
         exit;
     } else {
         header('Location: https://aleksandr.tupichenkov.com/CalcFund3/?form_error=1', true, 302);

@@ -2078,9 +2078,10 @@ $(document).ready(function() {
 
         }
 
-
+        block.find('.zena').show();
 
         smeta();
+
 
     });
 

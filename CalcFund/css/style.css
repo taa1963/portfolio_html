@@ -499,6 +499,18 @@
     margin-bottom: 20px;
 }
 
+.gidro_bok{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.gidro_pod{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
 .gidroz_pl{
     display: inline-block;
     width: 90%;
@@ -645,40 +657,41 @@
 }
 .zakas_img_lenta{
     display: block;
-    width: 100%;
+    width: 400px;
+    margin-top: 150px;
 }
 
 .zakas_img_plita{
     display: none;
-    width: 100%;
-    margin-top: 50px;
+    width: 400px;
+    margin-top: 150px;
 }
 
 .zakas_img_plitanr{
     display: none;
-    width: 100%;
-    margin-top: 50px;
+    width: 400px;
+    margin-top: 150px;
 }
 
 .zakas_img_plitavr{
     display: none;
-    width: 100%;
-    margin-top: 50px;
+    width: 400px;
+    margin-top: 150px;
 }
 
 .zakas_img_uhd{
     display: none;
-    width: 100%;
-    margin-top: 50px;
+    width: 400px;
+    margin-top: 150px;
 }
 
 .zakas_img_zok{
     display: none;
-    width: 100%;
-    margin-top: 50px;
+    width: 400px;
+    margin-top: 150px;
 }
 
-/*------------------*/
+/*---------отображение рисунков для ЛЕНТА ---------*/
 .basic1{
     display: block;
     width: 411px;
@@ -688,101 +701,689 @@
 .basic2{
     display: none;
     position: absolute;
-    top: 47px;
+    width: 328px;
+    top: 151px;
     left: 61px;
+    z-index: 1;
 }
 
-
-
-.param_02{
+.param_01l{
     display: none;
     position: absolute;
-    top: 76px;
-    left: 255px;
+    width: 407px;
+    top: 237px;
+    left: 16px;
+    z-index: 1;
 }
 
-.param_01{
+.param_02l{
     display: none;
     position: absolute;
-    top: 94px;
-    left: 13px;
+    width: 330px;
+    top: 201px;
+    left: 60px;
+    z-index: 1;
 }
 
-.param_03{
+.param_03l{
     display:none;
     position: absolute;
-    top: 83px;
-    left: 13px;
+    width: 357px;
+    top: 151px;
+    left: 44px;
+    z-index: 1;
 }
 
-.param_04{
+.param_04l{
     display:none;
     position: absolute;
-    top: 119px;
-    left: 172px;
+    width: 360px;
+    top: 220px;
+    left: 44px;
+    z-index: 1;
 }
 
-.param_05{
+.param_05l{
     display:none;
     position: absolute;
-    top: 53px;
-    left: 76px;
+    width: 343px;
+    top: 187px;
+    left: 89px;
+    z-index: 1;
 }
-.param_06{
+.param_06l{
     display:none;
     position: absolute;
-    top: 1px;
-    left: 65px;
-}
-
-.extra_01{
-    display:none;
-    position: absolute;
-    top: 47px;
-    left: 51px;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
 }
 
-.extra_02{
+.param_07l{
     display:none;
     position: absolute;
-    top: 58px;
-    left: 61px;
-}
-
-.extra_03{
-    display:none;
-    position: absolute;
-    top: 58px;
-    left: 61px;
-}
-
-.extra_04{
-    display:none;
-    position: absolute;
-    top: 101px;
-    left: 249px;
-}
-
-.extra_07{
-    display:none;
-    position: absolute;
-    top: -5px;
-    left: 65px;
-}
-
-.extra_08{
-    display:none;
-    position: absolute;
+    top: 93px;
+    left: 36px;
     z-index: -1;
-    top: -29px;
-    left: 127px;
 }
+
+
+
+/*================ Рисунки для блока Плита ====================*/
+
+.basic1pl{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2pl{
+    display: none;
+    position: absolute;
+    top: 164px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_01pl{
+    display: none;
+    position: absolute;
+    width: 285px;
+    top: 257px;
+    left: 80px;
+    z-index: 1;
+}
+
+.param_02pl{
+    display: none;
+    position: absolute;
+    width: 399px;
+    top: 264px;
+    left: 21px;
+    z-index: 1;
+}
+
+
+.param_03pl{
+    display: none;
+    position: absolute;
+    width: 409px;
+    top: 225px;
+    left: 16px;
+    z-index: 1;
+}
+
+.param_04pl{
+    display: none;
+    position: absolute;
+    width: 453px;
+    top: 224px;
+    left: -8px;
+    z-index: 1;
+}
+
+.param_05pl{
+    display:none;
+    position: absolute;
+    width: 284px;
+    top: 257px;
+    left: 81px;
+    z-index: 1;
+}
+
+.param_06pl{
+    display:none;
+    position: absolute;
+    width: 475px;
+    top: 248px;
+    left: -20px;
+    z-index: 1;
+}
+
+.param_07pl{
+    display:none;
+    position: absolute;
+    width: 345px;
+    top: 193px;
+    left: 82px;
+    z-index: 1;
+}
+
+.param_08pl{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_09pl{
+    display:none;
+    position: absolute;
+    top: 93px;
+    left: 36px;
+    z-index: -1;
+}
+
+/*================ Рисунки для блока Плита NR ====================*/
+
+.basic1pln{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2pln{
+    display: none;
+    position: absolute;
+    top: 164px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_01plnr{
+    display:none;
+    position: absolute;
+    width: 400px;
+    top: 261px;
+    left: 22px;
+    z-index: 1;
+}
+
+.param_02plnr{
+    display:none;
+    position: absolute;
+    width: 400px;
+    top: 226px;
+    left: 22px;
+    z-index: 1;
+}
+
+.param_03plnr{
+    display:none;
+    position: absolute;
+    width: 420px;
+    top: 164px;
+    left: 8px;
+    z-index: 1;
+}
+
+.param_04plnr{
+    display:none;
+    position: absolute;
+    width: 380px;
+    top: 259px;
+    left: 34px;
+    z-index: 1;
+}
+.param_05plnr{
+    display:none;
+    position: absolute;
+    width: 412px;
+    top: 247px;
+    left: 12px;
+    z-index: 1;
+}
+
+.param_06plnr{
+    display:none;
+    position: absolute;
+    width: 340px;
+    top: 187px;
+    left: 83px;
+    z-index: 1;
+}
+
+.param_07plnr{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_08plnr{
+    display:none;
+    position: absolute;
+    top: 93px;
+    left: 36px;
+    z-index: -1;
+}
+
+/*================ Рисунки для блока Плита VR ====================*/
+
+.basic1plvr{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2plvr{
+    display: none;
+    width: 350px;
+    position: absolute;
+    top: 131px;
+    left: 39px;
+    z-index: 1;
+}
+
+.param_01plvr{
+    display:none;
+    position: absolute;
+    width: 250px;
+    top: 233px;
+    left: 91px;
+    z-index: 1;
+}
+
+.param_02plvr{
+    display:none;
+    position: absolute;
+    width: 400px;
+    top: 239px;
+    left: 22px;
+    z-index: 1;
+}
+
+
+.param_03plvr{
+    display:none;
+    position: absolute;
+    width: 353px;
+    top: 215px;
+    left: 37px;
+    z-index: 1;
+}
+.param_04plvr{
+    display:none;
+    position: absolute;
+    width: 270px;
+    top: 230px;
+    left: 87px;
+    z-index: 1;
+}
+
+.param_05plvr{
+    display:none;
+    position: absolute;
+    width: 357px;
+    top: 178px;
+    left: 35px;
+    z-index: 1;
+}
+
+.param_06plvr{
+    display:none;
+    position: absolute;
+    width: 386px;
+    top: 128px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_07plvr{
+    display:none;
+    position: absolute;
+    width: 386px;
+    top: 221px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_08plvr{
+    display:none;
+    position: absolute;
+    width: 340px;
+    top: 165px;
+    left: 88px;
+    z-index: 1;
+}
+
+.param_09plvr{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_10plvr{
+    display:none;
+    position: absolute;
+    top: 62px;
+    left: 36px;
+    z-index: -1;
+}
+
+/*================ Рисунки для блока USP ====================*/
+
+.basic1uhp{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2uhp{
+    display: none;
+    width: 387px;
+    position: absolute;
+    top: 150px;
+    left: 32px;
+    z-index: 1;
+}
+
+.param_01uhp{
+    display:none;
+    position: absolute;
+    width: 400px;
+    top: 233px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_02uhp{
+    display:none;
+    position: absolute;
+    width: 350px;
+    top: 163px;
+    left: 79px;
+    z-index: 1;
+}
+
+.param_03uhp{
+    display:none;
+    position: absolute;
+    width: 383px;
+    top: 218px;
+    left: 31px;
+    z-index: 2;
+}
+
+.param_04uhp{
+    display:none;
+    position: absolute;
+    width: 354px;
+    top: 149px;
+    left: 42px;
+    z-index: 1;
+}
+
+.param_05uhp{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_06uhp{
+    display:none;
+    position: absolute;
+    op: 99px;;
+    left: 36px;
+    z-index: -1;
+}
+
+/*================ Рисунки для блока ZOKOL ====================*/
+
+
+.basic1zok{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2zok{
+    display: none;
+    width: 387px;
+    position: absolute;
+    top: 150px;
+    left: 32px;
+    z-index: 1;
+}
+
+.param_01zok{
+    display:none;
+    position: absolute;
+    width: 240px;
+    top: 302px;
+    left: 109px;
+    z-index: 1;
+}
+
+.param_02zok{
+    display:none;
+    position: absolute;
+    width: 380px;
+    top: 233px;
+    left: 37px;
+    z-index: 1;
+}
+
+.param_03zok{
+    display:none;
+    position: absolute;
+    width: 327px;
+    top: 200px;
+    left: 62px;
+    z-index: 1;
+}
+
+.param_04zok{
+    display:none;
+    position: absolute;
+    width: 250px;
+    top: 301px;
+    left: 101px;
+    z-index: 1;
+}
+
+.param_05zok{
+    display:none;
+    position: absolute;
+    width: 360px;
+    top: 149px;
+    left: 43px;
+    z-index: 1;
+}
+
+.param_06zok{
+    display:none;
+    position: absolute;
+    width: 360px;
+    top: 216px;
+    left: 43px;
+    z-index: 1;
+}
+
+.param_07zok{
+    display:none;
+    position: absolute;
+    width: 320px;
+    top: 241px;
+    left: 107px;
+    z-index: 1;
+}
+
+.param_08zok{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_09zok{
+    display:none;
+    position: absolute;
+    top: 99px;;
+    left: 36px;
+    z-index: -1;
+}
+
 /*---------------------*/
 .basic_zok{
     display: block;
     width: 384px;
     height: 410px;
 }
+
+/*	=====================	Первая форма заказа	===============	*/
+
+.zakas_form1{
+    display: block;
+    width: 100%;
+    margin-top: 100px;
+}
+
+#form1 .first{
+  border-bottom: 1px solid #000000;
+}
+
+#form1 .first input {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    font-size: 1em;
+    color: #000000;
+    border: 0;
+}
+
+.form_button1{
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+   margin-top: 50px;
+}
+
+
+.form_button1{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 50px;
+
+}
+
+.form_button1 button{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #000000;
+    border-radius:5px;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    /*text-transform: none;*/
+    font-weight: 400;
+    text-align: center;
+    background-color: #0467a6;
+}
+
+
+/*Test*/
+
+.test{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 40px;
+}
+
+
+/*	========Смета для плиты====		*/
+
+.zakas_smeta_plita{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plita h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.zakas_smeta_lenta{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_lenta h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+.zakas_smeta_plitanr{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plitanr h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.zakas_smeta_plitavr{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plitavr h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.zakas_smeta_plitauhp{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plitauhp h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.zakas_smeta_plitazok{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plitazok h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+
 
 
 
@@ -819,20 +1420,6 @@
 /*		Первый блок. Выбор размеров бани		*/
 
 
-.zakas{
-    display: block;
-    width: 100%;
-}
-
-
-
-
-.button_block4{
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 50px;
-}
 
 
 

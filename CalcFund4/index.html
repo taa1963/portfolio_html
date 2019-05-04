@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Расчет сметы фундамента</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="taa">
+
+
+    <link href="css/modal-contact.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+
+   <div class="header">
+       <div class="container">
+         <div class="row">
+
+           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="header_titel">
+                     <h1>Расчет сметы онлайн</h1>
+                </div>
+           </div>
+
+         </div>
+       </div>
+   </div>
+
+
+   <div class="content">
+       <div class="zakas_blockinfo"  id="zakas_blockinfo">
+          <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2>Выберите тип фундамента</h2>
+          </div>
+
+           <div class="zakas_menu">
+             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="zakas_menu1 menuclik" id="zakas_menu1" active>
+                   <p>Ленточный</p>
+               </div>
+
+
+
+              <div class="zakas_menu1" id="zakas_menu2">
+                   <p>Плита</p>
+               </div>
+
+
+               <div class="zakas_menu1" id="zakas_menu3">
+                   <p>Плита с нижним ростверком</p>
+               </div>
+
+
+               <div class="zakas_menu1" id="zakas_menu4">
+                       <p>Плита с верхним ростверком</p>
+               </div>
+
+               <div class="zakas_menu1" id="zakas_menu5">
+                   <p>УШП</p>
+               </div>
+
+
+
+               <div class="zakas_menu1" id="zakas_menu6">
+                    <p>Цокольный</p>
+               </div>
+             </div>
+            </div>
+       </div>
+       </div>
+
+       <div class="zakas_data"  id="zakas_data">
+
+           <div class="row">
+
+               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+               <div class="zakas_proportions"  id="zakas_proportions">
+
+                   <h3>Размеры</h3>
+
+                   <!---------блок для ленты ------->
+                 <div class="zakas_proportions_len"  id="zakas_proportions_len">
+
+                   <div class="land" id="land">
+                       <p class="param_title">Длина, м </p>
+
+                       <input type="number" class="landf" id="landf"  value="0" min="0" max="200" step="1" />
+
+                   </div>
+
+
+                   <div class="breadth" id="breadth">
+                       <p class="param_title">Ширина, м </p>
+
+                       <input type="number" class="breadthf" id="breadthf"  value="0" min="0" max="200" step="1" />
+
+                   </div>
+
+
+                   <div class="elevation" id="elevation">
+                       <p class="param_title">Высота ленты, м </p>
+
+                       <input type="number" class="elevationf" id="elevationf"  value="0.6" min="0" max="10" step="0.1" />
+
+                   </div>
+
+                   <div class="breadthl" id="breadthl">
+                       <p class="param_title">Ширина ленты, м </p>
+
+                       <input type="number" class="breadthlf" id="breadthlf"  value="0.3" min="0" max="10" step="0.1" />
+
+                   </div>
+
+                   <div class="landl" id="landl">
+                       <p class="param_title">Длина ленты, м.п. </p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>Это расчетная длина ленты, если у вас свое значение, подставьте его</p>
+                           </div>
+                       </div>
+
+                       <input type="number" class="landlf" id="landlf"  value="0" min="0" max="200" />
+
+                   </div>
+
+                   <div class="perimeterl" id="perimeterl">
+                       <p class="param_title">Периметр фундамента, м.п. </p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>Это расчетная величина, если у вас свое значение, подставьте его</p>
+                           </div>
+                       </div>
+
+                       <input type="number" class="perimeterlf" id="perimeterlf"  value="0" min="0" max="200" />
+                   </div>
+
+
+
+                   <div class="distancelpl" id="distancelpl">
+                       <p class="param_title">Растояние от КАД, м. </p>
+
+                       <input type="number" class="distancelplf" id="distancelplf"  value="25" min="0" max="200" step="1"/>
+                   </div>
+
+
+
+
+
+
+
+
+               </div>
+
+                   <!---------блок для плиты ------->
+                   <div class="zakas_proportions_pl"  id="zakas_proportions_pl">
+                       <!---------блок для плиты------->
+
+
+                       <div class="landpl" id="landpl">
+                           <p class="param_title">Длина, м </p>
+
+                           <input type="number" class="landpli" id="landpli"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="breadthpl" id="breadthpl">
+                           <p class="param_title">Ширина, м </p>
+
+                           <input type="number" class="breadthpli" id="breadthpli"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="elevation_pl" id="elevation_pl">
+                           <p class="param_title">Высота плиты, м </p>
+
+                           <input type="number" class="elevationpl" id="elevationpl"  value="0.6" min="0" max="10" step="0.1" />
+
+                       </div>
+
+                       <div class="area_pl" id="area_pl">
+                           <p class="param_title">Площадь фундамента, м2 </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="areapplf" id="areapplf"  value="0" min="0" max="200" />
+
+                       </div>
+
+                       <div class="perim_pl" id="perim_pl">
+                           <p class="param_title">Периметр фундамента, м.п. </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="perimplf" id="perimplf"  value="0" min="0" max="200" />
+
+                       </div>
+
+                       <div class="pesok_pl" id="pesok_pl">
+                           <p class="param_title">Толщина песчаной подушки, м </p>
+
+                           <input type="number" class="pesokplf" id="pesokplf"  value="0.3" min="0" max="200" step="0.1" />
+
+                       </div>
+
+                       <div class="sheben_pl" id="sheben_pl">
+                           <p class="param_title">Толщина щебёночной подушки, м </p>
+
+                           <input type="number" class="shebenplf" id="shebenplf"  value="0.3" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+
+
+                       <div class="distancelent" id="distancelent">
+                           <p class="param_title">Растояние от КАД, м. </p>
+
+                           <input type="number" class="distancelentf" id="distancelentf"  value="25" min="0" max="200" step="1"/>
+                       </div>
+
+
+
+                   </div>
+
+                   <!---------блок для плиты  с нижним росвером------->
+                   <div class="zakas_proportions_plnr"  id="zakas_proportions_plnr">
+                       <!---------блок для плиты  с нижним росвером------->
+
+
+                       <div class="landpl" id="landplnr">
+                           <p class="param_title">Длина, м </p>
+
+                           <input type="number" class="landplfnr" id="landplfnr"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="breadthpl" id="breadthplnr">
+                           <p class="param_title">Ширина, м </p>
+
+                           <input type="number" class="breadthplfnr" id="breadthplfnr"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="elevation_pl" id="elevation_plnr">
+                           <p class="param_title">Высота плиты, м </p>
+
+                           <input type="number" class="elevationpl" id="elevationplnr"  value="0.6" min="0" max="10" step="0.1" />
+
+                       </div>
+
+                       <div class="area_pl" id="area_plnr">
+                           <p class="param_title">Площадь фундамента, м2 </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="areapplf" id="areapplfnr"  value="0" min="0" max="200" />
+
+                       </div>
+
+                       <div class="perim_pl" id="perim_plnr">
+                           <p class="param_title">Периметр фундамента, м.п. </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="perimplf" id="perimplfnr"  value="0" min="0" max="200" />
+
+                       </div>
+
+                       <div class="pesok_pl" id="pesok_plnr">
+                           <p class="param_title">Толщина песчаной подушки, м </p>
+
+                           <input type="number" class="pesokplf" id="pesokplfnr"  value="0.3" min="0" max="200" step="0.1" />
+
+                       </div>
+
+                       <div class="sheben_pl" id="sheben_plnr">
+                           <p class="param_title">Толщина щебёночной подушки, м </p>
+
+                           <input type="number" class="shebenplf" id="shebenplfnr"  value="0" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+
+                       <div class="lang_plvr" id="lang_plnr">
+                           <p class="param_title">Общая длина ростверка, м.п. </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Рассчитывается под все несущие стены и перегородки, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="langplvr" id="langplnr"  value="0" min="0" max="200" />
+
+                       </div>
+
+
+                       <div class="hpl_plnr" id="hpl_plnr">
+                           <p class="param_title">Высота ростверка, м </p>
+
+                           <input type="number" class="shebenplf" id="hplplnr"  value="0" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+                       <div class="shl_plnr" id="shpl_plnr">
+                           <p class="param_title">Ширина ростверка, м </p>
+
+                           <input type="number" class="shebenplf" id="shplplnr"  value="0" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+
+                       <div class="distancelent" id="distancelentnr">
+                           <p class="param_title">Растояние от КАД, м. </p>
+
+                           <input type="number" class="distancelentf" id="distancelentfnr"  value="25" min="0" max="200" step="1"/>
+                       </div>
+
+
+
+                   </div>
+
+
+                   <!---------блок для плиты  с верхним росвером------->
+                   <div class="zakas_proportions_plvr"  id="zakas_proportions_plvr">
+
+                       <div class="landpl" id="landplvr">
+                           <p class="param_title">Длина, м </p>
+
+                           <input type="number" class="landplfvr" id="landplfvr"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="breadthpl" id="breadthplvr">
+                           <p class="param_title">Ширина, м </p>
+
+                           <input type="number" class="breadthplfvr" id="breadthplfvr"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="elevation_pl" id="elevation_plvr">
+                           <p class="param_title">Высота плиты, м </p>
+
+                           <input type="number" class="elevationpl" id="elevationplvr"  value="0.6" min="0" max="10" step="0.1" />
+
+                       </div>
+
+                       <div class="area_pl" id="area_plvr">
+                           <p class="param_title">Площадь фундамента, м2 </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="areapplfvr" id="areapplfvr"  value="0" min="0" max="200" />
+
+                       </div>
+
+                       <div class="perim_pl" id="perim_plvr">
+                           <p class="param_title">Периметр фундамента, м.п. </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="perimplfvr" id="perimplfvr"  value="0" min="0" max="200" />
+
+                       </div>
+
+                       <div class="pesok_pl" id="pesok_plvr">
+                           <p class="param_title">Толщина песчаной подушки, м </p>
+
+                           <input type="number" class="pesokplfvr" id="pesokplfvr"  value="0.3" min="0" max="200" step="0.1" />
+
+                       </div>
+
+                       <div class="sheben_pl" id="sheben_plvr">
+                           <p class="param_title">Толщина щебёночной подушки, м </p>
+
+                           <input type="number" class="shebenplfvr" id="shebenplfvr"  value="0" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+
+                       <div class="lang_plvr" id="lang_plvr">
+                           <p class="param_title">Общая длина ростверка, м.п. </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Рассчитывается под все несущие стены и перегородки, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="langplvr" id="langplvr"  value="0" min="0" max="200" />
+
+                       </div>
+
+
+                       <div class="hpl_plnr" id="hpl_plvr">
+                           <p class="param_title">Высота ростверка, м </p>
+
+                           <input type="number" class="shebenplvr" id="hplplvr"  value="0" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+                       <div class="shl_plnr" id="shpl_plvr">
+                           <p class="param_title">Ширина ростверка, м </p>
+
+                           <input type="number" class="shebenplvr" id="shplplvr"  value="0" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+
+                       <div class="distancelent" id="distancelentvr">
+                           <p class="param_title">Растояние от КАД, м. </p>
+
+                           <input type="number" class="distancelentvr" id="distancelentfvr"  value="25" min="0" max="200" step="1"/>
+                       </div>
+
+
+
+                   </div>
+
+                   <!---------блок для плиты  с УШП------->
+                   <div class="zakas_proportions_pluhp"  id="zakas_proportions_pluhp">
+
+                       <div class="landpl" id="landpluhp">
+                           <p class="param_title">Длина, м </p>
+
+                           <input type="number" class="landuhp" id="landuhp"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="breadthpl" id="breadthpluhpr">
+                           <p class="param_title">Ширина, м </p>
+
+                           <input type="number" class="breadthuhp" id="breadthuhp"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+                       <div class="hpl_uhp" id="hpl_pluhp">
+                           <p class="param_title">Высота УШП, м </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>плита 100мм + ребро</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="hpluhp" id="hpluhp"  value="0.2" min="0" max="200" step="0.1" />
+
+                       </div>
+
+
+
+                       <div class="langreb_pluhp" id="langreb_pluhp">
+                           <p class="param_title">Длина несущих рёбер, м </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>сумма длин всех несущих стен и перегородок, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="langrebpluhp" id="langrebpluhp"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="perim_pluhp" id="perim_pluhp">
+                           <p class="param_title">Периметр фундамента, м </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="perimuhp" id="perimuhp"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+                       <div class="area_pluhp" id="area_pluhp">
+                           <p class="param_title">Площадь плиты, м2 </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="areauhp" id="areauhp"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="pesok_pl" id="pesok_pluhp">
+                           <p class="param_title">Толщина песчаной подушки, м </p>
+
+                           <input type="number" class="pesokuhp" id="pesokuhp"  value="0.3" min="0" max="200" step="0.1" />
+
+                       </div>
+
+
+                       <div class="distancelent" id="distancelentuhp">
+                           <p class="param_title">Растояние от КАД, м. </p>
+
+                           <input type="number" class="distanceuhp" id="distanceuhdp"  value="25" min="0" max="200" step="1"/>
+                       </div>
+
+
+
+                   </div>
+
+                   <!---------блок для цокольный------->
+                   <div class="zakas_proportions_plzok"  id="zakas_proportions_plzok">
+                       <!---------блок для плиты  с нижним росвером------->
+
+
+                       <div class="landpl" id="landplzok">
+                           <p class="param_title">Длина, м </p>
+
+                           <input type="number" class="landzok" id="landzok"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="breadthpl" id="breadthplzok">
+                           <p class="param_title">Ширина, м </p>
+
+                           <input type="number" class="breadthzok" id="breadthzok"  value="0" min="0" max="200" step="1" />
+
+                       </div>
+
+
+                       <div class="elevation_pl" id="elevation_plzok">
+                           <p class="param_title">Высота плиты, м </p>
+
+                           <input type="number" class="elevationzok" id="elevationzok"  value="0.6" min="0" max="10" step="0.1" />
+
+                       </div>
+
+                       <div class="area_pl" id="area_plzok">
+                           <p class="param_title">Площадь фундамента, м2 </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="areazok" id="areazok"  value="0" min="0" max="200" />
+
+                       </div>
+
+                       <div class="perim_pl" id="perim_plzok">
+                           <p class="param_title">Периметр фундамента, м.п. </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Это расчетная величина, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="perimpzok" id="perimpzok"  value="0" min="0" max="200" />
+
+                       </div>
+
+                       <div class="pesok_pl" id="pesok_plzok">
+                           <p class="param_title">Толщина песчаной подушки, м </p>
+
+                           <input type="number" class="pesokzok" id="pesokzok"  value="0.3" min="0" max="200" step="0.1" />
+
+                       </div>
+
+                       <div class="sheben_pl" id="sheben_plzok">
+                           <p class="param_title">Толщина щебёночной подушки, м </p>
+
+                           <input type="number" class="shebenzok" id="shebenzok"  value="0" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+
+                       <div class="lang_plvr" id="lang_plzok">
+                           <p class="param_title">Общая длина ростверка, м.п. </p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Рассчитывается под все несущие стены и перегородки, если у вас свое значение, подставьте его</p>
+                               </div>
+                           </div>
+
+                           <input type="number" class="langplzok" id="langplzok"  value="0" min="0" max="200" />
+
+                       </div>
+
+
+                       <div class="hpl_plnr" id="hpl_plzok">
+                           <p class="param_title">Высота ростверка, м </p>
+
+                           <input type="number" class="hplplzok" id="hplplzok"  value="0" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+                       <div class="shl_plnr" id="shpl_plzok">
+                           <p class="param_title">Ширина ростверка, м </p>
+
+                           <input type="number" class="shzok" id="shzok"  value="0" min="0" max="200" step="0.1"/>
+
+                       </div>
+
+
+                       <div class="distancelent" id="distancelentzok">
+                           <p class="param_title">Растояние от КАД, м. </p>
+
+                           <input type="number" class="distancelentfzok" id="distancelentfzok"  value="25" min="0" max="200" step="1"/>
+                       </div>
+
+
+
+                   </div>
+
+                   </div>
+               </div>
+
+               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+               <div class="zakas_services"  id="zakas_services">
+                   <h3>Дополнительные услуги</h3>
+
+                   <!---------блок для ленты ------->
+                <div class="zakas_services_lenta"  id="zakas_services_lenta">
+
+                   <div class="drenag" id="drenag">
+                       <p class="param_title">Устройство дренажа</p>
+                       <div class="popup_1">
+                       <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>По периметру фундамента</p>
+                           </div>
+                       </div>
+                        <input type="checkbox" id="drenagf" class="drenagf" name="drenagf" />
+                   </div>
+
+
+                   <div class="gidro" id="gidro">
+                       <p class="param_title">Гидроизоляция фундамента</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>Подошва и цоколь</p>
+                           </div>
+                       </div>
+
+                       <input type="checkbox" class="gidrof" id="gidrof" name="gidrof"/>
+                   </div>
+
+
+                   <div class="utep" id="utep">
+                       <p class="param_title">Утепление фундамента</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>Цоколь по периметру</p>
+                           </div>
+                       </div>
+                       <input type="checkbox" class="utepf" id="utepf"/>
+                   </div>
+
+                   <div class="otmos" id="otmos">
+                       <p class="param_title">Устройство отмостки</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>Система канализационных труб с отводом от фундамента</p>
+                           </div>
+                       </div>
+
+
+                       <input type="checkbox" class="otmosf" id="otmosf"/>
+                   </div>
+
+                   <div class="kanal" id="kanal">
+                       <p class="param_title">Разводка канализации</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>Система канализационных труб с отводом от фундамента</p>
+                           </div>
+                       </div>
+                       <input type="checkbox" class="kanalf" id="kanalf"/>
+                   </div>
+
+                   <div class="vater" id="vater">
+                       <p class="param_title">Монтаж закладных под воду,<br>
+                           электричество и канализацию</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>Система канализационных труб с отводом от фундамента</p>
+                           </div>
+                       </div>
+
+
+                           <input type="checkbox" class="vaterf" id="vaterf"/>
+                   </div>
+
+
+
+                   <div class="elektro" id="elektro">
+                       <p class="param_title">Обеспечение электричеством</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>Аренда генератора на весь этап строительства</p>
+                           </div>
+                       </div>
+
+
+                       <input type="checkbox" class="elektrof" id="elektrof"/>
+                   </div>
+
+                   <div class="arenda" id="arenda">
+                       <p class="param_title">Аренда вагончика для <br> проживания бригады</p>
+
+                       <input type="checkbox" class="arendaf" id="arendaf"/>
+                   </div>
+                </div>
+
+                   <!---------блок для плиты ------->
+               <div class="zakas_services_plita"  id="zakas_services_plita">
+
+                       <div class="geomem_pl" id="geomem_pl">
+                           <p class="param_title">Укладка геомембраны</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>используется вместо подбетонного основания</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" id="geomempl" class="geomem_pl" name="drenagf" />
+                       </div>
+
+
+                     <div class="osnov_pl" id="osnov_pl">
+                       <p class="param_title">Подбетонное основание</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>100мм, бетон в7,5</p>
+                           </div>
+                       </div>
+                       <input type="checkbox" id="osnovpl" class="osnovpl" name="drenagf" />
+                     </div>
+
+
+                     <div class="drenag_pl" id="drenag_pl">
+                       <p class="param_title">Устройство дренажа</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>по периметру фундамента</p>
+                           </div>
+                       </div>
+                       <input type="checkbox" id="drenagpl" class="drenagpl" name="drenagf" />
+                   </div>
+
+                    <div class="gidro_pl" id="gidro_pl">
+                           <p class="param_title">Гидроизоляция подошвы плиты</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>рулонная, Технониколь)</p>
+                               </div>
+                           </div>
+
+                           <input type="checkbox" class="gidropl" id="gidropl" name="gidrof"/>
+                    </div>
+
+                       <div class="utep_pl" id="utep_pl">
+                           <p class="param_title">Утепление подошвы плиты</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Пеноплекс 50мм</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="uteppl" id="uteppl"/>
+                       </div>
+
+                    <div class="gidroz_pl" id="gidroz_pl">
+                       <p class="param_title">Гидроизоляция цоколя плиты</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>оклеечная, Технониколь</p>
+                           </div>
+                       </div>
+                       <input type="checkbox" class="gidrozpl" id="gidrozpl"/>
+                    </div>
+
+                     <div class="teplo_pl" id="teplo_pl">
+                       <p class="param_title">Утепление цоколя плиты</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>Пеноплекс 50мм</p>
+                           </div>
+                       </div>
+                       <input type="checkbox" class="teplopl" id="teplopl"/>
+                   </div>
+
+                       <div class="otmos_pl" id="otmos_pl">
+                           <p class="param_title">Устройство отмостки</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>ширина 1м</p>
+                               </div>
+                           </div>
+
+
+                           <input type="checkbox" class="otmospl" id="otmospl"/>
+                       </div>
+
+                       <div class="kanal" id="kanal_pl">
+                           <p class="param_title">Разводка канализации</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>система труб d110мм, укладывается в подушку фундамента</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="kanalpl" id="kanalpl"/>
+                       </div>
+
+
+                       <div class="elektro" id="elektro_pl">
+                           <p class="param_title">Обеспечение электричеством</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Аренда генератора на весь этап строительства</p>
+                               </div>
+                           </div>
+
+
+                           <input type="checkbox" class="elektropl" id="elektropl"/>
+                       </div>
+
+                       <div class="arenda" id="arenda_pl">
+                           <p class="param_title">Аренда вагончика для <br> проживания бригады</p>
+
+                           <input type="checkbox" class="arendapl" id="arendapl"/>
+                       </div>
+                   </div>
+
+                   <!---------блок для плиты  с нижним росвером------->
+               <div class="zakas_services_plitanr"  id="zakas_services_plitanr">
+
+                       <div class="geomem_pl" id="geomem_plnr">
+                           <p class="param_title">Укладка геомембраны</p>
+                           <input type="checkbox" id="geomemplnr" class="geomem_pl" name="drenagf" />
+                       </div>
+
+
+                       <div class="osnov_pl" id="osnov_plnr">
+                           <p class="param_title">Подбетонное основание</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>под нижний ростверк</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" id="osnovplnr" class="osnovpl" name="drenagf" />
+                       </div>
+
+
+                       <div class="drenag_pl" id="drenag_plnr">
+                           <p class="param_title">Устройство дренажа</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>по периметру фундамента</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" id="drenagplnr" class="drenagplnr" name="drenagf" />
+                       </div>
+
+                       <div class="gidro_pl" id="gidro_plnr">
+                           <p class="param_title">Гидроизоляция ростверка и плиты</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Технониколь</p>
+                               </div>
+                           </div>
+
+                           <input type="checkbox" class="gidroplnr" id="gidroplnr" name="gidrof"/>
+                       </div>
+
+                       <div class="utep_pl" id="utep_plnrb">
+                           <p class="param_title">Утепление боковых стенок</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Пеноплекс 50мм</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="utepplnr" id="utepplnr"/>
+                       </div>
+
+
+                  <div class="utep_pl" id="utep_plpod">
+                      <p class="param_title">Утепление подошвы</p>
+                      <div class="popup_1">
+                          <img src="img/info.png" alt="info">
+                          <div class="popup_1_1">
+                              <p>Пеноплекс 50мм</p>
+                          </div>
+                      </div>
+                      <input type="checkbox" class="utepplpodnr" id="utepplpodnr"/>
+                  </div>
+
+                       <div class="otmos_pl" id="otmos_plnr">
+                           <p class="param_title">Устройство отмостки</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>ширина 1м</p>
+                               </div>
+                           </div>
+
+
+                           <input type="checkbox" class="otmosplnr" id="otmosplnr"/>
+                       </div>
+
+                       <div class="kanal" id="kanal_plnr">
+                           <p class="param_title">Разводка канализации</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>система труб d110мм, укладывается в подушку фундамента</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="kanalplnr" id="kanalplnr"/>
+                       </div>
+
+
+                       <div class="elektro" id="elektro_plnr">
+                           <p class="param_title">Обеспечение электричеством</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Аренда генератора</p>
+                               </div>
+                           </div>
+
+
+                           <input type="checkbox" class="elektroplnr" id="elektroplnr"/>
+                       </div>
+
+                       <div class="arenda" id="arenda_plnr">
+                           <p class="param_title">Аренда вагончика для <br> проживания бригады</p>
+
+                           <input type="checkbox" class="arendaplnr" id="arendaplnr"/>
+                       </div>
+                   </div>
+
+                   <!---------блок для плиты  с верхним росвером------->
+               <div class="zakas_services_plitavr"  id="zakas_services_plitavr">
+
+                       <div class="geomem_pl" id="geomem_plvr">
+                           <p class="param_title">Укладка геомембраны</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>используется вместо подбетонного основания</p>
+                               </div>
+                           </div>
+
+                           <input type="checkbox" id="geomemplvr" class="geomem_pl" name="drenagf" />
+                       </div>
+
+                       <div class="osnov_pl" id="osnov_plvr">
+                           <p class="param_title">Подбетонное основание</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>100мм, бетон в7,5</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" id="osnovplvr" class="osnovplvr" name="drenagf" />
+                       </div>
+
+                       <div class="drenag_pl" id="drenag_plvr">
+                           <p class="param_title">Устройство дренажа</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>по периметру фундамента</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" id="drenagplvr" class="drenagplvr" name="drenagf" />
+                       </div>
+
+                       <div class="gidro_pod" id="gidro_podvr">
+                           <p class="param_title">Гидроизоляция подошвы</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>рулонная, Технониколь</p>
+                               </div>
+                           </div>
+
+                           <input type="checkbox" class="gidropodvr" id="gidropodvr" name="gidrof"/>
+                       </div>
+
+                       <div class="utep_pl" id="utep_plvrb">
+                           <p class="param_title">Утепление подошвы</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Пеноплекс 50мм</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="utepplvr" id="utepplvr"/>
+                       </div>
+
+                       <div class="gidro_bok" id="gidro_bokvr">
+                       <p class="param_title">Гидроизоляция боковых стенок</p>
+                       <div class="popup_1">
+                           <img src="img/info.png" alt="info">
+                           <div class="popup_1_1">
+                               <p>рулонная, Технониколь</p>
+                           </div>
+                       </div>
+
+                       <input type="checkbox" class="gidrobokvr" id="gidrobokvr" name="gidrof"/>
+                   </div>
+
+                       <div class="utep_pl" id="utep_bokvr">
+                           <p class="param_title">Утепление боковых стенок</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Пеноплекс 50мм</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="utepbokvr" id="utepbokvr"/>
+                       </div>
+
+                       <div class="otmos_pl" id="otmos_plvr">
+                           <p class="param_title">Устройство отмостки</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>ширина 1м</p>
+                               </div>
+                           </div>
+
+
+                           <input type="checkbox" class="otmosplvr" id="otmosplvr"/>
+                       </div>
+
+                       <div class="kanal" id="kanal_plvr">
+                           <p class="param_title">Разводка канализации</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>система труб d110мм, укладывается в подушку фундамента</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="kanalplvr" id="kanalplvr"/>
+                       </div>
+
+
+                       <div class="elektro" id="elektro_plvr">
+                           <p class="param_title">Обеспечение электричеством</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Аренда генератора</p>
+                               </div>
+                           </div>
+
+
+                           <input type="checkbox" class="elektroplvr" id="elektroplvr"/>
+                       </div>
+
+                       <div class="arenda" id="arenda_plvr">
+                           <p class="param_title">Аренда вагончика для <br> проживания бригады</p>
+
+                           <input type="checkbox" class="arendaplvr" id="arendaplvr"/>
+                       </div>
+                   </div>
+
+                   <!---------блок для УШД------->
+                   <div class="zakas_services_uhd"  id="zakas_services_uhd">
+
+                       <div class="drenag_pl" id="drenag_uhd">
+                           <p class="param_title">Устройство дренажа</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>по периметру фундамента</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" id="drenaguhp" class="drenaguhp" name="drenagf" />
+                       </div>
+
+                       <div class="gidro_podvr" id="gidro_uhd">
+                           <p class="param_title">Устройство ливневой канализации</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>сбор и отвод воды с водосточной системы домаь</p>
+                               </div>
+                           </div>
+
+                           <input type="checkbox" class="gidrouhp" id="gidrouhp" name="gidrof"/>
+                       </div>
+
+                       <div class="otmos_pl" id="otmos_uhd">
+                           <p class="param_title">Устройство бетонной отмостки <br>с утеплением 50мм</p>
+
+                           <input type="checkbox" class="otmosuhp" id="otmosuhp"/>
+                       </div>
+
+                       <div class="kanal" id="kanal_uhd">
+                           <p class="param_title">Разводка канализации</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>система труб d110мм, укладывается в подушку фундамента</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="kanaluhp" id="kanaluhp"/>
+                       </div>
+
+                       <div class="kolektor_uhd" id="kolektor_uhd">
+                           <p class="param_title">Коллекторная разводка труб ХВС<br> и ГВС по точкам потребления</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>указано 12 точек, примерный расчет</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="kolektoruhp" id="kolektoruhp"/>
+                       </div>
+
+                       <div class="montag_uhg" id="montag_uhg">
+                           <p class="param_title">Монтаж ЛОС, типа «Астра-5»</p>
+
+                           <input type="checkbox" class="montaguhp" id="montaguhp" name="gidrof"/>
+                       </div>
+
+                       <div class="elektro" id="elektro_uhd">
+                           <p class="param_title">Обеспечение электричеством</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Аренда генератора</p>
+                               </div>
+                           </div>
+
+
+                           <input type="checkbox" class="elektrouhp" id="elektrouhp"/>
+                       </div>
+
+                       <div class="arenda" id="arenda_uhd">
+                           <p class="param_title">Аренда вагончика для <br> проживания бригады</p>
+
+                           <input type="checkbox" class="arendauhp" id="arendauhp"/>
+                       </div>
+                   </div>
+
+                   <!---------блок для цокольный ------->
+                   <div class="zakas_services_zok"  id="zakas_services_zok">
+
+                       <div class="geomem_pl" id="geomem_zok">
+                           <p class="param_title">Укладка геомембраны</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>используется вместо подбетонного основания</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" id="geomemzok" class="geomemzok" name="drenagf" />
+                       </div>
+
+
+                       <div class="osnov_pl" id="osnov_zok">
+                           <p class="param_title">Подбетонное основание</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>100мм, бетон в7,5</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" id="osnovzok" class="osnovzok" name="drenagf" />
+                       </div>
+
+
+                       <div class="drenag_pl" id="drenag_zok">
+                           <p class="param_title">Устройство дренажа</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>по периметру фундамента</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" id="drenagzok" class="drenagzok" name="drenagf" />
+                       </div>
+
+                       <div class="gidro_pl" id="gidro_zok">
+                           <p class="param_title">Гидроизоляция подошвы плиты</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>рулонная, Технониколь)</p>
+                               </div>
+                           </div>
+
+                           <input type="checkbox" class="gidropodzok" id="gidropodzok" name="gidrof"/>
+                       </div>
+
+                       <div class="utep_pl" id="utep_zok">
+                           <p class="param_title">Утепление подошвы плиты</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Пеноплекс 50мм</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="utepzok" id="utepzok"/>
+                       </div>
+
+                       <div class="gidroz_pl" id="gidroz_zok">
+                           <p class="param_title">Гидроизоляция цоколя плиты</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>оклеечная, Технониколь</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="gidrozok" id="gidrozok"/>
+                       </div>
+
+                       <div class="teplo_pl" id="teplo_zok">
+                           <p class="param_title">Утепление цоколя плиты</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Пеноплекс 50мм</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="utepzokzok" id="utepzokzok"/>
+                       </div>
+
+                       <div class="otmos_pl" id="otmos_zok">
+                           <p class="param_title">Устройство отмостки</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>ширина 1м</p>
+                               </div>
+                           </div>
+
+
+                           <input type="checkbox" class="otmoszok" id="otmoszok"/>
+                       </div>
+
+                       <div class="kanal" id="kanal_zokl">
+                           <p class="param_title">Разводка канализации</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>система труб d110мм, укладывается в подушку фундамента</p>
+                               </div>
+                           </div>
+                           <input type="checkbox" class="kanalzok" id="kanalzok"/>
+                       </div>
+
+
+                       <div class="elektro" id="elektro_zok">
+                           <p class="param_title">Обеспечение электричеством</p>
+                           <div class="popup_1">
+                               <img src="img/info.png" alt="info">
+                               <div class="popup_1_1">
+                                   <p>Аренда генератора на весь этап строительства</p>
+                               </div>
+                           </div>
+
+
+                           <input type="checkbox" class="elektrozok" id="elektrozok"/>
+                       </div>
+
+                       <div class="arenda" id="arenda_zok">
+                           <p class="param_title">Аренда вагончика для <br> проживания бригады</p>
+
+                           <input type="checkbox" class="arendazok" id="arendazok"/>
+                       </div>
+                   </div>
+
+               </div>
+               </div>
+
+               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+               <div class="zakas_img"  id="zakas_img">
+
+                   <h3>Примерный эскиз</h3>
+                   <!---------блок для ленты ------->
+                   <div class="zakas_img_lenta" id="zakas_img_lenta">
+                   <img src="img/lenta/base_new.png" class="basic1" id="basic1">
+                   <img src="img/lenta/lenta2.png" class="basic2" id="basic2">
+
+                        <!--Отображение доп параметров по ленте-->
+                   <img src="img/lenta/drenag.png"  class="param_01l" id="param_01l" >
+                   <img src="img/lenta/gidro.png"  class="param_02l" id="param_02l" >
+                   <img src="img/lenta/ytepl.png"  class="param_03l" id="param_03l" >
+                   <img src="img/lenta/otmost.png"  class="param_04l" id="param_04l" >
+                   <img src="img/lenta/kanal.png"  class="param_05l" id="param_05l" >
+                   <img src="img/lenta/generator.png"  class="param_06l" id="param_06l">
+                   <img src="img/lenta/container1.png"  class="param_07l" id="param_07l">
+
+                   </div>
+
+                   <!---------блок для плиты ------->
+                   <div class="zakas_img_plita" id="zakas_img_plita">
+                       <img src="img/plita/base_new.png" class="basic1pl" id="basic1pl">
+                       <img src="img/plita/plita2.png" class="basic2pl" id="basic2pl">
+
+                       <!--Отображение параметров по плите-->
+                       <img src="img/plita/osnov.png"  class="param_01pl" id="param_01pl" >
+                       <img src="img/plita/drenag.png"  class="param_02pl" id="param_02pl" >
+                       <img src="img/plita/gidro.png"  class="param_03pl" id="param_03pl" >
+                       <img src="img/plita/ytepl.png"  class="param_04pl" id="param_04pl" >
+                       <img src="img/plita/plitagidro.png"  class="param_05pl" id="param_05pl" >
+                       <img src="img/plita/otmost.png"  class="param_06pl" id="param_06pl" >
+                       <img src="img/plita/kanal.png"  class="param_07pl" id="param_07pl" >
+                       <img src="img/plita/generator.png"  class="param_08pl" id="param_08pl" >
+                       <img src="img/plita/container1.png"  class="param_09pl" id="param_09pl" >
+
+                   </div>
+
+                   <!---------блок для плиты  с нижним росвером------->
+                   <div class="zakas_img_plitanr" id="zakas_img_plitanr">
+                       <img src="img/plitanr/base_new.png" class="basic1pln" id="basic1pln">
+                       <img src="img/plitanr/bot.png" class="basic2pln" id="basic2pln">
+
+                       <!--Отображение параметров по плите с нижним росвером-->
+                       <img src="img/plitanr/drenag.png"  class="param_01plnr" id="param_01plnr" >
+                       <img src="img/plitanr/gidro.png"  class="param_02plnr" id="param_02plnr" >
+                       <img src="img/plitanr/uteplbok.png"  class="param_03plnr" id="param_03plnr" >
+                       <img src="img/plitanr/uteplpod.png"  class="param_04plnr" id="param_04plnr" >
+                       <img src="img/plitanr/otmos.png"  class="param_05plnr" id="param_05plnr" >
+                       <img src="img/plitanr/kanal.png"  class="param_06plnr" id="param_06plnr" >
+                       <img src="img/plitanr/generator.png"  class="param_07plnr" id="param_07plnr" >
+                       <img src="img/plitanr/container1.png"  class="param_08plnr" id="param_08plnr" >
+
+
+
+
+                   </div>
+
+                   <!---------блок для плиты  с верхним росвером------->
+                   <div class="zakas_img_plitavr" id="zakas_img_plitavr">
+                       <img src="img/plitavr/base_new.png" class="basic1plvr" id="basic1plvr">
+                       <img src="img/plitavr/top.png" class="basic2plvr" id="basic2plvr">
+
+                       <!--Отображение параметров по плите с верхним росвером-->
+                       <img src="img/plitavr/osnov.png"  class="param_01plvr" id="param_01plvr" >
+                       <img src="img/plitavr/drenag.png"  class="param_02plvr" id="param_02plvr" >
+                       <img src="img/plitavr/gidronis.png"  class="param_03plvr" id="param_03plvr" >
+                       <img src="img/plitavr/uteppod.png"  class="param_04plvr" id="param_04plvr" >
+                       <img src="img/plitavr/gidroverx.png"  class="param_05plvr" id="param_05plvr" >
+                       <img src="img/plitavr/uteplbok.png"  class="param_06plvr" id="param_06plvr" >
+                       <img src="img/plitavr/otmost.png"  class="param_07plvr" id="param_07plvr" >
+                       <img src="img/plitavr/kanal.png"  class="param_08plvr" id="param_08plvr" >
+                       <img src="img/plitavr/generator.png"  class="param_09plvr" id="param_09plvr" >
+                       <img src="img/plitavr/container1.png"  class="param_10plvr" id="param_10plvr" >
+
+
+
+
+
+
+                   </div>
+
+                   <!---------блок для УШД------->
+                   <div class="zakas_img_uhd" id="zakas_img_uhd">
+                       <img src="img/uhp/base_new.png" class="basic1uhp" id="basic1uhp">
+                       <img src="img/uhp/usp_sand.png" class="basic2uhp" id="basic2uhp">
+
+                           <!--Отображение параметров по плите с УШД-->
+                       <img src="img/uhp/drenag.png"  class="param_01uhp" id="param_01uhp" >
+                       <img src="img/uhp/kanal.png"  class="param_02uhp" id="param_02uhp" >
+                       <img src="img/uhp/ommost.png"  class="param_03uhp" id="param_03uhp" >
+                       <img src="img/uhp/utepl.png"  class="param_04uhp" id="param_04uhp" >
+                       <img src="img/uhp/generator.png"  class="param_05uhp" id="param_05uhp" >
+                       <img src="img/uhp/container1.png"  class="param_06uhp" id="param_06uhp" >
+
+
+
+                   </div>
+                   <!---------блок для цокольный ------->
+                   <div class="zakas_img_zok" id="zakas_img_zok">
+                       <img src="img/zok/base_new.png" class="basic1zok" id="basic1zok">
+                       <img src="img/zok/ground_floor_fix.png" class="basic2zok" id="basic2zok">
+
+                       <!--Отображение параметров по цокольный-->
+                       <img src="img/zok/osnov.png"  class="param_01zok" id="param_01zok" >
+                       <img src="img/zok/drenag.png"  class="param_02zok" id="param_02zok" >
+                       <img src="img/zok/gidro.png"  class="param_03zok" id="param_03zok" >
+                       <img src="img/zok/utepln.png"  class="param_04zok" id="param_04zok" >
+                       <img src="img/zok/uteplzok.png"  class="param_05zok" id="param_05zok" >
+                       <img src="img/zok/otmoct.png"  class="param_06zok" id="param_06zok" >
+                       <img src="img/zok/kanal.png"  class="param_07zok" id="param_07zok" >
+                       <img src="img/zok/generator.png"  class="param_08zok" id="param_08zok" >
+                       <img src="img/zok/container1.png"  class="param_09zok" id="param_09zok" >
+
+
+
+                   </div>
+
+
+
+
+               </div>
+
+                   <div class="zena" id="zena">
+                       <div class="zena_itog" id="zena_itog">
+                           <p>Общая стоимость   <span id="zena_smetu"></span>&#x20bd;</p>
+
+                       </div>
+
+                   </div>
+               </div>
+
+           </div>
+
+       </div>
+
+       <div id="test">Smeta</div>
+
+
+
+
+
+       <div class="zakas_form1"  id="zakas_form1">
+
+           <div class="row">
+              <form id="form1" action="send.php" method="post">
+
+               <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="first">
+                       <input type="text" name="tel" id="tel"  placeholder="Введите телефон*" size="30" required />
+                   </div>
+               </div>
+               <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="first">
+                       <input type="text" name="email" id="email"  placeholder="Введите e-mail*" size="30" required />
+                   </div>
+
+               </div>
+               <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="first">
+                       <input type="text" name="name" id="name"  placeholder="Введите имя*" size="30" required />
+                   </div>
+               </div>
+               <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                   <div class="first">
+                       <input type="text" name="adr" id="adr"  placeholder="Введите адрес объекта*" size="30" required />
+                   </div>
+               </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="form_button">
+                  <div class="form_button1" id="form_button1">
+                      <p class="submit"><button id="sm" type="submit">Получить смету</button></p>
+                  </div>
+                      </div>
+                  </div>
+
+              </form>
+
+           </div>
+       </div>
+
+       <div class="zakas_smeta_lenta"  id="zakas_smeta_lenta">
+
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                   <h1>СМЕТА СТОИМОСТИ СТРОИТЕЛЬСТВА ЛЕНТОЧНОГО ФУНДАМЕНТА</h1>
+                   <br><br>
+                   <h1> В стадии разработки</h1>
+
+
+               </div>
+           </div>
+       </div>
+
+
+
+       <div class="zakas_smeta_plita"  id="zakas_smeta_plita">
+
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                   <h1>СМЕТА СТОИМОСТИ СТРОИТЕЛЬСТВА МОНОЛИТНОЙ ПЛИТЫ</h1>
+
+                   <table class="table">
+
+
+                       <tr>
+
+                           <img src="img/logo1.png">
+                       </tr>
+
+                       <tr style="background-color: #9acfea">
+                           <td style="width:0%"> </td>
+                           <td style="width:40%">ООО «Фундамент-СПб», г. Санкт-Петербург, ул. Оптиков, дом 4, корпус 3, офис № 309 www.fundament-spb.ru, т.: 936-16-65. </td>
+                           <td  style="width:0%">  </td>
+                           <td  style="width:0%">  </td>
+                           <td  style="width:0%">  </td>
+                           <td  style="width:0%">  </td>
+                       </tr>
+
+                       <tr>
+                           <th style="width:0%"></th>
+                           <th style="width:100%">СМЕТА СТОИМОСТИ СТРОИТЕЛЬСТВА МОНОЛИТНОЙ ПЛИТЫ </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:0%"></th>
+                           <th style="width:40%">Площадь плиты </th>
+                           <th  style="width:20%"> <span id="spl"></span> </th>
+                           <th  style="width:10%">м2  </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:0%"></th>
+                           <th style="width:40%">Периметр </th>
+                           <th  style="width:20%"> <span id="perimpl"></span> </th>
+                           <th  style="width:10%">п.м.  </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:0%"></th>
+                           <th style="width:40%">Толщина плиты </th>
+                           <th  style="width:20%"> <span id="hplr"></span> </th>
+                           <th  style="width:10%">м.  </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:0%"></th>
+                           <th style="width:40%">Толщина песчаной подушки </th>
+                           <th  style="width:20%"> <span id="hpesokr"></span> </th>
+                           <th  style="width:10%">м.  </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:0%"></th>
+                           <th style="width:40%">Толщина щебеночной подушки </th>
+                           <th  style="width:20%"> <span id="hshebenr"></span> </th>
+                           <th  style="width:10%">м.  </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:0%"></th>
+                           <th style="width:40%">Толщина выбираемого слоя грунта </th>
+                           <th  style="width:20%"> <span id="hgrunt"></span> </th>
+                           <th  style="width:10%">м.  </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:0%"></th>
+                           <th style="width:40%">Расстояние от КАД </th>
+                           <th  style="width:20%"> <span id="lkad"></span> </th>
+                           <th  style="width:10%">км.  </th>
+                           <th  style="width:0%">  </th>
+                           <th  style="width:0%">  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%"> </th>
+                           <th  style="width:10%"> </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"> </th>
+                           <th  style="width:20%">  </th>
+                       </tr>
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:100%">Гарантируем сдачу объекта в срок. Или выполним все работы бесплатно! Зафиксируем это в договоре.  </th>
+                           <th  style="width:0%"> </th>
+                           <th  style="width:0%"></th>
+                           <th  style="width:0%"> </th>
+                           <th  style="width:0%">  </th>
+                       </tr>
+
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%"> </th>
+                           <th  style="width:10%"> </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"> </th>
+                           <th  style="width:20%">  </th>
+                       </tr>
+
+
+                       <tr>
+                           <th style="width:10%">№ </th>
+                           <th style="width:40%">Наименование </th>
+                           <th  style="width:10%">Ед.изм  </th>
+                           <th  style="width:10%">Объем  </th>
+                           <th  style="width:10%">Цена  </th>
+                           <th  style="width:20%">Сумма  </th>
+                       </tr>
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%">Работы: </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">  </th>
+                           <th  style="width:20%"></th>
+                       </tr>
+
+
+                       <tr>
+                           <td style="width:10%">1 </td>
+                           <td style="width:40%">Вынос осей, разбивка участка </td>
+                           <td  style="width:10%">компл.  </td>
+                           <td  style="width:10%">1  </td>
+                           <td  style="width:10%">6500  </td>
+                           <td  style="width:20%">6500  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">2 </td>
+                           <td style="width:40%">Земляные работы (без вывоза грунта) с учетом складирования грунта в конус  в радиусе 10 м от котлована </td>
+                           <td  style="width:10%">м3  </td>
+                           <td  style="width:10%"><span id="zemv"></span> </td>
+                           <td  style="width:10%">300  </td>
+                           <td  style="width:20%"><span id="zenzemv"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">3 </td>
+                           <td style="width:40%">Устройство  разделительного слоя из геотекстиля </td>
+                           <td  style="width:10%">м2  </td>
+                           <td  style="width:10%"><span id="sgeoteks"></span> </td>
+                           <td  style="width:10%">20  </td>
+                           <td  style="width:20%"><span id="zsgeoteks"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">4 </td>
+                           <td style="width:40%">Устройство песчаной подушки с послойной трамбовкой виброплитой  </td>
+                           <td  style="width:10%">м3  </td>
+                           <td  style="width:10%"><span id="spesok"></span> </td>
+                           <td  style="width:10%">20  </td>
+                           <td  style="width:20%"><span id="zpesok"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">5 </td>
+                           <td style="width:40%">Устройство щебеночной подушки с послойной трамбовкой виброплитой   </td>
+                           <td  style="width:10%">м3  </td>
+                           <td  style="width:10%"><span id="ssheb"></span> </td>
+                           <td  style="width:10%">400  </td>
+                           <td  style="width:20%"><span id="zssheb"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">6 </td>
+                           <td style="width:40%">Укладка гидроизоляционной мембраны Planter  </td>
+                           <td  style="width:10%">м2  </td>
+                           <td  style="width:10%"><span id="sgidro"></span> </td>
+                           <td  style="width:10%">30  </td>
+                           <td  style="width:20%"><span id="zsgidro"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">7 </td>
+                           <td style="width:40%">Монтаж, демонтаж опалубки</td>
+                           <td  style="width:10%">м.п.  </td>
+                           <td  style="width:10%"><span id="sopal"></span> </td>
+                           <td  style="width:10%">450  </td>
+                           <td  style="width:20%"><span id="zsopal"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">8 </td>
+                           <td style="width:40%">Изготовление и установка арматурных каркасов (Соединение стержней арматуры выполняется с использованием вязальной проволоки)</td>
+                           <td  style="width:10%">т.  </td>
+                           <td  style="width:10%"><span id="varm"></span> </td>
+                           <td  style="width:10%">17300  </td>
+                           <td  style="width:20%"><span id="zvarm"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">9 </td>
+                           <td style="width:40%">Укладка бетона с вибрированием</td>
+                           <td  style="width:10%">м3  </td>
+                           <td  style="width:10%"><span id="ubet"></span> </td>
+                           <td  style="width:10%">1500  </td>
+                           <td  style="width:20%"><span id="zubet"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%"> </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">Итого:</th>
+                           <th  style="width:20%"><span id="zitog1"></span> </th>
+                       </tr>
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%"> </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">Итого за работы:</th>
+                           <th  style="width:20%"><span id="zitog1_1"></span> </th>
+                       </tr>
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%">Материалы: </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">  </th>
+                           <th  style="width:20%"></th>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">1</td>
+                           <td style="width:40%">Геотекстиль Мегаизол Гео про 200</td>
+                           <td  style="width:10%">м2  </td>
+                           <td  style="width:10%"><span id="geotekst200"></span> </td>
+                           <td  style="width:10%">30  </td>
+                           <td  style="width:20%"><span id="zgeotekst200"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">2</td>
+                           <td style="width:40%">Песок строительный (средней крупности или крупный) (Кратно 10 м3) с учетом доставки</td>
+                           <td  style="width:10%">м3  </td>
+                           <td  style="width:10%"><span id="spesokd"></span> </td>
+                           <td  style="width:10%">600  </td>
+                           <td  style="width:20%"><span id="zspesokd"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">3</td>
+                           <td style="width:40%">Щебень гранитный фр. 20-40 мм. (Кратно 10 м3) с учетом доставки</td>
+                           <td  style="width:10%">м3  </td>
+                           <td  style="width:10%"><span id="sshebd"></span> </td>
+                           <td  style="width:10%">1400  </td>
+                           <td  style="width:20%"><span id="zsshebd"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">4</td>
+                           <td style="width:40%">Геомембрана Planter</td>
+                           <td  style="width:10%">м2  </td>
+                           <td  style="width:10%"><span id="sgidrod"></span> </td>
+                           <td  style="width:10%">110  </td>
+                           <td  style="width:20%"><span id="zsgidrod"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">5</td>
+                           <td style="width:40%">Опалубка инвентарная из ламинированной фанеры на деревянном каркасе</td>
+                           <td  style="width:10%">компл.  </td>
+                           <td  style="width:10%">1.00 </td>
+                           <td  style="width:10%"><span id="sopalub"></span>  </td>
+                           <td  style="width:20%"><span id="zsopalub"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">6</td>
+                           <td style="width:40%">Доска 40*150*6000 для раскрепления инвентарных щитов</td>
+                           <td  style="width:10%">м3  </td>
+                           <td  style="width:10%"><span id="sdosk"></span> </td>
+                           <td  style="width:10%">12500</td>
+                           <td  style="width:20%"><span id="zsdosk"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">7</td>
+                           <td style="width:40%">Подставки под арматуру (стульчики)</td>
+                           <td  style="width:10%">шт.  </td>
+                           <td  style="width:10%"><span id="sarmat"></span> </td>
+                           <td  style="width:10%">5</td>
+                           <td  style="width:20%"><span id="zsarmat"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">8</td>
+                           <td style="width:40%">Арматура d12 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)</td>
+                           <td  style="width:10%">т.  </td>
+                           <td  style="width:10%"><span id="sarmatd12"></span> </td>
+                           <td  style="width:10%">41000</td>
+                           <td  style="width:20%"><span id="zsarmatd12"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">9</td>
+                           <td style="width:40%">Арматура d8 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)</td>
+                           <td  style="width:10%">т.  </td>
+                           <td  style="width:10%"><span id="sarmatd8"></span> </td>
+                           <td  style="width:10%">41000</td>
+                           <td  style="width:20%"><span id="zsarmatd8"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">10</td>
+                           <td style="width:40%">Проволока вязальная</td>
+                           <td  style="width:10%">кг.  </td>
+                           <td  style="width:10%"><span id="sprovol"></span> </td>
+                           <td  style="width:10%">100</td>
+                           <td  style="width:20%"><span id="zsprovol"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">11</td>
+                           <td style="width:40%">Бетон B22,5 М300 П4 (С учетом доставки из СПб)</td>
+                           <td  style="width:10%">м3.  </td>
+                           <td  style="width:10%"><span id="ubetm300"></span> </td>
+                           <td  style="width:10%"><span id="lkadr"></span></td>
+                           <td  style="width:20%"><span id="zubetm300"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%"> </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">Итого:</th>
+                           <th  style="width:20%"><span id="zitogM1"></span> </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%">Доставка: </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">  </th>
+                           <th  style="width:20%"></th>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">1</td>
+                           <td style="width:40%">Доставка арматуры шаландой/манипулятором</td>
+                           <td  style="width:10%">доставка  </td>
+                           <td  style="width:10%">1 </td>
+                           <td  style="width:10%"><span id="larmDostav"></span></td>
+                           <td  style="width:20%"><span id="zlarmDostav"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">2</td>
+                           <td style="width:40%">Доставка и вывоз опалубки </td>
+                           <td  style="width:10%">доставка  </td>
+                           <td  style="width:10%">1 </td>
+                           <td  style="width:10%"><span id="larmDostavOpal"></span></td>
+                           <td  style="width:20%"><span id="zlarmDostavOpal"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">3</td>
+                           <td style="width:40%">Доставка остальных материалов </td>
+                           <td  style="width:10%">доставка  </td>
+                           <td  style="width:10%">1 </td>
+                           <td  style="width:10%"><span id="larmDostavMater"></span></td>
+                           <td  style="width:20%"><span id="zlarmDostavMater"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">4</td>
+                           <td style="width:40%">Доставка и вывоз инструмента на прицепе </td>
+                           <td  style="width:10%">доставка  </td>
+                           <td  style="width:10%"> </td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:20%">2400  </td>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%"> </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">Итого:</th>
+                           <th  style="width:20%"><span id="zdostavmat"></span> </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%"> </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">Итого за материалы:</th>
+                           <th  style="width:20%"><span id="zdostavmatitogo"></span> </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%">Доп. Работы (данный раздел включает работы и материал): </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">  </th>
+                           <th  style="width:20%"></th>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">1</td>
+                           <td style="width:40%">Планировка выбранного грунта из котлована по участку (С учетом коэффициента рыхления) - ПО ЗАПРОСУ ЗАКАЗЧИКА</td>
+                           <td  style="width:10%">м3  </td>
+                           <td  style="width:10%"><span id="kgrunt"></span> </td>
+                           <td  style="width:10%">150  </td>
+                           <td  style="width:20%"><span id="zkgrunt"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">2</td>
+                           <td style="width:40%">Устройство закладной гильзы для ввода водопровода (Гильза DKC 63 мм) - Метраж предварительный и уточнится после разработки проекта</td>
+                           <td  style="width:10%">м.п.  </td>
+                           <td  style="width:10%"><span id="kzaklad"></span> </td>
+                           <td  style="width:10%">1200  </td>
+                           <td  style="width:20%"><span id="zkzaklad"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">3</td>
+                           <td style="width:40%">Устройство закладной для ввода электричества (Гильза DKC d 63 мм с протяжкой) - Метраж предварительный и уточнится после разработки проекта</td>
+                           <td  style="width:10%">м.п.  </td>
+                           <td  style="width:10%"><span id="kzakladel"></span> </td>
+                           <td  style="width:10%">200 </td>
+                           <td  style="width:20%"><span id="zkzakladel"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">4</td>
+                           <td style="width:40%">Разводка канализации под домом (Трубы Оstendorf d 110 мм и комплект отводов, углов) - Метраж указан предварительный и уточнится после разработки проекта</td>
+                           <td  style="width:10%">м.п.  </td>
+                           <td  style="width:10%"><span id="kzakladkanal"></span> </td>
+                           <td  style="width:10%">1000 </td>
+                           <td  style="width:20%"><span id="zkzakladkanal"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">5</td>
+                           <td style="width:40%">Вывоз мусора после завершения работ на объекте</td>
+                           <td  style="width:10%">шт.  </td>
+                           <td  style="width:10%"><span id="kmusor"></span> </td>
+                           <td  style="width:10%">5000 </td>
+                           <td  style="width:20%"><span id="zkmusor"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%"> </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">Итого доп. работы:</th>
+                           <th  style="width:20%"><span id="zitogdop"></span> </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%">Спецтехника и доп. оборудование: </th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%"></th>
+                           <th  style="width:10%">  </th>
+                           <th  style="width:20%"></th>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">1</td>
+                           <td style="width:40%">Бетононасос</td>
+                           <td  style="width:10%">м3  </td>
+                           <td  style="width:10%"><span id="kbenso"></span> </td>
+                           <td  style="width:10%"><span id="kzbet"></span>  </td>
+                           <td  style="width:20%"><span id="zbeton"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">2</td>
+                           <td style="width:40%">Обеспечение строительным вагончиком, оборудованным для постоянного проживания бригады на объекте (Учитываются затраты на завоз и вывоз бытовки манипулятором)</td>
+                           <td  style="width:10%">шт.  </td>
+                           <td  style="width:10%"><span id="kvagon"></span> </td>
+                           <td  style="width:10%">20000 </td>
+                           <td  style="width:20%"><span id="zkvagon"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">3</td>
+                           <td style="width:40%">Обеспечение биотуалетом</td>
+                           <td  style="width:10%">шт.  </td>
+                           <td  style="width:10%"><span id="kbiotual"></span> </td>
+                           <td  style="width:10%">5000 </td>
+                           <td  style="width:20%"><span id="zkbiotual"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">4</td>
+                           <td style="width:40%">Обеспечение электричеством: предоставляет Заказчик - (При необходимости электрогенератор и топливо будет стоить 1500 рублей за смену)</td>
+                           <td  style="width:10%">смен.  </td>
+                           <td  style="width:10%"><span id="kelktro"></span> </td>
+                           <td  style="width:10%">0 </td>
+                           <td  style="width:20%"><span id="zkelktro"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%">5</td>
+                           <td style="width:40%">Обеспечение водой: Воду предоставляет Заказчик - (При необходимости завозки на объект Еврокуб с водой будет стоить 3000 рублей с доставкой)</td>
+                           <td  style="width:10%">компл.  </td>
+                           <td  style="width:10%"><span id="kvater"></span> </td>
+                           <td  style="width:10%">0 </td>
+                           <td  style="width:20%"><span id="zkvater"></span>  </td>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th  style="width:40%; margin-right: 0" >Итого за спецтехнику и доп. оборудование:</th>
+                           <th  style="width:20%"><span id="zitogcpez"></span> </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th  style="width:40%; margin-right: 0" >Итого за работы и материалы:</th>
+                           <th  style="width:20%"><span id="zitogcpezMat"></span> </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th  style="width:40%; margin-right: 0" >Накладные расходы 2%:</th>
+                           <th  style="width:20%"><span id="zitogSMpr"></span> </th>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th style="width:10%"> </th>
+                           <th  style="width:40%; margin-right: 0" >ИТОГО ПО СМЕТЕ:</th>
+                           <th  style="width:20%"><span id="zitogSM"></span> </th>
+                       </tr>
+
+                       <tr style="width:100%">
+                           <td style="width:10%"></td>
+                           <td style="width:40%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:20%"></td>
+                       </tr>
+
+                       <tr style="width:100%">
+                           <th style="width:10%"> </th>
+                           <th  style="width:80%" >Выезд технического специалиста для уточнения сметы бесплатный.</th>
+                           <th style="width:10%"> </th>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%"></td>
+                           <td style="width:40%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:20%"></td>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th  style="width:80%" >Порядок расчетов и суммы по этапам оплат:</th>
+                           <th style="width:10%"> </th>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%"> </td>
+                           <td style="width:40%">Наименование этапа</td>
+                           <td style="width:40%"> Ориентировочная сумма платежа, рублей</td>
+                           <td style="width:10%"> </td>
+
+                       </tr>
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%">1 этап: Материалы на устройство фундамента, (за исключением стоимости бетона), доставки: оплачиваются при подписании договора</th>
+                           <th style="width:40%"> <span id="zitogSM1"></span></th>
+                           <th style="width:10%"> </th>
+
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%">2 этап: Стоимость бетона + бетононасос: оплачиваются по факту окончания работ по опалубке</th>
+                           <th style="width:40%"> <span id="zitogSM2"></span></th>
+                           <th style="width:10%"> </th>
+
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th style="width:40%">3 этап: Оплата работ согласно смете: оплачивается в течение 5 дней после подписания акта приема-передачи всех работ по объекту</th>
+                           <th style="width:40%"> <span id="zitogSM3"></span></th>
+                           <th style="width:10%"> </th>
+
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%"></td>
+                           <td style="width:40%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:20%"></td>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th  style="width:80%" >Данная смета является предварительной. Объемы и стоимость работ будут скорректированы после выезда технического специалиста на участок, разработки рабочей документации по фундаменту и согласования с Заказчиком.</th>
+                           <th style="width:10%"> </th>
+                           <th style="width:0%"> </th>
+                           <th style="width:0%"> </th>
+                       </tr>
+
+                       <tr>
+                           <td style="width:10%"></td>
+                           <td style="width:40%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:10%"></td>
+                           <td  style="width:20%"></td>
+                       </tr>
+
+                       <tr>
+                           <th style="width:10%"> </th>
+                           <th  style="width:80%" >Актуальный срок данного коммерческого предложения составляет 14 календарных дней, т.к. цены на некоторые материалы могут изменяться. </th>
+                           <th style="width:10%"> </th>
+                       </tr>
+
+
+
+                   </table>
+
+
+
+
+
+
+               </div>
+           </div>
+       </div>
+
+
+       <div class="zakas_smeta_plitanr"  id="zakas_smeta_plitanr">
+
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                   <h1>СМЕТА СТОИМОСТИ СТРОИТЕЛЬСТВА ПЛИТА С НИЖНИМ ростверком  </h1>
+                   <br><br>
+                   <h1> В стадии разработки</h1>
+
+
+               </div>
+           </div>
+       </div>
+
+
+       <div class="zakas_smeta_plitavr"  id="zakas_smeta_plitavr">
+
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                   <h1>СМЕТА СТОИМОСТИ СТРОИТЕЛЬСТВА ПЛИТА С верхним ростверком  </h1>
+                   <br><br>
+                   <h1> В стадии разработки</h1>
+
+
+               </div>
+           </div>
+       </div>
+
+       <div class="zakas_smeta_plitauhp"  id="zakas_smeta_plitauhp">
+
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                   <h1>СМЕТА СТОИМОСТИ СТРОИТЕЛЬСТВА ПЛИТА УШП  </h1>
+                   <br><br>
+                   <h1> В стадии разработки</h1>
+
+
+               </div>
+           </div>
+       </div>
+
+       <div class="zakas_smeta_plitazok"  id="zakas_smeta_plitazok">
+
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                   <h1>СМЕТА СТОИМОСТИ СТРОИТЕЛЬСТВА ЦОКОЛЬ </h1>
+                   <br><br>
+                   <h1> В стадии разработки</h1>
+
+
+               </div>
+           </div>
+       </div>
+
+
+
+
+
+   </div>
+
+
+
+   <!--<div id="popup_success" class="popup_success">-->
+
+       <!--<p>-->
+
+           <!--Заказ оформлен! <br>-->
+
+           <!--Мы свяжемся с вами в ближайшее время.-->
+       <!--</p>-->
+       <!--<br>-->
+
+       <!--<a class="poplight" id="sm1"><span class="submit">ЗАКРЫТЬ ОКНО</span> </a>-->
+
+   <!--</div>-->
+
+
+   <div id="popup_block" class="popup_block">
+       <div class="note">
+
+       </div>
+
+       <p>
+
+           Заказ оформлен! <br>
+
+           Мы свяжемся с вами в ближайшее время.
+       </p>
+       <br>
+
+       <a href="#" rel="popup_success" class="poplight" id="sm1"><span class="submit" id="sm2">ЗАКРЫТЬ ОКНО</span> </a>
+
+   </div>
+
+			   
+
+
+
+
+
+
+
+
+
+       <script src="js/jquery.min.js"></script>
+       <script src="js/bootstrap.min.js"></script>
+       <script src="js/scriptsfund.js"></script>
+       <script src="js/dm-modal.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

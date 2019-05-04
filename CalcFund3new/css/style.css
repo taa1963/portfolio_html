@@ -1301,11 +1301,15 @@
 
 /*Test*/
 
-.test{
+#test{
     display: block;
     margin: 0 auto;
     width: 200px;
     height: 40px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2e6da4;
 }
 
 

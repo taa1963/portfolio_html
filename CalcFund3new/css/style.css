@@ -1119,7 +1119,7 @@
 .param_06uhp{
     display:none;
     position: absolute;
-    op: 99px;;
+    top: 99px;;
     left: 36px;
     z-index: -1;
 }

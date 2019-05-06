@@ -2,22 +2,23 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
-
-
-.partners_block_img a img{
-    width: 100%;
-}
-
+    #test {
+      margin-top: 100px;
+    }
+    .zakas_services p {
+        float: left;
+        width: 80%;
+    }
 
 
 }
 
 @media only screen and (max-width: 959px) {
 
-    .footer_left_tel p{
-    font-size: 25px;
-}
+    #test {
+        margin-top: 100px;
+
+    }
 
 }
 
@@ -27,27 +28,19 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+    #test {
+        margin-top: 100px;
 
-
-
-.container{
-        width: 100%;
-}
-
-
+    }
 
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+    #test {
+        margin-top: 100px;
 
-.container{
-  width: 100%;
- }
-
-.header_logo{
-    margin: 0 auto;
-}
+    }
 
 
 

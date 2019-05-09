@@ -255,6 +255,13 @@ $(document).ready(function() {
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
 
+                var landlf=(2*l1+2*s1)*0.75;
+                $('#landlf').text(landlf);
+                document.getElementById('landlf').value = landlf;
+
+
+
+
         }
         else{
             var block = $(this).parents('.content');
@@ -263,6 +270,10 @@ $(document).ready(function() {
             var perim=0;
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
+
+                var landlf=0;
+                $('#landlf').text(landlf);
+                document.getElementById('landlf').value = landlf;
         }
     });
 
@@ -281,6 +292,9 @@ $(document).ready(function() {
             var perim=2*l1+2*s1;
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
+            var landlf=(2*l1+2*s1)*0.75;
+            $('#landlf').text(landlf);
+            document.getElementById('landlf').value = landlf;
 
         }
         else{
@@ -290,12 +304,15 @@ $(document).ready(function() {
             var perim=0;
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
+            var landlf=0;
+            $('#landlf').text(landlf);
+            document.getElementById('landlf').value = landlf;
         }
     });
 
 //========== Отображение основы или ленты при измение  Ширины  =======================================//
 
-    $('.breadthf').bind(function() {
+    $('.breadthf').bind('change keyup',function() {
 
         if ((document.getElementById("landf").value > 0) && (document.getElementById("breadthf").value > 0))  {
             var block = $(this).parents('.content');
@@ -310,6 +327,9 @@ $(document).ready(function() {
             s1=+s1;
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
+            var landlf=(2*l1+2*s1)*0.75;
+            $('#landlf').text(landlf);
+            document.getElementById('landlf').value = landlf;
         }
         else{
             var block = $(this).parents('.content');
@@ -318,6 +338,9 @@ $(document).ready(function() {
             var perim=0;
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
+            var landlf=0;
+            $('#landlf').text(landlf);
+            document.getElementById('landlf').value = landlf;
         }
     });
 
@@ -336,6 +359,9 @@ $(document).ready(function() {
             s1=+s1;
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
+            var landlf=(2*l1+2*s1)*0.75;
+            $('#landlf').text(landlf);
+            document.getElementById('landlf').value = landlf;
         }
         else{
             var block = $(this).parents('.content');
@@ -344,6 +370,9 @@ $(document).ready(function() {
             var perim=0;
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
+            var landlf=0;
+            $('#landlf').text(landlf);
+            document.getElementById('landlf').value = landlf;
         }
     });
 
@@ -534,9 +563,13 @@ $(document).ready(function() {
     //========== Отображение границ ширины на картинке при фокусе на блоке Ширина  =======================================//
 
       $('.breadthpli').bind('change keyup',function() {
-           if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
-            var block = $(this).parents('.content');
-            block.find('.basic2pl').show();
+          if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
+              var block = $(this).parents('.content');
+              block.find('.basic2pl').show();
+
+           // if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
+           //  var block = $(this).parents('.content');
+           //  block.find('.basic2pl').show();
                //===расчет периметра плиты=====//
             var l1 = document.getElementById('landpli').value;
             var s1 = document.getElementById('breadthpli').value;
@@ -2195,6 +2228,540 @@ $(document).ready(function() {
         zena_smetu=0;
     //========== РАСЧЕТ ПАРАМЕТРОМ СМЕТЫ ДЛЯ ЛЕНТЫ  =================//
 
+        if (VarFund==1) {
+
+            var landlfsm = document.getElementById('landlf').value;
+            landlfsm = +landlfsm;
+            $('#landlfsm').text(landlfsm);
+
+            var hplsm = document.getElementById('elevationf').value;
+            hplsm = +hplsm;
+            $('#hplsm').text(hplsm);
+
+            var breadthlfsm = document.getElementById('breadthlf').value;
+            breadthlfsm = +breadthlfsm;
+            $('#breadthlfsm').text(breadthlfsm);
+
+            var hsheblpsm = 0.2;
+            hsheblpsm = +hsheblpsm;
+            $('#hsheblpsm').text(hsheblpsm);
+
+            var hgruntsm = 300;
+            hgruntsm = +hgruntsm;
+            $('#hgruntsm').text(hgruntsm);
+
+
+            var lplsm=document.getElementById("landf").value;
+            lplsm=+lplsm;
+            var shplsm= document.getElementById("breadthf").value;
+            shplsm=+shplsm;
+
+            var splsm =shplsm*lplsm ;
+            splsm = +splsm;
+            $('#splsm').text(splsm);
+
+
+            var perimplsm = document.getElementById('perimeterlf').value;
+            perimplsm = +perimplsm;
+            $('#perimplsm').text(perimplsm);
+
+
+            var hfundaentsm = hgruntsm/1000;
+            $('#hfundaentsm').text(hfundaentsm);
+
+
+       // <input type="number" class="distancelplf" id="distancelplf" value="25" min="0" max="200" step="1">
+            var lkadplsm = document.getElementById('distancelplf').value;
+            lkadplsm = +lkadplsm;
+            $('#lkadplsm').text(lkadplsm);
+
+
+
+//==================================1 blokc =================
+            // Земляные работы
+            var zemvsm = (splsm + perimplsm)*hgruntsm*0.001+ landlfsm*(breadthlfsm+0.6)*hsheblpsm;
+            zemvsm = zemvsm.toFixed(2);
+            $('#zemvsm').text(zemvsm);
+            var zenzemvsm = zemvsm * 300;
+            zenzemvsm = Math.round(zenzemvsm);
+            $('#zenzemvsm').text(zenzemvsm);
+
+
+            // Устройство  разделительного слоя из геотекстиля
+            var kgeotekscm = landlfsm*(breadthlfsm +2*hsheblpsm+1);
+            kgeotekscm = kgeotekscm.toFixed(2);
+            $('#kgeotekscm').text(kgeotekscm);
+            var zkgeotekscm = kgeotekscm * 20;
+            zkgeotekscm = Math.round(zkgeotekscm);
+            $('#zkgeotekscm').text(zkgeotekscm);
+
+
+            // Устройство щебеночной подушки с послойной трамбовкой виброплитой
+
+            var sshebsm =landlfsm*(breadthlfsm +0.6)*hsheblpsm*1.28;
+            sshebsm = Math.ceil((sshebsm) * 10) / 10;
+            sshebsm = sshebsm.toFixed(2);
+            $('#sshebsm').text(sshebsm);
+            var zsshebsm = sshebsm * 400;
+            zsshebsm = Math.round(zsshebsm);
+            $('#zsshebsm').text(zsshebsm);
+
+            // Укладка гидроизоляционной мембраны Planter
+            var kgidroisol =landlfsm*(breadthlfsm +0.2);
+            // sshebsm = Math.ceil((sshebsm) * 10) / 10;
+            kgidroisol = kgidroisol.toFixed(2);
+            $('#kgidroisol').text(kgidroisol);
+            var zkgidroisol = kgidroisol * 30;
+            zkgidroisol = Math.round(zkgidroisol);
+            $('#zkgidroisol').text(zkgidroisol);
+
+            //Изготовление и установка арматурных каркасов, монтаж арматурной сетки (Соединение стержней арматуры выполняется с использованием вязальной проволоки)
+            var karmrfrk38_1 =(hplsm/0.2);
+            karmrfrk38_1 = Math.ceil((karmrfrk38_1) * 10) / 10;
+
+            var karmrfrk38_2 =(breadthlfsm/0.2);
+            var karmrfrk38_2r = Math.ceil(karmrfrk38_2);
+
+            var karmrfrk38=(karmrfrk38_2r*karmrfrk38_1)*landlfsm*0.9*0.001*1.07;
+
+            var karmrfrk39 =(landlfsm/0.3)*(hplsm+breadthlfsm)*2*0.4*0.001;
+
+
+            var karmrfrk24=karmrfrk38+karmrfrk39;
+            // alert(karmrfrk24);
+            // alert(karmrfrk389);
+
+            karmrfrk24r = karmrfrk24.toFixed(1);
+            $('#karmrfrk24r').text(karmrfrk24r);
+            var zkarmrfrk24 = karmrfrk24 *17300;
+            zkarmrfrk24 = Math.round(zkarmrfrk24);
+            $('#zkarmrfrk24').text(zkarmrfrk24);
+
+
+            //Монтаж и демонтаж опалубки
+            var kmontagopalsm =  landlfsm*hplsm*2;
+            // sshebsm = Math.ceil((sshebsm) * 10) / 10;
+            kmontagopalsm = kmontagopalsm.toFixed(2);
+            $('#kmontagopalsm').text(kmontagopalsm);
+            var zkmontagopalsm = kmontagopalsm * 450;
+            zkmontagopalsm = Math.round(zkmontagopalsm);
+            $('#zkmontagopalsm').text(zkmontagopalsm);
+
+            //Укладка бетона с вибрированием
+
+            var kukbeton =  landlfsm*hplsm*breadthlfsm*1.05/0.25;
+            // sshebsm = Math.ceil((sshebsm) * 10) / 10;
+            kukbeton = Math.round(kukbeton);
+            var kukbetonr=kukbeton*0.25;
+            //kukbeton = kmontagopalsm.toFixed(2);
+            $('#kukbetonr').text(kukbetonr);
+            var zkukbetonr = kukbetonr * 1500;
+            zkukbetonr = Math.round(zkukbetonr);
+            $('#zkukbetonr').text(zkukbetonr);
+
+            //Засыпка наружных пазух песком
+
+            var kzacup =perimplsm*hfundaentsm*1.28;
+             var kzacupr = Math.ceil(kzacup);
+             // alert(kzacupr);
+             kzacupr=kzacupr*1.2;
+            kzacupr = kzacupr.toFixed(2);
+            $('#kzacupr').text(kzacupr);
+            var zkzacupr = kzacupr * 400;
+            zkzacupr = Math.round(zkzacupr);
+            $('#zkzacupr').text(zkzacupr);
+
+          //====  Итого: 1 etap =======
+
+            var zitog1sm= zkzacupr+zkukbetonr+zkmontagopalsm+zkarmrfrk24+zkgidroisol+zsshebsm+zkgeotekscm+zenzemvsm+6500;
+            zitog1sm = Math.round(zitog1sm);
+            $('#zitog1sm').text(zitog1sm);
+
+            //======== 2 bloks =======
+
+            //Геотекстиль Мегаизол Гео про 200
+            var kgeomag =kgeotekscm*1.1*1.2;
+            //var kzacupr = Math.ceil(kzacup);
+            // alert(kzacupr);
+            //kzacupr=kzacupr*1.2;
+            kgeomag =  kgeomag.toFixed(2);
+            $('#kgeomag').text( kgeomag);
+            var zkgeomag = kgeomag * 30;
+            zkgeomag = Math.round(zkgeomag);
+            $('#zkgeomag').text(zkgeomag);
+
+            //Песок строительный (средней крупности или крупный) (Кратно 10 м3) с учетом доставки
+            var kpesoksm =(Math.round(kzacupr/10))*10;
+            //var kzacupr = Math.ceil(kzacup);
+
+            kpesoksm =  kpesoksm.toFixed(2);
+            $('#kpesoksm').text(kpesoksm);
+            var zkpesoksm = kpesoksm *600;
+            zkpesoksm = Math.round(zkpesoksm);
+            $('#zkpesoksm').text(zkpesoksm);
+
+            //Щебень гранитный фр. 20-40 мм. (Кратно 10 м3) с учетом доставки
+            var kshebensm =(Math.round(sshebsm/10))*10;
+            //var kzacupr = Math.ceil(kzacup);
+
+            kshebensm =  kshebensm.toFixed(2);
+            $('#kshebensm').text(kshebensm);
+            var zkshebensm = kshebensm *1400;
+            zkshebensm = Math.round(zkshebensm);
+            $('#zkshebensm').text(zkshebensm);
+
+            // Геомембрана Planter
+            var kgeomemsm =landlfsm*(breadthlfsm+0.2)*1.1;
+            kgeomemsm =  kgeomemsm.toFixed(2);
+            $('#kgeomemsm').text(kgeomemsm);
+            var zkgeomemsm = kgeomemsm *110;
+            zkgeomemsm = Math.round(zkgeomemsm);
+            $('#zkgeomemsm').text(zkgeomemsm);
+
+            //Доска 40*150*6000 для раскрепления инвентарных щитов
+            var kdoska40 =landlfsm*0.04*0.15*6*0.7+0.25;
+
+            kdoska40r =  kdoska40.toFixed(1);
+            $('#kdoska40r').text(kdoska40r);
+            var zkdoska40 = kdoska40 *12500;
+            zkdoska40 = Math.round(zkdoska40);
+            $('#zkdoska40').text(zkdoska40);
+
+            //Опалубка инвентарная из ламинированной фанеры на деревянном каркасе (амортизация)
+
+            var kopalsm =kmontagopalsm*1.05;
+
+            kopalsm =  kopalsm.toFixed(1);
+            $('#kopalsm').text(kopalsm);
+            var zkopalsm = kopalsm *260;
+            zkopalsm = Math.round(zkopalsm);
+            $('#zkopalsm').text(zkopalsm);
+
+            //Фанера 18 мм (на подрезку)
+            var kfanera18 =kopalsm*0.1;
+            kfanera18 =  kfanera18.toFixed(2);
+            $('#kfanera18').text(kfanera18);
+            var zkfanera18 = kfanera18 *900;
+            zkfanera18 = Math.round(zkfanera18);
+            $('#zkfanera18').text(zkfanera18);
+
+
+            //Фиксатор для арматуры вертикальной
+            var kfiksator =landlfsm*5;
+            kfiksator =  kfiksator.toFixed(1);
+            $('#kfiksator').text(kfiksator);
+            var zkfiksator = kfiksator *5;
+            zkfiksator = Math.round(zkfiksator);
+            $('#zkfiksator').text(zkfiksator);
+
+            //Арматура d12 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+
+            var karm12 =karmrfrk38;
+               // alert(karmrfrk38);
+            var karm12r =  karm12.toFixed(2);
+            $('#karm12r').text(karm12r);
+            var zkarm12 = karm12 *41000;
+            zkarm12 = Math.round(zkarm12);
+            $('#zkarm12').text(zkarm12);
+
+           // Арматура d8 А500 на хомуты (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+            var karm8 =karmrfrk39;
+               //alert(karmrfrk39);
+            var karm8r =  karm8.toFixed(2);
+            $('#karm8r').text(karm8r);
+            var zkarm8 = karm8 *41000;
+            zkarm8 = Math.round(zkarm8);
+            $('#zkarm8').text(zkarm8);
+
+            //Проволока вязальная
+            var kprovsm =karm12*12;
+            //alert(kprovsm);
+            //(Math.round(sshebsm/10))*10;
+            var kprovsmr = (Math.ceil(kprovsm));
+                $('#kprovsmr').text(kprovsmr);
+            var zkprovsm = kprovsmr *100;
+            zkprovsm = Math.round(zkprovsm);
+            $('#zkprovsm').text(zkprovsm);
+
+            //Бетон B22,5 М300 П4 (С учетом доставки из СПб)
+            var kbetonb22 =kukbeton*0.25;
+
+            //alert(kprovsm);
+
+            var kbetonb22r = kbetonb22.toFixed(2);
+            //var karm12r =  karm12.toFixed(2);
+            $('#kbetonb22r').text(kbetonb22r);
+
+            if (lkadplsm <= 30) {
+                lbeton22 = 4100;
+            }
+            if (lkadplsm > 30) {
+                lbeton22 = (lkadplsm - 30) * 15 + 4100;
+            }
+            var lbeton22 =  Math.round(lbeton22);
+            $('#lbeton22').text(lbeton22);
+
+
+            var zlbeton22 = lbeton22*kbetonb22;
+            zlbeton22 = Math.round(zlbeton22);
+            $('#zlbeton22').text(zlbeton22);
+
+            //======Itog 2 blok------
+
+            var zitog2sm=zlbeton22+zkprovsm+zkarm8+zkarm12+zkfiksator+zkfanera18+zkopalsm+zkdoska40
+                +zkgeomemsm+zkshebensm+zkpesoksm+zkgeomag;
+            zitog2sm = Math.round(zitog2sm);
+            $('#zitog2sm').text(zitog2sm);
+
+            // =========Доставка:====================
+            // Доставка арматуры шаландой/манипулятором
+
+            if (lkadplsm <= 30) {
+                larmDostavsm = 9000;
+            }
+            if (lkadplsm > 30) {
+                larmDostavsm = (lkad - 30) * 35 + 9000;
+            }
+            larmDostavsm = Math.round(larmDostavsm);
+            $('#larmDostavsm').text(larmDostavsm);
+
+            var zlarmDostavsm = larmDostavsm * 1;
+            zlarmDostavsm = Math.round(zlarmDostavsm);
+            $('#zlarmDostavsm').text(zlarmDostavsm);
+
+
+            // Доставка и вывоз опалубки
+            if (lkadplsm <= 30) {
+                larmDostavOpalsm = 5000;
+            }
+            if (lkadplsm > 30) {
+                larmDostavOpalsm = (lkad - 30) * 35 + 5000;
+            }
+            larmDostavOpalsm = Math.round(larmDostavOpalsm);
+            $('#larmDostavOpalsm').text(larmDostavOpalsm);
+
+            var zlarmDostavOpalsm = larmDostavOpalsm * 1;
+            zlarmDostavOpalsm = Math.round(zlarmDostavOpalsm);
+            $('#zlarmDostavOpalsm').text(zlarmDostavOpalsm);
+
+            // Доставка остальных материалов
+            if (lkadplsm <= 30) {
+                larmDostavMatersm = 4200;
+            }
+            if (lkadplsm > 30) {
+                larmDostavMatersm = (lkad - 30) * 35 + 4200;
+            }
+            larmDostavMatersm = Math.round(larmDostavMatersm);
+            $('#larmDostavMatersm').text(larmDostavMatersm);
+
+            var zlarmDostavMatersm = larmDostavMatersm * 1;
+            zlarmDostavMatersm = Math.round(zlarmDostavMatersm);
+            $('#zlarmDostavMatersm').text(zlarmDostavMatersm);
+
+            // ==========ITOG DOSTAV============
+
+            var zdostavmatsm = zlarmDostavMatersm + zlarmDostavsm + zlarmDostavOpalsm + 2400;
+            zdostavmatsm = Math.round(zdostavmatsm);
+            $('#zdostavmatsm').text(zdostavmatsm);
+
+            // // =====Итого за материалы:
+            var zdostavmatitogosm = zitog2sm + zdostavmatsm;
+            zdostavmatitogosm = Math.round(zdostavmatitogosm);
+            $('#zdostavmatitogosm').text(zdostavmatitogosm);
+
+
+
+
+            //====== 4 blok=========
+            // ======= Доп. Работы===========
+            //  ===============Планировка выбранного грунта============
+            var kgruntsm = 0;
+            kgruntsm = Math.round(kgruntsm);
+            $('#kgruntsm').text(kgruntsm);
+
+            var zkgruntsm = kgruntsm * 150;
+            zkgruntsm = Math.round(zkgruntsm);
+            $('#zkgruntsm').text(zkgruntsm);
+
+            // =============Устройство закладной гильзы вода===========
+            var kzakladsm = 5;
+            kzakladsm = Math.round(kzakladsm);
+            $('#kzakladsm').text(kzakladsm);
+
+            var zkzakladsm = kzakladsm * 1200;
+            zkzakladsm = Math.round(zkzakladsm);
+            $('#zkzakladsm').text(zkzakladsm);
+
+            // =============Устройство закладной гильзы электро===========
+            var kzakladelsm = 10;
+            kzakladelsm = Math.round(kzakladelsm);
+            $('#kzakladelsm').text(kzakladelsm);
+
+            var zkzakladelsm = kzakladelsm * 200;
+            zkzakladelsm = Math.round(zkzakladelsm);
+            $('#zkzakladelsm').text(zkzakladelsm);
+
+            // ====================Разводка канализации под домом============
+            var kzakladkanalsm = 5;
+            kzakladkanalsm = Math.round(kzakladkanalsm);
+            $('#kzakladkanalsm').text(kzakladkanalsm);
+
+            var zkzakladkanalsm = kzakladkanalsm * 1000;
+            zkzakladkanalsm = Math.round(zkzakladkanalsm);
+            $('#zkzakladkanalsm').text(zkzakladkanalsm);
+
+            //Устройство дренажа фундамента с учетом установки дренажных колодцев d340
+
+
+            var kdrenagsm = perimplsm+8;
+            kdrenagsm = Math.round(kdrenagsm);
+            $('#kdrenagsm').text(kdrenagsm);
+
+            var kdrenagsm_1 = kdrenagsm*(700+72+216+80);
+            kdrenagsm_1 = Math.round(kdrenagsm_1);
+
+            var kdrenagsm_2 = kdrenagsm/15;
+            var kdrenagsm_2r =Math.ceil(kdrenagsm_2);
+
+            var kdrenagsm_2r2=kdrenagsm_2r*6100;
+            var kdrenagsm_2r21 =(Math.round(kdrenagsm_2r2/10))*10;
+
+            var kdrenagsm_2ksm=(kdrenagsm_2r21+kdrenagsm_1)/kdrenagsm;
+
+            var kdrenagsm_2ksm1 =Math.ceil(kdrenagsm_2ksm);
+            $('#kdrenagsm_2ksm1').text(kdrenagsm_2ksm1);
+
+
+            var zkdrenagsm_2ksm = kdrenagsm_2ksm1 * kdrenagsm;
+            zkdrenagsm_2ksm= Math.round(zkdrenagsm_2ksm);
+            $('#zkdrenagsm_2ksm').text(zkdrenagsm_2ksm);
+
+
+            // Вывоз мусора после завершения работ на объекте
+            var kmusorsm = 1;
+            kmusorsm = Math.round(kmusorsm);
+            $('#kmusorsm').text(kmusorsm);
+
+            var zkmusorsm = kmusorsm * 5000;
+            zkmusorsm = Math.round(zkmusorsm);
+            $('#zkmusorsm').text(zkmusorsm);
+
+
+            // =============Itig Dop R=============
+            var zitogdopsm = zkmusorsm + zkzakladkanalsm + zkzakladelsm + zkzakladsm + kgruntsm+zkdrenagsm_2ksm;
+            zitogdopsm = Math.round(zitogdopsm);
+            $('#zitogdopsm').text(zitogdopsm);
+
+            // =============Спецтехника и доп. оборудование:====================
+            // ============Бетононасос==============
+
+            if (lkadplsm <= 30) {
+               var  kzbetsm = 14400;
+            }
+            if (lkadplsm > 30) {
+                kzbetsm = (lkadplsm - 30) * 155 + 14400;
+            }
+            kzbetsm = Math.round( kzbetsm);
+            $('#kzbetsm').text( kzbetsm);
+
+            var zbetonsm =kzbetsm;
+            zbetonsm = Math.round(zbetonsm);
+            $('#zbetonsm').text(zbetonsm);
+
+            // Обеспечение строительным вагончиком,
+            var kvagonsm = 1;
+            kvagonsm = Math.round(kvagonsm);
+            $('#kvagonsm').text(kvagonsm);
+
+            var zkvagonsm = kvagonsm * 20000;
+            zkvagonsm = Math.round(zkvagonsm);
+            $('#zkvagonsm').text(zkvagonsm);
+
+            // Обеспечение биотуалетом
+            var kbiotualsm = 1;
+            kbiotualsm = Math.round(kbiotualsm);
+            $('#kbiotualsm').text(kbiotualsm);
+
+            var zkbiotualsm = kbiotualsm * 5000;
+            zkbiotualsm = Math.round(zkbiotualsm);
+            $('#zkbiotualsm').text(zkbiotualsm);
+
+
+            // Обеспечение электричеством: предоставляет Заказчик
+            var kelktrosm = 0;
+            kelktrosm = Math.round(kelktrosm);
+            $('#kelktrosm').text(kelktrosm);
+
+            var zkelktrosm = kelktrosm * 0;
+            zkelktrosm = Math.round(zkelktrosm);
+            $('#zkelktrosm').text(zkelktrosm);
+
+            // Обеспечение водой:
+            var kvatersm = 0;
+            kvatersm = Math.round(kvatersm);
+            $('#kvatersm').text(kvatersm);
+
+            var zkvatersm = kvatersm * 0;
+            zkvatersm = Math.round(zkvatersm);
+            $('#zkvatersm').text(zkvatersm);
+
+            // ===========Итого за спецтехнику и доп. оборудование:
+            var zitogcpezsm = zkvatersm + zkelktrosm + zkbiotualsm + zkvagonsm + zbetonsm;
+            zitogcpezsm = Math.round(zitogcpezsm);
+            $('#zitogcpezsm').text(zitogcpezsm);
+
+            // ===========Итого за работы и материалы:========
+            var zitogo5sm = zitogcpezsm + zitogdopsm + zdostavmatitogosm + zitog1sm;
+            zzitogo5sm = Math.round(zitogo5sm);
+            $('#zitogo5sm').text(zitogo5sm);
+
+            // Накладные расходы 2%:
+            var zitogSMplpr = zitogo5sm * 0.02;
+            zitogSMplpr = Math.round(zitogSMplpr);
+            $('#zitogSMplpr').text(zitogSMplpr);
+
+            // ИТОГО ПО СМЕТЕ:
+
+            var zitogSMpl = zitogo5sm + zitogSMplpr;
+            // zitogM1
+            zitogSMpl = Math.round(zitogSMpl);
+            $('#zitogSMpl').text(zitogSMpl);
+
+            zena_smetu = zitogSMpl;
+            zena_smetu = Math.round(zena_smetu);
+            $('#zena_smetu').text(zena_smetu);
+
+            //==== itog 1 etap======
+
+                var zitog1etapsm=zdostavmatitogosm-zlbeton22;
+
+            zitog1etapsm = (Math.ceil(zitog1etapsm/1000))*1000;
+            $('#zitog1etapsm').text(zitog1etapsm);
+
+
+            //==== itog 2 etap======
+
+            var zitog2etapsm=zbetonsm+zlbeton22;
+
+            zitog2etapsm = (Math.ceil(zitog2etapsm/1000))*1000;
+            $('#zitog2etapsm').text(zitog2etapsm);
+
+            //==== itog 2 etap======
+
+            var zitog3etapsm=zitogSMpl-zitog1etapsm-zitog2etapsm;
+
+            zitog3etapsm = Math.round(zitog3etapsm);
+            $('#zitog3etapsm').text(zitog3etapsm);
+
+        }
+
+
+
+
+
+
+
+
 
     //========== РАСЧЕТ ПАРАМЕТРОМ СМЕТЫ ДЛЯ ПЛИТЫ  =================//
 
@@ -2700,6 +3267,696 @@ $(document).ready(function() {
         //========== РАСЧЕТ ПАРАМЕТРОМ СМЕТЫ ДЛЯ ПЛИТЫ NR  =================//
 
     if (VarFund==3){
+        //Длина
+        var landnr = document.getElementById('landplfnr').value;
+        landnr = +landnr;
+        $('#llandnr').text(landnr);
+
+        //Ширина
+        var breadtnr = document.getElementById('breadthplfnr').value;
+        breadtnr = +breadtnr;
+        $('#breadtnr').text(breadtnr);
+
+        //Высота плиты
+        var hplnr = (document.getElementById('elevationplnr').value)*1000;
+        hplnr = +hplnr;
+        $('#hplnr').text(hplnr);
+
+        //Площадь плиты
+        var splnr = document.getElementById('areapplfnr').value;
+        splnr = +splnr;
+        $('#splnr').text(splnr);
+
+        //Периметр фундамента
+        var perimetrnr = document.getElementById('perimplfnr').value;
+        perimetrnr = +perimetrnr;
+        $('#perimetrnr').text(perimetrnr);
+
+        //Толщина песчаной подушки
+        var hpesoknr = (document.getElementById('pesokplfnr').value)*1000;
+        hpesoknr = +hpesoknr;
+        $('#hpesoknr').text(hpesoknr);
+
+        //Толщина щебёночной подушки
+        var hsheblpnr = (document.getElementById('pesokplfnr').value)*1000;
+        hsheblpnr = +hsheblpnr;
+        $('#hsheblpnr').text(hsheblpnr);
+
+        //Толщина выбираемого слоя грунта
+        var hgruntnr=hsheblpnr+hpesoknr;
+        hgruntnr = +hgruntnr;
+        $('#hgruntnr').text(hgruntnr);
+
+        //Общая длина ростверка
+        var lrosrvernr= document.getElementById('langplnr').value;
+        lrosrvernr = +lrosrvernr;
+        $('#lrosrvernr').text(lrosrvernr);
+
+        //Высота ростверка
+        var hrosrvernr= (document.getElementById('hplplnr').value)*1000;
+        hrosrvernr = +hrosrvernr;
+        $('#hrosrvernr').text(hrosrvernr);
+
+        //Ширина ростверка
+    //<input type="number" class="shebenplf" id="shplplnr" value="0.4" min="0" max="200" step="0.1">
+        var shrosrvernr= (document.getElementById('shplplnr').value)*1000;
+        shrosrvernr = +shrosrvernr;
+        $('#shrosrvernr').text(shrosrvernr);
+
+        //Растояние от КАД
+        var lkadnr = document.getElementById('distancelentfnr').value;
+        lkadnr = +lkadnr;
+        $('#lkadnr').text(lkadnr);
+
+
+
+//==================================1 blokc =================
+
+
+        // Вынос осей, разбивка участка
+        var kosnr = splnr;
+        kosnr = kosnr.toFixed(0);
+        $('#kosnr').text(kosnr);
+        var zkosnr = kosnr * 40;
+        zkosnr = Math.round(zkosnr);
+        $('#zkosnr').text(zkosnr);
+
+        // Земляные работы
+        var kzemvnr = (splnr+perimetrnr)*hgruntnr*0.001;
+        kzemvnr = kzemvnr.toFixed(2);
+        $('#kzemvnr').text(kzemvnr);
+        var zemvnr = kzemvnr * 300;
+        zemvnr = Math.round(zemvnr);
+        $('#zemvnr').text(zemvnr);
+
+
+        // Устройство  разделительного слоя из геотекстиля
+        var kgeoteksrn =splnr+perimetrnr ;
+        kgeoteksrn = kgeoteksrn.toFixed(2);
+        $('#kgeoteksrn').text(kgeoteksrn);
+        var zkgeoteksrn = kgeoteksrn * 20;
+        zkgeoteksrn = Math.round(zkgeoteksrn);
+        $('#zkgeoteksrn').text(zkgeoteksrn);
+
+        //Устройство песчаной подушки с послойной трамбовкой виброплитой
+        var kpesoknr =(splnr*hpesoknr*0.001+perimetrnr*hpesoknr*0.001)*1.28*1.2;
+        //kpesoknr = Math.round((kpesoknr) * 10) / 10;
+        kpesoknr = Math.round(kpesoknr);
+        kpesoknr = kpesoknr.toFixed(2);
+        $('#kpesoknr').text(kpesoknr);
+        var zkpesoknr = kpesoknr * 400;
+        zkpesoknr = Math.round(zkpesoknr);
+        $('#zkpesoknr').text(zkpesoknr);
+
+        // Устройство щебеночной подушки с послойной трамбовкой виброплитой
+        var kshebennr =(splnr*hsheblpnr*0.001+perimetrnr*hsheblpnr*0.001)*1.28;
+        //kpesoknr = Math.round((kpesoknr) * 10) / 10;
+        kshebennr = Math.round(kshebennr);
+        kshebennr = kshebennr.toFixed(2);
+        $('#kshebennr').text(kshebennr);
+        var zkshebennr = kshebennr * 400;
+        zkshebennr = Math.round(zkshebennr);
+        $('#zkshebennr').text(zkshebennr);
+
+        // Укладка гидроизоляционной мембраны Planter
+        var kgidroisolnr =splnr+perimetrnr*0.3;
+        // sshebsm = Math.ceil((sshebsm) * 10) / 10;
+        kgidroisolnr = kgidroisolnr.toFixed(2);
+        $('#kgidroisolnr').text(kgidroisolnr);
+        var zkgidroisolnr = kgidroisolnr * 30;
+        zkgidroisolnr = Math.round(zkgidroisolnr);
+        $('#zkgidroisolnr').text(zkgidroisolnr);
+
+        //Монтаж и демонтаж опалубки
+        var kmontagopalnr = perimetrnr;
+        // sshebsm = Math.ceil((sshebsm) * 10) / 10;
+        kmontagopalnr = kmontagopalnr.toFixed(2);
+        $('#kmontagopalnr').text(kmontagopalnr);
+        var zkmontagopalnr = kmontagopalnr * 450;
+        zkmontagopalnr = Math.round(zkmontagopalnr);
+        $('#zkmontagopalnr').text(zkmontagopalnr);
+
+        //Изготовление и установка арматурных каркасов, монтаж арматурной сетки (Соединение стержней арматуры выполняется с использованием вязальной проволоки)
+        var karmrnr43 =(splnr*21*0.888*0.001*1.1+perimetrnr/0.2*1.5*1.1*0.91*0.001);
+        //karmrnr43 = karmrnr43.toFixed(2);
+        karmrnr43=+karmrnr43;
+
+        var karmrnr44 =(splnr+perimetrnr/2)*0.45*1.2*0.001+perimetrnr/1.5*0.5*1.1*0.001;
+        //karmrnr44 = karmrnr44.toFixed(2);
+        //alert(karmrnr44);
+        karmrnr44=+karmrnr44;
+
+        var karmrnr26nr=karmrnr44+karmrnr43;
+
+        karmrnr26nrsm = karmrnr26nr.toFixed(2);
+        $('#karmrnr26nrsm').text(karmrnr26nrsm);
+        var zkarmrnr26nr = karmrnr26nr *17300;
+        zkarmrnr26nr = Math.round(zkarmrnr26nr);
+        $('#zkarmrnr26nr').text(zkarmrnr26nr);
+
+
+
+
+        //Укладка бетона с вибрированием
+
+        var kukbetonnr = splnr*hplnr*0.001*1.05;
+        kukbetonnr = kukbetonnr.toFixed(2);
+        $('#kukbetonnr').text(kukbetonnr);
+        var zkukbetonr25 = kukbetonnr * 1500;
+        zkukbetonr25 = Math.round(zkukbetonr25);
+        $('#zkukbetonr25').text(zkukbetonr25);
+
+        //=======ITOG 1 block =====
+        var zitog1nr=zkukbetonr25+zkarmrnr26nr+zkmontagopalnr+zkgidroisolnr+zkshebennr+zkpesoknr
+            +zkgeoteksrn+zemvnr+zkosnr;
+        zitog1nr = Math.round(zitog1nr);
+        $('#zitog1nr').text(zitog1nr);
+
+        ///======Ростверк: ============
+
+
+        //Монтаж опалубки
+        var kopalnr = hrosrvernr*lrosrvernr*2*0.001;
+        //shrosrvernr
+        kopalnr = kopalnr.toFixed(2);
+        $('#kopalnr').text(kopalnr);
+        var zkopalnr = kopalnr * 500;
+        zkopalnr = Math.round(zkopalnr);
+        $('#zkopalnr').text(zkopalnr);
+
+        //Изготовление и установка арматурных каркасов ростверка, (Соединение стержней арматуры выполняется с использованием вязальной проволоки)
+
+        var karmnr51_1=(shrosrvernr*0.001)/0.2;
+        //karmnr51_1 = Math.ceil((karmnr51_1) * 10) / 10;
+        //alert(karmnr51_1);
+        var karmnr51_2=(hrosrvernr*0.001)/0.2;
+        //karmnr51_2 = Math.ceil((karmnr51_2) * 10) / 10;
+        //alert(karmnr51_2);
+
+        var karmnr51=karmnr51_1*karmnr51_2*lrosrvernr*0.001*0.888*1.3;
+        //alert(karmnr51);
+
+        var karmnr52=(lrosrvernr/0.3)*0.395*0.001*1.1;
+
+        var karmnr31 = karmnr51+karmnr52;
+        //shrosrvernr
+        karmnr31r =karmnr31.toFixed(2);
+        $('#karmnr31r').text(karmnr31r);
+        var zkarmnr31 = karmnr31 * 17300;
+        zkarmnr31 = Math.round(zkarmnr31);
+        $('#zkarmnr31').text(zkarmnr31);
+
+
+        //Укладка бетона с вибрированием
+        var kbetonrosnrr =(shrosrvernr*hrosrvernr*lrosrvernr*1.05*0.001*0.001)/0.25;
+        //alert(kbetonrosnrr);
+
+        var kbetonrosnr=(Math.ceil((kbetonrosnrr)))*0.25;
+        //alert(kbetonrosnr);
+        //var kbetonrosnr=kbetonrosnrr*0.25;
+        //shrosrvernr
+        kbetonrosnr = kbetonrosnr.toFixed(2);
+        $('#kbetonrosnr').text(kbetonrosnr);
+        var zkbetonrosnr = kbetonrosnr * 2000;
+        zkbetonrosnr = Math.round(zkbetonrosnr);
+        $('#zkbetonrosnr').text(zkbetonrosnr);
+
+
+        //=======ITOG 2 block =====
+        var zitog2nr= zkbetonrosnr+ zkarmnr31+ zkopalnr ;
+        zitog2nr = Math.round(zitog2nr);
+        $('#zitog2nr').text(zitog2nr);
+
+        //=======ITOG 1_2 block =====
+        var zitog1_2nr= zitog2nr+ zitog1nr;
+        zitog1_2nr = Math.round(zitog1_2nr);
+        $('#zitog1_2nr').text(zitog1_2nr);
+
+
+
+
+
+
+        //======== 2 bloks =======
+
+        // ======Плита:=========
+
+        //Геотекстиль Мегаизол Гео про 200
+        var kgeomagnr =kgeoteksrn*1.1*1.2;
+        //var kzacupr = Math.ceil(kzacup);
+        // alert(kzacupr);
+        //kzacupr=kzacupr*1.2;
+        kgeomagnr =  kgeomagnr.toFixed(2);
+        $('#kgeomagnr').text(kgeomagnr);
+        var zkgeomagnr = kgeomagnr * 30;
+        zkgeomagnr = Math.round(zkgeomagnr);
+        $('#zkgeomagnr').text(zkgeomagnr);
+
+        //Песок строительный (средней крупности или крупный) (Кратно 10 м3) с учетом доставки
+        var kpesokplnr =(Math.round(kpesoknr/10))*10;
+        //var kzacupr = Math.ceil(kzacup);
+
+        kpesokplnr =  kpesokplnr.toFixed(2);
+        $('#kpesokplnr').text(kpesokplnr);
+        var zkpesokplnr = kpesokplnr *600;
+        zkpesokplnr = Math.round(zkpesokplnr);
+        $('#zkpesokplnr').text(zkpesokplnr);
+
+        //Щебень гранитный фр. 20-40 мм. (Кратно 10 м3) с учетом доставки
+        var kshebenplnr =(Math.ceil(kshebennr/10))*10;
+        //alert(kshebennr);
+        //var kzacupr = Math.ceil(kzacup);
+        kshebenplnr =  kshebenplnr.toFixed(2);
+        $('#kshebenplnr').text(kshebenplnr);
+        var zkshebenplnr = kshebenplnr *1400;
+        zkshebenplnr = Math.round(zkshebenplnr);
+        $('#zkshebenplnr').text(zkshebenplnr);
+
+        // Геомембрана Planter
+        var kgidroisolnr40 =kgidroisolnr*1.1;
+        kgidroisolnr40 =  kgidroisolnr40.toFixed(2);
+        $('#kgidroisolnr40').text(kgidroisolnr40);
+        var zkgidroisolnr40 = kgidroisolnr40 *110;
+        zkgidroisolnr40 = Math.round(zkgidroisolnr40);
+        $('#zkgidroisolnr40').text(zkgidroisolnr40);
+
+        //Подставки под арматуру (стульчики)
+        var kpodstulnr =splnr*4;
+        kpodstulnr =  kpodstulnr.toFixed(0);
+        $('#kpodstulnr').text(kpodstulnr);
+        var zkpodstulnr = kpodstulnr *5;
+        zkpodstulnr = Math.round(zkpodstulnr);
+        $('#zkpodstulnr').text(zkpodstulnr);
+
+
+        //Опалубка инвентарная из ламинированной фанеры на деревянном каркасе (амортизация)
+        var kopalnr42 =splnr*115;
+        kopalnr42 =  kopalnr42.toFixed(1);
+        $('#kopalnr42').text(kopalnr42);
+        var zkopalnr42 = kopalnr42;
+        zkopalnr42 = Math.round(zkopalnr42);
+        $('#zkopalnr42').text(zkopalnr42);
+
+
+
+        //Арматура d12 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+
+        var karm12nr =karmrnr43;
+        // alert(karmrfrk38);
+        var karm12nrr =  karm12nr.toFixed(2);
+        $('#karm12nrr').text(karm12nrr);
+        var zkarm12nr = karm12nr *41000;
+        zkarm12nr = Math.round(zkarm12nr);
+        $('#zkarm12nr').text(zkarm12nr);
+
+        // Арматура d8 А500 на хомуты (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+        var karm8nr =karmrnr44;
+        //alert(karmrfrk39);
+        var karm8nrr =  karm8nr.toFixed(2);
+        $('#karm8nrr').text(karm8nrr);
+        var zkarm8nr = karm8nr *41000;
+        zkarm8nr = Math.round(zkarm8nr);
+        $('#zkarm8nr').text(zkarm8nr);
+
+        //Проволока вязальная
+        var kprovnr =karmrnr26nrsm*9;
+        //alert(kprovsm);
+        //(Math.round(sshebsm/10))*10;
+        //var kprovsmr = (Math.ceil(kprovsm));
+        kprovnr =  kprovnr.toFixed(2);
+        $('#kprovnr').text(kprovnr);
+        var zkprovnr = kprovnr *100;
+        zkprovnr = Math.round(zkprovnr);
+        $('#zkprovnr').text(zkprovnr);
+
+        //Бетон B22,5 М300 П4 (С учетом доставки из СПб)
+        kukbetonnr=+kukbetonnr;
+        var kbetonb22nr =kukbetonnr;
+
+         kbetonb22nr = kbetonb22nr.toFixed(2);
+        //var karm12r =  karm12.toFixed(2);
+        $('#kbetonb22nr').text(kbetonb22nr);
+    //<span id="lkadnr">25</span>
+        if (lkadnr <= 30) {
+            var lbeton22nr = 4100;
+        }
+        if (lkadnr > 30) {
+            lbeton22nr = (lkadnr - 30) * 15 + 4100;
+        }
+          lbeton22nr =  Math.round(lbeton22nr);
+        $('#lbeton22nr').text(lbeton22nr);
+
+
+        var zlbeton22nr = lbeton22nr*kbetonb22nr;
+        zlbeton22nr = Math.round(zlbeton22nr);
+        $('#zlbeton22nr').text(zlbeton22nr);
+
+        //======Itog 3_1 blok------
+
+        var zitog3_1nr=zlbeton22nr+zkprovnr+ zkarm8nr+zkarm12nr+zkopalnr42+zkpodstulnr
+            +zkgidroisolnr40+zkshebenplnr+zkpesokplnr+zkgeomagnr;
+        zitog3_1nr = Math.round(zitog3_1nr);
+        $('#zitog3_1nr').text(zitog3_1nr);
+
+
+        // ======Материалы ростверк:=========
+
+        //Опалубка инвентарная из ламинированной фанеры
+    //<span id="hrosrvernr">200</span>
+    //<span id="perimetrnr">40</span>
+    //<span id="lrosrvernr">60</span>
+        if (hrosrvernr < 301) {
+            var kopalrosvnr = perimetrnr*0.6;
+        }
+        if (hrosrvernr >= 301) {
+            kopalrosvnr = (lrosrvernr*2*0.6);
+        }
+        kopalrosvnr =  kopalrosvnr.toFixed(1);
+        $('#kopalrosvnr').text(kopalrosvnr);
+      //=========
+        if (hrosrvernr <= 700) {
+            var kopalrosvnr2 = 260;
+        }
+        if (hrosrvernr >700) {
+            kopalrosvnr2 = 580;
+        }
+        kopalrosvnr2 =  kopalrosvnr2.toFixed(1);
+        $('#kopalrosvnr2').text(kopalrosvnr2);
+
+
+        var zkopalrosvnr = kopalrosvnr2 *kopalrosvnr;
+        zkopalrosvnr = Math.round(zkopalrosvnr);
+        $('#zkopalrosvnr').text(zkopalrosvnr);
+
+        //Доска 40*100(200)*6000 для раскрепления инвентарных щитов, внутренней опалубки ростверка
+        if (hrosrvernr < 301) {
+            var kdoska40nr =(lrosrvernr*hrosrvernr*0.001*2-perimetrnr*hrosrvernr*0.001+perimetrnr*0.1)*0.04*1.1;
+        }
+        if (hrosrvernr >= 301) {
+            kdoska40nr = (lrosrvernr*0.2*0.04);
+        }
+        kdoska40nr =  kdoska40nr.toFixed(2);
+        $('#kdoska40nr').text(kdoska40nr);
+
+        var zkdoska40nr = kdoska40nr *12500;
+        zkdoska40nr = Math.round(zkdoska40nr);
+        $('#zkdoska40nr').text(zkdoska40nr);
+
+        //Арматура d12 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+          var karmnr51nr=karmnr51;
+        var karmnr51nrsm=  karmnr51nr.toFixed(2);
+        $('#karmnr51nrsm').text(karmnr51nrsm);
+
+        var zkarmnr51nr = karmnr51nr *41000;
+        zkarmnr51nr = Math.round(zkarmnr51nr);
+        $('#zkarmnr51nr').text(zkarmnr51nr);
+
+        //Арматура d8 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+
+        var karmnr52nr=karmnr52;
+        var karmnr52nrsm=  karmnr52nr.toFixed(2);
+        $('#karmnr52nrsm').text(karmnr52nrsm);
+
+        var zkarmnr52nr = karmnr52nr *41000;
+        zkarmnr52nr = Math.round(zkarmnr52nr);
+        $('#zkarmnr52nr').text(zkarmnr52nr);
+
+        //Проволока вязальная
+        karmnr52nr=+karmnr52nr;
+        karmnr51nr=+karmnr51nr;
+         var kprovrosnrsm =(karmnr52nr+karmnr51nr)*9;
+        kprovrosnrsm =  kprovrosnrsm.toFixed(2);
+        $('#kprovrosnrsm').text(kprovrosnrsm);
+        var zkprovrosnr = kprovrosnrsm *100;
+        zkprovrosnr = Math.round(zkprovrosnr);
+        $('#zkprovrosnr').text(zkprovrosnr)
+
+        //Бетон для ростверка B22,5 М300 П4
+        kbetonrosnr=+kbetonrosnr;
+        var kbetonrosnr54 =kbetonrosnr;
+        kbetonrosnr54 =  kbetonrosnr54.toFixed(2);
+        $('#kbetonrosnr54').text(kbetonrosnr54);
+        var zkbetonrosnr54 = kbetonrosnr54 *4100;
+        zkbetonrosnr54 = Math.round(zkbetonrosnr54);
+        $('#zkbetonrosnr54').text(zkbetonrosnr54)
+
+//======Itog 3_2 blok------
+
+        var zitog3_2nr=zkbetonrosnr54+zkprovrosnr+zkarmnr52nr+ zkarmnr51nr+zkdoska40nr+zkopalrosvnr  ;
+        zitog3_2nr = Math.round(zitog3_2nr);
+        $('#zitog3_2nr').text(zitog3_2nr);
+
+
+
+
+
+        // =========Доставка:====================
+        // Доставка арматуры шаландой/манипулятором
+
+        if (lkadnr <= 30) {
+            var larmDostavnr = 9000;
+        }
+        if (lkadnr > 30) {
+            larmDostavnr = (lkadnr - 30) * 35 + 9000;
+        }
+        larmDostavnr = Math.round(larmDostavnr);
+        $('#larmDostavnr').text(larmDostavnr);
+
+        var zlarmDostavnr = larmDostavnr;
+        zlarmDostavnr = Math.round(zlarmDostavnr);
+        $('#zlarmDostavnr').text(zlarmDostavnr);
+
+
+        // Доставка и вывоз опалубки
+        if (lkadnr <= 30) {
+           var larmDostavOpalnr = 5000;
+        }
+        if (lkadnr > 30) {
+            larmDostavOpalnr = (lkadnr - 30) * 35 + 5000;
+        }
+        larmDostavOpalnr = Math.round(larmDostavOpalnr);
+        $('#larmDostavOpalnr').text(larmDostavOpalnr);
+
+        var zlarmDostavOpalnr = larmDostavOpalnr * 1;
+        zlarmDostavOpalnr = Math.round(zlarmDostavOpalnr);
+        $('#zlarmDostavOpalnr').text(zlarmDostavOpalnr);
+
+        // Доставка остальных материалов
+        if (lkadnr <= 30) {
+            var larmDostavMaternr = 4200;
+        }
+        if (lkadnr > 30) {
+            larmDostavMaternr = (lkadnr - 30) * 35 + 4200;
+        }
+        larmDostavMaternr = Math.round(larmDostavMaternr);
+        $('#larmDostavMaternr').text(larmDostavMaternr);
+
+        var zlarmDostavMaternr = larmDostavMaternr * 1;
+        zlarmDostavMaternr = Math.round(zlarmDostavMaternr);
+        $('#zlarmDostavMaternr').text(zlarmDostavMaternr);
+
+        // ==========ITOG DOSTAV============
+
+        var zdostavmatnr = zlarmDostavMaternr + zlarmDostavnr + zlarmDostavOpalnr + 2400;
+        zdostavmatnr = Math.round(zdostavmatnr);
+        $('#zdostavmatnr').text(zdostavmatnr);
+
+        // // // =====Итого:
+        // var zdostavmatitogosm = zitog2sm + zdostavmatsm;
+        // zdostavmatitogosm = Math.round(zdostavmatitogosm);
+        // $('#zdostavmatitogosm').text(zdostavmatitogosm);
+
+        // // =====Итого за материалы:
+        zdostavmatitogosm=+zdostavmatitogosm;
+        var zitog3_dnr = zdostavmatnr+zitog3_2nr+zitog3_1nr;
+        zitog3_dnr = Math.round(zitog3_dnr);
+        $('#zitog3_dnr').text(zitog3_dnr);
+
+
+
+
+        //====== 4 blok=========
+        // ======= Доп. Работы===========
+        //  ===============Планировка выбранного грунта============
+        var kgruntnr = 0;
+        kgruntnr = Math.round(kgruntnr);
+        $('#kgruntnr').text(kgruntnr);
+
+        var zkgruntnr = kgruntnr * 150;
+        zkgruntnr = Math.round(zkgruntnr);
+        $('#zkgruntnr').text(zkgruntnr);
+
+        // =============Устройство закладной гильзы вода===========
+        var kzakladnr = 5;
+        kzakladnr = Math.round(kzakladnr);
+        $('#kzakladnr').text(kzakladnr);
+
+        var zkzakladnr = kzakladnr * 1200;
+        zkzakladnr = Math.round(zkzakladnr);
+        $('#zkzakladnr').text(zkzakladnr);
+
+        // =============Устройство закладной гильзы электро===========
+        var kzakladelnr = 10;
+        kzakladelnr = Math.round(kzakladelnr);
+        $('#kzakladelnr').text(kzakladelnr);
+
+        var zkzakladelnr = kzakladelnr * 200;
+        zkzakladelnr = Math.round(zkzakladelnr);
+        $('#zkzakladelnr').text(zkzakladelnr);
+
+        // ====================Разводка канализации под домом============
+        var kzakladkanalnr = 5;
+        kzakladkanalnr = Math.round(kzakladkanalnr);
+        $('#kzakladkanalnr').text(kzakladkanalnr);
+
+        var zkzakladkanalnr = kzakladkanalnr * 1000;
+        zkzakladkanalnr = Math.round(zkzakladkanalnr);
+        $('#zkzakladkanalnr').text(zkzakladkanalnr);
+
+        //Устройство дренажа фундамента с учетом установки дренажных колодцев d340
+
+
+        var kdrenagnr = perimetrnr+8;
+        kdrenagnr = Math.round(kdrenagnr);
+        $('#kdrenagnr').text(kdrenagnr);
+
+        var kdrenagnr_1 = kdrenagnr*(700+72+216+80);
+        kdrenagnr_1 = Math.round(kdrenagnr_1);
+
+        var kdrenagnr_2 = kdrenagnr/15;
+        var kdrenagnr_2r =Math.ceil(kdrenagnr_2);
+
+        var kdrenagnr_2r2=kdrenagnr_2r*6100;
+        var kdrenagnr_2r21 =(Math.round(kdrenagnr_2r2/10))*10;
+
+        var kdrenagsm_2knr=(kdrenagnr_2r21+kdrenagnr_1)/kdrenagnr;
+
+        var kdrenagsm_2knr1 =Math.ceil(kdrenagsm_2knr);
+        $('#kdrenagsm_2knr1').text(kdrenagsm_2knr1);
+
+
+        var zkdrenagsm_2knr = kdrenagsm_2knr1 * kdrenagnr;
+        zkdrenagsm_2knr= Math.round(zkdrenagsm_2knr);
+        $('#zkdrenagsm_2knr').text(zkdrenagsm_2knr);
+
+
+        // Вывоз мусора после завершения работ на объекте
+        var kmusornr = 1;
+        kmusornr = Math.round(kmusornr);
+        $('#kmusornr').text(kmusornr);
+
+        var zkmusornr = kmusornr * 5000;
+        zkmusornr = Math.round(zkmusornr);
+        $('#zkmusornr').text(zkmusornr);
+
+
+        // =============Itig Dop R=============
+        var zitogdopnr = zkmusornr + zkzakladkanalnr + zkzakladelnr + zkzakladnr + kgruntnr+zkdrenagsm_2knr;
+        zitogdopnr = Math.round(zitogdopnr);
+        $('#zitogdopnr').text(zitogdopnr);
+
+        // =============Спецтехника и доп. оборудование:====================
+        // ============Бетононасос==============
+
+        if (lkadnr <= 30) {
+            var  kzbetnr = 14400;
+        }
+        if (lkadnr > 30) {
+            kzbetnr = (lkadnr - 30) * 155 + 14400;
+        }
+        kzbetnr = Math.round( kzbetnr);
+        $('#kzbetnr').text( kzbetnr);
+
+        var zbetonnr =kzbetnr;
+        zbetonnr = Math.round(zbetonnr);
+        $('#zbetonnr').text(zbetonnr);
+
+        // Обеспечение строительным вагончиком,
+        var kvagonnr = 1;
+        kvagonnr = Math.round(kvagonnr);
+        $('#kvagonnr').text(kvagonnr);
+
+        var zkvagonnr = kvagonnr * 20000;
+        zkvagonnr = Math.round(zkvagonnr);
+        $('#zkvagonnr').text(zkvagonnr);
+
+        // Обеспечение биотуалетом
+        var kbiotualnr = 1;
+        kbiotualnr = Math.round(kbiotualnr);
+        $('#kbiotualnr').text(kbiotualnr);
+
+        var zkbiotualnr = kbiotualnr * 5000;
+        zkbiotualnr = Math.round(zkbiotualnr);
+        $('#zkbiotualnr').text(zkbiotualnr);
+
+
+        // Обеспечение электричеством: предоставляет Заказчик
+        var kelktronr = 0;
+        kelktronr = Math.round(kelktronr);
+        $('#kelktronr').text(kelktronr);
+
+        var zkelktronr = kelktronr * 0;
+        zkelktronr = Math.round(zkelktronr);
+        $('#zkelktronr').text(zkelktronr);
+
+        // Обеспечение водой:
+        var kvaternr = 0;
+        kvaternr = Math.round(kvaternr);
+        $('#kvaternr').text(kvaternr);
+
+        var zkvaternr = kvaternr * 0;
+        zkvaternr = Math.round(zkvaternr);
+        $('#zkvaternr').text(zkvaternr);
+
+        // ===========Итого за спецтехнику и доп. оборудование:
+        var zitogcpeznr = zkvaternr + zkelktronr + zkbiotualnr + zkvagonnr + zbetonnr;
+        zitogcpezsm = Math.round(zitogcpezsm);
+        $('#zitogcpeznr').text(zitogcpeznr);
+
+        // ===========Итого за работы и материалы:========
+        var zitogo5nr = zitogcpeznr + zitogdopnr + zitog3_dnr + zitog1_2nr;
+        zzitogo5nr = Math.round(zitogo5nr);
+        $('#zitogo5nr').text(zitogo5nr);
+
+        // Накладные расходы 2%:
+        var zitogSMplnr = zitogo5nr * 0.02;
+        zitogSMplnr = Math.round(zitogSMplnr);
+        $('#zitogSMplnr').text(zitogSMplnr);
+
+        // ИТОГО ПО СМЕТЕ:
+
+        var zitogSMnr = zitogo5nr + zitogSMplnr;
+        // zitogM1
+        zitogSMnr = Math.round(zitogSMnr);
+        $('#zitogSMnr').text(zitogSMnr);
+
+        zena_smetu = zitogSMnr;
+        zena_smetu = Math.round(zena_smetu);
+        $('#zena_smetu').text(zena_smetu);
+
+        //==== itog 1 etap======
+
+        var zitog1etapnr=zitogdopnr/2+zitog3_dnr-zkbetonrosnr54-zlbeton22nr;
+        zitog1etapnr = (Math.ceil(zitog1etapnr/1000))*1000;
+        $('#zitog1etapnr').text(zitog1etapnr);
+
+
+        //==== itog 2 etap======
+
+        var zitog2etapnr=zkbetonrosnr54+zlbeton22nr+zbetonnr;
+
+        zitog2etapnr = (Math.ceil(zitog2etapnr/1000))*1000;
+        $('#zitog2etapnr').text(zitog2etapnr);
+
+        //==== itog 2 etap======
+
+        var zitog3etapnr=zitogSMnr-zitog1etapnr-zitog2etapnr;
+
+        zitog3etapnr = Math.round(zitog3etapnr);
+        $('#zitog3etapnr').text(zitog3etapnr);
+
+
+
 
     }
 
@@ -2707,7 +3964,697 @@ $(document).ready(function() {
 //========== РАСЧЕТ ПАРАМЕТРОМ СМЕТЫ ДЛЯ ПЛИТЫ VR  =================//
     if (VarFund==4){
 
+        //Длина
+        var landvr = document.getElementById('landplfvr').value;
+        landvr = +landvr;
+        $('#llandvr').text(landvr);
+
+        //Ширина
+        var breadtvr = document.getElementById('breadthplfvr').value;
+        breadtvr = +breadtvr;
+        $('#breadtvr').text(breadtvr);
+
+        //Высота плиты
+        var hplvr = (document.getElementById('elevationplvr').value)*1000;
+        hplvr = +hplvr;
+        $('#hplvr').text(hplvr);
+
+        //Площадь плиты
+        var splvr = document.getElementById('areapplfvr').value;
+        splvr = +splvr;
+        $('#splvr').text(splvr);
+
+        //Периметр фундамента
+        var perimetrvr = document.getElementById('perimplfvr').value;
+        perimetrvr = +perimetrvr;
+        $('#perimetrvr').text(perimetrvr);
+
+        //Толщина песчаной подушки
+        var hpesokvr = (document.getElementById('pesokplfvr').value)*1000;
+        hpesokvr = +hpesokvr;
+        $('#hpesokvr').text(hpesokvr);
+
+        //Толщина щебёночной подушки
+        var hsheblpvr = (document.getElementById('pesokplfvr').value)*1000;
+        hsheblpvr = +hsheblpvr;
+        $('#hsheblpvr').text(hsheblpvr);
+
+        //Толщина выбираемого слоя грунта
+        var hgruntvr=hsheblpvr+hpesokvr;
+        hgruntvr = +hgruntvr;
+        $('#hgruntvr').text(hgruntvr);
+
+        //Общая длина ростверка
+        var lrosrvervr= document.getElementById('langplvr').value;
+        lrosrvervr = +lrosrvervr;
+        $('#lrosrvervr').text(lrosrvervr);
+
+        //Высота ростверка
+        var hrosrvervr= (document.getElementById('hplplvr').value)*1000;
+        hrosrvervr = +hrosrvervr;
+        $('#hrosrvervr').text(hrosrvervr);
+
+        //Ширина ростверка
+        //<input type="number" class="shebenplf" id="shplplnr" value="0.4" min="0" max="200" step="0.1">
+        var shrosrvervr= (document.getElementById('shplplvr').value)*1000;
+        shrosrvervr = +shrosrvervr;
+        $('#shrosrvervr').text(shrosrvervr);
+
+        //Растояние от КАД
+        var lkadvr = document.getElementById('distancelentfvr').value;
+        lkadvr = +lkadvr;
+        $('#lkadvr').text(lkadvr);
+
+
+
+//==================================1 blokc =================
+
+
+        // Вынос осей, разбивка участка
+        var kosvr = splvr;
+        kosvr = kosvr.toFixed(0);
+        $('#kosvr').text(kosvr);
+        var zkosvr = kosvr * 40;
+        zkosvr = Math.round(zkosvr);
+        $('#zkosvr').text(zkosvr);
+
+        // Земляные работы
+        var kzemvvr = (splvr+perimetrvr)*hgruntvr*0.001;
+        kzemvvr = kzemvvr.toFixed(2);
+        $('#kzemvvr').text(kzemvvr);
+        var zemvvr = kzemvvr * 300;
+        zemvvr = Math.round(zemvvr);
+        $('#zemvvr').text(zemvvr);
+
+
+        // Устройство  разделительного слоя из геотекстиля
+        var kgeoteksvr =splvr+perimetrvr ;
+        kgeoteksvr = kgeoteksvr.toFixed(2);
+        $('#kgeoteksvr').text(kgeoteksvr);
+        var zkgeoteksvr = kgeoteksvr * 20;
+        zkgeoteksvr = Math.round(zkgeoteksvr);
+        $('#zkgeoteksvr').text(zkgeoteksvr);
+
+        //Устройство песчаной подушки с послойной трамбовкой виброплитой
+        var kpesokvr =(splvr*hpesokvr*0.001+perimetrvr*hpesokvr*0.001)*1.28*1.2;
+        //kpesoknr = Math.round((kpesoknr) * 10) / 10;
+        kpesokvr = Math.round(kpesokvr);
+        kpesokvr = kpesokvr.toFixed(2);
+        $('#kpesokvr').text(kpesokvr);
+        var zkpesokvr = kpesokvr * 400;
+        zkpesokvr = Math.round(zkpesokvr);
+        $('#zkpesokvr').text(zkpesokvr);
+
+        // Устройство щебеночной подушки с послойной трамбовкой виброплитой
+        var kshebenvr =(splvr*hsheblpvr*0.001+perimetrvr*hsheblpvr*0.001)*1.28;
+        //kpesoknr = Math.round((kpesoknr) * 10) / 10;
+        kshebenvr = Math.round(kshebenvr);
+        kshebenvr = kshebenvr.toFixed(2);
+        $('#kshebenvr').text(kshebenvr);
+        var zkshebenvr = kshebenvr * 400;
+        zkshebenvr = Math.round(zkshebenvr);
+        $('#zkshebenvr').text(zkshebenvr);
+
+        // Укладка гидроизоляционной мембраны Planter
+        var kgidroisolvr =splvr+perimetrvr*0.3;
+        // sshebsm = Math.ceil((sshebsm) * 10) / 10;
+        kgidroisolvr = kgidroisolvr.toFixed(2);
+        $('#kgidroisolvr').text(kgidroisolvr);
+        var zkgidroisolvr = kgidroisolvr * 30;
+        zkgidroisolvr = Math.round(zkgidroisolvr);
+        $('#zkgidroisolvr').text(zkgidroisolvr);
+
+        //Монтаж и демонтаж опалубки
+        var kmontagopalvr = perimetrvr;
+        // sshebsm = Math.ceil((sshebsm) * 10) / 10;
+        kmontagopalvr = kmontagopalvr.toFixed(2);
+        $('#kmontagopalvr').text(kmontagopalvr);
+        var zkmontagopalvr = kmontagopalvr * 450;
+        zkmontagopalvr = Math.round(zkmontagopalvr);
+        $('#zkmontagopalvr').text(zkmontagopalvr);
+
+        //Изготовление и установка арматурных каркасов, монтаж арматурной сетки (Соединение стержней арматуры выполняется с использованием вязальной проволоки)
+        var karmrvr43 =(splvr*21*0.888*0.001*1.1+perimetrvr/0.2*1.5*1.1*0.91*0.001);
+        //karmrnr43 = karmrnr43.toFixed(2);
+        karmrvr43=+karmrvr43;
+
+        var karmrvr44 =(splvr+perimetrvr/2)*0.45*1.2*0.001+perimetrvr/1.5*0.5*1.1*0.001;
+        //karmrnr44 = karmrnr44.toFixed(2);
+        //alert(karmrnr44);
+        karmrvr44=+karmrvr44;
+
+        var karmrnr26vr=karmrvr44+karmrvr43;
+
+        var karmrnr26vrsm = karmrnr26vr.toFixed(2);
+        $('#karmrnr26vrsm').text(karmrnr26vrsm);
+        var zkarmrnr26vr = karmrnr26vr *17300;
+        zkarmrnr26vr = Math.round(zkarmrnr26vr);
+        $('#zkarmrnr26vr').text(zkarmrnr26vr);
+
+
+
+
+        //Укладка бетона с вибрированием
+
+        var kukbetonvr = splvr*hplvr*0.001*1.05;
+        kukbetonvr = kukbetonvr.toFixed(2);
+        $('#kukbetonvr').text(kukbetonvr);
+        var zkukbetovr25 = kukbetonvr * 1500;
+        zkukbetovr25 = Math.round(zkukbetovr25);
+        $('#zkukbetovr25').text(zkukbetovr25);
+
+        //=======ITOG 1 block =====
+        var zitog1vr=zkukbetovr25+zkarmrnr26vr+zkmontagopalvr+zkgidroisolvr+zkshebenvr+zkpesokvr
+            +zkgeoteksvr+zemvvr+zkosvr;
+        zitog1vr = Math.round(zitog1vr);
+        $('#zitog1vr').text(zitog1vr);
+
+        ///======Ростверк: ============
+
+
+        //Монтаж опалубки
+        var kopalvr = hrosrvervr*lrosrvervr*2*0.001;
+        //shrosrvernr
+        kopalvr = kopalvr.toFixed(2);
+        $('#kopalvr').text(kopalvr);
+        var zkopalvr = kopalvr * 500;
+        zkopalvr = Math.round(zkopalvr);
+        $('#zkopalvr').text(zkopalvr);
+
+        //Изготовление и установка арматурных каркасов ростверка, (Соединение стержней арматуры выполняется с использованием вязальной проволоки)
+
+        var karmvr51_1=(shrosrvervr*0.001)/0.2;
+        //karmnr51_1 = Math.ceil((karmnr51_1) * 10) / 10;
+        //alert(karmnr51_1);
+        var karmvr51_2=(hrosrvervr*0.001)/0.2;
+        //karmnr51_2 = Math.ceil((karmnr51_2) * 10) / 10;
+        //alert(karmnr51_2);
+
+        var karmvr51=karmvr51_1*karmvr51_2*lrosrvervr*0.001*0.888*1.3;
+        //alert(karmnr51);
+
+        var karmvr52=(lrosrvervr/0.3)*0.395*0.001*1.1;
+
+        var karmvr31 = karmvr51+karmvr52;
+        //shrosrvernr
+        karmvr31r =karmvr31.toFixed(2);
+        $('#karmvr31r').text(karmvr31r);
+        var zkarmvr31 = karmvr31 * 17300;
+        zkarmvr31 = Math.round(zkarmvr31);
+        $('#zkarmvr31').text(zkarmvr31);
+
+
+        //Укладка бетона с вибрированием
+        var kbetonrosvrr =(shrosrvervr*hrosrvervr*lrosrvervr*1.05*0.001*0.001)/0.25;
+        //alert(kbetonrosnrr);
+
+        var kbetonrosvr=(Math.ceil((kbetonrosvrr)))*0.25;
+        //alert(kbetonrosnr);
+        //var kbetonrosnr=kbetonrosnrr*0.25;
+        //shrosrvernr
+        kbetonrosvr = kbetonrosvr.toFixed(2);
+        $('#kbetonrosvr').text(kbetonrosvr);
+        var zkbetonrosvr = kbetonrosvr * 2000;
+        zkbetonrosvr = Math.round(zkbetonrosvr);
+        $('#zkbetonrosvr').text(zkbetonrosvr);
+
+
+        //=======ITOG 2 block =====
+        var zitog2vr= zkbetonrosvr+ zkarmvr31+ zkopalvr ;
+        zitog2vr = Math.round(zitog2vr);
+        $('#zitog2vr').text(zitog2vr);
+
+        //=======ITOG 1_2 block =====
+        var zitog1_2vr= zitog2vr+ zitog1vr;
+        zitog1_2vr = Math.round(zitog1_2vr);
+        $('#zitog1_2vr').text(zitog1_2vr);
+
+
+
+
+
+
+        //======== 2 bloks =======
+
+        // ======Плита:=========
+
+        //Геотекстиль Мегаизол Гео про 200
+        var kgeomagvr =kgeoteksvr*1.1*1.2;
+        //var kzacupr = Math.ceil(kzacup);
+        // alert(kzacupr);
+        //kzacupr=kzacupr*1.2;
+        kgeomagvr =  kgeomagvr.toFixed(2);
+        $('#kgeomagvr').text(kgeomagvr);
+        var zkgeomagvr = kgeomagvr * 30;
+        zkgeomagvr = Math.round(zkgeomagvr);
+        $('#zkgeomagvr').text(zkgeomagvr);
+
+        //Песок строительный (средней крупности или крупный) (Кратно 10 м3) с учетом доставки
+        var kpesokplvr =(Math.round(kpesokvr/10))*10;
+        //var kzacupr = Math.ceil(kzacup);
+
+        kpesokplvr =  kpesokplvr.toFixed(2);
+        $('#kpesokplvr').text(kpesokplvr);
+        var zkpesokplvr = kpesokplvr *600;
+        zkpesokplvr = Math.round(zkpesokplvr);
+        $('#zkpesokplvr').text(zkpesokplvr);
+
+        //Щебень гранитный фр. 20-40 мм. (Кратно 10 м3) с учетом доставки
+        var kshebenplvr =(Math.ceil(kshebenvr/10))*10;
+        //alert(kshebennr);
+        //var kzacupr = Math.ceil(kzacup);
+        kshebenplvr =  kshebenplvr.toFixed(2);
+        $('#kshebenplvr').text(kshebenplvr);
+        var zkshebenplvr = kshebenplvr *1400;
+        zkshebenplvr = Math.round(zkshebenplvr);
+        $('#zkshebenplvr').text(zkshebenplvr);
+
+        // Геомембрана Planter
+        var kgidroisolv40 =kgidroisolvr*1.1;
+        kgidroisolv40 =  kgidroisolv40.toFixed(2);
+        $('#kgidroisolv40').text(kgidroisolv40);
+        var zkgidroisolvr40 = kgidroisolv40 *110;
+        zkgidroisolvr40 = Math.round(zkgidroisolvr40);
+        $('#zkgidroisolvr40').text(zkgidroisolvr40);
+
+        //Подставки под арматуру (стульчики)
+        var kpodstulvr =splvr*4;
+        kpodstulvr =  kpodstulvr.toFixed(0);
+        $('#kpodstulvr').text(kpodstulvr);
+        var zkpodstulvr = kpodstulvr *5;
+        zkpodstulvr = Math.round(zkpodstulvr);
+        $('#zkpodstulvr').text(zkpodstulvr);
+
+
+        //Опалубка инвентарная из ламинированной фанеры на деревянном каркасе (амортизация)
+        var kopalvr42 =splvr*115;
+        kopalvr42 =  kopalvr42.toFixed(1);
+        $('#kopalvr42').text(kopalvr42);
+        var zkopalvr42 = kopalvr42;
+        zkopalvr42 = Math.round(zkopalvr42);
+        $('#zkopalvr42').text(zkopalvr42);
+
+
+
+        //Арматура d12 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+
+        var karm12vr =karmrvr43;
+        // alert(karmrfrk38);
+        var karm12vrr =  karm12vr.toFixed(2);
+        $('#karm12vrr').text(karm12vrr);
+        var zkarm12vr = karm12vr *41000;
+        zkarm12vr = Math.round(zkarm12vr);
+        $('#zkarm12vr').text(zkarm12vr);
+
+        // Арматура d8 А500 на хомуты (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+        var karm8vr =karmrvr44;
+        //alert(karmrfrk39);
+        var karm8vrr =  karm8vr.toFixed(2);
+        $('#karm8vrr').text(karm8vrr);
+        var zkarm8vr = karm8vr *41000;
+        zkarm8vr = Math.round(zkarm8vr);
+        $('#zkarm8vr').text(zkarm8vr);
+
+        //Проволока вязальная
+        var kprovvr =karmrnr26vrsm*9;
+        //alert(kprovsm);
+        //(Math.round(sshebsm/10))*10;
+        //var kprovsmr = (Math.ceil(kprovsm));
+        kprovvr =  kprovvr.toFixed(2);
+        $('#kprovvr').text(kprovvr);
+        var zkprovvr = kprovvr *100;
+        zkprovvr = Math.round(zkprovvr);
+        $('#zkprovvr').text(zkprovvr);
+
+        //Бетон B22,5 М300 П4 (С учетом доставки из СПб)
+        kukbetonvr=+kukbetonvr;
+        var kbetonb22vr =kukbetonvr;
+
+        kbetonb22vr = kbetonb22vr.toFixed(2);
+        //var karm12r =  karm12.toFixed(2);
+        $('#kbetonb22vr').text(kbetonb22vr);
+        //<span id="lkadnr">25</span>
+        if (lkadvr <= 30) {
+            var lbeton22vr = 4100;
         }
+        if (lkadvr > 30) {
+            lbeton22vr = (lkadvr - 30) * 15 + 4100;
+        }
+        lbeton22vr =  Math.round(lbeton22vr);
+        $('#lbeton22vr').text(lbeton22vr);
+
+
+        var zlbeton22vr = lbeton22vr*kbetonb22vr;
+        zlbeton22vr = Math.round(zlbeton22vr);
+        $('#zlbeton22vr').text(zlbeton22vr);
+
+        //======Itog 3_1 blok------
+
+        var zitog3_1vr=zlbeton22vr+zkprovvr+ zkarm8vr+zkarm12vr+zkopalvr42+zkpodstulvr
+            +zkgidroisolvr40+zkshebenplvr+zkpesokplvr+zkgeomagvr;
+        zitog3_1vr = Math.round(zitog3_1vr);
+        $('#zitog3_1vr').text(zitog3_1vr);
+
+
+        // ======Материалы ростверк:=========
+
+        //Опалубка инвентарная из ламинированной фанеры
+        //<span id="hrosrvernr">200</span>
+        //<span id="perimetrnr">40</span>
+        //<span id="lrosrvernr">60</span>
+        if (hrosrvervr < 301) {
+            var kopalrosvvr = perimetrvr*0.6;
+        }
+        if (hrosrvervr >= 301) {
+            kopalrosvvr = (lrosrvervr*2*0.6);
+        }
+        kopalrosvvr= kopalrosvvr.toFixed(1);
+        $('#kopalrosvvr').text(kopalrosvvr);
+        //=========
+        if (hrosrvervr <= 700) {
+            var kopalrosvvr2 = 260;
+        }
+        if (hrosrvervr >700) {
+            kopalrosvvr2 = 580;
+        }
+        kopalrosvvr2 =  kopalrosvvr2.toFixed(1);
+        $('#kopalrosvvr2').text(kopalrosvvr2);
+
+
+        var zkopalrosvvr = kopalrosvvr2 *kopalrosvvr;
+        zkopalrosvvr = Math.round(zkopalrosvvr);
+        $('#zkopalrosvvr').text(zkopalrosvvr);
+
+        //Доска 40*100(200)*6000 для раскрепления инвентарных щитов, внутренней опалубки ростверка
+        if (hrosrvervr < 301) {
+            var kdoska40vr =(lrosrvervr*hrosrvervr*0.001*2-perimetrvr*hrosrvervr*0.001+perimetrvr*0.1)*0.04*1.1;
+        }
+        if (hrosrvervr >= 301) {
+            kdoska40vr = (lrosrvervr*0.2*0.04);
+        }
+        kdoska40vr =  kdoska40vr.toFixed(2);
+        $('#kdoska40vr').text(kdoska40vr);
+
+        var zkdoska40vr = kdoska40vr *12500;
+        zkdoska40vr = Math.round(zkdoska40vr);
+        $('#zkdoska40vr').text(zkdoska40vr);
+
+        //Арматура d12 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+        var karmnr51vr=karmvr51;
+        var karmnr51vrsm=  karmnr51vr.toFixed(2);
+        $('#karmnr51vrsm').text(karmnr51vrsm);
+
+        var zkarmnr51vr = karmnr51vr *41000;
+        zkarmnr51vr = Math.round(zkarmnr51vr);
+        $('#zkarmnr51vr').text(zkarmnr51vr);
+
+        //Арматура d8 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
+
+        var karmnr52vr=karmvr52;
+        var karmnr52vrsm=  karmnr52vr.toFixed(2);
+        $('#karmnr52vrsm').text(karmnr52vrsm);
+
+        var zkarmnr52vr = karmnr52vr *41000;
+        zkarmnr52vr = Math.round(zkarmnr52vr);
+        $('#zkarmnr52vr').text(zkarmnr52vr);
+
+        //Проволока вязальная
+        karmnr52vr=+karmnr52vr;
+        karmnr51vr=+karmnr51vr;
+        var kprovrosvrsm =(karmnr52vr+karmnr51vr)*9;
+        kprovrosvrsm =  kprovrosvrsm.toFixed(2);
+        $('#kprovrosvrsm').text(kprovrosvrsm);
+        var zkprovrosvr = kprovrosvrsm *100;
+        zkprovrosvr = Math.round(zkprovrosvr);
+        $('#zkprovrosvr').text(zkprovrosvr);
+
+        //Бетон для ростверка B22,5 М300 П4
+        kbetonrosvr=+kbetonrosvr;
+        var kbetonrosvr54 =kbetonrosvr;
+        kbetonrosvr54 =  kbetonrosvr54.toFixed(2);
+        $('#kbetonrosvr54').text(kbetonrosvr54);
+        var zkbetonrosvr54 = kbetonrosvr54 *4100;
+        zkbetonrosvr54 = Math.round(zkbetonrosvr54);
+        $('#zkbetonrosvr54').text(zkbetonrosvr54);
+
+//======Itog 3_2 blok------
+
+        var zitog3_2vr=zkbetonrosvr54+zkprovrosvr+zkarmnr52vr+ zkarmnr51vr+zkdoska40vr+zkopalrosvvr  ;
+        zitog3_2vr = Math.round(zitog3_2vr);
+        $('#zitog3_2vr').text(zitog3_2vr);
+
+
+
+
+
+        // =========Доставка:====================
+        // Доставка арматуры шаландой/манипулятором
+
+        if (lkadvr <= 30) {
+            var larmDostavvr = 9000;
+        }
+        if (lkadvr > 30) {
+            larmDostavvr = (lkadvr - 30) * 35 + 9000;
+        }
+        larmDostavvr = Math.round(larmDostavvr);
+        $('#larmDostavvr').text(larmDostavvr);
+
+        var zlarmDostavvr = larmDostavvr;
+        zlarmDostavvr = Math.round(zlarmDostavvr);
+        $('#zlarmDostavvr').text(zlarmDostavvr);
+
+
+        // Доставка и вывоз опалубки
+        if (lkadvr <= 30) {
+            var larmDostavOpalvr = 5000;
+        }
+        if (lkadvr > 30) {
+            larmDostavOpalvr = (lkadvr - 30) * 35 + 5000;
+        }
+        larmDostavOpalvr = Math.round(larmDostavOpalvr);
+        $('#larmDostavOpalvr').text(larmDostavOpalvr);
+
+        var zlarmDostavOpalvr = larmDostavOpalvr * 1;
+        zlarmDostavOpalvr = Math.round(zlarmDostavOpalvr);
+        $('#zlarmDostavOpalvr').text(zlarmDostavOpalvr);
+
+        // Доставка остальных материалов
+        if (lkadvr <= 30) {
+            var larmDostavMatervr = 4200;
+        }
+        if (lkadvr > 30) {
+            larmDostavMatervr = (lkadvr - 30) * 35 + 4200;
+        }
+        larmDostavMatervr = Math.round(larmDostavMatervr);
+        $('#larmDostavMatervr').text(larmDostavMatervr);
+
+        var zlarmDostavMatervr = larmDostavMatervr * 1;
+        zlarmDostavMatervr = Math.round(zlarmDostavMatervr);
+        $('#zlarmDostavMatervr').text(zlarmDostavMatervr);
+
+        // ==========ITOG DOSTAV============
+
+        var zdostavmatvr = zlarmDostavMatervr + zlarmDostavvr + zlarmDostavOpalvr + 2400;
+        zdostavmatvr = Math.round(zdostavmatvr);
+        $('#zdostavmatvr').text(zdostavmatvr);
+
+        // // // =====Итого:
+        // var zdostavmatitogosm = zitog2sm + zdostavmatsm;
+        // zdostavmatitogosm = Math.round(zdostavmatitogosm);
+        // $('#zdostavmatitogosm').text(zdostavmatitogosm);
+
+        // // =====Итого за материалы:
+        //zdostavmatitogosm=+zdostavmatitogosm;
+        var zitog3_dvr = zdostavmatvr+zitog3_2vr+zitog3_1vr;
+        zitog3_dvr = Math.round(zitog3_dvr);
+        $('#zitog3_dvr').text(zitog3_dvr);
+
+
+
+
+        //====== 4 blok=========
+        // ======= Доп. Работы===========
+        //  ===============Планировка выбранного грунта============
+        var kgruntvr = 0;
+        kgruntvr = Math.round(kgruntvr);
+        $('#kgruntvr').text(kgruntvr);
+
+        var zkgruntvr = kgruntvr * 150;
+        zkgruntvr = Math.round(zkgruntvr);
+        $('#zkgruntvr').text(zkgruntvr);
+
+        // =============Устройство закладной гильзы вода===========
+        var kzakladvr = 5;
+        kzakladvr = Math.round(kzakladvr);
+        $('#kzakladvr').text(kzakladvr);
+
+        var zkzakladvr = kzakladvr * 1200;
+        zkzakladvr = Math.round(zkzakladvr);
+        $('#zkzakladvr').text(zkzakladvr);
+
+        // =============Устройство закладной гильзы электро===========
+        var kzakladelvr = 10;
+        kzakladelvr = Math.round(kzakladelvr);
+        $('#kzakladelvr').text(kzakladelvr);
+
+        var zkzakladelvr = kzakladelvr * 200;
+        zkzakladelvr = Math.round(zkzakladelvr);
+        $('#zkzakladelvr').text(zkzakladelvr);
+
+        // ====================Разводка канализации под домом============
+        var kzakladkanalvr = 5;
+        kzakladkanalvr = Math.round(kzakladkanalvr);
+        $('#kzakladkanalvr').text(kzakladkanalvr);
+
+        var zkzakladkanalvr = kzakladkanalvr * 1000;
+        zkzakladkanalvr = Math.round(zkzakladkanalvr);
+        $('#zkzakladkanalvr').text(zkzakladkanalvr);
+
+        //Устройство дренажа фундамента с учетом установки дренажных колодцев d340
+
+
+        var kdrenagvr = perimetrvr+8;
+        kdrenagvr = Math.round(kdrenagvr);
+        $('#kdrenagvr').text(kdrenagvr);
+
+        var kdrenagvr_1 = kdrenagvr*(700+72+216+80);
+        kdrenagvr_1 = Math.round(kdrenagvr_1);
+
+        var kdrenagvr_2 = kdrenagvr/15;
+        var kdrenagvr_2r =Math.ceil(kdrenagvr_2);
+
+        var kdrenagvr_2r2=kdrenagvr_2r*6100;
+        var kdrenagvr_2r21 =(Math.round(kdrenagvr_2r2/10))*10;
+
+        var kdrenagsm_2kvr=(kdrenagvr_2r21+kdrenagvr_1)/kdrenagvr;
+
+        var kdrenagsm_2kvr1 =Math.ceil(kdrenagsm_2kvr);
+        $('#kdrenagsm_2kvr1').text(kdrenagsm_2kvr1);
+
+
+        var zkdrenagsm_2kvr = kdrenagsm_2kvr1 * kdrenagvr;
+        zkdrenagsm_2kvr= Math.round(zkdrenagsm_2kvr);
+        $('#zkdrenagsm_2kvr').text(zkdrenagsm_2kvr);
+
+
+        // Вывоз мусора после завершения работ на объекте
+        var kmusorvr = 1;
+        kmusorvr = Math.round(kmusorvr);
+        $('#kmusorvr').text(kmusorvr);
+
+        var zkmusorvr = kmusorvr * 5000;
+        zkmusorvr = Math.round(zkmusorvr);
+        $('#zkmusorvr').text(zkmusorvr);
+
+
+        // =============Itig Dop R=============
+        var zitogdopvr = zkmusorvr + zkzakladkanalvr + zkzakladelvr + zkzakladvr + kgruntvr+zkdrenagsm_2kvr;
+        zitogdopvr = Math.round(zitogdopvr);
+        $('#zitogdopvr').text(zitogdopvr);
+
+        // =============Спецтехника и доп. оборудование:====================
+        // ============Бетононасос==============
+
+        if (lkadvr <= 30) {
+            var  kzbetvr = 14400;
+        }
+        if (lkadvr > 30) {
+            kzbetvr = (lkadvr - 30) * 155 + 14400;
+        }
+        kzbetvr = Math.round( kzbetvr);
+        $('#kzbetvr').text( kzbetvr);
+
+        var zbetonvr =kzbetvr;
+        zbetonvr = Math.round(zbetonvr);
+        $('#zbetonvr').text(zbetonvr);
+
+        // Обеспечение строительным вагончиком,
+        var kvagonvr = 1;
+        kvagonvr = Math.round(kvagonvr);
+        $('#kvagonvr').text(kvagonvr);
+
+        var zkvagonvr = kvagonvr * 20000;
+        zkvagonvr = Math.round(zkvagonvr);
+        $('#zkvagonvr').text(zkvagonvr);
+
+        // Обеспечение биотуалетом
+        var kbiotualvr = 1;
+        kbiotualvr = Math.round(kbiotualvr);
+        $('#kbiotualvr').text(kbiotualvr);
+
+        var zkbiotualvr = kbiotualvr * 5000;
+        zkbiotualvr = Math.round(zkbiotualvr);
+        $('#zkbiotualvr').text(zkbiotualvr);
+
+
+        // Обеспечение электричеством: предоставляет Заказчик
+        var kelktrovr = 0;
+        kelktrovr = Math.round(kelktrovr);
+        $('#kelktrovr').text(kelktrovr);
+
+        var zkelktrovr = kelktrovr * 0;
+        zkelktrovr = Math.round(zkelktrovr);
+        $('#zkelktrovr').text(zkelktrovr);
+
+        // Обеспечение водой:
+        var kvatervr = 0;
+        kvatervr = Math.round(kvatervr);
+        $('#kvatervr').text(kvatervr);
+
+        var zkvatervr = kvatervr * 0;
+        zkvatervr = Math.round(zkvatervr);
+        $('#zkvatervr').text(zkvatervr);
+
+        // ===========Итого за спецтехнику и доп. оборудование:
+        var zitogcpezvr = zkvatervr + zkelktrovr + zkbiotualvr + zkvagonvr + zbetonvr;
+        zitogcpezvr = Math.round(zitogcpezvr);
+        $('#zitogcpezvr').text(zitogcpezvr);
+
+        // ===========Итого за работы и материалы:========
+        var zitogo5vr = zitogcpezvr + zitogdopvr + zitog3_dvr + zitog1_2vr;
+        zzitogo5vr = Math.round(zitogo5vr);
+        $('#zitogo5vr').text(zitogo5vr);
+
+        // Накладные расходы 2%:
+        var zitogSMplvr = zitogo5vr * 0.02;
+        zitogSMplvr = Math.round(zitogSMplvr);
+        $('#zitogSMplvr').text(zitogSMplvr);
+
+        // ИТОГО ПО СМЕТЕ:
+
+        var zitogSMvr = zitogo5vr + zitogSMplvr;
+        // zitogM1
+        zitogSMvr = Math.round(zitogSMvr);
+        $('#zitogSMvr').text(zitogSMvr);
+
+        zena_smetu = zitogSMvr;
+        zena_smetu = Math.round(zena_smetu);
+        $('#zena_smetu').text(zena_smetu);
+
+        //==== itog 1 etap======
+
+        var zitog1etapvr=zitogdopvr/2+zitog3_dvr-zkbetonrosvr54-zlbeton22vr;
+        zitog1etapvr = (Math.ceil(zitog1etapvr/1000))*1000;
+        $('#zitog1etapvr').text(zitog1etapvr);
+
+
+        //==== itog 2 etap======
+
+        var zitog2etapvr=zkbetonrosvr54+zlbeton22vr+zbetonvr;
+
+        zitog2etapvr = (Math.ceil(zitog2etapvr/1000))*1000;
+        $('#zitog2etapvr').text(zitog2etapvr);
+
+        //==== itog 2 etap======
+
+        var zitog3etapvr=zitogSMvr-zitog1etapvr-zitog2etapvr;
+
+        zitog3etapvr = Math.round(zitog3etapvr);
+        $('#zitog3etapvr').text(zitog3etapvr);
+
+
+
+    }
 
 
 //========== РАСЧЕТ ПАРАМЕТРОМ СМЕТЫ ДЛЯ ПЛИТЫ UHP  =================//

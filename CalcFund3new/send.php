@@ -1,4 +1,5 @@
 <?php
+
 // если была нажата кнопка "Отправить"
 if (
     isset($_POST['name']) && !empty($_POST['name']) &&
@@ -21,12 +22,26 @@ if (
         ";
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
     if ($verify) {
+        echo json_encode([
+            'status' => 'ok',
+        ]);
 
-        header('Location: https://aleksandr.tupichenkov.com/CalcFund3/#popup_block', true, 302);
+//        header('Location: https://aleksandr.tupichenkov.com/CalcFund3/#popup_block', true, 302);
         exit;
     } else {
-        header('Location: https://aleksandr.tupichenkov.com/CalcFund3/?form_error=1', true, 302);
+        echo json_encode([
+            'status' => 'error',
+        ]);
+        //header('Location: https://aleksandr.tupichenkov.com/CalcFund3/?form_error=1', true, 302);
         exit;
     }
 }
-?>
+
+echo json_encode([
+    'status' => 'error',
+    'message' => 'please fill data',
+    'data' => [
+        $_POST
+    ]
+]);
+

@@ -1,0 +1,1506 @@
+@import"reset200802.css";
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+ }
+
+.row{
+    margin: 0;
+}
+
+
+/*Описание header и его компонентов */
+
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+
+}
+/*блок закрытия */
+.b_hide{
+    display: inline-block;
+    /*visibility: hidden;*/
+    /*margin-bottom: 20px;*/
+}
+/*=================== */
+.header_titel {
+    display: block;
+    width: 100%;
+}
+
+
+.header_titel h1{
+    font-family: "RobotoLight";
+    font-size:3em ;
+    font-weight: bold;
+    color: #2b669a;
+    text-align: center;
+    padding-top: 46px;
+    padding-bottom: 24px;
+   }
+
+
+/*		Блок выбора данных для расчета 		*/
+
+.content{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.zakas_menu{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    float: right;
+    padding-bottom: 50px;
+}
+
+.zakas_menu1{
+    display: block;
+    float: left;
+    border-right: 1px solid #2f4152;
+    /*padding-top: 10px;
+    padding-bottom: 10px;*/
+    text-decoration: none;
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.zakas_menu1:last-child{
+    border-right:none;
+}
+
+
+.zakas_menu1 a{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.zakas_menu1 p{
+    margin-left: 1em;
+    margin-right: 1em;
+ }
+
+
+
+
+.menuclik {
+   background:#2b669a ;
+   background-color:#2b669a ;
+   color: #ffffff;
+   text-decoration: none;
+}
+
+
+
+.zakas_blockinfo{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.zakas_blockinfo h2{
+    font-family: "RobotoLight";
+    font-size:1em ;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    padding-top: 46px;
+    padding-bottom: 24px;
+
+}
+
+.zakas_blockinfo h3{
+    font-family: "RobotoLight";
+    font-size:1em ;
+    font-weight: 800;
+    color: #000000;
+    text-align: left;
+
+
+}
+
+
+/*		Описание блока размеры и его компоненты		*/
+
+.zakas_data h3{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 30px;
+
+}
+
+.zakas_proportions{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*----блок ленты-----*/
+.zakas_proportions_len{
+    display: block;
+    width: 100%;
+    height: auto;
+
+}
+
+/*----блок плиты-----*/
+.zakas_proportions_pl{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+/*----блок плиты с нижним росвером-----*/
+
+.zakas_proportions_plnr{
+    display: none;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+
+/*----блок плиты с нижним росвером-----*/
+.zakas_proportions_plvr{
+    display: none;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+
+}
+
+/*----блок плиты с УШП-----*/
+.zakas_proportions_pluhp{
+    display: none;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.zakas_proportions_plzok{
+    display: none;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/*----блок плиты с верхним росвером-----*/
+
+
+.zakas_proportions input{
+    float: right;
+    margin-right: 1em;
+}
+.zakas_proportions input{
+    border: none;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+}
+
+.breadth{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+
+}
+
+.elevation{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+
+.breadthl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.landl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+
+}
+
+.distance{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.distancelpl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.distancelent{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+
+.perimeterl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+/*--------Блок плиты------------*/
+.landpl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.breadthpl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.area_pl{
+    display:inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.area_pl input{
+    float: right;
+}
+
+.perim_pl{
+    display:inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.pesok_pl{
+    display:inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+ }
+
+.sheben_pl{
+    display:inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+ }
+/*--------Блок плиты с нижним росвером------------*/
+
+
+.lang_plvr{
+    display:inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.hpl_plnr{
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.shl_plnr{
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.land{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.zakas_proportions p{
+    float: left;
+}
+
+/*--------Блок плиты с УШП------------*/
+.hpl_uhp{
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.perim_pluhp{
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.langreb_pluhp{
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.area_pluhp{
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/*		Описание блока Дополнительные услуги и его компоненты		*/
+
+.zakas_services{
+    display: block;
+    width: 100%;
+}
+
+.zakas_services_lenta{
+    display: block;
+    width: 100%;
+}
+
+.zakas_services_plita{
+    display: none;
+    width: 100%;
+}
+
+.zakas_services_plitanr{
+    display: none;
+    width: 100%;
+}
+
+.zakas_services_plitavr{
+    display: none;
+    width: 100%;
+}
+.zakas_services_uhd{
+    display: none;
+    width: 100%;
+}
+
+.zakas_services_zok{
+    display: none;
+    width: 100%;
+}
+
+/*----Описание блоков для Ленты-----------		*/
+.drenag{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+
+}
+
+.gidro{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.elevation_pl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.utep{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.otmos{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.kanal{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.vater{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.elektro{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.arenda{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+/*-------Плита----------*/
+
+.geomem_pl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.osnov_pl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.drenag_pl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.gidro_pl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.utep_pl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.gidro_bok{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.gidro_pod{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.gidroz_pl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.teplo_pl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+.otmos_pl{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+/*-----------------*/
+.gidro_podvr{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.gidro_bokvr{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+/*-----------------*/
+.kolektor_uhd{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.montag_uhg{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+/*-----------------*/
+.zakas_services input{
+    float: right;
+    margin-right: 1em;
+    color: #1b6d85;
+}
+
+
+.zakas_services input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:1em;
+    height:1em;
+    border:1px solid #1b6d85;
+    border-radius:50%;
+    outline:none;
+    box-shadow:0 0 5px 0px #1b6d85 inset;
+}
+
+
+
+.zakas_services input[type='checkbox']:after {
+    content:'';
+    display:block;
+    width:60%;
+    height:60%;
+    margin: 20% auto;
+    border-radius:50%;
+}
+
+.zakas_services input[type='checkbox']:checked:after {
+    background:#1b6d85;
+}
+
+.zakas_services p{
+    float: left;
+}
+
+.popup_1{
+    float: left;
+    height: 1em;
+    margin-left: 5px;
+    margin-top: -5px;
+    position: relative;
+}
+
+.popup_1_1{
+    position: absolute;
+    width: auto;
+    /*height: 249px;*/
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    top: -2px;
+    left: 40px;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 16px 0px #000000;
+    background: #ffffff;
+
+}
+
+.popup_1:hover .popup_1_1, .popup_1_1:hover{
+    opacity:1;
+    visibility: visible;
+    display: inline-block;
+    width: 200px;
+
+}
+
+.popup_1_1:after, .popup_1_1:before {
+    right: 100%;
+    top: -18%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #ffffff;
+
+}
+
+.popup_1_1:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+    border-width: 30px;
+    margin-top: -30px;
+
+}
+.popup_1_1:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+    border-width: 36px;
+    margin-top: -36px;
+}
+
+
+/*		Блок рисунков для  заказа плиты и его компоненты		*/
+.zakas_img{
+    display: block;
+    width: 100%;
+}
+.zakas_img_lenta{
+    display: block;
+    width: 400px;
+    margin-top: 150px;
+}
+
+.zakas_img_plita{
+    display: none;
+    width: 400px;
+    margin-top: 150px;
+}
+
+.zakas_img_plitanr{
+    display: none;
+    width: 400px;
+    margin-top: 150px;
+}
+
+.zakas_img_plitavr{
+    display: none;
+    width: 400px;
+    margin-top: 150px;
+}
+
+.zakas_img_uhd{
+    display: none;
+    width: 400px;
+    margin-top: 150px;
+}
+
+.zakas_img_zok{
+    display: none;
+    width: 400px;
+    margin-top: 150px;
+}
+
+/*---------отображение рисунков для ЛЕНТА ---------*/
+.basic1{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2{
+    display: none;
+    position: absolute;
+    width: 328px;
+    top: 151px;
+    left: 61px;
+    z-index: 1;
+}
+
+.param_01l{
+    display: none;
+    position: absolute;
+    width: 407px;
+    top: 237px;
+    left: 16px;
+    z-index: 1;
+}
+
+.param_02l{
+    display: none;
+    position: absolute;
+    width: 330px;
+    top: 201px;
+    left: 60px;
+    z-index: 1;
+}
+
+.param_03l{
+    display:none;
+    position: absolute;
+    width: 357px;
+    top: 151px;
+    left: 44px;
+    z-index: 1;
+}
+
+.param_04l{
+    display:none;
+    position: absolute;
+    width: 360px;
+    top: 220px;
+    left: 44px;
+    z-index: 1;
+}
+
+.param_05l{
+    display:none;
+    position: absolute;
+    width: 343px;
+    top: 187px;
+    left: 89px;
+    z-index: 1;
+}
+.param_06l{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_07l{
+    display:none;
+    position: absolute;
+    top: 93px;
+    left: 36px;
+    z-index: -1;
+}
+
+
+
+/*================ Рисунки для блока Плита ====================*/
+
+.basic1pl{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2pl{
+    display: none;
+    position: absolute;
+    top: 164px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_01pl{
+    display: none;
+    position: absolute;
+    width: 285px;
+    top: 257px;
+    left: 80px;
+    z-index: 1;
+}
+
+.param_02pl{
+    display: none;
+    position: absolute;
+    width: 399px;
+    top: 264px;
+    left: 21px;
+    z-index: 1;
+}
+
+
+.param_03pl{
+    display: none;
+    position: absolute;
+    width: 409px;
+    top: 225px;
+    left: 16px;
+    z-index: 1;
+}
+
+.param_04pl{
+    display: none;
+    position: absolute;
+    width: 453px;
+    top: 224px;
+    left: -8px;
+    z-index: 1;
+}
+
+.param_05pl{
+    display:none;
+    position: absolute;
+    width: 284px;
+    top: 257px;
+    left: 81px;
+    z-index: 1;
+}
+
+.param_06pl{
+    display:none;
+    position: absolute;
+    width: 475px;
+    top: 248px;
+    left: -20px;
+    z-index: 1;
+}
+
+.param_07pl{
+    display:none;
+    position: absolute;
+    width: 345px;
+    top: 193px;
+    left: 82px;
+    z-index: 1;
+}
+
+.param_08pl{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_09pl{
+    display:none;
+    position: absolute;
+    top: 93px;
+    left: 36px;
+    z-index: -1;
+}
+
+/*================ Рисунки для блока Плита NR ====================*/
+
+.basic1pln{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2pln{
+    display: none;
+    position: absolute;
+    top: 164px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_01plnr{
+    display:none;
+    position: absolute;
+    width: 400px;
+    top: 261px;
+    left: 22px;
+    z-index: 1;
+}
+
+.param_02plnr{
+    display:none;
+    position: absolute;
+    width: 400px;
+    top: 226px;
+    left: 22px;
+    z-index: 1;
+}
+
+.param_03plnr{
+    display:none;
+    position: absolute;
+    width: 420px;
+    top: 164px;
+    left: 8px;
+    z-index: 1;
+}
+
+.param_04plnr{
+    display:none;
+    position: absolute;
+    width: 380px;
+    top: 259px;
+    left: 34px;
+    z-index: 1;
+}
+.param_05plnr{
+    display:none;
+    position: absolute;
+    width: 412px;
+    top: 247px;
+    left: 12px;
+    z-index: 1;
+}
+
+.param_06plnr{
+    display:none;
+    position: absolute;
+    width: 340px;
+    top: 187px;
+    left: 83px;
+    z-index: 1;
+}
+
+.param_07plnr{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_08plnr{
+    display:none;
+    position: absolute;
+    top: 93px;
+    left: 36px;
+    z-index: -1;
+}
+
+/*================ Рисунки для блока Плита VR ====================*/
+
+.basic1plvr{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2plvr{
+    display: none;
+    width: 350px;
+    position: absolute;
+    top: 131px;
+    left: 39px;
+    z-index: 1;
+}
+
+.param_01plvr{
+    display:none;
+    position: absolute;
+    width: 250px;
+    top: 233px;
+    left: 91px;
+    z-index: 1;
+}
+
+.param_02plvr{
+    display:none;
+    position: absolute;
+    width: 400px;
+    top: 239px;
+    left: 22px;
+    z-index: 1;
+}
+
+
+.param_03plvr{
+    display:none;
+    position: absolute;
+    width: 353px;
+    top: 215px;
+    left: 37px;
+    z-index: 1;
+}
+.param_04plvr{
+    display:none;
+    position: absolute;
+    width: 270px;
+    top: 230px;
+    left: 87px;
+    z-index: 1;
+}
+
+.param_05plvr{
+    display:none;
+    position: absolute;
+    width: 357px;
+    top: 178px;
+    left: 35px;
+    z-index: 1;
+}
+
+.param_06plvr{
+    display:none;
+    position: absolute;
+    width: 386px;
+    top: 128px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_07plvr{
+    display:none;
+    position: absolute;
+    width: 386px;
+    top: 221px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_08plvr{
+    display:none;
+    position: absolute;
+    width: 340px;
+    top: 165px;
+    left: 88px;
+    z-index: 1;
+}
+
+.param_09plvr{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_10plvr{
+    display:none;
+    position: absolute;
+    top: 62px;
+    left: 36px;
+    z-index: -1;
+}
+
+/*================ Рисунки для блока USP ====================*/
+
+.basic1uhp{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2uhp{
+    display: none;
+    width: 387px;
+    position: absolute;
+    top: 150px;
+    left: 32px;
+    z-index: 1;
+}
+
+.param_01uhp{
+    display:none;
+    position: absolute;
+    width: 400px;
+    top: 233px;
+    left: 20px;
+    z-index: 1;
+}
+
+.param_02uhp{
+    display:none;
+    position: absolute;
+    width: 350px;
+    top: 163px;
+    left: 79px;
+    z-index: 1;
+}
+
+.param_03uhp{
+    display:none;
+    position: absolute;
+    width: 383px;
+    top: 218px;
+    left: 31px;
+    z-index: 2;
+}
+
+.param_04uhp{
+    display:none;
+    position: absolute;
+    width: 354px;
+    top: 149px;
+    left: 42px;
+    z-index: 1;
+}
+
+.param_05uhp{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_06uhp{
+    display:none;
+    position: absolute;
+    top: 99px;;
+    left: 36px;
+    z-index: -1;
+}
+
+/*================ Рисунки для блока ZOKOL ====================*/
+
+
+.basic1zok{
+    display: block;
+    width: 411px;
+    height: 260px;
+}
+
+.basic2zok{
+    display: none;
+    width: 387px;
+    position: absolute;
+    top: 150px;
+    left: 32px;
+    z-index: 1;
+}
+
+.param_01zok{
+    display:none;
+    position: absolute;
+    width: 240px;
+    top: 302px;
+    left: 109px;
+    z-index: 1;
+}
+
+.param_02zok{
+    display:none;
+    position: absolute;
+    width: 380px;
+    top: 233px;
+    left: 37px;
+    z-index: 1;
+}
+
+.param_03zok{
+    display:none;
+    position: absolute;
+    width: 327px;
+    top: 200px;
+    left: 62px;
+    z-index: 1;
+}
+
+.param_04zok{
+    display:none;
+    position: absolute;
+    width: 250px;
+    top: 301px;
+    left: 101px;
+    z-index: 1;
+}
+
+.param_05zok{
+    display:none;
+    position: absolute;
+    width: 360px;
+    top: 149px;
+    left: 43px;
+    z-index: 1;
+}
+
+.param_06zok{
+    display:none;
+    position: absolute;
+    width: 360px;
+    top: 216px;
+    left: 43px;
+    z-index: 1;
+}
+
+.param_07zok{
+    display:none;
+    position: absolute;
+    width: 320px;
+    top: 241px;
+    left: 107px;
+    z-index: 1;
+}
+
+.param_08zok{
+    display:none;
+    position: absolute;
+    top: 383px;
+    left: 278px;
+    z-index: 1;
+}
+
+.param_09zok{
+    display:none;
+    position: absolute;
+    top: 99px;;
+    left: 36px;
+    z-index: -1;
+}
+
+/*---------------------*/
+.basic_zok{
+    display: block;
+    width: 384px;
+    height: 410px;
+}
+
+.zena{
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.zena span{
+    font-weight: bold;
+    color: #2e6da4;
+}
+
+.zena_itog{
+    display: inline-block;
+    margin-top: 50px;
+}
+
+
+
+
+/*	=====================	Первая форма заказа	===============	*/
+
+.zakas_form1{
+    display: block;
+    width: 100%;
+    margin-top: 100px;
+}
+
+#form1 .first{
+  border-bottom: 1px solid #000000;
+}
+
+#form1 .first input {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    font-size: 1em;
+    color: #000000;
+    border: 0;
+}
+
+.form_button1{
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+   margin-top: 50px;
+}
+
+
+.form_button1{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 50px;
+
+}
+
+.form_button1 button{
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #000000;
+    border-radius:5px;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    /*text-transform: none;*/
+    font-weight: 400;
+    text-align: center;
+    background-color: #0467a6;
+}
+
+
+/*Test*/
+
+#test{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 40px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    background-color: #2e6da4;
+}
+
+
+/*	========Смета для плиты====		*/
+
+.zakas_smeta_plita{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plita h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.zakas_smeta_lenta{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_lenta h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+.zakas_smeta_plitanr{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plitanr h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.zakas_smeta_plitavr{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plitavr h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.zakas_smeta_plitauhp{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plitauhp h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.zakas_smeta_plitazok{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.zakas_smeta_plitazok h1{
+    font-family: "RobotoBold";
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+
+
+
+
+/*		Линия во весь экран, повторяется несколько раз, описывается  1раз		*/
+
+.line_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+}
+
+.line2_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+    margin-bottom: 10px;
+}
+
+.line3_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+
+
+
+
+/*		Первый блок. Выбор размеров бани		*/
+
+
+
+
+
+.but_block3_2{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: left;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+
+.but_block3_4{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: right;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+.printpdf{
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.printpdflock{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.buttonprn{
+    border: 2px solid #2e6da4;
+    border-radius: 10px;
+     text-align: center;
+     padding-left: 20px;
+    padding-right: 20px;
+    background-color: #FFFFFF;
+
+}
+
+#result_form{
+    display: none;
+}
+
+#result_form_err{
+    display: none;
+}

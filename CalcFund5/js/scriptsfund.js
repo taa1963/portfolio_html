@@ -2026,8 +2026,6 @@ $(document).ready(function() {
             smeta();
         }
 
-
-
         if (((document.getElementById("landzok").value == 0)|| (document.getElementById("breadthzok").value == 0)) && (VarMail==2)) {
 
             var block = $(this).parents('.content');
@@ -2035,6 +2033,8 @@ $(document).ready(function() {
             block.find('.zakas_smeta_plitazok').hide();
 
         }
+
+
     });
 
     $('.landzok').click(function() {
@@ -2077,8 +2077,6 @@ $(document).ready(function() {
             smeta();
         }
 
-
-
         if (((document.getElementById("landzok").value == 0)|| (document.getElementById("breadthzok").value == 0)) && (VarMail==2)) {
 
             var block = $(this).parents('.content');
@@ -2086,6 +2084,7 @@ $(document).ready(function() {
             block.find('.zakas_smeta_plitazok').hide();
 
         }
+
     });
 
 
@@ -2131,8 +2130,6 @@ $(document).ready(function() {
             smeta();
         }
 
-
-
         if (((document.getElementById("landzok").value == 0)|| (document.getElementById("breadthzok").value == 0)) && (VarMail==2)) {
 
             var block = $(this).parents('.content');
@@ -2140,6 +2137,7 @@ $(document).ready(function() {
             block.find('.zakas_smeta_plitazok').hide();
 
         }
+
     });
 
     $('.breadthzok').click(function() {

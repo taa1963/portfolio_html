@@ -1,9 +1,10 @@
-var  VarFund,zemv,zenzemv,zena_smetu;
+var  VarFund,zemv,zenzemv,zena_smetu, VarMail;
 
 VarFund=1;
 zemv=0;
 zenzemv=0;
 zena_smetu=0;
+VarMail=0;
 
 $(document).ready(function() {
 
@@ -259,9 +260,6 @@ $(document).ready(function() {
                 $('#landlf').text(landlf);
                 document.getElementById('landlf').value = landlf;
 
-
-
-
         }
         else{
             var block = $(this).parents('.content');
@@ -275,6 +273,26 @@ $(document).ready(function() {
                 $('#landlf').text(landlf);
                 document.getElementById('landlf').value = landlf;
         }
+
+        if ((document.getElementById("landlf").value > 0) && (document.getElementById("breadthf").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_lenta').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landlf").value == 0)|| (document.getElementById("breadthf").value == 0)) && (VarMail==2)) {
+
+                var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_lenta').hide();
+
+        }
+
+
     });
 
     $('.landf').click(function() {
@@ -307,6 +325,23 @@ $(document).ready(function() {
             var landlf=0;
             $('#landlf').text(landlf);
             document.getElementById('landlf').value = landlf;
+        }
+        if ((document.getElementById("landlf").value > 0) && (document.getElementById("breadthf").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_lenta').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landlf").value == 0)|| (document.getElementById("breadthf").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_lenta').hide();
+
         }
     });
 
@@ -342,6 +377,23 @@ $(document).ready(function() {
             $('#landlf').text(landlf);
             document.getElementById('landlf').value = landlf;
         }
+        if ((document.getElementById("landlf").value > 0) && (document.getElementById("breadthf").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_lenta').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landlf").value == 0)|| (document.getElementById("breadthf").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_lenta').hide();
+
+        }
     });
 
     $('.breadthf').click('change keyup',function() {
@@ -373,6 +425,23 @@ $(document).ready(function() {
             var landlf=0;
             $('#landlf').text(landlf);
             document.getElementById('landlf').value = landlf;
+        }
+        if ((document.getElementById("landlf").value > 0) && (document.getElementById("breadthf").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_lenta').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landlf").value == 0)|| (document.getElementById("breadthf").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_lenta').hide();
+
         }
     });
 
@@ -514,6 +583,8 @@ $(document).ready(function() {
             var plpl=l1*s1;
             $('#plpl').text(plpl);
             document.getElementById('areapplf').value = plpl;
+
+
         }
         else{
                 var block = $(this).parents('.content');
@@ -526,6 +597,21 @@ $(document).ready(function() {
             $('#perim').text(perim);
             document.getElementById('perimplf').value = perim;
         }
+        if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0) &&VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plita').show();
+            smeta();
+        }
+
+        if ((document.getElementById("landpli").value == 0)|| (document.getElementById("breadthpli").value == 0) &&VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plita').hide();
+        }
+
+
+
     });
 
     $('.landpli').click(function() {
@@ -556,6 +642,18 @@ $(document).ready(function() {
             var perim=0;
             $('#perim').text(perim);
             document.getElementById('perimplf').value = perim;
+        }
+        if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0) &&VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plita').show();
+            smeta();
+        }
+
+        if ((document.getElementById("landpli").value == 0)|| (document.getElementById("breadthpli").value == 0) &&VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plita').hide();
         }
     });
 
@@ -595,6 +693,18 @@ $(document).ready(function() {
             $('#perim').text(perim);
             document.getElementById('perimplf').value = perim;
         }
+          if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0) &&VarMail==2) {
+              var block = $(this).parents('.content');
+              block.find('.Zena_err').hide();
+              block.find('.zakas_smeta_plita').show();
+              smeta();
+          }
+
+          if ((document.getElementById("landpli").value == 0)|| (document.getElementById("breadthpli").value == 0) &&VarMail==2) {
+              var block = $(this).parents('.content');
+              block.find('.Zena_err').show();
+              block.find('.zakas_smeta_plita').hide();
+          }
     });
 
       $('.breadthpli').click(function() {
@@ -626,6 +736,18 @@ $(document).ready(function() {
             $('#perim').text(perim);
             document.getElementById('perimplf').value = perim;
         }
+          if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0) &&VarMail==2) {
+              var block = $(this).parents('.content');
+              block.find('.Zena_err').hide();
+              block.find('.zakas_smeta_plita').show();
+              smeta();
+          }
+
+          if ((document.getElementById("landpli").value == 0)|| (document.getElementById("breadthpli").value == 0) &&VarMail==2) {
+              var block = $(this).parents('.content');
+              block.find('.Zena_err').show();
+              block.find('.zakas_smeta_plita').hide();
+          }
     });
 
 
@@ -832,6 +954,23 @@ $(document).ready(function() {
             document.getElementById('perimplfnr').value = perimn;
 
         }
+        if ((document.getElementById("landplfnr").value > 0) && (document.getElementById("breadthplfnr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitanr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfnr").value == 0)|| (document.getElementById("breadthplfnr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitanr').hide();
+
+        }
     });
 
     $('.landplfnr').click(function() {
@@ -864,6 +1003,23 @@ $(document).ready(function() {
             var perimn=0;
             $('#perimn').text(perimn);
             document.getElementById('perimplfnr').value = perimn;
+
+        }
+        if ((document.getElementById("landplfnr").value > 0) && (document.getElementById("breadthplfnr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitanr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfnr").value == 0)|| (document.getElementById("breadthplfnr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitanr').hide();
 
         }
     });
@@ -904,6 +1060,23 @@ $(document).ready(function() {
             document.getElementById('perimplfnr').value = perimn;
 
         }
+        if ((document.getElementById("landplfnr").value > 0) && (document.getElementById("breadthplfnr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitanr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfnr").value == 0)|| (document.getElementById("breadthplfnr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitanr').hide();
+
+        }
     });
 
     $('.breadthplfnr').click (function() {
@@ -935,6 +1108,23 @@ $(document).ready(function() {
             var perimn=0;
             $('#perimn').text(perimn);
             document.getElementById('perimplfnr').value = perimn;
+
+        }
+        if ((document.getElementById("landplfnr").value > 0) && (document.getElementById("breadthplfnr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitanr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfnr").value == 0)|| (document.getElementById("breadthplfnr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitanr').hide();
 
         }
     });
@@ -1128,6 +1318,23 @@ $(document).ready(function() {
             document.getElementById('perimplfvr').value = perimn;
 
         }
+        if ((document.getElementById("landplfvr").value > 0) && (document.getElementById("breadthplfvr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitavr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfvr").value == 0)|| (document.getElementById("breadthplfvr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitavr').hide();
+
+        }
     });
 
     $('.landplfvr').click(function() {
@@ -1160,6 +1367,23 @@ $(document).ready(function() {
             var perimn=0;
             $('#perimn').text(perimn);
             document.getElementById('perimplfvr').value = perimn;
+
+        }
+        if ((document.getElementById("landplfvr").value > 0) && (document.getElementById("breadthplfvr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitavr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfvr").value == 0)|| (document.getElementById("breadthplfvr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitavr').hide();
 
         }
     });
@@ -1200,6 +1424,23 @@ $(document).ready(function() {
             document.getElementById('perimplfvr').value = perimn;
 
         }
+        if ((document.getElementById("landplfvr").value > 0) && (document.getElementById("breadthplfvr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitavr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfvr").value == 0)|| (document.getElementById("breadthplfvr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitavr').hide();
+
+        }
     });
 
     $('.breadthplfvr').click (function() {
@@ -1231,6 +1472,23 @@ $(document).ready(function() {
             var perimn=0;
             $('#perimn').text(perimn);
             document.getElementById('perimplfvr').value = perimn;
+
+        }
+        if ((document.getElementById("landplfvr").value > 0) && (document.getElementById("breadthplfvr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitavr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfvr").value == 0)|| (document.getElementById("breadthplfvr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitavr').hide();
 
         }
     });
@@ -1446,6 +1704,23 @@ $(document).ready(function() {
             document.getElementById('langrebpluhp').value = langrebpluhp;
 
         }
+        if ((document.getElementById("landuhp").value > 0) && (document.getElementById("breadthuhp").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitauhp').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landuhp").value == 0)|| (document.getElementById("breadthuhp").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitauhp').hide();
+
+        }
     });
 
     $('.landuhp').click(function() {
@@ -1484,6 +1759,23 @@ $(document).ready(function() {
             var langrebpluhp = 0;
             $('#langrebpluhp').text(langrebpluhp);
             document.getElementById('langrebpluhp').value = langrebpluhp;
+
+        }
+        if ((document.getElementById("landuhp").value > 0) && (document.getElementById("breadthuhp").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitauhp').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landuhp").value == 0)|| (document.getElementById("breadthuhp").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitauhp').hide();
 
         }
     });
@@ -1528,6 +1820,23 @@ $(document).ready(function() {
             document.getElementById('langrebpluhp').value = langrebpluhp;
 
         }
+        if ((document.getElementById("landuhp").value > 0) && (document.getElementById("breadthuhp").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitauhp').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landuhp").value == 0)|| (document.getElementById("breadthuhp").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitauhp').hide();
+
+        }
     });
 
     $('.breadthuhp').click(function() {
@@ -1566,6 +1875,23 @@ $(document).ready(function() {
             var langrebpluhp = 0;
             $('#langrebpluhp').text(langrebpluhp);
             document.getElementById('langrebpluhp').value = langrebpluhp;
+
+        }
+        if ((document.getElementById("landuhp").value > 0) && (document.getElementById("breadthuhp").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitauhp').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landuhp").value == 0)|| (document.getElementById("breadthuhp").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitauhp').hide();
 
         }
     });
@@ -1692,6 +2018,23 @@ $(document).ready(function() {
             document.getElementById('perimpzok').value = perimn;
 
         }
+        if ((document.getElementById("landzok").value > 0) && (document.getElementById("breadthzok").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitazok').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landzok").value == 0)|| (document.getElementById("breadthzok").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitazok').hide();
+
+        }
     });
 
     $('.landzok').click(function() {
@@ -1724,6 +2067,23 @@ $(document).ready(function() {
             var perimn=0;
             $('#perimn').text(perimn);
             document.getElementById('perimpzok').value = perimn;
+
+        }
+        if ((document.getElementById("landzok").value > 0) && (document.getElementById("breadthzok").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitazok').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landzok").value == 0)|| (document.getElementById("breadthzok").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitazok').hide();
 
         }
     });
@@ -1763,6 +2123,23 @@ $(document).ready(function() {
             document.getElementById('perimpzok').value = perimn;
 
         }
+        if ((document.getElementById("landzok").value > 0) && (document.getElementById("breadthzok").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitazok').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landzok").value == 0)|| (document.getElementById("breadthzok").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitazok').hide();
+
+        }
     });
 
     $('.breadthzok').click(function() {
@@ -1795,6 +2172,23 @@ $(document).ready(function() {
             var perimn=0;
             $('#perimn').text(perimn);
             document.getElementById('perimpzok').value = perimn;
+
+        }
+        if ((document.getElementById("landzok").value > 0) && (document.getElementById("breadthzok").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitazok').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landzok").value == 0)|| (document.getElementById("breadthzok").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitazok').hide();
 
         }
     });
@@ -1954,10 +2348,10 @@ $(document).ready(function() {
 
 
 
-    // $('.submit').click(function () {
-    //     smeta();
-    //
-    // });
+    $('.submit').click(function () {
+        smeta();
+
+    });
     //
     // $('#test').click(function () {
     //     smeta();
@@ -1971,103 +2365,174 @@ $(document).ready(function() {
 
     $('#zakas_menu1').click(function () {
         VarFund=1;
+        var block = $(this).parents('.content');
+        block.find('.zakas_smeta_plita').hide();
+        block.find('.zakas_smeta_plitanr').hide();
+        block.find('.zakas_smeta_plitavr').hide();
+        block.find('.zakas_smeta_plitauhp').hide();
+        block.find('.zakas_smeta_plitazok').hide();
+        if ((document.getElementById("landlf").value > 0) && (document.getElementById("breadthf").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_lenta').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landlf").value == 0)|| (document.getElementById("breadthf").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_lenta').hide();
+
+        }
+
     });
 
     $('#zakas_menu2').click(function () {
         VarFund=2;
+        var block = $(this).parents('.content');
+        block.find('.zakas_smeta_lenta').hide();
+        block.find('.zakas_smeta_plitanr').hide();
+        block.find('.zakas_smeta_plitavr').hide();
+        block.find('.zakas_smeta_plitauhp').hide();
+        block.find('.zakas_smeta_plitazok').hide();
+
+
+        if (((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0)) && (VarMail==2)) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plita').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landpli").value == 0)|| (document.getElementById("breadthpli").value == 0)) && (VarMail==2)) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plita').hide();
+
+        }
+
        });
 
     $('#zakas_menu3').click(function () {
         VarFund=3;
+        var block = $(this).parents('.content');
+        block.find('.zakas_smeta_plita').hide();
+        block.find('.zakas_smeta_lenta').hide();
+        block.find('.zakas_smeta_plitavr').hide();
+        block.find('.zakas_smeta_plitauhp').hide();
+        block.find('.zakas_smeta_plitazok').hide();
+
+        if ((document.getElementById("landplfnr").value > 0) && (document.getElementById("breadthplfnr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitanr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfnr").value == 0)|| (document.getElementById("breadthplfnr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitanr').hide();
+
+        }
     });
 
     $('#zakas_menu4').click(function () {
         VarFund=4;
+        var block = $(this).parents('.content');
+        block.find('.zakas_smeta_plita').hide();
+        block.find('.zakas_smeta_lenta').hide();
+        block.find('.zakas_smeta_plitanr').hide();
+        block.find('.zakas_smeta_plitauhp').hide();
+        block.find('.zakas_smeta_plitazok').hide();
+        if ((document.getElementById("landplfvr").value > 0) && (document.getElementById("breadthplfvr").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitavr').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landplfvr").value == 0)|| (document.getElementById("breadthplfvr").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitavr').hide();
+
+        }
     });
 
     $('#zakas_menu5').click(function () {
         VarFund=5;
+        var block = $(this).parents('.content');
+        block.find('.zakas_smeta_plita').hide();
+        block.find('.zakas_smeta_lenta').hide();
+        block.find('.zakas_smeta_plitanr').hide();
+        block.find('.zakas_smeta_plitavr').hide();
+        block.find('.zakas_smeta_plitazok').hide();
+        if ((document.getElementById("landuhp").value > 0) && (document.getElementById("breadthuhp").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitauhp').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landuhp").value == 0)|| (document.getElementById("breadthuhp").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitauhp').hide();
+
+        }
+
     });
 
     $('#zakas_menu6').click(function () {
         VarFund=6;
+        var block = $(this).parents('.content');
+        block.find('.zakas_smeta_plita').hide();
+        block.find('.zakas_smeta_lenta').hide();
+        block.find('.zakas_smeta_plitanr').hide();
+        block.find('.zakas_smeta_plitavr').hide();
+        block.find('.zakas_smeta_plitauhp').hide();
+
+        if ((document.getElementById("landzok").value > 0) && (document.getElementById("breadthzok").value > 0) && VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plitazok').show();
+
+            smeta();
+        }
+
+
+
+        if (((document.getElementById("landzok").value == 0)|| (document.getElementById("breadthzok").value == 0)) && (VarMail==2)) {
+
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plitazok').hide();
+
+        }
     });
 
 
-    // $('.submit').click(function () {
-    //     if (VarFund==1) {
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_lenta').show();
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //
-    //     }
-    //
-    //
-    //     if (VarFund==2){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').show();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //
-    //     }
-    //
-    //     if (VarFund==3){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').show();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //     }
-    //
-    //     if (VarFund==4){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').show();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //
-    //     }
-    //
-    //     if (VarFund==5){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').show();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //
-    //     }
-    //
-    //     if (VarFund==6){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').show();
-    //
-    //     }
-    //
-    //
-    //
-    //
-    //
-    //     smeta();
-    //
-    // });
+
 
 
     $('#sm2').click(function () {
@@ -2146,6 +2611,7 @@ $(document).ready(function() {
     });
 
     $('#test').click(function () {
+        VarMail=2;
 
         if (VarFund==1) {
             var block = $(this).parents('.content');
@@ -2948,8 +3414,9 @@ function smeta() {
         // Геомембрана Planter
 
         sgidro = +sgidro;
-        sgidrod = sgidro * 1.1;
+        var sgidrod = sgidro * 1.1;
         // sgidrod=Math.ceil(sshebd)*10;
+        sgidrod = sgidrod.toFixed(2);
         $('#sgidrod').text(sgidrod);
         var zsgidrod = sgidrod * 110;
         zsgidrod = Math.round(zsgidrod);

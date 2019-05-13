@@ -25,6 +25,7 @@ function sendAjaxForm(result_form, ajax_form, url) {
             // result = $.parseJSON(response);
             // $('#result_form').show();
             //$('#result_form').html('Имя: '+result.name+'<br>Телефон: '+result.phonenumber);
+            VarMail=2;
 
             var block = $('body .content');
 

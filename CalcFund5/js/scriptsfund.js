@@ -445,6 +445,63 @@ $(document).ready(function() {
         }
     });
 
+
+    //========== Пересчет сметы при изменение размеров ленты ================..//
+
+    //========== Пересчет сметы при изменение Высота ленты ================..//
+
+    $('.elevationf').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.elevationf').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Ширина ленты, ================..//
+
+    $('.breadthlf').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.breadthlf').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Длина ленты, ================..//
+
+    $('.landlf').bind('change keyup',function() {
+        smeta();
+    });
+
+
+    $('.landlf').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Периметр фундамента ================..//
+
+    $('.perimeterlf').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.perimeterlf').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Растояние от КАД ================..//
+
+    $('.distancelplf').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.distancelplf').click('change keyup',function() {
+        smeta();
+    });
+
+
+
+
     //========== Отображение дренажа на картинке при клике  на блоке дренаж  =======================================//
 
     $('.drenagf').click(function () {
@@ -459,6 +516,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_01l').hide();
         }
+        smeta();
     });
 
     //========== Отображение гидроизоляции на картинке при клике  на блоке гидроизоляция  =======================================//
@@ -510,6 +568,13 @@ $(document).ready(function() {
         }
     });
 
+    //========== Отображение канализации   =======================================//
+
+    $('.kanalf').click(function () {
+        smeta();
+
+    });
+
 
     //========== Отображение канализации и водоснабжения  =======================================//
 
@@ -525,6 +590,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_05l').hide();
         }
+        smeta();
     });
 
     //========== Отображение электричества на картинке при клике  на блоке электричества  =======================================//
@@ -557,6 +623,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_07l').hide();
         }
+        smeta();
     });
 
 
@@ -750,6 +817,70 @@ $(document).ready(function() {
           }
     });
 
+    //========== Пересчет сметы при изменение Высота плиты ================..//
+
+    $('.elevationpl').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.elevationpl').click('change keyup',function() {
+        smeta();
+    });
+
+
+    //========== Пересчет сметы при изменение Площадь фундамента ================..//
+
+    $('.areapplf').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.areapplf').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Периметр фундамента ================..//
+
+    $('.perimplf').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.perimplf').click('change keyup',function() {
+        smeta();
+    });
+
+
+    //========== Пересчет сметы при изменение Толщина песчаной подушки ================..//
+
+    $('.pesokplf').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.pesokplf').click('change keyup',function() {
+        smeta();
+    });
+
+
+    //========== Пересчет сметы при изменение Толщина щебёночной подушки ================..//
+
+    $('.shebenplf').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.shebenplf').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Растояние от КАД ================..//
+
+    $('.distancelentf').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.distancelentf').click('change keyup',function() {
+        smeta();
+    });
+
+
 
 
     //========== Отображение Основания на картинке при клике  на блоке Онование  =======================================//
@@ -782,6 +913,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_02pl').hide();
         }
+        smeta();
     });
 
     //========== Отображение Гидроизоляции на картинке при клике  на блоке Гидроизоляция  =======================================//
@@ -816,21 +948,7 @@ $(document).ready(function() {
         }
     });
 
-    //========== Отображение Гидроизоляции на картинке при клике  на блоке Гидроизоляция  =======================================//
 
-    // $('.gidrozpl').click(function () {
-    //
-    //     var chkBox = document.getElementById('gidrozpl');
-    //     if (chkBox.checked){
-    //         var block = $(this).parents('.content');
-    //         block.find('.param_05pl').show();
-    //     }
-    //     else
-    //     {
-    //         var block = $(this).parents('.content');
-    //         block.find('.param_05pl').hide();
-    //     }
-    // });
 
 
     //========== Отображение Цоколя на картинке при клике  на блоке Цоколь  =======================================//
@@ -879,6 +997,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_07pl').hide();
         }
+        smeta();
     });
 
 
@@ -914,6 +1033,8 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_09pl').hide();
         }
+        smeta();
+
     });
 
 
@@ -1025,9 +1146,7 @@ $(document).ready(function() {
     });
 
 
-
-
-    //========== Отображение границ ширины на картинке при фокусе на блоке Ширина  =======================================//
+    //========== Отображение основы или ленты  при изменение  Длины  =======================================//
 
     $('.breadthplfnr').bind('change keyup',function() {
         if ((document.getElementById("landplfnr").value > 0) && (document.getElementById("breadthplfnr").value > 0))  {
@@ -1131,21 +1250,100 @@ $(document).ready(function() {
 
 
 
-    //========== Отображение Основания на картинке при клике  на блоке Онование  =======================================//
+    //========== Пересчет сметы при изменение Высота плиты ================..//
 
-    // $('.osnovpl').click(function () {
-    //
-    //     var chkBox = document.getElementById('osnovpl');
-    //     if (chkBox.checked){
-    //         var block = $(this).parents('.content');
-    //         block.find('.param_01pl').show();
-    //     }
-    //     else
-    //     {
-    //         var block = $(this).parents('.content');
-    //         block.find('.param_01pl').hide();
-    //     }
-    // });
+    $('.elevation_plnr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.elevation_plnr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Площадь фундамента ================..//
+
+    $('.areapplfnr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.areapplfnr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Периметр фундамента ================..//
+
+    $('.perimplfnr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.perimplfnr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Толщина песчаной подушки, ================..//
+
+    $('.pesokplfnr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.pesokplfnr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Толщина щебёночной подушки ================..//
+    //<input type="number" class="shebenplf" id="shebenplfnr" value="0.3" min="0" max="200" step="0.1">
+    $('.shebenplfnr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.shebenplfnr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Общая длина ростверка ================..//
+
+    $('#langplnr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('#langplnr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Высота ростверка ================..//
+
+    $('.hplplnr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.hplplnr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Ширина ростверка ================..//
+
+    $('.shplplnr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.shplplnr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Растояние от КАД ================..//
+
+    $('.distancelentfnr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.distancelentfnr').click('change keyup',function() {
+        smeta();
+    });
+
+
+
+
+
 
     //========== Отображение Дренажа на картинке при клике  на блоке Дренаж  =======================================//
 
@@ -1161,6 +1359,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_01plnr').hide();
         }
+        smeta();
     });
 
     //========== Отображение Гидроизоляции на картинке при клике  на блоке Гидроизоляция  =======================================//
@@ -1243,6 +1442,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_06plnr').hide();
         }
+        smeta();
     });
 
 
@@ -1278,6 +1478,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_08plnr').hide();
         }
+        smeta();
     });
 
 
@@ -1495,6 +1696,98 @@ $(document).ready(function() {
 
 
 
+    //========== Пересчет сметы при изменение Высота плиты ================..//
+
+    $('.elevation_plvr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.elevation_plvr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Площадь фундамента ================..//
+
+    $('.areapplfvr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.areapplfvr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Периметр фундамента ================..//
+
+    $('.perimplfvr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.perimplfvr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Толщина песчаной подушки, ================..//
+
+    $('.pesokplfvr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.pesokplfvr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Толщина щебёночной подушки ================..//
+    //<input type="number" class="shebenplf" id="shebenplfnr" value="0.3" min="0" max="200" step="0.1">
+    $('.shebenplfvr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.shebenplfvr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Общая длина ростверка ================..//
+
+    $('#langplvr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('#langplvr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Высота ростверка ================..//
+
+    $('#hplplvr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('#hplplvr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Ширина ростверка ================..//
+
+    $('#shplplvr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('#shplplvr').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Растояние от КАД ================..//
+
+    $('#distancelentfvr').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('#distancelentfvr').click('change keyup',function() {
+        smeta();
+    });
+
+
+
     //========== Отображение Основания на картинке при клике  на блоке Онование  =======================================//
 
     $('.osnovplvr').click(function () {
@@ -1525,6 +1818,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_02plvr').hide();
         }
+        smeta();
     });
 
     //========== Отображение Гидроизоляции на картинке при клике  на блоке Гидроизоляция  =======================================//
@@ -1623,6 +1917,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_08plvr').hide();
         }
+        smeta();
     });
 
     //========== Отображение электричества на картинке при клике  на блоке электричества  =======================================//
@@ -1655,6 +1950,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_10plvr').hide();
         }
+        smeta();
     });
 
 
@@ -1897,6 +2193,73 @@ $(document).ready(function() {
     });
 
 
+
+    //========== Пересчет сметы при изменение Высота УШП ================..//
+
+    $('#hpluhp').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('#hpluhp').click('change keyup',function() {
+        smeta();
+    });
+
+
+
+    //========== Пересчет сметы при изменение Длина несущих рёбер,  ================..//
+
+    $('.langrebpluhp').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.langrebpluhp').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Периметр фундамента  ================..//
+
+    $('.perimuhp').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.perimuhp').click('change keyup',function() {
+        smeta();
+    });
+
+
+    //========== Пересчет сметы при изменение Площадь плиты  ================..//
+
+    $('.areauhp').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.areauhp').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Толщина песчаной подушки  ================..//
+
+    $('.pesokuhp').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.pesokuhp').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Растояние  ================..//
+
+    $('#distanceuhdp').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('#distanceuhdp').click('change keyup',function() {
+        smeta();
+    });
+
+
+
+
     //========== Отображение Дренажа на картинке при клике  на блоке Дренаж  =======================================//
 
     $('.drenaguhp').click(function () {
@@ -1911,6 +2274,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_01uhp').hide();
         }
+        smeta();
     });
 
     //========== Отображение канализации на картинке при клике  на блоке канализация  =======================================//
@@ -1927,6 +2291,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_02uhp').hide();
         }
+        smeta();
     });
 
 //========== Отображение Отмостки на картинке при клике  на блоке Отмостки  =======================================//
@@ -1977,6 +2342,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_06uhp').hide();
         }
+        smeta();
     });
 
 
@@ -2193,6 +2559,71 @@ $(document).ready(function() {
 
 
 
+//========== Пересчет сметы при изменение Высота плиты  ================..//
+
+    $('.elevationzok').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.elevationzok').click('change keyup',function() {
+        smeta();
+    });
+
+
+//========== Пересчет сметы при изменение Площадь фундамента  ================..//
+
+    $('.areazok').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.areazok').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Периметр фундамента  ================..//
+
+    $('.perimpzok').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.perimpzok').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Толщина песчаной подушки  ================..//
+
+    $('.pesokzok').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.pesokzok').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение Толщина щебёночной подушки  ================..//
+
+    $('.shebenzok').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.shebenzok').click('change keyup',function() {
+        smeta();
+    });
+
+    //========== Пересчет сметы при изменение ТРастояние от КАД,  ================..//
+
+    $('.distancelentfzok').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('.distancelentfzok').click('change keyup',function() {
+        smeta();
+    });
+
+
+
+
+
 //========== Отображение Основания на картинке при клике  на блоке Онование  =======================================//
 
     $('.osnovzok').click(function () {
@@ -2223,6 +2654,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_02zok').hide();
         }
+        smeta();
     });
 
     //========== Отображение Гидроизоляции на картинке при клике  на блоке Гидроизоляция  =======================================//
@@ -2306,6 +2738,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_07zok').hide();
         }
+        smeta();
     });
 
 //========== Отображение Отмостки на картинке при клике  на блоке Отмостки  =======================================//
@@ -2341,6 +2774,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_09zok').hide();
         }
+        smeta();
     });
 
 
@@ -2990,7 +3424,7 @@ function smeta() {
             larmDostavsm = 9000;
         }
         if (lkadplsm > 30) {
-            larmDostavsm = (lkad - 30) * 35 + 9000;
+            larmDostavsm = (lkadplsm - 30) * 35 + 9000;
         }
         larmDostavsm = Math.round(larmDostavsm);
         $('#larmDostavsm').text(larmDostavsm);
@@ -3005,7 +3439,7 @@ function smeta() {
             larmDostavOpalsm = 5000;
         }
         if (lkadplsm > 30) {
-            larmDostavOpalsm = (lkad - 30) * 35 + 5000;
+            larmDostavOpalsm = (lkadplsm- 30) * 35 + 5000;
         }
         larmDostavOpalsm = Math.round(larmDostavOpalsm);
         $('#larmDostavOpalsm').text(larmDostavOpalsm);
@@ -3016,17 +3450,19 @@ function smeta() {
 
         // Доставка остальных материалов
         if (lkadplsm <= 30) {
-            larmDostavMatersm = 4200;
+          var  larmDostavMatersm = 4200;
         }
         if (lkadplsm > 30) {
-            larmDostavMatersm = (lkad - 30) * 35 + 4200;
+            larmDostavMatersm = (lkadplsm - 30) * 35 + 4200;
+           // alert(larmDostavMatersm);
         }
         larmDostavMatersm = Math.round(larmDostavMatersm);
         $('#larmDostavMatersm').text(larmDostavMatersm);
-
-        var zlarmDostavMatersm = larmDostavMatersm * 1;
+        larmDostavMatersm=+larmDostavMatersm;
+        var zlarmDostavMatersm = larmDostavMatersm;
         zlarmDostavMatersm = Math.round(zlarmDostavMatersm);
         $('#zlarmDostavMatersm').text(zlarmDostavMatersm);
+        //alert(zlarmDostavMatersm);
 
         // ==========ITOG DOSTAV============
 
@@ -3062,6 +3498,10 @@ function smeta() {
         zkzakladsm = Math.round(zkzakladsm);
         $('#zkzakladsm').text(zkzakladsm);
 
+        if ($("#vater input:checkbox:checked").length == 0){
+            zkzakladsm=0;
+        }
+
         // =============Устройство закладной гильзы электро===========
         var kzakladelsm = 10;
         kzakladelsm = Math.round(kzakladelsm);
@@ -3070,6 +3510,9 @@ function smeta() {
         var zkzakladelsm = kzakladelsm * 200;
         zkzakladelsm = Math.round(zkzakladelsm);
         $('#zkzakladelsm').text(zkzakladelsm);
+        if ($("#vater input:checkbox:checked").length == 0){
+            zkzakladelsm=0;
+        }
 
         // ====================Разводка канализации под домом============
         var kzakladkanalsm = 5;
@@ -3079,6 +3522,12 @@ function smeta() {
         var zkzakladkanalsm = kzakladkanalsm * 1000;
         zkzakladkanalsm = Math.round(zkzakladkanalsm);
         $('#zkzakladkanalsm').text(zkzakladkanalsm);
+
+
+        if ($("#kanal input:checkbox:checked").length == 0){
+            zkzakladkanalsm=0;
+        }
+
 
         //Устройство дренажа фундамента с учетом установки дренажных колодцев d340
 
@@ -3105,6 +3554,13 @@ function smeta() {
         var zkdrenagsm_2ksm = kdrenagsm_2ksm1 * kdrenagsm;
         zkdrenagsm_2ksm= Math.round(zkdrenagsm_2ksm);
         $('#zkdrenagsm_2ksm').text(zkdrenagsm_2ksm);
+
+
+        if ($("#drenag input:checkbox:checked").length == 0){
+            zkdrenagsm_2ksm=0;
+        }
+
+
 
 
         // Вывоз мусора после завершения работ на объекте
@@ -3146,6 +3602,10 @@ function smeta() {
         var zkvagonsm = kvagonsm * 20000;
         zkvagonsm = Math.round(zkvagonsm);
         $('#zkvagonsm').text(zkvagonsm);
+
+        if ($("#arenda input:checkbox:checked").length == 0){
+            zkvagonsm=0;
+        }
 
         // Обеспечение биотуалетом
         var kbiotualsm = 1;
@@ -3610,6 +4070,11 @@ function smeta() {
         zkzakladkanal = Math.round(zkzakladkanal);
         $('#zkzakladkanal').text(zkzakladkanal);
 
+    //<input type="checkbox" class="kanalpl" id="kanalpl">
+        if ($("#kanal_pl input:checkbox:checked").length == 0){
+            zkzakladkanal=0;
+        }
+
         // Вывоз мусора после завершения работ на объекте
         var kmusor = 1;
         kmusor = Math.round(kmusor);
@@ -3652,6 +4117,12 @@ function smeta() {
         var zkvagon = kvagon * 20000;
         zkvagon = Math.round(zkvagon);
         $('#zkvagon').text(zkvagon);
+
+
+        if ($("#arenda_pl input:checkbox:checked").length == 0){
+            zkvagon=0;
+
+        }
 
         // Обеспечение биотуалетом
         var kbiotual = 1;
@@ -3769,7 +4240,7 @@ function smeta() {
         $('#hpesoknr').text(hpesoknr);
 
         //Толщина щебёночной подушки
-        var hsheblpnr = (document.getElementById('pesokplfnr').value)*1000;
+        var hsheblpnr = (document.getElementById('shebenplfnr').value)*1000;
         hsheblpnr = +hsheblpnr;
         $('#hsheblpnr').text(hsheblpnr);
 
@@ -4284,6 +4755,11 @@ function smeta() {
         zkzakladkanalnr = Math.round(zkzakladkanalnr);
         $('#zkzakladkanalnr').text(zkzakladkanalnr);
 
+        if ($("#kanal_plnr input:checkbox:checked").length == 0){
+            zkzakladkanalnr=0;
+
+        }
+
         //Устройство дренажа фундамента с учетом установки дренажных колодцев d340
 
 
@@ -4309,6 +4785,12 @@ function smeta() {
         var zkdrenagsm_2knr = kdrenagsm_2knr1 * kdrenagnr;
         zkdrenagsm_2knr= Math.round(zkdrenagsm_2knr);
         $('#zkdrenagsm_2knr').text(zkdrenagsm_2knr);
+
+
+        if ($("#drenag_plnr input:checkbox:checked").length == 0){
+            zkdrenagsm_2knr=0;
+
+        }
 
 
         // Вывоз мусора после завершения работ на объекте
@@ -4350,6 +4832,11 @@ function smeta() {
         var zkvagonnr = kvagonnr * 20000;
         zkvagonnr = Math.round(zkvagonnr);
         $('#zkvagonnr').text(zkvagonnr);
+
+        if ($("#arenda_plnr input:checkbox:checked").length == 0){
+            zkvagonnr=0;
+
+        }
 
         // Обеспечение биотуалетом
         var kbiotualnr = 1;
@@ -4466,7 +4953,8 @@ function smeta() {
         $('#hpesokvr').text(hpesokvr);
 
         //Толщина щебёночной подушки
-        var hsheblpvr = (document.getElementById('pesokplfvr').value)*1000;
+
+        var hsheblpvr = (document.getElementById('shebenplfvr').value)*1000;
         hsheblpvr = +hsheblpvr;
         $('#hsheblpvr').text(hsheblpvr);
 
@@ -4981,6 +5469,10 @@ function smeta() {
         zkzakladkanalvr = Math.round(zkzakladkanalvr);
         $('#zkzakladkanalvr').text(zkzakladkanalvr);
 
+        if ($("#kanal_plvr input:checkbox:checked").length == 0){
+            zkzakladkanalvr=0;
+        }
+
         //Устройство дренажа фундамента с учетом установки дренажных колодцев d340
 
 
@@ -5006,6 +5498,10 @@ function smeta() {
         var zkdrenagsm_2kvr = kdrenagsm_2kvr1 * kdrenagvr;
         zkdrenagsm_2kvr= Math.round(zkdrenagsm_2kvr);
         $('#zkdrenagsm_2kvr').text(zkdrenagsm_2kvr);
+
+        if ($("#drenag_plvr input:checkbox:checked").length == 0){
+            zkdrenagsm_2kvr=0;
+        }
 
 
         // Вывоз мусора после завершения работ на объекте
@@ -5047,6 +5543,9 @@ function smeta() {
         var zkvagonvr = kvagonvr * 20000;
         zkvagonvr = Math.round(zkvagonvr);
         $('#zkvagonvr').text(zkvagonvr);
+        if ($("#arenda_plvr input:checkbox:checked").length == 0){
+            zkvagonvr=0;
+        }
 
         // Обеспечение биотуалетом
         var kbiotualvr = 1;
@@ -5218,6 +5717,13 @@ function smeta() {
         zkdrenag = Math.round(zkdrenag);
         $('#zkdrenag').text(zkdrenag);
 
+
+        if ($("#drenag_uhd input:checkbox:checked").length == 0){
+            zkdrenag=0;
+        }
+
+
+
         // Устройство песчаной подушки с послойной трамбовкой виброплитой
         var kpesokpod = areapluhp * pesokpluhp * 1.28 + (perimpluhp + 6) * 1.5 * pesokpluhp * 1.28;
         kpesokpod = kpesokpod.toFixed(1);
@@ -5244,6 +5750,11 @@ function smeta() {
         zkkanal = kkanal * 600;
         zkkanal = Math.round(zkkanal);
         $('#zkkanal').text(zkkanal);
+
+        if ($("#kanal_uhd input:checkbox:checked").length == 0){
+            zkkanal=0;
+        }
+
 
         // Монтаж ЭППС и ПСБ (все слои)
         var kmontag = areapluhp;
@@ -5748,6 +6259,11 @@ function smeta() {
         var zkvagonuhp =kvagonuhp;
         zkvagonuhp = Math.round(zkvagonuhp);
         $('#zkvagonuhp').text(zkvagonuhp);
+
+
+        if ($("#arenda_uhd input:checkbox:checked").length == 0){
+            zkvagonuhp=0;
+        }
 
         //Обеспечение биотуалетом
         var ktualetuhp = 5000;
@@ -6459,6 +6975,11 @@ function smeta() {
         zkzakladkanalzok = Math.round(zkzakladkanalzok);
         $('#zkzakladkanalzok').text(zkzakladkanalzok);
 
+
+        if ($("#kanal_zokl input:checkbox:checked").length == 0){
+            zkzakladkanalzok=0;
+        }
+
         //Устройство бетонной подготовки 100мм, B7,5
         var kbeton92zok = area_zok+perimperekzok*0.1;
         kbeton92zok =  kbeton92zok.toFixed(2);
@@ -6545,6 +7066,11 @@ function smeta() {
         var zkvagonzok = kvagonzok * 20000;
         zkvagonzok = Math.round(zkvagonzok);
         $('#zkvagonzok').text(zkvagonzok);
+
+
+        if ($("#arenda_zok input:checkbox:checked").length == 0){
+            zkvagonzok=0;
+        }
 
         // Обеспечение биотуалетом
         var kbiotualzok = 1;

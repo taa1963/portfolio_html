@@ -533,6 +533,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_02l').hide();
         }
+        smeta();
     });
 
 
@@ -607,6 +608,8 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_06l').hide();
         }
+
+        smeta();
     });
 
     //========== Отображение вагончиком на картинке при клике  на блоке вагончик  =======================================//
@@ -930,6 +933,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_03pl').hide();
         }
+          smeta();
     });
 
     //========== Отображение утепление на картинке при клике  на блоке утепление  =======================================//
@@ -1017,6 +1021,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_08pl').hide();
         }
+        smeta();
     });
 
     //========== Отображение вагончиком на картинке при клике  на блоке вагончик  =======================================//
@@ -1376,6 +1381,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_02plnr').hide();
         }
+        smeta();
     });
 
     //========== Отображение утепление на картинке при клике  на блоке утепление  =======================================//
@@ -1409,6 +1415,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_04plnr').hide();
         }
+        smeta();
     });
 
 //========== Отображение Отмостки на картинке при клике  на блоке Отмостки  =======================================//
@@ -1462,6 +1469,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_07plnr').hide();
         }
+        smeta();
     });
 
     //========== Отображение вагончиком на картинке при клике  на блоке вагончик  =======================================//
@@ -1835,6 +1843,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_03plvr').hide();
         }
+        smeta();
     });
 
     //========== Отображение утепление на картинке при клике  на блоке утепление  =======================================//
@@ -1851,6 +1860,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_04plvr').hide();
         }
+        smeta();
     });
 
 
@@ -1934,6 +1944,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_09plvr').hide();
         }
+        smeta();
     });
 
     //========== Отображение вагончиком на картинке при клике  на блоке вагончик  =======================================//
@@ -2326,6 +2337,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_05uhp').hide();
         }
+        smeta();
     });
 
     //========== Отображение вагончиком на картинке при клике  на блоке вагончик  =======================================//
@@ -2671,6 +2683,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_03zok').hide();
         }
+        smeta();
     });
 
 
@@ -2758,6 +2771,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_08zok').hide();
         }
+        smeta();
     });
 
     //========== Отображение вагончиком на картинке при клике  на блоке вагончик  =======================================//
@@ -3219,6 +3233,12 @@ function smeta() {
         zkgidroisol = Math.round(zkgidroisol);
         $('#zkgidroisol').text(zkgidroisol);
 
+
+        if ($("#gidro input:checkbox:checked").length == 0){
+            zkgidroisol=0;
+        }
+
+
         //Изготовление и установка арматурных каркасов, монтаж арматурной сетки (Соединение стержней арматуры выполняется с использованием вязальной проволоки)
         var karmrfrk38_1 =(hplsm/0.2);
         karmrfrk38_1 = Math.ceil((karmrfrk38_1) * 10) / 10;
@@ -3321,6 +3341,9 @@ function smeta() {
         var zkgeomemsm = kgeomemsm *110;
         zkgeomemsm = Math.round(zkgeomemsm);
         $('#zkgeomemsm').text(zkgeomemsm);
+        if ($("#gidro input:checkbox:checked").length == 0){
+            zkgeomemsm=0;
+        }
 
         //Доска 40*150*6000 для раскрепления инвентарных щитов
         var kdoska40 =landlfsm*0.04*0.15*6*0.7+0.25;
@@ -3561,8 +3584,6 @@ function smeta() {
         }
 
 
-
-
         // Вывоз мусора после завершения работ на объекте
         var kmusorsm = 1;
         kmusorsm = Math.round(kmusorsm);
@@ -3616,15 +3637,23 @@ function smeta() {
         zkbiotualsm = Math.round(zkbiotualsm);
         $('#zkbiotualsm').text(zkbiotualsm);
 
-
         // Обеспечение электричеством: предоставляет Заказчик
-        var kelktrosm = 0;
-        kelktrosm = Math.round(kelktrosm);
-        $('#kelktrosm').text(kelktrosm);
+        kelktrosm = 0;
+        zkelktrosm=0;
 
-        var zkelktrosm = kelktrosm * 0;
-        zkelktrosm = Math.round(zkelktrosm);
-        $('#zkelktrosm').text(zkelktrosm);
+
+        if ($("#elektro input:checkbox:checked").length == 0) {
+            // Обеспечение электричеством: предоставляет Заказчик
+            var kelktrosm = 0;
+            kelktrosm = Math.round(kelktrosm);
+            $('#kelktrosm').text(kelktrosm);
+
+            var zkelktrosm = kelktrosm * 0;
+            zkelktrosm = Math.round(zkelktrosm);
+            $('#zkelktrosm').text(zkelktrosm);
+        }
+
+
 
         // Обеспечение водой:
         var kvatersm = 0;
@@ -3656,6 +3685,26 @@ function smeta() {
         // zitogM1
         zitogSMpl = Math.round(zitogSMpl);
         $('#zitogSMpl').text(zitogSMpl);
+        //alert(zitogSMpl);
+
+        // Обеспечение электричеством: предоставляет Заказчик
+
+
+
+        if ($("#elektro input:checkbox:checked").length > 0){
+
+            var kelktrosm = 1;
+            kelktrosm = Math.round(kelktrosm);
+            $('#kelktrosm').text(kelktrosm)
+            zitogSMpl=+zitogSMpl;
+            var zkelktrosm = (zitogSMpl/70000)*1500;
+            zkelktrosm = Math.round(zkelktrosm);
+            $('#zkelktrosm').text(zkelktrosm);
+            zitogSMpl=zitogSMpl+zkelktrosm;
+            zitogcpezsm=zitogcpezsm+zkelktrosm;
+
+        }
+
 
         zena_smetu = zitogSMpl;
         zena_smetu = Math.round(zena_smetu);
@@ -3788,6 +3837,10 @@ function smeta() {
         zsgidro = Math.round(zsgidro);
         $('#zsgidro').text(zsgidro);
 
+        if ($("#gidro_pl input:checkbox:checked").length == 0){
+            zsgidro=0;
+        }
+
         // Монтаж, демонтаж опалубки
         var sopal = perimpl;
         sopal = sopal.toFixed(2);
@@ -3879,6 +3932,10 @@ function smeta() {
         var zsgidrod = sgidrod * 110;
         zsgidrod = Math.round(zsgidrod);
         $('#zsgidrod').text(zsgidrod);
+
+        if ($("#gidro_pl input:checkbox:checked").length == 0){
+            zsgidrod=0;
+        }
 
         // Опалубка инвентарная из ламинированной фанеры на деревянном каркасе
         spl = +spl;
@@ -4120,6 +4177,7 @@ function smeta() {
 
 
         if ($("#arenda_pl input:checkbox:checked").length == 0){
+           // alert(0);
             zkvagon=0;
 
         }
@@ -4138,7 +4196,6 @@ function smeta() {
         var kelktro = 0;
         kelktro = Math.round(kelktro);
         $('#kelktro').text(kelktro);
-
         var zkelktro = kelktro * 0;
         zkelktro = Math.round(zkelktro);
         $('#zkelktro').text(zkelktro);
@@ -4176,6 +4233,21 @@ function smeta() {
         // zitogM1
         zitogSM = Math.round(zitogSM);
         $('#zitogSM').text(zitogSM);
+
+        if ($("#elektro_pl input:checkbox:checked").length > 0){
+
+            var kelktro = 1;
+            kelktro = Math.round(kelktro);
+            $('#kelktro').text(kelktro);
+            var zkelktro = (zitogSM/70000)*1500;
+            zkelktro = Math.round(zkelktro);
+            $('#zkelktro').text(zkelktro);
+            zitogSM=zitogSM+zkelktro;
+            zitogcpez=zitogcpez+zkelktro;
+
+        }
+
+
 
         var zena_smetu = zitogSM;
         zena_smetu = Math.round(zena_smetu);
@@ -4329,6 +4401,12 @@ function smeta() {
         zkgidroisolnr = Math.round(zkgidroisolnr);
         $('#zkgidroisolnr').text(zkgidroisolnr);
 
+        if ($("#gidro_plnr input:checkbox:checked").length == 0){
+            zkgidroisolnr=0;
+        }
+
+
+
         //Монтаж и демонтаж опалубки
         var kmontagopalnr = perimetrnr;
         // sshebsm = Math.ceil((sshebsm) * 10) / 10;
@@ -4481,6 +4559,9 @@ function smeta() {
         var zkgidroisolnr40 = kgidroisolnr40 *110;
         zkgidroisolnr40 = Math.round(zkgidroisolnr40);
         $('#zkgidroisolnr40').text(zkgidroisolnr40);
+        if ($("#gidro_plnr input:checkbox:checked").length == 0){
+            zkgidroisolnr40=0;
+        }
 
         //Подставки под арматуру (стульчики)
         var kpodstulnr =splnr*4;
@@ -4888,6 +4969,22 @@ function smeta() {
         zitogSMnr = Math.round(zitogSMnr);
         $('#zitogSMnr').text(zitogSMnr);
 
+
+        if ($("#elektro_plnr input:checkbox:checked").length > 0){
+
+            var kelktronr = 1;
+            kelktronr = Math.round(kelktronr);
+            $('#kelktronr').text(kelktronr);
+
+            var zkelktronr = (zitogSMnr/70000)*1500;
+            zkelktronr = Math.round(zkelktronr);
+            $('#zkelktronr').text(zkelktronr);
+            zitogSMnr=zitogSMnr+zkelktronr;
+            zitogcpeznr=zitogcpeznr+zkelktronr;
+
+
+        }
+
         zena_smetu = zitogSMnr;
         zena_smetu = Math.round(zena_smetu);
         $('#zena_smetu').text(zena_smetu);
@@ -5042,6 +5139,9 @@ function smeta() {
         var zkgidroisolvr = kgidroisolvr * 30;
         zkgidroisolvr = Math.round(zkgidroisolvr);
         $('#zkgidroisolvr').text(zkgidroisolvr);
+        if ($("#gidro_podvr input:checkbox:checked").length == 0){
+            zkgidroisolvr=0;
+        }
 
         //Монтаж и демонтаж опалубки
         var kmontagopalvr = perimetrvr;
@@ -5195,6 +5295,14 @@ function smeta() {
         var zkgidroisolvr40 = kgidroisolv40 *110;
         zkgidroisolvr40 = Math.round(zkgidroisolvr40);
         $('#zkgidroisolvr40').text(zkgidroisolvr40);
+
+
+        if ($("#gidro_podvr input:checkbox:checked").length == 0){
+            zkgidroisolvr40=0;
+        }
+
+
+
 
         //Подставки под арматуру (стульчики)
         var kpodstulvr =splvr*4;
@@ -5596,6 +5704,24 @@ function smeta() {
         // zitogM1
         zitogSMvr = Math.round(zitogSMvr);
         $('#zitogSMvr').text(zitogSMvr);
+
+
+        if ($("#elektro_plvr input:checkbox:checked").length > 0){
+
+            var kelktrovr = 1;
+            kelktrovr = Math.round(kelktrovr);
+            $('#kelktrovr').text(kelktrovr);
+
+            var zkelktrovr = (zitogSMvr/70000)*1500;
+            zkelktrovr = Math.round(zkelktrovr);
+            $('#zkelktrovr').text(zkelktrovr);
+            zitogSMvr=zitogSMvr+zkelktrovr;
+            zitogcpezvr=zitogcpeznr+zkelktrovr;
+
+
+        }
+
+
 
         zena_smetu = zitogSMvr;
         zena_smetu = Math.round(zena_smetu);
@@ -6315,6 +6441,23 @@ function smeta() {
         zitosmetauhp = Math.round(zitosmetauhp);
         $('#zitosmetauhp').text(zitosmetauhp);
 
+
+        if ($("#elektro_uhd input:checkbox:checked").length > 0){
+
+            var krlrktrouhp = 1;
+            krlrktrouhp = Math.round(krlrktrouhp);
+            $('#krlrktrouhp').text(krlrktrouhp);
+
+            var zkrlrktrouhp =(zitosmetauhp/70000)*1500;
+            zkrlrktrouhp = Math.round(zkrlrktrouhp);
+            $('#zkrlrktrouhp').text(zkrlrktrouhp);
+            zitosmetauhp=zitosmetauhp+zkrlrktrouhp;
+            zitogo4uhp=zitogo4uhp+zkrlrktrouhp;
+
+        }
+
+
+
         var zena_smetu = zitosmetauhp;
         zena_smetu = Math.round(zena_smetu);
         $('#zena_smetu').text(zena_smetu);
@@ -7004,6 +7147,10 @@ function smeta() {
         zkgidro94zok = Math.round(zkgidro94zok);
         $('#zkgidro94zok').text(zkgidro94zok);
 
+        if ($("#gidro_zok input:checkbox:checked").length == 0){
+            zkgidro94zok=0;
+        }
+
         //Гидроизоляция цокольной части оклеечная Техноэласт 1 слой
         var kgidro95zok =perimperekzok*(h_etagzok+hplzok*0.001+hplperekzok*0.001);
         kgidro95zok =  kgidro95zok.toFixed(2);
@@ -7121,6 +7268,20 @@ function smeta() {
         // zitogM1
         zitogSMzok = Math.round(zitogSMzok);
         $('#zitogSMzok').text(zitogSMzok);
+
+        if ($("#elektro_zok input:checkbox:checked").length > 0){
+
+            var krlrktrozok = 1;
+            krlrktrozok = Math.round(krlrktrozok);
+            $('#krlrktrozok').text(krlrktrozok);
+
+            var zkrlrktrozok =(zitogSMzok/70000)*1500;
+            zkrlrktrozok = Math.round(zkrlrktrozok);
+            $('#zkrlrktrozok').text(zkrlrktrozok);
+            zitogSMzok=zitogSMzok+zkrlrktrozok;
+            zitogcpezzok=zitogcpezzok+zkrlrktrozok;
+
+        }
 
         zena_smetu = zitogSMzok;
         zena_smetu = Math.round(zena_smetu);

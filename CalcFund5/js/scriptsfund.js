@@ -43,6 +43,45 @@ $(document).ready(function() {
         block.find('.zakas_services_lenta').show();
         block.find('.zakas_img_lenta').show();
 
+        //==========  заполнение блоков почты=======//
+
+        document.getElementById('type').value = "Ленточный";
+
+        var lang_mailr = document.getElementById('landf').value;
+        document.getElementById('lang_mail').value = lang_mailr;
+
+        var breadthf_mailr = document.getElementById('breadthf').value;
+        document.getElementById('breadthf_mail').value = breadthf_mailr;
+
+        var elevation_mailr = document.getElementById('elevationf').value;
+        document.getElementById('elevation_mail').value = elevation_mailr;
+
+        var breadthlf_mailr = document.getElementById('breadthlf').value;
+        document.getElementById('breadthlf_mail').value = breadthlf_mailr;
+
+
+        var landlf_mailr = document.getElementById('landlf').value;
+        document.getElementById('landlf_mail').value = landlf_mailr;
+
+        var perimeterlf_mailr = document.getElementById('perimeterlf').value;
+        document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
+
+        document.getElementById('area_mail').value = "0";
+
+        document.getElementById('pesok_mail').value = "0";
+
+        document.getElementById('shebenka_mail').value = "0";
+
+        document.getElementById('langrosv_mail').value = "0";
+
+        document.getElementById('hrosv_mail').value = "0";
+
+        var lkad_mailr = document.getElementById('distancelplf').value;
+        document.getElementById('lkad_mail').value = lkad_mailr;
+
+
+
+
 
     });
 

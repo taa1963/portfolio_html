@@ -776,32 +776,33 @@
 
 .basic1pl{
     display: block;
-    width: 411px;
-    height: 260px;
+    width: 500px;
+
 }
 
 .basic2pl{
     display: none;
     position: absolute;
-    top: 164px;
-    left: 20px;
+    width: 415px;
+    top: 140px;
+    left: 62px;
     z-index: 1;
 }
 
 .param_01pl{
     display: none;
     position: absolute;
-    width: 285px;
-    top: 257px;
-    left: 80px;
+    width: 297px;
+    top: 238px;
+    left: 124px;
     z-index: 1;
 }
 
 .param_02pl{
     display: none;
     position: absolute;
-    width: 399px;
-    top: 264px;
+    width: 490px;
+    top: 250px;
     left: 21px;
     z-index: 1;
 }
@@ -810,27 +811,27 @@
 .param_03pl{
     display: none;
     position: absolute;
-    width: 409px;
-    top: 225px;
-    left: 16px;
+    width: 419px;
+    top: 204px;
+    left: 60px;
     z-index: 1;
 }
 
 .param_04pl{
     display: none;
     position: absolute;
-    width: 453px;
-    top: 224px;
-    left: -8px;
+    width: 476px;
+    top: 201px;
+    left: 31px;
     z-index: 1;
 }
 
 .param_05pl{
     display:none;
     position: absolute;
-    width: 284px;
-    top: 257px;
-    left: 81px;
+    width: 299px;
+    top: 239px;
+    left: 123px;
     z-index: 1;
 }
 
@@ -838,33 +839,34 @@
     display:none;
     position: absolute;
     width: 475px;
-    top: 248px;
-    left: -20px;
+    top: 229px;
+    left: 30px;
     z-index: 1;
 }
 
 .param_07pl{
     display:none;
     position: absolute;
-    width: 345px;
-    top: 193px;
-    left: 82px;
+    width: 429px;
+    top: 157px;
+    left: 91px;
     z-index: 1;
 }
 
 .param_08pl{
     display:none;
     position: absolute;
-    top: 383px;
-    left: 278px;
+    top: 423px;
+    left: 366px;
     z-index: 1;
 }
 
 .param_09pl{
     display:none;
     position: absolute;
-    top: 93px;
-    left: 36px;
+    width: 330px;
+    top: 33px;
+    left: 12px;
     z-index: -1;
 }
 
@@ -872,42 +874,43 @@
 
 .basic1pln{
     display: block;
-    width: 411px;
-    height: 260px;
+    width: 500px;
+
 }
 
 .basic2pln{
     display: none;
     position: absolute;
-    top: 164px;
-    left: 20px;
+    width: 415px;
+    top: 140px;
+    left: 62px;
     z-index: 1;
 }
 
 .param_01plnr{
     display:none;
     position: absolute;
-    width: 400px;
-    top: 261px;
-    left: 22px;
+    width: 490px;
+    top: 250px;
+    left: 21px;
     z-index: 1;
 }
 
 .param_02plnr{
     display:none;
     position: absolute;
-    width: 400px;
-    top: 226px;
-    left: 22px;
+    width: 419px;
+    top: 204px;
+    left: 60px;
     z-index: 1;
 }
 
 .param_03plnr{
     display:none;
     position: absolute;
-    width: 420px;
-    top: 164px;
-    left: 8px;
+    width: 458px;
+    top: 139px;
+    left: 39px;
     z-index: 1;
 }
 
@@ -915,41 +918,42 @@
     display:none;
     position: absolute;
     width: 380px;
-    top: 259px;
-    left: 34px;
+    top: 242px;
+    left: 81px;
     z-index: 1;
 }
 .param_05plnr{
     display:none;
     position: absolute;
-    width: 412px;
-    top: 247px;
-    left: 12px;
+    width: 479px;
+    top: 222px;
+    left: 28px;
     z-index: 1;
 }
 
 .param_06plnr{
     display:none;
     position: absolute;
-    width: 340px;
-    top: 187px;
-    left: 83px;
+    width: 429px;
+    top: 157px;
+    left: 91px;
     z-index: 1;
 }
 
 .param_07plnr{
     display:none;
     position: absolute;
-    top: 383px;
-    left: 278px;
+    top: 423px;
+    left: 366px;
     z-index: 1;
 }
 
 .param_08plnr{
     display:none;
     position: absolute;
-    top: 93px;
-    left: 36px;
+    width: 330px;
+    top: 33px;
+    left: 12px;
     z-index: -1;
 }
 
@@ -957,34 +961,34 @@
 
 .basic1plvr{
     display: block;
-    width: 411px;
-    height: 260px;
+    width: 500px;
+
 }
 
 .basic2plvr{
     display: none;
-    width: 350px;
+    width: 415px;
     position: absolute;
-    top: 131px;
-    left: 39px;
+    top: 119px;
+    left: 62px;
     z-index: 1;
 }
 
 .param_01plvr{
     display:none;
     position: absolute;
-    width: 250px;
+    width: 300px;
     top: 233px;
-    left: 91px;
+    left: 122px;
     z-index: 1;
 }
 
 .param_02plvr{
     display:none;
     position: absolute;
-    width: 400px;
-    top: 239px;
-    left: 22px;
+    width: 490px;
+    top: 250px;
+    left: 21px;
     z-index: 1;
 }
 
@@ -992,69 +996,70 @@
 .param_03plvr{
     display:none;
     position: absolute;
-    width: 353px;
-    top: 215px;
-    left: 37px;
+    width: 420px;
+    top: 228px;
+    left: 57px;
     z-index: 1;
 }
 .param_04plvr{
     display:none;
     position: absolute;
-    width: 270px;
-    top: 230px;
-    left: 87px;
+    width: 314px;
+    top: 247px;
+    left: 120px;
     z-index: 1;
 }
 
 .param_05plvr{
     display:none;
     position: absolute;
-    width: 357px;
-    top: 178px;
-    left: 35px;
+    width: 419px;
+    top: 180px;
+    left: 60px;
     z-index: 1;
 }
 
 .param_06plvr{
     display:none;
     position: absolute;
-    width: 386px;
-    top: 128px;
-    left: 20px;
+    width: 458px;
+    top: 118px;
+    left: 39px;
     z-index: 1;
 }
 
 .param_07plvr{
     display:none;
     position: absolute;
-    width: 386px;
-    top: 221px;
-    left: 20px;
+    width: 479px;
+    top: 222px;
+    left: 28px;
     z-index: 1;
 }
 
 .param_08plvr{
     display:none;
     position: absolute;
-    width: 340px;
-    top: 165px;
-    left: 88px;
+    width: 429px;
+    top: 157px;
+    left: 91px;
     z-index: 1;
 }
 
 .param_09plvr{
     display:none;
     position: absolute;
-    top: 383px;
-    left: 278px;
+    top: 423px;
+    left: 366px;
     z-index: 1;
 }
 
 .param_10plvr{
     display:none;
     position: absolute;
-    top: 62px;
-    left: 36px;
+    width: 330px;
+    top: 33px;
+    left: 12px;
     z-index: -1;
 }
 
@@ -1062,68 +1067,69 @@
 
 .basic1uhp{
     display: block;
-    width: 411px;
-    height: 260px;
+    width: 500px;
+
 }
 
 .basic2uhp{
     display: none;
-    width: 387px;
+    width: 497px;
     position: absolute;
-    top: 150px;
-    left: 32px;
+    top: 137px;
+    left: 15px;
     z-index: 1;
 }
 
 .param_01uhp{
     display:none;
     position: absolute;
-    width: 400px;
-    top: 233px;
-    left: 20px;
+    width: 490px;
+    top: 250px;
+    left: 21px;
     z-index: 1;
 }
 
 .param_02uhp{
     display:none;
     position: absolute;
-    width: 350px;
-    top: 163px;
-    left: 79px;
-    z-index: 1;
+    width: 420px;
+    top: 158px;
+    left: 100px;
+    z-index: 2;
 }
 
 .param_03uhp{
     display:none;
     position: absolute;
-    width: 383px;
-    top: 218px;
-    left: 31px;
+    width: 487px;
+    top: 230px;
+    left: 18px;
     z-index: 2;
 }
 
 .param_04uhp{
     display:none;
     position: absolute;
-    width: 354px;
-    top: 149px;
-    left: 42px;
+    width: 446px;
+    top: 138px;
+    left: 41px;
     z-index: 1;
 }
 
 .param_05uhp{
     display:none;
     position: absolute;
-    top: 383px;
-    left: 278px;
+    top: 423px;
+    left: 366px;
     z-index: 1;
 }
 
 .param_06uhp{
     display:none;
     position: absolute;
-    top: 99px;;
-    left: 36px;
+    width: 330px;
+    top: 33px;
+    left: 12px;
     z-index: -1;
 }
 
@@ -1132,95 +1138,95 @@
 
 .basic1zok{
     display: block;
-    width: 411px;
-    height: 260px;
+    width: 500px;
+
 }
 
 .basic2zok{
     display: none;
-    width: 387px;
+    width: 500px;
     position: absolute;
-    top: 150px;
-    left: 32px;
+    top: 140px;
     z-index: 1;
 }
 
 .param_01zok{
     display:none;
     position: absolute;
-    width: 240px;
-    top: 302px;
-    left: 109px;
+    width: 313px;
+    top: 336px;
+    left: 110px;
     z-index: 1;
 }
 
 .param_02zok{
     display:none;
     position: absolute;
-    width: 380px;
-    top: 233px;
-    left: 37px;
+    width: 490px;
+    top: 248px;
+    left: 17px;
     z-index: 1;
 }
 
 .param_03zok{
     display:none;
     position: absolute;
-    width: 327px;
-    top: 200px;
-    left: 62px;
+    width: 424px;
+    top: 202px;
+    left: 52px;
     z-index: 1;
 }
 
 .param_04zok{
     display:none;
     position: absolute;
-    width: 250px;
-    top: 301px;
-    left: 101px;
+    width: 316px;
+    top: 338px;
+    left: 108px;
     z-index: 1;
 }
 
 .param_05zok{
     display:none;
     position: absolute;
-    width: 360px;
-    top: 149px;
-    left: 43px;
+    width: 462px;
+    top: 139px;
+    left: 34px;
     z-index: 1;
 }
 
 .param_06zok{
     display:none;
     position: absolute;
-    width: 360px;
-    top: 216px;
-    left: 43px;
+    width: 478px;
+    top: 225px;
+    left: 26px;
     z-index: 1;
 }
 
 .param_07zok{
     display:none;
     position: absolute;
-    width: 320px;
-    top: 241px;
-    left: 107px;
+    width: 410px;
+    top: 259px;
+    left: 104px;
     z-index: 1;
 }
 
 .param_08zok{
     display:none;
     position: absolute;
-    top: 383px;
-    left: 278px;
+    top: 455px;
+    left: 364px;
     z-index: 1;
 }
 
 .param_09zok{
     display:none;
     position: absolute;
-    top: 99px;;
-    left: 36px;
+    width: 330px;
+    top: 20px;
+    left: 8px;
     z-index: -1;
 }
 
@@ -1252,6 +1258,10 @@
 
 
 /*	=====================	Первая форма заказа	===============	*/
+.param_mail{
+    display: none;
+}
+
 
 .zakas_form1{
     display: block;

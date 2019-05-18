@@ -8,10 +8,10 @@
     <meta name="author" content="taa">
 
 
-    <link href="css/modal-contact.css" rel="stylesheet">
+
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
     <link href="css/style.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
@@ -182,12 +182,6 @@
 
                        <input type="number" class="distancelplf" id="distancelplf"  value="25" min="0" max="200" step="1"/>
                    </div>
-
-
-
-
-
-
 
 
                </div>
@@ -1525,7 +1519,7 @@
                   <div class="param_mail">
                       <input type="text" name="type" id="type"  value="0"  />
                       <input type="text" name="lang_mail" id="lang_mail"  value="0"  />
-                      <input type="text" name="breadthf_maill" id="breadthf_mail"  value="0"  />
+                      <input type="text" name="breadthf_mail" id="breadthf_mail"  value="0"  />
                       <!--Высота ленты-->
                       <input type="text" name="elevation_mail" id="elevation_mail"  value="0"  />
                       <!--Ширина ленты-->
@@ -1541,7 +1535,7 @@
                       <input type="text" name="area_mail" id="area_mail"  value="0"  />
 
                       <!--pesok_mail-->
-                      <input type="text" name="pesok_maill" id="pesok_mail"  value="0"  />
+                      <input type="text" name="pesok_mail" id="pesok_mail"  value="0"  />
 
                       <!--shebenka_mail-->
                       <input type="text" name="shebenka_mail" id="shebenka_mail"  value="0"  />
@@ -2238,117 +2232,9 @@
                        <input class="buttonprn" type="button" value="Распечатать" onclick="PrintElem('#zakas_smeta_lenta')" />
                    </div>
 
-                   <!--<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">-->
-                       <!--<input class="buttonpdf" type="button" id="buttonpdf" value="СохранитьF" onclick ="run()"  />-->
-                   <!--</div>-->
+
 
                </div>
-
-               <!--<script>-->
-                   <!--function run() {-->
-<!--//                       function saveDynamicDataToFile() {-->
-
-                       <!--a = document.createElement("a")-->
-
-                       <!--a.setAttribute("href", "data:text/plain," + zakas_smeta_lenta.innerHTML)-->
-
-                       <!--a.setAttribute("download", "filename.txt")-->
-                       <!--alert(333);-->
-
-<!--//                       buttonpdf.onclick = function(){ a.click() }-->
-<!--//                           var text = '#zakas_smeta_lenta';-->
-<!--//                           var filename = "smeta";-->
-<!--//                           var blob = new Blob([text], {type: "text/plain;charset=utf-8"});-->
-<!--//                           saveAs(blob, filename+".txt");-->
-
-
-<!--//                           var userInput = document.getElementById(" var text = $("#textarea").val();-->
-<!--//                           var filename = $("#input-fileName").val()-->
-<!--//                           var blob = new Blob([text], {type: "text/plain;charset=utf-8"});-->
-<!--//                           saveAs(blob, filename+".txt");").value;-->
-<!--//-->
-<!--//                           var blob = new Blob([userInput], { type: "text/plain;charset=utf-8" });-->
-<!--//                           saveAs(blob, "dynamic.txt");-->
-<!--////                       alert(345);-->
-<!--//                       $('#buttonpdf').click(function () {-->
-<!--//                           downloadInnerHtml(fileName, '#zakas_smeta_lenta', 'text/html');-->
-<!--//                           alert(1232);-->
-<!--//                       });-->
-                   <!--}-->
-
-               <!--</script>-->
-
-               <!--<script lang="javascript" type="text/javascript">-->
-
-
-                   <!--function run()-->
-                   <!--{-->
-                       <!--var pdf = new jsPDF('p', 'pt', 'letter'),-->
-                           <!--source = $('#zakas_smeta_lenta')[0],-->
-                           <!--margins = {-->
-                               <!--top: 40,-->
-                               <!--bottom: 40,-->
-                               <!--left: 40,-->
-                               <!--right: 40,-->
-                               <!--width: 522-->
-                           <!--};-->
-
-                       <!--pd.frfomHTML(-->
-                           <!--source,-->
-                           <!--margins.left,-->
-                           <!--margins.top,-->
-                           <!--{-->
-                               <!--'width': margins.width-->
-                           <!--},-->
-                           <!--function (dispose) {-->
-                               <!--pdf.save('SMETA.pdf');-->
-                           <!--},-->
-                           <!--margins-->
-                       <!--);-->
-                   <!--};-->
-
-
-               <!--</script>-->
-
-               <!--<script>-->
-                   <!--function run() {-->
-                       <!--var pdf = new jsPDF('p', 'pt', 'letter');-->
-                       <!--pdf.html($('#zakas_smeta_lenta table').html(), {-->
-                           <!--callback: function (pdf) {-->
-                               <!--var iframe = document.createElement('iframe');-->
-                               <!--iframe.setAttribute('style', 'position:absolute;right:0; top:0; bottom:0; height:100%; width:500px');-->
-                               <!--document.body.appendChild(iframe);-->
-                               <!--iframe.src = pdf.output('datauristring');-->
-                           <!--}-->
-                       <!--});-->
-
-
-                       <!--/*$(document).on('click', '#buttonpdf', function () {-->
-
-
-
-
-                           <!--var doc = new jsPDF();-->
-                           <!--var specialElementHandlers = {-->
-                               <!--'#editor': function (element, renderer) {-->
-                                   <!--return true;-->
-                               <!--}-->
-                           <!--};-->
-
-
-                           <!--//I dont know what remove was is the example, added quotes around it.-->
-                          <!--// console.log("clicked");-->
-                           <!--doc.fromHTML($('#zakas_smeta_lenta').html(), 15, 15, {-->
-                               <!--'width': 190,-->
-                               <!--'elementHandlers': specialElementHandlers-->
-                           <!--});-->
-                           <!--doc.save('Smeta.pdf');-->
-                       <!--})*/-->
-                   <!--}-->
-
-               <!--</script>-->
-
-
 
 
            </div>
@@ -6267,14 +6153,6 @@
 
 
    </div>
-
-
-
-
-
-
-
-
 
 
 

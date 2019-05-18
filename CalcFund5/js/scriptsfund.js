@@ -43,44 +43,6 @@ $(document).ready(function() {
         block.find('.zakas_services_lenta').show();
         block.find('.zakas_img_lenta').show();
 
-        //==========  заполнение блоков почты=======//
-
-        document.getElementById('type').value = "Ленточный";
-
-        var lang_mailr = document.getElementById('landf').value;
-        document.getElementById('lang_mail').value = lang_mailr;
-
-        var breadthf_mailr = document.getElementById('breadthf').value;
-        document.getElementById('breadthf_mail').value = breadthf_mailr;
-
-        var elevation_mailr = document.getElementById('elevationf').value;
-        document.getElementById('elevation_mail').value = elevation_mailr;
-
-        var breadthlf_mailr = document.getElementById('breadthlf').value;
-        document.getElementById('breadthlf_mail').value = breadthlf_mailr;
-
-
-        var landlf_mailr = document.getElementById('landlf').value;
-        document.getElementById('landlf_mail').value = landlf_mailr;
-
-        var perimeterlf_mailr = document.getElementById('perimeterlf').value;
-        document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
-
-        document.getElementById('area_mail').value = "0";
-
-        document.getElementById('pesok_mail').value = "0";
-
-        document.getElementById('shebenka_mail').value = "0";
-
-        document.getElementById('langrosv_mail').value = "0";
-
-        document.getElementById('hrosv_mail').value = "0";
-
-        var lkad_mailr = document.getElementById('distancelplf').value;
-        document.getElementById('lkad_mail').value = lkad_mailr;
-
-
-
 
 
     });
@@ -2831,21 +2793,6 @@ $(document).ready(function() {
     });
 
 
-
-
-    $('.submit').click(function () {
-        smeta();
-
-    });
-    //
-    // $('#test').click(function () {
-    //     smeta();
-    //
-    // });
-
-
-
-
 //========== РАСЧЕТ ПАРАМЕТРОМ СМЕТЫ   =================//
 
     $('#zakas_menu1').click(function () {
@@ -3020,80 +2967,80 @@ $(document).ready(function() {
 
 
 
-    $('#sm2').click(function () {
-
-        if (VarFund==1) {
-            var block = $(this).parents('.content');
-            block.find('.zakas_smeta_lenta').show();
-            block.find('.zakas_smeta_plita').hide();
-            block.find('.zakas_smeta_plitanr').hide();
-            block.find('.zakas_smeta_plitavr').hide();
-            block.find('.zakas_smeta_plitauhp').hide();
-            block.find('.zakas_smeta_plitazok').hide();
-
-        }
-
-
-        if (VarFund==2){
-            var block = $(this).parents('.content');
-            block.find('.zakas_smeta_plita').show();
-            block.find('.zakas_smeta_lenta').hide();
-            block.find('.zakas_smeta_plitanr').hide();
-            block.find('.zakas_smeta_plitavr').hide();
-            block.find('.zakas_smeta_plitauhp').hide();
-            block.find('.zakas_smeta_plitazok').hide();
-
-        }
-
-        if (VarFund==3){
-            var block = $(this).parents('.content');
-            block.find('.zakas_smeta_plita').hide();
-            block.find('.zakas_smeta_lenta').hide();
-            block.find('.zakas_smeta_plitanr').show();
-            block.find('.zakas_smeta_plitavr').hide();
-            block.find('.zakas_smeta_plitauhp').hide();
-            block.find('.zakas_smeta_plitazok').hide();
-        }
-
-        if (VarFund==4){
-            var block = $(this).parents('.content');
-            block.find('.zakas_smeta_plita').hide();
-            block.find('.zakas_smeta_lenta').hide();
-            block.find('.zakas_smeta_plitanr').hide();
-            block.find('.zakas_smeta_plitavr').show();
-            block.find('.zakas_smeta_plitauhp').hide();
-            block.find('.zakas_smeta_plitazok').hide();
-
-        }
-
-        if (VarFund==5){
-            var block = $(this).parents('.content');
-            block.find('.zakas_smeta_plita').hide();
-            block.find('.zakas_smeta_lenta').hide();
-            block.find('.zakas_smeta_plitanr').hide();
-            block.find('.zakas_smeta_plitavr').hide();
-            block.find('.zakas_smeta_plitauhp').show();
-            block.find('.zakas_smeta_plitazok').hide();
-
-        }
-
-        if (VarFund==6){
-            var block = $(this).parents('.content');
-            block.find('.zakas_smeta_plita').hide();
-            block.find('.zakas_smeta_lenta').hide();
-            block.find('.zakas_smeta_plitanr').hide();
-            block.find('.zakas_smeta_plitavr').hide();
-            block.find('.zakas_smeta_plitauhp').hide();
-            block.find('.zakas_smeta_plitazok').show();
-
-        }
-
-        block.find('.zena').show();
-
-        smeta();
-
-
-    });
+    // $('#sm2').click(function () {
+    //
+    //     if (VarFund==1) {
+    //         var block = $(this).parents('.content');
+    //         block.find('.zakas_smeta_lenta').show();
+    //         block.find('.zakas_smeta_plita').hide();
+    //         block.find('.zakas_smeta_plitanr').hide();
+    //         block.find('.zakas_smeta_plitavr').hide();
+    //         block.find('.zakas_smeta_plitauhp').hide();
+    //         block.find('.zakas_smeta_plitazok').hide();
+    //
+    //     }
+    //
+    //
+    //     if (VarFund==2){
+    //         var block = $(this).parents('.content');
+    //         block.find('.zakas_smeta_plita').show();
+    //         block.find('.zakas_smeta_lenta').hide();
+    //         block.find('.zakas_smeta_plitanr').hide();
+    //         block.find('.zakas_smeta_plitavr').hide();
+    //         block.find('.zakas_smeta_plitauhp').hide();
+    //         block.find('.zakas_smeta_plitazok').hide();
+    //
+    //     }
+    //
+    //     if (VarFund==3){
+    //         var block = $(this).parents('.content');
+    //         block.find('.zakas_smeta_plita').hide();
+    //         block.find('.zakas_smeta_lenta').hide();
+    //         block.find('.zakas_smeta_plitanr').show();
+    //         block.find('.zakas_smeta_plitavr').hide();
+    //         block.find('.zakas_smeta_plitauhp').hide();
+    //         block.find('.zakas_smeta_plitazok').hide();
+    //     }
+    //
+    //     if (VarFund==4){
+    //         var block = $(this).parents('.content');
+    //         block.find('.zakas_smeta_plita').hide();
+    //         block.find('.zakas_smeta_lenta').hide();
+    //         block.find('.zakas_smeta_plitanr').hide();
+    //         block.find('.zakas_smeta_plitavr').show();
+    //         block.find('.zakas_smeta_plitauhp').hide();
+    //         block.find('.zakas_smeta_plitazok').hide();
+    //
+    //     }
+    //
+    //     if (VarFund==5){
+    //         var block = $(this).parents('.content');
+    //         block.find('.zakas_smeta_plita').hide();
+    //         block.find('.zakas_smeta_lenta').hide();
+    //         block.find('.zakas_smeta_plitanr').hide();
+    //         block.find('.zakas_smeta_plitavr').hide();
+    //         block.find('.zakas_smeta_plitauhp').show();
+    //         block.find('.zakas_smeta_plitazok').hide();
+    //
+    //     }
+    //
+    //     if (VarFund==6){
+    //         var block = $(this).parents('.content');
+    //         block.find('.zakas_smeta_plita').hide();
+    //         block.find('.zakas_smeta_lenta').hide();
+    //         block.find('.zakas_smeta_plitanr').hide();
+    //         block.find('.zakas_smeta_plitavr').hide();
+    //         block.find('.zakas_smeta_plitauhp').hide();
+    //         block.find('.zakas_smeta_plitazok').show();
+    //
+    //     }
+    //
+    //     block.find('.zena').show();
+    //
+    //     smeta();
+    //
+    //
+    // });
 
     $('#test').click(function () {
         VarMail=2;

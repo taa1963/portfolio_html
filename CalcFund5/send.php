@@ -23,19 +23,19 @@ if (
     $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 100);
     $tel = substr(htmlspecialchars(trim($_POST['tel'])), 0, 100);
     $adr = substr(htmlspecialchars(trim($_POST['adr'])), 0, 1000000);
-    $type = substr(htmlspecialchars(trim($_POST['type'])), 0, 100);
-    $lang_mail = substr(htmlspecialchars(trim($_POST['lang_mail'])), 0, 100);
-    $breadthf_mail = substr(htmlspecialchars(trim($_POST['breadthf_mail'])), 0, 100);
-    $elevation_mail = substr(htmlspecialchars(trim($_POST['elevation_mail'])), 0, 100);
-    $breadthlf_mail = substr(htmlspecialchars(trim($_POST['breadthlf_mail'])), 0, 100);
-    $landlf_mail = substr(htmlspecialchars(trim($_POST['landlf_mail'])), 0, 100);
-    $perimeterlf_mail = substr(htmlspecialchars(trim($_POST['perimeterlf_mail'])), 0, 100);
-    $area_mail = substr(htmlspecialchars(trim($_POST['area_mail'])), 0, 100);
-    $pesok_mail = substr(htmlspecialchars(trim($_POST['pesok_mail'])), 0, 100);
-    $shebenka_mail = substr(htmlspecialchars(trim($_POST['shebenka_mail'])), 0, 100);
-    $langrosv_mail = substr(htmlspecialchars(trim($_POST['langrosv_mail'])), 0, 100);
-    $hrosv_mail = substr(htmlspecialchars(trim($_POST['hrosv_mail'])), 0, 100);
-    $lkad_mail = substr(htmlspecialchars(trim($_POST['lkad_mail'])), 0, 100);
+    $type = substr(htmlspecialchars(trim($_POST['type'])), 0, 1000);
+    $lang_mail = substr(htmlspecialchars(trim($_POST['lang_mail'])), 0, 10000);
+    $breadthf_mail = substr(htmlspecialchars(trim($_POST['breadthf_mail'])), 0, 10000);
+    $elevation_mail = substr(htmlspecialchars(trim($_POST['elevation_mail'])), 0, 10000);
+    $breadthlf_mail = substr(htmlspecialchars(trim($_POST['breadthlf_mail'])), 0, 10000);
+    $landlf_mail = substr(htmlspecialchars(trim($_POST['landlf_mail'])), 0, 10000);
+    $perimeterlf_mail = substr(htmlspecialchars(trim($_POST['perimeterlf_mail'])), 0, 10000);
+    $area_mail = substr(htmlspecialchars(trim($_POST['area_mail'])), 0, 10000);
+    $pesok_mail = substr(htmlspecialchars(trim($_POST['pesok_mail'])), 0, 10000);
+    $shebenka_mail = substr(htmlspecialchars(trim($_POST['shebenka_mail'])), 0, 10000);
+    $langrosv_mail = substr(htmlspecialchars(trim($_POST['langrosv_mail'])), 0, 10000);
+    $hrosv_mail = substr(htmlspecialchars(trim($_POST['hrosv_mail'])), 0, 10000);
+    $lkad_mail = substr(htmlspecialchars(trim($_POST['lkad_mail'])), 0, 10000);
 
 
 
@@ -56,7 +56,7 @@ if (
          Ширина ленты:$breadthlf_mail
          Длина ленты:$landlf_mail
          Периметр фундамента:$perimeterlf_mail
-         Площадь:$area_mail
+ //        Площадь:$area_mail
 //         Толщина песчаной подушки: $pesok_mail
 //         Толщина щебёночной подушки: $shebenka_mail
 //         Общая длина ростверка:$langrosv_mail

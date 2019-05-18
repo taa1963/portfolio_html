@@ -1,4 +1,4 @@
-
+@import"reset200802.css";
 
 .container {
     width: 100%;
@@ -659,37 +659,37 @@
 }
 .zakas_img_lenta{
     display: block;
-    width: 400px;
+    width: 500px;
     margin-top: 150px;
 }
 
 .zakas_img_plita{
     display: none;
-    width: 400px;
+    width: 500px;
     margin-top: 150px;
 }
 
 .zakas_img_plitanr{
     display: none;
-    width: 400px;
+    width: 500px;
     margin-top: 150px;
 }
 
 .zakas_img_plitavr{
     display: none;
-    width: 400px;
+    width: 500px;
     margin-top: 150px;
 }
 
 .zakas_img_uhd{
     display: none;
-    width: 400px;
+    width: 500px;
     margin-top: 150px;
 }
 
 .zakas_img_zok{
     display: none;
-    width: 400px;
+    width: 500px;
     margin-top: 150px;
 }
 
@@ -1471,10 +1471,6 @@
 }
 
 
-
-
-
-/*		Первый блок. Выбор размеров бани		*/
 
 
 

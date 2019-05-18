@@ -52,6 +52,7 @@ $(document).ready(function() {
     $('#zakas_menu2').click(function () {
 
         //========== фокус на пункт меню=======//
+
         $("#zakas_menu2").addClass("menuclik");
         $("#zakas_menu1").removeClass("menuclik");
         $("#zakas_menu3").removeClass("menuclik");
@@ -2833,7 +2834,7 @@ $(document).ready(function() {
         block.find('.zakas_smeta_plitazok').hide();
 
 
-        if (((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0)) && (VarMail==2)) {
+        if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0) && VarMail==2) {
             var block = $(this).parents('.content');
             block.find('.Zena_err').hide();
             block.find('.zakas_smeta_plita').show();

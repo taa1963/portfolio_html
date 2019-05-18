@@ -3,6 +3,7 @@ $( document ).ready(function() {
 
 
     function(){
+        alert(VarFund);
 
         if (VarFund==1) {
 

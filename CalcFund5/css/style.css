@@ -1266,9 +1266,9 @@
     display: block;
 }
 
-/*#param_mail2{*/
-    /*display: none;*/
-/*}*/
+#param_mail2{
+    display:block;
+}
 
 
 .zakas_form1{

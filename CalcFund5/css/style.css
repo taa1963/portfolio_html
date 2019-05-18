@@ -1263,12 +1263,12 @@
     visibility: hidden;
 }
 .param_mail2{
-    display: none;
+    display: block;
 }
 
-#param_mail2{
-    display: none;
-}
+/*#param_mail2{*/
+    /*display: none;*/
+/*}*/
 
 
 .zakas_form1{

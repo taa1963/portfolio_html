@@ -18,7 +18,6 @@ if (
 //    isset($_POST['langrosv_mail']) && !empty($_POST['langrosv_mail']) &&
 //    isset($_POST['hrosv_mail']) && !empty($_POST['hrosv_mail']) &&
 //    isset($_POST['lkad_mail']) && !empty($_POST['lkad_mail']) &&
-
     isset($_POST['adr']) && !empty($_POST['adr'])) {
     $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 1000);
     $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 100);

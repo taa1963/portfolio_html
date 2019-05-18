@@ -14,8 +14,8 @@ if (
 //    isset($_POST['perimeterlf_mail']) && !empty($_POST['perimeterlf_mail']) &&
 //    isset($_POST['area_mail']) && !empty($_POST['area_mail']) &&
 //    isset($_POST['pesok_mail']) && !empty($_POST['pesok_mail']) &&
-    isset($_POST['shebenka_mail']) && !empty($_POST['shebenka_mail']) &&
-    isset($_POST['langrosv_mail']) && !empty($_POST['langrosv_mail']) &&
+//    isset($_POST['shebenka_mail']) && !empty($_POST['shebenka_mail']) &&
+//    isset($_POST['langrosv_mail']) && !empty($_POST['langrosv_mail']) &&
     isset($_POST['hrosv_mail']) && !empty($_POST['hrosv_mail']) &&
     isset($_POST['lkad_mail']) && !empty($_POST['lkad_mail']) &&
 
@@ -33,8 +33,8 @@ if (
 //    $perimeterlf_mail = substr(htmlspecialchars(trim($_POST['perimeterlf_mail'])), 0, 100);
 //    $area_mail = substr(htmlspecialchars(trim($_POST['area_mail'])), 0, 100);
 //    $pesok_mail = substr(htmlspecialchars(trim($_POST['pesok_mail'])), 0, 100);
-    $shebenka_mail = substr(htmlspecialchars(trim($_POST['shebenka_mail'])), 0, 100);
-    $langrosv_mail = substr(htmlspecialchars(trim($_POST['langrosv_mail'])), 0, 100);
+//    $shebenka_mail = substr(htmlspecialchars(trim($_POST['shebenka_mail'])), 0, 100);
+//    $langrosv_mail = substr(htmlspecialchars(trim($_POST['langrosv_mail'])), 0, 100);
     $hrosv_mail = substr(htmlspecialchars(trim($_POST['hrosv_mail'])), 0, 100);
     $lkad_mail = substr(htmlspecialchars(trim($_POST['lkad_mail'])), 0, 100);
 
@@ -59,8 +59,8 @@ if (
 //         Периметр фундамента:$perimeterlf_mail
 //         Площадь:$area_mail
 //         Толщина песчаной подушки: $pesok_mail
-         Толщина щебёночной подушки: $shebenka_mail
-         Общая длина ростверка:$langrosv_mail
+//         Толщина щебёночной подушки: $shebenka_mail
+//         Общая длина ростверка:$langrosv_mail
          Высота ростверка:$hrosv_mail
          Растояние от КАД:$lkad_mail
         

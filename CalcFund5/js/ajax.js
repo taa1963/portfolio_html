@@ -1,8 +1,6 @@
 $( document ).ready(function() {
-    $("#sm").click(
+    $("#sm").click(function(){
 
-
-    function(){
         alert(VarFund);
 
         if (VarFund==1) {

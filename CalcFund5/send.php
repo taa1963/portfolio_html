@@ -88,8 +88,7 @@ if (
          Общая длина ростверка: $langrosv_mail
          Высота ростверка: $hrosv_mail
          Растояние от КАД: $lkad_mail
-        
-        ";
+    ";
 
     echo $message;
 

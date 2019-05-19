@@ -262,8 +262,8 @@ function sendAjaxForm(result_form, ajax_form, url) {
 
         type:     "post", //метод отправки
         data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
-        dataType: "text", //формат данных
-       //dataType: "json", //формат данных
+        //dataType: "text", //формат данных
+        dataType: "json", //формат данных
         success: function(response) { //Данные отправлены успешно
             console.log(response);
 

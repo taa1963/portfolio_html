@@ -37,6 +37,32 @@ if (
     $hrosv_mail = substr(htmlspecialchars(trim($_POST['hrosv_mail'])), 0, 10000);
     $lkad_mail = substr(htmlspecialchars(trim($_POST['lkad_mail'])), 0, 10000);
 
+    for ($i = 0; $i < 2; $i++) {
+        buffer_flush();
+        echo $name. "<br>\n";
+        echo $email. "<br>\n";
+        echo $tel. "<br>\n";
+        echo $adr. "<br>\n";
+        echo $type. "<br>\n";
+        echo $lang_mail. "<br>\n";
+        echo $breadthf_mail. "<br>\n";
+        echo  $elevation_mail. "<br>\n";
+        echo  $breadthlf_mail. "<br>\n";
+        echo  $landlf_mail. "<br>\n";
+        echo  $perimeterlf_mail. "<br>\n";
+        echo  $area_mail. "<br>\n";
+        echo  $pesok_mail. "<br>\n";
+        echo  $shebenka_mail. "<br>\n";
+        echo  $langrosv_mail. "<br>\n";
+        echo  $hrosv_mail. "<br>\n";
+        echo  $lkad_mail. "<br>\n";
+
+
+        usleep(500000); // 0.500 sec
+        buffer_flush();
+    }
+
+
 
 
     $to = 'alexandr.tupichenkov@yandex.ru';

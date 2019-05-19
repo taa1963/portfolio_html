@@ -1,7 +1,6 @@
 $( document ).ready(function() {
     $("#sm").click(function(){
 
-        alert(VarFund);
 
         if (VarFund==1) {
 

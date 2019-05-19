@@ -6,18 +6,18 @@ if (
     isset($_POST['email']) && !empty($_POST['email']) &&
     isset($_POST['tel']) && !empty($_POST['tel']) &&
     isset($_POST['type']) && !empty($_POST['type']) &&
-    isset($_POST['lang_mail']) && !empty($_POST['lang_mail']) &&
-    isset($_POST['breadthf_mail']) && !empty($_POST['breadthf_mail']) &&
-    isset($_POST['elevation_mail']) && !empty($_POST['elevation_mail']) &&
-    isset($_POST['breadthlf_mail']) && !empty($_POST['breadthlf_mail']) &&
-    isset($_POST['landlf_mail']) && !empty($_POST['landlf_mail']) &&
-    isset($_POST['perimeterlf_mail']) && !empty($_POST['perimeterlf_mail']) &&
-    isset($_POST['area_mail']) && !empty($_POST['area_mail']) &&
-    isset($_POST['pesok_mail']) && !empty($_POST['pesok_mail']) &&
-    isset($_POST['shebenka_mail']) && !empty($_POST['shebenka_mail']) &&
-    isset($_POST['langrosv_mail']) && !empty($_POST['langrosv_mail']) &&
-    isset($_POST['hrosv_mail']) && !empty($_POST['hrosv_mail']) &&
-    isset($_POST['lkad_mail']) && !empty($_POST['lkad_mail']) &&
+    isset($_POST['lang_mail']) && !is_int($_POST['lang_mail']) &&
+    isset($_POST['breadthf_mail']) && !is_int($_POST['breadthf_mail']) &&
+    isset($_POST['elevation_mail']) && !is_int($_POST['elevation_mail']) &&
+    isset($_POST['breadthlf_mail']) && !is_int($_POST['breadthlf_mail']) &&
+    isset($_POST['landlf_mail']) && !is_int($_POST['landlf_mail']) &&
+    isset($_POST['perimeterlf_mail']) && !is_int($_POST['perimeterlf_mail']) &&
+    isset($_POST['area_mail']) && !is_int($_POST['area_mail']) &&
+    isset($_POST['pesok_mail']) && !is_int($_POST['pesok_mail']) &&
+    isset($_POST['shebenka_mail']) && !is_int($_POST['shebenka_mail']) &&
+    isset($_POST['langrosv_mail']) && !is_int($_POST['langrosv_mail']) &&
+    isset($_POST['hrosv_mail']) && !is_int($_POST['hrosv_mail']) &&
+    isset($_POST['lkad_mail']) && !is_int($_POST['lkad_mail']) &&
     isset($_POST['adr']) && !empty($_POST['adr'])) {
     $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 1000);
     $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 100);

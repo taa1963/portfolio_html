@@ -86,7 +86,23 @@ echo json_encode([
     'status' => 'error',
     'message' => 'please fill data',
     'data' => [
-        $_POST
-    ]
+        isset($_POST['name']) && !empty($_POST['name']),
+        isset($_POST['email']) && !empty($_POST['email']),
+        isset($_POST['tel']) && !empty($_POST['tel']),
+        isset($_POST['type']) && !empty($_POST['type']),
+        isset($_POST['lang_mail']) && !empty($_POST['lang_mail']),
+        isset($_POST['breadthf_mail']) && !empty($_POST['breadthf_mail']),
+        isset($_POST['elevation_mail']) && !empty($_POST['elevation_mail']),
+        isset($_POST['breadthlf_mail']) && !empty($_POST['breadthlf_mail']),
+        isset($_POST['landlf_mail']) && !empty($_POST['landlf_mail']),
+        isset($_POST['perimeterlf_mail']) && !empty($_POST['perimeterlf_mail']),
+        isset($_POST['area_mail']) && !empty($_POST['area_mail']),
+        isset($_POST['pesok_mail']) && !empty($_POST['pesok_mail']),
+        isset($_POST['shebenka_mail']) && !empty($_POST['shebenka_mail']),
+        isset($_POST['langrosv_mail']) && !empty($_POST['langrosv_mail']),
+        isset($_POST['hrosv_mail']) && !empty($_POST['hrosv_mail']),
+        isset($_POST['lkad_mail']) && !empty($_POST['lkad_mail']),
+        isset($_POST['adr']) && !empty($_POST['adr']),
+    ],
 ]);
 

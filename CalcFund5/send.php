@@ -64,6 +64,9 @@ if (
          Растояние от КАД:$lkad_mail
         
         ";
+
+    echo $message;
+
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
     if ($verify) {
         echo json_encode([

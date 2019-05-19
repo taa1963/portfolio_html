@@ -77,17 +77,17 @@ if (
          Параметры заказа :
          Тип фундамента: $type
          Длина: $lang_mail
-         Высота плиты:$breadthf_mail
-         Высота ленты или плиты:$elevation_mail
-         Ширина ленты:$breadthlf_mail
-         Длина ленты:$landlf_mail
-         Периметр фундамента:$perimeterlf_mail
-         Площадь:$area_mail
+         Высота плиты: $breadthf_mail
+         Высота ленты или плиты: $elevation_mail
+         Ширина ленты: $breadthlf_mail
+         Длина ленты: $landlf_mail
+         Периметр фундамента: $perimeterlf_mail
+         Площадь: $area_mail
          Толщина песчаной подушки: $pesok_mail
          Толщина щебёночной подушки: $shebenka_mail
-         Общая длина ростверка:$langrosv_mail
-         Высота ростверка:$hrosv_mail
-         Растояние от КАД:$lkad_mail
+         Общая длина ростверка: $langrosv_mail
+         Высота ростверка: $hrosv_mail
+         Растояние от КАД: $lkad_mail
         
         ";
 

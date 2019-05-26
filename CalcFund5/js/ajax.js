@@ -5,6 +5,8 @@ $( document ).ready(function() {
 
             if (VarSM==1) {
                 smeta();
+                var block = $('body .content');
+                block.find('.zakas_form1_title').hide();
                 block.find('.zakas_smeta_lenta').hide();
                 block.find('.zakas_smeta_plita').hide();
                 block.find('.zakas_smeta_plitanr').hide();

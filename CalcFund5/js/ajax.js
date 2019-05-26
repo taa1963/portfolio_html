@@ -14,7 +14,7 @@ $( document ).ready(function() {
                 block.find('.zakas_smeta_plitauhp').hide();
                 block.find('.zakas_smeta_plitazok').hide();
                 // document.getElementById('zena_mail').value = zena_mail;
-                // alert(zena_mail);
+                alert(zena_mail);
 
             }
 

@@ -2,18 +2,34 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+    .zakas_proportions input {
+        float: right;
+        margin-right: 0;
+        width: 35%;
+    }
+
     #test {
-      margin-top: 100px;
+        margin-top: 100px;
     }
     .zakas_services p {
         float: left;
-        width: 80%;
+        width: 60%;
     }
-
+    .zakas_img img{
+        max-width: none;
+    }
 
 }
 
 @media only screen and (max-width: 959px) {
+
+    .zakas_img img{
+        max-width: none;
+    }
+    .zakas_services p {
+        float: left;
+        width: 60%;
+    }
 
     #test {
         margin-top: 100px;
@@ -27,6 +43,14 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+    .zakas_img img{
+        max-width: none;
+    }
+
+    .zakas_services p {
+        float: left;
+        width: 60%;
+    }
 
     #test {
         margin-top: 100px;
@@ -37,6 +61,17 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+    .zakas_menu1 {
+
+        font-size: 0.7em;
+        border-right: none;
+
+    }
+    .zakas_menu1 p {
+        margin-left: 0.1em;
+    }
+
+
     #test {
         margin-top: 100px;
 

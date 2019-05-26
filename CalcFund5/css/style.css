@@ -5,10 +5,13 @@
     height: auto;
     margin: 0 auto;
     padding: 0;
- }
+}
 
 .row{
     margin: 0;
+}
+.col-lg-3 {
+    float: left;
 }
 
 
@@ -20,6 +23,14 @@
     margin: 0 auto;
 
 }
+
+.calc_my{
+    display: block;
+    width: 100%;
+    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+
+}
+
 /*блок закрытия */
 .b_hide{
     display: inline-block;
@@ -34,14 +45,17 @@
 
 
 .header_titel h1{
-    font-family: "RobotoLight";
-    font-size:3em ;
+    font-family: "Roboto Slab";
+    font-size: 40px;
+    color: #066192;
+    /*//font-family: "RobotoLight";*/
+    /*font-size:3em ;*/
     font-weight: bold;
-    color: #2b669a;
+    /*color: #2b669a;*/
     text-align: center;
     padding-top: 46px;
     padding-bottom: 24px;
-   }
+}
 
 
 /*		Блок выбора данных для расчета 		*/
@@ -68,10 +82,14 @@
     /*padding-top: 10px;
     padding-bottom: 10px;*/
     text-decoration: none;
-    font-family: "RobotoBold";
+    font-family: 'Museo Sans Cyrl 700';
+    /*font-size: 26px;*/
+    color: #4a423e;
+
+    /*font-family: "RobotoBold";*/
     font-size:1em ;
     font-weight: bold;
-    color: #000000;
+    /*color: #000000;*/
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -83,7 +101,7 @@
 
 
 .zakas_menu1 a{
-    font-family: "RobotoBold";
+    font-family: 'Museo Sans Cyrl 700';
     font-size:1em ;
     font-weight: bold;
     color: #000000;
@@ -97,16 +115,53 @@
 .zakas_menu1 p{
     margin-left: 1em;
     margin-right: 1em;
- }
+}
 
+.zakas_menu2{
+    display: block;
+    float: left;
+    border-right: 1px solid #2f4152;
+    /*padding-top: 10px;
+    padding-bottom: 10px;*/
+    text-decoration: none;
+    font-family: 'Museo Sans Cyrl 700';
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*.zakas_menu2:last-child{*/
+/*border-right:none;*/
+/*}*/
+
+
+.zakas_menu2 a{
+    font-family: 'Museo Sans Cyrl 700';
+    font-size:1em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.zakas_menu2 p{
+    margin-left: 1em;
+    margin-right: 1em;
+}
 
 
 
 .menuclik {
-   background:#2b669a ;
-   background-color:#2b669a ;
-   color: #ffffff;
-   text-decoration: none;
+    background:#2b669a ;
+    background-color:#2b669a ;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 
@@ -119,10 +174,13 @@
 }
 
 .zakas_blockinfo h2{
-    font-family: "RobotoLight";
-    font-size:1em ;
+    font-family: 'Museo Sans Cyrl 700';
+    font-size: 26px;
+    color: #4a423e;
+    /*font-family: "RobotoLight";*/
+    /*font-size:1em ;*/
     font-weight: 500;
-    color: #000000;
+    /*color: #000000;*/
     text-align: center;
     padding-top: 46px;
     padding-bottom: 24px;
@@ -130,7 +188,7 @@
 }
 
 .zakas_blockinfo h3{
-    font-family: "RobotoLight";
+    font-family: 'Museo Sans Cyrl 700';
     font-size:1em ;
     font-weight: 800;
     color: #000000;
@@ -139,16 +197,20 @@
 
 }
 
+.jq-checkbox{
+    float: right;
+}
 
 /*		Описание блока размеры и его компоненты		*/
 
 .zakas_data h3{
-    font-family: "RobotoBold";
+    font-family: 'Museo Sans Cyrl 700';
     font-size:1em ;
     font-weight: bold;
     color: #000000;
     text-align: left;
     margin-bottom: 30px;
+    display: block;
 
 }
 
@@ -157,6 +219,8 @@
     width: 100%;
     height: auto;
 }
+
+
 
 /*----блок ленты-----*/
 .zakas_proportions_len{
@@ -228,6 +292,12 @@
 }
 
 .elevation{
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.sheben_l{
     display: inline-block;
     width: 90%;
     margin-bottom: 20px;
@@ -305,13 +375,13 @@
     display:inline-block;
     width: 90%;
     margin-bottom: 20px;
- }
+}
 
 .sheben_pl{
     display:inline-block;
     width: 90%;
     margin-bottom: 20px;
- }
+}
 /*--------Блок плиты с нижним росвером------------*/
 
 
@@ -344,6 +414,7 @@
 .zakas_proportions p{
     width: 60%;
     float: left;
+    font-family: 'Museo Sans Cyrl 300', sans-serif, 'Arial', sans-serif;
 }
 
 /*--------Блок плиты с УШП------------*/
@@ -591,6 +662,7 @@
 .zakas_services p{
     width: 60%;
     float: left;
+    font-family: 'Museo Sans Cyrl 300', sans-serif, 'Arial', sans-serif;
 }
 
 .popup_1{
@@ -620,7 +692,8 @@
     opacity:1;
     visibility: visible;
     display: inline-block;
-    width: 200px;
+    width: 100px;
+    z-index:11;
 
 }
 
@@ -767,7 +840,7 @@
     width: 330px;
     top: 33px;
     left: 12px;
-    z-index: -1;
+    z-index: 0;
 }
 
 
@@ -867,7 +940,7 @@
     width: 330px;
     top: 33px;
     left: 12px;
-    z-index: -1;
+    z-index: 0;
 }
 
 /*================ Рисунки для блока Плита NR ====================*/
@@ -954,7 +1027,7 @@
     width: 330px;
     top: 33px;
     left: 12px;
-    z-index: -1;
+    z-index: 0;
 }
 
 /*================ Рисунки для блока Плита VR ====================*/
@@ -1060,7 +1133,7 @@
     width: 330px;
     top: 33px;
     left: 12px;
-    z-index: -1;
+    z-index: 0;
 }
 
 /*================ Рисунки для блока USP ====================*/
@@ -1130,7 +1203,7 @@
     width: 330px;
     top: 33px;
     left: 12px;
-    z-index: -1;
+    z-index: 0;
 }
 
 /*================ Рисунки для блока ZOKOL ====================*/
@@ -1227,7 +1300,7 @@
     width: 330px;
     top: 20px;
     left: 8px;
-    z-index: -1;
+    z-index: 0;
 }
 
 /*---------------------*/
@@ -1239,19 +1312,23 @@
 
 .zena{
     display: none;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 
 }
 
 .zena span{
+    font-family: "Museo Sans Cyrl 700";
     font-weight: bold;
     color: #2e6da4;
+    font-size: 24px;
 }
 
 .zena_itog{
     display: inline-block;
     margin-top: 50px;
+    font-family: "Museo Sans Cyrl 700";
+    font-size: 20px;
 }
 
 
@@ -1262,14 +1339,30 @@
     display: none;
     visibility: hidden;
 }
+
+
+#zakas_form1_title{
+    font-family: "Roboto Slab";
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    margin: 0 0 90px;
+}
+
+
+
 .param_mail2{
-    display: none;
+    display: block;
 }
 
 #param_mail2{
-    display:none;
+    display:block;
 }
 
+#form1{
+    display: block;
+    width: 100%;
+}
 
 .zakas_form1{
     display: block;
@@ -1278,8 +1371,14 @@
 }
 
 #form1 .first{
-  border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
 }
+
+#form1 .first p{
+    display: inline-block;
+}
+
 
 #form1 .first input {
     display: block;
@@ -1294,7 +1393,7 @@
     display: block;
     margin: 0 auto;
     width: 30%;
-   margin-top: 50px;
+    margin-top: 50px;
 }
 
 
@@ -1308,17 +1407,30 @@
 
 .form_button1 button{
     display: block;
-    margin: 0 auto;
-    border: 2px solid #000000;
-    border-radius:5px;
-    font-size: 1.2em;
-    color: #FFFFFF;
-    /*text-transform: none;*/
-    font-weight: 400;
+    width: 210px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 0.35px;
+    font-family: 'Museo Sans Cyrl 700';
+    border: 1px solid #81aec7;
     text-align: center;
-    background-color: #0467a6;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #066192;
 }
 
+
+
+
+
+.form_button1 button:hover{
+    background: #fff;
+    color: #066192;
+}
 
 /*Test*/
 
@@ -1338,9 +1450,25 @@
 
 .zakas_smeta_plita{
     display: none;
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
+    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
 }
+
+.zakas_smeta_plita .table img{
+    display:block;
+    width:30%;
+    margin:0 auto;
+}
+
+/*.zakas_smeta_plita .table{*/
+/*display: block;*/
+/*overflow: hidden;*/
+/*}*/
+.zakas_smeta_plita .table{
+    table-layout: fixed;
+}
+
 
 .zakas_smeta_plita h1{
     font-family: "RobotoBold";
@@ -1365,9 +1493,12 @@
 
 .zakas_smeta_lenta{
     display: none;
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
+    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
 }
+
+
 
 .zakas_smeta_lenta h1{
     font-family: "RobotoBold";
@@ -1378,11 +1509,31 @@
     padding-bottom: 50px;
 }
 
+.zakas_smeta_lenta .table{
+    table-layout: fixed;
+}
+
+.zakas_smeta_lenta .table img{
+    display:block;
+    width:30%;
+    margin:0 auto;
+}
+
+
+
+.table_bl{
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/*///======МОНОЛИТНОЙ ПЛИТЫ С РОСТВЕРКАМИ=====================//*/
 
 .zakas_smeta_plitanr{
     display: none;
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
+    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
 }
 
 .zakas_smeta_plitanr h1{
@@ -1393,11 +1544,25 @@
     text-align: center;
     padding-bottom: 50px;
 }
+.zakas_smeta_plitanr .table{
+    table-layout: fixed;
+}
+
+.zakas_smeta_plitanr .table img{
+    display:block;
+    width:30%;
+    margin:0 auto;
+}
+
+
+
+/*///======МОНОЛИТНОЙ ПЛИТЫ С РОСТВЕРКАМИ=====================//*/
 
 .zakas_smeta_plitavr{
     display: none;
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
+    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
 }
 
 .zakas_smeta_plitavr h1{
@@ -1409,10 +1574,23 @@
     padding-bottom: 50px;
 }
 
+.zakas_smeta_plitavr .table{
+    table-layout: fixed;
+}
+
+.zakas_smeta_plitavr .table img{
+    display:block;
+    width:30%;
+    margin:0 auto;
+}
+
+/*///======МОНОЛИТНОЙ ПЛИТЫ С UHP=====================//*/
+
 .zakas_smeta_plitauhp{
     display: none;
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
+    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
 }
 
 .zakas_smeta_plitauhp h1{
@@ -1423,11 +1601,27 @@
     text-align: center;
     padding-bottom: 50px;
 }
+.zakas_smeta_plitauhp .table{
+    table-layout: fixed;
+}
+
+.zakas_smeta_plitauhp .table img{
+    display:block;
+    width:30%;
+    margin:0 auto;
+}
+
+
+
+/*///======МОНОЛИТНОЙ ПЛИТЫ ZOK=====================//*/
+
 
 .zakas_smeta_plitazok{
     display: none;
-    width: 100%;
+    width: 90%;
     margin-top: 50px;
+    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+
 }
 
 .zakas_smeta_plitazok h1{
@@ -1439,6 +1633,15 @@
     padding-bottom: 50px;
 }
 
+.zakas_smeta_plitazok .table{
+    table-layout: fixed;
+}
+
+.zakas_smeta_plitazok .table img{
+    display:block;
+    width:30%;
+    margin:0 auto;
+}
 
 
 
@@ -1517,14 +1720,33 @@
 }
 
 .buttonprn{
-    border: 2px solid #2e6da4;
-    border-radius: 10px;
-     text-align: center;
-     padding-left: 20px;
-    padding-right: 20px;
-    background-color: #FFFFFF;
+    display: block;
+    width: 210px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 0.35px;
+    font-family: 'Museo Sans Cyrl 700';
+    border: 1px solid #81aec7;
+    text-align: center;
+    color: #066192;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #066192;
+    display:block;
+    margin:0 auto;
 
 }
+
+.buttonprn:hover{
+    background: #fff;
+    color: #066192;
+}
+
+
 
 #result_form{
     display: none;

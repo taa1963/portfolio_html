@@ -2,254 +2,278 @@ $( document ).ready(function() {
     $("#sm").click(function(){
 
 
-        if (VarFund==1) {
 
-            document.getElementById('type').value = "Ленточный";
+            if (VarSM==1) {
+                smeta();
+                block.find('.zakas_smeta_lenta').hide();
+                block.find('.zakas_smeta_plita').hide();
+                block.find('.zakas_smeta_plitanr').hide();
+                block.find('.zakas_smeta_plitavr').hide();
+                block.find('.zakas_smeta_plitauhp').hide();
+                block.find('.zakas_smeta_plitazok').hide();
+                // document.getElementById('zena_mail').value = zena_mail;
+                // alert(zena_mail);
 
-            var lang_mailr = document.getElementById('landf').value;
-            document.getElementById('lang_mail').value = lang_mailr;
+            }
 
-            var breadthf_mailr = document.getElementById('breadthf').value;
-            document.getElementById('breadthf_mail').value = breadthf_mailr;
 
-            var elevation_mailr = document.getElementById('elevationf').value;
-            document.getElementById('elevation_mail').value = elevation_mailr;
+            if (VarFund==1) {
 
-            var breadthlf_mailr = document.getElementById('breadthlf').value;
-            document.getElementById('breadthlf_mail').value = breadthlf_mailr;
+                document.getElementById('type').value = "Ленточный";
 
+                var lang_mailr = document.getElementById('landf').value;
+                document.getElementById('lang_mail').value = lang_mailr;
 
-            var landlf_mailr = document.getElementById('landlf').value;
-            document.getElementById('landlf_mail').value = landlf_mailr;
+                var breadthf_mailr = document.getElementById('breadthf').value;
+                document.getElementById('breadthf_mail').value = breadthf_mailr;
 
-            var perimeterlf_mailr = document.getElementById('perimeterlf').value;
-            document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
+                var elevation_mailr = document.getElementById('elevationf').value;
+                document.getElementById('elevation_mail').value = elevation_mailr;
 
-            document.getElementById('area_mail').value = "0";
+                var breadthlf_mailr = document.getElementById('breadthlf').value;
+                document.getElementById('breadthlf_mail').value = breadthlf_mailr;
 
-            document.getElementById('pesok_mail').value = "0";
 
-            document.getElementById('shebenka_mail').value = "0";
+                var landlf_mailr = document.getElementById('landlf').value;
+                document.getElementById('landlf_mail').value = landlf_mailr;
 
-            document.getElementById('langrosv_mail').value = "0";
+                var perimeterlf_mailr = document.getElementById('perimeterlf').value;
+                document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
 
-            document.getElementById('hrosv_mail').value = "0";
+                document.getElementById('area_mail').value = "0";
 
-            var lkad_mailr = document.getElementById('distancelplf').value;
-            document.getElementById('lkad_mail').value = lkad_mailr;
-        }
+                document.getElementById('pesok_mail').value = "0";
 
-        if (VarFund==2) {
+                document.getElementById('shebenka_mail').value = "0";
 
-            document.getElementById('type').value = "Плита";
+                document.getElementById('langrosv_mail').value = "0";
 
-            var lang_mailr = document.getElementById('landpli').value;
-            document.getElementById('lang_mail').value = lang_mailr;
+                document.getElementById('hrosv_mail').value = "0";
 
-            var breadthf_mailr = document.getElementById('breadthpli').value;
-            document.getElementById('breadthf_mail').value = breadthf_mailr;
+                var lkad_mailr = document.getElementById('distancelplf').value;
+                document.getElementById('lkad_mail').value = lkad_mailr;
+                document.getElementById('zena_mail').value = zena_mail;
+                // alert("zena_mail");
 
-            var elevation_mailr = document.getElementById('elevationf').value;
-            document.getElementById('elevation_mail').value = elevation_mailr;
+            }
 
-            //var breadthlf_mailr = document.getElementById('breadthlf').value;
-            document.getElementById('breadthlf_mail').value = 0;
+            if (VarFund==2) {
 
+                document.getElementById('type').value = "Плита";
 
-            //var landlf_mailr = document.getElementById('landlf').value;
-            document.getElementById('landlf_mail').value = 0;
+                var lang_mailr = document.getElementById('landpli').value;
+                document.getElementById('lang_mail').value = lang_mailr;
 
-            var perimeterlf_mailr = document.getElementById('perimplf').value;
-            document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
+                var breadthf_mailr = document.getElementById('breadthpli').value;
+                document.getElementById('breadthf_mail').value = breadthf_mailr;
 
-            var area_mailr = document.getElementById('areapplf').value;
-            document.getElementById('area_mail').value = area_mailr;
+                var elevation_mailr = document.getElementById('elevationf').value;
+                document.getElementById('elevation_mail').value = elevation_mailr;
 
-            var pesok_mailr = document.getElementById('pesokplf').value;
-            document.getElementById('pesok_mail').value = pesok_mailr;
+                //var breadthlf_mailr = document.getElementById('breadthlf').value;
+                document.getElementById('breadthlf_mail').value = 0;
 
-            var shebenka_mailr = document.getElementById('shebenplf').value;
-            document.getElementById('shebenka_mail').value = shebenka_mailr;
 
-            document.getElementById('langrosv_mail').value = "0";
+                //var landlf_mailr = document.getElementById('landlf').value;
+                document.getElementById('landlf_mail').value = 0;
 
-            document.getElementById('hrosv_mail').value = "0";
+                var perimeterlf_mailr = document.getElementById('perimplf').value;
+                document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
 
-            var lkad_mailr = document.getElementById('distancelentf').value;
-            document.getElementById('lkad_mail').value = lkad_mailr;
-        }
+                var area_mailr = document.getElementById('areapplf').value;
+                document.getElementById('area_mail').value = area_mailr;
 
-        if (VarFund==3) {
+                var pesok_mailr = document.getElementById('pesokplf').value;
+                document.getElementById('pesok_mail').value = pesok_mailr;
 
-            document.getElementById('type').value = "Плита нижним  ростверком";
+                var shebenka_mailr = document.getElementById('shebenplf').value;
+                document.getElementById('shebenka_mail').value = shebenka_mailr;
 
-            var lang_mailr = document.getElementById('landplfnr').value;
-            document.getElementById('lang_mail').value = lang_mailr;
+                document.getElementById('langrosv_mail').value = "0";
 
-            var breadthf_mailr = document.getElementById('breadthplfnr').value;
-            document.getElementById('breadthf_mail').value = breadthf_mailr;
+                document.getElementById('hrosv_mail').value = "0";
 
-            var elevation_mailr = document.getElementById('elevationplnr').value;
-            document.getElementById('elevation_mail').value = 0;
+                var lkad_mailr = document.getElementById('distancelentf').value;
+                document.getElementById('lkad_mail').value = lkad_mailr;
+                document.getElementById('zena_mail').value = zena_mail;
+            }
 
-            //var breadthlf_mailr = document.getElementById('breadthlf').value;
-            document.getElementById('breadthlf_mail').value = elevation_mailr;
+            if (VarFund==3) {
 
+                document.getElementById('type').value = "Плита нижним  ростверком";
 
-            //var landlf_mailr = document.getElementById('landlf').value;
-            document.getElementById('landlf_mail').value = 0;
+                var lang_mailr = document.getElementById('landplfnr').value;
+                document.getElementById('lang_mail').value = lang_mailr;
 
-            var perimeterlf_mailr = document.getElementById('perimplfnr').value;
-            document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
+                var breadthf_mailr = document.getElementById('breadthplfnr').value;
+                document.getElementById('breadthf_mail').value = breadthf_mailr;
 
-            var area_mailr = document.getElementById('areapplfnr').value;
-            document.getElementById('area_mail').value = area_mailr;
+                var elevation_mailr = document.getElementById('elevationplnr').value;
+                document.getElementById('elevation_mail').value = 0;
 
-            var pesok_mailr = document.getElementById('pesokplfnr').value;
-            document.getElementById('pesok_mail').value = pesok_mailr;
+                //var breadthlf_mailr = document.getElementById('breadthlf').value;
+                document.getElementById('breadthlf_mail').value = elevation_mailr;
 
-            var shebenka_mailr = document.getElementById('shebenplfnr').value;
-            document.getElementById('shebenka_mail').value = shebenka_mailr;
 
-            var langrosv_mailr = document.getElementById('langplnr').value;
-            document.getElementById('langrosv_mail').value = langrosv_mailr;
+                //var landlf_mailr = document.getElementById('landlf').value;
+                document.getElementById('landlf_mail').value = 0;
 
-            var hrosv_mailr = document.getElementById('hplplnr').value;
-            document.getElementById('hrosv_mail').value = hrosv_mailr;
+                var perimeterlf_mailr = document.getElementById('perimplfnr').value;
+                document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
 
-            var lkad_mailr = document.getElementById('distancelentfnr').value;
-            document.getElementById('lkad_mail').value = lkad_mailr;
-        }
+                var area_mailr = document.getElementById('areapplfnr').value;
+                document.getElementById('area_mail').value = area_mailr;
 
-        if (VarFund==4) {
+                var pesok_mailr = document.getElementById('pesokplfnr').value;
+                document.getElementById('pesok_mail').value = pesok_mailr;
 
-            document.getElementById('type').value = "Плита верхним  ростверком";
+                var shebenka_mailr = document.getElementById('shebenplfnr').value;
+                document.getElementById('shebenka_mail').value = shebenka_mailr;
 
-            var lang_mailr = document.getElementById('landplfvr').value;
-            document.getElementById('lang_mail').value = lang_mailr;
+                var langrosv_mailr = document.getElementById('langplnr').value;
+                document.getElementById('langrosv_mail').value = langrosv_mailr;
 
-            var breadthf_mailr = document.getElementById('breadthplfvr').value;
-            document.getElementById('breadthf_mail').value = breadthf_mailr;
+                var hrosv_mailr = document.getElementById('hplplnr').value;
+                document.getElementById('hrosv_mail').value = hrosv_mailr;
 
-            var elevation_mailr = document.getElementById('elevationplvr').value;
-            document.getElementById('elevation_mail').value = 0;
+                var lkad_mailr = document.getElementById('distancelentfnr').value;
+                document.getElementById('lkad_mail').value = lkad_mailr;
+                document.getElementById('zena_mail').value = zena_mail;
+            }
 
-            //var breadthlf_mailr = document.getElementById('breadthlf').value;
-            document.getElementById('breadthlf_mail').value = elevation_mailr;
+            if (VarFund==4) {
 
+                document.getElementById('type').value = "Плита верхним  ростверком";
 
-            //var landlf_mailr = document.getElementById('landlf').value;
-            document.getElementById('landlf_mail').value = 0;
+                var lang_mailr = document.getElementById('landplfvr').value;
+                document.getElementById('lang_mail').value = lang_mailr;
 
-            var perimeterlf_mailr = document.getElementById('perimplfvr').value;
-            document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
+                var breadthf_mailr = document.getElementById('breadthplfvr').value;
+                document.getElementById('breadthf_mail').value = breadthf_mailr;
 
-            var area_mailr = document.getElementById('areapplfvr').value;
-            document.getElementById('area_mail').value = area_mailr;
+                var elevation_mailr = document.getElementById('elevationplvr').value;
+                document.getElementById('elevation_mail').value = 0;
 
-            var pesok_mailr = document.getElementById('pesokplfvr').value;
-            document.getElementById('pesok_mail').value = pesok_mailr;
+                //var breadthlf_mailr = document.getElementById('breadthlf').value;
+                document.getElementById('breadthlf_mail').value = elevation_mailr;
 
-            var shebenka_mailr = document.getElementById('shebenplfvr').value;
-            document.getElementById('shebenka_mail').value = shebenka_mailr;
 
-            var langrosv_mailr = document.getElementById('langplvr').value;
-            document.getElementById('langrosv_mail').value = langrosv_mailr;
+                //var landlf_mailr = document.getElementById('landlf').value;
+                document.getElementById('landlf_mail').value = 0;
 
-            var hrosv_mailr = document.getElementById('hplplvr').value;
-            document.getElementById('hrosv_mail').value = hrosv_mailr;
+                var perimeterlf_mailr = document.getElementById('perimplfvr').value;
+                document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
 
-            var lkad_mailr = document.getElementById('distancelentfvr').value;
-            document.getElementById('lkad_mail').value = lkad_mailr;
-        }
+                var area_mailr = document.getElementById('areapplfvr').value;
+                document.getElementById('area_mail').value = area_mailr;
 
-        if (VarFund==5) {
+                var pesok_mailr = document.getElementById('pesokplfvr').value;
+                document.getElementById('pesok_mail').value = pesok_mailr;
 
-            document.getElementById('type').value = "Плита УШП";
+                var shebenka_mailr = document.getElementById('shebenplfvr').value;
+                document.getElementById('shebenka_mail').value = shebenka_mailr;
 
-            var lang_mailr = document.getElementById('landuhp').value;
-            document.getElementById('lang_mail').value = lang_mailr;
+                var langrosv_mailr = document.getElementById('langplvr').value;
+                document.getElementById('langrosv_mail').value = langrosv_mailr;
 
-            var breadthf_mailr = document.getElementById('breadthuhp').value;
-            document.getElementById('breadthf_mail').value = breadthf_mailr;
+                var hrosv_mailr = document.getElementById('hplplvr').value;
+                document.getElementById('hrosv_mail').value = hrosv_mailr;
 
-            var elevation_mailr = document.getElementById('hpluhp').value;
-            document.getElementById('elevation_mail').value = 0;
+                var lkad_mailr = document.getElementById('distancelentfvr').value;
+                document.getElementById('lkad_mail').value = lkad_mailr;
+                document.getElementById('zena_mail').value = zena_mail;
+            }
 
-            //var breadthlf_mailr = document.getElementById('breadthlf').value;
-            document.getElementById('breadthlf_mail').value = elevation_mailr;
+            if (VarFund==5) {
 
+                document.getElementById('type').value = "Плита УШП";
 
-            var landlf_mailr = document.getElementById('langrebpluhp').value;
-            document.getElementById('landlf_mail').value = landlf_mailr;
+                var lang_mailr = document.getElementById('landuhp').value;
+                document.getElementById('lang_mail').value = lang_mailr;
 
-            var perimeterlf_mailr = document.getElementById('perimuhp').value;
-            document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
+                var breadthf_mailr = document.getElementById('breadthuhp').value;
+                document.getElementById('breadthf_mail').value = breadthf_mailr;
 
-            var area_mailr = document.getElementById('areauhp').value;
-            document.getElementById('area_mail').value = area_mailr;
+                var elevation_mailr = document.getElementById('hpluhp').value;
+                document.getElementById('elevation_mail').value = 0;
 
-            var pesok_mailr = document.getElementById('pesokuhp').value;
-            document.getElementById('pesok_mail').value = pesok_mailr;
+                //var breadthlf_mailr = document.getElementById('breadthlf').value;
+                document.getElementById('breadthlf_mail').value = elevation_mailr;
 
-            //var shebenka_mailr = document.getElementById('shebenplfvr').value;
-            document.getElementById('shebenka_mail').value = 0;
 
-            // var langrosv_mailr = document.getElementById('langplvr').value;
-            document.getElementById('langrosv_mail').value = 0;
+                var landlf_mailr = document.getElementById('langrebpluhp').value;
+                document.getElementById('landlf_mail').value = landlf_mailr;
 
-            //var hrosv_mailr = document.getElementById('hplplvr').value;
-            document.getElementById('hrosv_mail').value = 0;
+                var perimeterlf_mailr = document.getElementById('perimuhp').value;
+                document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
 
-            var lkad_mailr = document.getElementById('distanceuhdp').value;
-            document.getElementById('lkad_mail').value = lkad_mailr;
-        }
+                var area_mailr = document.getElementById('areauhp').value;
+                document.getElementById('area_mail').value = area_mailr;
 
-        if (VarFund==6) {
+                var pesok_mailr = document.getElementById('pesokuhp').value;
+                document.getElementById('pesok_mail').value = pesok_mailr;
 
-            document.getElementById('type').value = "Цокольный";
+                //var shebenka_mailr = document.getElementById('shebenplfvr').value;
+                document.getElementById('shebenka_mail').value = 0;
 
-            var lang_mailr = document.getElementById('landzok').value;
-            document.getElementById('lang_mail').value = lang_mailr;
+                // var langrosv_mailr = document.getElementById('langplvr').value;
+                document.getElementById('langrosv_mail').value = 0;
 
-            var breadthf_mailr = document.getElementById('breadthzok').value;
-            document.getElementById('breadthf_mail').value = breadthf_mailr;
+                //var hrosv_mailr = document.getElementById('hplplvr').value;
+                document.getElementById('hrosv_mail').value = 0;
 
-            var elevation_mailr = document.getElementById('elevationzok').value;
-            document.getElementById('elevation_mail').value = 0;
+                var lkad_mailr = document.getElementById('distanceuhdp').value;
+                document.getElementById('lkad_mail').value = lkad_mailr;
+                document.getElementById('zena_mail').value = zena_mail;
+            }
 
-            //var breadthlf_mailr = document.getElementById('breadthlf').value;
-            document.getElementById('breadthlf_mail').value = elevation_mailr;
+            if (VarFund==6) {
 
+                document.getElementById('type').value = "Цокольный";
 
-            var landlf_mailr = document.getElementById('langrebpluhp').value;
-            document.getElementById('landlf_mail').value = 0;
+                var lang_mailr = document.getElementById('landzok').value;
+                document.getElementById('lang_mail').value = lang_mailr;
 
-            var perimeterlf_mailr = document.getElementById('perimpzok').value;
-            document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
+                var breadthf_mailr = document.getElementById('breadthzok').value;
+                document.getElementById('breadthf_mail').value = breadthf_mailr;
 
-            var area_mailr = document.getElementById('areazok').value;
-            document.getElementById('area_mail').value = area_mailr;
+                var elevation_mailr = document.getElementById('elevationzok').value;
+                document.getElementById('elevation_mail').value = 0;
 
-            var pesok_mailr = document.getElementById('pesokzok').value;
-            document.getElementById('pesok_mail').value = pesok_mailr;
+                //var breadthlf_mailr = document.getElementById('breadthlf').value;
+                document.getElementById('breadthlf_mail').value = elevation_mailr;
 
-            var shebenka_mailr = document.getElementById('shebenzok').value;
-            document.getElementById('shebenka_mail').value = shebenka_mailr;
 
-            // var langrosv_mailr = document.getElementById('langplvr').value;
-            document.getElementById('langrosv_mail').value = 0;
+                var landlf_mailr = document.getElementById('langrebpluhp').value;
+                document.getElementById('landlf_mail').value = 0;
 
-            //var hrosv_mailr = document.getElementById('hplplvr').value;
-            document.getElementById('hrosv_mail').value = 0;
+                var perimeterlf_mailr = document.getElementById('perimpzok').value;
+                document.getElementById('perimeterlf_mail').value = perimeterlf_mailr;
 
-            var lkad_mailr = document.getElementById('distancelentfzok').value;
-            document.getElementById('lkad_mail').value = lkad_mailr;
-        }
+                var area_mailr = document.getElementById('areazok').value;
+                document.getElementById('area_mail').value = area_mailr;
 
+                var pesok_mailr = document.getElementById('pesokzok').value;
+                document.getElementById('pesok_mail').value = pesok_mailr;
 
+                var shebenka_mailr = document.getElementById('shebenzok').value;
+                document.getElementById('shebenka_mail').value = shebenka_mailr;
 
-            sendAjaxForm('result_form', 'form1', 'send.php');
+                // var langrosv_mailr = document.getElementById('langplvr').value;
+                document.getElementById('langrosv_mail').value = 0;
+
+                //var hrosv_mailr = document.getElementById('hplplvr').value;
+                document.getElementById('hrosv_mail').value = 0;
+
+                var lkad_mailr = document.getElementById('distancelentfzok').value;
+                document.getElementById('lkad_mail').value = lkad_mailr;
+                document.getElementById('zena_mail').value = zena_mail;
+
+            }
+
+
+
+            sendAjaxForm('result_form', 'form1', '../send.php');
             return false;
         }
     );
@@ -275,6 +299,7 @@ function sendAjaxForm(result_form, ajax_form, url) {
             // $('#result_form').show();
             //$('#result_form').html('Имя: '+result.name+'<br>Телефон: '+result.phonenumber);
             VarMail=2;
+            VarSM=2;
 
             var block = $('body .content');
 
@@ -350,3 +375,4 @@ function sendAjaxForm(result_form, ajax_form, url) {
         }
     });
 }
+

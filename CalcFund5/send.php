@@ -17,6 +17,7 @@ if (
     isset($_POST['shebenka_mail']) && !is_int($_POST['shebenka_mail']) &&
     isset($_POST['langrosv_mail']) && !is_int($_POST['langrosv_mail']) &&
     isset($_POST['hrosv_mail']) && !is_int($_POST['hrosv_mail']) &&
+    isset($_POST['zena_mail']) && !is_int($_POST['zena_mail']) &&
     isset($_POST['lkad_mail']) && !is_int($_POST['lkad_mail']) &&
     isset($_POST['adr']) && !empty($_POST['adr'])) {
     $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 1000);
@@ -36,6 +37,7 @@ if (
     $langrosv_mail = substr(htmlspecialchars(trim($_POST['langrosv_mail'])), 0, 10000);
     $hrosv_mail = substr(htmlspecialchars(trim($_POST['hrosv_mail'])), 0, 10000);
     $lkad_mail = substr(htmlspecialchars(trim($_POST['lkad_mail'])), 0, 10000);
+    $zena_mail = substr(htmlspecialchars(trim($_POST['zena_mail'])), 0, 10000);
 
 
 
@@ -62,6 +64,7 @@ if (
          Общая длина ростверка: $langrosv_mail
          Высота ростверка: $hrosv_mail
          Растояние от КАД: $lkad_mail
+          Цена сметы: $zena_mail
     ";
 
 

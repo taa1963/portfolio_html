@@ -1,10 +1,12 @@
-var  VarFund,zemv,zenzemv,zena_smetu, VarMail;
+var  VarFund,zemv,zenzemv,zena_smetu, VarMail, VarSM, zena_mail;
 
 VarFund=1;
 zemv=0;
 zenzemv=0;
 zena_smetu=0;
+zena_mail=0;
 VarMail=0;
+VarSM=1;
 
 $(document).ready(function() {
 
@@ -12,7 +14,7 @@ $(document).ready(function() {
 
     $('#zakas_menu1').click(function () {
         $("#zakas_menu1").addClass("menuclik");
-        $("#zakas_menu2").removeClass("menuclik");
+        $("#zakas_menu32").removeClass("menuclik");
         $("#zakas_menu3").removeClass("menuclik");
         $("#zakas_menu4").removeClass("menuclik");
         $("#zakas_menu5").removeClass("menuclik");
@@ -48,15 +50,12 @@ $(document).ready(function() {
     });
 
     //========== Клик на пункте Плита=======//
-
-    $('#zakas_menu2').click(function () {
-
-        //========== фокус на пункт меню=======//
-
-        $("#zakas_menu2").addClass("menuclik");
+    $('#zakas_menu32').click(function () {
+        $("#zakas_menu32").addClass("menuclik");
+        // $("#zakas_menu4").addClass("menuclik");
         $("#zakas_menu1").removeClass("menuclik");
         $("#zakas_menu3").removeClass("menuclik");
-        $("#zakas_menu4").removeClass("menuclik");
+        //$("#zakas_menu4").removeClass("menuclik");
         $("#zakas_menu5").removeClass("menuclik");
         $("#zakas_menu6").removeClass("menuclik");
         VarFund=2;
@@ -91,7 +90,7 @@ $(document).ready(function() {
     $('#zakas_menu3').click(function () {
         $("#zakas_menu3").addClass("menuclik");
         $("#zakas_menu1").removeClass("menuclik");
-        $("#zakas_menu2").removeClass("menuclik");
+        $("#zakas_menu32").removeClass("menuclik");
         $("#zakas_menu4").removeClass("menuclik");
         $("#zakas_menu5").removeClass("menuclik");
         $("#zakas_menu6").removeClass("menuclik");
@@ -129,7 +128,7 @@ $(document).ready(function() {
     $('#zakas_menu4').click(function () {
         $("#zakas_menu4").addClass("menuclik");
         $("#zakas_menu1").removeClass("menuclik");
-        $("#zakas_menu2").removeClass("menuclik");
+        $("#zakas_menu32").removeClass("menuclik");
         $("#zakas_menu3").removeClass("menuclik");
         $("#zakas_menu5").removeClass("menuclik");
         $("#zakas_menu6").removeClass("menuclik");
@@ -167,7 +166,7 @@ $(document).ready(function() {
     $('#zakas_menu5').click(function () {
         $("#zakas_menu5").addClass("menuclik");
         $("#zakas_menu1").removeClass("menuclik");
-        $("#zakas_menu2").removeClass("menuclik");
+        $("#zakas_menu32").removeClass("menuclik");
         $("#zakas_menu3").removeClass("menuclik");
         $("#zakas_menu4").removeClass("menuclik");
         $("#zakas_menu6").removeClass("menuclik");
@@ -204,7 +203,7 @@ $(document).ready(function() {
     $('#zakas_menu6').click(function () {
         $("#zakas_menu6").addClass("menuclik");
         $("#zakas_menu1").removeClass("menuclik");
-        $("#zakas_menu2").removeClass("menuclik");
+        $("#zakas_menu32").removeClass("menuclik");
         $("#zakas_menu3").removeClass("menuclik");
         $("#zakas_menu4").removeClass("menuclik");
         $("#zakas_menu5").removeClass("menuclik");
@@ -243,9 +242,9 @@ $(document).ready(function() {
 
 
     $('.landf').bind('change keyup',function() {
-            if ((document.getElementById("landf").value > 0) && (document.getElementById("breadthf").value > 0))  {
+        if ((document.getElementById("landf").value > 0) && (document.getElementById("breadthf").value > 0))  {
             var block = $(this).parents('.content');
-                block.find('.basic2').show();
+            block.find('.basic2').show();
 
             //===расчет периметра плиты=====//
             var l1 = document.getElementById('landf').value;
@@ -258,9 +257,9 @@ $(document).ready(function() {
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
 
-                var landlf=(2*l1+2*s1)*0.75;
-                $('#landlf').text(landlf);
-                document.getElementById('landlf').value = landlf;
+            var landlf=(2*l1+2*s1)*0.75;
+            $('#landlf').text(landlf);
+            document.getElementById('landlf').value = landlf;
 
         }
         else{
@@ -271,9 +270,9 @@ $(document).ready(function() {
             $('#perim').text(perim);
             document.getElementById('perimeterlf').value = perim;
 
-                var landlf=0;
-                $('#landlf').text(landlf);
-                document.getElementById('landlf').value = landlf;
+            var landlf=0;
+            $('#landlf').text(landlf);
+            document.getElementById('landlf').value = landlf;
         }
 
         if ((document.getElementById("landlf").value > 0) && (document.getElementById("breadthf").value > 0) && VarMail==2) {
@@ -288,7 +287,7 @@ $(document).ready(function() {
 
         if (((document.getElementById("landlf").value == 0)|| (document.getElementById("breadthf").value == 0)) && (VarMail==2)) {
 
-                var block = $(this).parents('.content');
+            var block = $(this).parents('.content');
             block.find('.Zena_err').show();
             block.find('.zakas_smeta_lenta').hide();
 
@@ -354,7 +353,7 @@ $(document).ready(function() {
         if ((document.getElementById("landf").value > 0) && (document.getElementById("breadthf").value > 0))  {
             var block = $(this).parents('.content');
             block.find('.basic2').show();
-               //===расчет периметра плиты=====//
+            //===расчет периметра плиты=====//
             var l1 = document.getElementById('landf').value;
             var s1 = document.getElementById('breadthf').value;
             $('#l1').text(l1);
@@ -491,6 +490,19 @@ $(document).ready(function() {
         smeta();
     });
 
+    //========== Пересчет сметы при изменение Щебенки ================..//
+
+    $('#shebenl').bind('change keyup',function() {
+        smeta();
+    });
+
+    $('#shebenl').click('change keyup',function() {
+        smeta();
+    });
+
+
+
+
     //========== Пересчет сметы при изменение Растояние от КАД ================..//
 
     $('.distancelplf').bind('change keyup',function() {
@@ -510,10 +522,10 @@ $(document).ready(function() {
 
         var chkBox = document.getElementById('drenagf');
         if (chkBox.checked){
-        var block = $(this).parents('.content');
-        block.find('.param_01l').show();
-    }
-       else
+            var block = $(this).parents('.content');
+            block.find('.param_01l').show();
+        }
+        else
         {
             var block = $(this).parents('.content');
             block.find('.param_01l').hide();
@@ -639,10 +651,10 @@ $(document).ready(function() {
 
 
     $('.landpli').bind('change keyup',function() {
-            if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
+        if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
             var block = $(this).parents('.content');
             block.find('.basic2pl').show();
-             //===расчет периметра плиты=====//
+            //===расчет периметра плиты=====//
             var l1 = document.getElementById('landpli').value;
             var s1 = document.getElementById('breadthpli').value;
             $('#l1').text(l1);
@@ -659,9 +671,9 @@ $(document).ready(function() {
 
         }
         else{
-                var block = $(this).parents('.content');
-                block.find('.basic1pl').show();
-                block.find('.basic2pl').hide();
+            var block = $(this).parents('.content');
+            block.find('.basic1pl').show();
+            block.find('.basic2pl').hide();
             var plpl=0;
             $('#plpl').text(plpl);
             document.getElementById('areapplf').value = plpl;
@@ -732,15 +744,15 @@ $(document).ready(function() {
 
     //========== Отображение границ ширины на картинке при фокусе на блоке Ширина  =======================================//
 
-      $('.breadthpli').bind('change keyup',function() {
-          if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
-              var block = $(this).parents('.content');
-              block.find('.basic2pl').show();
+    $('.breadthpli').bind('change keyup',function() {
+        if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
+            var block = $(this).parents('.content');
+            block.find('.basic2pl').show();
 
-           // if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
-           //  var block = $(this).parents('.content');
-           //  block.find('.basic2pl').show();
-               //===расчет периметра плиты=====//
+            // if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
+            //  var block = $(this).parents('.content');
+            //  block.find('.basic2pl').show();
+            //===расчет периметра плиты=====//
             var l1 = document.getElementById('landpli').value;
             var s1 = document.getElementById('breadthpli').value;
             $('#l1').text(l1);
@@ -765,21 +777,21 @@ $(document).ready(function() {
             $('#perim').text(perim);
             document.getElementById('perimplf').value = perim;
         }
-          if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0) &&VarMail==2) {
-              var block = $(this).parents('.content');
-              block.find('.Zena_err').hide();
-              block.find('.zakas_smeta_plita').show();
-              smeta();
-          }
+        if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0) &&VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plita').show();
+            smeta();
+        }
 
-          if ((document.getElementById("landpli").value == 0)|| (document.getElementById("breadthpli").value == 0) &&VarMail==2) {
-              var block = $(this).parents('.content');
-              block.find('.Zena_err').show();
-              block.find('.zakas_smeta_plita').hide();
-          }
+        if ((document.getElementById("landpli").value == 0)|| (document.getElementById("breadthpli").value == 0) &&VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plita').hide();
+        }
     });
 
-      $('.breadthpli').click(function() {
+    $('.breadthpli').click(function() {
         if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0))  {
             var block = $(this).parents('.content');
             block.find('.basic2pl').show();
@@ -808,18 +820,18 @@ $(document).ready(function() {
             $('#perim').text(perim);
             document.getElementById('perimplf').value = perim;
         }
-          if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0) &&VarMail==2) {
-              var block = $(this).parents('.content');
-              block.find('.Zena_err').hide();
-              block.find('.zakas_smeta_plita').show();
-              smeta();
-          }
+        if ((document.getElementById("landpli").value > 0) && (document.getElementById("breadthpli").value > 0) &&VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').hide();
+            block.find('.zakas_smeta_plita').show();
+            smeta();
+        }
 
-          if ((document.getElementById("landpli").value == 0)|| (document.getElementById("breadthpli").value == 0) &&VarMail==2) {
-              var block = $(this).parents('.content');
-              block.find('.Zena_err').show();
-              block.find('.zakas_smeta_plita').hide();
-          }
+        if ((document.getElementById("landpli").value == 0)|| (document.getElementById("breadthpli").value == 0) &&VarMail==2) {
+            var block = $(this).parents('.content');
+            block.find('.Zena_err').show();
+            block.find('.zakas_smeta_plita').hide();
+        }
     });
 
     //========== Пересчет сметы при изменение Высота плиты ================..//
@@ -923,7 +935,7 @@ $(document).ready(function() {
 
     //========== Отображение Гидроизоляции на картинке при клике  на блоке Гидроизоляция  =======================================//
 
-      $('.gidropl').click(function () {
+    $('.gidropl').click(function () {
 
         var chkBox = document.getElementById('gidropl');
         if (chkBox.checked){
@@ -935,7 +947,7 @@ $(document).ready(function() {
             var block = $(this).parents('.content');
             block.find('.param_03pl').hide();
         }
-          smeta();
+        smeta();
     });
 
     //========== Отображение утепление на картинке при клике  на блоке утепление  =======================================//
@@ -2314,13 +2326,13 @@ $(document).ready(function() {
         var chkBox = document.getElementById('otmosuhp');
         if (chkBox.checked){
             var block = $(this).parents('.content');
-            block.find('.param_03uhp').show();
+            // block.find('.param_03uhp').show();
             block.find('.param_04uhp').show();
         }
         else
         {
             var block = $(this).parents('.content');
-            block.find('.param_03uhp').hide();
+            // block.find('.param_03uhp').hide();
             block.find('.param_04uhp').hide();
         }
     });
@@ -2705,7 +2717,7 @@ $(document).ready(function() {
         }
     });
 
-    /========== Отображение Гидроизоляции на картинке при клике  на блоке Гидроизоляция  =======================================//
+    //========== Отображение Гидроизоляции на картинке при клике  на блоке Гидроизоляция  =======================================//
 
     $('.utepzokzok').click(function () {
 
@@ -2721,7 +2733,7 @@ $(document).ready(function() {
         }
     });
 
-    /========== Отображение Отмостки на картинке при клике  на блоке Отмостки  =======================================//
+    //========== Отображение Отмостки на картинке при клике  на блоке Отмостки  =======================================//
 
     $('.otmoszok').click(function () {
 
@@ -2824,7 +2836,7 @@ $(document).ready(function() {
 
     });
 
-    $('#zakas_menu2').click(function () {
+    $('#zakas_menu32').click(function () {
         VarFund=2;
         var block = $(this).parents('.content');
         block.find('.zakas_smeta_lenta').hide();
@@ -2851,7 +2863,7 @@ $(document).ready(function() {
 
         }
 
-       });
+    });
 
     $('#zakas_menu3').click(function () {
         VarFund=3;
@@ -2967,83 +2979,28 @@ $(document).ready(function() {
 
 
 
-
-    // $('#sm2').click(function () {
-    //
-    //     if (VarFund==1) {
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_lenta').show();
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //
-    //     }
-    //
-    //
-    //     if (VarFund==2){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').show();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //
-    //     }
-    //
-    //     if (VarFund==3){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').show();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //     }
-    //
-    //     if (VarFund==4){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').show();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //
-    //     }
-    //
-    //     if (VarFund==5){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').show();
-    //         block.find('.zakas_smeta_plitazok').hide();
-    //
-    //     }
-    //
-    //     if (VarFund==6){
-    //         var block = $(this).parents('.content');
-    //         block.find('.zakas_smeta_plita').hide();
-    //         block.find('.zakas_smeta_lenta').hide();
-    //         block.find('.zakas_smeta_plitanr').hide();
-    //         block.find('.zakas_smeta_plitavr').hide();
-    //         block.find('.zakas_smeta_plitauhp').hide();
-    //         block.find('.zakas_smeta_plitazok').show();
-    //
-    //     }
-    //
-    //     block.find('.zena').show();
-    //
-    //     smeta();
-    //
-    //
-    // });
-
     $('#test').click(function () {
+
+        if (VarSM==1) {
+            smeta();
+            var block = $(this).parents('.content');
+            block.find('.zakas_smeta_lenta').hide();
+            block.find('.zakas_smeta_plita').hide();
+            block.find('.zakas_smeta_plitanr').hide();
+            block.find('.zakas_smeta_plitavr').hide();
+            block.find('.zakas_smeta_plitauhp').hide();
+            block.find('.zakas_smeta_plitazok').hide();
+            document.getElementById('zena_mail').value = zena_mail;
+            // alert(zena_mail);
+
+        }
+
+
+
+        var block = $(this).parents('.content');
+        block.find('.zakas_form1_title').hide();
+
+        VarSM=2;
         VarMail=2;
 
         if (VarFund==1) {
@@ -3147,7 +3104,7 @@ function smeta() {
         breadthlfsm = +breadthlfsm;
         $('#breadthlfsm').text(breadthlfsm);
 
-        var hsheblpsm = 0.2;
+        var hsheblpsm =  document.getElementById('shebenl').value;;
         hsheblpsm = +hsheblpsm;
         $('#hsheblpsm').text(hsheblpsm);
 
@@ -3460,11 +3417,11 @@ function smeta() {
 
         // Доставка остальных материалов
         if (lkadplsm <= 30) {
-          var  larmDostavMatersm = 4200;
+            var  larmDostavMatersm = 4200;
         }
         if (lkadplsm > 30) {
             larmDostavMatersm = (lkadplsm - 30) * 35 + 4200;
-           // alert(larmDostavMatersm);
+            // alert(larmDostavMatersm);
         }
         larmDostavMatersm = Math.round(larmDostavMatersm);
         $('#larmDostavMatersm').text(larmDostavMatersm);
@@ -3525,7 +3482,7 @@ function smeta() {
         }
 
         // ====================Разводка канализации под домом============
-        var kzakladkanalsm = 5;
+        var kzakladkanalsm = 15;
         kzakladkanalsm = Math.round(kzakladkanalsm);
         $('#kzakladkanalsm').text(kzakladkanalsm);
 
@@ -3696,6 +3653,11 @@ function smeta() {
         zena_smetu = zitogSMpl;
         zena_smetu = Math.round(zena_smetu);
         $('#zena_smetu').text(zena_smetu);
+        zena_mail=zitogSMpl;
+        zena_mail = Math.round(zena_mail);
+        $('#zena_mail').text(zena_mail);
+        // alert(zena_mail);
+
 
         //==== itog 1 etap======
 
@@ -3720,13 +3682,6 @@ function smeta() {
         $('#zitog3etapsm').text(zitog3etapsm);
 
     }
-
-
-
-
-
-
-
 
 
     //========== РАСЧЕТ ПАРАМЕТРОМ СМЕТЫ ДЛЯ ПЛИТЫ  =================//
@@ -4114,7 +4069,7 @@ function smeta() {
         zkzakladkanal = Math.round(zkzakladkanal);
         $('#zkzakladkanal').text(zkzakladkanal);
 
-    //<input type="checkbox" class="kanalpl" id="kanalpl">
+        //<input type="checkbox" class="kanalpl" id="kanalpl">
         if ($("#kanal_pl input:checkbox:checked").length == 0){
             zkzakladkanal=0;
         }
@@ -4164,7 +4119,7 @@ function smeta() {
 
 
         if ($("#arenda_pl input:checkbox:checked").length == 0){
-           // alert(0);
+            // alert(0);
             zkvagon=0;
 
         }
@@ -4239,6 +4194,9 @@ function smeta() {
         var zena_smetu = zitogSM;
         zena_smetu = Math.round(zena_smetu);
         $('#zena_smetu').text(zena_smetu);
+        zena_mail=zitogSM;
+        zena_mail = Math.round(zena_mail);
+        $('#zena_mail').text(zena_mail);
 
 
         // ИТОГО ПО СМЕТЕ 1 etap:
@@ -4888,7 +4846,7 @@ function smeta() {
         kzbetnr = Math.round( kzbetnr);
         $('#kzbetnr').text( kzbetnr);
 
-        var zbetonnr =kzbetnr;
+        var zbetonnr =2*kzbetnr;
         zbetonnr = Math.round(zbetonnr);
         $('#zbetonnr').text(zbetonnr);
 
@@ -4955,6 +4913,9 @@ function smeta() {
         // zitogM1
         zitogSMnr = Math.round(zitogSMnr);
         $('#zitogSMnr').text(zitogSMnr);
+        zena_mail=zitogSMnr;
+        zena_mail = Math.round(zena_mail);
+        $('#zena_smetu').text(zena_mail);
 
 
         if ($("#elektro_plnr input:checkbox:checked").length > 0){
@@ -4975,6 +4936,10 @@ function smeta() {
         zena_smetu = zitogSMnr;
         zena_smetu = Math.round(zena_smetu);
         $('#zena_smetu').text(zena_smetu);
+
+        zena_mail=zitogSMnr;
+        zena_mail = Math.round(zena_mail);
+        $('#zena_mail').text(zena_mail);
 
         //==== itog 1 etap======
 
@@ -5626,7 +5591,7 @@ function smeta() {
         kzbetvr = Math.round( kzbetvr);
         $('#kzbetvr').text( kzbetvr);
 
-        var zbetonvr =kzbetvr;
+        var zbetonvr =2*kzbetvr;
         zbetonvr = Math.round(zbetonvr);
         $('#zbetonvr').text(zbetonvr);
 
@@ -5692,6 +5657,10 @@ function smeta() {
         zitogSMvr = Math.round(zitogSMvr);
         $('#zitogSMvr').text(zitogSMvr);
 
+        // zena_smetu = zitogSMvr;
+        // zena_smetu = Math.round(zena_smetu);
+        // $('#zena_smetu').text(zena_smetu);
+
 
         if ($("#elektro_plvr input:checkbox:checked").length > 0){
 
@@ -5707,12 +5676,14 @@ function smeta() {
 
 
         }
-
-
-
         zena_smetu = zitogSMvr;
         zena_smetu = Math.round(zena_smetu);
         $('#zena_smetu').text(zena_smetu);
+
+
+        zena_mail = zitogSMvr;
+        zena_mail = Math.round(zena_mail);
+        $('#zena_mail').text(zena_mail);
 
         //==== itog 1 etap======
 
@@ -6448,6 +6419,10 @@ function smeta() {
         var zena_smetu = zitosmetauhp;
         zena_smetu = Math.round(zena_smetu);
         $('#zena_smetu').text(zena_smetu);
+
+        zena_mail = zitosmetauhp;
+        zena_mail = Math.round(zena_mail);
+        $('#zena_mail').text(zena_mail);
 
 
         // =====1 этап: Материалы на устройство фундамента,
@@ -7273,6 +7248,10 @@ function smeta() {
         zena_smetu = zitogSMzok;
         zena_smetu = Math.round(zena_smetu);
         $('#zena_smetu').text(zena_smetu);
+
+        zena_mail = zitogSMzok;
+        zena_mail = Math.round(zena_mail);
+        $('#zena_mail').text(zena_mail);
 
         //==== itog 1 etap======
         //<span id="zkarmat64zok">104086</span>

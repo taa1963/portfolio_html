@@ -275,7 +275,7 @@ $( document ).ready(function() {
 
 
 
-            sendAjaxForm('result_form', 'form1', '../send.php');
+            sendAjaxForm('result_form', 'form1', 'send.php');
             return false;
         }
     );

@@ -13,6 +13,12 @@
 .col-lg-3 {
     float: left;
 }
+body{
+    /*background: #c0c0c0 url(../img/main-bg.jpg) center 0 no-repeat;*/
+    /*background-color: #cccccc;*/
+    /*bgcolor:#c0c0c0;*/
+    background-color: #cccccc;
+}
 
 
 /*Описание header и его компонентов */
@@ -28,6 +34,10 @@
     display: block;
     width: 100%;
     background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+    /*background-color: #cccccc;*/
+    /*bgcolor:#c0c0c0;*/
+    /*background: #c0c0c0;*/
+
 
 }
 
@@ -1360,11 +1370,11 @@
 
 
 .param_mail2{
-    display: block;
+    display: none;
 }
 
 #param_mail2{
-    display:block;
+    display:none;
 }
 
 #form1{
@@ -1444,13 +1454,20 @@
 
 #test{
     display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: 40px;
-    color: #FFFFFF;
-    font-weight: bold;
+    width: 210px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 0.35px;
+    font-family: 'Museo Sans Cyrl 700';
+    border: 1px solid #81aec7;
     text-align: center;
-    background-color: #2e6da4;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #066192;
 }
 
 

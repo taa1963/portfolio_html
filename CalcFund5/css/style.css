@@ -33,7 +33,7 @@ body{
 .calc_my{
     display: block;
     width: 100%;
-    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+    /*background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;*/
     /*background-color: #cccccc;*/
     /*bgcolor:#c0c0c0;*/
     /*background: #c0c0c0;*/
@@ -1477,7 +1477,7 @@ body{
     display: none;
     width: 90%;
     margin-top: 50px;
-    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+    /*background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;*/
 }
 
 .zakas_smeta_plita .table img{
@@ -1520,7 +1520,7 @@ body{
     display: none;
     width: 90%;
     margin-top: 50px;
-    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+    /*background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;*/
 }
 
 
@@ -1558,7 +1558,7 @@ body{
     display: none;
     width: 90%;
     margin-top: 50px;
-    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+    /*background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;*/
 }
 
 .zakas_smeta_plitanr h1{
@@ -1587,7 +1587,7 @@ body{
     display: none;
     width: 90%;
     margin-top: 50px;
-    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+    /*background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;*/
 }
 
 .zakas_smeta_plitavr h1{
@@ -1615,7 +1615,7 @@ body{
     display: none;
     width: 90%;
     margin-top: 50px;
-    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+    /*background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;*/
 }
 
 .zakas_smeta_plitauhp h1{
@@ -1645,7 +1645,7 @@ body{
     display: none;
     width: 90%;
     margin-top: 50px;
-    background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;
+    /*background: #fcfcfc url(../img/main-bg.jpg) center 0 no-repeat;*/
 
 }
 

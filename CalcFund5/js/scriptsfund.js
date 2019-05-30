@@ -1,4 +1,4 @@
-var  VarFund,zemv,zenzemv,zena_smetu, VarMail, VarSM, zena_mail;
+var  VarFund,zemv,zenzemv,zena_smetu, VarMail, VarSM, zena_mail, ZenaBeton, ZenaDoska, ZenaArmatur;
 
 VarFund=1;
 zemv=0;
@@ -7,6 +7,12 @@ zena_smetu=0;
 zena_mail=0;
 VarMail=0;
 VarSM=1;
+//========== ЦЕНА БЕТОНА  =================//
+ZenaBeton=4100;
+//========== ЦЕНА Доски  =================//
+ZenaDoska=12500;
+//========== ЦЕНА АРМАТУРЫ  =================//
+ZenaArmatur=41000;
 
 $(document).ready(function() {
 
@@ -3294,7 +3300,7 @@ function smeta() {
 
         kdoska40r =  kdoska40.toFixed(1);
         $('#kdoska40r').text(kdoska40r);
-        var zkdoska40 = kdoska40 *12500;
+        var zkdoska40 = kdoska40 *ZenaDoska;
         zkdoska40 = Math.round(zkdoska40);
         $('#zkdoska40').text(zkdoska40);
 
@@ -3331,7 +3337,7 @@ function smeta() {
         // alert(karmrfrk38);
         var karm12r =  karm12.toFixed(2);
         $('#karm12r').text(karm12r);
-        var zkarm12 = karm12 *41000;
+        var zkarm12 = karm12 *ZenaArmatur;
         zkarm12 = Math.round(zkarm12);
         $('#zkarm12').text(zkarm12);
 
@@ -3340,7 +3346,7 @@ function smeta() {
         //alert(karmrfrk39);
         var karm8r =  karm8.toFixed(2);
         $('#karm8r').text(karm8r);
-        var zkarm8 = karm8 *41000;
+        var zkarm8 = karm8 *ZenaArmatur;
         zkarm8 = Math.round(zkarm8);
         $('#zkarm8').text(zkarm8);
 
@@ -3364,10 +3370,10 @@ function smeta() {
         $('#kbetonb22r').text(kbetonb22r);
 
         if (lkadplsm <= 30) {
-            lbeton22 = 4100;
+            lbeton22 = ZenaBeton;
         }
         if (lkadplsm > 30) {
-            lbeton22 = (lkadplsm - 30) * 15 + 4100;
+            lbeton22 = (lkadplsm - 30) * 15 + ZenaBeton;
         }
         var lbeton22 =  Math.round(lbeton22);
         $('#lbeton22').text(lbeton22);
@@ -3895,8 +3901,8 @@ function smeta() {
         sdosk = Math.ceil(sdosk) / 100;
         // sgidrod=Math.ceil(sshebd)*10;
         $('#sdosk').text(sdosk);
-        var zsdosk = sdosk * 12500;
-        zsdosk = zsdosk - 12500 * 0.00296;
+        var zsdosk = sdosk * ZenaDoska;
+        zsdosk = zsdosk - ZenaDoska * 0.00296;
         zsdosk = Math.round(zsdosk);
         $('#zsdosk').text(zsdosk);
 
@@ -3914,7 +3920,7 @@ function smeta() {
         sarmatd12 = sarmatd12.toFixed(2);
 
         $('#sarmatd12').text(sarmatd12);
-        var zsarmatd12 = varm1 * 41000;
+        var zsarmatd12 = varm1 * ZenaArmatur;
         zsarmatd12 = Math.round(zsarmatd12);
         $('#zsarmatd12').text(zsarmatd12);
 
@@ -3923,7 +3929,7 @@ function smeta() {
         sarmatd8 = sarmatd8.toFixed(2);
 
         $('#sarmatd8').text(sarmatd8);
-        var zsarmatd8 = varm2 * 41000;
+        var zsarmatd8 = varm2 * ZenaArmatur;
         zsarmatd8 = Math.round(zsarmatd8);
         $('#zsarmatd8').text(zsarmatd8);
 
@@ -3943,10 +3949,10 @@ function smeta() {
         var ubetm300 = ubet;
         $('#ubetm300').text(ubetm300);
         if (lkad <= 30) {
-            lkadr = 4100;
+            lkadr = ZenaBeton;
         }
         if (lkad > 30) {
-            lkadr = (lkad - 30) * 15 + 4100;
+            lkadr = (lkad - 30) * 15 + ZenaBeton;
         }
         lkadr = Math.round(lkadr);
         $('#lkadr').text(lkadr);
@@ -4533,7 +4539,7 @@ function smeta() {
         // alert(karmrfrk38);
         var karm12nrr =  karm12nr.toFixed(2);
         $('#karm12nrr').text(karm12nrr);
-        var zkarm12nr = karm12nr *41000;
+        var zkarm12nr = karm12nr *ZenaArmatur;
         zkarm12nr = Math.round(zkarm12nr);
         $('#zkarm12nr').text(zkarm12nr);
 
@@ -4542,7 +4548,7 @@ function smeta() {
         //alert(karmrfrk39);
         var karm8nrr =  karm8nr.toFixed(2);
         $('#karm8nrr').text(karm8nrr);
-        var zkarm8nr = karm8nr *41000;
+        var zkarm8nr = karm8nr *ZenaArmatur;
         zkarm8nr = Math.round(zkarm8nr);
         $('#zkarm8nr').text(zkarm8nr);
 
@@ -4566,10 +4572,10 @@ function smeta() {
         $('#kbetonb22nr').text(kbetonb22nr);
         //<span id="lkadnr">25</span>
         if (lkadnr <= 30) {
-            var lbeton22nr = 4100;
+            var lbeton22nr = ZenaBeton;
         }
         if (lkadnr > 30) {
-            lbeton22nr = (lkadnr - 30) * 15 + 4100;
+            lbeton22nr = (lkadnr - 30) * 15 + ZenaBeton;
         }
         lbeton22nr =  Math.round(lbeton22nr);
         $('#lbeton22nr').text(lbeton22nr);
@@ -4626,7 +4632,7 @@ function smeta() {
         kdoska40nr =  kdoska40nr.toFixed(2);
         $('#kdoska40nr').text(kdoska40nr);
 
-        var zkdoska40nr = kdoska40nr *12500;
+        var zkdoska40nr = kdoska40nr *ZenaDoska;
         zkdoska40nr = Math.round(zkdoska40nr);
         $('#zkdoska40nr').text(zkdoska40nr);
 
@@ -4635,7 +4641,7 @@ function smeta() {
         var karmnr51nrsm=  karmnr51nr.toFixed(2);
         $('#karmnr51nrsm').text(karmnr51nrsm);
 
-        var zkarmnr51nr = karmnr51nr *41000;
+        var zkarmnr51nr = karmnr51nr *ZenaArmatur;
         zkarmnr51nr = Math.round(zkarmnr51nr);
         $('#zkarmnr51nr').text(zkarmnr51nr);
 
@@ -4645,7 +4651,7 @@ function smeta() {
         var karmnr52nrsm=  karmnr52nr.toFixed(2);
         $('#karmnr52nrsm').text(karmnr52nrsm);
 
-        var zkarmnr52nr = karmnr52nr *41000;
+        var zkarmnr52nr = karmnr52nr *ZenaArmatur;
         zkarmnr52nr = Math.round(zkarmnr52nr);
         $('#zkarmnr52nr').text(zkarmnr52nr);
 
@@ -5281,7 +5287,7 @@ function smeta() {
         // alert(karmrfrk38);
         var karm12vrr =  karm12vr.toFixed(2);
         $('#karm12vrr').text(karm12vrr);
-        var zkarm12vr = karm12vr *41000;
+        var zkarm12vr = karm12vr *ZenaArmatur;
         zkarm12vr = Math.round(zkarm12vr);
         $('#zkarm12vr').text(zkarm12vr);
 
@@ -5290,7 +5296,7 @@ function smeta() {
         //alert(karmrfrk39);
         var karm8vrr =  karm8vr.toFixed(2);
         $('#karm8vrr').text(karm8vrr);
-        var zkarm8vr = karm8vr *41000;
+        var zkarm8vr = karm8vr *ZenaArmatur;
         zkarm8vr = Math.round(zkarm8vr);
         $('#zkarm8vr').text(zkarm8vr);
 
@@ -5314,10 +5320,10 @@ function smeta() {
         $('#kbetonb22vr').text(kbetonb22vr);
         //<span id="lkadnr">25</span>
         if (lkadvr <= 30) {
-            var lbeton22vr = 4100;
+            var lbeton22vr = ZenaBeton;
         }
         if (lkadvr > 30) {
-            lbeton22vr = (lkadvr - 30) * 15 + 4100;
+            lbeton22vr = (lkadvr - 30) * 15 + ZenaBeton;
         }
         lbeton22vr =  Math.round(lbeton22vr);
         $('#lbeton22vr').text(lbeton22vr);
@@ -5374,7 +5380,7 @@ function smeta() {
         kdoska40vr =  kdoska40vr.toFixed(2);
         $('#kdoska40vr').text(kdoska40vr);
 
-        var zkdoska40vr = kdoska40vr *12500;
+        var zkdoska40vr = kdoska40vr *ZenaDoska;
         zkdoska40vr = Math.round(zkdoska40vr);
         $('#zkdoska40vr').text(zkdoska40vr);
 
@@ -5383,7 +5389,7 @@ function smeta() {
         var karmnr51vrsm=  karmnr51vr.toFixed(2);
         $('#karmnr51vrsm').text(karmnr51vrsm);
 
-        var zkarmnr51vr = karmnr51vr *41000;
+        var zkarmnr51vr = karmnr51vr *ZenaArmatur;
         zkarmnr51vr = Math.round(zkarmnr51vr);
         $('#zkarmnr51vr').text(zkarmnr51vr);
 
@@ -5393,7 +5399,7 @@ function smeta() {
         var karmnr52vrsm=  karmnr52vr.toFixed(2);
         $('#karmnr52vrsm').text(karmnr52vrsm);
 
-        var zkarmnr52vr = karmnr52vr *41000;
+        var zkarmnr52vr = karmnr52vr *ZenaArmatur;
         zkarmnr52vr = Math.round(zkarmnr52vr);
         $('#zkarmnr52vr').text(zkarmnr52vr);
 
@@ -6100,7 +6106,7 @@ function smeta() {
         //var kpeno100 = Math.ceil(kpeno100);
         kdoskar = kdoskar.toFixed(1);
         $('#kdoskar').text(kdoskar);
-        var zkdoska = kdoska * 12500;
+        var zkdoska = kdoska * ZenaDoska;
         zkdoska = Math.round(zkdoska);
         $('#zkdoska').text(zkdoska);
 
@@ -6162,7 +6168,7 @@ function smeta() {
         karmd12r = karmd12r.toFixed(2);
         $('#karmd12r').text(karmd12r);
 
-        var zkarmd12 = karmd12 * 41000;
+        var zkarmd12 = karmd12 * ZenaArmatur;
         zkarmd12 = Math.round(zkarmd12);
         $('#zkarmd12').text(zkarmd12);
 
@@ -6172,7 +6178,7 @@ function smeta() {
         //var kpeno100 = Math.ceil(kpeno100);
         karmd8r = karmd8.toFixed(2);
         $('#karmd8r').text(karmd8r);
-        var zkarmd8 = karmd8 * 41000;
+        var zkarmd8 = karmd8 * ZenaArmatur;
         zkarmd8 = Math.round(zkarmd8);
         $('#zkarmd8').text(zkarmd8);
 
@@ -6193,7 +6199,7 @@ function smeta() {
         var kb22 = (areapluhp * 0.1) + (langrebuhp * hrebuhp * 0.4 * 0.001) * 1.05;
         kb22 = Math.ceil(kb22);
         $('#kb22').text(kb22);
-        var zkb22 = kb22 * 4100;
+        var zkb22 = kb22 * ZenaBeton;
         zkb22 = Math.round(zkb22);
         $('#zkb22').text(zkb22);
 
@@ -6781,7 +6787,7 @@ function smeta() {
 
         kdoska56zok =  kdoska56zok.toFixed(2);
         $('#kdoska56zok').text(kdoska56zok);
-        var zkdoska56zok = kdoska56zok *12500;
+        var zkdoska56zok = kdoska56zok *ZenaDoska;
         zkdoska56zok = Math.round(zkdoska56zok);
         $('#zkdoska56zok').text(zkdoska56zok);
 
@@ -6797,7 +6803,7 @@ function smeta() {
         karmrzok58 =+karmrzok58;
         karmrzok58sm =  karmrzok58.toFixed(2);
         $('#karmrzok58sm').text(karmrzok58sm);
-        var zkarmrzok58 = karmrzok58 *41000;
+        var zkarmrzok58 = karmrzok58 *ZenaArmatur;
         zkarmrzok58 = Math.round(zkarmrzok58);
         $('#zkarmrzok58').text(zkarmrzok58);
 
@@ -6805,7 +6811,7 @@ function smeta() {
         karmrzok59 =+karmrzok59;
         karmrzok59sm =  karmrzok59.toFixed(2);
         $('#karmrzok59sm').text(karmrzok59sm);
-        var zkarmrzok59 = karmrzok59 *41000;
+        var zkarmrzok59 = karmrzok59 *ZenaArmatur;
         zkarmrzok59 = Math.round(zkarmrzok59);
         $('#zkarmrzok59').text(zkarmrzok59);
 
@@ -6824,7 +6830,7 @@ function smeta() {
         //alert(karmrnr26zoksm);
         kbeton61zok =  kbeton61zok.toFixed(2);
         $('#kbeton61zok').text(kbeton61zok);
-        var zkbeton61zok = kbeton61zok *4100;
+        var zkbeton61zok = kbeton61zok *ZenaBeton;
         zkbeton61zok = Math.round(zkbeton61zok);
         $('#zkbeton61zok').text(zkbeton61zok);
 
@@ -6842,7 +6848,7 @@ function smeta() {
         var karmat64zok =(lstenzok*h_etagzok-sproemzok)*21*0.001*1.1;
         var karmat64zoksm =  karmat64zok.toFixed(2);
         $('#karmat64zoksm').text(karmat64zoksm);
-        var zkarmat64zok = karmat64zok *41000;
+        var zkarmat64zok = karmat64zok *ZenaArmatur;
         zkarmat64zok = Math.round(zkarmat64zok);
         $('#zkarmat64zok').text(zkarmat64zok);
 
@@ -6898,7 +6904,7 @@ function smeta() {
         var karmat71zok =splperekzok*21*0.888*0.001*1.1;
         var karmat71zoksm =  karmat71zok.toFixed(2);
         $('#karmat71zoksm').text(karmat71zoksm);
-        var zkarmat71zok = karmat71zok *41000;
+        var zkarmat71zok = karmat71zok *ZenaArmatur;
         zkarmat71zok = Math.round(zkarmat71zok);
         $('#zkarmat71zok').text(zkarmat71zok);
 
@@ -6906,7 +6912,7 @@ function smeta() {
         var karmat72zok =(splperekzok+perimperekzok/2)*0.45*1.2*0.001;
         karmat72zoksm =  karmat72zok.toFixed(2);
         $('#karmat72zoksm').text(karmat72zoksm);
-        var zkarmat72zok = karmat72zok *41000;
+        var zkarmat72zok = karmat72zok *ZenaArmatur;
         zkarmat72zok = Math.round(zkarmat72zok);
         $('#zkarmat72zok').text(zkarmat72zok);
 

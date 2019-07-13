@@ -10,7 +10,8 @@ if (
     $ekranm = substr(htmlspecialchars(trim($_POST['ekranm'])), 0, 100);
     $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 1000000);
     //$to = 'clublaser@mail.ru';
-    $to = $email;
+    $to = $_POST['email'] ; ;
+    // $to = $email;
     //$to = 'alexandr.tupichenkov@yandex.ru';
     //$to = 'info@partwork.ru';
     $title = 'ЧЕТВЕРТОЕ ПОЛЕ';
@@ -24,6 +25,8 @@ if (
         
        ";
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
+    ini_set('display_errors','On');
+    error_reporting('E_ALL');
     if ($verify) {
         echo '<head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 

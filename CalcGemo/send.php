@@ -1,3 +1,4 @@
+<?php header("Content-Type: text/html; charset=utf-8");?>
 <?php
 // если была нажата кнопка "Отправить"
 if (
@@ -171,7 +172,7 @@ if (
         
         
        ";
-    $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
+    $verify = mail($to, $title, $message, "Content-type:text/html; Charset=utf-8\r\n");
     ini_set('display_errors','On');
     error_reporting('E_ALL');
     if ($verify) {

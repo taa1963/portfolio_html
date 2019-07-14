@@ -115,26 +115,49 @@
 
 .calc_block_itog_btn{
     display: block;
-    margin-top: 30px;
+    width: auto;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+.calc_itog_btn{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: max-content;
+    margin: 0 auto;
 }
 
-#calc_detail{
-    display: block;
-    margin: 0 auto;
+#calc_detail_old1{
+     background-color: #048593;
+    padding: 10px 20px;
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+#calc_detail_old2{
     background-color: #048593;
     padding: 10px 20px;
-    /*padding-top: 5px;*/
-    /*padding-bottom: 5px;*/
-    /*padding-left: 10px;*/
-    /*padding-right: 10px;*/
     font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
     color: #fff;
     border-radius: 5px;
 }
 
+
+#calc_detail{
+     background-color: #048593;
+    padding: 10px 20px;
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
 .calc_block_detail{
-    display: none;
+    display: block;
     width: 90%;
+    margin: 0 auto;
 }
 .calc_block_detail p label{
     font-weight: bold;
@@ -198,13 +221,35 @@
     border-radius: 5px;
 }
 
+/*		Описание второго блока вывода итгов калькулятора и его компонент		*/
+.calc_block_itog2{
+    display: none;
+    width: 100%;
+}
+.popup_success{
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 28%;
+    width: 40%;
+    height: 200px;
+    background-color:#ffffff;
+    margin: 0 auto;
+    z-index: 9999999;
+    border: 1px solid  #343434;
+}
 
-/*		Описание шапки блока калькулятора и его компонент		*/
+.popup_success p{
+    display: block;
+    font: 25px "exo_2_regular";
+    font-weight: bold;
+    color: #343434;
+    text-align: center;
+    line-height: 39px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
 
-
-
-
-/*		Описание блока ввода Ваш статус и его компонетнов		*/
 
 
 @media only screen  and (max-width: 990px) {

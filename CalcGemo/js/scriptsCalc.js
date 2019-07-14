@@ -7,14 +7,13 @@ KchoseKadstrV=0;
 
 $(document).ready(function() {
 
+
     $('#calc_next').click(function () {
         var Zr, Zk, Zm, zv;
         Zr = 0;
         Zk = 0;
         Zm = 0;
         zv = 0;
-
-
 
         var elems = document.getElementsByClassName('ekran')
 
@@ -55,6 +54,9 @@ $(document).ready(function() {
             if (str =="ekrank2"){
                 zv2 = +zv2;
                 zv2=zv2*3
+                // alert(str);
+                // alert(zv2);
+
             }
 
             if (str =="ekrank3"){
@@ -134,34 +136,70 @@ $(document).ready(function() {
 
 
     $('#calc_next').click(function () {
-
         var block = $(this).parents('.calculator');
         block.find('.calc_block_param').hide();
+        block.find('.calc_block_itog2').hide();
         block.find('.calc_block_itog').show();
-
-
     });
+
+    $('#calc_detail_old1').click(function () {
+        var block = $(this).parents('.calculator');
+        block.find('.calc_block_param').show();
+        block.find('.calc_block_itog2').hide();
+        block.find('.calc_block_itog').hide();
+    });
+
 
 
     $('#calc_detail').click(function () {
+        var block = $(this).parents('.calculator');
+        block.find('.calc_block_param').hide();
+        block.find('.calc_block_itog2').show();
+        block.find('.calc_block_itog').hide();
+    });
 
-        var block = $(this).parents('.calc_block_itog');
+    $('#calc_detail_old2').click(function () {
+        var block = $(this).parents('.calculator');
+        block.find('.calc_block_param').hide();
+        block.find('.calc_block_itog2').hide();
+        block.find('.calc_block_itog').show();
+    });
 
-        var div = document.getElementById('calc_block_detail');
 
-        if(div.style.display == 'block') {
-            div.style.display = 'none';
+    $('input').keydown(function(e) {
 
+        var divs = document.getElementsByName('dev');
+        if(e.keyCode === 13) {
+            var index = this.getAttribute('data-index');
+            index=+index;
+            index=index+1;
+            if (index==12){
+                index=11;
+            }
+            divs[index].focus();
+
+         }
+
+
+        var handler = function() {
+            // var index = this.dataset.index;
+            var index = this.getAttribute('data-index');
+            //alert(index);
         }
-        else {
-            div.style.display = 'block';
-
+        for (var i = 0; i < divs.length; i++) {
+            // divs[i].dataset.index = i;
+            divs[i].setAttribute('data-index', i);
+            divs[i] = handler;
         }
+    });
 
-        //block.find('.calc_block_detail').show();
 
+    $('input').keypress(function(e) {
+        if (( e.which==8 ||e.which==44 ||e.which==45 ||e.which==46 )) return false;
 
     });
+
+
 
 
 });

@@ -1,4 +1,4 @@
-<?php header("Content-Type: text/html; charset=utf-8");?>
+
 <?php
 // если была нажата кнопка "Отправить"
 if (

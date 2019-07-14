@@ -172,12 +172,12 @@ if (
         
         
        ";
-    $verify = mail($to, $title, $message, "Content-type:html/text; Charset=utf-8\r\n");
+    $verify = mail($to, $title, $message, "Content-type:html//plain; Charset=utf-8\r\n");
     ini_set('display_errors','On');
     error_reporting('E_ALL');
     if ($verify) {
 
-        header('Location: https://aleksandr.tupichenkov.com/CalcGemo/#success', true, 302);
+        header('Location: https://aleksandr.tupichenkov.com/CalcGemo/#popup_success', true, 302);
         exit;
     } else {
         header('Location: https://aleksandr.tupichenkov.com/CalcGemo/?form_error=1', true, 302);

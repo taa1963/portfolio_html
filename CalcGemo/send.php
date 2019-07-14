@@ -17,14 +17,8 @@ if (
     //$to = 'info@partwork.ru';
     $title = 'ЧЕТВЕРТОЕ ПОЛЕ';
     $message = "
-        <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
-       <html xmlns=\"http://www.w3.org/1999/xhtml\">
-    <head>
-    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />
-     <title>ЧЕТВЕРТОЕ ПОЛЕ <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-     
-      <body style=\"margin: 0; padding: 0;\">
-        <h1> Добрый день! </h1>
+       
+        <h1 style='text-align: center'> Добрый день! </h1>
         <p style='text-align: left'>Опаснее всего для здоровья человека излучение от мобильного телефона, так как он находится в постоянной близости к телу. Поэтому, 
         в первую очередь рекомендуется приобрести защиту на телефон \"Экран\".</p>
         <p style='text-align: left'> При наличии роутера в квартире используйте защиту на роутер \"Экран-М\" - 1 шт.</p>
@@ -164,10 +158,7 @@ if (
         
         <p style='text-align: left'>Защитные устройства можно приобрести в интернет-магазине на сайте 4pole.ru.</p>
         
-        
-     </body>
-   </head>
- </html>
+   
     
         
         

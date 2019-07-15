@@ -173,7 +173,7 @@ if (
         header('Location: https://aleksandr.tupichenkov.com/CalcGemo/#popup_success', true, 302);
         exit;
     } else {
-        header('Location: https://aleksandr.tupichenkov.com/CalcGemo/?form_error=1', true, 302);
+        header('Location: https://aleksandr.tupichenkov.com/CalcGemo/#popup_success', true, 302);
         exit;
     }
 }

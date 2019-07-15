@@ -140,6 +140,14 @@ $(document).ready(function() {
         block.find('.calc_block_param').hide();
         block.find('.calc_block_itog2').hide();
         block.find('.calc_block_itog').show();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+       // $('#calc_l2f').focus();
+       // scrollTop: $("#calc_block_itog").offset().top;
+        // $("html, body").animate({ scrollTop: 0 }, "slow");
+        // return false;
+
+        //$('#calc_block_itog').scrollTop(0);
     });
 
     $('#calc_detail_old1').click(function () {
@@ -147,6 +155,9 @@ $(document).ready(function() {
         block.find('.calc_block_param').show();
         block.find('.calc_block_itog2').hide();
         block.find('.calc_block_itog').hide();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+        //scrollTop: $("#calc_block_param").offset().top;
     });
 
 
@@ -156,6 +167,9 @@ $(document).ready(function() {
         block.find('.calc_block_param').hide();
         block.find('.calc_block_itog2').show();
         block.find('.calc_block_itog').hide();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+        //scrollTop: $("#calc_block_itog2").offset().top;
     });
 
     $('#calc_detail_old2').click(function () {
@@ -163,6 +177,10 @@ $(document).ready(function() {
         block.find('.calc_block_param').hide();
         block.find('.calc_block_itog2').hide();
         block.find('.calc_block_itog').show();
+        //scrollTop: $("#calc_block_itog").offset().top;
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+
     });
 
 
@@ -199,7 +217,9 @@ $(document).ready(function() {
 
     });
 
-
+    $('.calc_block_param input').on('input change paste', function() {
+        $(this).val(this.value.replace(/[^0-9\-]/, '')); // запрещаем ввод любых символов, кроме цифр и знака минуса
+    });
 
 
 });

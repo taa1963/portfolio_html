@@ -112,6 +112,10 @@
     padding-top: 30px;
 }
 
+#calc_l2{
+    display: block;
+    visibility: collapse;
+}
 
 .calc_block_itog_btn{
     display: block;
@@ -250,13 +254,33 @@
     padding-top: 10px;
 }
 
+@media only screen  and (max-width: 1024px) {
+    .content{
+        display: block;
+        width: 100%;
+        float: left;
+        position: relative;
 
+    }
+
+    .sidebar{
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+        float: right;
+    }
+    .sidebar ul{
+        list-style: none;
+    }
+
+
+
+}
 
 @media only screen  and (max-width: 990px) {
 
-    .area{
-        width: 48%;
-    }
+
 
 
 }

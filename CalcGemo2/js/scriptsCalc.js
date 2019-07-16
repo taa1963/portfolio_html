@@ -57,7 +57,6 @@ $(document).ready(function() {
                 zv2=zv2*4;
             }
 
-
         zv2 = +zv2;
              Zk = Zk + zv2;
 

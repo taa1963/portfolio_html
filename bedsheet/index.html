@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Расчет цены простыни и пододеяльника</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Расчет цены простыни и пододеяльника">
+    <link href="cssnew/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cssnew/bootstrap-reboot.min.css">
+    <link href="cssnew/style.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+
+
+
+<!--<данный блок нужно интегрировать в ваш сайт-->
+
+   <div class="myblock">
+
+       <div class="row">
+           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+               <section class="calcm" id="calcm">
+                   <div class="calc_pr">
+                       <div class="calc_head">
+                           <h1>1) ПРОСТЫНЬ</h1>
+                       </div>
+
+                       <div class="calc_block">
+                           <h2>Выберите размеры простыни</h2>
+                           <div class="land_pr_block">
+                               <p class="param_title">Ширина от 147 до 307 (см) </p>
+                               <input type="number" class="area" id="breadth_pr"   value="130" min="147" max="307" />
+
+                           </div>
+                           <div class="land_pr_block">
+                               <p class="param_title">Длинна от 200 до 350 (см) </p>
+                               <input type="number" class="area" id="land_pr"   value="130" min="147" max="307" />
+
+                           </div>
+
+                       </div>
+                   </div>
+                   <div class="calc_line"></div>
+
+                   <div class="calc_pr">
+                       <div class="calc_head">
+                           <h1>2) ПОДОДЕЯЛЬНИК</h1>
+                       </div>
+
+                       <div class="calc_block">
+                           <h2>Выберите размеры пододеяльника</h2>
+                           <div class="land_pr_block">
+                               <p class="param_title">Ширина от 147 до 307 (см) </p>
+                               <input type="number" class="area" id="breadth_pd"   value="130" min="147" max="307" />
+
+                           </div>
+                           <div class="land_pr_block">
+                               <p class="param_title">Длинна от 200 до 350 (см) </p>
+                               <input type="number" class="area" id="land_pd"  value="130" min="147" max="307" />
+                           </div>
+                       </div>
+
+
+                   </div>
+
+                   <div class="calc_line"></div>
+
+                   <div class="calc_zena_block">
+                       <div class="calc_zena">
+                           <h1>3) СТОИМОСТЬ</h1>
+                       </div>
+
+                       <div class="calc_block_zena">
+                               <p class="zena_title">Цена </p>
+                                <span class="zena_itog" id="Zena">  </span>
+                       </div>
+                   </div>
+              </section>
+           </div>
+       </div>
+   </div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scriptsCalc.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+/*Сбрасываем отступы в 0, чтобы сайт не вылезал за пределы экрана  */
+.col-md-12{
+    padding-left: 0;
+    padding-right: 0;
+}
+.row{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.body{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+/*Описание шапки и ее  компонентов  */
+
+
+.header{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.header_text{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.header_text h1{
+    font-family: 'Georgia';
+    font-size: 9vw;
+    font-weight: bold;
+    color: #000000;
+    text-transform: none;
+    text-align: center;
+    padding-top: 0.1em;
+
+}
+
+.header_text h1 span{
+    margin-right: -0.3em;
+   }
+
+#spright{
+    margin-left: -0.4em;
+}
+
+
+#spimg{
+    height: 15vw;
+    width: 15vw;
+    margin-top: -20px;
+}
+
+
+/*Описание контента и его компонентов  */
+.content {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background: url("../img/foncontent.jpg") 0 0 no-repeat;
+    background-size: cover;
+    padding-bottom: 10%;
+}
+
+
+
+
+/*Описание контейнера и его компонентов  */
+.container {
+    position: relative;
+    word-wrap: break-word;
+    height: auto;
+    margin: 0 auto;
+ }
+
+.container{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slider_contact{
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    padding-top: 30px;
+}
+
+
+
+
+
+#fancyimage2{
+    display: none;
+    visibility: hidden;
+}
+
+#fancyimage3{
+    display: none;
+    visibility: hidden;
+}
+
+.content_fon2{
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    margin-top: -15%;
+
+}
+
+.content_fon2 img{
+    display: block;
+    width: 100%;
+}
+
+.content_text{
+    display: block;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: -20%;
+    z-index: 300;
+}
+.content_text p{
+    font-family: 'Georgia';
+    font-size: 1.2vw;
+    font-weight: 300;
+    color: #000000;
+    text-transform: none;
+    text-align: center;
+    margin-top: -20em
+
+}
+
+
+
+/*Описание подвала и его компонентов */
+.futer{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background: url("../img/fontarif.jpg") 0 0 no-repeat;
+    background-size: cover;
+    padding-bottom: 7%;
+
+}
+
+.futer_adres{
+    display: block;
+    width: 100%;
+}
+
+.futer_adres p{
+    font-family: 'Georgia';
+    font-size: 2vw;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-transform: none;
+    padding-top: 1em;
+    padding-left: 1em;
+
+}
+
+.futer_map{
+    display: block;
+    width: 100%;
+}
+
+.futer_map img{
+    width: 60%;
+    margin-top: 2%;
+    border-radius: 15px;
+}
+
+.futer_line{
+    display: block;
+    width: 90%;
+    height: 3px;
+    background-color: #002850;
+    margin-top: 20px;
+}
+
+.futer_post{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.futer_post h2{
+    font-family: 'Georgia';
+    font-size: 2vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    /*padding-top: 1em;*/
+    /*padding-left: 1em;*/
+}
+
+
+#form1{
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.first{
+    display: block;
+    position: relative;
+    width: 28%;
+    float: left;
+    margin-right: 1%;
+    /*height: 25em;*/
+}
+
+.first input{
+    display: block;
+    width: 90%;
+    background-color: #dadbca;
+    border-radius: 3px;
+    height: 3em;
+    font-family: 'Georgia';
+    font-size: 1vw;
+}
+
+.first input[type="text"]{
+    padding-left: 5px;
+}
+
+.futer_button{
+    display: block;
+    width: 15%;
+    margin: 0 auto;
+
+}
+.futer_button_s{
+    display: block;
+    position: relative;
+    padding-top: 40%;
+}
+
+.submit button{
+    width: 100%;
+    display: block;
+    position: relative;
+    /*padding-bottom: 2em;*/
+    background-color: #002850;
+    color: #FFFFFF;
+    border-radius: 4px;
+    /*padding-top: 1.5em;*/
+    border: 2px solid #3c3c3c;
+    font-family: 'Georgia';
+    font-size: 0.9vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.submit button:hover{
+
+    background-color: #2285c4;
+    border: 2px solid #3a3a3a;
+
+}
+
+
+
+@media only screen  and (max-width: 1024px) {
+
+    .content_text p {
+        font-size: 1.6vw;
+        font-weight: 300;
+        margin-top: -20em;
+    }
+
+    .first input{
+       font-size: 1.4vw;
+    }
+
+    .submit button{
+        font-size: 1.2vw;
+
+    }
+
+}
+
+@media only screen  and (max-width: 960px) {
+
+    .first input{
+        font-size: 1.8vw;
+    }
+    .submit button{
+        font-size: 1.8vw;
+
+    }
+
+
+}
+
+@media only screen  and (max-width: 768px) {
+    .content_text p {
+        font-size: 2.2vw;
+        font-weight: 300;
+        margin-top: -20em;
+    }
+    .first input{
+        font-size: 1.8vw;
+    }
+    .submit button{
+        font-size: 1.8vw;
+
+    }
+
+
+}
+
+@media only screen  and (max-width: 480px) {
+    .content_text p {
+        font-size: 2.4vw;
+        font-weight: 300;
+        margin-top: -20em;
+    }
+    .first input{
+        font-size: 2.5vw;
+    }
+    .submit button{
+        font-size: 2.5vw;
+
+    }
+
+}

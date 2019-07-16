@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Цена межевания участка</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Цена межевания участка">
+
+
+    <link href="cssnew/style.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+
+
+
+<!--<данный блок нужно интегрировать в ваш сайт-->
+
+   <section class="calc" id="calc">
+
+                <div class="calc_head">
+                     <h2>Цена межевания участка</h2>
+                </div>
+
+
+                <div class="calc_all">
+
+                   <div class="calc_param" id="calc_param">
+
+                       <div class="owner_type_block">
+                           <p class="param_title">Ваш статус </p>
+
+                           <select required class="owner" id="owner">
+                               <option value="1">Физ. Лицо</option>
+                               <option value="2">Юр. Лицо</option>
+                           </select>
+
+                       </div>
+
+
+                       <!--/*		Описание блока ввода Услуга и его компонетнов		*/-->
+
+                       <div class="type_work_block" id="type_work_block">
+                           <p class="param_title">Услуга </p>
+
+                           <select required class="owner" id="type_work">
+                               <option value="1">Межевание</option>
+                               <option value="2">Вынос точек</option>
+                               <option value="3">Технический план</option>
+                               <option value="4">Акт обследования</option>
+                               <option value="5">Подача документов в Росреестр</option>
+                               <option value="6">Исправление кадастровых ошибок</option>
+
+                           </select>
+
+                       </div>
+
+
+                       <!--/*		Описание блока ввода Вид межевания и его компонетнов		*/-->
+                       <div class="mezhi_types_block">
+                           <p class="param_title">Вид межевания </p>
+
+                           <select required class="owner" id="mezhi_types">
+                               <option value="1">Межевой план</option>
+                               <option value="2">Уточнение границ</option>
+                               <option value="3">Объединение земельных участков</option>
+                               <option value="4">Раздел (выдел) земельного участка</option>
+                               <option value="5">Перераспределение земельных участков</option>
+                           </select>
+                       </div>
+
+                       <!--/*		Описание блока Тип объекта и его компонетнов		*/-->
+                       <div class="object_type_block" id="object_type_block" >
+                           <p class="param_title">Вид объекта </p>
+
+                           <select required class="owner" id="object_type">
+                               <option value="1">Жилой дом</option>
+                               <option value="2">Квартира</option>
+                               <option value="3">Гараж</option>
+                               <option value="4">Машино-место</option>
+                               <option value="5">Нежилое помещение</option>
+                               <option value="6">Здание</option>
+                           </select>
+                       </div>
+
+                       <!--/*		Описание блока Площадь участка и его компонетнов		*/-->
+
+                       <div class="land_area_block" id="land_area_block">
+                           <p class="param_title">Площадь, сот. </p>
+
+                           <input type="number" class="area" id="land"  value="6" min="0" max="200" />
+
+                       </div>
+
+
+                       <!--/*		Описание блока Площадь помещения и его компонетнов		*/-->
+
+                       <div class="room_area_block" id="room_area_block">
+                           <p class="param_title">Площадь, м2. </p>
+
+                           <input type="number" class="area" id="room_area" value="0" min="0" max="200"    />
+
+                       </div>
+
+                       <!--/*		Описание блока Количество точек участка и его компонетнов		*/-->
+
+                       <div class="number_points_block" id="number_points_block">
+                           <p class="param_title">Количество точек </p>
+
+                           <input type="number" class="area" id="number_points" value="3" min="0" max="200"   />
+
+                       </div>
+
+                       <!--/*		Описание блока Регион работ и его компонетнов		*/-->
+                       <div class="region_work_block" id="region_work_block">
+                           <p class="param_title">Регион работ </p>
+
+                           <select required class="owner" id="region_work">
+                               <option value="1">Московская область</option>
+                               <option value="2">Москва (включая новую Москву)</option>
+                               <option value="3">Санкт-Петербург</option>
+                               <option value="4">Ленинградская область</option>
+                           </select>
+
+                       </div>
+
+                       <!--/*		Описание блока Шоссе и его компонетнов		*/-->
+                       <div class="Highway_block" id="Highway_block">
+                           <p class="param_title">Шоссе </p>
+
+                           <select required class="owner" id="Highway" >
+                               <option value="680">Щелковское</option>
+                               <option value="620">Горьковское</option>
+                               <option value="-220">Рязанское</option>
+                               <option value="-970">Симферопольское</option>
+                               <option value="-1000">Варшавское</option>
+                               <option value="-310">Каширское</option>
+                               <option value="-250">Калужское</option>
+                               <option value="-160">Киевское</option>
+                               <option value="110">Минское</option>
+                               <option value="140">Можайское</option>
+                               <option value="440">Носовихинское</option>
+                               <option value="290">Новорязанское</option>
+                               <option value="380">Новорижское</option>
+                               <option value="500">Пятницкое</option>
+                               <option value="710">Ленинградское</option>
+                               <option value="920">Дмитровское</option>
+                               <option value="1010">Ярославское</option>
+                               <option value="410">Успенское</option>
+                               <option value="470">Энтузиастов</option>
+                           </select>
+
+                       </div>
+
+
+                       <!--/*		Описание блока Км от МКАД и его компонетнов		*/-->
+
+                       <div class="distance_mkad_block" id="distance_mkad_block">
+                           <p class="param_title">Км от МКАД </p>
+
+                           <input type="number" class="area" id="mkad" value="0" min="0" max="20000" />
+
+                       </div>
+
+
+                       <!--/*		Описание блока Удаленность от Санкт-Петербурга и его компонетнов		*/-->
+
+                       <div class="distance_sp_block" id="distance_sp_block">
+                           <p class="param_title">Удаленность от Санкт-Петербурга </p>
+
+                           <input type="number" class="area" id="dist_sp" value="0" min="0" max="20000" />
+
+                       </div>
+
+
+                   </div>
+
+                    <div class="calc_itog">
+
+                        <div class="calc_itog_zena">
+                             <h3>Стоимость работ</h3>
+
+                            <p>ИТОГО:  <span id="Zena"></span> <b id="bs" class="bs">&#8381;</b>  </p>
+
+                        </div>
+
+
+                        <form id="form1" action="send.php" method="post">
+
+                            <div class="form_param">
+
+                                <input type="text" name="FormZena" id="FormZena" />
+                                <input type="text" name="TypeClient" id="TypeClient" />
+                                <input type="text" name="ClientWork" id="ClientWork" />
+                                <input type="text" name="ClientRegion" id="ClientRegion" />
+                            </div>
+
+                            <div class="first">
+                                <input type="text" name="name1" id="name1" placeholder="Ф.И.О" size="30" required />
+                            </div>
+
+                            <div class="first">
+                                <input type="text" name="telefon" id="telefon"  placeholder="Номер телефона" size="30" required />
+                            </div>
+
+                            <div class="futer_button">
+                                <div class="futer_button_s">
+                                    <p class="submit"><button type="submit">ЗАКАЗАТЬ</button></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+   </section>
+
+  <!----------Конец блока калькулятора-------->
+
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scriptsCalc.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script>
+    $("#telefon").mask("+7(999)999-99-99");
+</script>
+
+</body>
+</html>

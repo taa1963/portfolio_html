@@ -1,0 +1,249 @@
+
+/*Описание контейнера и его компонентов  */
+.container {
+    position: relative;
+   height: auto;
+    margin: 0 auto;
+ }
+
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.myblock{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+
+.calcm{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+    background-color: #000000;
+}
+
+
+.calc_pr{
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fef2cb;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.calc_head{
+    display: block;
+    background-color: #ffd965;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 5px;
+}
+
+.calc_head h1{
+    text-align: center;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.calc_block{
+    display: block;
+
+}
+
+.calc_block h2{
+    text-align: center;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.9em;
+    font-weight: 500;
+    line-height: 1.1;
+    font-style: italic;
+    padding-top:10px ;
+    margin-bottom: 20px;
+}
+
+.land_pr_block{
+    display: inline-block;
+    width: 80%;
+    margin: 0 auto;
+    /*background-color: #1b6d85;*/
+    padding-bottom: 0;
+    height: 2em;
+}
+
+.param_title{
+    display: block;
+    width: 60%;
+    float: left;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.7em;
+    font-weight: 500;
+    line-height: 1.5;
+    font-style: italic;
+    text-align: center;
+}
+
+.area{
+    display: block;
+    width: 40%;
+    float: right;
+    border: 2px solid #000000;
+    margin: 0;
+    height: 1.6em;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.7em;
+}
+
+#breadth_pr{
+    border-bottom: none;
+}
+
+#breadth_pd{
+    border-bottom: none;
+}
+
+
+input[type="number"] {
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.1;
+    padding-top: 0.3em;
+    text-align: center;
+    /*font-size:14px;*/
+    width: 40%;
+}
+
+
+.calc_line{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 30px;
+    background-color: #000000;
+}
+
+/*		Описание блрока цены и его компонент		*/
+
+
+.calc_zena{
+    display: block;
+    background-color: #a8d08d;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 5px;
+}
+
+
+.calc_zena h1{
+    text-align: center;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.calc_block_zena{
+    display: inline-block;
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+.calc_zena_block{
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #e2efd9;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.zena_title{
+    display: block;
+    width: 50%;
+    text-align: center;
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    float: left;
+}
+
+.zena_itog{
+    display: block;
+    width: 30%;
+    float: left;
+    background-color: #ffffff;
+    /*width: 30%;*/
+    height: 2em;
+    border: 2px solid #000000;
+}
+
+#zena{
+
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.calc_block_zena span{
+    font-family: "Maven Pro", Arial, Tahoma, sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.1;
+    padding-top: 0.3em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+@media only screen  and (max-width: 990px) {
+
+    .param_title{
+        font-size: 1.5em;
+        line-height: 1;
+    }
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+    .param_title{
+        font-size: 1.2em;
+        line-height: 1;
+    }
+   
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+    .param_title{
+        font-size: 1em;
+        line-height: 1;
+    }
+
+
+
+}

@@ -1,0 +1,1169 @@
+
+/*Описание контейнера и его компонентов при передаче закрыть */
+.container {
+    position: relative;
+    word-wrap: break-word;
+    height: auto;
+    margin: 0 auto;
+ }
+
+/*Описание header и его компонентов */
+
+
+
+.tapif{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background: url("../img/fontarif.jpg") 0 0 no-repeat;
+    background-size: cover;
+}
+
+.tapifhead{
+    display: block;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.tapifhead h2{
+    font-family: 'Georgia';
+    font-size: 3em;
+    font-weight: 800;
+    color: #3a0b8c;
+    text-transform: none;
+    text-align: center;
+}
+
+.tarif-items{
+    display: flex;
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    margin-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.tarif-item1{
+    width:33%;
+    display: block;
+    position: relative;
+	min-height:100%;
+    height: 100%;
+    margin-bottom: 30px;
+     background: #e3e3e3;
+    background: -moz-linear-gradient(left,#e3e3e3 0%,#f5f5f5 100%);
+    background: -webkit-linear-gradient(left,#e3e3e3 0%,#f5f5f5 100%);
+    background: linear-gradient(to right,#e3e3e3 0%,#f5f5f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3',endColorstr='#f5f5f5',GradientType=1);
+	float:left;
+	padding:0;
+}
+
+.tarif-item2{
+    width:33%;
+    height: 100%;
+      position: relative;
+     margin-bottom: 30px;
+     background: #e3e3e3;
+    background: -moz-linear-gradient(left,#e3e3e3 0%,#f5f5f5 100%);
+    background: -webkit-linear-gradient(left,#e3e3e3 0%,#f5f5f5 100%);
+    background: linear-gradient(to right,#e3e3e3 0%,#f5f5f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3',endColorstr='#f5f5f5',GradientType=1);
+	float:left;
+	padding:0;
+}
+
+
+.tarif-item2:hover{
+    webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.39);
+    -moz-box-shadow: 0 0 50px 0 rgba(0,0,0,0.39);
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.39);
+    z-index: 5;
+}
+
+.tarif-item1:hover{
+    webkit-box-shadow: 0px 0 50px 20px rgba(0,0,0,0.39);
+    -moz-box-shadow: 0px 0 50px 0 rgba(0,0,0,0.39);
+    box-shadow: 0px 0 50px 0 rgba(0,0,0,0.39);
+    z-index: 5;
+}
+
+.tarif-item3:hover{
+    webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.39);
+    -moz-box-shadow: 0 0 50px 0 rgba(0,0,0,0.39);
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.39);
+    z-index: 5;
+}
+
+
+
+
+.tarif-element ul{
+    margin-top: 20px;
+    list-style: none;
+    /*margin: 0;*/
+    padding: 2px 1px 2px;
+    font-family: 'Fira Sans';
+    font-size: 1em;
+    text-transform: none;
+    font-weight: 400;
+    line-height: 21px;
+    color: #181818;
+
+}
+
+.tarif-element{
+	padding-left:5px;
+	padding-right:5px;
+}
+    
+
+
+.star{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/tarif-star.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+
+
+.tarif-item3{
+    width:34%;
+    position: relative;
+    height: 100%;
+     margin-bottom: 30px;
+    background: #e3e3e3;
+    background: -moz-linear-gradient(left,#e3e3e3 0%,#f5f5f5 100%);
+    background: -webkit-linear-gradient(left,#e3e3e3 0%,#f5f5f5 100%);
+    background: linear-gradient(to right,#e3e3e3 0%,#f5f5f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3',endColorstr='#f5f5f5',GradientType=1);
+	float:left;
+	padding:0;
+}
+
+.tarif-element{
+    padding: 30px 35px;
+    margin-bottom: 130px;
+}
+
+.tarif-name{
+    display: block;
+    font-size: 2.4em;
+    line-height: 1.5em;
+    text-align: center;
+    font-family: 'Georgia';
+    font-weight: 700;
+}
+
+.tarif-element ul {
+    margin-top: 20px;
+    list-style: none;
+    /*margin: 0;*/
+    padding: 20px 10px 20px;
+    font-family: 'Fira Sans';
+    font-size: 1em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.tarif-element ul li.point-green{
+    color: #1a1a1a;
+    background: url(../img/tarif-point-green.png) left 7px no-repeat;
+
+}
+
+.tarif-element ul li{
+    font-size: 1.6em;
+    line-height: 1.5em;
+    padding: 2px 0 2px 25px;
+    margin: 10px 0 0;
+}
+
+
+.tarif-bot{
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: 30px;
+    bottom: 20px;
+}
+
+.tarif-liney{
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #c9c9c9;
+}
+
+.tarif-wrap{
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.tarif-wrap p{
+
+    font-family: 'Fira Sans';
+    font-size: 3em;
+    color: #000000;
+    line-height: 2.1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tarif_block_button .poplight{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #2285c4;
+    font-size: 2em;
+    font-weight: normal;
+    line-height: 1.2em;
+    padding: 20px 40px;
+    border-radius: 25px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0 solid #2285c4;
+    white-space: nowrap;
+}
+
+.tarif_block_button .poplight:hover{
+    background-color: #0467a6;
+    border: 1px solid #761c19;
+}
+
+
+/*		Описание блока тарифов для мобильного 		*/
+.tapif_mob{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background: url("../img/fontarif.jpg") 0 0 no-repeat;
+    background-size: cover;
+
+}
+
+.tarif-element_mob{
+    display: block;
+    width: 350px;
+    margin: 0 auto;
+    margin-right: 45px;
+
+}
+
+.star_mob{
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/tarif-star.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    float: right;
+
+}
+
+.tarif-name_mob{
+    display: block;
+    font-size: 2em;
+    line-height: 2.5em;
+    text-align: center;
+    font-family: 'Georgia';
+    font-weight: 700;
+}
+
+.tarif-element_mob ul{
+    margin-top: 20px;
+    list-style: none;
+    /* margin: 0; */
+    padding: 20px 10px 20px;
+    font-family: 'Fira Sans';
+    font-size: 1em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
+
+
+
+.tarif-element_mob ul li.point-green{
+    color: #1a1a1a;
+    background: url(../img/tarif-point-green.png) left 7px no-repeat;
+
+}
+
+.tarif-element_mob ul li{
+    font-size: 1.6em;
+    line-height: 1.5em;
+    padding: 2px 0 2px 20px;
+    margin: 10px 0 0;
+}
+
+
+.tarif-bot_mob{
+    display: block;
+    position: relative;
+    width: 70%;
+    margin-top: 30px;
+    bottom: 20px;
+}
+
+.tarif-liney_mob{
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #c9c9c9;
+}
+
+.tarif-wrap_mob{
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.tarif-wrap_mob p{
+    font-family: 'Fira Sans';
+    font-size: 3em;
+    color: #000000;
+    line-height: 2.1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tarif_block_button_mob .poplight{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #2285c4;
+    font-size: 2em;
+    font-weight: normal;
+    line-height: 1.4em;
+    padding: 20px 40px;
+    border-radius: 25px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0 solid #2285c4;
+    white-space: nowrap;
+}
+
+.tarif_block_button_mob .poplight:hover{
+    background-color: #0467a6;
+    border: 1px solid #761c19;
+}
+
+
+.slider {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.slide-list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.slide-wrap {
+    position: relative;
+    left: 0px;
+    top: 0;
+    width: 10000000px;
+}
+
+.slide-item  {
+    width: auto;
+    height: 1400px;
+    background-color: #FFFFFF;
+    padding: 50px;
+   /* margin-right: 20px;
+    margin-left: 15px;*/
+    float: left;
+}
+
+.slaider_nav{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    top: -35px;
+    padding-left: 33%;
+}
+
+.navy {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.prev-slide {
+    display: none;
+    width: 100px;
+    position: relative;
+    background: url(../slider/left.png) 50px 50px no-repeat;
+    float: left;
+    left: 20px;
+    cursor: pointer;
+
+
+}
+.next-slide {
+    display: none;
+    margin:50px 50px  ;
+    position: relative;
+    background-color: #FFFFFF;
+    /*background:  url(../slider/richt.png) 50px 50px no-repeat;*/
+    width: 200px;
+    color: #000000;
+    text-align: center;
+    font-family: 'Lato',Arial;
+    font-size: 14px;
+    font-weight: bold;
+
+    height: 30px;
+    float: left;
+    right: 49px;
+    cursor: pointer;
+
+}
+
+.autoplay{
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+    color: #FFFFFF;
+    float: left;
+    right: 20px;
+    cursor: pointer;
+}
+
+.autoplay  label{
+    margin-left: 10px;
+}
+
+
+
+.auto {
+
+    width: 30px;
+    display: block;
+    height: 30px;
+    background: #FFFFFF;
+    cursor: pointer;
+    /*margin: 10px auto;*/
+    margin-top: 65px;
+    margin-bottom: 30px;
+    float: left;
+    margin-left: 35%;
+
+}
+.play {
+
+    background:  url(../slider/play.jpg)  no-repeat;
+
+}
+.pause {
+    background: url(../slider/pause.jpg) center no-repeat;
+}
+
+
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.calc{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /*min-height: 20px;*/
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.calc_head{
+    display: block;
+    margin: 0 auto;
+}
+
+.tarif_calc h2{
+    font-family: 'Georgia';
+    font-size: 3em;
+    font-weight: 800;
+    color: #3a0b8c;
+    text-transform: none;
+    text-align: center;
+}
+
+.calc_line{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    height: 5px;
+    background-color: darkgreen;
+}
+
+
+.calc_block{
+    display: block;
+    width: 80%;
+    min-height: 200px;
+    margin: 0 auto;
+    border: 1px solid #c9c9c9;
+    /*bottom: 50px;*/
+}
+
+.calc_block h2{
+    font-family: 'Georgia';
+    font-size: 3em;
+    font-weight: 800;
+    color: #3a0b8c;
+    text-transform: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+}
+
+.calc_block1_text{
+    display: block;
+    width: 30%;
+    float: left;
+}
+
+.calc_block1_text p{
+    font-family: 'Fira Sans';
+    font-size: 1.6em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+
+.calc_block1_pol{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.calc_block1_pol span{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: -5px;
+    float: left;
+}
+
+
+.calc_block1_pol input{
+    display: block;
+    float: left;
+    width: 70%;
+}
+
+.calc_block1_zn{
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+
+
+.ServmaxR{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: -5px;
+    margin-left: 30%;
+    float: left;
+    width: 50%;
+
+}
+
+
+
+
+.ServmaxST{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 30%;
+    float: left;
+    width: 50%;
+
+}
+
+
+
+
+.calc_block1{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+
+
+.calc_block2{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.calc_block2_text{
+    display: block;
+    width: 30%;
+    float: left;
+}
+
+.calc_block2_text p{
+    font-family: 'Fira Sans';
+    font-size: 1.6em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+
+.calc_block2_pol{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.calc_block2_pol span{
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: -5px;
+    float: left;
+}
+
+.calc_block2_pol input{
+    display: block;
+    float: left;
+    width: 70%;
+}
+
+.calc_block2_zn{
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+
+.calc_block3{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+
+.calc_block3_text{
+    display: block;
+    width: 30%;
+    float: left;
+}
+
+.calc_block3_text p{
+    font-family: 'Fira Sans';
+    font-size: 1.6em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.calc_block3_spis{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+#list1{
+    display: block;
+    width: 50%;
+    font-size: 14px;
+}
+
+.calc_block4{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+.calc_block4_check{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    float: left;
+    padding-left: 20px;
+}
+
+.calc_block4_check input{
+    float: left;
+}
+
+.calc_block4_check label{
+    font-family: 'Fira Sans';
+    font-size: 1.3em;
+    color: #000000;
+    text-transform: none;
+    font-weight: 400;
+    line-height: 1.429em;
+    float: left;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.calc_block5{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+.calc_block5_zena{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    float: left;
+   margin-left: 20px;
+}
+
+.calc_block5_zena p{
+    font-family: 'Fira Sans';
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1em;
+    color: #5c5c5c;
+    float: left;
+    margin-left: 10px;
+
+}
+
+
+.calc_block5_zena span{
+    font-size: 28px;
+    font-weight: 700;
+    color: #47953e;
+    margin-left: 10px;
+    /*float: right;*/
+}
+
+.calc_block5_zena p b{
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #47953e;
+    margin-left: 10px;
+    float: right;
+}
+
+/* ================= первый плавающий блок    =============*/
+
+.menu_left{
+    display: block;
+    position: fixed;
+    background-color: #FFFFFF;
+    border: 1px solid #000000 ;
+    top:20%;
+    float: left;
+    width: auto;
+    z-index: 1000;
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+.menu_Left_decktop{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    /*text-align: center;*/
+}
+
+.menu_Left_decktop h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+
+.dropdown_decktop{
+    display: block;
+    padding-left: 17px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.73em;
+    font-weight: 400
+}
+
+
+
+
+.menu_Left_mobil{
+    display: None;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.dropdown{
+    display: none;
+    padding-left: 17px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.5em;
+    font-weight: 400
+}
+
+
+.menu_right{
+    display: block;
+    position: fixed;
+    background-color: #FFFFFF;
+    border: 1px solid #000000 ;
+    top:20%;
+    float: right;
+    width: auto;
+    z-index: 1000;
+    right: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.menu_right_decktop{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.menu_right_decktop h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+
+.dropdown_decktop_right{
+    display: block;
+    padding-left: 17px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.73em;
+    font-weight: 400
+}
+
+
+
+
+.menu_right_mobil{
+    display: None;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.dropdown_right{
+    display: none;
+    padding-left: 17px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.5em;
+    font-weight: 400
+}
+
+
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+    
+.tarif-name{
+	font-size:1.8em;
+}
+.tarif-element ul{
+    margin-top: 20px;
+    padding: 2px 1px 2px;
+    font-size: 1em;
+    line-height: 1.5em;
+
+}
+
+    .tarif-element ul li{
+
+        font-size: 1.5em;
+
+    }
+
+    .tarif-element {
+        padding: 10px 5px;
+        margin-bottom: 130px;
+    }
+
+    .tarif-wrap p {
+        font-size: 2em;
+    }
+
+    .tarif_block_button .poplight {
+        font-size: 1.3em;
+         padding: 20px 30px;
+    }
+
+    .calc_block1_text p {
+
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    .calc_block2_text p {
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    .calc_block3_text p {
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    .calc_block4_check label{
+        font-size: 1em;
+    }
+
+
+
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+   
+.tarif-name{
+    font-size: 1.4em;
+}
+.tarif-element ul{
+    margin-top: 20px;
+    padding: 2px 1px 2px;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.tarif-element{
+	padding-left:5px;
+	padding-right:5px;
+    margin-bottom: 180px;
+}
+    .tarif-element ul {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+.tarif-element ul li {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+
+
+    .tarif-wrap p {
+        font-size: 16px;
+    }
+
+    .tarif_block_button .poplight {
+        font-size: 15px;
+        padding: 20px 0px;
+    }
+
+    .calc_block1_pol span{
+        font-size: 17px;
+    }
+
+
+    .calc_block2_pol span{
+        font-size: 17px;
+    }
+    .calc_block2_pol input {
+         width: 65%
+    }
+
+    .calc_block2_pol input {
+         width: 65%
+    }
+
+    #list1 {
+       width: 100%;
+    }
+
+    .calc_block1_text {
+        display: block;
+        width: 100%;
+        float: right;
+    }
+
+    .calc_block2_text {
+        display: block;
+        width: 100%;
+        float: right;
+    }
+    .calc_block1_pol {
+        display: block;
+        width: 70%;
+        float: left;
+    }
+    .calc_block2_pol {
+        display: block;
+        width: 70%;
+        float: left;
+    }
+
+    .calc_block1 {
+        margin-bottom: 50px;
+    }
+
+    .ServmaxR{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ServmaxST{
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    
+}
+
+@media only screen  and (max-width: 480px) {
+    .tarif_block_button .poplight {
+        font-size: 11px;
+        padding: 20px 0px;
+    }
+
+    .tapif_mob {
+        display: block;
+    }
+
+    .tapif {
+        display: none;
+    }
+    .ServmaxR{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ServmaxST{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .menu_Left_decktop{
+        display: none;
+
+    }
+
+    .menu_Left_mobil{
+        display: block;
+    }
+
+    .dropdown{
+        display: none;
+    }
+
+    .menu_right_decktop{
+        display: none;
+    }
+
+    .menu_right_mobil{
+        display: block;
+    }
+
+    .dropdown_right{
+        display: none;
+    }
+
+
+
+
+
+}

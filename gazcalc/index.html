@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Расчет стоимости газа</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Расчет стоимости газа">
+
+    <!--<link href="cssnew/modal-contact.css" rel="stylesheet">-->
+    <link href="cssnew/style.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+
+
+
+<div class="block_v">
+
+</div>    
+
+ 
+
+    
+
+
+
+
+
+
+   <section class="calc" id="calc">
+
+                <div class="calc_head">
+                     <h2>Калькулятор доставки газа</h2>
+                </div>
+
+             <!--Блок введения объема газголдера-->
+
+                <div class="calc_block1" id="calc_block1" >
+                        <div class="calc_block1_text">
+                            <p>Объем газгольдера, л:</p>
+
+                        </div>
+
+                        <script>
+                            function sizeS() {
+                                var vgas,VgasRV;
+
+                                var VgasRV = document.getElementById('vgas').value;
+                                $('#VgasRV').text(VgasRV);
+
+                                document.getElementById('VgasR').value = VgasRV;
+                            }
+                        </script>
+
+                        <div class="calc_block1_pol">
+                            <span>0</span>
+                             <input type="range" class="vgas" id="vgas" min="0" max="10000" step="1" value="0" oninput="sizeS()" >
+                            <span>10000</span>
+                        </div>
+
+                        <div class="calc_block1_zn">
+                             <input type="number" class="VgasR" id="VgasR" value="0" min="0" max="10000" oninput="+this.value > 10000 && (this.value = 10000)" >
+
+                        </div>
+                    </div>
+
+
+            <!--Блок процента остатка и первой заправки-->
+                <div class="calc_block2" id="calc_block2" >
+                        <div class="calc_block2_text">
+                            <p>Остаток газа, %: </p>
+
+                        </div>
+
+                        <div class="calc_block2_zn">
+                            <input type="number" class="Vost" id="Vost" value="0" min="0" max="100" oninput="+this.value > 100 && (this.value = 100)" >
+                        </div>
+
+
+                         <div class="calc_block4_check"  id="calc_block4_check"  >
+              <!--Первичная заправка:-->
+                             <!--<input type="checkbox" id="one" onchange="fun1()">-->
+                             <input type="checkbox" id="primary">
+                             <p>Первичная заправка</p>
+                         </div>
+                    </div>
+
+              <!--блок вывода цены и объема-->
+                    <div class="calc_block5" id="calc_block5" >
+
+
+                        <div class="calc_block5_zena" id="calc_block5_zena"  >
+                            <p> Стоимость заказа: <span id="Zena"></span> <b id="bs" class="bs">&#8381;</b>  </p>
+                        </div>
+                    </div>
+
+                 <!--Описание кнопки-->
+                     <button type="button" id="but1" >Сформировать заказ</button>
+
+
+                 <div class="calc_form" id="calc_form"  >
+                   <form id="form1" action="send1.php" method="post">
+
+                       <!--<div class="line_form"></div>-->
+
+           <div class="first">
+               <label for="name">Имя</label>
+               <input type="text"   name="name_client" id="name_client" required="required" size="30" />
+           </div>
+
+
+
+           <div class="first">
+               <label for="tel">Телефон</label>
+               <input type="text"   name="tel_prod" id="tel_prod" required="required" size="30" />
+           </div>
+
+           <div class="first">
+                           <label for="adr">Адрес</label>
+                           <input type="text"   name="adr" id="adr" required="required" size="100" />
+           </div>
+
+
+
+
+           <p class="submit"><button type="submit">Отправить заказ</button></p>
+
+
+
+
+
+
+
+       </form>
+                 </div>
+
+
+
+
+
+
+
+   </section>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/dm-modal.js"></script>-->
+<script src="js/scriptsCalc.js"></script>
+
+
+
+<script src="js/jquery.maskedinput.min.js"></script>
+
+
+<script>
+    $("#tel_prod").mask("+7(999)999-99-99");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `partner` 
+(
+  `partner_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `partner_mail` text NOT NULL,
+  
+ PRIMARY KEY (`partner_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 
+DEFAULT CHARSET=latin1

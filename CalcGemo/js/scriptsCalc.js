@@ -1,19 +1,16 @@
-var  Zena,KpsKadstr,KchoseKadstr,KchoseKadstrV;
-
-Zena=0;
-KchoseKadstrV=0;
-
-
 
 $(document).ready(function() {
 
 
     $('#calc_next').click(function () {
-        var Zr, Zk, Zm, zv;
+        var Zr, Zk, Zm, Zkm,Zmm,Zrm, zv;
         Zr = 0;
         Zk = 0;
         Zm = 0;
         zv = 0;
+        Zkm=0;
+        Zmm=0;
+        Zrm=0;
 
         var elems = document.getElementsByClassName('ekran')
 
@@ -73,7 +70,7 @@ $(document).ready(function() {
             // alert(zv3);
             Zk = Zk + zv2;
             $('#Zk').text(Zk);
-            var Zkm=Zk;
+             Zkm=Zk;
             $('#Zkm').text(Zkm);
             document.getElementById('ekrank').value=Zkm;
 
@@ -124,7 +121,7 @@ $(document).ready(function() {
             // alert(zv3);
             Zm = Zm + zv3;
             $('#Zm').text(Zm);
-            var Zmm=Zm;
+            Zmm=Zm;
             $('#Zmm').text(Zmm);
             document.getElementById('ekranm').value=Zmm;
 
@@ -142,12 +139,7 @@ $(document).ready(function() {
         block.find('.calc_block_itog').show();
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
-       // $('#calc_l2f').focus();
-       // scrollTop: $("#calc_block_itog").offset().top;
-        // $("html, body").animate({ scrollTop: 0 }, "slow");
-        // return false;
 
-        //$('#calc_block_itog').scrollTop(0);
     });
 
     $('#calc_detail_old1').click(function () {

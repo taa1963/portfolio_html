@@ -112,6 +112,13 @@
     padding-top: 30px;
 }
 
+.calc_block_itog2 table{
+    table-layout: auto;
+
+}
+
+
+
 #calc_l2{
     display: block;
     visibility: collapse;
@@ -288,22 +295,32 @@
 
 @media only screen  and (max-width: 768px) {
     .calc_param {
-        display: block;
-        width: 100%;
+       width: 100%;
     }
 
     .calc_itog{
-        display: block;
+       width: 100%;
+    }
+    .calc_param {
+       width: 100%;
+    }
+
+    .calc_itog{
         width: 100%;
     }
-   
-
-}
+    .calc_block_itog2{
+        width: 100%;
+    }
+ }
 
 @media only screen  and (max-width: 480px) {
+    .calc_block_detail {
+        width: 100%;
+    }
 
-
-
-
+    .calc_block_itog2 table {
+        width: 100%;
+        margin: 0;
+    }
 
 }

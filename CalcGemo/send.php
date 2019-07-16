@@ -43,17 +43,17 @@ if (
 
                        <tr>
                            <th style='text-align:left'>Экран</th>
-                           <th>$ekran  </th>
+                           <th>$ekran</th>
                        </tr>
 
                        <tr>
                            <th style='text-align:left'>Экран-К</th>
-                           <th>$ekrank</span>  </th>
+                           <th>$ekrank</th>
                        </tr>
 
                        <tr>
                            <th style='text-align:left'>Экран-М</th>
-                           <th> $ekranm  </th>
+                           <th> $ekranm</th>
                        </tr>
                    </table>
                    

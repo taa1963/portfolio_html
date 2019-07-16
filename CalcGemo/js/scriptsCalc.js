@@ -34,7 +34,7 @@ $(document).ready(function() {
         Zrm=Zr;
         $('#Zrm').text(Zrm);
         document.getElementById('ekran').value=Zrm;
-
+         alert(Zrm);
 
 
         var elems = document.getElementsByClassName('ekrank')

@@ -170,10 +170,10 @@ if (
     error_reporting('E_ALL');
     if ($verify) {
 
-        header('Location: https://aleksandr.tupichenkov.com/CalcGemo/#popup_success', true, 302);
+        header('Location: https://aleksandr.tupichenkov.com/CalcGemo2/#popup_success', true, 302);
         exit;
     } else {
-        header('Location: https://aleksandr.tupichenkov.com/CalcGemo/#popup_success', true, 302);
+        header('Location: https://aleksandr.tupichenkov.com/CalcGemo2/#popup_success', true, 302);
         exit;
     }
 }

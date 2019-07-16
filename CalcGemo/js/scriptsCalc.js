@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 
     $('#calc_next').click(function () {
-        var Zr, Zk, Zm, Zkm,Zmm,Zrm, zv;
+        var Zr, Zk, Zm, Zkm,Zmm,Zrm, zv,zv2,zv3;
         Zr = 0;
         Zk = 0;
         Zm = 0;
@@ -11,6 +11,8 @@ $(document).ready(function() {
         Zkm=0;
         Zmm=0;
         Zrm=0;
+        zv2=0;
+        zv3=0;
 
         var elems = document.getElementsByClassName('ekran')
 
@@ -22,20 +24,18 @@ $(document).ready(function() {
             zv = +zv;
 
             Zr = Zr + zv;
-            $('#Zr').text(Zr);
-
-            //$('#KgasV').text(KgasV);
-
-            //document.getElementById('vgas').value = KgasV;
-
-
-            var Zrm=Zr;
-            $('#Zrm').text(Zrm);
-            document.getElementById('ekran').value=Zrm;
-
-
-
+            // $('#Zr').text(Zr);
+            // Zrm=Zr;
+            // $('#Zrm').text(Zrm);
+            // document.getElementById('ekran').value=Zrm;
         }
+
+        $('#Zr').text(Zr);
+        Zrm=Zr;
+        $('#Zrm').text(Zrm);
+        document.getElementById('ekran').value=Zrm;
+
+
 
         var elems = document.getElementsByClassName('ekrank')
 
@@ -43,14 +43,14 @@ $(document).ready(function() {
 
             var str = elems[i].id;
             // alert(str);
-            var zv2 = document.getElementById(str).value;
+             zv2 = document.getElementById(str).value;
             if (str =="ekrank1"){
                 zv2 = +zv2;
                 zv2=zv2*2
             }
             if (str =="ekrank2"){
                 zv2 = +zv2;
-                zv2=zv2*3
+                zv2=zv2*3;
                 // alert(str);
                 // alert(zv2);
 
@@ -58,23 +58,28 @@ $(document).ready(function() {
 
             if (str =="ekrank3"){
                 zv2 = +zv2;
-                zv2=zv2*3
+                zv2=zv2*3;
             }
             if (str =="ekrank4"){
                 zv2 = +zv2;
-                zv2=zv2*4
+                zv2=zv2*4;
             }
 
 
         zv2 = +zv2;
             // alert(zv3);
             Zk = Zk + zv2;
-            $('#Zk').text(Zk);
-             Zkm=Zk;
-            $('#Zkm').text(Zkm);
-            document.getElementById('ekrank').value=Zkm;
+            // $('#Zk').text(Zk);
+            //  Zkm=Zk;
+            // $('#Zkm').text(Zkm);
+            // document.getElementById('ekrank').value=Zkm;
 
         }
+        $('#Zk').text(Zk);
+        Zkm=Zk;
+        $('#Zkm').text(Zkm);
+        document.getElementById('ekrank').value=Zkm;
+
 
 
 
@@ -84,35 +89,35 @@ $(document).ready(function() {
 
             var str = elems[i].id;
             // alert(str);
-            var zv3 = document.getElementById(str).value;
+             zv3 = document.getElementById(str).value;
             if (str =="ekranm1"){
                 zv3 = +zv3;
-                zv3=zv3*1
+                zv3=zv3*1;
             }
             if (str =="ekranm2"){
                 zv3 = +zv3;
-                zv3=zv3*1
+                zv3=zv3*1;
             }
 
             if (str =="ekranm3"){
                 zv3 = +zv3;
-                zv3=zv3*4
+                zv3=zv3*4;
             }
             if (str =="ekranm4"){
                 zv3 = +zv3;
-                zv3=zv3*2
+                zv3=zv3*2;
             }
             if (str =="ekranm5"){
                 zv3 = +zv3;
-                zv3=zv3*1
+                zv3=zv3*1;
             }
             if (str =="ekranm6"){
                 zv3 = +zv3;
-                zv3=zv3*1
+                zv3=zv3*1;
             }
             if (str =="ekranm7"){
                 zv3 = +zv3;
-                zv3=zv3*2
+                zv3=zv3*2;
             }
 
 
@@ -120,12 +125,16 @@ $(document).ready(function() {
             zv3 = +zv3;
             // alert(zv3);
             Zm = Zm + zv3;
-            $('#Zm').text(Zm);
-            Zmm=Zm;
-            $('#Zmm').text(Zmm);
-            document.getElementById('ekranm').value=Zmm;
+            // $('#Zm').text(Zm);
+            // Zmm=Zm;
+            // $('#Zmm').text(Zmm);
+            // document.getElementById('ekranm').value=Zmm;
 
         }
+        $('#Zm').text(Zm);
+        Zmm=Zm;
+        $('#Zmm').text(Zmm);
+        document.getElementById('ekranm').value=Zmm;
 
 
 

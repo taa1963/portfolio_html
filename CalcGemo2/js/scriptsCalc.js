@@ -19,23 +19,17 @@ $(document).ready(function() {
         for (var i = 0; i < elems.length; i++) {
 
             var str = elems[i].id;
-            // alert(str);
             zv = document.getElementById(str).value;
             zv = +zv;
-
             Zr = Zr + zv;
-            // $('#Zr').text(Zr);
-            // Zrm=Zr;
-            // $('#Zrm').text(Zrm);
-            // document.getElementById('ekran').value=Zrm;
+
         }
 
         $('#Zr').text(Zr);
         Zrm=Zr;
        // $('#valid').text(Zrm);
         document.getElementById('ekran').value=Zrm;
-         // alert(Zrm);
-        //alert(Zrm);
+
 
 
         var elems = document.getElementsByClassName('ekrank')
@@ -43,7 +37,7 @@ $(document).ready(function() {
         for (var i = 0; i < elems.length; i++) {
 
             var str = elems[i].id;
-            // alert(str);
+
              zv2 = document.getElementById(str).value;
             if (str =="ekrank1"){
                 zv2 = +zv2;
@@ -52,9 +46,6 @@ $(document).ready(function() {
             if (str =="ekrank2"){
                 zv2 = +zv2;
                 zv2=zv2*3;
-                // alert(str);
-                // alert(zv2);
-
             }
 
             if (str =="ekrank3"){
@@ -68,12 +59,7 @@ $(document).ready(function() {
 
 
         zv2 = +zv2;
-            // alert(zv3);
-            Zk = Zk + zv2;
-            // $('#Zk').text(Zk);
-            //  Zkm=Zk;
-            // $('#Zkm').text(Zkm);
-            // document.getElementById('ekrank').value=Zkm;
+             Zk = Zk + zv2;
 
         }
         $('#Zk').text(Zk);
@@ -89,8 +75,7 @@ $(document).ready(function() {
         for (var i = 0; i < elems.length; i++) {
 
             var str = elems[i].id;
-            // alert(str);
-             zv3 = document.getElementById(str).value;
+            zv3 = document.getElementById(str).value;
             if (str =="ekranm1"){
                 zv3 = +zv3;
                 zv3=zv3*1;
@@ -121,15 +106,8 @@ $(document).ready(function() {
                 zv3=zv3*2;
             }
 
-
-
             zv3 = +zv3;
-            // alert(zv3);
             Zm = Zm + zv3;
-            // $('#Zm').text(Zm);
-            // Zmm=Zm;
-            // $('#Zmm').text(Zmm);
-            // document.getElementById('ekranm').value=Zmm;
 
         }
         $('#Zm').text(Zm);

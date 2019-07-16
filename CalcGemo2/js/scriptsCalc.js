@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 
     $('#calc_next').click(function () {
-        var Zr, Zk, Zm, Zkm,Zmm,Zrm, zv,zv2,zv3;
+        var Zr, Zk, Zm, Zkm, Zmm, Zrm, zv,zv2,zv3;
         Zr = 0;
         Zk = 0;
         Zm = 0;
@@ -32,10 +32,10 @@ $(document).ready(function() {
 
         $('#Zr').text(Zr);
         Zrm=Zr;
-        $('#Zrm').text(Zrm);
+       // $('#valid').text(Zrm);
         document.getElementById('ekran').value=Zrm;
          // alert(Zrm);
-        alert(Zrm);
+        //alert(Zrm);
 
 
         var elems = document.getElementsByClassName('ekrank')
@@ -47,7 +47,7 @@ $(document).ready(function() {
              zv2 = document.getElementById(str).value;
             if (str =="ekrank1"){
                 zv2 = +zv2;
-                zv2=zv2*2
+                zv2=zv2*2;
             }
             if (str =="ekrank2"){
                 zv2 = +zv2;

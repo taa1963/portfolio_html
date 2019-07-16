@@ -2,11 +2,14 @@
 <?php
 // если была нажата кнопка "Отправить"
 if (
-    isset($_POST['ekran']) && !empty($_POST['ekran']) &&
-    isset($_POST['ekrank']) && !empty($_POST['ekrank']) &&
-    isset($_POST['ekranm']) && !empty($_POST['ekranm']) &&
+    isset($_POST['ekran']) && !is_int($_POST['ekran']) &&
+    isset($_POST['ekrank']) && !is_int($_POST['ekrank']) &&
+    isset($_POST['ekranm']) && !is_int($_POST['ekranm']) &&
     isset($_POST['email']) && !empty($_POST['email'])) {
     $ekran = substr(htmlspecialchars(trim($_POST['ekran'])), 0, 100);
+
+
+
     $ekrank = substr(htmlspecialchars(trim($_POST['ekrank'])), 0, 100);
     $ekranm = substr(htmlspecialchars(trim($_POST['ekranm'])), 0, 100);
     $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 1000000);

@@ -1,0 +1,432 @@
+<!--if (isset($_POST['insert'])) {-->
+
+<!--$data = Array(-->
+
+<!--'partner_mail' => $_POST['email'],-->
+
+
+
+<!--);-->
+<!--$id = $db->insert ('partner', $data);-->
+<!--if($id)-->
+<!--echo 'user was created. Id=' . $id;-->
+
+<!--echo 'user was created. Id=' . $id;-->
+<!--header("Location: index.php");-->
+<!--}-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Четвертое поле</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Четвертое поле">
+
+    <!--<link href="cssnew/modal-contact.css" rel="stylesheet">-->
+    <link href="cssnew/style.css" rel="stylesheet">
+    <link href="cssnew/Calc_style.css" rel="stylesheet">
+    <link href="cssnew/modal-contact.css" rel="stylesheet">
+
+    <!--<script src="js/jquery.min.js"></script>-->
+    <!--<script src="js/jquery00.js"></script>-->
+    <!--<script src="js/dm-modal.js"></script>-->
+    <!--<script src="js/scriptsCalc.js"></script>-->
+
+
+
+</head>
+<body>
+
+   <div class="wrapper">
+       <div class="header">
+
+       </div>
+
+
+     <div class="main">
+
+       <div class="content">
+
+           <!----------Начало блока калькулятора-------->
+
+         <div class="calculator">
+
+
+             <!----------Начало блока ввода параметров-------->
+           <div class="calc_block_param" id="calc_block_param">
+               <h1>Введите количество часто используемых
+                   <br>Вами устройств</h1>
+
+               <div class="calc_block_text" id="calc_block_text" >
+                  <p>В таблице перечислены устройства, излучение от которых оказывает влияние на здоровье.</p>
+
+                  <p>Чтобы получить информацию о необходимой защите, введите количество часто используемых Вами устройств. </p>
+               </div>
+
+
+               <table class="table"  cellspacing="0"; border="1" >
+
+                   <tr>
+                       <td style="text-align:center; width:85%; font-weight: bold">Используете ли Вы:</td>
+
+
+                       <td style="text-align:center;width:15%">Кол-во </td>
+
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Мобильный телефон</th>
+                       <th> <input type="text" name="dev" id="ekran1" class="ekran" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Планшет</th>
+                       <th> <input type="text" name="dev"id="ekrank1" class="ekrank" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Ноутбук</th>
+                       <th> <input type="text" name="dev" id="ekrank2" class="ekrank" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Персональный компьютер</th>
+                       <th> <input type="text" name="dev" id="ekrank3" class="ekrank" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Телевизор</th>
+                       <th> <input type="text" name="dev" id="ekrank4" class="ekrank" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Роутер</th>
+                       <th> <input type="text" name="dev" id="ekranm1" class="ekranm" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Декодер для цифрового телевидения</th>
+                       <th> <input type="text" name="dev" id="ekranm2" class="ekranm" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Микроволновую печь</th>
+                       <th> <input type="text" name="dev"  id="ekranm3" class="ekranm" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Кондиционер</th>
+                       <th> <input type="text" name="dev" id="ekranm4" class="ekranm" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Машина</th>
+                       <th> <input type="text" name="dev" id="ekranm5" class="ekranm" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Видеорегистратор в машине</th>
+                       <th> <input type="text" name="dev" id="ekranm6" class="ekranm" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+                   <tr>
+                       <th style="text-align:left">Система охраны с видеонаблюдением/ видеодомофон</th>
+                       <th> <input type="text" name="dev" id="ekranm7" class="ekranm" min="0" max="100" step="1" value="0" onblur="if (this.value == '') {this.value = '0';}"
+                                   onfocus="if (this.value == '0') {this.value = '';}"> </th>
+                   </tr>
+
+
+               </table>
+
+
+           <div class="calc_block_param_btn">
+               <button id="calc_next" type="button">Далее</button>
+
+           </div>
+           </div>
+               <!----------Конец блока ввода парамтетров-------->
+
+               <!----------Начало вывода расчитанных параметров-------->
+           <div class="calc_block_itog"  id="calc_block_itog"  >
+
+               <div class="calc_block_itog_text">
+                 <p>Опаснее всего для здоровья человека излучение от мобильного телефона, так как он находится в постоянной близости к телу. Поэтому, в первую очередь рекомендуется
+                     приобрести <span> защиту на телефон "Экран"</span>.
+                     При наличии роутера в квартире используйте <span> защиту на роутер "Экран-М"</span> - 1 шт.</p>
+                 <p>Помимо этого для восстановления организма важно использовать <span>аккумулятор-корректрор "Витязь"</span> (достаточно 1 шт для всех членов семьи).</p>
+
+                 <p> Все остальные устройства рекомендуется защищать уже после этого.</p>
+                   <p><label>***</label></p>
+
+                 <p>Вот количество защиты для часто используемых Вами устройств:</p>
+               </div>
+
+               <div class="calc_block_itog_table">
+                   <table class="table"  cellspacing="0"; border="1" >
+
+                       <tr>
+                           <td style="text-align:center; width:70%; font-weight: bold">Наименование устройства</td>
+
+
+                           <td style="text-align:center;width:30%">Кол-во устройств </td>
+
+                       </tr>
+
+                       <tr>
+                           <th style="text-align:left">Экран</th>
+                           <th> <span id="Zr"></span>  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="text-align:left">Экран-К</th>
+                           <th> <span id="Zk"></span>  </th>
+                       </tr>
+
+                       <tr>
+                           <th style="text-align:left">Экран-М</th>
+                           <th> <span id="Zm"></span>  </th>
+                       </tr>
+                   </table>
+               </div>
+
+
+               <div class="calc_block_itog_btn">
+                  <div class="calc_itog_btn">
+
+                     <button id="calc_detail_old1" type="button">Назад</button>
+
+                     <button id="calc_detail" type="button">Подробнее</button>
+                  </div>
+               </div>
+
+
+
+
+
+
+
+           </div>
+
+             <div class="calc_block_itog2" id="calc_block_itog2">
+                 <div class="calc_block_detail"  id="calc_block_detail">
+                     <p><label>***</label></p>
+                     <table class="table"  cellspacing="0"; border="1" >
+
+                         <tr>
+                             <td style="text-align:center; width:30%; font-weight: bold">Куда</td>
+                             <td style="text-align:center;width:50%">Как </td>
+                             <td style="text-align:center;width:10%">Что </td>
+                             <td style="text-align:center;width:10%">Кол-во </td>
+
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на мобильный телефон</th>
+                             <th style="text-align:center">Устанавливается под крышкой мобильного телефона аккумуляторного отсека цветным знаком к крышке или в чехле телефона</th>
+                             <th style="text-align:center">Экран</th>
+                             <th style="text-align:center">1</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на планшет</th>
+                             <th style="text-align:center">две пластины с обратной стороны параллельно коротким граням на одинаковом расстоянии от краев и друг друга</th>
+                             <th style="text-align:center">Экран-К</th>
+                             <th style="text-align:center">2</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на ноутбук</th>
+                             <th style="text-align:center">пластины — по краям монитора по диагонали, одна с обратной стороны основной части ноутбука по центру</th>
+                             <th style="text-align:center">Экран-К</th>
+                             <th style="text-align:center">3</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на персональный компьютер</th>
+                             <th style="text-align:center">пластины — по бокам монитора на каждую сторону по одной, одна — на процессор, обращенный в сторону оператора</th>
+                             <th style="text-align:center">Экран-К</th>
+                             <th style="text-align:center">3</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на телевизор</th>
+                             <th style="text-align:center">Сзади экрана по 1 шт по углам</th>
+                             <th style="text-align:center">Экран-К</th>
+                             <th style="text-align:center">4</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на роутер</th>
+                             <th style="text-align:center">пластина — на центральную часть верхней поверхности роутера</th>
+                             <th style="text-align:center">Экран-М</th>
+                             <th style="text-align:center">1</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на декодер для цифрового телевидения</th>
+                             <th style="text-align:center">пластина — на центральную часть верхней поверхности декодера</th>
+                             <th style="text-align:center">Экран-М</th>
+                             <th style="text-align:center">1</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на микроволновую печь</th>
+                             <th style="text-align:center">четыре пластины — по боковым граням СВЧ на каждую сторону по одной</th>
+                             <th style="text-align:center">Экран-М</th>
+                             <th style="text-align:center">4</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на кондиционер</th>
+                             <th style="text-align:center">в центре по боковым торцам кондиционера.</th>
+                             <th style="text-align:center">Экран-М</th>
+                             <th style="text-align:center">2</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">в машину</th>
+                             <th style="text-align:center">пластина — на центральную консоль под мультимедийной системой машины</th>
+                             <th style="text-align:center">Экран-М</th>
+                             <th style="text-align:center">1</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на видеорегистратор в машине</th>
+                             <th style="text-align:center">пластина — на видеорегистратор на боковую грань, обращенную в сторону салона</th>
+                             <th style="text-align:center">Экран-М</th>
+                             <th style="text-align:center">1</th>
+                         </tr>
+
+                         <tr>
+                             <th style="text-align:left">на систему охраны с видеонаблюдением/ видеодомофон</th>
+                             <th style="text-align:center">в центре на верхней и нижней грани корпуса видеонаблюдения.</th>
+                             <th style="text-align:center">Экран-М</th>
+                             <th style="text-align:center">2</th>
+                         </tr>
+
+
+
+                     </table>
+
+
+                 </div>
+
+                 <div class="calc_block_itog_btn">
+                     <div class="calc_itog_btn">
+
+                         <button id="calc_detail_old2" type="button">Назад</button>
+
+
+                     </div>
+                 </div>
+
+                 <div class="calc_block_mail">
+                     <p>Защитные устройства можно приобрести в интернет-магазине на этом сайте.</p>
+                     <br>
+                     <p>Введите свою почту и вы получите письмо с подробной информацией куда и как устанавливать защитные устройства. </p>
+                     <form id="form1" action="send.php" method="post" >
+                         <div class="param_mail1" id="param_mail1">
+                             <input type="text" name="ekran" id="ekran"/>
+                             <input type="text" name="ekrank" id="ekrank"/>
+                             <input type="text" name="ekranm" id="ekranm"/>
+
+
+                         </div>
+
+                         <div class="first">
+                             <p> <input type="text" name="email" id="email" placeholder="Введите e-mail*"  size="30" required />
+                                 <span id="valid"></span></p>
+                         </div>
+                         <div class="form_button1" id="form_button1">
+                             <p class="submit" name="insert"><button type="submit">ОТПРАВИТЬ</button></p>
+                         </div>
+
+
+                     </form>
+
+                 </div>
+
+
+             </div>
+
+               <!----------Конец вывода расчитанных параметров-------->
+
+       </div>
+           <!----------Конец блока калькулятора-------->
+
+
+
+       </div>
+
+       <div class="sidebar">
+           <ul id="widgetlist" class="q2w3-fixed-widget-container">
+               <li>
+                   <a href=#" class="fancybox image">
+                       <img  src="img/saitbar.png" class="image wp-image-1480 attachment-medium size-medium" alt="">
+                   </a>
+               </li>
+
+               <li id="media_image-4" class="widget widget_media_image">
+                   <a href="calc.html" class="fancybox image">
+                       <img  src="img/calc55.jpg" class="image wp-image-1480 attachment-medium size-medium" alt="">
+                   </a>
+               </li>
+
+
+           </ul>
+
+
+
+
+       </div>
+     </div>
+
+   </div>
+
+
+   <div id="popup_success" class="popup_success">
+
+       <p>
+
+           Заказ оформлен! <br>
+
+           Мы свяжемся с вами в ближайшее время.
+       </p>
+       <br>
+
+       <a href="index.html" rel="popup_success" class="poplight"><span class="submit">ЗАКРЫТЬ ОКНО</span> </a>
+
+   </div>
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+   <script src="js/jquery00.js"></script>
+   <script src="js/dm-modal.js"></script>
+<script src="js/scriptsCalc.js"></script>
+
+
+
+</body>
+</html>

@@ -18,8 +18,8 @@ if (
     //$to = 'info@partwork.ru';
     $title = 'ЧЕТВЕРТОЕ ПОЛЕ';
     $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers = 'Content-type: text/html;  charset=utf-8'. "\r\n";
-    $headers ='From: webmaster@example.com';
+    $headers = 'From: webmaster@example.com; Content-type: text/html;  charset=utf-8'. "\r\n";
+
 
 
 

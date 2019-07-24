@@ -19,9 +19,9 @@ if (
     $title = 'ЧЕТВЕРТОЕ ПОЛЕ';
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers = 'Content-type: text/html;  charset=utf-8'. "\r\n";
-    //$from = 'alexandr2.tupichenkov2@yandex.ru';
+    $from = 'alexandr2.tupichenkov2@yandex.ru';
     //$headers2 = "From:" . $from;
-    $headers2 = 'From: alexandr2.tupichenkov2@yandex.ru' ;
+    //$headers2 = 'From: alexandr2.tupichenkov2@yandex.ru' ;
 
 
 
@@ -173,7 +173,7 @@ if (
        ";
 
 
-    $verify = mail($to, $title, $message, $headers, $headers2);
+    $verify = mail($from, $to, $title, $message, $headers);
     ini_set('display_errors','On');
     error_reporting('E_ALL');
     if ($verify) {

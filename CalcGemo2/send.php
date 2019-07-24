@@ -18,7 +18,10 @@ if (
     //$to = 'info@partwork.ru';
     $title = 'ЧЕТВЕРТОЕ ПОЛЕ';
     $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers = 'From: webmaster@example.com; Content-type: text/html;  charset=utf-8'. "\r\n";
+    $headers = 'Content-type: text/html;  charset=utf-8'. "\r\n";
+    $from = 'alexandr2.tupichenkov2@yandex.ru';
+    $headers2 = "From:" . $from;
+
 
 
 
@@ -169,7 +172,7 @@ if (
        ";
 
 
-    $verify = mail($to, $title, $message, $headers);
+    $verify = mail($to, $title, $message, $headers, $headers2);
     ini_set('display_errors','On');
     error_reporting('E_ALL');
     if ($verify) {

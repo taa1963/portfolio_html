@@ -19,8 +19,9 @@ if (
     $title = 'ЧЕТВЕРТОЕ ПОЛЕ';
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers = 'Content-type: text/html;  charset=utf-8'. "\r\n";
-    $from = 'alexandr2.tupichenkov2@yandex.ru';
-    $headers2 = "From:" . $from;
+    //$from = 'alexandr2.tupichenkov2@yandex.ru';
+    //$headers2 = "From:" . $from;
+    $headers2 = 'From: alexandr2.tupichenkov2@yandex.ru' ;
 
 
 

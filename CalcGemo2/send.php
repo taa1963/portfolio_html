@@ -12,7 +12,7 @@ if (
     $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 1000000);
     //$to = 'clublaser@mail.ru';
     $to = $_POST['email'];
-    $from = 'alexandr2.tupichenkov2@yandex.ru';
+    //$from = 'alexandr2.tupichenkov2@yandex.ru';
     // $to = $email;
     //$to = 'alexandr.tupichenkov@yandex.ru';
     //$to = 'info@partwork.ru';
@@ -166,7 +166,7 @@ if (
        ";
 
 
-    $verify = mail( $from, $to, $title, $message, $headers);
+    $verify = mail($to, $title, $message, $headers,"From: example2@mail.ru");
     ini_set('display_errors','On');
     error_reporting('E_ALL');
     if ($verify) {

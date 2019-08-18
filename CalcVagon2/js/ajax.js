@@ -1,12 +1,6 @@
 $( document ).ready(function() {
     $("#sm").click(function(){
 
-
-
-
-
-
-
             sendAjaxForm('result_form', 'form1', 'send.php');
             return false;
         }

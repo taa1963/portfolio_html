@@ -14,7 +14,7 @@ if (
     $message = "
         Был получен заказ с сайта от:
         Код страны: $cod
-        Телефон клиента $TypeClient
+        Телефон клиента: $client_tel
         
        ";
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Цена межевания участка">
+
+
+    <link href="cssnew/bootstrap.min.css" rel="stylesheet">
+    <link href="cssnew/bootstrap-select.css" rel="stylesheet">
+
+    <link href="cssnew/modal-contact.css" rel="stylesheet">
+	<link href="cssnew/style.css" rel="stylesheet">
+    <script src="cssnew/ajax.js"></script>
+
+
+</head>
+<body>
+
+
+
+
+<!--<данный блок нужно интегрировать в ваш сайт-->
+
+
+
+<style>
+
+
+
+    .pkr {
+        background:url(img/ru.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+    .ukr{
+        background:url(img/ua.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .kz{
+        background:url(img/kz.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .bv{
+        background:url(img/by.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .az{
+        background:url(img/az.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .am{
+        background:url(img/am.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .kg{
+        background:url(img/kg.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .md{
+        background:url(img/md.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .tj{
+        background:url(img/tj.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .tm{
+        background:url(img/tm.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .uz{
+        background:url(img/uz.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .us{
+        background:url(img/us.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .gb{
+        background:url(img/gb.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .ca{
+        background:url(img/ca.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .au{
+        background:url(img/au.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .ie{
+        background:url(img/ie.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .nz{
+        background:url(img/nz.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .in{
+        background:url(img/in.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .pk{
+        background:url(img/pk.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .ph{
+        background:url(img/ph.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .ng{
+        background:url(img/ng.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    .za{
+        background:url(img/za.png) 100% 100% no-repeat;
+        width:45px;
+        height:34px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+
+
+</style>
+
+
+
+
+
+   <div class="calculator" id="calculator">
+   
+    <div class="calculator__items" >
+	<div class="calculator__items_img" >
+	</div>
+	
+	   <h2> Калькулятор</h2>
+	  
+	  </div>
+
+   
+      <div class="calculator__blocs">
+
+          <div class="calculator_params">
+	          <div class="row">
+
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                      <div class="calculator_param" id="param1" >
+                      <p>ТАРА ВАГОНА</p>
+                          <div class="calc_block1">
+                              <!--<p class="range">-->
+
+                              <!--<input type="range" min="0" max="100" value="25" step="1" name="groep1" id="test2">-->
+                              <!--</p>-->
+                              <input type="text" id="tarae" class="tarae" readonly>
+
+                              <input type="range" class="tara" id="tara" min="18" max="60" step="0.1" value="18"  >
+                              <div class="calc_block1_line">
+                                  <span class="sp1 sp18" id="sp18">18</span>
+                                  <span class="sp1 sp21" id="sp21">21</span>
+                                  <span class="sp1 sp24" id="sp24">24</span>
+                                  <span class="sp1 sp27" id="sp27">27</span>
+                                  <span class="sp1 sp30" id="sp30">30</span>
+                                  <span class="sp1 sp33" id="sp33">33</span>
+                                  <span class="sp1 sp36" id="sp36">36</span>
+                                  <span class="sp1 sp39" id="sp39">39</span>
+                                  <span class="sp1 sp42" id="sp42">42</span>
+                                  <span class="sp1 sp45" id="sp45">45</span>
+                                  <span class="sp1 sp48" id="sp48">48</span>
+                                  <span class="sp1 sp51" id="sp51">51</span>
+                                  <span class="sp1 sp54" id="sp54"></span>
+                                  <span class="sp1 sp57" id="sp57">57</span>
+                                  <span class="sp1 sp60" id="sp60">60</span>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+		  
+		  
+		          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="calculator_param" id="param2" >
+                          <p>ВЕС НЕ МЕТАЛ. ИЗДЕЛИЙ</p>
+                          <div class="calc_block1">
+
+                              <input type="number" class="ves" id="ves"  min="0" step="1" placeholder="кг" value="0" >
+                          </div>
+                      </div>
+
+                  </div>
+		  
+		          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                      <div class="calculator_param" id="param3" >
+                          <p>МОДЕЛЬ ВАГОНА</p>
+                          <div class="calc_block1">
+                              <input type="text" class="ves"  name="model" id="model" placeholder="Введите модель вагона" />
+                          </div>
+                      </div>
+                  </div>
+		      </div>
+          </div>
+
+          <div class="calculator_wheels">
+              <div class="calculator_wheels_titel">
+                  <p>Толщина колес</p>
+              </div>
+
+              <div class="row">
+
+                  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                      <div class="calculator_wheel" id="wheel1" >
+                          <p>КОЛ.ПАРА №1</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="wheel1_1" data-options="900" data-option="8" value="0" data-name="Кол.Пара №1">
+                                  <option value="199500" data-option="0" data-desc="Описание">Более 70 мм</option>
+                                  <option value="190000" data-option="1" data-desc="Описание">69-65 мм</option>
+                                  <option value="178000" data-option="2" data-desc="Описание">64-60 мм</option>
+                                  <option value="163000" data-option="3" data-desc="">59-55 мм</option>
+                                  <option value="153000" data-option="4" data-desc="">54-50 мм</option>
+                                  <option value="142500" data-option="5" data-desc="">49-45 мм</option>
+                                  <option value="133000" data-option="6" data-desc="">44-40 мм</option>
+                                  <option value="114000" data-option="7" data-desc="">39-35 мм</option>
+                                  <option selected="selected" value="0" data-option="8" data-desc="">Менее 35 мм</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                      <div class="calculator_wheel" id="wheel2" >
+                          <p>КОЛ.ПАРА №2</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="wheel1_2" data-options="900" data-option="8" value="0" data-name="Кол.Пара №1">
+                                  <option value="199500" data-option="0" data-desc="Описание">Более 70 мм</option>
+                                  <option value="190000" data-option="1" data-desc="Описание">69-65 мм</option>
+                                  <option value="178000" data-option="2" data-desc="Описание">64-60 мм</option>
+                                  <option value="163000" data-option="3" data-desc="">59-55 мм</option>
+                                  <option value="153000" data-option="4" data-desc="">54-50 мм</option>
+                                  <option value="142500" data-option="5" data-desc="">49-45 мм</option>
+                                  <option value="133000" data-option="6" data-desc="">44-40 мм</option>
+                                  <option value="114000" data-option="7" data-desc="">39-35 мм</option>
+                                  <option selected="selected" value="0" data-option="8" data-desc="">Менее 35 мм</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                      <div class="calculator_wheel" id="wheel3" >
+                          <p>КОЛ.ПАРА №3</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="wheel1_3" data-options="900" data-option="8" value="0" data-name="Кол.Пара №1">
+                                  <option value="199500" data-option="0" data-desc="Описание">Более 70 мм</option>
+                                  <option value="190000" data-option="1" data-desc="Описание">69-65 мм</option>
+                                  <option value="178000" data-option="2" data-desc="Описание">64-60 мм</option>
+                                  <option value="163000" data-option="3" data-desc="">59-55 мм</option>
+                                  <option value="153000" data-option="4" data-desc="">54-50 мм</option>
+                                  <option value="142500" data-option="5" data-desc="">49-45 мм</option>
+                                  <option value="133000" data-option="6" data-desc="">44-40 мм</option>
+                                  <option value="114000" data-option="7" data-desc="">39-35 мм</option>
+                                  <option selected="selected" value="0" data-option="8" data-desc="">Менее 35 мм</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                      <div class="calculator_wheel" id="wheel4" >
+                          <p>КОЛ.ПАРА №4</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="wheel1_4" data-options="900" data-option="8" value="0" data-name="Кол.Пара №1">
+                                  <option value="199500" data-option="0" data-desc="Описание">Более 70 мм</option>
+                                  <option value="190000" data-option="1" data-desc="Описание">69-65 мм</option>
+                                  <option value="178000" data-option="2" data-desc="Описание">64-60 мм</option>
+                                  <option value="163000" data-option="3" data-desc="">59-55 мм</option>
+                                  <option value="153000" data-option="4" data-desc="">54-50 мм</option>
+                                  <option value="142500" data-option="5" data-desc="">49-45 мм</option>
+                                  <option value="133000" data-option="6" data-desc="">44-40 мм</option>
+                                  <option value="114000" data-option="7" data-desc="">39-35 мм</option>
+                                  <option selected="selected" value="0" data-option="8" data-desc="">Менее 35 мм</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+
+
+
+              </div>
+          </div>
+
+          <div class="calculator_frames">
+              <div class="calculator_frames_titel">
+                  <p>Боковые рамы (год выпуска)</p>
+              </div>
+
+              <div class="row">
+
+                  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                      <div class="calculator_frame" id="frame1" >
+                          <p>РАМА №1</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="frame1_1" data-options="700" data-option="0" value="0" data-name="Кол.Пара №1">
+                                  <option selected="selected" value="0" data-option="0" data-desc="Описание">Старше 1993 г.в.</option>
+                                  <option value="16000" data-option="1" data-desc="Описание">1993 г.в.</option>
+                                  <option value="25000" data-option="2" data-desc="Описание">1994-1998 г.в.</option>
+                                  <option value="30000" data-option="3" data-desc="">1999-2003 г.в.</option>
+                                  <option value="37500" data-option="4" data-desc="">2004-2008 г.в.</option>
+                                  <option value="42500" data-option="5" data-desc="">2009-2013 г.в.</option>
+                                  <option value="45000" data-option="6" data-desc="">2014-2018 г.в.</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                      <div class="calculator_frame" id="frame2" >
+                          <p>РАМА №1</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="frame1_2" data-options="700" data-option="0" value="0" data-name="Кол.Пара №1">
+                                  <option selected="selected" value="0" data-option="0" data-desc="Описание">Старше 1993 г.в.</option>
+                                  <option value="16000" data-option="1" data-desc="Описание">1993 г.в.</option>
+                                  <option value="25000" data-option="2" data-desc="Описание">1994-1998 г.в.</option>
+                                  <option value="30000" data-option="3" data-desc="">1999-2003 г.в.</option>
+                                  <option value="37500" data-option="4" data-desc="">2004-2008 г.в.</option>
+                                  <option value="42500" data-option="5" data-desc="">2009-2013 г.в.</option>
+                                  <option value="45000" data-option="6" data-desc="">2014-2018 г.в.</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                      <div class="calculator_frame" id="frame3" >
+                          <p>РАМА №1</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="frame1_3" data-options="700" data-option="0" value="0" data-name="Кол.Пара №1">
+                                  <option selected="selected" value="0" data-option="0" data-desc="Описание">Старше 1993 г.в.</option>
+                                  <option value="16000" data-option="1" data-desc="Описание">1993 г.в.</option>
+                                  <option value="25000" data-option="2" data-desc="Описание">1994-1998 г.в.</option>
+                                  <option value="30000" data-option="3" data-desc="">1999-2003 г.в.</option>
+                                  <option value="37500" data-option="4" data-desc="">2004-2008 г.в.</option>
+                                  <option value="42500" data-option="5" data-desc="">2009-2013 г.в.</option>
+                                  <option value="45000" data-option="6" data-desc="">2014-2018 г.в.</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                      <div class="calculator_frame" id="frame4" >
+                          <p>РАМА №1</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="frame1_4" data-options="700" data-option="0" value="0" data-name="Кол.Пара №1">
+                                  <option selected="selected" value="0" data-option="0" data-desc="Описание">Старше 1993 г.в.</option>
+                                  <option value="16000" data-option="1" data-desc="Описание">1993 г.в.</option>
+                                  <option value="25000" data-option="2" data-desc="Описание">1994-1998 г.в.</option>
+                                  <option value="30000" data-option="3" data-desc="">1999-2003 г.в.</option>
+                                  <option value="37500" data-option="4" data-desc="">2004-2008 г.в.</option>
+                                  <option value="42500" data-option="5" data-desc="">2009-2013 г.в.</option>
+                                  <option value="45000" data-option="6" data-desc="">2014-2018 г.в.</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+
+
+
+              </div>
+          </div>
+
+          <div class="calculator_beams">
+              <div class="calculator_beams_titel">
+                  <p>Балка надрессорная (год выпуска</p>
+              </div>
+
+              <div class="row">
+
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                      <div class="calculator_beam" id="beam1" >
+                          <p>БАЛКА №1</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="fbeam1_1" data-options="700" data-option="0" value="0" data-name="Кол.Пара №1">
+                                  <option selected="selected"value="0" data-option="0" data-desc="Описание">1993 г.в. и старше</option>
+                                  <option value="22000" data-option="1" data-desc="Описание">1994-1998 г.в.</option>
+                                  <option value="32500" data-option="2" data-desc="Описание">1999-2003 г.в.</option>
+                                  <option value="35000" data-option="3" data-desc="">2004-2008 г.в.</option>
+                                  <option value="37500" data-option="4" data-desc="">2009-2013 г.в.</option>
+                                  <option value="42500" data-option="5" data-desc="">2014-2018 г.в.</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                      <div class="calculator_beam" id="beam2" >
+                          <p>БАЛКА №1</p>
+                          <div class="calc_block1">
+                              <select  class="wheel" id="fbeam1_2" data-options="700" data-option="0" value="0" data-name="Кол.Пара №1">
+                                  <option selected="selected"value="0" data-option="0" data-desc="Описание">1993 г.в. и старше</option>
+                                  <option value="22000" data-option="1" data-desc="Описание">1994-1998 г.в.</option>
+                                  <option value="32500" data-option="2" data-desc="Описание">1999-2003 г.в.</option>
+                                  <option value="35000" data-option="3" data-desc="">2004-2008 г.в.</option>
+                                  <option value="37500" data-option="4" data-desc="">2009-2013 г.в.</option>
+                                  <option value="42500" data-option="5" data-desc="">2014-2018 г.в.</option>
+                              </select>
+
+                          </div>
+                      </div>
+
+                  </div>
+
+
+
+
+              </div>
+          </div>
+
+
+
+
+          <div class="calculator_form">
+              <div class="calculator_form_titel">
+                  <p>Получить на 10% больше?</p>
+              </div>
+
+
+
+              <div class="row">
+
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <div class="calculator_form2" id="form2" >
+                          <form id="form1" method="post" id="ajax_form" action="">
+
+                          <p>ВАШ ТЕЛЕФОН</p>
+                          <div class="first">
+
+                              <div class="row">
+
+                              <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                  <select class="selectpicker" id="selectpicker" style="width:100%;">
+                                      <option class="sel1" value="pkr" data-icon="pkr"> Россия  </option>
+                                      <option class="sel1" value="ukr" data-icon="ukr"> Украина  </option>
+                                      <option class="sel1" value="kz" data-icon="kz"> Казахстан  </option>
+                                      <option class="sel1" value="bv" data-icon="bv"> Беларусь  </option>
+                                      <option class="sel1" value="az" data-icon="az"> Азербайджан  </option>
+                                      <option class="sel1" value="am" data-icon="am"> Армения  </option>
+                                      <option class="sel1" value="kg" data-icon="kg"> Киргистан  </option>
+                                      <option class="sel1" value="md" data-icon="md"> Молдавия </option>
+                                      <option class="sel1" value="tj" data-icon="tj"> Таджикистан </option>
+                                      <option class="sel1" value="tm" data-icon="tm"> Туркмения </option>
+                                      <option class="sel1" value="uz" data-icon="uz"> Узбекистан </option>
+                                      <option class="sel1" value="us" data-icon="us"> США </option>
+                                      <option class="sel1" value="gb" data-icon="gb"> Великобритания </option>
+                                      <option class="sel1" value="ca" data-icon="ca"> Канада </option>
+                                      <option class="sel1" value="au" data-icon="au"> Австралия </option>
+                                      <option class="sel1" value="ie" data-icon="ie"> Ирландия </option>
+                                      <option class="sel1" value="nz" data-icon="nz"> Новая Зеландия </option>
+                                      <option class="sel1" value="in" data-icon="in"> Индия </option>
+                                      <option class="sel1" value="pk" data-icon="pk"> Пакистан </option>
+                                      <option class="sel1" value="ph" data-icon="ph">Филипины </option>
+                                      <option class="sel1" value="ng" data-icon="ng">Нигерия </option>
+                                      <option class="sel1" value="za" data-icon="za">ЮАР </option>
+                                  </select>
+                              </div>
+
+                                  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                      <input class="cod" id="cod" name="cod" type="text" placeholder="+7" value="+7" readonly>
+                                  </div>
+
+                                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                              <input type="text" name="client_tel" id="client_tel" size="30" placeholder="Номер телефона" required="required" />
+                                  </div>
+                          </div>
+                          </div>
+                          <div class="frm_btn">
+                              <button class="submit" id="sm" type="button">Получить на 10% денег больше</button>
+                           </div>
+                          <span>Cоглашаюсь на <a href="#?w=700" rel="popup_contact" class="poplight">обработку персональных данных</a></span>
+
+
+
+                          </form>
+                      </div>
+
+
+
+                  </div>
+
+              </div>
+          </div>
+
+          <div class="calculator_itogs">
+
+
+              <div class="row">
+
+                  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                      <div class="calculator_itog" id="itog1" >
+
+                          <div class="calc_itog1_titel">
+                              <p>Итого лом</p>
+                          </div>
+                          <div class="calc_itog1_summ">
+                              <p><span id="summlom"></span>&nbsp;тонн</p>
+
+                          </div>
+                      </div>
+
+                  </div>
+
+                  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                      <div class="calculator_itog" id="itog2" >
+
+                          <div class="calc_itog1_titel">
+                              <p>Итого запчасти</p>
+                          </div>
+                          <div class="calc_itog1_summ">
+                              <p><span id="summsap"></span>&nbsp;руб.</p>
+
+                          </div>
+                      </div>
+
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                      <div class="calculator_itog" id="itog3" >
+
+                          <div class="calc_itog1_titel">
+                              <p>Вы заработаете</p>
+                          </div>
+                          <div class="calc_itog1_summ">
+                              <p><span id="summitog"></span>&nbsp;руб. с НДС</p>
+
+                          </div>
+                      </div>
+
+                  </div>
+
+
+
+
+              </div>
+          </div>
+
+          <div id="popup_contact" class="popup_block">
+              <div class="note">
+                  <h2>Пользовательское соглашение</h2>
+              </div>
+
+              <div class="note_txt">
+
+              <p>Я, субъект персональных данных, в соответствии с Федеральным законом от 27 июля
+                  2006 года № 152 «О персональных данных» <br> предоставляю владельцу формы (далее - Оператор),
+                  согласие на обработку персональных данных, указанных мной в форме калькулятора
+                  и/<br>или форме заказа товара и/или услуг на сайте в сети «Интернет», владельцем которого
+                  является Оператор.</p>
+                  <ol type="1"  start="1" >
+                      <li>Состав предоставляемых мной персональных данных является следующим: ФИО, адрес электронной почты и номер телефона.</li>
+                      <li>Целями обработки моих персональных данных являются: обеспечение обмена короткими текстовыми сообщениями в режиме онлайн-диалога и обеспечение функционирования обратного звонка.</li>
+                      <li>Согласие предоставляется на совершение следующих действий (операций) с указанными в настоящем согласии персональными данными: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, передачу (предоставление, доступ), блокирование, удаление, уничтожение, осуществляемых как с использованием средств автоматизации (автоматизированная обработка), так и без использования таких средств (неавтоматизированная обработка).</li>
+                      <li>Я понимаю и соглашаюсь с тем, что предоставление Оператору какой-либо информации о себе, не являющейся контактной и не относящейся к целям настоящего согласия, а равно предоставление информации, относящейся к государственной, банковской и/или коммерческой тайне, информации о расовой и/или национальной принадлежности, политических взглядах, религиозных или философских убеждениях, состоянии здоровья, интимной жизни запрещено.</li>
+                      <li>В случае принятия мной решения о предоставлении Оператору какой-либо информации (каких-либо данных), я обязуюсь предоставлять исключительно достоверную и актуальную информацию и не вправе вводить Оператора в заблуждение в отношении своей личности, сообщать ложную или недостоверную информацию о себе.</li>
+                      <li>Я понимаю и соглашаюсь с тем, что Оператор не проверяет достоверность персональных данных, предоставляемых мной, и не имеет возможности оценивать мою дееспособность и исходит из того, что я предоставляю достоверные персональные данные и поддерживаю такие данные в актуальном состоянии.</li>
+                      <li>Согласие действует по достижении целей обработки или в случае утраты необходимости в достижении этих целей, если иное не предусмотрено федеральным законом.</li>
+                      <li>Согласие может быть отозвано мною в любое время на основании моего письменного заявления.</li>
+                  </ol>
+
+              </div>
+
+          </div>
+
+	  
+	  </div>
+   
+   
+   </div>
+
+
+
+
+  <!----------Конец блока калькулятора-------->
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script src="js/ajax.js"></script>
+
+<script src="js/jquery00.js"></script>
+<script src="js/dm-modal.js"></script>
+<script src="js/scriptsCalc.js"></script>
+<!--<script src="js/jquery.maskedinput.min.js"></script>-->
+<!--<script>-->
+    <!--$("#telefon").mask("+7(999)999-99-99");-->
+<!--</script>-->
+
+</body>
+</html>

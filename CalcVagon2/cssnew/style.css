@@ -1,0 +1,635 @@
+@import"reset200802.css";
+
+
+body{
+	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #30343f;
+    background-color: #f3f5f9;
+}
+
+.row{
+    margin: 0;
+}
+
+
+.col-lg-4, .col-md-4 {
+ padding: 0;
+}
+
+.col-lg-3, .col-md-3 {
+    padding: 0;
+}
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+
+.calculator{
+	display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+	 margin-top: 25px;
+}
+
+.calculator__items{
+	display:block;
+	width:90%;
+	margin:0 auto;
+	padding-bottom: 20px;
+    padding-top: 32px;
+	
+}
+
+.calculator__items_img{
+	content: "";
+background-image: url(../img/circle.png);
+width: 119px;
+height: 119px;
+background-repeat: no-repeat;
+background-size: cover;
+position: absolute;
+margin: -31px 0px 0px -50px;
+z-index: -1;
+}
+
+
+.calculator__items h2{
+font-size: 48px;
+color: #30343f;
+text-transform: uppercase;
+font-weight: 700;
+position: relative;
+z-index: 7;
+margin: 0px 0px 30px 0px;
+}
+
+
+.calculator__blocs{
+	display: block;
+	max-width: 960px;
+	min-height:150px;
+	margin:0 auto;
+	background:#ffffff;
+}
+.calc_block1_line{
+    display:block;
+    width: 100%;
+}
+
+
+.calc_block1_line span{
+    display: block;
+    width: 6.65%;
+    float: left;
+    font-size: 0.84em;
+    color: #5d5d5d;
+    text-align: center;
+}
+.tarae{
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    padding-bottom: 5px;
+
+}
+.spbl{
+    /*color: #6598ff;*/
+    background-color: #6598ff;
+}
+
+/*		Описание блока Основных Параметров и его компоненты		*/
+
+input[type=range] {
+    -webkit-appearance: none;
+    height: 35px;
+    padding: 0;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    border: 6px solid #5082e0;
+    height: 6px;
+    width: 6px;
+    border-radius: 18px;
+    background-color: #5082e0;
+    cursor: e-resize!important;
+    /*cursor: ew-resize;*/
+    margin-top: -7px;
+    /*opacity: .7;*/
+}
+
+input[type=range]::-moz-range-thumb {
+    border: 6px solid #5082e0;
+    height: 6px;
+    width: 6px;
+    border-radius: 18px;
+    background-color: #5082e0;
+    cursor: e-resize!important;
+    /*cursor: ew-resize;*/
+    margin-top: -14px;
+    /*opacity: .7;*/
+
+}
+
+input[type=range]::-ms-thumb {
+    display: inline-block;
+    border:6px solid #5082e0;
+    height: 6px;
+    width: 6px;
+    border-radius: 18px;
+    background-color: #5082e0;
+    cursor: ew-resize;
+    margin-top: 5px; /* note: different margin-top for IE */
+}
+
+
+/*input[type='range']::-webkit-slider-runnable-track {*/
+/*height: 10px;*/
+/*-webkit-appearance: none;*/
+/*color: #13bba4;*/
+/*margin-top: -1px;*/
+/*}*/
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 3px;
+    border-color: transparent;
+    color: transparent;
+    background-color: #cccccc;
+}
+
+input[type=range]::-moz-range-track {
+    height: 3px;
+    background-color: #cccccc;
+}
+
+input[type=range]::-ms-track {
+    border-color: transparent;
+    color: transparent;
+    height: 3px;
+    background-color: #cccccc;
+}
+
+input[type=range]::-ms-fill-lower {
+    background-color: #5082e0;
+
+}
+
+input[type=range]::-moz-range-progress {
+    background-color: #5082e0;
+}
+
+input[type=range]::-ms-tooltip {
+    background-color: #5082e0;
+    display: none;
+}
+
+
+
+/*		Описание блока Основных Параметров и его компоненты		*/
+.calculator_param{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 18px;
+}
+
+.calculator_param p{
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 18px!important;
+    letter-spacing: 2px;
+    color: #242424;
+    font-family: Roboto-Regular,sans-serif;
+}
+
+.calc_block1{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.ves{
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    background-color: #efefef;
+    color: #5d5d5d;
+    font-size: 14px;
+    padding: 10px 12px;
+}
+
+
+/*		Описание блока Толщина колес и его компоненты		*/
+.calculator_wheels{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 18px;
+}
+
+.calculator_wheels_titel p {
+    text-align: center;
+    color: #282828;
+    font-family: Roboto-Regular, sans-serif;
+    font-weight: 700;
+    font-size: 20px!important;
+}
+
+.calculator_wheel{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 18px;
+}
+
+
+.calculator_wheel p{
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 18px!important;
+    letter-spacing: 2px;
+    color: #242424;
+    font-family: Roboto-Regular,sans-serif;
+}
+
+.calc_block1 select{
+    font-size: 14px;
+    width: 100%;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    padding: 10px 40px 10px 12px;
+    border: none;
+    color: #5d5d5d;
+    background: url(../img/sel.svg);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-position-x: calc(100% - 17px);
+    background-color: #efefef;
+
+}
+
+
+/*		Описание блока Боковые рамы и его компоненты		*/
+.calculator_frames{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 18px;
+}
+
+.calculator_frames_titel p {
+    text-align: center;
+    color: #282828;
+    font-family: Roboto-Regular, sans-serif;
+    font-weight: 700;
+    font-size: 20px!important;
+}
+
+.calculator_frame{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 18px;
+}
+
+
+.calculator_frame p{
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 18px!important;
+    letter-spacing: 2px;
+    color: #242424;
+    font-family: Roboto-Regular,sans-serif;
+}
+
+/*		Описание блока Балка надрессорная (год выпуска) и его компоненты		*/
+.calculator_beams{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 18px;
+}
+
+.calculator_beams_titel p {
+    text-align: center;
+    color: #282828;
+    font-family: Roboto-Regular, sans-serif;
+    font-weight: 700;
+    font-size: 20px!important;
+}
+
+.calculator_beam{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 18px;
+}
+
+
+.calculator_beam p{
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 18px!important;
+    letter-spacing: 2px;
+    color: #242424;
+    font-family: Roboto-Regular,sans-serif;
+}
+
+/*		Описание блока формы  и ее компоненты		*/
+
+
+.calculator_form_titel{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.calculator_form_titel p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px!important;
+    color: #282828;
+    font-family: Roboto-Regular,sans-serif;
+    line-height: 24px;
+}
+
+.calculator_form2{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 12px;
+    margin-bottom: 20px;
+}
+
+.calculator_form2 p{
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 18px!important;
+    letter-spacing: 2px;
+    color: #242424;
+    font-family: Roboto-Regular,sans-serif;
+
+}
+
+
+.calculator_form2 span{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    /*padding-top: 20px;*/
+    /*padding-bottom: 20px;*/
+}
+
+.bootstrap-select > .dropdown-toggle {
+    width: 100%;
+    padding-right: 0px;
+    z-index: 1;
+    background-color: #efefef;
+    border: 0;
+}
+
+.bootstrap-select > .dropdown-toggle:hover {
+    width: 100%;
+    padding-right: 0px;
+    z-index: 1;
+    background-color: #efefef;
+    border: 0;
+}
+.bootstrap-select > .dropdown-toggle:active {
+    width: 100%;
+    padding-right: 0px;
+    z-index: 1;
+    background-color: #efefef;
+    border: 0;
+}
+
+.first{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #efefef;
+}
+
+.first select span{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.btn-group .dropdown-toggle .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+
+
+
+.sel1{
+    display: block;
+    /*width: 20%;*/
+    /*float: left;*/
+    /*background-color: #0f0f0f;*/
+    text-align: right;
+    padding-top: 5px;
+}
+
+.option{
+    display: block;
+    /*width: 20%;*/
+    float: left;
+    /*background-color: #0f0f0f;*/
+    text-align: right;
+    padding-top: 5px;
+}
+
+.first input{
+    display: block;
+    width: 100%;
+    background-color: #efefef;
+    border: 0;
+    float: left;
+    padding-left: 1px;
+    padding-top: 15px;
+}
+
+.frm_btn{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.submit{
+    display: block;
+    color: #fff;
+    border: 2px solid #6598ff;
+    background-color: #6598ff;
+    text-transform: uppercase;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    line-height: 38px;
+    font-size: 14px;
+    width: auto !important;
+    border-radius: 50px !important;
+}
+
+.submit:hover{
+    background-color: #ffffff;
+    color: #6598ff;
+}
+
+.submit:active{
+    background-color: #ffffff;
+    color: #6598ff;
+}
+.cod{
+
+
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    color: #5d5d5d;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: Roboto-Regular,sans-serif;
+    padding-top: 15px;
+}
+
+
+
+
+/*		Описание блока Итогов и его компоненты		*/
+.calculator_itog{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 18px;
+    border-top: 2px solid  #6598ff;;
+}
+
+.calc_itog1_titel{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+    /*float: right;*/
+}
+
+.calc_itog1_titel p{
+    text-align: right;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: AvenirNextCyr,Arial,sans-serif;
+    line-height: 24px;
+    color: rgba(36,36,36,.7);
+
+}
+
+
+.calc_itog1_summ{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.calc_itog1_summ p{
+    text-align: right;
+    /*font-weight: bold;*/
+    font-size: 18px;
+    font-weight: 700;
+    font-family: AvenirNextCyr,Arial,sans-serif;
+    line-height: 24px;
+    color: #242424;
+}
+
+
+
+
+
+
+
+/*		Описание блока Толщина колес и его компоненты		*/
+
+
+
+
+
+.
+
+
+
+/* ================= Форма отправки и кнопка оформить    =============*/
+
+
+
+
+
+
+
+
+
+@media only screen  and (max-width: 990px) {
+
+    .area{
+        width: 48%;
+    }
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+    .calc_param {
+        display: block;
+        width: 100%;
+    }
+
+    .calc_itog{
+        display: block;
+        width: 100%;
+    }
+   
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+
+
+
+
+}

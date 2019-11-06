@@ -1,0 +1,171 @@
+
+/*Описание контейнера и его компонентов при передаче закрыть */
+.container {
+    position: relative;
+    word-wrap: break-word;
+    height: auto;
+    margin: 0 auto;
+ }
+
+/*Описание header и его компонентов */
+
+.menu{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.menu img{
+    width: 100%;
+}
+
+
+.form_block{
+    display: block;
+    width: 77%;
+    float: right;
+    height: 100px;
+
+}
+
+
+
+.s3_form{
+    display: block;
+    position: relative;
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: 0 0 12.96px 3.04px rgba(0,0,0,.09);
+}
+
+.vn{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+
+.s3_required{
+    color: red;
+}
+
+
+
+.s3_form_field_title{
+    display: block;
+    width:30% ;
+    float: left;
+}
+
+.s3_form_item{
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.s3_form_field_content{
+    display: block;
+    width:70% ;
+    background: #f2f2f4;
+    float: right;
+}
+
+.s3_form_field_content input{
+    background: #f2f2f4;
+    border: none;
+    width: 100%;
+}
+
+.s3_form_field_content select{
+    background: #f2f2f4;
+    border: none;
+    width: 100%;
+}
+
+.itembtn{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.btnfrm{
+    display: block;
+    margin: 0 auto;
+    background: #3B5782 !important;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+@media only screen  and (max-width: 1024px) {
+    
+.tarif-name{
+	font-size:1.8em;
+}
+.tarif-element ul{
+    margin-top: 20px;
+    padding: 2px 1px 2px;
+    font-size: 1em;
+    line-height: 1.5em;
+
+}
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+   
+.tarif-name{
+    font-size: 1.4em;
+}
+
+
+
+
+    .tarif-wrap p {
+        font-size: 16px;
+    }
+
+    .tarif_block_button .poplight {
+        font-size: 15px;
+        padding: 20px 0px;
+    }
+
+    .calc_block1_pol span{
+        font-size: 17px;
+    }
+
+
+    .calc_block2_pol span{
+        font-size: 17px;
+    }
+    .calc_block2_pol input {
+         width: 65%
+    }
+
+    .calc_block2_pol input {
+         width: 65%
+    }
+
+
+
+
+    
+}
+
+@media only screen  and (max-width: 480px) {
+    .tarif_block_button .poplight {
+        font-size: 11px;
+        padding: 20px 0px;
+    }
+
+    .tapif_mob {
+        display: block;
+    }
+
+
+
+}

@@ -1,15 +1,15 @@
-var  Zena1000, Zena1000_2, ZenaGaz;
+var  Zena1000,Zena2000,Zena3000, Zena6000, Zena1000_2, Zena2000_2,Zena3000_2,Zena6000_2, ZenaGaz;
 
 
 Zena1000=19;
-// Zena2000=18.5;
-// Zena3000=18;
-// Zena6000=17.7;
+Zena2000=18.5;
+Zena3000=18;
+Zena6000=17.7;
 
 Zena1000_2=19.5;
-// Zena2000_2=19;
-// Zena3000_2=18.5;
-// Zena6000_2=18;
+Zena2000_2=19;
+Zena3000_2=18.5;
+Zena6000_2=18;
 
 ZenaGaz=0;
 
@@ -82,7 +82,10 @@ $(document).ready(function() {
         var val = document.getElementById("list1").value;
 
         $('#val').text(val);
-        if (val==1) {ZenaGaz=Zena1000; };
+        if (val==1) { ZenaGaz=Zena1000; };
+
+
+
         if (val==2) {ZenaGaz=Zena1000_2; };
 
 
@@ -110,8 +113,45 @@ $(document).ready(function() {
         var val = document.getElementById("list1").value;
 
         $('#val').text(val);
-        if (val==1) {var Zenal=Zena1000; };
-        if (val==2) {var Zenal=Zena1000_2; };
+        if (val==1) {
+            if (Vgaz<=1000){
+                Zenal=Zena1000
+            }
+            if ((Vgaz>1000)&&(Vgaz<=2000)){
+                Zenal=Zena2000
+            }
+            if ((Vgaz>2000)&&(Vgaz<=3000)){
+                Zenal=Zena3000
+            }
+            if ((Vgaz>3000)){
+                Zenal=Zena6000
+            }
+
+
+        };
+
+
+
+
+        if (val==2) {
+            if (Vgaz<=1000){
+                Zenal=Zena1000_2
+            }
+            if ((Vgaz>1000)&&(Vgaz<=2000)){
+                Zenal=Zena2000_2
+            }
+            if ((Vgaz>2000)&&(Vgaz<=3000)){
+                Zenal=Zena3000_2
+            }
+            if ((Vgaz>3000)){
+                Zenal=Zena6000_2
+            }
+
+         };
+
+
+
+
 
         ZenaGaz=Vgaz*Zenal;
 

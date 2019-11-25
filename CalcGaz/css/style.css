@@ -1,9 +1,186 @@
 
 body{
     margin: 0;
+
 }
 
 /*		Описание блока калькулятора и его компонент		*/
+
+
+
+
+/*input[type=range] {*/
+    /*-webkit-appearance: none; !* Hides the slider so that custom slider can be made *!*/
+    /*!*width: 100%; !* Specific width is required for Firefox. *!*!*/
+    /*background: transparent; !* Otherwise white in Chrome *!*/
+/*}*/
+
+
+
+/*input[type="range"]::-moz-range-progress {*/
+    /*background-color: #8dc442;*/
+/*}*/
+
+/*.firefox input[type=range]::-moz-range-track {*/
+    /*border-radius: 8px;*/
+    /*height: 7px;*/
+    /*border: 1px solid #bdc3c7;*/
+    /*background-color: #8dc442;*/
+/*}*/
+
+
+/*.firefox input[type=range]::-moz-range-track {*/
+    /*border-radius: 8px;*/
+    /*height: 7px;*/
+    /*border: 1px solid #bdc3c7;*/
+    /*background-color: #fff;*/
+/*}*/
+
+/*input[type="range"]::-ms-track {*/
+    /*.track();*/
+    /*width: 100%;*/
+    /*height: 10px;*/
+    /*cursor: pointer;*/
+    /*background:-webkit-linear-gradient(left ,#8870FF 0%,#8870FF 25%,#fff 25%, #fff 100%);*/
+    /*background-color:#8dc442;*/
+    /*border-color: #8dc442;*/
+    /*border-width: 16px 0;*/
+    /*color: #8dc442;*/
+/*}*/
+
+
+/*input[type="range"]::-ms-backdrop{*/
+    /*background-color:#8dc442;*/
+/*}*/
+
+/*input[type="range"]{*/
+    /*background:-webkit-linear-gradient(left ,#8870FF 0%,#8870FF 25%,#fff 25%, #fff 100%);*/
+/*}*/
+
+/*input[type="range"]::-ms-fill-lower {*/
+    /*background-color: #8dc442;*/
+    /*border-radius: 5px;*/
+/*}*/
+/*input[type="range"]::-ms-fill-upper {*/
+    /*background-color: #8dc442;*/
+    /*border-radius: 5px;*/
+/*}*/
+
+
+/*input[type="range"]::-ms-thumb {*/
+
+    /*background: #8dc442;*/
+    /*}*/
+
+     /*=============================*/
+
+/*input[type="range"]::-ms-range-progress {*/
+    /*background-color: #8dc442;*/
+/*}*/
+
+/*input[type="range"]::-ms-track {*/
+    /*background-color: #8dc442;*/
+/*}*/
+
+
+/*input[type="range"]::-moz-range-track {*/
+    /*background-color:#fdfefd;*/
+/*}*/
+
+/*input[type="range"]::-ms-fill-lower {*/
+    /*background-color: #8dc442;*/
+/*}*/
+
+/*input[type="range"]::-ms-fill-upper {*/
+    /*background-color: #fdfefd;*/
+/*}*/
+
+
+
+    /*=====================*/
+
+/*input[type='range']::-webkit-slider-thumb {*/
+    /*width: 100%;*/
+    /*-webkit-appearance: none;*/
+    /*!*height: 10px;*!*/
+    /*cursor: ew-resize;*/
+    /*background: #434343;*/
+    /*box-shadow: -80px 0 0 80px #43e5f7;*/
+/*}*/
+
+/*input[type=range]::-moz-range-thumb {*/
+    /*!*background-color:#8dc442;*!*/
+/*}*/
+/*input[type="range"]{*/
+    /*-webkit-appearance: none;*/
+    /*border-radius:2px;*/
+    /*width:200px;*/
+    /*height:3px;*/
+    /*background-image:-webkit-linear-gradient(left ,#f22 0%,#f22 50%,#fff 50%, #fff 100%);*/
+    /*box-shadow:inset #ebb 0 0 5px;*/
+    /*outline : none;*/
+    /*transition:.1s;*/
+/*}*/
+/*input[type="range"]::-webkit-slider-thumb{*/
+    /*-webkit-appearance: none;*/
+    /*width:10px;*/
+    /*height:10px;*/
+    /*background:#f22;*/
+    /*border-radius:50%;*/
+    /*transition:.1s;*/
+/*}*/
+
+/*input[type="range"]::-webkit-slider-thumb:hover,*/
+/*input[type="range"]::-webkit-slider-thumb:active{*/
+    /*width:16px;*/
+    /*height:16px;*/
+/*}*/
+
+/*input[type='range']::-webkit-slider-thumb {*/
+    /*-webkit-appearance: none;*/
+    /*width: 10px;*/
+    /*height: 10px;*/
+    /*background: #f22;*/
+    /*border-radius: 50%;*/
+    /*transition: .1s;*/
+/*}*/
+/*input[type='range'] {*/
+    /*background-image: -webkit-linear-gradient(left, #f22 0%, #f22 15%, #fff 15%, #fff 100%);*/
+    /*!*background: #f22;*!*/
+/*}*/
+
+/*input[type='range']::-webkit-slider-thumb{*/
+    /*-webkit-appearance: none;*/
+    /*width:18px;*/
+    /*height:18px;*/
+    /*background:#8dc442;*/
+    /*border-radius:18px;*/
+    /*cursor:pointer;*/
+    /*transition:.1s;*/
+/*}*/
+
+
+.vgazline{
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 4em;
+    width: 0%;
+    height: 5px;
+    background-color:#8dc442 ;
+    z-index: 12;
+}
+
+.lgazline{
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 1em;
+    width: 0%;
+    height: 5px;
+    background-color:#8dc442 ;
+    z-index: 12;
+}
 
 .block{
     margin-top: 10px;
@@ -19,9 +196,6 @@ body{
     height: auto;
     background-color: #edecea;
 }
-
-
-
 .calc_block{
     display: block;
     width: 70%;
@@ -30,7 +204,6 @@ body{
     border: 1px solid #c9c9c9;
     margin-top: 10px;
 }
-
 .calc_block1{
     display: block;
     position: relative;
@@ -39,9 +212,7 @@ body{
     padding-bottom: 30px;
     border: 1px solid #000000;
     margin: 0 auto;
-
 }
-
 
 .calc_block h2{
     font-family: 'sans-serif';
@@ -77,7 +248,6 @@ body{
     float: left;
 }
 
-
 .calc_block1_pol{
     display: block;
     width: 90%;
@@ -85,7 +255,6 @@ body{
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 20px;
-
 }
 
 .calc_block1_pol span{
@@ -99,15 +268,11 @@ body{
     float: left;
 }
 
-
 .calc_block1_pol input{
     display: block;
     float: left;
     width: 70%;
 }
-
-
-
 
 .VgazmaxR{
     font-family: "Open Sans", sans-serif;
@@ -120,17 +285,7 @@ body{
     margin-left: 30%;
     float: left;
     width: 50%;
-
 }
-
-
-
-
-
-
-   /*2 ,kjr*/
-
-
 
 .calc_block2{
     display: block;
@@ -140,8 +295,6 @@ body{
     border: 1px solid #000000;
     margin: 0 auto;
 }
-
-
 .LgazmaxR{
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
@@ -155,8 +308,6 @@ body{
     width: 50%;
 
 }
-
-
 .calc_block3{
     display: block;
     position: relative;
@@ -183,9 +334,6 @@ body{
     padding-right: 10px;
 }
 
-
-
-
 .calc_block5{
     display: block;
     position: relative;
@@ -199,9 +347,7 @@ body{
     display: block;
     width: 30%;
     margin: 0 auto;
-
 }
-
 .calc_block5_zena p{
     font-family: 'Fira Sans';
     font-size: 1.6em;
@@ -211,9 +357,7 @@ body{
     float: left;
     margin-left: 10px;
     text-align: center;
-
 }
-
 
 .calc_block5_zena span{
     font-size: 28px;
@@ -231,11 +375,6 @@ body{
     margin-left: 10px;
     float: right;
 }
-
-/* ================= первый плавающий блок    =============*/
-
-
-
 
 
 @media only screen  and (max-width: 1024px) {
@@ -259,42 +398,27 @@ body{
     .calc_block4_check label{
         font-size: 1em;
     }
-
-
-
-
-
 }
 
 
 @media only screen  and (max-width: 768px) {
-   
-
-
-
-    .calc_block1_pol span{
+     .calc_block1_pol span{
         font-size: 17px;
     }
-
-
     .calc_block2_pol span{
         font-size: 17px;
     }
     .calc_block2_pol input {
          width: 65%
     }
-
     .calc_block2_pol input {
          width: 65%
     }
-
-
     .calc_block1_text {
         display: block;
         width: 100%;
         float: right;
     }
-
     .calc_block2_text {
         display: block;
         width: 100%;
@@ -310,11 +434,9 @@ body{
         width: 70%;
         float: left;
     }
-
     .calc_block1 {
         margin-bottom: 50px;
     }
-
     .ServmaxR{
         width: 100%;
         margin-left: 0;
@@ -323,13 +445,9 @@ body{
         width: 100%;
         margin-left: 0;
     }
-
-
-    
 }
 
 @media only screen  and (max-width: 480px) {
-
     .ServmaxR{
         width: 100%;
         margin-left: 0;
@@ -338,9 +456,4 @@ body{
         width: 100%;
         margin-left: 0;
     }
-
-
-
-
-
 }

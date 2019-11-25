@@ -15,8 +15,6 @@ ZenaGaz=0;
 
 $(document).ready(function() {
 
-
-
 //========== Определение объема газа ввод значения =======================================//
    //===== запрет на ввод точки, запятой, минуса   =====//
 
@@ -30,26 +28,29 @@ $(document).ready(function() {
 
 
     $('.VgazmaxR').click(function () {
-
         var VgazV = document.getElementById('VgazmaxR').value;
-
         VgazV=+VgazV;
-        // if  (VgazV<1000){
-        //     VgazV=1000;
-        // }
-
-        // if  (VgazV>8000){
-        //     VgazV=8000;
-        // }
-
-        document.getElementById('vgaz').value = VgazV;
+         document.getElementById('vgaz').value = VgazV;
         // document.getElementById('VgazmaxR').value = VgazV;
-
-
-
-
+        var val = $('.vgaz').val();
+        val=+val;
+        val=((val-1000)*100)/8000*0.7;
+        var vgazline1 = document.getElementById('vgazline');
+        vgazline1.style.width = +val+"%";
     });
 
+    $('#VgazmaxR').bind('change keyup',function () {
+        var VgazV = document.getElementById('VgazmaxR').value;
+        VgazV=+VgazV;
+        document.getElementById('vgaz').value = VgazV;
+        // document.getElementById('VgazmaxR').value = VgazV;
+        var val = $('.vgaz').val();
+        val=+val;
+        val=((val-1000)*100)/8000*0.7;
+        var vgazline1 = document.getElementById('vgazline');
+        vgazline1.style.width = +val+"%";
+
+    });
 
 
 
@@ -64,39 +65,26 @@ $(document).ready(function() {
     //===== Вычитка введеного значения и движение ползунка.
     // Определение растояния  после ввода значения   =====//
     $('#LgazmaxR').bind('change keyup',function () {
-
         var LVgazV = document.getElementById('LgazmaxR').value;
         LVgazV=+LVgazV;
-
         document.getElementById('lgaz').value = LVgazV;
+        var val2 = $('.lvgaz').val();
+        val2=+val2;
+        val2=((val2)*100)/200*0.63;
+        var vgazline12 = document.getElementById('lgazline');
+        vgazline12.style.width = +val2+"%";
 
     });
 
     $('#LgazmaxR').click(function () {
-
         var LVgazV = document.getElementById('LgazmaxR').value;
-
         LVgazV=+LVgazV;
         document.getElementById('lgaz').value = LVgazV;
-
-
-    });
-
-
-
-
-
-//========== Определение режима  обслуживания клиента  =======================================//
-
-    $('#list1').click(function () {
-        var val = document.getElementById("list1").value;
-
-        $('#val').text(val);
-        if (val==1) {Kobsl=1; };
-        if (val==2) {Kobsl=1.5; };
-        if (val==3) {Kobsl=2; };
-        if (val==4) {Kobsl=5; };
-        zena();
+        var val2 = $('.lvgaz').val();
+        val2=+val2;
+        val2=((val2)*100)/200*0.63;
+        var vgazline12 = document.getElementById('lgazline');
+        vgazline12.style.width = +val2+"%";
 
     });
 
@@ -104,12 +92,7 @@ $(document).ready(function() {
     //============== Вычисление окончательной цены ===================================//
 
     $('#ZenaR').click(function () {
-
-
         Zena();
-
-
-
     });
 
 
@@ -120,7 +103,6 @@ $(document).ready(function() {
         var Vgaz = document.getElementById('VgazmaxR').value;
         var LVgaz = document.getElementById('LgazmaxR').value;
         var Zenal;
-        // alert("eeee");
         LVgaz=+LVgaz;
         Vgaz=+Vgaz;
 
@@ -154,21 +136,9 @@ $(document).ready(function() {
             }
         }
 
-
-
         ZenaGaz=Vgaz*Zenal;
-
-         $('#Zena').text(ZenaGaz);
-
+       $('#Zena').text(ZenaGaz);
        };
-
-
-
-
-
-
-
-
 });
 
 

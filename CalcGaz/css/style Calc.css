@@ -8,7 +8,7 @@
     margin-top: 7px;
     margin-left: 3em;
     width: 0;
-    height: 10px;
+    height: 8px;
     background-color: #8dc442;
     z-index: 12;
 }
@@ -18,9 +18,9 @@
     position: absolute;
     margin-top: 7px;
     margin-left: 1em;
-    width: 0%;
-    height: 10px;
-    background-color:#8dc442 ;
+    width: 0;
+    height: 8px;
+    background-color: #8dc442;
     z-index: 12;
 }
 
@@ -40,11 +40,12 @@
 }
 .calc_block{
     display: block;
-    width: 70%;
+    width: 98%;
     min-height: 200px;
     margin: 0 auto;
     border: 1px solid #c9c9c9;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .calc_block1{
     display: block;

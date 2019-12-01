@@ -34,7 +34,7 @@ $(document).ready(function() {
         // document.getElementById('VgazmaxR').value = VgazV;
         var val = $('.vgaz').val();
         val=+val;
-        val=((val-1000)*100)/8000*0.7;
+        val=((val-1000)*100)/8000*0.72;
         var vgazline1 = document.getElementById('vgazline');
         vgazline1.style.width = +val+"%";
     });
@@ -46,7 +46,7 @@ $(document).ready(function() {
         // document.getElementById('VgazmaxR').value = VgazV;
         var val = $('.vgaz').val();
         val=+val;
-        val=((val-1000)*100)/8000*0.7;
+        val=((val-1000)*100)/8000*0.72;
         var vgazline1 = document.getElementById('vgazline');
         vgazline1.style.width = +val+"%";
 

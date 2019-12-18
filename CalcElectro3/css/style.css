@@ -173,9 +173,11 @@ body{
 
 
 
-.calc_bild{
+.bild{
     display: none;
 }
+
+
 
 .calc_bild_text{
     display: block;
@@ -270,6 +272,120 @@ body{
     max-height: 100px;
     padding: 4px 5px 4px 5px;
 }
+
+
+.bild{
+    display: none;
+}
+
+.perexodv{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.perexodv input{
+    display: block;
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    margin-right: 10px;
+    color: #ffffff;
+    background: #ffffff;
+    background-color: #ffffff;
+    border: 1px solid #8d8d8d;
+    border-bottom: solid 3px #06c;
+    border-right: solid 3px #06c;
+}
+
+.perexodv span{
+    display: block;
+    float: left;
+    font-family: PTSans, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    color: #2f2c2d;
+}
+
+.transformv_block{
+    display: none;
+    width: 95%;
+}
+
+.transformv_block_table{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
+.table_uv{
+    display: table;
+    width: 100%;
+    border: 1px solid #8d8d8d;
+}
+
+
+
+
+.table_uv tr th{
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.table_uv tr td{
+    background: #f2f7fb;
+    color: #000;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid #8d8d8d;
+}
+
+.sel_uv{
+    display: block;
+    width: 90%;
+    background-color: #ffffff;
+    border: 1px solid #8d8d8d;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sel_uv option{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+}
+
+
+/*//=================================//*/
+
+
+/*.perexodv input[type=checkbox]:checked r {*/
+    /*outline: 1px solid #939598;*/
+    /*border: 2px solid #fff;*/
+    /*width: 10px;*/
+    /*height: 10px;*/
+    /*background-color: #63849F;*/
+/*}*/
+/*input[type="checkbox"]:checked  {*/
+    /*content: '';*/
+
+    /*background: #fff;*/
+
+    /*border: 3px solid #1062a4;*/
+    /*border-top: none;*/
+    /*border-right: none;*/
+    /*-webkit-transform: rotate(-45deg);*/
+    /*-moz-transform: rotate(-45deg);*/
+    /*-o-transform: rotate(-45deg);*/
+    /*-ms-transform: rotate(-45deg);*/
+    /*transform: rotate(-45deg);*/
+/*}*/
+
+
 
 
 /*//========================================//*/

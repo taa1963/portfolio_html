@@ -325,17 +325,82 @@ $(document).ready(function() {
         itog=1;
        var block = $(this).parents('.calc_form');
             block.find('.itog').show();
+         // block.find('.bild').show();
         zena();
-        StrN=0;
+        //StrN=0;
     });
 
     $('#building1').click(function (){
         itog=1;
         var block = $(this).parents('.calc_form');
         block.find('.itog').show();
-        zena();
-        StrN=1;
+         zena();
+        //StrN=1;
     });
+
+    //===== Открытие блока Строительство трансформаторных подстанций   =====//
+
+
+    $('#transformv_check').click(function () {
+        if ($(this).prop('checked')) {
+            var div = document.getElementById('transformv_block');
+            div.style.display = 'block';
+
+
+        }
+        else{
+            var div = document.getElementById('transformv_block');
+            div.style.display = 'none';
+
+        }
+    });
+
+    //===== Выбор подстанции   =====//
+
+    $('#sel_uv').click(function () {
+
+        var N_uv = document.getElementById('sel_uv').value;
+
+        if (N_uv==0){
+            C5=23327.89;
+        }
+        if (N_uv==1){
+            C5=7646.38;
+        }
+        if (N_uv==2){
+            C5=3161.33;
+        }
+        if (N_uv==3){
+            C5=2786.84;
+        }
+        if (N_uv==4){
+            C5=1864.51;
+        }
+        if (N_uv==5){
+            C5=1631.45;
+        }
+        if (N_uv==6){
+            C5=25521.16;
+        }
+        if (N_uv==7){
+            C5=9159.16;
+        }
+        if (N_uv==8){
+            C5=6511.95;
+        }
+        if (N_uv==9){
+            C5=13262.56;
+        }
+        if (N_uv==10){
+            C5=4822.78;
+        }
+
+        $('#ZUv').text(C5);
+        zena()
+    });
+
+
+
 
 
 
@@ -344,6 +409,7 @@ $(document).ready(function() {
        Zorg_ndc=0;
         Zorgndc=0;
         Zorg_itog=0;
+        Zmerop_itog=0;
         //===== Вычитка введенной мощности   =====//
         var Ni = document.getElementById('powers').value;
 
@@ -387,7 +453,7 @@ $(document).ready(function() {
                 }
             }
 
-            if ((Knad>0)|| (Knad<2)) {
+            if ((Knad==0)|| (Knad==1)) {
                 if (Sr == 1) {
                     Zorg = C1;
                 }
@@ -421,8 +487,8 @@ $(document).ready(function() {
                 if (Sr == 0) {
                     Zorg = C1maxN * Ni;
                 }
-                var block = $(this).parents('.calc_form');
-                block.find('.calc_bild').hide();
+                var div = document.getElementById('bild');
+                div.style.display = 'none';
 
 
 
@@ -430,9 +496,10 @@ $(document).ready(function() {
 
             //Строительство  нужно//
             if (StrN==1){
-                 alert("Yes");
-                var block = $(this).parents('.calc_form');
-                block.find('.calc_bild').show();
+
+                var div = document.getElementById('bild');
+                div.style.display = 'block';
+
 
 
 
@@ -448,78 +515,91 @@ $(document).ready(function() {
 
         //===============
  //Стоимость организационных мероприятий, не включающих в себя расходы на строительство объектов электросетевого хозяйства//
+
+       //====Цена  без   НДС
+        Zorg_ndc=Zorg;
+        var Zorg_ndcR=Zorg_ndc;
+        Zorg_ndc=Zorg_ndc.toFixed(2);
+        Zorg_ndc=new Intl.NumberFormat('ru-RU').format(Zorg_ndc);
+        $('#Zorg_ndc').text(Zorg_ndc);
+
+        //=====Цена   НДС =====//
+        Zorgndc=(Zorg/100)*20;
+        var ZorgndcR=Zorgndc;
+        Zorgndc=Zorgndc.toFixed(2);
+        Zorgndc=new Intl.NumberFormat('ru-RU').format(Zorgndc);
+        $('#Zorgndc').text(Zorgndc);
+
         //=====Цена с НДС =====//
-        Zorg_itog=Zorg;
+        Zorg_itog=Zorg_ndcR+ZorgndcR;
         var Zorg_itogR=Zorg_itog;
         Zorg_itog=Zorg_itog.toFixed(2);
         Zorg_itog=new Intl.NumberFormat('ru-RU').format(Zorg_itog);
         $('#Zorg_itog').text(Zorg_itog);
 
-      //=====Цена   НДС =====//
-        Zorgndc= (Zorg/120)*20;
-        Zorgndc=Zorgndc.toFixed(2);
-        Zorgndc=new Intl.NumberFormat('ru-RU').format(Zorgndc);
-        $('#Zorgndc').text(Zorgndc);
 
 
-       //====Цена  без   НДС
-        Zorg_ndc=(Zorg/120)*100;
-        Zorg_ndc=Zorg_ndc.toFixed(2);
-        Zorg_ndc=new Intl.NumberFormat('ru-RU').format(Zorg_ndc);
-        $('#Zorg_ndc').text(Zorg_ndc);
+
+
 
 
         //Стоимость мероприятий, связанных со строительством "последней мили"//
-        //=====Цена с НДС =====//
-
-        Zmerop_itog=+Zmerop_itog;
-        var Zmerop_itogR=Zmerop_itog;
-        Zmerop_itog=Zmerop_itog.toFixed(2);
-        Zmerop_itog=new Intl.NumberFormat('ru-RU').format(Zmerop_itog);
-        $('#Zmerop_itog').text(Zmerop_itog);
-
-        //=====Цена   НДС =====//
-        Zmeropnds= (Zmerop_itog/120)*20;
-        Zmeropnds=Zmeropnds.toFixed(2);
-        Zmeropnds=new Intl.NumberFormat('ru-RU').format(Zmeropnds);
-        $('#Zmeropnds').text(Zmeropnds);
-
         //====Цена  без   НДС
-        Zmerop_nds=(Zmerop_itog/120)*100;
+        Zmerop_nds=Zmerop_itog +C5;
+        var Zmerop_ndsR=+Zmerop_nds;
         Zmerop_nds=Zmerop_nds.toFixed(2);
         Zmerop_nds=new Intl.NumberFormat('ru-RU').format(Zmerop_nds);
         $('#Zmerop_nds').text(Zmerop_nds);
 
 
-//Ориентировочная стоимость технологического присоединения//
+
+               //=====Цена   НДС =====//
+        Zmeropnds= (Zmerop_ndsR/100)*20;
+        var ZmeropndsR=+Zmeropnds;
+        Zmeropnds=Zmeropnds.toFixed(2);
+        Zmeropnds=new Intl.NumberFormat('ru-RU').format(Zmeropnds);
+        $('#Zmeropnds').text(Zmeropnds);
+
         //=====Цена с НДС =====//
-        Zorg_itogR=+Zorg_itogR;
-        // alert(Zorg_itogR);
-        Zmerop_itogR=+Zmerop_itogR;
-        // alert(Zmerop_itogR);
 
-        Ztexn_itog=Zorg_itogR+Zmerop_itogR;
-        var Ztexn_itogR=Ztexn_itog;
-        // alert(Ztexn_itog);
+        Zmerop_itog=Zmerop_ndsR+ZmeropndsR;
 
-        Ztexn_itog=Ztexn_itog.toFixed(2);
-        Ztexn_itog=new Intl.NumberFormat('ru-RU').format(Ztexn_itog);
-        $('#Ztexn_itog').text(Ztexn_itog);
+        var Zmerop_itogR=Zmerop_itog;
 
-        //=====Цена   НДС =====//
-        Ztexnnds= (Ztexn_itogR/120)*20;
-        Ztexnnds=Ztexnnds.toFixed(2);
-        Ztexnnds=new Intl.NumberFormat('ru-RU').format(Ztexnnds);
-        $('#Ztexnnds').text(Ztexnnds);
+        Zmerop_itog=Zmerop_itog.toFixed(2);
+        Zmerop_itog=new Intl.NumberFormat('ru-RU').format(Zmerop_itog);
+        $('#Zmerop_itog').text(Zmerop_itog);
 
+
+
+//Ориентировочная стоимость технологического присоединения//
         //====Цена  без   НДС
-        Ztexn_nds=(Ztexn_itogR/120)*100;
+        Ztexn_nds= Zmerop_ndsR+Zorg_ndcR;
+        var Ztexn_ndsR=+Ztexn_nds;
         Ztexn_nds=Ztexn_nds.toFixed(2);
         Ztexn_nds=new Intl.NumberFormat('ru-RU').format(Ztexn_nds);
         $('#Ztexn_nds').text(Ztexn_nds);
 
 
+        //=====Цена   НДС =====//
+        Ztexnnds= (Ztexn_ndsR/100)*20;
+        var ZtexnndsR=+Ztexnnds;
+        Ztexnnds=Ztexnnds.toFixed(2);
+        Ztexnnds=new Intl.NumberFormat('ru-RU').format(Ztexnnds);
+        $('#Ztexnnds').text(Ztexnnds);
+
+
+        //=====Цена с НДС =====//
+
+        Ztexn_itog=Ztexn_ndsR+ZtexnndsR;
+
+        var Ztexn_itogR=+Ztexn_itog;
+        Ztexn_itog=Ztexn_itog.toFixed(2);
+        Ztexn_itog=new Intl.NumberFormat('ru-RU').format(Ztexn_itog);
+        $('#Ztexn_itog').text(Ztexn_itog);
     }
+
+
 
 });
 

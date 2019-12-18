@@ -1,9 +1,11 @@
-var itog,Zorg_ndc,Zorgndc,Ptp,C1maxN,C1,Zorg,StrN,Zmerop_itog,Zmeropnds,Zmerop_nds,Ztexn_itog,Ztexnnds,Ztexn_nds;
+var itog,Zorg_ndc,Zorgndc,Ptp,C1maxN,C1,Zorg,StrN,Zmerop_itog,Zmeropnds,Zmerop_nds,
+    Ztexn_itog,Ztexnnds,Ztexn_nds,C5;
 itog=0;
 Zorg=0;
 Zorg_ndc=0;
 Zorgndc=0;
 Zorg_itog=0;
+C5=0;
 Ptp=550; //плата за технол. присоединение при ставке 0-15, 3 категория.
 C1maxN=536.60;//плата за технол. присоединение при ставке 0-15, 1-2 категория по мощности.
 C1=15415.33;  //плата за технол. присоединение при ставке 0-15, 1-2 категория стандартизованная.

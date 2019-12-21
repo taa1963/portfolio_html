@@ -335,7 +335,7 @@ $(document).ready(function() {
         var block = $(this).parents('.calc_form');
         block.find('.itog').show();
          zena();
-        //StrN=1;
+
     });
 
     //===== Открытие блока Строительство трансформаторных подстанций   =====//
@@ -346,6 +346,11 @@ $(document).ready(function() {
             var div = document.getElementById('transformv_block');
             div.style.display = 'block';
 
+            for (var i = 0; i < transform.length; i++)  {
+                 $('<option value="' + transform[i].zenat + '">' + transform[i].name + '</option>').appendTo('.sel_uv');
+
+            }
+
 
         }
         else{
@@ -355,51 +360,41 @@ $(document).ready(function() {
         }
     });
 
-    //===== Выбор подстанции   =====//
 
-    $('#sel_uv').click(function () {
+    //===== добавление подстанции   =====//
 
-        var N_uv = document.getElementById('sel_uv').value;
+    $('#butuv').click(function () {
+        $('#table_uv').append('\
+        <tr class="block_uv">\
+            <td style="width:25%;">\
+            <select required class="sel_uv" onclick="Uvv(this)"  >\
+            <option value="0"> Выберите тип</option>\
+        </select>\
+        </td>\
+        <td style="width:25%;"> <span id="Uv">НН, CH <br> (до 20 кВ)</span></td>\
+        <td  style="width:25%"> <input type="text" class="sel_uv_z"  value="0" readonly="readonly" > </td>\
+            <td  style="width:25%"> <button class="butuv_del" onclick="DelUvv(this)">Удалить</button> </td>\
+            </tr>\
+        ');
+        for (var i = 0; i < transform.length; i++)  {
+            $('<option value="' + transform[i].zenat + '">' + transform[i].name + '</option>').appendTo('.sel_uv');
 
-        if (N_uv==0){
-            C5=23327.89;
-        }
-        if (N_uv==1){
-            C5=7646.38;
-        }
-        if (N_uv==2){
-            C5=3161.33;
-        }
-        if (N_uv==3){
-            C5=2786.84;
-        }
-        if (N_uv==4){
-            C5=1864.51;
-        }
-        if (N_uv==5){
-            C5=1631.45;
-        }
-        if (N_uv==6){
-            C5=25521.16;
-        }
-        if (N_uv==7){
-            C5=9159.16;
-        }
-        if (N_uv==8){
-            C5=6511.95;
-        }
-        if (N_uv==9){
-            C5=13262.56;
-        }
-        if (N_uv==10){
-            C5=4822.78;
         }
 
-        $('#ZUv').text(C5);
-        zena()
     });
 
 
+    $('.butuv_del').click(function () {
+        alert(34333444);
+    });
+
+
+
+
+    function ALLUvv() {
+
+       alert(55544444444444);
+    }
 
 
 
@@ -598,6 +593,10 @@ $(document).ready(function() {
         Ztexn_itog=new Intl.NumberFormat('ru-RU').format(Ztexn_itog);
         $('#Ztexn_itog').text(Ztexn_itog);
     }
+
+
+
+
 
 
 

@@ -7,138 +7,6 @@
 
 $(document).ready(function() {
 
-    //===== Вычитка списка  регионов при открытие сайта   =====//
-
-    // function load1(){
-    //
-    //     for (var i = 0; i < regions.length; i++)  {
-    //
-    //         $('<option value="' + i + '">' + regions[i].name + '</option>').appendTo('#region');
-    //
-    //     }
-    // };
-    //
-    // load1();
-
-
-    //===== Открытие  и закрытие блоков при выборе региона   =====//
-
-    // $('#region').click(function (){
-    //
-    //     var rigionv=document.getElementById('region').value;
-    //     if (rigionv>=0){
-    //         var block = $(this).parents('.calc_form');
-    //         block.find('.compani').show();
-    //         block.find('.tarif').show();
-    //         compani();
-    //         tarif();
-    //
-    //     }
-    //     else{
-    //         var block = $(this).parents('.calc_form');
-    //         block.find('.compani').hide();
-    //         block.find('.tarif').hide();
-    //         block.find('.power').hide();
-    //         block.find('.potential').hide();
-    //         block.find('.reliability').hide();
-    //         block.find('.payment').hide();
-    //         block.find('.building').hide();
-    //     }
-    // });
-
-//===== Открытие и закрытие блоков выборе при сетевой компании   =====//
-//     $('#companis').click(function (){
-//        var companisnv=$("#companis option:selected").text();
-//
-//         if (companisnv=="Выберите субьект"){
-//             var block = $(this).parents('.calc_form');
-//             block.find('.tarif').hide();
-//             block.find('.power').hide();
-//             block.find('.potential').hide();
-//             block.find('.reliability').hide();
-//             block.find('.payment').hide();
-//             block.find('.building').hide();
-//         }
-//         else{
-//             var block = $(this).parents('.calc_form');
-//             block.find('.tarif').show();
-//             tarif();
-//         }
-//     });
-
-
-//===== Формирование списка сетевых компаний после выбора региона   =====//
-//    function compani(){
-//
-//        $('#companis').find('option').remove(); //удаление старых данных
-//        var rigionv=document.getElementById('region').value;
-//
-//        for (var i = 0; i < regions[rigionv].companies.length; i++)  {
-//
-//            $('<option value="' + i + '">' + regions[rigionv].companies[i].namek + '</option>').appendTo('#companis');
-//        }
-//     };
-
-//===== Формирование списка тарифных после выбора сетевой компании  =====//
-//     function tarif(){
-//
-//         $('#tarifs').find('option').remove(); //удаление старых данных
-//         var rigionv=document.getElementById('region').value;
-//         for (var i = 0; i < regions[rigionv].tariff_zones.length; i++)  {
-//
-//             $('<option value="' + i + '">' + regions[rigionv].tariff_zones[i].namez + '</option>').appendTo('#tarifs');
-//         }
-//     };
-
-
-
-
-//===== Открытие и закрытие блоков при выборе тарифной зоны   =====//
-//     $('#tarifs').click(function (){
-//         var tarifsnv=$("#tarifs option:selected").text();
-//
-//         if (tarifsnv=="Выберите тарифную зону"){
-//             var block = $(this).parents('.calc_form');
-//             block.find('.power').hide();
-//             block.find('.potential').hide();
-//             block.find('.reliability').hide();
-//             block.find('.payment').hide();
-//             block.find('.building').hide();
-//
-//
-//       }
-//         else{
-//             var block = $(this).parents('.calc_form');
-//             block.find('.power').show();
-//             // tarif();
-//         }
-//
-//         var zonev=$("#tarifs option:selected").text();
-//
-//         //===== заполнение текста после выбора тарифной зоны   =====//
-//         if (zonev=="вне зависимости от местности"){
-//             var zonev ="вне зависимости от местности";
-//         }
-//
-//         if (zonev=="Вне города"){
-//             var zonev ="На территориях, не относящихся к городским населенным пунктам";
-//         }
-//
-//         if (zonev=="Город"){
-//             var zonev ="На территории городских населенных пунктов";
-//         }
-//
-//         if (zonev=="Сельская местность"){
-//             var zonev ="Территории, не относящиеся к территориям городских населенных пунктов";
-//         }
-//
-//
-//
-//
-//         $('#power_zone').text(zonev);
-//
-//
-//     });
 
     //===== закрываем ввод в поле мощность цифр и отрицательных значений   =====//
     var flag = true;
@@ -182,24 +50,22 @@ $(document).ready(function() {
             block.find('.payment').hide();
             block.find('.building').hide();
             block.find('.itog').hide();
+             block.find('.bild').hide();
+            document.getElementById('reliabilitys').value=-1;
+            document.getElementById('payments').value=-1;
+            $('#building1').prop({'checked': false});
+            $('#building2').prop({'checked': false});
+            Zorg=0;
 
         }
         else{
-
-            if (itog==1){
-                zena();
-            }
-
-           else {
-
             var block = $(this).parents('.calc_form');
             block.find('.potential').show();
             block.find('.reliability').hide();
             block.find('.payment').hide();
             block.find('.building').hide();
-           block.find('.itog').hide();
-        }
-
+            block.find('.itog').hide();
+            block.find('.bild').hide();
 
         }
     });
@@ -220,13 +86,15 @@ $(document).ready(function() {
             block.find('.payment').hide();
             block.find('.building').hide();
             block.find('.itog').hide();
+            block.find('.bild').hide();
+            document.getElementById('reliabilitys').value=-1;
+            document.getElementById('payments').value=-1;
+            $('#building1').prop({'checked': false});
+            $('#building2').prop({'checked': false});
+            Zorg=0;
 
         }
-        else{
 
-            if (itog==1){
-                zena();
-            }
 
             else {
 
@@ -236,10 +104,10 @@ $(document).ready(function() {
                 block.find('.payment').hide();
                 block.find('.building').hide();
                 block.find('.itog').hide();
+                block.find('.bild').hide();
             }
 
 
-        }
     });
 
 
@@ -254,20 +122,37 @@ $(document).ready(function() {
 
         if (potentialsv>=0){
 
-            if(itog==1){
-                zena();
-            }
-            else{
             var block = $(this).parents('.calc_form');
             block.find('.reliability').show();
-          }
+
+            if (itog==1){
+                block.find('.itog').show();
+                block.find('.reliability').show();
+                block.find('.payment').hide();
+                block.find('.building').show();
+                zena();
+            }
+            if (StrN=0){
+                block.find('.bild').show();
+                zena();
+            }
+
+
         }
-        else{
+
+        if (potentialsv==-1){
+
             var block = $(this).parents('.calc_form');
             block.find('.reliability').hide();
             block.find('.payment').hide();
             block.find('.building').hide();
             block.find('.itog').hide();
+            block.find('.bild').hide();
+            document.getElementById('reliabilitys').value=-1;
+            document.getElementById('payments').value=-1;
+            $('#building1').prop({'checked': false});
+            $('#building2').prop({'checked': false});
+            Zorg=0;
 
         }
     });
@@ -282,20 +167,34 @@ $(document).ready(function() {
 
         if (reliabilitysv>=0){
 
-            if(itog==1){
-                zena();
-            }
-            else{
+
                 var block = $(this).parents('.calc_form');
+            block.find('.payment').show();
+            if (itog==1){
+                block.find('.itog').show();
                 block.find('.payment').show();
+                block.find('.building').show();
+
             }
+            if (StrN=0){
+                block.find('.bild').show();
+
+            }
+            zena();
+
+
 
         }
         else{
             var block = $(this).parents('.calc_form');
-           block.find('.payment').hide();
+             block.find('.payment').hide();
             block.find('.building').hide();
             block.find('.itog').hide();
+            block.find('.bild').hide();
+            document.getElementById('payments').value=-1;
+            $('#building1').prop({'checked': false});
+            $('#building2').prop({'checked': false})
+            Zorg=0;
         }
     });
 
@@ -309,19 +208,30 @@ $(document).ready(function() {
         // alert(powersv);
 
         if (paymentsv>=0){
-            if(itog==1){
-                zena();
-            }
-            else{
+
                 var block = $(this).parents('.calc_form');
                 block.find('.building').show();
-            }
+                 if (itog==1){
+                     block.find('.itog').show();
+
+                 }
+               if (StrN=1){
+                   block.find('.bild').show();
+
+               }
+
+                zena();
+
 
         }
         else{
             var block = $(this).parents('.calc_form');
             block.find('.building').hide();
             block.find('.itog').hide();
+            block.find('.bild').hide();
+            $('#building1').prop({'checked': false});
+            $('#building2').prop({'checked': false});
+            Zorg=0;
 
         }
     });
@@ -331,7 +241,7 @@ $(document).ready(function() {
         itog=1;
        var block = $(this).parents('.calc_form');
             block.find('.itog').show();
-         // block.find('.bild').show();
+            block.find('.bild').hide();
         zena();
         //StrN=0;
     });
@@ -340,6 +250,7 @@ $(document).ready(function() {
         itog=1;
         var block = $(this).parents('.calc_form');
         block.find('.itog').show();
+        block.find('.bild').hide();
          zena();
 
     });
@@ -361,13 +272,6 @@ $(document).ready(function() {
             var div = document.getElementById('transformv_block');
             div.style.display = 'block';
             ADDST();
-
-            for (var i = 0; i < transform.length; i++)  {
-                 $('<option value="' + transform[i].zenat + '">' + transform[i].name + '</option>').appendTo('.sel_uv');
-
-            }
-
-
         }
         else{
             var div = document.getElementById('transformv_block');
@@ -390,72 +294,36 @@ $(document).ready(function() {
         block.find('.sel_uv_z').val(N_uv);
 
         $('.block_uv').focus();
-       // $('#butuv').style.zIndex='100';
-        //  .style.display = 'none';
-       // element.event.stopPropagation();
-       // element.event.stopImmediatePropagation();
-      //  $(element).focusout();
+
         ALLUvv(element);
-      //  $('#butuv').addEventListener("click", highlightThis, false);
-        // return;
-        // element.blur;
-        // this.blur;
-        // block.focus();
-    }
+      }
     window.Uvv = Uvv
 
     //===== добавление подстанции   =====//
 
     function ADDST() {
-        $('#table_uv').append('\
-        <tr class="block_uv">\
-            <td style="width:25%;">\
-            <select required class="sel_uv" onclick="Uvv(this)"  >\
-            <option value="0"> Выберите тип</option>\
-        </select>\
-        </td>\
-        <td style="width:25%;"> <span id="Uv">НН, CH <br> (до 20 кВ)</span></td>\
-        <td  style="width:25%"> <input type="text" class="sel_uv_z"  value="0" readonly="readonly" > </td>\
-            <td  style="width:25%"> <button class="butuv_del" onclick="DelUvv(this)">Удалить объект</button> </td>\
-            </tr>\ ');
-        for (var i = 0; i < transform.length; i++)  {
-            $('<option value="' + transform[i].zenat + '">' + transform[i].name + '</option>').appendTo('.sel_uv');
+        var newSection = $('<tr class="block_uv"></tr>');
+        newSection.html(
+            '<td style="width:25%;">\n <select required class="sel_uv" onclick="Uvv(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:25%;"> <span id="Uv">НН, CH <br> (до 20 кВ)</span></td>\n <td  style="width:25%"> <input type="text" class="sel_uv_z"  value="0" readonly="readonly"> </td>\n <td  style="width:25%"><button class="butuv_del" onclick="DelUvv(this); ">Удалить объект</button>  </td>'
+    );
+       // alert(444444);
 
+        $('#table_uv').append(newSection);
+
+        var newSelSek = $(newSection).find('.sel_uv');
+
+        for (var i = 0; i < transform.length; i++)  {
+            $('<option value="' + transform[i].zenat + '">' + transform[i].name + '</option>').appendTo(newSelSek);
 
         }
     }
 
+
+
+
     $('#butuv').click(function () {
-        //$('#butuv').style.z-index='100';
-        // $('#butuv').focus();
-        // $('#butuv').focusin();
-        //$('#butuv').addEventListener("click", highlightThis, true);
-
-        //focusin/focusout
-
-        $('#table_uv').append('\
-        <tr class="block_uv">\
-            <td style="width:25%;">\
-            <select required class="sel_uv" onclick="Uvv(this)"  >\
-            <option value="0"> Выберите тип</option>\
-        </select>\
-        </td>\
-        <td style="width:25%;"> <span id="Uv">НН, CH <br> (до 20 кВ)</span></td>\
-        <td  style="width:25%"> <input type="text" class="sel_uv_z"  value="0" readonly="readonly" > </td>\
-            <td  style="width:25%"> <button class="butuv_del" onclick="DelUvv(this)">Удалить объект</button> </td>\
-            </tr>\ ');
-        for (var i = 0; i < transform.length; i++)  {
-            $('<option value="' + transform[i].zenat + '">' + transform[i].name + '</option>').appendTo('.sel_uv');
-
-
-        }
-        // event.preventDefault(); // Будут отменен переход по ссылке
-        // event.stopPropagation(); // Отмена всплытия
-        //
-        // event.stopPropagation();
-        // event.stopImmediatePropagation();
-
-    });
+        ADDST();
+     });
 
 
 
@@ -498,11 +366,7 @@ $(document).ready(function() {
             var div = document.getElementById('sekcion_block');
             div.style.display = 'block';
             ADDSEK();
-            //
-            // for (var i = 0; i < section.length; i++)  {
-            //     $('<option value="' + section[i].zenat + '">' + section[i].name + '</option>').appendTo('.sel_sek');
-            // }
-        }
+            }
         else{
             var div = document.getElementById('sekcion_block');
             $('.block_sek').remove();
@@ -517,19 +381,6 @@ $(document).ready(function() {
     //===== Заполнение цены Строительство пунктов секционирования после выбора типа   =====//
 
     function SekCel(element) {
-
-
-    //
-    //     var Sekt=element.length;
-    //     if (Sekt<2){
-    //         alert(Sekt);
-    //
-    //     for (var i = 0; i < section.length; i++)  {
-    //        (element('<option value="' + section[i].zenat + '">' + section[i].name + '</option>').appendTo('.sel_sek'));
-    //
-    //     }
-    // }
-
         var ZsekST = element.value;
 
         var block = $(element).parents('.block_sek');
@@ -551,53 +402,24 @@ $(document).ready(function() {
     //===== добавление пунктов секционирования   =====//
 
     function ADDSEK() {
-        $('#sekcion_uv').append('\
-        <tr class="block_sek">\
-        <td style="width:25%;">\
-            <select required class="sel_sek" onclick="SekCel(this)"  >\
-            <option value="0"> Выберите тип</option>\
-        </select>\
-        </td>\
-           <td style="width:25%;"> <input type="text" class="sek_v"  value="0" readonly="readonly"></td>\
-            <td  style="width:25%"> <input type="text" class="sek_v_z"  value="0" readonly="readonly"> </td>\
-            <td  style="width:25%"><button class="Sek_del" onclick="DelSek(this); ">Удалить объект</button>  </td>\
-         </tr>\ ');
+        var newSection = $('<tr class="block_sek"></tr>');
+        newSection.html(
+            '<td style="width:25%;">\n    <select required class="sel_sek" onclick="SekCel(this)"  >\n    <option value="0"> Выберите тип</option>\n    </select>\n</td>\n<td style="width:25%;"><input type="text" class="sek_v"  value="0" readonly="readonly"></td>\n<td  style="width:25%"><input type="text" class="sek_v_z"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="Sek_del" onclick="DelSek(this); ">Удалить объект</button>  </td>'
+        );
+
+        $('#sekcion_uv').append(newSection);
+
+        var newSelSek = $(newSection).find('.sel_sek');
 
         for (var i = 0; i < section.length; i++)  {
-            $('<option value="' + section[i].zenat + '">' + section[i].name + '</option>').appendTo('.sel_sek');
+            $('<option value="' + section[i].zenat + '">' + section[i].name + '</option>').appendTo(newSelSek);
 
         }
     }
 
     $('#but_sek').click(function () {
-
-
-        $('#sekcion_uv').append('\
-        <tr class="block_sek">\
-        <td style="width:25%;">\
-            <select required class="sel_sek" onclick="SekCel(this)"  >\
-            <option value="0"> Выберите тип</option>\
-        </select>\
-        </td>\
-           <td style="width:25%;"> <input type="text" class="sek_v"  value="0" readonly="readonly"></td>\
-            <td  style="width:25%"> <input type="text" class="sek_v_z"  value="0" readonly="readonly"> </td>\
-            <td  style="width:25%"><button class="Sek_del" onclick="DelSek(this); ">Удалить объект</button>  </td>\
-         </tr>\ ');
-        var Sekt=$('.block_sek');
-
-
-        for (var i = 0; i < section.length; i++)  {
-            $('<option value="' + section[i].zenat + '">' + section[i].name + '</option>').appendTo('.sel_sek');
-
-        }
-
-        event.preventDefault(); // Будут отменен переход по ссылке
-        event.stopPropagation(); // Отмена всплытия
-
-        event.stopPropagation();
-        event.stopImmediatePropagation();
-
-    });
+        ADDSEK();
+     });
 
 
 
@@ -634,11 +456,11 @@ $(document).ready(function() {
     $('#linev_check').click(function () {
         if ($(this).prop('checked')) {
 
-            // var div = document.getElementById('transformv_block');
-            // $('.block_uv').remove();
-            // div.style.display = 'none';
-            // $('#transformv_check').prop({'checked': false})
-            // C5=0;
+            var div = document.getElementById('galer_block');
+            $('.block_galer_uv').remove();
+            div.style.display = 'none';
+            $('#galer_check').prop({'checked': false});
+            C3=0;
 
 
             var div = document.getElementById('linev_block');
@@ -653,6 +475,7 @@ $(document).ready(function() {
             var div = document.getElementById('linev_block');
             $('.block_line_uv').remove();
             div.style.display = 'none';
+            C2=0;
 
         }
         zena();
@@ -668,57 +491,44 @@ $(document).ready(function() {
 
         var block = $(element).parents('.block_line_uv');
         block.find('.linestav').val(ZlineST);
+
+        var block2 = $(element).parents('.block_line_uv').find('.lini_l');
+        var zlie=parseFloat($(block2).val());
+        var zlinev=0;
+        zlie=+zlie;
+        // console.log(ZlineST);
+        // console.log(zlie);
+
+        var zlinev=ZlineST*zlie;
+        var block = $(element).parents('.block_line_uv');
+        block.find('.lina_z').val(zlinev);
+
+        Sel_LineZAll();
+
+
     }
     window.sel_line = sel_line;
 
     //===== добавление пунктов секционирования   =====//
 
     function ADDLINE() {
-        $('#linev_uv').append('\
-        <tr class="block_line_uv">\
-            <td style="width:20%;">\
-            <select required class="line_uv" onclick="sel_line(this)"  >\
-            <option value="0"> Выберите тип</option>\
-        </select>\
-        </td>\
-        <td  style="width:20%"> <input type="text" class="linestav"  value="0" readonly="readonly"> </td>\
-            <td  style="width:20%"> <input type="text" class="lini_l"  value="0" > </td>\
-            <td  style="width:20%"> <input type="text" class="lina_z"  value="0" readonly="readonly"> </td>\
-            <td  style="width:20%"><button class="butuv_del" onclick="DelLine(this); ">Удалить объект</button>  </td>\
-        </tr>\ ');
+        var newSection = $('<tr class="block_line_uv"></tr>');
+        newSection.html(
+            '<td style="width:20%;">\n <select required class="line_uv" onclick="sel_line(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav"  value="0" readonly="readonly"> </td>\n <td  style="width:20%"> <input type="number" class="lini_l"  value="0" min="0" step="1" onclick="Sel_LineZ(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del" onclick="DelLine(this); ">Удалить объект</button>  </td>'
+        );
+
+
+        $('#linev_uv').append(newSection);
+
+        var newSelSek = $(newSection).find('.line_uv');
 
         for (var i = 0; i < elline.length; i++)  {
-            $('<option value="' + elline[i].zenat + '">' + elline[i].name + '</option>').appendTo('.line_uv');
+            $('<option value="' + elline[i].zenat + '">' + elline[i].name + '</option>').appendTo(newSelSek);
         }
-
     }
 
     $('#but_line').click(function () {
-        alert(999)
-
-        $('#linev_uv').append('\
-        <tr class="block_line_uv">\
-        <td style="width:20%;">\
-        <select required class="line_uv" onclick="sel_line(this)"  >\
-        <option value="0"> Выберите тип</option>\
-        </select>\
-        </td>\
-        <td  style="width:20%"> <input type="text" class="linestav"  value="0" readonly="readonly"> </td>\
-        <td  style="width:20%"> <input type="text" class="lini_l"  value="0" > </td>\
-        <td  style="width:20%"> <input type="text" class="lina_z"  value="0" readonly="readonly"> </td>\
-        <td  style="width:20%"><button class="butuv_del" onclick="DelLine(this); ">Удалить объект</button>  </td>\
-        </tr>\ ');
-
-        for (var i = 0; i < elline.length; i++)  {
-            $('<option value="' + elline[i].zenat + '">' + elline[i].name + '</option>').appendTo('.line_uv');
-        }
-
-        // event.preventDefault(); // Будут отменен переход по ссылке
-        // event.stopPropagation(); // Отмена всплытия
-        //
-        // event.stopPropagation();
-        // event.stopImmediatePropagation();
-
+        ADDLINE();
     });
 
 
@@ -729,27 +539,185 @@ $(document).ready(function() {
     function DelLine(element) {
         var sss= $(element).parents('.block_line_uv');
         sss.remove()
-        ALLSek(element);
+        Sel_LineZAll();
+        //alert(434334);
     }
 
     window.DelLine = DelLine
 
 
 
+
+
+
+    //===== вычисление  цены текущей по линий электропередачи     =====//
+    function Sel_LineZ(element) {
+        var Lline = element.value;
+
+        var block2 = $(element).parents('.block_line_uv').find('.linestav');
+        var zlie=parseFloat($(block2).val());
+         Lline=+Lline;
+        zlie=+zlie;
+        var zlinev=Lline*zlie;
+       // var zlinev=7777777;
+        var block = $(element).parents('.block_line_uv');
+        block.find('.lina_z').val(zlinev);
+
+        Sel_LineZAll();
+
+
+    }
+
+    window.Sel_LineZ = Sel_LineZ;
+
+
     //===== вычисление общей цены по линий электропередачи     =====//
-    function ALLSek(element) {
-        C6=0;
-        $('.sek_v_z').each(function(){
-            C6 += parseFloat($(this).val())
-        })
-        // alert(C6);
+    function Sel_LineZAll(element) {
+        C2=0;
+
+
+        $('.lina_z').each(function(){
+            C2 += parseFloat($(this).val())
+        });
+       // console.log(C2);
         zena();
     }
 
-    window.ALLSek = ALLSek
 
 
 
+    //========Строительство закрытых галерей=======//
+
+    $('#galer_check').click(function () {
+        if ($(this).prop('checked')) {
+
+            var div = document.getElementById('linev_block');
+            $('.block_line_uv').remove();
+            div.style.display = 'none';
+            $('#linev_check').prop({'checked': false})
+            C2=0;
+
+
+            var div = document.getElementById('galer_block');
+            div.style.display = 'block';
+            ADDLGAL();
+
+        }
+        else{
+            var div = document.getElementById('galer_block');
+            $('.block_galer_uv').remove();
+            div.style.display = 'none';
+            C3=0;
+
+        }
+        zena();
+    });
+
+
+
+    //===== Заполнение цены закрытых галерей  после выбора типа   =====//
+
+    function galer_line(element) {
+
+        var ZgaleST = element.value;
+
+        var block = $(element).parents('.block_galer_uv');
+        block.find('.galertav').val(ZgaleST);
+
+        var block2 = $(element).parents('.block_galer_uv').find('.galer_l');
+        var zgaler=parseFloat($(block2).val());
+        var zgalerv=0;
+        zgaler=+zgaler;
+        // console.log(ZgaleST);
+        // console.log(zgaler);
+
+        zgalerv=ZgaleST*zgaler;
+        var block = $(element).parents('.block_galer_uv');
+        block.find('.galer_z').val(zgalerv);
+
+        Sel_GalZAll();
+
+
+    }
+    window.galer_line = galer_line;
+
+    //===== добавление закрытых галерей   =====//
+
+    function ADDLGAL() {
+        var newSection = $('<tr class="block_galer_uv"></tr>');
+        newSection.html(
+            '<td style="width:20%;">\n <select required class="galer_uv" onclick="galer_line(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l"  value="0" step="1" min="0" onclick="Sel_galerZ(this)"> </td>\n<td  style="width:20%"> <input type="text" class="galer_z"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del" onclick="Delgaler(this); ">Удалить объект</button>  </td>'
+       );
+
+
+
+        $('#galer_uvv').append(newSection);
+
+        var newSelSek = $(newSection).find('.galer_uv');
+
+        for (var i = 0; i < galer.length; i++)  {
+            $('<option value="' + galer[i].zenat + '">' + galer[i].name + '</option>').appendTo(newSelSek);
+        }
+
+
+    }
+
+    $('#but_gal').click(function () {
+        //alert(999)
+        ADDLGAL();
+    });
+
+
+
+
+
+//===== Удаление закрытых галерей     =====//
+    function Delgaler(element) {
+         var sss= $(element).parents('.block_galer_uv');
+         sss.remove();
+
+        Sel_GalZAll();
+    }
+
+    window.Delgaler = Delgaler;
+
+
+
+
+
+
+    //===== вычисление  цены текущей по закрытых галерей     =====//
+    function Sel_galerZ(element) {
+        var Lgaler = element.value;
+
+        var block2 = $(element).parents('.block_galer_uv').find('.galertav');
+        var zgaler=parseFloat($(block2).val());
+        Lgaler=+Lgaler;
+        zgaler=+zgaler;
+        var zgaler=Lgaler*zgaler;
+        // var zlinev=7777777;
+        var block = $(element).parents('.block_galer_uv');
+        block.find('.galer_z').val(zgaler);
+
+        Sel_GalZAll();
+
+
+    }
+
+    window.Sel_galerZ = Sel_galerZ;
+
+
+    //===== вычисление общей цены по закрытых галерей     =====//
+    function Sel_GalZAll(element) {
+        C3=0;
+
+
+        $('.galer_z').each(function(){
+            C3 += parseFloat($(this).val())
+        })
+         //console.log(C3);
+        zena();
+    }
 
 
 
@@ -795,6 +763,8 @@ $(document).ready(function() {
         //==== Мощность меньше 15   =====//
         if ( (Ni>=0) && (Ni<=15) ){
 
+            var div = document.getElementById('bild');
+            div.style.display = 'none';
             if (Knad==2){
                 Zorg=Ptp;
             }
@@ -815,6 +785,8 @@ $(document).ready(function() {
 
         //===== Мощность больше 15    =====//
         if ( (Ni>15) && (Ni<=150) ){
+            var div = document.getElementById('bild');
+            div.style.display = 'none';
             if (Sr == 1) {
                 Zorg = C1;
             }
@@ -848,6 +820,12 @@ $(document).ready(function() {
 
             //Строительство  нужно//
             if (StrN==1){
+                if (Sr == 1) {
+                    Zorg = C1;
+                }
+                if (Sr == 0) {
+                    Zorg = C1maxN * Ni;
+                }
 
                 var div = document.getElementById('bild');
                 div.style.display = 'block';
@@ -897,7 +875,7 @@ $(document).ready(function() {
 
         //Стоимость мероприятий, связанных со строительством "последней мили"//
         //====Цена  без   НДС
-        Zmerop_nds=Zmerop_itog +C5+C6;
+        Zmerop_nds=Zmerop_itog +C5+C6+C2+C3;
         var Zmerop_ndsR=+Zmerop_nds;
         Zmerop_nds=Zmerop_nds.toFixed(2);
         Zmerop_nds=new Intl.NumberFormat('ru-RU').format(Zmerop_nds);

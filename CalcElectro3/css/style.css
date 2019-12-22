@@ -282,6 +282,7 @@ body{
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .perexodv input{
@@ -360,9 +361,119 @@ body{
     position: relative;
     overflow: hidden;
     width: 30%;
-    white-space: inherit;
-    word-wrap: break-word;
+   height: auto;
 }
+
+.sekcion_uv{
+    display: table;
+    width: 100%;
+    border: 1px solid #8d8d8d;
+}
+
+
+
+
+.sekcion_uv tr th{
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.sekcion_uv tr td{
+    background: #f2f7fb;
+    color: #000;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid #8d8d8d;
+}
+
+.sel_sek{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    background-color: #ffffff;
+    border: 1px solid #8d8d8d;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: normal
+}
+
+.sel_sek option{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    height: auto;
+}
+
+.sel_uv{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    background-color: #ffffff;
+    border: 1px solid #8d8d8d;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: normal
+}
+
+.sel_uv option{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    height: auto;
+}
+
+.line_uv{
+    display: table;
+    width: 100%;
+    border: 1px solid #8d8d8d;
+}
+
+
+
+
+.linev_uv tr th{
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.linev_uv tr td{
+    background: #f2f7fb;
+    color: #000;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid #8d8d8d;
+}
+
+.line_uv{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    background-color: #ffffff;
+    border: 1px solid #8d8d8d;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: normal
+}
+
+.line_uv option{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    height: auto;
+}
+
 
 #butuv{
     display: block;
@@ -370,13 +481,14 @@ body{
     margin-left: 5%;
     background-color: #005697;
     font-family: "Open Sans", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     color: #ffffff;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    z-index: 100;
 }
 
 .butuv_del{
@@ -384,7 +496,69 @@ body{
     margin: 0 auto;
       background-color: #005697;
     font-family: "Open Sans", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+#but_sek{
+    display: block;
+    margin-top: 30px;
+    margin-left: 5%;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 100;
+}
+
+.Sek_del{
+    display: block;
+    margin: 0 auto;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+#but_line{
+    display: block;
+    margin-top: 30px;
+    margin-left: 5%;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 100;
+}
+
+.DelLine{
+    display: block;
+    margin: 0 auto;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
     color: #ffffff;
     text-align: center;
     padding-top: 2px;

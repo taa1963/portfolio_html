@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 $(document).ready(function() {
 
     //===== Вычитка списка  регионов при открытие сайта   =====//
@@ -343,8 +349,18 @@ $(document).ready(function() {
 
     $('#transformv_check').click(function () {
         if ($(this).prop('checked')) {
+
+            var div = document.getElementById('sekcion_block');
+            $('.block_sek').remove();
+            div.style.display = 'none';
+
+            $('#sekcion_check').prop({'checked': false})
+            C6=0;
+
+
             var div = document.getElementById('transformv_block');
             div.style.display = 'block';
+            ADDST();
 
             for (var i = 0; i < transform.length; i++)  {
                  $('<option value="' + transform[i].zenat + '">' + transform[i].name + '</option>').appendTo('.sel_uv');
@@ -355,15 +371,42 @@ $(document).ready(function() {
         }
         else{
             var div = document.getElementById('transformv_block');
+            $('.block_uv').remove();
             div.style.display = 'none';
 
         }
+        zena();
     });
 
 
+
+    //===== Заполнение цены подстанции поле выбора типа   =====//
+
+    function Uvv(element) {
+
+        var N_uv = element.value;
+
+        var block = $(element).parents('.block_uv');
+        block.find('.sel_uv_z').val(N_uv);
+
+        $('.block_uv').focus();
+       // $('#butuv').style.zIndex='100';
+        //  .style.display = 'none';
+       // element.event.stopPropagation();
+       // element.event.stopImmediatePropagation();
+      //  $(element).focusout();
+        ALLUvv(element);
+      //  $('#butuv').addEventListener("click", highlightThis, false);
+        // return;
+        // element.blur;
+        // this.blur;
+        // block.focus();
+    }
+    window.Uvv = Uvv
+
     //===== добавление подстанции   =====//
 
-    $('#butuv').click(function () {
+    function ADDST() {
         $('#table_uv').append('\
         <tr class="block_uv">\
             <td style="width:25%;">\
@@ -373,28 +416,342 @@ $(document).ready(function() {
         </td>\
         <td style="width:25%;"> <span id="Uv">НН, CH <br> (до 20 кВ)</span></td>\
         <td  style="width:25%"> <input type="text" class="sel_uv_z"  value="0" readonly="readonly" > </td>\
-            <td  style="width:25%"> <button class="butuv_del" onclick="DelUvv(this)">Удалить</button> </td>\
-            </tr>\
-        ');
+            <td  style="width:25%"> <button class="butuv_del" onclick="DelUvv(this)">Удалить объект</button> </td>\
+            </tr>\ ');
         for (var i = 0; i < transform.length; i++)  {
             $('<option value="' + transform[i].zenat + '">' + transform[i].name + '</option>').appendTo('.sel_uv');
 
+
+        }
+    }
+
+    $('#butuv').click(function () {
+        //$('#butuv').style.z-index='100';
+        // $('#butuv').focus();
+        // $('#butuv').focusin();
+        //$('#butuv').addEventListener("click", highlightThis, true);
+
+        //focusin/focusout
+
+        $('#table_uv').append('\
+        <tr class="block_uv">\
+            <td style="width:25%;">\
+            <select required class="sel_uv" onclick="Uvv(this)"  >\
+            <option value="0"> Выберите тип</option>\
+        </select>\
+        </td>\
+        <td style="width:25%;"> <span id="Uv">НН, CH <br> (до 20 кВ)</span></td>\
+        <td  style="width:25%"> <input type="text" class="sel_uv_z"  value="0" readonly="readonly" > </td>\
+            <td  style="width:25%"> <button class="butuv_del" onclick="DelUvv(this)">Удалить объект</button> </td>\
+            </tr>\ ');
+        for (var i = 0; i < transform.length; i++)  {
+            $('<option value="' + transform[i].zenat + '">' + transform[i].name + '</option>').appendTo('.sel_uv');
+
+
+        }
+        // event.preventDefault(); // Будут отменен переход по ссылке
+        // event.stopPropagation(); // Отмена всплытия
+        //
+        // event.stopPropagation();
+        // event.stopImmediatePropagation();
+
+    });
+
+
+
+
+
+//===== Удаление текущей  подстанции    =====//
+    function DelUvv(element) {
+        var sss= $(element).parents('.block_uv');
+        sss.remove();
+        ALLUvv(element);
+     }
+    window.DelUvv = DelUvv;
+
+    //===== вычисление общей цены по подстанциям    =====//
+    function ALLUvv(element) {
+        C5=0;
+           $('.sel_uv_z').each(function(){
+            C5 += parseFloat($(this).val())
+        });
+        zena();
+     }
+
+    window.ALLUvv = ALLUvv;
+
+
+    //===== Открытие блока Строительство пунктов секционирования   =====//
+
+    $('#sekcion_check').click(function () {
+        if ($(this).prop('checked')) {
+
+            var div = document.getElementById('transformv_block');
+            $('.block_uv').remove();
+            div.style.display = 'none';
+
+
+            $('#transformv_check').prop({'checked': false})
+            C5=0;
+
+
+            var div = document.getElementById('sekcion_block');
+            div.style.display = 'block';
+            ADDSEK();
+            //
+            // for (var i = 0; i < section.length; i++)  {
+            //     $('<option value="' + section[i].zenat + '">' + section[i].name + '</option>').appendTo('.sel_sek');
+            // }
+        }
+        else{
+            var div = document.getElementById('sekcion_block');
+            $('.block_sek').remove();
+            div.style.display = 'none';
+
+        }
+        zena();
+    });
+
+
+
+    //===== Заполнение цены Строительство пунктов секционирования после выбора типа   =====//
+
+    function SekCel(element) {
+
+
+    //
+    //     var Sekt=element.length;
+    //     if (Sekt<2){
+    //         alert(Sekt);
+    //
+    //     for (var i = 0; i < section.length; i++)  {
+    //        (element('<option value="' + section[i].zenat + '">' + section[i].name + '</option>').appendTo('.sel_sek'));
+    //
+    //     }
+    // }
+
+        var ZsekST = element.value;
+
+        var block = $(element).parents('.block_sek');
+        block.find('.sek_v').val(ZsekST);
+
+        var Ni = document.getElementById('powers').value;
+
+        Ni=+Ni;
+        var ZsekZena=ZsekST* Ni;
+        var block = $(element).parents('.block_sek');
+        block.find('.sek_v_z').val(ZsekZena);
+        //alert(ZsekZena);
+
+        ALLSek(element);
+
+    }
+    window.SekCel = SekCel
+
+    //===== добавление пунктов секционирования   =====//
+
+    function ADDSEK() {
+        $('#sekcion_uv').append('\
+        <tr class="block_sek">\
+        <td style="width:25%;">\
+            <select required class="sel_sek" onclick="SekCel(this)"  >\
+            <option value="0"> Выберите тип</option>\
+        </select>\
+        </td>\
+           <td style="width:25%;"> <input type="text" class="sek_v"  value="0" readonly="readonly"></td>\
+            <td  style="width:25%"> <input type="text" class="sek_v_z"  value="0" readonly="readonly"> </td>\
+            <td  style="width:25%"><button class="Sek_del" onclick="DelSek(this); ">Удалить объект</button>  </td>\
+         </tr>\ ');
+
+        for (var i = 0; i < section.length; i++)  {
+            $('<option value="' + section[i].zenat + '">' + section[i].name + '</option>').appendTo('.sel_sek');
+
+        }
+    }
+
+    $('#but_sek').click(function () {
+
+
+        $('#sekcion_uv').append('\
+        <tr class="block_sek">\
+        <td style="width:25%;">\
+            <select required class="sel_sek" onclick="SekCel(this)"  >\
+            <option value="0"> Выберите тип</option>\
+        </select>\
+        </td>\
+           <td style="width:25%;"> <input type="text" class="sek_v"  value="0" readonly="readonly"></td>\
+            <td  style="width:25%"> <input type="text" class="sek_v_z"  value="0" readonly="readonly"> </td>\
+            <td  style="width:25%"><button class="Sek_del" onclick="DelSek(this); ">Удалить объект</button>  </td>\
+         </tr>\ ');
+        var Sekt=$('.block_sek');
+
+
+        for (var i = 0; i < section.length; i++)  {
+            $('<option value="' + section[i].zenat + '">' + section[i].name + '</option>').appendTo('.sel_sek');
+
         }
 
+        event.preventDefault(); // Будут отменен переход по ссылке
+        event.stopPropagation(); // Отмена всплытия
+
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+
     });
 
 
-    $('.butuv_del').click(function () {
-        alert(34333444);
-    });
 
 
 
-
-    function ALLUvv() {
-
-       alert(55544444444444);
+//===== Удаление пунктов секционирования    =====//
+    function DelSek(element) {
+        var sss= $(element).parents('.block_sek');
+        sss.remove()
+        ALLSek(element);
     }
+
+    window.DelSek = DelSek
+
+
+
+    //===== вычисление общей цены по подстанциям    =====//
+    function ALLSek(element) {
+        C6=0;
+        $('.sek_v_z').each(function(){
+            C6 += parseFloat($(this).val())
+        })
+       // alert(C6);
+        zena();
+    }
+
+    window.ALLSek = ALLSek
+
+
+
+    // ====Строительство линий электропередачи (ЛЭП) 6-10 кВ========//
+
+
+    $('#linev_check').click(function () {
+        if ($(this).prop('checked')) {
+
+            // var div = document.getElementById('transformv_block');
+            // $('.block_uv').remove();
+            // div.style.display = 'none';
+            // $('#transformv_check').prop({'checked': false})
+            // C5=0;
+
+
+            var div = document.getElementById('linev_block');
+            div.style.display = 'block';
+            ADDLINE();
+
+            // for (var i = 0; i < elline.length; i++)  {
+            //     $('<option value="' + elline[i].zenat + '">' + elline[i].name + '</option>').appendTo('.line_uv');
+            // }
+        }
+        else{
+            var div = document.getElementById('linev_block');
+            $('.block_line_uv').remove();
+            div.style.display = 'none';
+
+        }
+        zena();
+    });
+
+
+
+    //===== Заполнение цены линий электропередачи  после выбора типа   =====//
+
+    function sel_line(element) {
+
+        var ZlineST = element.value;
+
+        var block = $(element).parents('.block_line_uv');
+        block.find('.linestav').val(ZlineST);
+    }
+    window.sel_line = sel_line;
+
+    //===== добавление пунктов секционирования   =====//
+
+    function ADDLINE() {
+        $('#linev_uv').append('\
+        <tr class="block_line_uv">\
+            <td style="width:20%;">\
+            <select required class="line_uv" onclick="sel_line(this)"  >\
+            <option value="0"> Выберите тип</option>\
+        </select>\
+        </td>\
+        <td  style="width:20%"> <input type="text" class="linestav"  value="0" readonly="readonly"> </td>\
+            <td  style="width:20%"> <input type="text" class="lini_l"  value="0" > </td>\
+            <td  style="width:20%"> <input type="text" class="lina_z"  value="0" readonly="readonly"> </td>\
+            <td  style="width:20%"><button class="butuv_del" onclick="DelLine(this); ">Удалить объект</button>  </td>\
+        </tr>\ ');
+
+        for (var i = 0; i < elline.length; i++)  {
+            $('<option value="' + elline[i].zenat + '">' + elline[i].name + '</option>').appendTo('.line_uv');
+        }
+
+    }
+
+    $('#but_line').click(function () {
+        alert(999)
+
+        $('#linev_uv').append('\
+        <tr class="block_line_uv">\
+        <td style="width:20%;">\
+        <select required class="line_uv" onclick="sel_line(this)"  >\
+        <option value="0"> Выберите тип</option>\
+        </select>\
+        </td>\
+        <td  style="width:20%"> <input type="text" class="linestav"  value="0" readonly="readonly"> </td>\
+        <td  style="width:20%"> <input type="text" class="lini_l"  value="0" > </td>\
+        <td  style="width:20%"> <input type="text" class="lina_z"  value="0" readonly="readonly"> </td>\
+        <td  style="width:20%"><button class="butuv_del" onclick="DelLine(this); ">Удалить объект</button>  </td>\
+        </tr>\ ');
+
+        for (var i = 0; i < elline.length; i++)  {
+            $('<option value="' + elline[i].zenat + '">' + elline[i].name + '</option>').appendTo('.line_uv');
+        }
+
+        // event.preventDefault(); // Будут отменен переход по ссылке
+        // event.stopPropagation(); // Отмена всплытия
+        //
+        // event.stopPropagation();
+        // event.stopImmediatePropagation();
+
+    });
+
+
+
+
+
+//===== Удаление линий электропередачи     =====//
+    function DelLine(element) {
+        var sss= $(element).parents('.block_line_uv');
+        sss.remove()
+        ALLSek(element);
+    }
+
+    window.DelLine = DelLine
+
+
+
+    //===== вычисление общей цены по линий электропередачи     =====//
+    function ALLSek(element) {
+        C6=0;
+        $('.sek_v_z').each(function(){
+            C6 += parseFloat($(this).val())
+        })
+        // alert(C6);
+        zena();
+    }
+
+    window.ALLSek = ALLSek
+
+
+
+
+
 
 
 
@@ -540,7 +897,7 @@ $(document).ready(function() {
 
         //Стоимость мероприятий, связанных со строительством "последней мили"//
         //====Цена  без   НДС
-        Zmerop_nds=Zmerop_itog +C5;
+        Zmerop_nds=Zmerop_itog +C5+C6;
         var Zmerop_ndsR=+Zmerop_nds;
         Zmerop_nds=Zmerop_nds.toFixed(2);
         Zmerop_nds=new Intl.NumberFormat('ru-RU').format(Zmerop_nds);

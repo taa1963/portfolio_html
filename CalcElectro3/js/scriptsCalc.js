@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 
 
-    //===== Открытие и закрытие блоков после введение мощности   =====//
+    //===== Открытие и закрытие блоков после введение мощности Enter  =====//
 
 
     // $("#id_of_input").keyup(function(event){
@@ -737,9 +737,9 @@ $(document).ready(function() {
         zlie=+zlie;
         // console.log(ZlineST);
         // console.log(zlie);
-        var Ni = document.getElementById('powers').value;
-        Ni=+Ni;
-        var zlinev=ZlineST*zlie*Ni;
+        // var Ni = document.getElementById('powers').value;
+        // Ni=+Ni;
+        var zlinev=ZlineST*zlie;
         var block = $(element).parents('.block_line_uv');
         block.find('.lina_z').val(zlinev);
 
@@ -811,10 +811,10 @@ $(document).ready(function() {
         var zlie=parseFloat($(block2).val());
          Lline=+Lline/1000;
         zlie=+zlie;
-        var Ni = document.getElementById('powers').value;
-        Ni=+Ni;
+        // var Ni = document.getElementById('powers').value;
+        // Ni=+Ni;
 
-        var zlinev=Lline*zlie*Ni;
+        var zlinev=Lline*zlie;
        // var zlinev=7777777;
         var block = $(element).parents('.block_line_uv');
         block.find('.lina_z').val(zlinev);

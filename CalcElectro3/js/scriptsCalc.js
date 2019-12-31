@@ -1221,8 +1221,10 @@ $(document).ready(function() {
 
         var block = $(element).parents('.block_line_uvi');
         block.find('.linestavi').val(ZlineST);
+        var Ni = document.getElementById('powers').value;
+        Ni=+Ni;
 
-         var zlinev=ZlineST;
+         var zlinev=ZlineST*Ni;
         var block = $(element).parents('.block_line_uvi');
         block.find('.lina_zi').val(zlinev);
 
@@ -1376,7 +1378,11 @@ $(document).ready(function() {
 
         var block = $(element).parents('.block_galer_uvi');
         block.find('.galertavi').val(ZgaleST);
-        zgalerv=ZgaleST;
+        var Ni = document.getElementById('powers').value;
+        Ni=+Ni;
+        //zgaler=zgaler*Ni;
+        var zgalerv=ZgaleST*Ni;
+
         var block = $(element).parents('.block_galer_uvi');
         block.find('.galer_zi').val(zgalerv);
         Sel_GalZAlli();
@@ -1477,9 +1483,9 @@ $(document).ready(function() {
 
         $('.galer_zi').each(function(){
             C3 += parseFloat($(this).val());
-            var Ni = document.getElementById('powers').value;
-            Ni=+Ni;
-            C3=C3*Ni;
+            // var Ni = document.getElementById('powers').value;
+            // Ni=+Ni;
+            // C3=C3*Ni;
 
         });
         //console.log(C3);
@@ -1751,7 +1757,17 @@ $(document).ready(function() {
 
             var div = document.getElementById('linev_block1');
             div.style.display = 'block';
-            ADDLINE1();
+            var Knad = document.getElementById('reliabilitys').value;
+            //console.log(Uv);
+
+            if (Knad==2){
+                ADDLINE1();
+            }
+            if ((Knad==0)||(Knad==1)) {
+                ADDLINE1();
+                ADDLINE1();
+            }
+
 
             // for (var i = 0; i < elline.length; i++)  {
             //     $('<option value="' + elline[i].zenat + '">' + elline[i].name + '</option>').appendTo('.line_uv');
@@ -1784,10 +1800,10 @@ $(document).ready(function() {
         zlie=+zlie/1000;
         // console.log(ZlineST);
         // console.log(zlie);
-        var block2 = $(element).parents('.block_line_uv1').find('.lini_l2');
-        var zlie2=parseFloat($(block2).val());
-        zlie2=zlie2/1000;
-        var zlinev=ZlineST*zlie+ZlineST*zlie2;
+        // var block2 = $(element).parents('.block_line_uv1').find('.lini_l2');
+        // var zlie2=parseFloat($(block2).val());
+        // zlie2=zlie2/1000;
+        var zlinev=ZlineST*zlie;
         var block = $(element).parents('.block_line_uv1');
         block.find('.lina_z1').val(zlinev);
 
@@ -1806,7 +1822,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_line_uv1"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onclick="Sel_LineZ1(this)"> </td>\n <td  style="width:10%"><input type="number" class="lini_l2"  value="0" min="0" step="1" onclick="Sel_LineZ2(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onclick="Sel_LineZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
             );
             $('#linev_uv1').append(newSection);
 
@@ -1821,7 +1837,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_line_uv1"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onclick="Sel_LineZ1(this)"> </td>\n <td  style="width:10%"><input type="number" class="lini_l2"  value="0" min="0" step="1" onclick="Sel_LineZ2(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onclick="Sel_LineZ1(this)"> </td>\n </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
             );
             $('#linev_uv1').append(newSection);
 
@@ -1870,11 +1886,11 @@ $(document).ready(function() {
         Lline=+Lline/1000;
         zlie=+zlie;
 
-        var block2 = $(element).parents('.block_line_uv1').find('.lini_l2');
-        var zlie2=parseFloat($(block2).val());
-        zlie2=+zlie2/1000;
+        // var block2 = $(element).parents('.block_line_uv1').find('.lini_l2');
+        // var zlie2=parseFloat($(block2).val());
+        // zlie2=+zlie2/1000;
 
-        var zlinev=Lline*zlie+Lline*zlie2;
+        var zlinev=Lline*zlie;
         // var zlinev=7777777;
         var block = $(element).parents('.block_line_uv1');
         block.find('.lina_z1').val(zlinev);
@@ -1886,27 +1902,27 @@ $(document).ready(function() {
 
 
     //===== вычисление  цены текущей по линий электропередачи     =====//
-    function Sel_LineZ2(element) {
-        var Lline = element.value;
-
-        var block2 = $(element).parents('.block_line_uv1').find('.linestav1');
-        var zlie=parseFloat($(block2).val());
-        Lline=+Lline/1000;
-        zlie=+zlie;
-
-        var block2 = $(element).parents('.block_line_uv1').find('.lini_l1');
-        var zlie2=parseFloat($(block2).val());
-        zlie2=+zlie2/1000;
-
-        var zlinev=Lline*zlie+Lline*zlie2;
-        // var zlinev=7777777;
-        var block = $(element).parents('.block_line_uv1');
-        block.find('.lina_z1').val(zlinev);
-
-        Sel_LineZAll1();
-    }
-
-    window.Sel_LineZ2 = Sel_LineZ2;
+    // function Sel_LineZ2(element) {
+    //     var Lline = element.value;
+    //
+    //     var block2 = $(element).parents('.block_line_uv1').find('.linestav1');
+    //     var zlie=parseFloat($(block2).val());
+    //     Lline=+Lline/1000;
+    //     zlie=+zlie;
+    //
+    //     var block2 = $(element).parents('.block_line_uv1').find('.lini_l1');
+    //     var zlie2=parseFloat($(block2).val());
+    //     zlie2=+zlie2/1000;
+    //
+    //     var zlinev=Lline*zlie+Lline*zlie2;
+    //     // var zlinev=7777777;
+    //     var block = $(element).parents('.block_line_uv1');
+    //     block.find('.lina_z1').val(zlinev);
+    //
+    //     Sel_LineZAll1();
+    // }
+    //
+    // window.Sel_LineZ2 = Sel_LineZ2;
 
 
 
@@ -1939,7 +1955,17 @@ $(document).ready(function() {
 
             var div = document.getElementById('galer_block1');
             div.style.display = 'block';
-            ADDLGAL1();
+
+            var Knad = document.getElementById('reliabilitys').value;
+            //console.log(Uv);
+
+            if (Knad==2){
+                ADDLGAL1();
+            }
+            if ((Knad==0)||(Knad==1)) {
+                ADDLGAL1();
+                ADDLGAL1();
+            }
 
         }
         else{
@@ -1967,16 +1993,16 @@ $(document).ready(function() {
         var Lgaler=parseFloat($(block2).val());
         Lgaler=+Lgaler/1000;
 
-        var block2 = $(element).parents('.block_galer_uv1').find('.galer_l2');
-        var Lgaler2=parseFloat($(block2).val());
-        Lgaler2=+Lgaler/1000;
+        // var block2 = $(element).parents('.block_galer_uv1').find('.galer_l2');
+        // var Lgaler2=parseFloat($(block2).val());
+        // Lgaler2=+Lgaler/1000;
 
         var zgalerv=0;
         //zgaler=+zgaler;
         // console.log(ZgaleST);
         // console.log(zgaler);
 
-        zgalerv=ZgaleST*Lgaler+ZgaleST*Lgaler2;
+        zgalerv=ZgaleST*Lgaler;
         var block = $(element).parents('.block_galer_uv1');
         block.find('.galer_z1').val(zgalerv);
         Sel_GalZAll1();
@@ -1989,13 +2015,13 @@ $(document).ready(function() {
     function ADDLGAL1() {
 
         var Uv = document.getElementById('potentials').value;
-        console.log(Uv);
+        //console.log(Uv);
 
         if (Uv==0) {
 
             var newSection = $('<tr class="block_galer_uv1"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onclick="Sel_galerZ1(this)"> </td>\n <td  style="width:20%"> <input type="number" class="galer_l2"  value="0" step="1" min="0" onclick="Sel_galerZ2(this)"> </td>\n <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onclick="Sel_galerZ1(this)"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
             );
 
             $('#galer_uvv1').append(newSection);
@@ -2011,7 +2037,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_galer_uv1"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onclick="Sel_galerZ1(this)"> </td>\n <td  style="width:20%"> <input type="number" class="galer_l2"  value="0" step="1" min="0" onclick="Sel_galerZ2(this)"> </td>\n <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onclick="Sel_galerZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
             );
 
             $('#galer_uvv1').append(newSection);
@@ -2062,12 +2088,12 @@ $(document).ready(function() {
         var zgaler=parseFloat($(block2).val());
         Lgaler=+Lgaler/1000;
         zgaler=+zgaler;
-        var block2 = $(element).parents('.block_galer_uv1').find('.galer_l2');
-        var  Lgaler2=parseFloat($(block2).val());
-        Lgaler2=+ Lgaler/1000;
+        // var block2 = $(element).parents('.block_galer_uv1').find('.galer_l2');
+        // var  Lgaler2=parseFloat($(block2).val());
+        // Lgaler2=+ Lgaler/1000;
 
 
-        var zgaler=Lgaler*zgaler+Lgaler2*zgaler;
+        var zgaler=Lgaler*zgaler;
         // var zlinev=7777777;
         var block = $(element).parents('.block_galer_uv1');
         block.find('.galer_z1').val(zgaler);
@@ -2080,29 +2106,29 @@ $(document).ready(function() {
     window.Sel_galerZ1 = Sel_galerZ1;
 
     //===== вычисление  цены текущей галерей     =====//
-    function Sel_galerZ2(element) {
-        var Lgaler = element.value;
-
-        var block2 = $(element).parents('.block_galer_uv1').find('.galertav1');
-        var zgaler=parseFloat($(block2).val());
-        Lgaler=+Lgaler/1000;
-        zgaler=+zgaler;
-        var block2 = $(element).parents('.block_galer_uv1').find('.galer_l1');
-        var  Lgaler2=parseFloat($(block2).val());
-        Lgaler2=+ Lgaler/1000;
-
-
-        var zgaler=Lgaler*zgaler+Lgaler2*zgaler;
-        // var zlinev=7777777;
-        var block = $(element).parents('.block_galer_uv1');
-        block.find('.galer_z1').val(zgaler);
-
-        Sel_GalZAll1();
-
-
-    }
-
-    window.Sel_galerZ2 = Sel_galerZ2;
+    // function Sel_galerZ2(element) {
+    //     var Lgaler = element.value;
+    //
+    //     var block2 = $(element).parents('.block_galer_uv1').find('.galertav1');
+    //     var zgaler=parseFloat($(block2).val());
+    //     Lgaler=+Lgaler/1000;
+    //     zgaler=+zgaler;
+    //     var block2 = $(element).parents('.block_galer_uv1').find('.galer_l1');
+    //     var  Lgaler2=parseFloat($(block2).val());
+    //     Lgaler2=+ Lgaler/1000;
+    //
+    //
+    //     var zgaler=Lgaler*zgaler+Lgaler2*zgaler;
+    //     // var zlinev=7777777;
+    //     var block = $(element).parents('.block_galer_uv1');
+    //     block.find('.galer_z1').val(zgaler);
+    //
+    //     Sel_GalZAll1();
+    //
+    //
+    // }
+    //
+    // window.Sel_galerZ2 = Sel_galerZ2;
 
 
 
@@ -2419,7 +2445,10 @@ $(document).ready(function() {
         // var block2 = $(element).parents('.block_line_uv1i').find('.lini_l2i');
         // var zlie2=parseFloat($(block2).val());
         // zlie2=zlie2/1000;
-        var zlinev=ZlineST;
+        var Ni = document.getElementById('powers').value;
+
+        Ni=+Ni;
+        var zlinev=ZlineST*Ni;
         var block = $(element).parents('.block_line_uv1i');
         block.find('.lina_z1i').val(zlinev);
 
@@ -2428,7 +2457,7 @@ $(document).ready(function() {
     }
     window.sel_line1i = sel_line1i;
 
-    //===== добавление пунктов секционирования   =====//
+    //===== добавление линий электропередачи    =====//
 
     function ADDLINE1i() {
         var Uv = document.getElementById('potentials').value;
@@ -2547,10 +2576,10 @@ $(document).ready(function() {
         C2=0;
         $('.lina_z1i').each(function(){
             C2 += parseFloat($(this).val());
-            var Ni = document.getElementById('powers').value;
-
-            Ni=+Ni;
-            C2=C2*Ni;
+            // var Ni = document.getElementById('powers').value;
+            //
+            // Ni=+Ni;
+            // C2=C2*Ni;
         });
         console.log(C2);
         zena();

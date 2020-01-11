@@ -1,4 +1,5 @@
-
+var J;
+J=0;
 $(document).ready(function() {
 
 
@@ -26,6 +27,14 @@ $(document).ready(function() {
     }
 
     ADDPOL();
+	
+	$('#categories').click(function () {
+		J=0;
+	});
+	
+	$('#gender').click(function () {
+		J=0;
+	});
 
 
     $('#gener').click(function () {
@@ -84,24 +93,23 @@ $(document).ready(function() {
             vubor = Japanesed;
         }
 
-    console.log(cat);
-	console.log(pol);
-
+   
 
         var k = vubor.length;
-        // console.log(k);
+       
 
-        // var min_random = 0;
-        var max_random = k;
-
-        //max_random++;
-
-        var range = max_random;
-        var n = Math.floor(Math.random() * range);
-        console.log(n);
-
-        var nevMain = vubor[n].name;
-        console.log(nevMain);
+        var nevMain = vubor[J].name;
+		
+		J=J+1;
+		if (J>=k){
+			J=0;
+		}
+		else{
+			J=J;
+		}
+		 //console.log(J);
+		
+        //console.log(nevMain);
 
         $('#new_name').text(nevMain);
 

@@ -192,13 +192,8 @@ $(document).ready(function() {
 
                     zena();
                 }
-
-
             }
-           // alert(2);
-            // powersv=+powersv;
-            // console.log(powersv);
-            zena();
+           zena();
 
         }
         }
@@ -510,12 +505,12 @@ $(document).ready(function() {
     $('#transformv_check').click(function () {
         if ($(this).prop('checked')) {
 
-            var div = document.getElementById('sekcion_block');
-            $('.block_sek').remove();
-            div.style.display = 'none';
-
-            $('#sekcion_check').prop({'checked': false})
-            C6=0;
+            // var div = document.getElementById('sekcion_block');
+            // $('.block_sek').remove();
+            // div.style.display = 'none';
+            //
+            // $('#sekcion_check').prop({'checked': false})
+            // C6=0;
 
 
             var div = document.getElementById('transformv_block');
@@ -597,13 +592,13 @@ $(document).ready(function() {
     $('#sekcion_check').click(function () {
         if ($(this).prop('checked')) {
 
-            var div = document.getElementById('transformv_block');
-            $('.block_uv').remove();
-            div.style.display = 'none';
-
-
-            $('#transformv_check').prop({'checked': false})
-            C5=0;
+            // var div = document.getElementById('transformv_block');
+            // $('.block_uv').remove();
+            // div.style.display = 'none';
+            //
+            //
+            // $('#transformv_check').prop({'checked': false})
+            // C5=0;
 
 
             var div = document.getElementById('sekcion_block');
@@ -624,6 +619,7 @@ $(document).ready(function() {
     //===== Заполнение цены Строительство пунктов секционирования после выбора типа   =====//
 
     function SekCel(element) {
+
         var ZsekST = element.value;
 
         var block = $(element).parents('.block_sek');
@@ -641,7 +637,7 @@ $(document).ready(function() {
         ALLSek();
 
     }
-    window.SekCel = SekCel
+    window.SekCel = SekCel;
 
     //===== добавление пунктов секционирования   =====//
 
@@ -751,11 +747,12 @@ $(document).ready(function() {
     function ADDLINE() {
         var Uv = document.getElementById('potentials').value;
 
+
         if (Uv==0) {
 
             var newSection = $('<tr class="block_line_uv"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="line_uv" onclick="sel_line(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav"  value="0" readonly="readonly"> </td>\n <td  style="width:20%"> <input type="number" class="lini_l"  value="0" min="0" step="1" onclick="Sel_LineZ(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del" onclick="DelLine(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="line_uv" onclick="sel_line(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav"  value="0" readonly="readonly"> </td>\n <td  style="width:20%"> <input type="number" class="lini_l" id="lini_l1" value="0" min="0" step="1" onkeyup="Sel_LineZ(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del" onclick="DelLine(this); ">Удалить объект</button>  </td>'
             );
             $('#linev_uv').append(newSection);
 
@@ -770,7 +767,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_line_uv"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="line_uv" onclick="sel_line(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav"  value="0" readonly="readonly"> </td>\n <td  style="width:20%"> <input type="number" class="lini_l"  value="0" min="0" step="1" onclick="Sel_LineZ(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del" onclick="DelLine(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="line_uv" onclick="sel_line(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav"  value="0" readonly="readonly"> </td>\n <td  style="width:20%"> <input type="number" class="lini_l" id="lini_l1"  value="0" min="0" step="1" onkeyup="Sel_LineZ(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del" onclick="DelLine(this); ">Удалить объект</button>  </td>'
             );
             $('#linev_uv').append(newSection);
 
@@ -791,19 +788,24 @@ $(document).ready(function() {
     });
 
 
+
 //===== Удаление линий электропередачи     =====//
     function DelLine(element) {
         var sss= $(element).parents('.block_line_uv');
-        sss.remove()
+        alert(element);
+        sss.remove();
         Sel_LineZAll();
-        //alert(434334);
+
     }
-    window.DelLine = DelLine
+    window.DelLine = DelLine;
 
 
     //===== вычисление  цены текущей по линий электропередачи     =====//
     function Sel_LineZ(element) {
-        var Lline = element.value;
+        //var block1 = $(element).parents('.block_line_uv').find('.lini_l');
+        //var Lline=parseFloat($(block1).val());
+
+       var Lline = element.value;
 
         var block2 = $(element).parents('.block_line_uv').find('.linestav');
         var zlie=parseFloat($(block2).val());
@@ -897,7 +899,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_galer_uv"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="galer_uv" onclick="galer_line(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l"  value="0" step="1" min="0" onclick="Sel_galerZ(this)"> </td>\n<td  style="width:20%"> <input type="text" class="galer_z"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del" onclick="Delgaler(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="galer_uv" onclick="galer_line(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l"  value="0" step="1" min="0" onkeyup="Sel_galerZ(this)"> </td>\n<td  style="width:20%"> <input type="text" class="galer_z"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del" onclick="Delgaler(this); ">Удалить объект</button>  </td>'
             );
 
             $('#galer_uvv').append(newSection);
@@ -913,7 +915,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_galer_uv"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="galer_uv" onclick="galer_line(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l"  value="0" step="1" min="0" onclick="Sel_galerZ(this)"> </td>\n<td  style="width:20%"> <input type="text" class="galer_z"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del" onclick="Delgaler(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="galer_uv" onclick="galer_line(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l"  value="0" step="1" min="0" onkeyup="Sel_galerZ(this)"> </td>\n<td  style="width:20%"> <input type="text" class="galer_z"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del" onclick="Delgaler(this); ">Удалить объект</button>  </td>'
             );
 
             $('#galer_uvv').append(newSection);
@@ -990,12 +992,12 @@ $(document).ready(function() {
     $('#transformv_checki').click(function () {
         if ($(this).prop('checked')) {
 
-            var div = document.getElementById('sekcion_blocki');
-            $('.block_seki').remove();
-            div.style.display = 'none';
-
-            $('#sekcion_checki').prop({'checked': false})
-            C6=0;
+            // var div = document.getElementById('sekcion_blocki');
+            // $('.block_seki').remove();
+            // div.style.display = 'none';
+            //
+            // $('#sekcion_checki').prop({'checked': false})
+            // C6=0;
 
 
             var div = document.getElementById('transformv_blocki');
@@ -1083,13 +1085,13 @@ $(document).ready(function() {
     $('#sekcion_checki').click(function () {
         if ($(this).prop('checked')) {
 
-            var div = document.getElementById('transformv_blocki');
-            $('.block_uvi').remove();
-            div.style.display = 'none';
-
-
-            $('#transformv_checki').prop({'checked': false})
-            C5=0;
+            // var div = document.getElementById('transformv_blocki');
+            // $('.block_uvi').remove();
+            // div.style.display = 'none';
+            //
+            //
+            // $('#transformv_checki').prop({'checked': false})
+            // C5=0;
 
 
             var div = document.getElementById('sekcion_blocki');
@@ -1484,12 +1486,12 @@ $(document).ready(function() {
     $('#transformv_check1').click(function () {
         if ($(this).prop('checked')) {
 
-            var div = document.getElementById('sekcion_block1');
-            $('.block_sek1').remove();
-            div.style.display = 'none';
-
-            $('#sekcion_check1').prop({'checked': false})
-            C6=0;
+            // var div = document.getElementById('sekcion_block1');
+            // $('.block_sek1').remove();
+            // div.style.display = 'none';
+            //
+            // $('#sekcion_check1').prop({'checked': false})
+            // C6=0;
 
 
             var div = document.getElementById('transformv_block1');
@@ -1550,7 +1552,7 @@ $(document).ready(function() {
     function ADDST1() {
         var newSection = $('<tr class="block_uv1"></tr>');
         newSection.html(
-            '<td style="width:25%;">\n <select required class="sel_uv1" onclick="Uvv1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:25%;"> <span id="Uv1">НН, CH <br> (до 20 кВ)</span></td>\n<td  style="width:20%"> <input type="number" class="sel_uv_n1"  value="1" min="0" step="1" onclick="Sel_LineN1(this)"> </td>\n  <td  style="width:25%"> <input type="text" class="sel_uv_z1"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="butuv_del1" onclick="DelUvv1(this); ">Удалить объект</button>  </td>'
+            '<td style="width:25%;">\n <select required class="sel_uv1" onclick="Uvv1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:25%;"> <span id="Uv1">НН, CH <br> (до 20 кВ)</span></td>\n<td  style="width:20%"> <input type="number" class="sel_uv_n1"  value="1" min="0" step="1" onkeydown="Sel_LineN1(this)"> </td>\n  <td  style="width:25%"> <input type="text" class="sel_uv_z1"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="butuv_del1" onclick="DelUvv1(this); ">Удалить объект</button>  </td>'
         );
         $('#table_uv1').append(newSection);
 
@@ -1594,13 +1596,13 @@ $(document).ready(function() {
     $('#sekcion_check1').click(function () {
         if ($(this).prop('checked')) {
 
-            var div = document.getElementById('transformv_block1');
-            $('.block_uv1').remove();
-            div.style.display = 'none';
-
-
-            $('#transformv_check1').prop({'checked': false})
-            C5=0;
+            // var div = document.getElementById('transformv_block1');
+            // $('.block_uv1').remove();
+            // div.style.display = 'none';
+            //
+            //
+            // $('#transformv_check1').prop({'checked': false})
+            // C5=0;
 
 
             var div = document.getElementById('sekcion_block1');
@@ -1682,7 +1684,7 @@ $(document).ready(function() {
     function ADDSEK1() {
         var newSection = $('<tr class="block_sek1"></tr>');
         newSection.html(
-            '<td style="width:25%;">\n    <select required class="sel_sek1" onclick="SekCel1(this)"  >\n    <option value="0"> Выберите тип</option>\n    </select>\n</td>\n<td style="width:25%;"><input type="text" class="sek_v1"  value="0" readonly="readonly"></td>\n<td  style="width:20%"> <input type="number" class="sel_sek_n1"  value="1" min="0" step="1" onclick="Sel_sekN1(this)"> </td>\n <td  style="width:25%"><input type="text" class="sek_v_z1"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="Sek_del1" onclick="DelSek1(this); ">Удалить объект</button>  </td>'
+            '<td style="width:25%;">\n    <select required class="sel_sek1" onclick="SekCel1(this)"  >\n    <option value="0"> Выберите тип</option>\n    </select>\n</td>\n<td style="width:25%;"><input type="text" class="sek_v1"  value="0" readonly="readonly"></td>\n<td  style="width:20%"> <input type="number" class="sel_sek_n1"  value="1" min="0" step="1" onkeydown="Sel_sekN1(this)"> </td>\n <td  style="width:25%"><input type="text" class="sek_v_z1"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="Sek_del1" onclick="DelSek1(this); ">Удалить объект</button>  </td>'
         );
 
         $('#sekcion_uv1').append(newSection);
@@ -1703,11 +1705,11 @@ $(document).ready(function() {
 //===== Удаление пунктов секционирования    =====//
     function DelSek1(element) {
         var sss= $(element).parents('.block_sek1');
-        sss.remove()
+        sss.remove();
         ALLSek1(element);
     }
 
-    window.DelSek1 = DelSek1
+    window.DelSek1 = DelSek1;
 
 
     //===== вычисление общей цены по подстанциям    =====//
@@ -1715,7 +1717,7 @@ $(document).ready(function() {
         C6=0;
         $('.sek_v_z1').each(function(){
             C6 += parseFloat($(this).val())
-        })
+        });
         // alert(C6);
         zena();
     }
@@ -1746,8 +1748,8 @@ $(document).ready(function() {
                 ADDLINE1();
             }
             if ((Knad==0)||(Knad==1)) {
-                ADDLINE1();
-                ADDLINE1();
+                ADDLINE2();
+               // ADDLINE1();
             }
 
 
@@ -1802,7 +1804,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_line_uv1"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onclick="Sel_LineZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onkeydown="Sel_LineZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект3</button>  </td>'
             );
             $('#linev_uv1').append(newSection);
 
@@ -1817,7 +1819,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_line_uv1"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onclick="Sel_LineZ1(this)"> </td>\n </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onkeydown="Sel_LineZ1(this)"> </td>\n </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
             );
             $('#linev_uv1').append(newSection);
 
@@ -1829,15 +1831,94 @@ $(document).ready(function() {
         }
     }
 
+    function ADDLINE2() {
+        var Uv = document.getElementById('potentials').value;
+        console.log(Uv);
+
+        if (Uv==0) {
+
+            var newSection = $('<tr class="block_line_uv1"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 1</span> </td>\n<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onkeydown="Sel_LineZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td> \n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
+            );
+            $('#linev_uv1').append(newSection);
+
+            var newSelSek = $(newSection).find('.line_uv1');
+
+            for (var i = 0; i < elline04.length; i++)  {
+                $('<option value="' + elline04[i].zenat + '">' + elline04[i].name + '</option>').appendTo(newSelSek);
+            }
+
+            var newSection = $('<tr class="block_line_uv1"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 2</span> </td>\n<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onkeydown="Sel_LineZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
+            );
+            $('#linev_uv1').append(newSection);
+
+            var newSelSek = $(newSection).find('.line_uv1');
+
+            for (var i = 0; i < elline04.length; i++)  {
+                $('<option value="' + elline04[i].zenat + '">' + elline04[i].name + '</option>').appendTo(newSelSek);
+            }
+
+
+        }
+
+        if (Uv==1) {
+
+            var newSection = $('<tr class="block_line_uv1"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 1</span> </td>\n<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onkeydown="Sel_LineZ1(this)"> </td>\n </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
+            );
+            $('#linev_uv1').append(newSection);
+
+            var newSelSek = $(newSection).find('.line_uv1');
+
+            for (var i = 0; i < elline6.length; i++)  {
+                $('<option value="' + elline6[i].zenat + '">' + elline6[i].name + '</option>').appendTo(newSelSek);
+            }
+
+            var newSection = $('<tr class="block_line_uv1"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 2</span> </td>\n<td style="width:20%;">\n <select required class="line_uv1" onclick="sel_line1(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1"  value="0" readonly="readonly"> </td>\n <td  style="width:10%"> <input type="number" class="lini_l1"  value="0" min="0" step="1" onkeydown="Sel_LineZ1(this)"> </td>\n </td>\n <td  style="width:20%"> <input type="text" class="lina_z1"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1" onclick="DelLine1(this); ">Удалить объект</button>  </td>'
+            );
+            $('#linev_uv1').append(newSection);
+
+            var newSelSek = $(newSection).find('.line_uv1');
+
+            for (var i = 0; i < elline6.length; i++)  {
+                $('<option value="' + elline6[i].zenat + '">' + elline6[i].name + '</option>').appendTo(newSelSek);
+            }
+
+
+
+        }
+    }
+
+
+
+
+
+
     $('#but_line1').click(function () {
-        ADDLINE1();
+
+        var Knad = document.getElementById('reliabilitys').value;
+        //console.log(Uv);
+
+        if (Knad==2){
+            ADDLINE1();
+        }
+        if ((Knad==0)||(Knad==1)) {
+            ADDLINE2();
+
+        }
     });
 
 
 //===== Удаление линий электропередачи     =====//
     function DelLine1(element) {
         var sss= $(element).parents('.block_line_uv1');
-        sss.remove()
+        sss.remove();
         Sel_LineZAll1();
         //alert(434334);
     }
@@ -1908,8 +1989,8 @@ $(document).ready(function() {
                 ADDLGAL1();
             }
             if ((Knad==0)||(Knad==1)) {
-                ADDLGAL1();
-                ADDLGAL1();
+                ADDLGAL2();
+
             }
 
         }
@@ -1958,7 +2039,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_galer_uv1"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onclick="Sel_galerZ1(this)"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onkeydown="Sel_galerZ1(this)"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
             );
 
             $('#galer_uvv1').append(newSection);
@@ -1974,7 +2055,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_galer_uv1"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onclick="Sel_galerZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
+                '<td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onkeydown="Sel_galerZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
             );
 
             $('#galer_uvv1').append(newSection);
@@ -1987,9 +2068,92 @@ $(document).ready(function() {
         }
     }
 
+
+    function ADDLGAL2() {
+
+        var Uv = document.getElementById('potentials').value;
+        //console.log(Uv);
+
+        if (Uv==0) {
+
+            var newSection = $('<tr class="block_galer_uv1"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 1</span> </td>\n <td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onkeydown="Sel_galerZ1(this)"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
+            );
+
+            $('#galer_uvv1').append(newSection);
+
+            var newSelSek = $(newSection).find('.galer_uv1');
+
+            for (var i = 0; i < galer04.length; i++)  {
+                $('<option value="' + galer04[i].zenat + '">' + galer04[i].name + '</option>').appendTo(newSelSek);
+            }
+
+            var newSection = $('<tr class="block_galer_uv1"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 2</span> </td>\n <td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onkeydown="Sel_galerZ1(this)"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
+            );
+
+            $('#galer_uvv1').append(newSection);
+
+            var newSelSek = $(newSection).find('.galer_uv1');
+
+            for (var i = 0; i < galer04.length; i++)  {
+                $('<option value="' + galer04[i].zenat + '">' + galer04[i].name + '</option>').appendTo(newSelSek);
+            }
+        }
+
+
+
+        if (Uv==1) {
+
+            var newSection = $('<tr class="block_galer_uv1"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 1</span> </td>\n <td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onkeydown="Sel_galerZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
+            );
+
+            $('#galer_uvv1').append(newSection);
+
+            var newSelSek = $(newSection).find('.galer_uv1');
+
+            for (var i = 0; i < galer6.length; i++)  {
+                $('<option value="' + galer6[i].zenat + '">' + galer6[i].name + '</option>').appendTo(newSelSek);
+            }
+            var newSection = $('<tr class="block_galer_uv1"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 2</span> </td>\n <td style="width:20%;">\n <select required class="galer_uv1" onclick="galer_line1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="galer_l1"  value="0" step="1" min="0" onkeydown="Sel_galerZ1(this)"> </td>\n <td  style="width:20%"> <input type="text" class="galer_z1"  value="0" readonly="readonly1"> </td>\n<td  style="width:20%"><button class="butuv_del1" onclick="Delgaler1(this); ">Удалить объект</button>  </td>'
+            );
+
+            $('#galer_uvv1').append(newSection);
+
+            var newSelSek = $(newSection).find('.galer_uv1');
+
+            for (var i = 0; i < galer6.length; i++)  {
+                $('<option value="' + galer6[i].zenat + '">' + galer6[i].name + '</option>').appendTo(newSelSek);
+            }
+        }
+    }
+
+
+
     $('#but_gal1').click(function () {
-        ADDLGAL1();
+
+        var Knad = document.getElementById('reliabilitys').value;
+        //console.log(Uv);
+
+        if (Knad==2){
+            ADDLGAL1();
+        }
+        if ((Knad==0)||(Knad==1)) {
+            ADDLGAL2();
+
+        }
     });
+
+
+
+
+
 
 //===== Удаление закрытых галерей     =====//
     function Delgaler1(element) {
@@ -2035,7 +2199,7 @@ $(document).ready(function() {
     }
 
 
-///========  BLOCK 1==========//
+///========  BLOCK 1I==========//
 
     //===== Открытие блока Строительство трансформаторных подстанций  1 -2 категория надежности мощность  =====//
 
@@ -2043,12 +2207,12 @@ $(document).ready(function() {
     $('#transformv_check1i').click(function () {
         if ($(this).prop('checked')) {
 
-            var div = document.getElementById('sekcion_block1i');
-            $('.block_sek1').remove();
-            div.style.display = 'none';
-
-            $('#sekcion_check1i').prop({'checked': false})
-            C6=0;
+            // var div = document.getElementById('sekcion_block1i');
+            // $('.block_sek1').remove();
+            // div.style.display = 'none';
+            //
+            // $('#sekcion_check1i').prop({'checked': false})
+            // C6=0;
 
 
             var div = document.getElementById('transformv_block1i');
@@ -2109,7 +2273,7 @@ $(document).ready(function() {
     function ADDST1i() {
         var newSection = $('<tr class="block_uv1i"></tr>');
         newSection.html(
-            '<td style="width:25%;">\n <select required class="sel_uv1i" onclick="Uvv1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:25%;"> <span id="Uv1i">НН, CH <br> (до 20 кВ)</span></td>\n<td  style="width:20%"> <input type="number" class="sel_uv_n1i"  value="1" min="0" step="1" onclick="Sel_LineN1i(this)"> </td>\n  <td  style="width:25%"> <input type="text" class="sel_uv_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="butuv_del1i" onclick="DelUvv1i(this); ">Удалить объект</button>  </td>'
+            '<td style="width:25%;">\n <select required class="sel_uv1i" onclick="Uvv1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:25%;"> <span id="Uv1i">НН, CH <br> (до 20 кВ)</span></td>\n<td  style="width:20%"> <input type="number" class="sel_uv_n1i"  value="1" min="0" step="1" onkeydown="Sel_LineN1i(this)"> </td>\n  <td  style="width:25%"> <input type="text" class="sel_uv_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="butuv_del1i" onclick="DelUvv1i(this); ">Удалить объект</button>  </td>'
         );
         $('#table_uv1i').append(newSection);
 
@@ -2153,13 +2317,13 @@ $(document).ready(function() {
     $('#sekcion_check1i').click(function () {
         if ($(this).prop('checked')) {
 
-            var div = document.getElementById('transformv_block1i');
-            $('.block_uv1i').remove();
-            div.style.display = 'none';
-
-
-            $('#transformv_check1i').prop({'checked': false})
-            C5=0;
+            // var div = document.getElementById('transformv_block1i');
+            // $('.block_uv1i').remove();
+            // div.style.display = 'none';
+            //
+            //
+            // $('#transformv_check1i').prop({'checked': false})
+            // C5=0;
 
 
             var div = document.getElementById('sekcion_block1i');
@@ -2237,7 +2401,7 @@ $(document).ready(function() {
     function ADDSEK1i() {
         var newSection = $('<tr class="block_sek1i"></tr>');
         newSection.html(
-            '<td style="width:25%;">\n    <select required class="sel_sek1i" onclick="SekCel1i(this)"  >\n    <option value="0"> Выберите тип</option>\n    </select>\n</td>\n<td style="width:25%;"><input type="text" class="sek_v1i"  value="0" readonly="readonly"></td>\n<td  style="width:20%"> <input type="number" class="sel_sek_n1i"  value="1" min="0" step="1" onclick="Sel_sekN1i(this)"> </td>\n <td  style="width:25%"><input type="text" class="sek_v_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="Sek_del1i" onclick="DelSek1i(this); ">Удалить объект</button>  </td>'
+            '<td style="width:25%;">\n    <select required class="sel_sek1i" onclick="SekCel1i(this)"  >\n    <option value="0"> Выберите тип</option>\n    </select>\n</td>\n<td style="width:25%;"><input type="text" class="sek_v1i"  value="0" readonly="readonly"></td>\n<td  style="width:20%"> <input type="number" class="sel_sek_n1i"  value="1" min="0" step="1" onkeydown="Sel_sekN1i(this)"> </td>\n <td  style="width:25%"><input type="text" class="sek_v_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="Sek_del1i" onclick="DelSek1i(this); ">Удалить объект</button>  </td>'
         );
 
         $('#sekcion_uv1i').append(newSection);
@@ -2258,7 +2422,7 @@ $(document).ready(function() {
 //===== Удаление пунктов секционирования    =====//
     function DelSek1i(element) {
         var sss= $(element).parents('.block_sek1i');
-        sss.remove()
+        sss.remove();
         ALLSek1i(element);
     }
 
@@ -2294,7 +2458,7 @@ $(document).ready(function() {
             var div = document.getElementById('linev_block1i');
             div.style.display = 'block';
             ADDLINE1i();
-            ADDLINE1i();
+           // ADDLINE1i();
 
         }
         else{
@@ -2340,7 +2504,7 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_line_uv1i"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="line_uv1i" onclick="sel_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="lina_z1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1i" onclick="DelLine1i(this); ">Удалить объект</button>  </td>'
+                '<td style="width:10%;"> <span>Источник 1</span> </td>\n<td style="width:20%;">\n <select required class="line_uv1i" onclick="sel_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:10%"> <input type="text" class="linestav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="lina_z1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1i" onclick="DelLine1i(this); ">Удалить объект</button>  </td>'
             );
             $('#linev_uv1i').append(newSection);
 
@@ -2349,13 +2513,39 @@ $(document).ready(function() {
             for (var i = 0; i < ellinei04.length; i++)  {
                 $('<option value="' + ellinei04[i].zenat + '">' + ellinei04[i].name + '</option>').appendTo(newSelSek);
             }
+
+            var newSection = $('<tr class="block_line_uv1i"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 2</span> </td>\n <td style="width:20%;">\n <select required class="line_uv1i" onclick="sel_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:10%"> <input type="text" class="linestav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="lina_z1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1i" onclick="DelLine1i(this); ">Удалить объект</button>  </td>'
+            );
+            $('#linev_uv1i').append(newSection);
+
+            var newSelSek = $(newSection).find('.line_uv1i');
+
+            for (var i = 0; i < ellinei04.length; i++)  {
+                $('<option value="' + ellinei04[i].zenat + '">' + ellinei04[i].name + '</option>').appendTo(newSelSek);
+            }
+
+
         }
 
         if (Uv==1) {
 
             var newSection = $('<tr class="block_line_uv1i"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="line_uv1i" onclick="sel_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:20%"> <input type="text" class="linestav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="lina_z1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"><button class="butuv_del1i" onclick="DelLine1i(this); ">Удалить объект</button>  </td>'
+                '<td style="width:10%;"> <span>Источник 1</span> </td>\n <td style="width:20%;">\n <select required class="line_uv1i" onclick="sel_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:10%"> <input type="text" class="linestav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="lina_z1i"  value="0" readonly="readonly"> </td>\n   <td  style="width:20%"><button class="butuv_del1i" onclick="DelLine1i(this); ">Удалить объект</button>  </td>'
+            );
+            $('#linev_uv1i').append(newSection);
+
+            var newSelSek = $(newSection).find('.line_uv1i');
+
+            for (var i = 0; i < ellinei6.length; i++)  {
+                $('<option value="' + ellinei6[i].zenat + '">' + ellinei6[i].name + '</option>').appendTo(newSelSek);
+            }
+
+            var newSection = $('<tr class="block_line_uv1i"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 2</span> </td>\n <td style="width:20%;">\n <select required class="line_uv1i" onclick="sel_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n </select>\n </td>\n <td  style="width:10%"> <input type="text" class="linestav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="lina_z1i"  value="0" readonly="readonly"> </td>\n   <td  style="width:20%"><button class="butuv_del1i" onclick="DelLine1i(this); ">Удалить объект</button>  </td>'
             );
             $('#linev_uv1i').append(newSection);
 

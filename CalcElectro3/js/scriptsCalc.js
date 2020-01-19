@@ -47,8 +47,8 @@ $(document).ready(function() {
 
     $('#powers').keyup(function (event){
 
-        if(event.keyCode == 13){
-            event.preventDefault();
+        // if(event.keyCode == 13){
+        //     event.preventDefault();
 
 
         var powersv = document.getElementById('powers').value;
@@ -196,7 +196,7 @@ $(document).ready(function() {
            zena();
 
         }
-        }
+        // }
     });
 
     // $('#powers').bind('change keyup',function (){

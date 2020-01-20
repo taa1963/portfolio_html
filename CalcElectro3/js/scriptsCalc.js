@@ -2257,8 +2257,6 @@ $(document).ready(function() {
 
         var block = $(element).parents('.block_sek1i');
         block.find('.sek_v_z1i').val(ZsekZena);
-        //alert(ZsekZena);
-
         ALLSek1i(element);
 
     }
@@ -2275,10 +2273,10 @@ $(document).ready(function() {
         var Nsek=parseFloat($(block2).val());
 
         var ZsekZena=ZsekST* Ni*Nsek;
-
+        ZsekZena=ZsekZena.toFixed(2);
         var block = $(element).parents('.block_sek1i');
         block.find('.sek_v_z1i').val(ZsekZena);
-        //alert(ZsekZena);
+
 
         ALLSek1i(element);
 

@@ -343,6 +343,7 @@ $(document).ready(function() {
             C3=0;
             C5=0;
             C6=0;
+
             //
             // $('[name="chek1"]').prop({'checked': false})
 

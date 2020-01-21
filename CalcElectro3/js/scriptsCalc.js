@@ -333,10 +333,20 @@ $(document).ready(function() {
                 block.find('.payment').show();
                 block.find('.building').show();
 
+
+
             }
             if (StrN=0){
                 block.find('.bild').show();
             }
+            C2=0;
+            C3=0;
+            C5=0;
+            C6=0;
+            //
+            // $('[name="chek1"]').prop({'checked': false})
+
+           //$('#bild').prop({'checked': false});
             zena();
         }
         else{
@@ -347,7 +357,7 @@ $(document).ready(function() {
             block.find('.bild').hide();
             document.getElementById('payments').value=-1;
             $('#building1').prop({'checked': false});
-            $('#building2').prop({'checked': false})
+            $('#building2').prop({'checked': false});
             Zorg=0;
         }
     });
@@ -374,6 +384,7 @@ $(document).ready(function() {
                  }
                if (StrN=1){
                    block.find('.bild').show();
+
                }
                 zena();
         }
@@ -443,16 +454,22 @@ $(document).ready(function() {
 
         var N_uv = element.value;
 
-        N_uv=N_uv.toFixed(2);
+        N_uv=+N_uv;
 
+        var Ni = document.getElementById('powers').value;
+
+        Ni=+Ni;
+
+        var N_uvv=N_uv*Ni;
+        N_uvv=N_uvv.toFixed(2);
         var block = $(element).parents('.block_uv');
-        block.find('.sel_uv_z').val(N_uv);
+        block.find('.sel_uv_z').val(N_uvv);
 
         $('.block_uv').focus();
 
         ALLUvv(element);
       }
-    window.Uvv = Uvv
+    window.Uvv = Uvv;
 
     //===== добавление подстанции   =====//
 
@@ -533,7 +550,7 @@ $(document).ready(function() {
 
         var ZsekST = element.value;
 
-        ZsekST=ZsekST.toFixed(2);
+        ZsekST=+ZsekST;
 
         var block = $(element).parents('.block_sek');
         block.find('.sek_v').val(ZsekST);
@@ -803,7 +820,7 @@ $(document).ready(function() {
     function ADDLGAL() {
 
         var Uv = document.getElementById('potentials').value;
-        console.log(Uv);
+
 
         if (Uv==0) {
 
@@ -886,7 +903,7 @@ $(document).ready(function() {
         $('.galer_z').each(function(){
             C3 += parseFloat($(this).val())
         });
-         //console.log(C3);
+
         zena();
     }
 
@@ -917,6 +934,7 @@ $(document).ready(function() {
             var div = document.getElementById('transformv_blocki');
             $('.block_uvi').remove();
             div.style.display = 'none';
+            C5=0;
 
         }
         zena();
@@ -929,9 +947,17 @@ $(document).ready(function() {
     function Uvvi(element) {
 
         var N_uv = element.value;
-        N_uv=N_uv.toFixed(2);
+
         var block = $(element).parents('.block_uvi');
-        block.find('.sel_uv_zi').val(N_uv);
+        block.find('.tr_vi').val(N_uv);
+
+        var Ni = document.getElementById('powers').value;
+
+        Ni=+Ni;
+        var N_uvv=N_uv*Ni;
+        N_uvv=N_uvv.toFixed(2);
+        var block = $(element).parents('.block_uvi');
+        block.find('.sel_uv_zi').val(N_uvv);
 
         ALLUvvi();
     }
@@ -942,7 +968,7 @@ $(document).ready(function() {
     function ADDSTi() {
         var newSection = $('<tr class="block_uvi"></tr>');
         newSection.html(
-            '<td style="width:20%;">\n <select required class="sel_uvi" onclick="Uvvi(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:20%;"> <span id="Uvi">НН, CH <br> (до 20 кВ)</span></td>\n <td style="width:20%;"> <span class="Pv3i"></span></td>\n <td  style="width:20%"> <input type="text" class="sel_uv_zi"  value="0" readonly="readonly"> </td>\n <td  style="width:20%"><button class="butuv_deli" onclick="DelUvvi(this); ">Удалить объект</button>  </td>'
+            '<td style="width:20%;">\n <select required class="sel_uvi" onclick="Uvvi(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:20%;"><input type="text" class="tr_vi"  value="0" readonly="readonly"></td>\n <td style="width:20%;"> <span class="Pv3i"></span></td>\n <td  style="width:20%"> <input type="text" class="sel_uv_zi"  value="0" readonly="readonly"> </td>\n <td  style="width:20%"><button class="butuv_deli" onclick="DelUvvi(this); ">Удалить объект</button>  </td>'
         );
         $('#table_uvi').append(newSection);
 
@@ -981,7 +1007,7 @@ $(document).ready(function() {
             C5 += parseFloat($(this).val())
         });
         zena();
-       // console.log(C5);
+
     }
 
     window.ALLUvvi = ALLUvvi;
@@ -1011,6 +1037,7 @@ $(document).ready(function() {
             var div = document.getElementById('sekcion_blocki');
             $('.block_seki').remove();
             div.style.display = 'none';
+            C6=0;
 
         }
         zena();
@@ -1025,7 +1052,7 @@ $(document).ready(function() {
 
         var block = $(element).parents('.block_seki');
         block.find('.sek_vi').val(ZsekST);
-        //console.log(ZsekST);
+
 
         var Ni = document.getElementById('powers').value;
 
@@ -1076,7 +1103,7 @@ $(document).ready(function() {
         ALLSeki();
     }
 
-    window.DelSeki = DelSeki
+    window.DelSeki = DelSeki;
 
 
     //===== вычисление общей цены по подстанциям    =====//
@@ -1086,7 +1113,7 @@ $(document).ready(function() {
             C6 += parseFloat($(this).val());
 
         });
-        console.log(C6);
+
          zena();
     }
 
@@ -1151,7 +1178,7 @@ $(document).ready(function() {
     function ADDLINEi() {
 
         var Uv = document.getElementById('potentials').value;
-        console.log(Uv);
+
 
         if (Uv==0) {
 
@@ -1199,26 +1226,26 @@ $(document).ready(function() {
 //===== Удаление линий электропередачи     =====//
     function DelLinei(element) {
         var sss= $(element).parents('.block_line_uvi');
-        sss.remove()
+        sss.remove();
         Sel_LineZAlli();
      }
-    window.DelLinei = DelLinei
+    window.DelLinei = DelLinei;
 
 
-    //===== вычисление  цены текущей по линий электропередачи     =====//
-    function Sel_LineZi(element) {
-        var block2 = $(element).parents('.block_line_uvi').find('.linestavi');
-        var zlie=parseFloat($(block2).val());
-        zlie=+zlie/1000;
-        var zlinev=zlie;
-        zlinev=zlinev.toFixed(2);
-        var block = $(element).parents('.block_line_uvi');
-        block.find('.lina_zi').val(zlinev);
-
-        Sel_LineZAlli();
-    }
-
-    window.Sel_LineZi = Sel_LineZi;
+    // //===== вычисление  цены текущей по линий электропередачи     =====//
+    // function Sel_LineZi(element) {
+    //     var block2 = $(element).parents('.block_line_uvi').find('.linestavi');
+    //     var zlie=parseFloat($(block2).val());
+    //     zlie=+zlie/1000;
+    //     var zlinev=zlie;
+    //     zlinev=zlinev.toFixed(2);
+    //     var block = $(element).parents('.block_line_uvi');
+    //     block.find('.lina_zi').val(zlinev);
+    //
+    //     Sel_LineZAlli();
+    // }
+    //
+    // window.Sel_LineZi = Sel_LineZi;
 
 
     //===== вычисление общей цены по линий электропередачи     =====//
@@ -1228,7 +1255,7 @@ $(document).ready(function() {
             C2 += parseFloat($(this).val());
 
         });
-         console.log(C2);
+
         zena();
     }
 
@@ -1286,7 +1313,7 @@ $(document).ready(function() {
 
     function ADDLGALi() {
         var Uv = document.getElementById('potentials').value;
-        console.log(Uv);
+
 
         if (Uv==0) {
 
@@ -1406,6 +1433,7 @@ $(document).ready(function() {
             var div = document.getElementById('transformv_block1');
             $('.block_uv1').remove();
             div.style.display = 'none';
+            C5=0;
 
         }
         zena();
@@ -1418,14 +1446,19 @@ $(document).ready(function() {
     function Uvv1(element) {
 
         var N_uv = element.value;
+        var block = $(element).parents('.block_uv1');
+        block.find('.tr_v1').val(N_uv);
 
         var block2 = $(element).parents('.block_uv1').find('.sel_uv_n1');
         var Nst=parseFloat($(block2).val());
 
-        N_uv=N_uv*Nst;
-        N_uv=N_uv.toFixed(2);
+        var Ni = document.getElementById('powers').value;
+        Ni=+Ni;
+
+        var N_uvv=N_uv*Nst*Ni;
+        N_uv=N_uvv.toFixed(2);
         var block = $(element).parents('.block_uv1');
-        block.find('.sel_uv_z1').val(N_uv);
+        block.find('.sel_uv_z1').val(N_uvv);
 
 
         ALLUvv1(element);
@@ -1439,10 +1472,15 @@ $(document).ready(function() {
         var block2 = $(element).parents('.block_uv1').find('.sel_uv1');
         var Nst=parseFloat($(block2).val());
 
-        N_uv=N_uv*Nst;
-        N_uv=N_uv.toFixed(2);
         var block = $(element).parents('.block_uv1');
-        block.find('.sel_uv_z1').val(N_uv);
+        block.find('.tr_v1').val(N_uv);
+
+        var Ni = document.getElementById('powers').value;
+        Ni=+Ni;
+        var N_uvv=N_uv*Nst*Ni;
+        N_uvv=N_uvv.toFixed(2);
+        var block = $(element).parents('.block_uv1');
+        block.find('.sel_uv_z1').val(N_uvv);
 
 
         ALLUvv1(element);
@@ -1456,7 +1494,7 @@ $(document).ready(function() {
     function ADDST1() {
         var newSection = $('<tr class="block_uv1"></tr>');
         newSection.html(
-            '<td style="width:25%;">\n <select required class="sel_uv1" onclick="Uvv1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:25%;"> <span id="Uv1">НН, CH <br> (до 20 кВ)</span></td>\n<td  style="width:20%"> <input type="number" class="sel_uv_n1"  value="1" min="0" step="1" oninput="Sel_LineN1(this)"> </td>\n  <td  style="width:25%"> <input type="text" class="sel_uv_z1"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="butuv_del1" onclick="DelUvv1(this); ">Удалить объект</button>  </td>'
+            '<td style="width:25%;">\n <select required class="sel_uv1" onclick="Uvv1(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:25%;"><input type="text" class="tr_v1"  value="0" readonly="readonly"></td>\n<td  style="width:20%"> <input type="number" class="sel_uv_n1"  value="1" min="0" step="1" oninput="Sel_LineN1(this)"> </td>\n  <td  style="width:25%"> <input type="text" class="sel_uv_z1"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="butuv_del1" onclick="DelUvv1(this); ">Удалить объект</button>  </td>'
         );
         $('#table_uv1').append(newSection);
 
@@ -1517,6 +1555,7 @@ $(document).ready(function() {
             var div = document.getElementById('sekcion_block1');
             $('.block_sek1').remove();
             div.style.display = 'none';
+            C6=0;
 
         }
         zena();
@@ -1644,7 +1683,7 @@ $(document).ready(function() {
             var div = document.getElementById('linev_block1');
             div.style.display = 'block';
             var Knad = document.getElementById('reliabilitys').value;
-            //console.log(Uv);
+
 
             if (Knad==2){
                 ADDLINE1();
@@ -1700,7 +1739,7 @@ $(document).ready(function() {
 
     function ADDLINE1() {
         var Uv = document.getElementById('potentials').value;
-        console.log(Uv);
+
 
         if (Uv==0) {
 
@@ -1735,7 +1774,7 @@ $(document).ready(function() {
 
     function ADDLINE2() {
         var Uv = document.getElementById('potentials').value;
-        console.log(Uv);
+
 
         if (Uv==0) {
 
@@ -1805,7 +1844,7 @@ $(document).ready(function() {
     $('#but_line1').click(function () {
 
         var Knad = document.getElementById('reliabilitys').value;
-        //console.log(Uv);
+
 
         if (Knad==2){
             ADDLINE1();
@@ -1925,7 +1964,7 @@ $(document).ready(function() {
     function ADDLGAL1() {
 
         var Uv = document.getElementById('potentials').value;
-        //console.log(Uv);
+
 
         if (Uv==0) {
 
@@ -1964,7 +2003,7 @@ $(document).ready(function() {
     function ADDLGAL2() {
 
         var Uv = document.getElementById('potentials').value;
-        //console.log(Uv);
+
 
         if (Uv==0) {
 
@@ -2031,7 +2070,7 @@ $(document).ready(function() {
     $('#but_gal1').click(function () {
 
         var Knad = document.getElementById('reliabilitys').value;
-        //console.log(Uv);
+
 
         if (Knad==2){
             ADDLGAL1();
@@ -2114,6 +2153,7 @@ $(document).ready(function() {
             var div = document.getElementById('transformv_block1i');
             $('.block_uv1i').remove();
             div.style.display = 'none';
+            C5=0;
 
         }
         zena();
@@ -2130,11 +2170,20 @@ $(document).ready(function() {
         var block2 = $(element).parents('.block_uv1i').find('.sel_uv_n1i');
         var Nst=parseFloat($(block2).val());
 
-        N_uv=N_uv*Nst;
-        N_uv=N_uv.toFixed(2);
 
         var block = $(element).parents('.block_uv1i');
-        block.find('.sel_uv_z1i').val(N_uv);
+        block.find('.trstav1i').val(N_uv);
+
+        var N_uvv=N_uv*Nst;
+
+        var Ni = document.getElementById('powers').value;
+        Ni=+Ni;
+
+        N_uvv=N_uvv*Ni;
+        N_uvv=N_uvv.toFixed(2);
+
+        var block = $(element).parents('.block_uv1i');
+        block.find('.sel_uv_z1i').val(N_uvv);
 
 
         ALLUvv1i(element);
@@ -2148,11 +2197,15 @@ $(document).ready(function() {
         var block2 = $(element).parents('.block_uv1i').find('.sel_uv1i');
         var Nst=parseFloat($(block2).val());
 
-        N_uv=N_uv*Nst;
-        N_uv=N_uv.toFixed(2);
+        var N_uvv=N_uv*Nst;
+        var Ni = document.getElementById('powers').value;
+        Ni=+Ni;
+
+        N_uvv=N_uvv*Ni;
+        N_uvv=N_uvv.toFixed(2);
 
         var block = $(element).parents('.block_uv1i');
-        block.find('.sel_uv_z1i').val(N_uv);
+        block.find('.sel_uv_z1i').val(N_uvv);
 
 
         ALLUvv1i(element);
@@ -2166,7 +2219,7 @@ $(document).ready(function() {
     function ADDST1i() {
         var newSection = $('<tr class="block_uv1i"></tr>');
         newSection.html(
-            '<td style="width:25%;">\n <select required class="sel_uv1i" onclick="Uvv1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td style="width:25%;"> <span id="Uv1i">НН, CH <br> (до 20 кВ)</span></td>\n<td  style="width:20%"> <input type="number" class="sel_uv_n1i"  value="1" min="0" step="1" oninput="Sel_LineN1i(this)"> </td>\n  <td  style="width:25%"> <input type="text" class="sel_uv_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="butuv_del1i" onclick="DelUvv1i(this); ">Удалить объект</button>  </td>'
+            '<td style="width:25%;">\n <select required class="sel_uv1i" onclick="Uvv1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="trstav1i"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"> <input type="number" class="sel_uv_n1i"  value="1" min="0" step="1" oninput="Sel_LineN1i(this)"> </td>\n  <td  style="width:25%"> <input type="text" class="sel_uv_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:25%"><button class="butuv_del1i" onclick="DelUvv1i(this); ">Удалить объект</button>  </td>'
         );
         $('#table_uv1i').append(newSection);
 
@@ -2227,6 +2280,7 @@ $(document).ready(function() {
             var div = document.getElementById('sekcion_block1i');
             $('.block_sek1i').remove();
             div.style.display = 'none';
+            C6=0;
 
         }
         zena();
@@ -2305,6 +2359,7 @@ $(document).ready(function() {
             $('<option value="' + sectioni6[i].zenat + '">' + sectioni6[i].name + '</option>').appendTo(newSelSek);
 
         }
+
     }
 
     $('#but_sek1i').click(function () {
@@ -2510,7 +2565,10 @@ $(document).ready(function() {
         var block = $(element).parents('.block_galer_uv1i');
         block.find('.galertav1i').val(ZgaleST);
         var zgalerv=0;
-        zgalerv=ZgaleST;
+        var Ni = document.getElementById('powers').value;
+
+        Ni=+Ni;
+        zgalerv=ZgaleST*Ni;
         zgalerv=zgalerv.toFixed(2);
         var block = $(element).parents('.block_galer_uv1i');
         block.find('.galer_z1i').val(zgalerv);
@@ -2529,7 +2587,19 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_galer_uv1i"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="galer_uv1i" onclick="galer_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del1i" onclick="Delgaler1i(this); ">Удалить объект</button>  </td>'
+                '<td style="width:10%;"> <span>Источник 1</span> </td>\n<td style="width:20%;">\n <select required class="galer_uv1i" onclick="galer_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del1i" onclick="Delgaler1i(this); ">Удалить объект</button>  </td>'
+            );
+
+            $('#galer_uvv1i').append(newSection);
+
+            var newSelSek = $(newSection).find('.galer_uv1i');
+
+            for (var i = 0; i < galeri04.length; i++)  {
+                $('<option value="' + galeri04[i].zenat + '">' + galeri04[i].name + '</option>').appendTo(newSelSek);
+            }
+            var newSection = $('<tr class="block_galer_uv1i"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 2</span> </td>\n<td style="width:20%;">\n <select required class="galer_uv1i" onclick="galer_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del1i" onclick="Delgaler1i(this); ">Удалить объект</button>  </td>'
             );
 
             $('#galer_uvv1i').append(newSection);
@@ -2545,7 +2615,19 @@ $(document).ready(function() {
 
             var newSection = $('<tr class="block_galer_uv1i"></tr>');
             newSection.html(
-                '<td style="width:20%;">\n <select required class="galer_uv1i" onclick="galer_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del1i" onclick="Delgaler1i(this); ">Удалить объект</button>  </td>'
+                '<td style="width:10%;"> <span>Источник 1</span> </td>\n<td style="width:20%;">\n <select required class="galer_uv1i" onclick="galer_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del1i" onclick="Delgaler1i(this); ">Удалить объект</button>  </td>'
+            );
+
+            $('#galer_uvv1i').append(newSection);
+
+            var newSelSek = $(newSection).find('.galer_uv1i');
+
+            for (var i = 0; i < galeri6.length; i++)  {
+                $('<option value="' + galeri6[i].zenat + '">' + galeri6[i].name + '</option>').appendTo(newSelSek);
+            }
+            var newSection = $('<tr class="block_galer_uv1i"></tr>');
+            newSection.html(
+                '<td style="width:10%;"> <span>Источник 2</span> </td>\n<td style="width:20%;">\n <select required class="galer_uv1i" onclick="galer_line1i(this)"  >\n <option value="0"> Выберите тип</option>\n</select>\n</td>\n <td  style="width:20%"> <input type="text" class="galertav1i"  value="0" readonly="readonly"> </td>\n  <td  style="width:20%"> <input type="text" class="galer_z1i"  value="0" readonly="readonly"> </td>\n<td  style="width:20%"><button class="butuv_del1i" onclick="Delgaler1i(this); ">Удалить объект</button>  </td>'
             );
 
             $('#galer_uvv1i').append(newSection);

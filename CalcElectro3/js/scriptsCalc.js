@@ -337,6 +337,8 @@ $(document).ready(function() {
 
             }
             if (StrN=0){
+				
+			
                 block.find('.bild').show();
             }
             C2=0;
@@ -1721,11 +1723,11 @@ $(document).ready(function() {
         var zlie=parseFloat($(block2).val());
           zlie=+zlie/1000;
 
-        var Ni = document.getElementById('powers').value;
+       // var Ni = document.getElementById('powers').value;
 
-        Ni=+Ni;
-
-        var zlinev=ZlineST*zlie*Ni;
+        //Ni=+Ni;
+        // var zlinev=ZlineST*zlie*Ni;
+        var zlinev=ZlineST*zlie;
         zlinev=zlinev.toFixed(2);
 
         var block = $(element).parents('.block_line_uv1');
@@ -1874,10 +1876,12 @@ $(document).ready(function() {
         var zlie=parseFloat($(block2).val());
         Lline=+Lline/1000;
         zlie=+zlie;
-        var Ni = document.getElementById('powers').value;
+        //var Ni = document.getElementById('powers').value;
 
-        Ni=+Ni;
-        var zlinev=Lline*zlie*Ni;
+        //Ni=+Ni;
+		//var zlinev=Lline*zlie*Ni;
+		
+        var zlinev=Lline*zlie;
         zlinev=zlinev.toFixed(2);
         var block = $(element).parents('.block_line_uv1');
         block.find('.lina_z1').val(zlinev);

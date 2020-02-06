@@ -1,7 +1,15 @@
+ var close_sekzion, close_galer, close_line,close_trancform;
 
-$(document).ready(function() {
+ close_sekzion=1;
+ close_galer=0;
+ close_line=0;
+ close_trancform=0;
 
 
+
+ $(document).ready(function() {
+
+     // var close_sekzion=1;
     //===== закрываем ввод в поле мощность цифр и отрицательных значений, запятую меняем на точку   =====//
 
 
@@ -623,10 +631,10 @@ $(document).ready(function() {
         if ($(this).prop('checked')) {
 
             var div = document.getElementById('galer_block');
-            $('.block_galer_uv').remove();
-            div.style.display = 'none';
-            $('#galer_check').prop({'checked': false});
-            C3=0;
+            //$('.block_galer_uv').remove();
+           // div.style.display = 'none';
+           // $('#galer_check').prop({'checked': false});
+            //C3=0;
 
 
             var div = document.getElementById('linev_block');
@@ -773,10 +781,10 @@ $(document).ready(function() {
         if ($(this).prop('checked')) {
 
             var div = document.getElementById('linev_block');
-            $('.block_line_uv').remove();
-            div.style.display = 'none';
-            $('#linev_check').prop({'checked': false})
-            C2=0;
+            //$('.block_line_uv').remove();
+            //div.style.display = 'none';
+           // $('#linev_check').prop({'checked': false})
+           // C2=0;
 
 
             var div = document.getElementById('galer_block');
@@ -1131,10 +1139,10 @@ $(document).ready(function() {
         if ($(this).prop('checked')) {
 
             var div = document.getElementById('galer_blocki');
-            $('.block_galer_uvi').remove();
-            div.style.display = 'none';
-            $('#galer_checki').prop({'checked': false});
-            C3=0;
+           // $('.block_galer_uvi').remove();
+           // div.style.display = 'none';
+           //// $('#galer_checki').prop({'checked': false});
+            //C3=0;
 
 
             var div = document.getElementById('linev_blocki');
@@ -1269,10 +1277,10 @@ $(document).ready(function() {
         if ($(this).prop('checked')) {
 
             var div = document.getElementById('linev_blocki');
-            $('.block_line_uvi').remove();
-            div.style.display = 'none';
-            $('#linev_checki').prop({'checked': false})
-            C2=0;
+           // $('.block_line_uvi').remove();
+           // div.style.display = 'none';
+           // $('#linev_checki').prop({'checked': false})
+           // C2=0;
 
 
             var div = document.getElementById('galer_blocki');
@@ -1677,10 +1685,10 @@ $(document).ready(function() {
         if ($(this).prop('checked')) {
 
             var div = document.getElementById('galer_block1');
-            $('.block_galer_uv1').remove();
-            div.style.display = 'none';
-            $('#galer_check1').prop({'checked': false});
-            C3=0;
+           // $('.block_galer_uv1').remove();
+           // div.style.display = 'none';
+           // $('#galer_check1').prop({'checked': false});
+           // C3=0;
 
 
             var div = document.getElementById('linev_block1');
@@ -1911,10 +1919,10 @@ $(document).ready(function() {
         if ($(this).prop('checked')) {
 
             var div = document.getElementById('linev_block1');
-            $('.block_line_uv1').remove();
-            div.style.display = 'none';
-            $('#linev_check1').prop({'checked': false})
-            C2=0;
+            //$('.block_line_uv1').remove();
+           // div.style.display = 'none';
+            //$('#linev_check1').prop({'checked': false})
+            //C2=0;
 
 
             var div = document.getElementById('galer_block1');
@@ -2402,10 +2410,10 @@ $(document).ready(function() {
         if ($(this).prop('checked')) {
 
             var div = document.getElementById('galer_block1i');
-            $('.block_galer_uv1i').remove();
-            div.style.display = 'none';
-            $('#galer_check1i').prop({'checked': false});
-            C3=0;
+           // $('.block_galer_uv1i').remove();
+            //div.style.display = 'none';
+           // $('#galer_check1i').prop({'checked': false});
+            //C3=0;
 
 
             var div = document.getElementById('linev_block1i');
@@ -2538,10 +2546,10 @@ $(document).ready(function() {
         if ($(this).prop('checked')) {
 
             var div = document.getElementById('linev_block1i');
-            $('.block_line_uv1i').remove();
-            div.style.display = 'none';
-            $('#linev_check1i').prop({'checked': false})
-            C2=0;
+           // $('.block_line_uv1i').remove();
+           // div.style.display = 'none';
+           // $('#linev_check1i').prop({'checked': false})
+           // C2=0;
 
 
             var div = document.getElementById('galer_block1i');
@@ -2806,6 +2814,82 @@ $(document).ready(function() {
                 div.style.display = 'block';
 
             }
+
+
+            // Закрытие блока Строительство пунктов секционирования
+			  if (close_sekzion==1) {
+					var div2 = document.getElementById('sekcion');
+                    div2.style.display = 'none';
+					$('.sekcion').remove();
+					
+					var div2 = document.getElementById('sekcioni');
+                    div2.style.display = 'none';
+					$('.sekcioni').remove();
+					
+					var div2 = document.getElementById('sekcion1');
+                    div2.style.display = 'none';
+					$('.sekcion1').remove();
+					var div2 = document.getElementById('sekcion1i');
+                    div2.style.display = 'none';
+					$('.sekcion1i').remove();
+
+		          }
+
+            // Закрытие блока Строительство закрытых переходов методом
+            if (close_galer==1) {
+                var div2 = document.getElementById('galer');
+                div2.style.display = 'none';
+                $('.galer').remove();
+
+                var div2 = document.getElementById('galeri');
+                div2.style.display = 'none';
+                $('.galeri').remove();
+                var div2 = document.getElementById('galer1i');
+                div2.style.display = 'none';
+                $('.galer1i').remove();
+                var div2 = document.getElementById('galer1');
+                div2.style.display = 'none';
+                $('.galer1').remove();
+            }
+
+            // Закрытие блока Строительство линий электропередачи
+            if (close_line==1) {
+                var div2 = document.getElementById('linev');
+                div2.style.display = 'none';
+                $('.linev').remove();
+
+                var div2 = document.getElementById('linevi');
+                div2.style.display = 'none';
+                $('.linevi').remove();
+                var div2 = document.getElementById('linev1i');
+                div2.style.display = 'none';
+                $('.linev1i').remove();
+                var div2 = document.getElementById('linev1');
+                div2.style.display = 'none';
+                $('.linev1').remove();
+
+
+            }
+
+
+
+            // Закрытие блока Строительство трансформаторных подстанций
+            if (close_trancform==1) {
+                var div2 = document.getElementById('transformv');
+                div2.style.display = 'none';
+                $('.transformv').remove();
+                var div2 = document.getElementById('transformvi');
+                div2.style.display = 'none';
+                $('.transformvi').remove();
+                var div2 = document.getElementById('transformv1i');
+                div2.style.display = 'none';
+                $('.transformv1i').remove();
+                var div2 = document.getElementById('transformv1');
+                div2.style.display = 'none';
+                $('.transformv1').remove();
+
+            }
+
 
 
                 // категория надежности 3  уровень напряжения 04-06 ставка за единицу мощности/

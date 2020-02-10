@@ -31,13 +31,13 @@ if (
         echo '<head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
     <body><center><font color="green"> Заявка отправлена.</font><br/> 
-   <center><a href="http://bigclock.centro.ru/">Вернуться на главную</a> 
+   <center><a href="https://aleksandr.tupichenkov.com/CalcMega8//">Вернуться на главную</a> 
    </body>';}
     else {
         echo '<head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
     <body><center>Письмо не отправлено.<br/> <center>
-   <a href="http://bigclock.centro.ru/">Вернуться на главную</a> 
+   <a href="https://aleksandr.tupichenkov.com/CalcMega8/">Вернуться на главную</a> 
    </body>';}
 }
 ?>

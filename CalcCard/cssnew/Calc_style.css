@@ -1,0 +1,313 @@
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.calculator{
+
+width:80%;
+margin:0 auto;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+
+.calc_param{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.calc_block_titel{
+	display: block;
+	width:100%;
+	margin-top:30px;
+	
+}
+.calc_block_titel h1{
+	font-size: 36px;
+    padding: 0;
+    margin: 0;
+    line-height: 110%;
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calc_block_line{
+	display:block;
+	width:100%;
+	height:4px;
+	background-color: #f4f4f4;
+	margin-bottom:20px;
+}
+
+
+
+
+.calc_block_param{
+    display: block;
+    width: 50%;
+	background-color: #f4f4f4;
+	float:left;
+	border-radius:10px;
+}
+
+.calc_block_param h2{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 110%;
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+	 margin-top: 30px;
+	
+}
+
+.calc_block_text{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.calc_block_param p{
+    font: 12px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #222;
+    word-wrap: break-word;
+	text-align:center;
+}
+
+
+.calc_block_param_line{
+	display: block;
+    width: 90%;
+    margin: 0 auto;
+	height:2px;
+	background-color:#F7941D;
+	margin-bottom:20px;
+}
+
+.table{
+
+    width: 90%;
+    margin: 0 auto;
+	border:0;
+    table-layout: auto;
+}
+
+select{
+    width: 100%;
+}
+
+.table{
+	border-radius:15px;
+	margin-bottom:20px;
+}
+
+.table td{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+	border:0;
+	text-align:center;
+	font-weight:bold;
+	border: 2px solid #ffffff;
+ }
+.table th{
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: normal;
+	border:0;
+  }
+
+.table th input{
+    width: 80%;
+    border: 0;
+}
+.calc_block_param_btn{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#calc_price{
+    display: block;
+    margin: 0 auto;
+    background-color: #048593;
+    padding: 10px 20px;
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+
+.calc_block_itog{
+    display: block;
+    width: 50%;
+	float:right;
+	background:#A2B04E;
+    border-radius: 5px;
+    height: 30em;
+   /*// margin-top: 30px;*/
+}
+
+.calc_block_itog_text{
+    display: block;
+    width: 90%;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.calc_block_itog_text p{
+
+    font: 16px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #ffffff;
+    word-wrap: break-word;
+    text-align:center;
+    font-weight: bold;
+}
+
+
+
+.calc_block_itog_table{
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+
+
+
+/*		Описание второго блока вывода итгов калькулятора и его компонент		*/
+.calc_block_grafik{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #FFDF97;
+
+}
+
+
+.calc_block_detail h2{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+    .content{
+        display: block;
+        width: 100%;
+        float: left;
+        position: relative;
+
+    }
+
+    .sidebar{
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+        float: right;
+    }
+    .sidebar ul{
+        list-style: none;
+    }
+
+
+
+}
+
+@media only screen  and (max-width: 990px) {
+
+
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+    .calc_param {
+        display: block;
+        width: 100%;
+    }
+
+    .calc_itog{
+        display: block;
+        width: 100%;
+    }
+   
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+.calc_block_itog2 table{
+	margin:0;
+}
+
+
+.calc_block_itog2 table td {
+	word-wrap: break-word; 
+	}
+.calc_block_detail{
+	 width: 100%;
+}
+
+}

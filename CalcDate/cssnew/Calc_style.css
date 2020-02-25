@@ -1,0 +1,394 @@
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.calculator{
+
+  width:60%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+  margin:0 auto;
+  background-color: #f4f4f4;
+  border-radius:10px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+
+.calc_param{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.calc_block_summ{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.calc_block_summ p{
+    text-align: left;
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 16px;
+    color: rgb(127, 127, 127);
+    font-weight: bold;
+
+}
+
+.calc_block_summ p span{
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 18px;
+    color: #000;
+    margin-left: 5px;
+}
+
+.calc_summ{
+    display: block;
+    width: 100%;
+    /*height: 30px;*/
+    background-color: #ffffff;
+}
+
+.calc_summ label{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    display: block;
+   font-weight: bold;
+}
+
+.calc_summ label span{
+    font-size: 22px;
+    color: #000;
+}
+
+.calc_summ label input{
+    font-size: 20px;
+    color: rgb(127, 127, 127);
+    border: 0;
+    font-weight: bold;
+}
+
+.calc_summ_err{
+    display: none;
+}
+
+.calc_summ_err p{
+    font-size: 20px;
+     color: red;
+    font-weight: bold;
+}
+
+.calc_date_err{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.calc_date_err p{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+/*.calc_summ label input:focus{*/
+
+    /*border: 0;*/
+/*}*/
+/*.calc_summ label input:active{*/
+
+    /*border: 0;*/
+/*}*/
+
+
+.calc_block_titel{
+	display: block;
+	width:100%;
+	margin-top:30px;
+	
+}
+.calc_block_titel h1{
+	font-size: 36px;
+    padding: 0;
+    margin: 0;
+    line-height: 110%;
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calc_block_line{
+	display:block;
+	width:100%;
+	height:4px;
+	background-color: #f4f4f4;
+	margin-bottom:20px;
+}
+
+
+
+
+.calc_block_param{
+    display: block;
+    width: 100%;
+	float:left;
+}
+
+.calc_block_param h2{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 110%;
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+	 margin-top: 30px;
+	
+}
+
+.calc_block_text{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+.calc_block_param_btn{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#calc_price{
+    display: block;
+    margin: 0 auto;
+    background-color: #048593;
+    padding: 10px 20px;
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.calc_block_date{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    margin: 0 auto;
+    width: 90%;
+}
+
+.calc_block_date input{
+    width: auto;
+}
+
+.calc_block_date p{
+    font-size: 20px;
+    color: rgb(127, 127, 127);
+    border: 0;
+    font-weight: bold;
+}
+
+
+.calc_block_date1{
+    float: left;
+}
+
+.calc_block_date1 input{
+
+    float: left;
+    font-size: 20px;
+    color: rgb(0, 128, 0);
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+}
+
+.calc_block_date2 input{
+
+    float: left;
+    font-size: 20px;
+    color: rgb(0, 128, 0);
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+}
+
+
+
+.calc_block_date2{
+    float: left;
+    margin-left: 20px;
+
+}
+
+
+.calc_block_out{
+    display: none;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.calc_block_out1{
+    display: block;
+    float: left;
+    width: 30%;
+}
+
+.calc_block_out1 p {
+    font-size: 1em;
+    color: rgb(127, 127, 127);
+     font-weight: bold;
+}
+
+.calc_block_out1 p span{
+    font-size: 1.3em;
+    color: red;
+    font-weight: bold;
+
+}
+
+.calc_block_out2{
+    display: block;
+    float: left;
+    width: 30%;
+}
+
+.calc_block_out2 p {
+    font-size: 1em;
+    color: rgb(127, 127, 127);
+    border: 0;
+    font-weight: bold;
+}
+.calc_block_out2 p span{
+    font-size: 1.3em;
+    color: red;
+    font-weight: bold;
+
+}
+
+.calc_block_out3{
+    display: block;
+    float: left;
+    width: 30%;
+
+}
+
+.calc_block_out3 p {
+    font-size: 1em;
+    color: rgb(127, 127, 127);
+    border: 0;
+    font-weight: bold;
+}
+.calc_block_out3 p span{
+    font-size: 1.3em;
+    color: red;
+    font-weight: bold;
+
+}
+
+.calc_block_btn{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.calc_block_btn P{
+    text-align: center;
+}
+
+#calc_services{
+    display: block;
+    margin: 0 auto;
+    background-color: #3766c7;
+    padding: 10px 20px;
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+
+
+}
+
+@media only screen  and (max-width: 990px) {
+
+    .calc_block_out1{
+        float: none;
+    }
+    .calc_block_out2{
+        float: none;
+    }
+    .calc_block_out3{
+        float: none;
+    }
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+    .calc_block_date2{
+        float: left;
+
+    }
+   
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+
+}

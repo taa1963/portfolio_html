@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор Неустойки</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор Неустойки">
+
+
+    <link href="cssnew/Calc_style.css" rel="stylesheet">
+
+
+
+
+
+</head>
+<body>
+
+   
+
+           <!----------Начало блока калькулятора-------->
+
+         <div class="calculator">
+		    <div class="calc_block_titel">
+		 
+		 
+		         <h1>Калькулятор Неустойки</h1>
+				 
+			</div>	 
+			
+
+             <div class="calc_param">
+
+             <!----------Начало блока ввода параметров-------->
+           <div class="calc_block_param" id="calc_block_param">
+               <h2>ЗАПОЛНИТЕ ДАННЫЕ:</h2>
+
+
+               <div class="calc_block_summ">
+                   <p>Стоимость Вашего объекта,<span>&#8381;</span></p>
+                   <div class="calc_summ">
+                       <label>
+                       <span> &#8381; </span><input  id="summv" type="number" value="0" min="0">
+                       </label>
+
+                   </div>
+
+                   <div class="calc_summ_err">
+                       <p>Стоимость не может быть отрицательной</p>
+
+                   </div>
+
+
+               </div>
+
+
+               <div class="calc_block_date">
+
+
+
+                   <div class="calc_block_date1">
+                       <p>Дата сдачи (по договору)</p>
+                       <input type="date" id="date1" value="0000-00-00"
+                              min="2016-01-01" max="2023-12-31">
+                   </div>
+
+                   <div class="calc_block_date2">
+                       <p>Дата сдачи (фактическая)</p>
+                       <input type="date" id="date2" value="0000-00-00"
+                              min="2016-01-01" max="2023-12-31">
+                   </div>
+
+
+
+
+               </div>
+
+               <div class="calc_date_err">
+                   <p>Дата сдачи по договору  должна быть меньше фактической даты сдачи</p>
+
+               </div>
+
+
+
+              
+
+           <div class="calc_block_param_btn">
+               <button id="calc_price" type="button">РАССЧИТАТЬ СУММУ ВЗЫСКАНИЯ</button>
+
+           </div>
+           </div>
+               <!----------Конец блока ввода парамтетров-------->
+
+               <!----------Начало вывода расчитанных параметров-------->
+
+           <div class="calc_block_out" id="calc_block_out">
+               <div class="calc_block_out1">
+                   <p>НЕУСТОЙКА С ЗАСТРОЙЩИКА</p>
+
+                   <p> <span id="summ">0</span> <span>&#8381;</span> <span>+</span></p>
+
+               </div>
+
+               <div class="calc_block_out2">
+                   <p>ШТРАФ 50% С ЗАСТРОЙЩИКА</p>
+                   <p> <span id="summ_pr">0</span> <span>&#8381;</span> </p>
+
+
+               </div>
+
+               <div class="calc_block_out3">
+                   <p>ИТОГО К ВЗЫСКАНИЮ:</p>
+                   <p> <span>=</span> <span id="summ_itog">0</span> <span>&#8381;</span> </p>
+
+               </div>
+
+               <div class="calc_block_btn">
+
+                   <button id="calc_services" type="button">Рассчитать стоимость юридических услуг</button>
+
+                   <p>✓ Работаем без предоплаты и даём гарантию 100% по договору  </p>
+                   <p>✓ Ваши данные защищены Политикой конфиденциальности  </p>
+
+               </div>
+
+
+
+
+
+
+
+           </div>
+
+
+               <!----------Конец вывода расчитанных параметров-------->
+
+       </div>
+
+
+
+           <script src="js/jquery.min.js"></script>
+             <script src="js/data.js" ></script>
+           <script src="js/scriptsCalc.js"></script>
+
+           <!----------Конец блока калькулятора-------->
+
+           </div>
+
+
+
+</body>
+</html>

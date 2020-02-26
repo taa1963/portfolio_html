@@ -8,16 +8,6 @@ $(document).ready(function() {
 
 
 
-    // function datam2() {
-    //     var j=document.getElementsByClassName('month').length;
-    //     for (var i = 0; i < j; i++) {
-    //         var mothv=document.getElementsByClassName('month')[i].value;
-    //         if (mothv==mon){
-    //             document.getElementsByClassName('month')[i].selected = true;
-    //         }
-    //     }
-    // }
-
 
    $("#calc_price").click(function () {
 
@@ -72,7 +62,11 @@ $(document).ready(function() {
 
                if ((date1v>=date_beg_p)&&(date2v<=date_end_p)){
                    summ_r=0;
-                   summ_r=summ_r+dater*summ_v*stavka_p/(100*365);
+				   
+                   //summ_r=summ_r+dater*summ_v*stavka_p/(100*365);
+				   summ_r=summ_r+dater*summ_v*(stavka_p/100)*2*1/300;
+				   
+				   
                     break;
                }
                else {
@@ -81,7 +75,9 @@ $(document).ready(function() {
                        var date_del = (date_end_p - date1v) / (1000 * 3600 * 24);
                        dater = (date2v - date1v) / (1000 * 3600 * 24);
                        // var date_ost=(dater-date_del);
-                       summ_r = summ_r + date_del * summ_v * stavka_p / (100 * 365);
+                       //summ_r = summ_r + date_del * summ_v * stavka_p / (100 * 365);
+					   summ_r = summ_r + date_del * summ_v * (stavka_p/100)*2*1/300;
+					   
                        date1v = date_end_p + 1;
 
                    }

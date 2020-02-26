@@ -330,7 +330,11 @@ input::-webkit-inner-spin-button {
     font-size: 1.4em;
     color: red;
     font-weight: bold;
-
+}
+.sp{
+    font-size: 1.4em;
+    color: red;
+    font-weight: bold;
 }
 
 .calc_block_btn{

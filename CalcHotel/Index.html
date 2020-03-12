@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор Неустойки</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор Отлеь">
+
+
+    <link href="cssnew/Calc_style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<!----------Начало блока калькулятора-------->
+
+
+<div class="calculator">
+
+
+    <div class="calc_block_hover">
+        <div class="calc_hover_blocks">
+            <div class="calc_hover_block1">
+
+                <div class="calc_hover_block">
+                <p> Заезд </p>
+                <div><input type="text" name="date" id="date1" class="tcal" value="02-02-2020" /></div>
+                </div>
+
+            </div>
+
+            <div class="calc_hover_block2">
+                <div class="calc_hover_block">
+                <p> Выезд </p>
+                <div><input type="text" name="date" id="date2" class="tcal" value="02-02-2020" /></div>
+                </div>
+            </div>
+
+            <div class="calc_hover_block3">
+                <div class="calc_hover_block">
+                    <p> <span id="nomers">0 </span>номеров для </p>
+                    <div class="calc_block_nomer"> <p> <span id="person">0 </span>гостей </p>  </div>
+
+                    <div class="calc_hover_btn"  id="calc_hover_btn">&#9650;</div>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="calc_block_2" id="calc_block_2" >
+    <form class="calc_nomers" id="calc_nomers">
+
+        <div class="calc_blocks_nomer">
+            <div class="calc_nomer_block1">
+                <h3><input class="bloc_n"> </input> номер</h3>
+            </div>
+            <div class="calc_nomer_block2">
+
+                <div class="calc_nomer_block2_1">
+                    <h3>Взрослые</h3>
+                <div class="adults-block">
+                    <button type="button" class="arrow-minus" onclick="DelNum(this); "> - </button>
+                    <input class="adults-num" type="number" value="0" min="0" max="6" readonly/>
+                    <button type="button" class="qarrow-plus" onclick="AddNum(this); " > + </button>
+                </div>
+                </div>
+
+                <div class="calc_nomer_block2_2">
+                    <h3>Дети</h3>
+                    <div class="adults-block">
+                        <button type="button" class="kinder-minus" onclick="DelNumK(this); "> - </button>
+                        <input class="kinder-num" type="number" value="0" min="0" max="4" readonly/>
+                        <button type="button" class="kinder-plus" onclick="AddNumK(this); " > + </button>
+                    </div>
+                </div>
+
+                <div class="calc_nomer_block2_3">
+                    <h3>Возраст ребенка</h3>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </form>
+
+    <div class="calc_nomers_btn">
+        <div class="calc_nomers_btn_1">
+            <button type="button" id="addnomers" class="addnomers"><span>+</span> Номер</button>
+            <button type="button" id="addnomers2" class="addnomers2">Забронировать больше номеров</button>
+
+        </div>
+
+        <div class="calc_nomers_btn_2">
+            <button type="button" id="sub" class="sub">Готово</button>
+        </div>
+
+    </div>
+
+        </div>
+
+
+    <script type="text/javascript" src="js/tcal.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scriptsCalc.js"></script>
+
+    <!----------Конец блока калькулятора-------->
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,540 @@
+body{
+    background-color: #f4f4f4;
+}
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.calculator{
+
+  width:50%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+  margin:0 auto;
+  /*background-color: #ffffff;*/
+  border-radius:10px;
+}
+
+.calc_block_hover{
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+}
+
+.calc_hover_blocks{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.calc_hover_block1{
+    display: block;
+    width: 30%;
+    border: 1px solid silver;
+    border-radius: 5%;
+    float: left;
+}
+.calc_hover_block2{
+    display: block;
+    width: 30%;
+    border: 1px solid silver;
+    border-radius: 5%;
+    float: left;
+}
+.calc_hover_block3{
+    display: block;
+    width: 30%;
+    border: 1px solid silver;
+    border-radius: 5%;
+    float: right;
+}
+
+.tcal{
+    float: left;
+    font-size: 0.8em;
+    color: rgb(0, 128, 0);
+    background-color: #ffffff;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+}
+
+.calc_hover_block{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding-bottom: 5px;
+}
+
+.calc_hover_block p{
+    margin: 0;
+}
+.calc_block_nomer{
+    display: block;
+    padding-top: 5px;
+    float: left;
+}
+
+.calc_hover_btn{
+    display: block;
+    float: right;
+    margin-right: 5px;
+}
+
+
+/* input box in default state */
+.tcalInput {
+    background: url('../img/cal.gif') 50% 50% no-repeat;
+    padding-right: 15%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* additional properties for input boxe in activated state, above still applies unless in conflict */
+.tcalActive {
+    background-image: url('../img/no_cal.gif');
+}
+/* container of calendar's pop-up */
+#tcal {
+    position: absolute;
+    visibility: hidden;
+    z-index: 100;
+    width: 170px;
+    background-color: white;
+    margin-top: 2px;
+    padding: 0 2px 2px 2px;
+    border: 1px solid silver;
+
+    -moz-box-shadow: 3px 3px 4px silver;
+    -webkit-box-shadow: 3px 3px 4px silver;
+    box-shadow: 3px 3px 4px silver;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='silver')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='silver');
+}
+
+/* table containing navigation and current month */
+#tcalControls {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+}
+#tcalControls td {
+    border-collapse: collapse;
+    border: 0;
+    padding: 0;
+    width: 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+#tcalControls th {
+    border-collapse: collapse;
+    border: 0;
+    padding: 0;
+    line-height: 25px;
+    font-size: 10px;
+    text-align: center;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+#tcalPrevYear { background-image: url('../img/prev_year.gif'); }
+#tcalPrevMonth { background-image: url('../img/prev_mon.gif'); }
+#tcalNextMonth { background-image: url('../img/next_mon.gif'); }
+#tcalNextYear { background-image: url('../img/next_year.gif'); }
+
+/* table containing week days header and calendar grid */
+#tcalGrid {
+    border-collapse: collapse;
+    border: 1px solid silver;
+    width: 100%;
+}
+#tcalGrid th {
+    border: 1px solid silver;
+    border-collapse: collapse;
+    padding: 3px 0;
+    text-align: center;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 10px;
+    background-color: gray;
+    color: white;
+}
+#tcalGrid td {
+    border: 0;
+    border-collapse: collapse;
+    padding: 2px 0;
+    text-align: center;
+    font-family: Tahoma, Geneva, sans-serif;
+    width: 14%;
+    font-size: 11px;
+    cursor: pointer;
+}
+#tcalGrid td.tcalOtherMonth { color: silver; }
+#tcalGrid td.tcalWeekend { background-color: #ACD6F5; }
+#tcalGrid td.tcalToday { border: 1px solid red; }
+#tcalGrid td.tcalSelected { background-color: #FFB3BE; }
+
+
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+
+.calc_block_2{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 85%;
+    float: right;
+    height: auto;
+    background-color: #ffffff;
+    /*background-color: aqua;*/
+
+    margin-top: -40px;
+    margin-right: 5px;
+}
+
+
+.calc_nomers{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+   /*// float: right;*/
+    height: auto;
+    /*background-color: aqua;*/
+    /*margin-top: -40px;*/
+    /*margin-right: 5px;*/
+
+}
+.calc_blocks_nomer{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 16px;
+    margin-bottom: 20px;
+}
+.calc_nomer_block1{
+    display: block;
+    width: 40%;
+    float: left;
+}
+.calc_nomer_block2{
+    display: block;
+    width: 60%;
+    float: right;
+}
+
+.adults-block{
+    display: block;
+    border: 1px solid silver;
+    border-radius: 5%;
+    background-color: #ffffff;
+    width: 60%;
+    float: left;
+    margin-left: 10%;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.calc_nomer_block2_1{
+    display: block;
+    border: 1px solid silver;
+    border-radius: 5%;
+    background-color: #ffffff;
+    width: 47%;
+    float: left;
+    font-size: 14px;
+}
+.calc_nomer_block2_1 h3{
+    padding-left: 10%;
+}
+
+.calc_nomer_block2_2 h3{
+    padding-left: 10%;
+}
+
+.calc_nomer_block2_2{
+    display: block;
+    border: 1px solid silver;
+    border-radius: 5%;
+    background-color: #ffffff;
+    width: 47%;
+    float: right;
+    font-size: 14px;
+}
+
+
+.arrow-minus{
+    background-color: #ffffff;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    float: left;
+    width: 30%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.qarrow-plus{
+    background-color: #ffffff;
+    margin: 0;
+    border: 0;
+    width: 30%;
+    padding: 0;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+.adults-num{
+    border: 0;
+    width: 40%;
+    padding: 0;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.kinder-minus{
+    background-color: #ffffff;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    float: left;
+    width: 30%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.kinder-plus{
+    background-color: #ffffff;
+    margin: 0;
+    border: 0;
+    width: 30%;
+    padding: 0;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+.kinder-num{
+    border: 0;
+    width: 40%;
+    padding: 0;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.calc_nomer_block2_3{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: #ffffff;
+}
+.calc_nomer_block2_3 h3{
+    padding-left:5%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.kinder-block{
+    display: block;
+    width: 47%;
+    border: 1px solid silver;
+    border-radius: 5%;
+    background-color: #ffffff;
+    float: left;
+    font-size: 14px;
+    min-height: 50px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+
+.kinder-block select {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 0;
+    padding-top: 8%;
+    font-size: 20px;
+    font-weight: bold;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+        background: url('../img/str2l.png') no-repeat right center;
+    outline: 0;
+}
+
+.calc_nomers_btn{
+    display: block;
+    /*position: absolute;*/
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    bottom: 0;
+}
+
+.calc_nomers_btn_1{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.calc_nomers_btn_2{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+
+.addnomers{
+    display: block;
+    margin: 0 auto;
+    width: 49%;
+    text-align: center;
+    font-size: 16px;
+    color: #808080;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 0;
+ }
+.addnomers2{
+    display: none;
+    margin: 0 auto;
+    width: 49%;
+    text-align: center;
+    font-size: 16px;
+    color: blue;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 0;
+
+}
+
+.addnomers span{
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.sub{
+    display: block;
+    margin: 0 auto;
+    width: 49%;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color:blue ;
+    border: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.delnum{
+    display: block;
+    width: 49%;
+    background-color: #ffffff;
+    color: blue;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0;
+}
+
+.bloc_n{
+    display:block;
+    width: 10%;
+    float: left;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 4px;
+}
+
+@media only screen  and (max-width: 1024px) {
+
+
+}
+
+@media only screen  and (max-width: 990px) {
+
+    .calc_block_out1{
+        float: none;
+    }
+    .calc_block_out2{
+        float: none;
+    }
+    .calc_block_out3{
+        float: none;
+    }
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+    .calc_block_date2{
+        float: left;
+
+    }
+   
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+
+}

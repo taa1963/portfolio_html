@@ -16,18 +16,20 @@ if (
 
     if ($ClientRegion == "Московская область")
     {
-        $to = 'alexandr.tupichenkov@yandex.ru';
+        $to = 'taa1963@ukr.net';
+       // $to = 'alexandr.tupichenkov@yandex.ru';
     }
     if ($ClientRegion == "Москва (включая новую Москву)")
     {
         $to = 'taa1963@ukr.net';
     }
 
-    if ($ClientRegion == "Санкт-Петербург)")
+    if ($ClientRegion == "Санкт-Петербург")
     {
-        $to = 'alexandr.tupichenkov@yandex.ru';
+        $to = 'taa1963@ukr.net';
+       // $to = 'alexandr.tupichenkov@yandex.ru';
     }
-    if ($ClientRegion == "Ленинградская область)")
+    if ($ClientRegion == "Ленинградская область")
     {
         $to = 'alexandr.tupichenkov@yandex.ru';
     }

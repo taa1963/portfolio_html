@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор Плитки</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор Плитки">
+
+
+    <link href="cssnew/Calc_style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<!----------Начало блока калькулятора-------->
+
+
+<div class="calculator">
+
+    <h2>Калькуляторы</h2>
+
+    <div class="calc_block_menu">
+        <ul class="calc_menu">
+            <li class="calc_menu_punkt" id="vanna">Ванная</li>
+            <li class="calc_menu_punkt" id="closet">Туалет</li>
+            <li class="calc_menu_punkt" id="pol">Пол</li>
+            <li class="calc_menu_punkt" id="kuxen">Кухня</li>
+            <li class="calc_menu_punkt" id="plitka">Расчёт плитки в штуках</li>
+        </ul>
+    </div>
+
+    <div class="calc_blocks_calculator">
+
+        <div class="calc_block_vanna" id="calc_block_vanna">
+            <h3>Расчёт плитки для ванной</h3>
+            <div class="calc_block_titel">
+                <span>*</span> Введите размеры стен ванной комнаты в метрах:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина 1-й стены:</label>
+                <input type="text" class="text" id="stenav1" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина 2-й стены:</label>
+                <input type="text" class="text" id="stenav2" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина 3-й стены:</label>
+                <input type="text" class="text" id="stenav3" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина 4-й стены:</label>
+                <input type="text" class="text" id="stenav4" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Высота стен:</label>
+                <input type="text" class="text" id="hv1" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_titel">
+                Укажите размер двери в ванной комнате:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="sdv" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Высота:</label>
+                <input type="text" class="text" id="hdv" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_titel">
+                Если Вы не будете класть плитку ЗА ВАННОЙ то укажите размеры ванной:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="sdzv" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Длина:</label>
+                <input type="text" class="text" id="ldzv" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Высота:</label>
+                <input type="text" class="text" id="hdzv" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_titel">
+                Если у Вас есть ОКНО в ванной, то введите его размеры:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="soknov" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Длина:</label>
+                <input type="text" class="text" id="loknov" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_titel">
+                Дополнительно: если у Вас есть какие-нибудь элементы, на которые вы не будете
+                <br>укладывать плитку, то укажите размеры
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="sdopminusv" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Длина:</label>
+                <input type="text" class="text" id="ldopminusv" value="0" >
+                <span>м.</span>
+            </div>
+            <div class="calc_block_titel">
+                Если у Вас есть еще элементы, на которые вы будете укладывать плитку, внесите размеры:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="sdopplusv" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Длина:</label>
+                <input type="text" class="text" id="ldopplusv" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_titel">
+                Для того, чтобы рассчитать общую СТОИМОСТЬ плитки для ванной - введите цены за кв.метр:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Цена плитки для стен:</label>
+                <input type="text" class="text" id="zvsten" value="0" >
+                <span>руб.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Цена плитки для пола:</label>
+                <input type="text" class="text" id="zvpol" value="0" >
+                <span>руб.</span>
+            </div>
+
+            <div class="calc_block_date_err" id="calc_block_date_err" >
+                <p>Не задан один из основных параметров ширина стены или высота</p>
+            </div>
+
+        </div>
+
+
+        <div class="calc_block_closet" id="calc_block_closet">
+            <h3>Расчёт плитки для туалета</h3>
+            <div class="calc_block_titel">
+                <span>*</span> Введите размеры стен туалета в метрах:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина 1-й стены:</label>
+                <input type="text" class="text" id="stenacloset1" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина 2-й стены:</label>
+                <input type="text" class="text" id="stenacloset2" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина 3-й стены:</label>
+                <input type="text" class="text" id="stenacloset3" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина 4-й стены:</label>
+                <input type="text" class="text" id="stenacloset4" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Высота стен:</label>
+                <input type="text" class="text" id="hcloset1" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_titel">
+                Укажите размер двери в туалете:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="sdcloset" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Высота:</label>
+                <input type="text" class="text" id="hdcloset" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_titel">
+                Для того, чтобы рассчитать общую СТОИМОСТЬ плитки для туалета - введите цены за кв.метр:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Цена плитки для стен:</label>
+                <input type="text" class="text" id="zclosetsten" value="0" >
+                <span>руб.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Цена плитки для пола:</label>
+                <input type="text" class="text" id="zclosetpol" value="0" >
+                <span>руб.</span>
+            </div>
+            <div class="calc_block_err_closet" id="calc_block_err_closet" >
+                <p>Не задан один из основных параметров ширина стены или высота</p>
+            </div>
+
+        </div>
+
+        <div class="calc_block_pol" id="calc_block_pol">
+            <h3>Расчёт плитки на пол</h3>
+            <div class="calc_block_titel">
+                <span>*</span> Введите размеры пола в метрах:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="spol" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Длина:</label>
+                <input type="text" class="text" id="hpol" value="0" >
+                <span>м.</span>
+            </div>
+
+
+
+            <div class="calc_block_titel">
+                Введите размеры дополнительной площади, присоединяемой к основной:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="spokdopplus" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Высота:</label>
+                <input type="text" class="text" id="hpokdopplus" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_titel">
+                Введите размеры площади, которую нужно вычесть из расчёта:
+            </div>
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="spokdopminus" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Высота:</label>
+                <input type="text" class="text" id="hpokdopminus" value="0" >
+                <span>м.</span>
+            </div>
+
+
+            <div class="calc_block_titel">
+                Узнайте какая будет общая цена за плитку на пол, введя стоимость 1 м²
+            </div>
+
+            <div class="calc_block_date">
+                <label>Цена плитки за квадратный метр:</label>
+                <input type="text" class="text" id="zpol" value="0" >
+                <span>руб.</span>
+            </div>
+            <div class="calc_block_err_pol" id="calc_block_err_pol" >
+                <p>Не задан один из основных параметров ширина или длинна</p>
+            </div>
+
+
+        </div>
+
+        <div class="calc_block_kuxen" id="calc_block_kuxen">
+            <h3>Расчёт плитки для кухни (фартук)</h3>
+            <div class="calc_block_titel">
+                <span>*</span> Введите размеры будущего кухонного «фартука» в метрах:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="skuxen" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Длина:</label>
+                <input type="text" class="text" id="hkuxen" value="0" >
+                <span>м.</span>
+            </div>
+
+
+
+            <div class="calc_block_titel">
+                Размеры дополнительной поверхности под укладку плитки:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="skuxendopplus" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Высота:</label>
+                <input type="text" class="text" id="hkuxendopplus" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_titel">
+                Размеры поверхности, которые надо исключить из площади облицовки:
+            </div>
+            <div class="calc_block_date">
+                <label>Ширина:</label>
+                <input type="text" class="text" id="skuxendopminus" value="0" >
+                <span>м.</span>
+            </div>
+
+            <div class="calc_block_date">
+                <label>Высота:</label>
+                <input type="text" class="text" id="hkuxenkdopminus" value="0" >
+                <span>м.</span>
+            </div>
+
+
+            <div class="calc_block_titel">
+                Узнайте какая будет общая цена плитки для фартука, введя стоимость 1 м²
+            </div>
+
+            <div class="calc_block_date">
+                <label>Цена плитки за квадратный метр:</label>
+                <input type="text" class="text" id="zkuxen" value="0" >
+                <span>руб.</span>
+            </div>
+
+            <div class="calc_block_err_kuxen" id="calc_block_err_kuxen" >
+                <p>Не задан один из основных параметров ширина или длинна</p>
+            </div>
+
+
+        </div>
+
+        <div class="calc_block_plitka" id="calc_block_plitka">
+            <h3>Сколько плитки в одном квадратном метре?</h3>
+            <div class="calc_block_titel">
+                <span>*</span> Введите размеры сторон плитки <span>(в сантиметрах)</span>:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Длина 1-й стороны:</label>
+                <input type="text" class="text" id="splitka1" value="0" >
+                <span>cм.</span>
+            </div>
+            <div class="calc_block_date">
+                <label>Длина 2-й стороны:</label>
+                <input type="text" class="text" id="splitka2" value="0" >
+                <span>cм.</span>
+            </div>
+
+
+            <div class="calc_block_titel">
+                Введите количество плитки заданного выше размера и вы узнаете какую площадь (сколько кв.метров) они составляют:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Количество плитки:</label>
+                <input type="text" class="text" id="Nplitka" value="0" >
+                <span>шт.</span>
+            </div>
+
+
+            <div class="calc_block_titel">
+                Введите площадь под укладку и вы узнаете количество плитки в штуках:
+            </div>
+            <div class="calc_block_date">
+                <label>Площадь под укладку плитки:</label>
+                <input type="text" class="text" id="splitkaV" value="0" >
+                <span>м.</span>
+            </div>
+
+
+
+            <div class="calc_block_titel">
+                Чтоб рассчитать сколько будет стоить одна плитка введите стоимость за 1 м²:
+            </div>
+
+            <div class="calc_block_date">
+                <label>Цена плитки за квадратный метр:</label>
+                <input type="text" class="text" id="ZplitkaV" value="0" >
+                <span>руб.</span>
+            </div>
+            <div class="calc_block_err_plitka" id="calc_block_err_plitka" >
+                <p>Не задан один из основных параметров ширина или длинна</p>
+            </div>
+
+
+        </div>
+
+        <div class="calc_blocks_button">
+            <button type="button" id="price"> Расчитать</button>
+        </div>
+
+        <div class="calc_blocks_itog">
+            <div class="calc_blocks_itog_titel">
+                Итого:
+            </div>
+
+            <div class="calc_blocks_itog_vanna">
+                <div class="calc_itog_block">
+                    <span id="pvanna">0</span>периметр помещения (сумма всех сторон)
+                </div>
+                <div class="calc_itog_block">
+                    <span id="NplvannaStena">0</span>настенной плитки (с запасом 5%)
+                </div>
+                <div class="calc_itog_block">
+                    <span id="NplvannaPol">0</span>напольной плитки (с запасом 5%)
+                </div>
+                <div class="calc_itog_block">
+                    <span id="ZvannaStena">0</span>общая цена плитки для стен
+                </div>
+                <div class="calc_itog_block">
+                    <span id="ZvannaPol">0</span>общая цена плитки для пола
+                </div>
+
+
+            </div>
+
+            <div class="calc_blocks_itog_closet">
+                <div class="calc_itog_block">
+                    <span id="pcloset">0</span>периметр помещения (сумма всех сторон)
+                </div>
+                <div class="calc_itog_block">
+                    <span id="NPlclosetStena">0</span>настенной плитки (с запасом 5%)
+                </div>
+                <div class="calc_itog_block">
+                    <span id="NPlclosetPol">0</span>напольной плитки (с запасом 5%)
+                </div>
+                <div class="calc_itog_block">
+                    <span id="ZPlclosetStena">0</span>общая цена плитки для стен
+                </div>
+                <div class="calc_itog_block">
+                    <span id="ZPlclosetPol">0</span>общая цена плитки для пола
+                </div>
+
+
+            </div>
+
+            <div class="calc_blocks_itog_pol">
+                <div class="calc_itog_block">
+                    <span id="NPlPolPol">0</span>плитки понадобится для пола (с 5% запасом)
+                </div>
+                <div class="calc_itog_block">
+                    <span id="ZPlPolPol">0</span>стоимость всей плитки для пола
+                </div>
+                <div class="calc_itog_block">
+                    <span id="NPlPolPolDiag">0</span>плитки понадобится для пола (с 10% запасом если будет укладка плитки по диагонали)
+                </div>
+                <div class="calc_itog_block">
+                    <span id="ZPlPolPolDiag">0</span>стоимость всей плитки для пола (при укладке по диагонали)
+                </div>
+
+
+            </div>
+
+            <div class="calc_blocks_itog_kuxen">
+                <div class="calc_itog_block">
+                    <span id="NPlkuxen">0</span>плитки понадобится для фартука (с 5% запасом)
+                </div>
+                <div class="calc_itog_block">
+                    <span id="ZPlkuxen">0</span>стоимость всей плитки для фартука
+                </div>
+            </div>
+
+
+            <div class="calc_blocks_itog_plitka">
+                <div class="calc_itog_block">
+                    <span id="NPlMetr">0</span>штук в 1 квадратном метре
+                </div>
+                <div class="calc_itog_block">
+                    <span id="NPlAll">0</span>штук плиток в заданной площади под укладку
+                </div>
+                <div class="calc_itog_block">
+                    <span id="NMetr">0</span>м² в заданном количестве плитки
+                </div>
+                <div class="calc_itog_block">
+                    <span id="Z1Pl">0</span>рублей стоит 1 плитка (штука)
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scriptsCalc.js"></script>
+
+    <!----------Конец блока калькулятора-------->
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор ОСАГО</title>
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор ОСАГО">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styleCalc.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<!--<данный блок нужно интегрировать в ваш сайт-->
+<div class="container plus">
+
+   <div class="calculator" id="calculator">
+       <div class="titlesolx text-center header-orange">Калькулятор ОСАГО:</div>
+       <div class="row">
+           <div class="col-sm-6 col-xs-6 col-md-6 ">
+               <div class="calculator__blocs" id="calculator__bloc1">
+                   <div class="calculator__blocs_tilel">Собственник ТС </div>
+                   <div class="calculator__blocs_radio">
+                       <input type="radio" id="fis"  class="owner" name="owner" value="3700">
+                       <label for="fis">Физическое лицо</label>
+                   </div>
+                   <div class="calculator__blocs_radio">
+                       <input type="radio" id="ur" class="owner"   name="owner" value="3500" checked>
+                       <label for="ur">Юридическое лицо</label>
+                   </div>
+               </div>
+           </div>
+
+           <div class="col-sm-6 col-xs-6 col-md-6 ">
+               <div class="calculator__blocs" id="calculator__bloc2">
+                   <div class="calculator__blocs_tilel">Прописка собственника ТС </div>
+                   <div class="calculator__blocs_radio">
+                       <input type="radio" id="state1"  class="owner" name="owner2" value="2">
+                       <label for="state1">Москва</label>
+                   </div>
+                   <div class="calculator__blocs_radio">
+                       <input type="radio" id="state2" class="owner"   name="owner2" value="1.7">
+                       <label for="state2">Московская область</label>
+                   </div>
+                   <div class="calculator__blocs_radio">
+                       <input type="radio" id="state3" class="owner"   name="owner2" value="1.4" checked>
+                       <label for="state3">Другой регион</label>
+                   </div>
+               </div>
+           </div>
+
+           <div class="col-sm-6 col-xs-6 col-md-6 ">
+               <div class="calculator__blocs">
+                   <div class="calculator__blocs_tilel">Возраст и стаж водителя  </div>
+                   <div class="calculator__blocs_sel">
+                   <select  class="wheel" id="experience"  value="1" >
+                   <option selected="selected" value="1" >Возраст  более - 22 лет, стаж более 3 лет</option>
+                   <option value="1.6" >Возраст  до 22 лет включительно,стаж свыше 3 лет</option>
+                   <option value="1.7" >Возраст  более 22 лет, стаж  до 3 лет включительно</option>
+                   <option value="1.8" >Возраст до 22 лет включительно,стаж до 3 лет включительно</option>
+                   <option value="1.8" >Без органичений</option>
+                   </select>
+               </div>
+           </div>
+       </div>
+
+           <div class="col-sm-6 col-xs-6 col-md-6 ">
+           <div class="calculator__blocs">
+               <div class="calculator__blocs_tilel">Мощность двигателя, Л.С.  </div>
+               <div class="calculator__blocs_sel">
+                   <select  class="wheel" id="power"  value="1" >
+                       <option selected="selected" value="1">свыше 50 до 70 включительно</option>
+                       <option value="1.1" >свыше 70 до 100 включительно</option>
+                       <option value="1.2" >свыше 100 до 120 включительно</option>
+                       <option value="1.4" >свыше 120 до 150 включительно</option>
+                       <option value="1.6" >Свыше  150</option>
+                   </select>
+               </div>
+           </div>
+       </div>
+
+
+           <div class="col-sm-6 col-xs-6 col-md-6 ">
+               <div class="calculator__blocs">
+                   <div class="calculator__blocs_tilel">Безаварийный стаж водителя  </div>
+                   <div class="calculator__blocs_sel">
+                       <select  class="wheel" id="years"  value="1" >
+                           <option selected="selected" value="1">Договор ОСАГО заключается впервые</option>
+                           <option value="0.95">1 год безаварийной езды</option>
+                           <option value="0.9" >2 год безаварийной езды</option>
+                           <option value="0.85" >3 год безаварийной езды</option>
+                           <option value="0.8" >4 год безаварийной езды</option>
+                           <option value="0.75" >5 год безаварийной езды</option>
+                           <option value="0.7" >6 год безаварийной езды</option>
+                           <option value="0.65" >7 год безаварийной езды</option>
+                           <option value="0.6" >8 год безаварийной езды</option>
+                           <option value="0.55" >9 год безаварийной езды</option>
+                           <option value="0.5" >10 год безаварийной езды</option>
+                       </select>
+                   </div>
+               </div>
+
+           </div>
+
+           <div class="col-sm-6 col-xs-6 col-md-6 ">
+               <div class="calculator__blocs">
+                   <div class="calculator__blocs_tilel">Срок страхования, мес </div>
+                   <div class="calculator__blocs_sel">
+                       <select  class="wheel" id="term"  value="1" >
+                           <option selected="selected" value="1">10 месяцев и более</option>
+                           <option value="0.9" >9 месяцев</option>
+                           <option value="0.8" >8 месяцев</option>
+                           <option value="0.7" >7 месяцев</option>
+                           <option value="0.6" >6 месяцев</option>
+                           <option value="0.5" >5 месяцев</option>
+                           <option value="0.4" >4 месяцев</option>
+                           <option value="0.3" >3 месяцев</option>
+                           <option value="0.2" >2 месяцев</option>
+                           <option value="0.1" >1 месяцев</option>
+                       </select>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="row">
+           <div class="col-md-12">
+               <div class="calculator_itog">
+                   <div class="calculator_itog_block">
+                    <p>Итого</p>
+                  <label> <span id="output2"></span> &nbsp;руб</label>
+                   </div>
+               </div>
+           </div>
+       </div>
+       </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/scriptsCalcNew.js"></script>
+
+
+
+</body>
+</html>

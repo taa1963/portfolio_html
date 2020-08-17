@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>расчет коммерческого предложения</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <style type="text/css">
+  	.string {
+  		color: #aaa;
+  		background: #444;
+  		border: 1px #aaa solid;
+  	}
+  	select, input {
+  		outline: 0;
+  		margin: .5em;
+  		padding: 1em;
+  		color: #444;
+  		border: 1px #bac solid;
+  		border-radius: .4em;
+  		min-width: 10em;
+  	}
+  	input:hover {
+  		/*border: 1px #cfa solid;*/
+  	}
+  	input:focus {
+  		border: 1px #fa0 solid;
+  	}
+  	input.comment {
+  		width: 28em;
+  	}
+  	label, input[type="checkbox"] {
+  		padding: 0; margin: 0;
+  	}
+  	input[type="submit"] {
+  		background: #fb2;
+  		color: #fff;
+  		cursor: pointer;
+		border: .2em #fff solid;
+  	}
+  	.cu_pk {
+  		display: inline-block; width: 5em; text-align: center;
+  	}
+  	.cu_pk_box {
+  	}
+  	tr {
+  		/*background: #aaa; */
+  	}
+  	.one_block:nth-child(2n) {
+  		background: #fff;
+  		box-shadow: none;
+  	}
+  	.one_block {
+  		background: #eee;
+  		margin: .4em;
+  		/*border: 1px #888 solid;
+  		*/
+  		border-radius: .4em;
+  		box-shadow: 1px 3px rgba(100,100,100,.4);
+
+  	}
+
+    .one_block1{
+        display: none;
+    }
+  </style>
+</head>
+<body>
+<script src="js/jquery.min.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+<p>
+	<h2>Оснастите свою лабораторию по последнему слову техники!</h2>
+</p>
+<p>
+	Специалисты нашей компании предоставляют грамотную экспертизу в подборе лабораторного оборудования. Мы подбираем оптимальные решения по соотношениям цена/ качество и комплектация/ производительность в зависимости от бюджета Заказчика.
+</p>
+<p>
+	Выберите оборудования и заполните технически параметры. Мы выполним расчеты и отправим вам КП.
+</p>
+<!--<table class="one_block1">-->
+    <!--<tr>-->
+        <!--<th>Устройство</th>-->
+        <!--<th>Реестр СИ РК</th>-->
+        <!--<th>Новый</th>-->
+        <!--<th>Комментарий</th>-->
+        <!--<th>Действие</th>-->
+    <!--</tr>-->
+
+    <!--<tr>-->
+        <!--<td>-->
+            <!--<select name="type" data-type="type"  data-blockid="one_block">-->
+            <!--</select>-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<input type="checkbox" name="chk_register" id="chk_register" checked=""/>-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<input type="checkbox" name="chk_new" id="chk_new" />-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<input type="text" name="comment" placeholder="Комментарий"  class="comment" />-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<input type="submit" name="add" value="Добавить" data-blockid="one_block" data-add />-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<input type="submit" onclick="DelUvv(this);" name="del" value="Удалить" data-blockid="one_block" data-add />-->
+        <!--</td>-->
+    <!--</tr>-->
+<!--</table>-->
+
+<form id="form1" action="send.php" method="post">
+
+<div id="po5t">
+<div class="one_block" id="one_block" style="display: none;">
+<table class="one_block2">
+	<tr>
+		<th>Устройство</th>
+		<th>Реестр СИ РК</th>
+		<th>Новый</th>
+		<th>Комментарий</th>
+		<th>Действие</th>
+	</tr>
+
+	<tr>
+		<td>
+			<select class="pname" name="type[]" data-type="type"  data-blockid="one_block" onchange="SelChan2(this);">
+			</select>
+		</td>
+		<td>
+			<input type="checkbox" name="chk_register" id="chk_register" checked=""/>
+		</td>
+		<td>
+			<input type="checkbox" name="chk_new" id="chk_new" />
+		</td>
+		<td>
+			<input type="text" name="comment[]" placeholder="Комментарий"  class="comment" />
+		</td>
+		<td>
+			<input type="submit" name="add" value="Добавить" data-blockid="one_block" data-add />
+		</td>
+        <td>
+            <input type="submit" onclick="DelUvv(this);" name="del" value="Удалить" data-blockid="one_block" data-add />
+        </td>
+	</tr>
+</table>
+<table data-fields="fields">
+
+</table>
+</div>
+
+
+    <span></span>
+
+	<!-- script body -->
+</div>
+<p>
+	 Заполните ваши контактные данные. Мы вышлем вам расчет коммерческого предложения в трех вариантах!<br />
+	 <input type="email" name="email" placeholder="user@mail.ru" />
+<input type="text" name="phone" placeholder="+914007007" />
+<input type="submit" class="submit" name="submit" value="Расчитать КП" />
+</p>
+
+</form>
+<script type="text/javascript">
+    var names,j;
+    names='';
+    j=0;
+
+	const CUSTOM_VARIANT = "Свой вариант";
+
+
+
+
+    var detectors = [
+		{
+			name: "Хроматограф газовый",
+			fields: [
+				{
+					name: "Вид детектора",
+					types: [
+						"Пламенно-ионизационный детектор – ПИД (FID)",
+						"Детектор по теплопроводности или катарометр (TCD) ",
+						"Микро-электронозахватный детектор, микро-ДЭЗ",
+						"Термоионный или детектор на азот и фосфор (NPD)",
+						"Пламенно-фотометрические детекторы ПФД (FPD и DFPD)",
+						"Хемилюминесцентные детектор",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Хроматограф жидкостной",
+			fields: [
+				{
+					name: "Вид детектора",
+					types: [
+						"Диодно-матричный детектор",
+						"Флуоресцентный детектор",
+						"Рефрактометрический детектор",
+						"Кондуктометрический детектор",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Спектрометры",
+			fields: [
+				{
+					name: "Название прибора",
+					types: [
+						"Атомно-абсорбционные спектрометры",
+						"УФ-ВИД спектрофотометры",
+						"ИК-ФУРЬЕ спектрометры",
+						"АЭС МП спектрометры",
+						"ИСП-МС спектрометры",
+						"ИСП-ОЭС спектрометры",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Весы",
+			fields: [
+				{
+					name: "Дискретность",
+					types: [
+						"0,1",
+						"0,01",
+						"0,001",
+						"0,0001",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Наибольший  Предел Взвешивания, г",
+					types: [
+						"0,220",
+						"1",
+						"2",
+						"10",
+						"100",
+						"1000",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "рН-метры",
+			fields: [
+				{
+					name: "Дискретность",
+					types: [
+						"0,01",
+						"0,1",
+						"1",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Дополнительно",
+					types: [
+						"Датчик температуры",
+						"Датчик электропроводности",
+						"Датчик растворенного кислораода",
+						"Измерение общей минерализации",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Термостат",
+			fields: [
+				{
+					name: "Минимальная температура, оС",
+					types: [
+						"-5",
+						"-1",
+						"0",
+						"1",
+						"5",
+						"10",
+						"15",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Максимальная температура, оС",
+					types: [
+						"50",
+						"80",
+						"100",
+						"200",
+						"15",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Сушильный шкаф",
+			fields: [
+				{
+					name: "Максимальная температура, оС",
+					types: [
+						"100",
+						"150",
+						"200",
+						"400",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Объем, л",
+					types: [
+						"10",
+						"20",
+						"40",
+						"80",
+						"100",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Муфельная печь",
+			fields: [
+				{
+					name: "Максимальная температура, оС",
+					types: [
+						"400",
+						"500",
+						"600",
+						"800",
+						"1000",
+						"1200",
+						"2000",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Объем, л",
+					types: [
+						"5",
+						"10",
+						"20",
+						"30",
+						"40",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Бидистиллятор",
+			fields: [
+				{
+					name: "Производительность, л/ч",
+					types: [
+						"1",
+						"2",
+						"4",
+						"10",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Электропитание, В",
+					types: [
+						"230",
+						"400",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Дистиллятор",
+			fields: [
+				{
+					name: "Производительность, л/ч",
+					types: [
+						"2",
+						"5",
+						"10",
+						"25",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Электропитание, В",
+					types: [
+						"230",
+						"400",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Нагревающая плитка",
+			fields: [
+				{
+					name: "Максимальная температура нагрева, оС",
+					types: [
+						"200",
+						"300",
+						"400",
+						"500",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Количество мест",
+					types: [
+						"1",
+						"2",
+						"3",
+						"4",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Магнитная мешалка",
+			fields: [
+				{
+					name: "Максимальная температура нагрева, оС",
+					types: [
+						"100",
+						"150",
+						"200",
+						"300",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Диапазон вращающего момента, об/мин",
+					types: [
+						"500",
+						"1000",
+						"2000",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Роторный испаритель",
+			fields: [
+				{
+					name: "Максимальная температура нагрева, оС",
+					types: [
+						"100",
+						"150",
+						"180",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Диапазон вращающего момента, об/мин",
+					types: [
+						"100",
+						"150",
+						"250",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Центрифуга",
+			fields: [
+				{
+					name: "Вместимость, шт",
+					types: [
+						"4",
+						"6",
+						"8",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Диапазон вращающего момента, об/мин",
+					types: [
+						"3000",
+						"6000",
+						"10000",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Водяная баня",
+			fields: [
+				{
+					name: "Количество мест",
+					types: [
+						"1",
+						"4",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Объем, л",
+					types: [
+						"10",
+						"20",
+						"40",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Холодильник",
+			fields: [
+				{
+					name: "Минимальная температура, оС",
+					types: [
+						"-5",
+						"-2",
+						"0",
+						"5",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Объем, л",
+					types: [
+						"500",
+						"1000",
+						"1200",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Микроскоп",
+			fields: [
+				{
+					name: "Увеличение",
+					types: [
+						"500",
+						"1000",
+						"2000",
+						"5000",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Методы контрастирования",
+					types: [
+						"Светлое поле",
+						"Темное поле",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Газоанализатор",
+			fields: [
+				{
+					name: "Объект исследования",
+					types: [
+						"Атмосферный воздух",
+						"Воздух рабочей зоны",
+						"Промышленные выбросы",
+						CUSTOM_VARIANT
+					]
+				},
+				{
+					name: "Определяемые вещества",
+					types: [
+						"Пыль",
+						"Продукты горения (CO, NO, NO2,SO2)",
+						"Углеводороды",
+						"Все выше перечисленные",
+						CUSTOM_VARIANT
+					]
+				}
+			]
+		},
+		{
+			name: "Другое оборудование",
+			fields: null
+		}
+	];
+
+	//document.querySelector('select[name="type"]').addEventListener("change", changeEvent);
+
+	function changeEvent(event) {
+
+
+		let fields = document.getElementById(event.target.dataset.blockid).querySelector("table[data-fields]");
+		while (fields.hasChildNodes()) {
+			fields.removeChild(fields.firstChild);
+		}
+		if(typeof detectors[event.target.value].fields !== 'undefined' && detectors[event.target.value].fields != null) {
+
+			let tr1 = document.createElement("tr");
+			let tr2 = document.createElement("tr");
+
+			detectors[event.target.value].fields.forEach( function(item, index) {
+				let th1 = document.createElement("th");
+				th1.innerHTML = item.name;
+				tr1.appendChild(th1);
+				fields.appendChild(tr1);
+
+				let td2       = document.createElement("td");
+				let td2select = document.createElement("select");
+
+
+				if(typeof item.types !== 'undefined' && item.types != null) {
+					item.types.forEach(function(item, index) {
+						let option = document.createElement("option");
+						option.setAttribute('value', index);
+						option.innerHTML = item;
+						td2select.appendChild(option);
+					});
+			 	}
+
+				td2.appendChild(td2select);
+
+				td2.innerHTML += "<input type=\"text\" name=\"custom_variant\" placeholder=\"" + CUSTOM_VARIANT + "\" />";
+				tr2.appendChild(td2);
+				fields.appendChild(tr1);
+				fields.appendChild(tr2);
+
+				var selectElement = $(td2).find('select');
+
+
+
+
+				if ((names=="Хроматограф газовый")||(names=="Хроматограф жидкостной")) {
+					selectElement.attr('multiple', 'multiple');
+				}
+				selectElement.select2();
+			});
+		} else {
+			let tr1 = document.createElement("tr");
+			let tr2 = document.createElement("tr");
+
+			let th1 = document.createElement("th");
+			th1.innerHTML = "Наименование";
+			tr1.appendChild(th1);
+
+			let th2 = document.createElement("th");
+			th2.innerHTML = "описание";
+			tr1.appendChild(th2);
+			fields.appendChild(tr1);
+
+			let td1 = document.createElement("td");
+			td1.innerHTML = "<input type=\"text\" name=\"custom_name\" placeholder=\"Наименование\" class=\"comment\"/>";
+			tr2.appendChild(td1);
+
+			let td2 = document.createElement("td");
+			td2.innerHTML = "<input type=\"text\" name=\"custom_description\" placeholder=\"описание\" class=\"comment\"/>";
+			tr2.appendChild(td2);
+			fields.appendChild(tr2);
+
+
+		}
+
+
+
+	}
+
+	//document.getElementById("add_item").addEventListener("click", createClone); 
+
+	var item_id_counter = 0;
+
+	function createClone(el) {
+		if (el !== undefined) {
+			el.preventDefault();
+		}
+		var one_block = typeof el == 'undefined'
+			? document.getElementById("one_block").cloneNode(true)
+			: document.getElementById(el.target.dataset.blockid).cloneNode(true);
+
+		one_block.setAttribute('id', 'item_' + item_id_counter);
+		one_block.querySelectorAll('*[data-blockid]').forEach(function(item) {
+			item.setAttribute('data-blockid', 'item_' + item_id_counter);
+		});
+		one_block.style = "display: block;";
+		let button = one_block.querySelector("input[data-add]");
+		button.setAttribute('data-blockid', 'item_' + item_id_counter);
+
+
+		button.addEventListener("click", createClone);
+		let type = one_block.querySelector("select[data-type]");
+
+		type.innerHTML = "";
+
+		detectors.forEach(function(item, index) {
+			 let option = document.createElement("option");
+			//console.log(item.name);
+			 option.setAttribute('value', index);
+			 option.innerHTML = item.name;
+			 type.appendChild(option);
+		});
+		type.addEventListener("change", changeEvent);
+
+
+		document.getElementById("po5t").appendChild( one_block );
+
+		item_id_counter++;
+
+	}
+    //===== Удаление текущей  записи    =====//
+    function DelUvv(element) {
+
+       var sss= $(element).parents('.one_block');
+      //  var sss= $(element);
+
+        sss.remove();
+
+    }
+
+    function SelChan2(element) {
+
+        names = $(element).find('option:selected').text();
+    }
+
+
+    window.DelUvv = DelUvv;
+    window.SelChan2 = SelChan2;
+
+	createClone();
+//   changeEvent(el);
+</script>
+
+
+</body>
+</html>

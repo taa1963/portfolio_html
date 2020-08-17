@@ -1,7 +1,8 @@
 <?php
 // если была нажата кнопка "Отправить"
 
-print_r(iconv("UTF-8", "UTF-8", $_POST));
+//print_r(iconv("UTF-8", "UTF-8", $_POST));
+print_r($_POST);
 
 
 

@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<title>расчет коммерческого предложения</title>
   <meta content="" name="descriptison">
@@ -737,9 +738,9 @@
     }
 
     function SelChan2(element) {
-        str='';
+        var str2='';
         names = $(element).find('option:selected').text();
-        str=names;
+        str2=names;
        var inp_type=$(element).parents('.one_block').find('.type_dev');
         console.log(inp_type);
         $(inp_type).val(str);

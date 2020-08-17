@@ -1,7 +1,9 @@
 <?php
 // если была нажата кнопка "Отправить"
 
-print_r($_POST);
+print_r(iconv("CP1251", "UTF-8", $_POST));
+
+
 
 if (
     isset($_POST['name1']) && !empty($_POST['name1']) &&

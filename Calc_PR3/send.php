@@ -13,11 +13,14 @@ $result = '';
 foreach ($items as $item) {
     $line = 'Тип устройства: ' . $item['type'];
 
+
     if (isset($item['comment'])) {
-        foreach ($item['comment'] as $comment) {
-            $line .= ' - ' . 'Комментарий к устройству: ' . $comment;
-        }
+        isset($item['comment']) && !empty($item['comment']);
+        $comment = substr(htmlspecialchars(trim($item['comment'])), 0, 1000);
+
+        $line .= ' - ' . 'Комментарий к устройству: ' . $comment;
     }
+
 
 
 

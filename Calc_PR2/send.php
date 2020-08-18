@@ -1,5 +1,6 @@
 <?php
 // если была нажата кнопка "Отправить"
+header('Content-type:text/plain;chaset=utf-8');
 
 //print_r(iconv("UTF-8", "UTF-8", $_POST));
 print_r($_POST);

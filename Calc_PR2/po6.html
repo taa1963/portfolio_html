@@ -132,9 +132,10 @@
 
 	<tr>
 		<td>
+			<input type="text" name="type_dev[]" placeholder=""   class="type_dev" />
 			<select class="pname" name="type" data-type="type"  data-blockid="one_block" onchange="SelChan2(this);">
 			</select>
-			<input type="text" name="type[]" placeholder=""  value="" class="type_dev" />
+
 
 		</td>
 		<td>
@@ -630,6 +631,9 @@
 				let td2       = document.createElement("td");
 				let td2select = document.createElement("select");
 
+                //let td4;
+               // td4.innerHTML += "<input type=\"text\" name=\"variant[]\" class='' =\"variant\" placeholder=\""+ +"\" />";
+
 
 				if(typeof item.types !== 'undefined' && item.types != null) {
 					item.types.forEach(function(item, index) {
@@ -637,18 +641,26 @@
 						option.setAttribute('value', index);
 						option.innerHTML = item;
 						td2select.appendChild(option);
+                        //td4.appendChild(option);
+                       // td2select.addEventListener("change", SelChan3(this));
 					});
+                  //  td2select.addEventListener("change", SelChan3(this));
 			 	}
+                //td2select.addEventListener("change", SelChan3(this));
 
 				td2.appendChild(td2select);
+                //td2select.addEventListener("change", SelChan3(this));
 
-				td2.innerHTML += "<input type=\"text\" name=\"custom_variant\" placeholder=\"" + CUSTOM_VARIANT + "\" />";
+				td2.innerHTML += "<input type=\"text\" name=\"custom_variant[]\" placeholder=\"" + CUSTOM_VARIANT + "\" />";
 				tr2.appendChild(td2);
 				fields.appendChild(tr1);
 				fields.appendChild(tr2);
 
 				var selectElement = $(td2).find('select');
+				//alert(selectElement);
 
+
+                //selectElement.addEventListener("change", SelChan3(this));
 
 
 
@@ -743,6 +755,18 @@
         str2=names;
        var inp_type=$(element).parents('.one_block').find('.type_dev');
        // console.log(inp_type);
+        $(inp_type).val(str2);
+
+    }
+
+    function SelChan3(element) {
+
+	    alert(2222);
+        var str2='';
+        names = $(element).find('option:selected').text();
+        str2=names;
+        var inp_type=$(element).parents('.one_block').find('.type_dev');
+        // console.log(inp_type);
         $(inp_type).val(str2);
 
     }

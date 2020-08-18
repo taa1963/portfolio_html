@@ -132,8 +132,8 @@
 
 	<tr>
 		<td>
-			<input type="text" name="type_dev[]" placeholder=""   class="type_dev" />
-			<select class="pname" name="type" data-type="type"  data-blockid="one_block" onchange="SelChan2(this);">
+			<!--<input type="text" name="type_dev[]" placeholder=""   class="type_dev" />-->
+			<select class="pname" name="item1[type]" data-type="type"  data-blockid="one_block" >
 			</select>
 
 
@@ -145,7 +145,7 @@
 			<input type="checkbox" name="chk_new" id="chk_new" />
 		</td>
 		<td>
-			<input type="text" name="comment[]" placeholder="Комментарий"  class="comment" />
+			<input type="text" name="item1[comment]" placeholder="Комментарий"  class="comment" />
 		</td>
 		<td>
 			<input type="submit" name="add" value="Добавить" data-blockid="one_block" data-add />
@@ -651,14 +651,14 @@
 				td2.appendChild(td2select);
                 //td2select.addEventListener("change", SelChan3(this));
 
-				td2.innerHTML += "<input type=\"text\" name=\"custom_variant[]\" placeholder=\"" + CUSTOM_VARIANT + "\" />";
+				td2.innerHTML += "<input type=\"text\" name=\"item1[custom_variant]\" placeholder=\"" + CUSTOM_VARIANT + "\" />";
 				tr2.appendChild(td2);
 				fields.appendChild(tr1);
 				fields.appendChild(tr2);
 
 				var selectElement = $(td2).find('select');
 				//alert(selectElement);
-
+                selectElement.attr('name', 'item1[detector][]');
 
                 //selectElement.addEventListener("change", SelChan3(this));
 
@@ -683,11 +683,11 @@
 			fields.appendChild(tr1);
 
 			let td1 = document.createElement("td");
-			td1.innerHTML = "<input type=\"text\" name=\"custom_name\" placeholder=\"Наименование\" class=\"comment\"/>";
+			td1.innerHTML = "<input type=\"text\" name=\"item1[custom_name]\" placeholder=\"Наименование\" class=\"comment\"/>";
 			tr2.appendChild(td1);
 
 			let td2 = document.createElement("td");
-			td2.innerHTML = "<input type=\"text\" name=\"custom_description\" placeholder=\"описание\" class=\"comment\"/>";
+			td2.innerHTML = "<input type=\"text\" name=\"item1[custom_description]\" placeholder=\"описание\" class=\"comment\"/>";
 			tr2.appendChild(td2);
 			fields.appendChild(tr2);
 

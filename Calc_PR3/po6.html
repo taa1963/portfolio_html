@@ -65,16 +65,170 @@
 		display: block;
 	}
 
-    .one_block1{
-        display: none;
+    .type_s{
+        display: block;
+        width: 100%;
+        height: auto;
     }
+    .type_v{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .text_pop{
+        text-align: center;
+        color: #444444;
+    }
+
+    .form11{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .form11 h2{
+        color: #000000;
+        text-align: center;
+    }
+
+    .texta{
+        display: block;
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    /*//==================================//  */
+
+    /*
+* Оформление контактной формы
+* без дополительных изображений;
+* исключительно средствами CSS;
+*/
+
+    /*--Слой затемнения фона--*/
+    #fade {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: none; /*--по умолчанию скрыт--*/
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: .70;/* Полупрозрачность слоя затемнения */
+        filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    }
+    /*--Модальное окно--*/
+    .popup_block{
+        position: fixed;
+        top: 55%;;
+        left: 45%;
+        z-index: 99999;
+        display: none; /*--по умолчанию скрыт--*/
+        float: left;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        background-color: #ffffff;
+        max-height: 100%;
+
+        /*-- скругленные углы--*/
+
+        color: #ffffff;
+        font-size: .9em;
+    }
+    /*--Фиксированное позиционирование для тупого IE6--*/
+    *html #fade {
+        position: absolute;
+    }
+    *html .popup_block {
+        position: absolute;
+    }
+    /*--Блок содержания--*/
+    .note{
+        display: block;
+        overflow: hidden;
+        /* устанавливаем необходимую ширину формы в зависимости от дизайна
+       ** форма отлично растягивается */
+        width: 100%;
+        background: none repeat scroll 0 0 #FFFFFF;
+
+
+    }
+
+    .note p{
+        font: 16px "DroidSerifRegular";
+        color: #4b4b4b;
+        margin-top: 20px;
+        text-align: center;
+        /*//width: 85%;*/
+    }
+
+
+    /* формируем кнопку закрытия */
+    .close {
+        position: absolute;
+        top: -18px;
+        right: -18px;
+        width: 24px;
+        height: 24px;
+        border: 2px solid #ccc;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        border-radius: 15px;
+        background-color: rgba(61, 61, 61, 0.8);
+        -webkit-box-shadow: 0px 0px 10px #000;
+        -moz-box-shadow: 0px 0px 10px #000;
+        box-shadow: 0px 0px 10px #000;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 20px;
+        -webkit-transition: all ease .8s;
+        -moz-transition: all ease .8s;
+        -ms-transition: all ease .8s;
+        -o-transition: all ease .8s;
+        transition: all ease .8s;
+    }
+    .close:before {
+        color: rgba(255, 255, 255, 0.9);
+        content: "X";
+        text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+        font-size: 12px;
+    }
+    .close:hover {
+        background-color: rgba(252, 20, 0, 0.8);
+        /*--крутим кнопку при наведении--*/
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+
+
+    /* конец формы */
+
+
   </style>
 </head>
 <body>
-<!--<script src="js/jquery.min.js" ></script>-->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+<!--<link href="js/modal-contact.css" rel="stylesheet" />-->
+
+
+<!--<script src="js/dm-modal.js" ></script>-->
+
+
 
 <p>
 	<h2>Оснастите свою лабораторию по последнему слову техники!</h2>
@@ -159,7 +313,7 @@
     <!--</tr>-->
 <!--</table>-->
 
-<form id="form1" action="send.php" method="post">
+<form id="form1" >
 
 <div id="po5t">
 
@@ -168,14 +322,70 @@
 
 	<!-- script body -->
 </div>
+
+
+
 <p>
-	 Заполните ваши контактные данные. Мы вышлем вам расчет коммерческого предложения в трех вариантах!<br />
-	 <input required type="email" name="email" placeholder="user@mail.ru" />
-<input required  type="text" name="phone" placeholder="+914007007" />
-<input type="submit" class="submit" name="submit" value="Расчитать КП" />
+	 <!--Заполните ваши контактные данные. Мы вышлем вам расчет коммерческого предложения в трех вариантах!<br />-->
+	 <!--<input required type="email" name="email" placeholder="user@mail.ru" />-->
+      <!--<input required  type="text" name="phone" placeholder="+914007007" />-->
+
+
+    <a href="#?w=700" rel="popup_contact2"  id="popu1">   <input type="submit" class="submit" name="submit" value="Расчитать КП" /></a>
+
+
 </p>
 
 </form>
+
+<div id="popup_contact2" class="popup_block">
+
+    <div class="note">
+
+        <p>
+            Заполните ваши контактные данные. Мы вышлем вам расчет коммерческого предложения в трех вариантах!<br />
+
+        </p>
+
+
+    </div>
+
+
+
+    <form id="form11" class="form11" action="send.php" method="post">
+
+        <h2> Выбраны следующие устройства </h2>
+
+                         <!--<p class="text_pop">Тип устройства</p>-->
+        <!--<input readonly  type="text" name="type_v_0" class="type_v" id="type_v_0" />-->
+                        <!--<p class="text_pop">Комментарий к типу устройства</p>-->
+        <!--<input readonly  type="text" name="type_com_0" class="type_v" id="type_com_0" />-->
+
+                               <!--<p class="text_pop">Дополнительная опция</p>-->
+        <!--<input readonly  type="text" name="type_opt_0" class="type_v" id="type_opt_0" />-->
+                            <!--<p class="text_pop">Комментарий к дополнительной опции</p>-->
+        <!--<input readonly  type="text" name="type_opt_com_0" class="type_v" id="type_opt_com_0" />-->
+
+
+        <!--<input required  type="text" name="type_s" class="type_s" />-->
+
+        <!--<span id="Zena"></span>-->
+        <textarea rows="20" class="texta" id="texta" name="result"></textarea>
+
+        <input required type="email" name="email" placeholder="user@mail.ru" />
+        <input required  type="text" name="phone" placeholder="+914007007" />
+
+        <input type="submit" class="submit" name="submit" value="Отправить КП" />
+
+
+        </form >
+
+
+
+
+</div>
+
+
 <script type="text/javascript">
     var names,str;
     names='';
@@ -187,6 +397,10 @@
 
 
     var detectors = [
+        {
+            name: "Выберите оборудование"
+
+        },
 		{
 			name: "Хроматограф газовый",
 			fields: [
@@ -659,7 +873,7 @@
 				td2.appendChild(td2select);
                 //td2select.addEventListener("change", SelChan3(this));
 
-				td2.innerHTML += "<input type=\"text\" name=\"item[" + id + "][custom_variant]\" placeholder=\"" + CUSTOM_VARIANT + "\" />";
+				td2.innerHTML += "<input type=\"text\" name=\"item[" + id + "][custom_variant]\"id=\"item_com_" + id + "\" class=\"item_com_" + id + "\"placeholder=\"" + CUSTOM_VARIANT + "\" />";
 				tr2.appendChild(td2);
 				fields.appendChild(tr1);
 				fields.appendChild(tr2);
@@ -691,11 +905,11 @@
 			fields.appendChild(tr1);
 
 			let td1 = document.createElement("td");
-			td1.innerHTML = "<input type=\"text\" name=\"item[" + id + "][custom_name]\" placeholder=\"Наименование\" class=\"comment\"/>";
+			td1.innerHTML = "<input type=\"text\" name=\"item[" + id + "][custom_name]\"id=\"item_com_" + id + "\" class=\"item_com_" + id + "\" placeholder=\"Наименование\" class=\"comment\"/>";
 			tr2.appendChild(td1);
 
 			let td2 = document.createElement("td");
-			td2.innerHTML = "<input type=\"text\" name=\"item[" + id + "][custom_description]\" placeholder=\"описание\" class=\"comment\"/>";
+			td2.innerHTML = "<input type=\"text\" name=\"item[" + id + "][custom_description]\" id=\"item_com_" + id + "\" class=\"item_desc_" + id + "\" placeholder=\"описание\" class=\"comment\"/>";
 			tr2.appendChild(td2);
 			fields.appendChild(tr2);
 
@@ -746,6 +960,7 @@
 		$(one_block).find('.chk_register').attr('name', 'item[' + item_id_counter + '][chk_register]');
 		$(one_block).find('.chk_new').attr('name', 'item[' + item_id_counter + '][chk_new]');
 		$(one_block).find('.comment').attr('name', 'item[' + item_id_counter + '][comment]');
+        $(one_block).find('.comment').attr('id', 'item' + item_id_counter);
 
 		item_id_counter++;
 	}
@@ -765,21 +980,166 @@
         str2=names;
        var inp_type=$(element).parents('.one_block').find('.type_dev');
        // console.log(inp_type);
-        $(inp_type).val(str2);
+        //$(inp_type).val(str2);
 
     }
 
     function SelChan3(element) {
 
-	    alert(2222);
+	  //  alert(2222);
         var str2='';
         names = $(element).find('option:selected').text();
         str2=names;
         var inp_type=$(element).parents('.one_block').find('.type_dev');
         // console.log(inp_type);
-        $(inp_type).val(str2);
+       // $(inp_type).val(str2);
 
     }
+
+
+    $('#popu1').click(function () {
+
+        var line;
+        line='';
+
+       var j= item_id_counter;
+
+        for  (var i = 0; i < j; i++) {
+
+            var k = i+1;
+
+
+            line = line + '\r\n'+'Устройство № ' + k;
+             // alert(line);
+
+            var vitem = 'item_' + i;
+
+
+            var inp_type = $('#' + vitem).find('.pname');
+
+            var names_type = $(inp_type).find('option:selected').text();
+
+            //alert(names_type);
+
+            line = line + '\r\n' + 'Тип устройства: ' + names_type;
+
+            //alert(line);
+
+            var vitem2 = 'item' + i;
+            var names_com2 = document.getElementById(vitem2).value;
+
+            line = line + '\r\n' + "Комментарий к устройству: " + names_com2;
+
+            if (names_type =="Другое оборудование") {
+
+                var opt_com = 'item_com_' + i;
+                var opt_com1 = document.getElementsByClassName(opt_com)[0].value;
+                line = line + '\r\n' + "Наименование: " + opt_com1;
+                alert(opt_com1);
+
+                var opt_com_desc = 'item_desc_' + i;
+                var pt_com_desc1 = document.getElementsByClassName(opt_com_desc)[0].value;
+                line = line + '\r\n' + "Описание: " + pt_com_desc1;
+                //alert(opt_com1);
+
+
+
+            }
+
+
+
+            //если єлементов больше 1
+
+            var leng_opt=0;
+            leng_opt = $('#' + vitem).find('.select2-hidden-accessible').length;
+            //alert(leng_opt);
+
+            if (leng_opt > 1) {
+
+               // alert(2)
+                var inp_opt = $('#' + vitem).find('.select2-hidden-accessible')[0];
+
+                var names_opt1 = $(inp_opt).find('option:selected').text();
+
+                line = line + '\r\n' + "Дополнительная опция 1: " + names_opt1;
+
+                //alert(names_opt1);
+
+                // line=line+'\r\n'+"Дополнительные опции: " +names_opt;
+
+
+                var opt_com = 'item_com_' + i;
+
+                //var opt_com1= document.getElementById(opt_com).value;
+
+                var opt_com1 = document.getElementsByClassName(opt_com)[0].value;
+                line = line + '\r\n' + "Комментарий к доп опции 1: " + opt_com1;
+                //alert(opt_com1);
+
+                var inp_opt = $('#' + vitem).find('.select2-hidden-accessible')[1];
+
+                var names_opt1 = $(inp_opt).find('option:selected').text();
+                line = line + '\r\n' + "Дополнительная опция 2: " + names_opt1;
+
+                //alert(names_opt1);
+
+                // line=line+'\r\n'+"Дополнительные опции: " +names_opt;
+
+
+                var opt_com = 'item_com_' + i;
+                var opt_com1 = document.getElementsByClassName(opt_com)[1].value;
+                // alert(opt_com1);
+                line = line + '\r\n' + "Комментарий к доп опции 2: " + opt_com1;
+
+
+            }
+            if (leng_opt == 1) {
+                 //alert(1)
+
+                var inp_opt = $('#' + vitem).find('.select2-hidden-accessible');
+
+                var names_opt = $(inp_opt).find('option:selected').text();
+
+                //alert(names_opt);
+
+                line = line + '\r\n' + "Дополнительная опция: " + names_opt;
+
+
+                var opt_com = 'item_com_' + i;
+                var opt_com1 = document.getElementsByClassName(opt_com)[0].value;
+               // alert(opt_com1);
+                line = line + '\r\n' + "Комментарий к доп опции: " + opt_com1;
+            }
+            if (leng_opt == 0) {
+               // alert(0);
+            }
+
+
+            line = line + '\r\n' + "=============================" ;
+
+        }
+
+        document.getElementById("texta").value = line;
+
+        //alert(line);
+
+        //========================//
+
+//        $('#type_v_0').val(names_type);
+//        $('#type_com_0').val(names_com2);
+//        $('#type_opt_0').val(names_opt);
+//        $('#type_opt_com_0').val(opt_com1);
+
+        //type_opt_com_0
+
+
+
+
+    });
+
+
+
+
 
 
     window.DelUvv = DelUvv;
@@ -788,6 +1148,66 @@
 	createClone();
 //   changeEvent(el);
 </script>
+
+<script>
+//   / * dm-modal.js v1.2
+//    *
+//    * Надёжный и функциональный плагин jQuery для вывода
+//    * модальных(всплывающих окон) на страницах сайтов;
+//    * возможность подключения в работу сразу нескольких модальных
+//    * блоков на одной странице, размер окон устанавливается непосредственно
+//    * в href атрибуте ссылок на вызов;
+//    *
+
+
+    $(document).ready(function(){
+        //При нажатии на ссылку с классом poplight и href атрибута тега <a> с #
+        $('#popu1').click(function() {
+            //  alert(22);
+            var popID = $(this).attr('rel'); //получаем имя окна, важно не забывать при добавлении новых менять имя в атрибуте rel ссылки
+            var popURL = $(this).attr('href'); //получаем размер из href атрибута ссылки
+
+            //запрос и переменные из href url
+            var query= popURL.split('?');
+            var dim= query[1].split('&');
+            var popWidth = dim[0].split('=')[1]; //первое значение строки запроса
+
+            //Fade in the Popup and add close button
+            $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" title="Закрыть" class="close"></a>');
+
+            //Определяем маржу(запас) для выравнивания по центру (по вертикали и горизонтали) - мы добавляем 80 к высоте / ширине с учетом отступов + ширина рамки определённые в css
+            var popMargTop = ($('#' + popID).height() + 80) / 2;
+            var popMargLeft = ($('#' + popID).width() + 80) / 2;
+
+            //Устанавливаем величину отступа
+            $('#' + popID).css({
+                'margin-top' : -popMargTop,
+                'margin-left' : -popMargLeft
+            });
+
+            //Добавляем полупрозрачный фон затемнения
+            $('body').append('<div id="fade"></div>'); //div контейнер будет прописан перед тегом </body>.
+            $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //полупрозрачность слоя, фильтр для тупого IE
+
+            return false;
+        });
+
+        //Закрываем окно и фон затемнения
+        $(document).on('click', 'a.close, #fade', function() { //закрытие по клику вне окна, т.е. по фону...
+            $('#fade , .popup_block').fadeOut(function() {
+                $('#fade, a.close').remove();  //плавно исчезают
+            });
+            return false;
+        });
+
+    });
+
+</script>
+
+
+
+
+
 
 
 </body>

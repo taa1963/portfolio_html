@@ -7,21 +7,59 @@ header('Content-type: text/plain; charset=utf-8');
 
 //print_r(iconv("UTF-8", "UTF-8", $_POST));
 
-//$items = $_POST['item'];
+$items = $_POST['item'];
 
-//$result = '';
+$result = '';
+foreach ($items as $item) {
+    $line = 'Тип устройства: ' . $item['type'];
 
+
+    if (isset($item['comment'])) {
+        isset($item['comment']) && !empty($item['comment']);
+        $comment = substr(htmlspecialchars(trim($item['comment'])), 0, 1000);
+
+        $line .= ' - ' . 'Комментарий к устройству: ' . $comment;
+    }
+
+
+
+
+    if (isset($item['detector'])) {
+        foreach ($item['detector'] as $detector) {
+            $line .= ' - ' . 'Дополнительные опции: ' . $detector;
+        }
+    }
+
+
+    if (isset($item['custom_variant'])) {
+        isset($item['custom_variant']) && !empty($item['custom_variant']);
+        $custom_variant = substr(htmlspecialchars(trim($item['custom_variant'])), 0, 1000);
+
+        $line .= ' - ' . 'Дополнение к опциям: ' . $custom_variant;
+    }
+
+
+
+
+
+
+
+    $result .= $line . "\n";
+}
 
 //echo $result;
 
 
+
+
+
+
+
 if (
-    isset($_POST['result']) && !empty($_POST['result']) &&
     isset($_POST['email']) && !empty($_POST['email']) &&
     isset($_POST['phone']) && !empty($_POST['phone'])) {
     $name1 = substr(htmlspecialchars(trim($_POST['email'])), 0, 1000);
     $telefon = substr(htmlspecialchars(trim($_POST['phone'])), 0, 100);
-    $result = substr(htmlspecialchars(trim($_POST['result'])), 0, 1000000);
 
 
         //$to = 'clublaser@mail.ru';

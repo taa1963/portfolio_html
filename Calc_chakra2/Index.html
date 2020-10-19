@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор чакр</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор чакр°">
+
+    <link href="css/Calc_style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="calculator" id="calculator">
+
+
+    <div class="calculator_date" id="calculator_dates">
+
+            <div class="calculator_date_block" >
+            <h4>Введите дату рождения</h4>
+
+            <select class="select-data" name="day" id="day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+
+            <select class="select-data" name="month" id="month">
+                <option value="1">Января</option>
+                <option value="2">Февраля</option>
+                <option value="3">Марта</option>
+                <option value="4">Апреля</option>
+                <option value="5">Мая</option>
+                <option value="6">Июня</option>
+                <option value="7">Июля</option>
+                <option value="8">Августа</option>
+                <option value="9">Сентября</option>
+                <option value="10">Октября</option>
+                <option value="11">Ноября</option>
+                <option value="12">Декабря</option>
+
+            </select>
+
+            <input type="number" class="year" id="year" min="0" max="3000" value="" placeholder="&nbsp;&nbsp;Введите год">
+
+                <button class="btn-calc" id="btn-calc">Смотреть результаты</button>
+    </div>
+
+</div>
+
+
+    <div class="row">
+        <div class="calculator_block2" id="calculator_block2">
+
+
+            <div class="diagrama" id="calculator_diagram" >
+
+                <img src="img/calc_diagram.png" class="cimg">
+
+                <div class="diagv" id="diag1"> </div>
+
+                <div class="diagv" id="diag2"> </div>
+
+                <div class="diagv" id="diag3"> </div>
+
+                <div class="diagv" id="diag4"> </div>
+
+                <div class="diagv" id="diag5"> </div>
+
+                <div class="diagv" id="diag6"> </div>
+
+                <div class="diagv" id="diag7"> </div>
+
+                <div class="diagv" id="diag8"> </div>
+
+                <div class="diagv" id="diag9"> </div>
+
+                <div class="diagv" id="diag10"> </div>
+
+                <div class="diagv" id="diag11"> </div>
+
+                <div class="diagv" id="diag12"> </div>
+
+                <div class="diagv" id="diag13"> </div>
+
+                <div class="diagv" id="diag14"> </div>
+
+                <div class="diagv" id="diag15"> </div>
+
+                <div class="diagv" id="diag16"> </div>
+
+                <div class="diagv" id="diag17"> </div>
+
+                <div class="diagv" id="diag18"> </div>
+
+                <div class="diagv" id="diag19"> </div>
+
+                <div class="diagv" id="diag20"> </div>
+
+                <div class="diagv" id="diag21"> </div>
+
+                <div class="diagv" id="diag22"> </div>
+
+                <div class="diagv" id="diag23"> </div>
+
+                <div class="diagv" id="diag24"> </div>
+
+                <div class="diagv" id="diag25"> </div>
+
+                <div class="diagv" id="diag26"> </div>
+
+                <div class="diagv" id="diag27"> </div>
+
+                <div class="diagv" id="diag28"> </div>
+
+                <div class="diagv" id="diag29"> </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="calculator_block3" id="calculator_block3">
+
+        <table class="table_calc"  id="table_calc"   >
+            <tr style="background-color: #eaeaeb; ">
+                <td style="border-top: none;"> </td>
+                <td style="border-top: none;">  </td>
+                <td  style="border-top: none;">  </td>
+                <td  style="width:40%;border-top: none;">Названия чакр </td>
+            </tr>
+
+          <tr style="background-color: #cb65ff;">
+              <td style="border-top: none;"> <span class="tabl_t" id="dayt"></span></td>
+              <td style="border-top: none;"> <span class="tabl_t" id="montht"></span> </td>
+              <td  style="border-top: none;">  <span class="tabl_t" id="dmt"></span> </td>
+              <td  style="width:40%;border-top: none;">Сахасрара </td>
+
+          </tr>
+
+            <tr style="background-color: #39f;">
+            <td style="border-top: none;"><span class="tabl_t" id="tabl21"></span> </td>
+            <td style="border-top: none;"> <span class="tabl_t" id="tabl22"></span> </td>
+            <td  style="border-top: none;"> <span class="tabl_t" id="tabl23"></span>  </td>
+            <td  style="width:40%;border-top: none;">Аджна </td>
+        </tr>
+
+            <tr style="background-color: #99cbff;">
+                <td style="border-top: none;"><span class="tabl_t" id="tabl31"></span> </td>
+                <td style="border-top: none;"><span class="tabl_t" id="tabl32"></span>  </td>
+                <td  style="border-top: none;"> <span class="tabl_t" id="tabl33"></span>  </td>
+                <td  style="width:40%;border-top: none;">Вишудха </td>
+            </tr>
+
+            <tr style="background-color: #65ff65;">
+                <td style="border-top: none;"><span class="tabl_t" id="tabl41"></span> </td>
+                <td style="border-top: none;"><span class="tabl_t" id="tabl42"></span>  </td>
+                <td  style="border-top: none;"><span class="tabl_t" id="tabl43"></span>   </td>
+                <td  style="width:40%;border-top: none;">Анахата </td>
+            </tr>
+
+            <tr style="background-color:#fefdae;">
+            <td style="border-top: none;"><span class="tabl_t" id="tabl51"></span> </td>
+            <td style="border-top: none;"> <span class="tabl_t" id="tabl52"></span> </td>
+            <td  style="border-top: none;"> <span class="tabl_t" id="tabl53"></span>  </td>
+            <td  style="width:40%;border-top: none;">Манипура </td>
+        </tr>
+
+            <tr style="background-color:#ffcb99;">
+                <td style="border-top: none;"><span class="tabl_t" id="tabl61"></span>  </td>
+                <td style="border-top: none;"> <span class="tabl_t" id="tabl62"></span>  </td>
+                <td  style="border-top: none;"> <span class="tabl_t" id="tabl63"></span>   </td>
+                <td  style="width:40%;border-top: none;">Свадхистана </td>
+            </tr>
+
+            <tr style="background-color:#ff6565;">
+                <td style="border-top: none;"><span class="tabl_t" id="tabl71"></span>  </td>
+                <td style="border-top: none;"> <span class="tabl_t" id="tabl72"></span>  </td>
+                <td  style="border-top: none;"> <span class="tabl_t" id="tabl73"></span>   </td>
+                <td  style="width:40%;border-top: none;"> Муладхара </td>
+            </tr>
+
+
+
+        </table>
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
+<!--<script src="js/html2canvas.js"></script>-->
+<!--<script src="js/pdfmake.min.js"></script>-->
+<!--<script src="js/vfs_fonts.js"></script>-->
+<script src="js/scriptsCalc.js"></script>
+
+
+
+
+
+</body>
+</html>
+

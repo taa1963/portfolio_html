@@ -1,0 +1,294 @@
+/*		Описание блока калькулятора и его компонент		*/
+
+.calculator{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    /*width: 50%;*/
+    height: auto;
+    margin: 0 auto;
+}
+
+.select-data{
+    background-color: #cccccc;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    }
+
+.year{
+    margin-bottom: 10px;
+    min-width: 100px;
+    width: auto;
+}
+
+#calculator_date{
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.col-center{
+    text-align: center!important;
+}
+
+.calculator_date_block{
+    display: block;
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.btn-calc{
+    float: right;
+    margin: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.calculator_block2{
+
+}
+
+#calculator_diagram{
+    display: block;
+    background-color: #ffffff;
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+   }
+
+  .cimg{
+    width: 500px;
+   }
+
+  #diag1{
+    top: 0.8%;  left: 42%;
+  }
+ #diag2{
+    top: 45.8%; left: -3%;
+  }
+
+  #diag3{
+    top: 45.8%;  left: 88%;
+  }
+
+  #diag4{
+    top: 91%;  left: 42%;
+  }
+
+  #diag5{
+    top: 14%;   left: 11%;
+  }
+  #diag6{
+    top:14%;   left: 74%;
+  }
+  #diag7{
+    top: 78%;  left: 73.5%;
+  }
+  #diag8{
+    top: 78%;  left: 11.5%;
+  }
+
+  #diag9{
+    top: 43%;
+    left: 42.5%;
+  }
+
+  #diag10{
+    top: 48%;
+    left: 42.5%;
+  }
+
+  #diag11{
+      top: 17%;
+      left: 29.5%;
+  }
+
+  #diag12{
+      top: 34%;
+      left: 13%;
+  }
+ #diag13{
+    top: 17%;
+    left: 55%;
+ }
+
+  #diag14{
+    top: 33%;
+    left: 72%;
+  }
+
+  #diag15{
+    top: 58%;
+    left: 72%;
+  }
+
+  #diag16{
+    top: 75%;
+    left: 55%;
+  }
+
+  #diag17{
+    top: 75%;
+    left:30%;
+  }
+
+  #diag18{
+    top: 58%;
+    left:13%;
+  }
+
+ #diag19{
+    top: 16%;
+    left:43%;
+ }
+  #diag20{
+    top: 46%;
+    left:71%;
+   }
+
+  #diag21{
+    top: 75%;
+    left:42%;
+   }
+
+   #diag22{
+    top: 45%;
+    left:12%;
+   }
+
+  #diag23{
+    top: 31%;
+    left:27%;
+  }
+  #diag24{
+    top: 60%;
+    left:57%;
+   }
+  #diag25{
+    top: 10%;
+    left:42%;
+   }
+
+  #diag26{
+      top: 46%;
+      left: 78%;
+   }
+
+  #diag27{
+    top: 82%;
+    left: 42%;
+   }
+
+   #diag28{
+    top: 45%;
+    left: 5%;
+   }
+
+  #diag29{
+    top: 64%;
+    left: 60%;
+  }
+
+.diagv{
+    position: absolute;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-top: 5px;  /* half of your element's height */
+    margin-left: 25px; /* half of your element's width */
+
+}
+
+
+.calculator_block3{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+     margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.table_calc{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    /*border: 1px solid #ddd;*/
+}
+
+.tabl_t{
+    display: block;
+    margin: 0 auto;text-align: center;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+
+@media only screen  and (max-width: 1028px) {
+    .btn-calc{
+        float: left;
+        margin: 0 auto;
+    }
+
+}
+
+
+@media only screen  and (max-width: 500px) {
+    #calculator_diagram{
+        display: block;
+        background-color: #ffffff;
+        width: 300px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .cimg{
+        width: 300px;
+    }
+
+
+
+    .diagv{
+        position: absolute;
+        overflow: hidden;
+        width: 1em;
+        height: 1em;
+        font-size: 1em;
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+        margin-top: 0px;
+        margin-left: 14px;
+
+    }
+
+
+}

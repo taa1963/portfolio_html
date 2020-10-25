@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор стекол</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор стекол">
+
+
+
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+
+   
+
+</head>
+<body>
+
+
+
+
+
+<div class="container">
+
+     <div class="calculator" id="calculator">
+    <h1>Калькулятор лестничного ограждения из стекла</h1>
+
+    <div class="row">
+
+            <div class="calculator_types" >
+            <h2>Выберите форму  стекол</h2>
+
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="calculator_type" >
+                    <p class="type_d">Прямоугольники</p>
+                    <input type="checkbox" class="type" name="type" id="type1" value="1">
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="calculator_type" >
+                    <p class="type_d">Ромбы</p>
+                    <input type="checkbox" class="type" name="type" id="type2" value="2" >
+                </div>
+            </div>
+
+
+
+        </div>
+
+            <div class="calculator_typesf" >
+                     <div class="line"></div>
+
+                     <h2>Выберите тип вырезов</h2>
+
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                         <div class="calculator_typef" >
+                             <p class="type_d">без отверстий и вырезов</p>
+                             <input type="radio" class="type" name="typef" id="typef1" value="1">
+                         </div>
+                     </div>
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                         <div class="calculator_typef" >
+                             <p class="type_d">с отверстиями</p>
+                             <input type="radio" class="type" name="typef" id="typef2" value="2">
+                         </div>
+                     </div>
+                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                         <div class="calculator_typef" >
+                             <p class="type_d">с отверстиями и вырезами</p>
+                             <input type="radio" class="type" name="typef" id="typef3" value="3">
+                         </div>
+                     </div>
+
+
+
+                 </div>
+
+            <div class="calculator_typest" >
+        <div class="line"></div>
+
+        <h2>Выберите толщину стекла</h2>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="calculator_typet" id="calculator_typet">
+
+
+
+
+
+            </div>
+        </div>
+        <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">-->
+        <!--<div class="calculator_typef" >-->
+        <!--<p class="type_d">Цена руб./кв.м </p>-->
+        <!--<span class="thicknes" id ="thicknes"></span>-->
+
+        <!--&lt;!&ndash;<input type="radio" class="type" name="typef" id="typef222" value="2">&ndash;&gt;-->
+        <!--</div>-->
+        <!--</div>-->
+
+
+
+
+    </div>
+
+            <div class="calculator_shsts" >
+            <div class="line"></div>
+
+            <h2>Укажите размеры стекла(стекол)</h2>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="shst" id="shst">
+                    <table class="table_uv"  id="table_uv"  style="width:100%" >
+                        <tr style="background-color: #005697;">
+                            <th style="width:20%;border-top: none;">Номер </th>
+                            <th style="width:20%;border-top: none;">Длинна <br> м </th>
+                            <th  style="width:20%;border-top: none;">Ширина <br>м  </th>
+                            <th  style="width:20%;border-top: none;">Площадь <br>кв.м.  </th>
+                            <th  style="width:20%;border-top: none;"> Действие </th>
+
+                        </tr>
+
+
+                    </table>
+
+                    <button id="but_add">Добавить</button>
+
+
+                   <span class="farns"> Фарнитура нужна?  <input type="checkbox" id="farn" class="farn"></span>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="calculator_farn" id="farns1">
+            <div class="line"></div>
+            <h2>Укажите количество точечных держателей </h2>
+            <p> k084-4 точечный держатель стекла к стене Ø36x40, регулируемый, под стекло 8-12 мм. Минимальное количесво на 1 стекло 6 штук</p>
+
+            <span class="farns"> Количество держателей  <input type="number" id="Nder" class="Nder" value="6" maxlength="6" ></span>
+
+        </div>
+
+
+        <div class="calculator_itog" id="itog1">
+            <div class="line"></div>
+            <h2>Результаты выбора </h2>
+
+            <p> Общая площадь стекол &nbsp; <span id="StsS"></span> &nbsp; кв.м.  </p>
+
+            <p> Цена заказа &nbsp;<span id="ZenaS"></span>&nbsp; руб.  </p>
+
+            <p> Цена кв.м. стекла&nbsp; <span id="ZenaM"></span>&nbsp;руб./кв.м.   </p>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+</div>
+	
+
+
+
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scriptsCalc.js"></script>
+<script src="js/data.js"></script>
+
+
+
+
+</body>
+</html>

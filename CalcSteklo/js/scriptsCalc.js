@@ -129,7 +129,7 @@ $(".calculator_types input").on("click", function() {
 
         var newSection = $('<tr class="block_uv"></tr>');
         newSection.html(
-            '<td style="width:20%;"> <span class="num">Name</span></td>\n <td style="width:20%;">\n <input type="text" class="dlokna" value="0"  maxlength="6" min="0" oninput="Sokna(this)">\n</td>\n <td style="width:20%;"> <input type="text" class="lokna" value="0" valueasnumber="" maxlength="6" oninput="Sokna(this)"></td>\n <td  style="width:20%"> <input type="text" class="soknav"  value="0" readonly="readonly"> </td>\n <td  style="width:25%"><button class="but_del" onclick="DelOkna(this); ">Удалить объект</button>  </td>'
+            '<td style="width:20%;"> <span class="num">Name</span></td>\n <td style="width:20%;">\n <input type="text" class="dlokna" value="0"  maxlength="6" min="0" oninput="Sokna(this)">\n</td>\n <td style="width:20%;"> <input type="text" class="lokna" value="0"  maxlength="6" oninput="Sokna(this)"></td>\n <td  style="width:20%"> <input type="text" class="soknav"  value="0" oninput="SoknaS(this)" > </td>\n <td  style="width:25%"><button class="but_del" onclick="DelOkna(this); ">Удалить объект</button>  </td>'
         );
         $('#table_uv').append(newSection);
 
@@ -203,6 +203,41 @@ $(".calculator_types input").on("click", function() {
     }
     window.Sokna = Sokna;
 
+    //=======  Вычисление площади одного окна    =====//
+    function SoknaS(element){
+        //===== закрываем ввод в полях окна  цифр и отрицательных значений, запятую меняем на точку   =====//
+        var block1 = $(element).parents('.block_uv').find('.soknav');
+        $(block1).val($(block1).val().replace(/\,/g, '.'));
+        $(block1).val($(block1).val().replace(
+            /(?=(\d+\.\d{2})).+|(\.(?=\.))|([^\.\d])|(^\D)/gi, '$1'));
+
+        var soknavP=parseFloat($(block1).val());
+
+        // alert(soknavP);
+
+
+
+
+
+        var lokna=soknavP/2;
+
+
+        var Pr= Number.isNaN(lokna);
+        if (Pr==true){
+            lokna=0;
+        }
+        lokna=lokna.toFixed(2);
+        var block3 = $(element).parents('.block_uv');
+        block3.find('.lokna').val(lokna);
+        block3.find('.dlokna').val(lokna);
+
+
+        SALL();
+    }
+    window.SoknaS = SoknaS;
+
+
+
   //=======  добавление нового окна    =====//
     $('#but_add').click(function () {
         ADST();
@@ -262,13 +297,15 @@ $(".calculator_types input").on("click", function() {
         if ($("#farn").is(':checked')){
             var Nd=document.getElementById('Nder').value;
             var Ns= document.getElementsByClassName('block_uv').length;
-            var dZ=Nd*Zder;
-            Zena=Zena+dZ;
+            var ZFarn=Nd*Zder;
+            //Zena=Zena+dZ;
         }
         Zena=Zena*Naz;
         var ZenaR=Zena;
         var Sv=Sall;
         Sv=Sv.toFixed(2);
+
+
         $('#StsS').text(Sv);
 
         Zena=Zena.toFixed(2);
@@ -280,6 +317,9 @@ $(".calculator_types input").on("click", function() {
         Zm=Zm.toFixed(2);
         Zm=new Intl.NumberFormat('ru-RU').format(Zm);
         $('#ZenaM').text(Zm);
+
+        ZFarn=ZFarn.toFixed(2);
+        $('#ZenaF').text(ZFarn);
     }
 
 

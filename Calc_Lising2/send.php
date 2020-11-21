@@ -50,7 +50,7 @@ if (
         //$to = 'clublaser@mail.ru';
     $to = 'alexandr.tupichenkov@yandex.ru';
     //$to = 'info@partwork.ru';
-    $title = 'Лизинг';
+    $title = 'Лизинг ';
     $message = "
         Был получен заказ с сайта от:
         Имя:$name

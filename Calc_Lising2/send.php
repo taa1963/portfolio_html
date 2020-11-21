@@ -16,7 +16,7 @@ header('Content-type: text/plain; charset=utf-8');
 
 
 if (
-    isset($_POST['array']) && !empty($_POST['array']) &&
+    isset($_POST['msg']) && !empty($_POST['msg']) &&
     isset($_POST['name']) && !empty($_POST['name']) &&
     isset($_POST['email']) && !empty($_POST['email']) &&
     isset($_POST['lisingtupe']) && !empty($_POST['lisingtupe']) &&
@@ -31,16 +31,16 @@ if (
     $Slising = substr(htmlspecialchars(trim($_POST['Slising'])), 0, 10000000000);
     $dlising = substr(htmlspecialchars(trim($_POST['dlising'])), 0, 10000000000);
     $smotch = substr(htmlspecialchars(trim($_POST['smotch'])), 0, 10000000000);
-    $array = substr(htmlspecialchars(trim($_POST['array'])), 0, 100000000000000000);
+    $msg = substr(htmlspecialchars(trim($_POST['msg'])), 0, 100000000000000000);
 
 
     $tabl= '<table>';
-    for ($i=0; $i<count($array); $i++)
+    for ($i=0; $i<count($msg); $i++)
     {
         $tabl='<tr>';
         for ($j=1; $j<3; $j++)
         {
-            $tabl='<td>'.$array[$i][$j].'</td>';
+            $tabl='<td>'.$msg[$i][$j].'</td>';
         }
         $tabl='</tr>';
     }

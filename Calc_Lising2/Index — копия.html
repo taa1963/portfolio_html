@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор лизинга</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор лизинга°">
+
+    <style type="text/css">
+
+        body{
+            background-color: #cccccc;
+        }
+        .popup-fade {
+            display: none;
+        }
+        .popup-fade:before {
+            content: '';
+            background: #000;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            z-index: 9999;
+        }
+        .popup {
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            padding: 20px;
+            width: 50em;
+            margin-left: -20em;
+            background: #fff;
+            border: 1px solid orange;
+            border-radius: 4px;
+            z-index: 99999;
+            opacity: 1;
+            height: 400px;
+            overflow:scroll;
+        }
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #0056b3;
+        }
+
+        /*		Описание блока калькулятора и его компонент		*/
+
+        .calculator{
+            display: block;
+            position: relative;
+            overflow: hidden;
+            width: 90%;
+            height: auto;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .calculator_titel{
+            display: block;
+            background: #ffde0a;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+
+        h2{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 1.4;
+            letter-spacing: -0.05em;
+            text-align: center;
+        }
+        .calculator_date{
+            display: block;
+            margin-bottom: 20px;
+            width: 100%;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculator_types{
+            display: block;
+            margin: 0 auto;
+        }
+
+        .calculator p{
+            color: #181818;
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 1.74;
+            margin-bottom: 20px;
+        }
+
+        .calculator_types1{
+            display: block;
+            width: 68%;
+            border-right: 3px solid #e8e8e8;
+            float: left;
+        }
+        .calculator_types_block1{
+            display: block;
+            margin-left: 2em;
+        }
+
+        .calculator_types2{
+            display: block;
+            width: 30%;
+            float: left;
+        }
+
+        .calculator_types_block2{
+            display: block;
+            margin-left: 2em;
+        }
+
+        .select_types{
+            display: block;
+            width: 30%;
+            font-size: 16px;
+            line-height: 1.74
+
+        }
+
+        .type_lising{
+            display: block;
+            width: 70%;
+            font-size: 16px;
+            line-height: 1.74;
+            border: none;
+            border-bottom: 3px solid #e8e8e8;
+        }
+
+
+        input[type='number'] {
+            -moz-appearance:textfield;
+        }
+
+        input[type="number"]:hover,
+        input[type="number"]:focus {
+            -moz-appearance: number-input;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .cost_inp{
+            display: block;
+            width: 70%;
+        }
+
+        .cost_pol{
+            display: block;
+            width: 70%;
+        }
+
+        .cost1{
+            float: left;
+        }
+
+        .cost2{
+            float: right;
+        }
+
+        .btn-calc{
+            display: block;
+            margin: 0 auto;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            line-height: 1.2!important;
+            font-weight: 700;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            border-radius: 2.5em;
+            padding: 1.20em 2.5em;
+            background: #ffde0a;
+            border-color: transparent;
+            color: #333333!important;
+        }
+
+        .btn-calc:focus{
+            border: none;
+            border-radius: 2.5em;
+        }
+
+        .btn-calc:active{
+            border: none;
+            border-radius: 2.5em;
+        }
+
+        .calculator_itog_err{
+            display:none;
+            margin-bottom: 20px;
+        }
+
+        .calculator_itog_err p{
+            text-align: center;
+            color: red;
+        }
+
+
+        .calculator_itog{
+            display: block;
+            width: 100%;
+            min-height: 180em;
+            height: auto;
+        }
+
+        .itog_img{
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-top: 30px;
+        }
+
+        .active{
+            display: block;
+        }
+
+
+        .itog_table2{
+            display: block;
+            margin-top: 30px;
+        }
+
+        .block_uv{
+            text-align: left
+        }
+        .sel_num{
+            background:transparent ;
+            border: 0;
+        }
+
+        .sel_num2{
+            background:transparent ;
+            border: 0;
+        }
+
+        .sel_num3{
+            background:transparent ;
+            border: 0;
+        }
+        .s_num{
+            background:transparent ;
+            border: 0;
+        }
+        .s_num2{
+            background:transparent ;
+            border: 0;
+        }
+        .s_num3{
+            background:transparent ;
+            border: 0;
+        }
+
+        .itog_parag{
+            display: block;
+            width: 80%;
+            margin-top: 5em;
+        }
+
+        .itog_parag p{
+            color: #181818;
+            font-size: 1.2em;
+            font-weight: 200;
+            /*line-height: 1.74;*/
+            margin-bottom: 20px;
+        }
+
+        .itog_parag1{
+            display: block;
+            width: 60%;
+            font-size: 1em;
+            float: left;
+            text-align: left;
+        }
+        .itog_parag1 p{
+            font-size: 1em;
+        }
+
+        .itog_parag2{
+            display: block;
+            font-size: 1em;
+            width: 30%;
+            float: left;
+            text-align: left;
+        }
+
+        .itog_parag2 p{
+            font-size: 1em;
+        }
+        .itog_parag2 a{
+            font-size: 1em;
+            text-decoration:underline;
+            color: blue;
+        }
+        .itog_form{
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form1{
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+            border: 2px solid #000;
+        }
+        .form_inp{
+            display: block;
+            width: 60%;
+            margin: 0 auto;
+        }
+        #form1{
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .submit{
+            display: block;
+            margin: 0 auto;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            line-height: 1.2!important;
+            font-weight: 700;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            border-radius: 2.5em;
+            padding: 1.20em 2.5em;
+            background: blue;
+            border-color: transparent;
+            color: #ffffff;
+            margin-bottom: 20px;
+
+        }
+        .printpdflock{
+            display: block;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .buttonprn{
+            display: block;
+            margin: 0 auto;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            line-height: 1.2!important;
+            font-weight: 700;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            border-radius: 2.5em;
+            padding: 1.20em 2.5em;
+            background: blue;
+            border-color: transparent;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .popup-open{
+            text-decoration: none;
+        }
+
+        .param_mail1{
+            display: block;
+        }
+
+
+
+        @media only screen  and (max-width: 1028px) {
+            .popup {
+
+                top: 10%;
+                left: 40%;
+                padding: 20px;
+                width: 50em;
+                margin-left: -20em;
+                height: 200px;
+                overflow: scroll;
+            }
+
+        }
+        @media only screen  and (max-width:960px) {
+            .popup {
+
+                top: 10%;
+                left: 40%;
+                padding: 20px;
+                width: 40em;
+                margin-left: -20em;
+                height: 200px;
+                overflow: scroll;
+            }
+
+        }
+        @media only screen  and (max-width:760px) {
+            .popup {
+
+                top: 10%;
+                left: 50%;
+                padding: 20px;
+                width: 30em;
+                margin-left: -20em;
+                height: 200px;
+                overflow: scroll;
+            }
+        }
+        @media only screen  and (max-width:600px) {
+            .popup {
+
+                top: 10%;
+                left: 50%;
+                padding: 20px;
+                width: 25em;
+                margin-left: -15em;
+                height: 200px;
+                overflow: scroll;
+            }
+        }
+
+        @media only screen  and (max-width: 500px) {
+
+            .popup {
+                top: 10%;
+                left: 50%;
+                padding: 20px;
+                width: 20em;
+                margin-left: -12em;
+                height: 400px;
+                overflow: scroll;
+            }
+
+
+
+        }
+
+    </style>
+
+    <!--<link href="css/Calc_style.css" rel="stylesheet">-->
+
+    <script type="text/javascript">
+        function PrintElem(elem)
+        {
+            Popup($(elem).html());
+
+        }
+        function Popup(data)
+        {
+            var mywindow = window.open('', 'my div', 'height=400,width=600');
+            mywindow.document.write('<html><head><title>my div</title>');
+            /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+            mywindow.document.write('</head><body >');
+            mywindow.document.write(data);
+            mywindow.document.write('</body></html>');
+            mywindow.document.close(); // necessary for IE >= 10
+            mywindow.focus(); // necessary for IE >= 10
+            mywindow.print();
+            mywindow.close();
+
+            return true;
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div class="calculator" id="calculator">
+
+    <div class="calculator_titel" >
+        <h2>Онлайн калькулятор лизинга </h2>
+
+    </div>
+
+
+    <div class="calculator_date" id="calculator_dates">
+
+        <div class="calculator_block1" >
+           <div class="calculator_types1" >
+            <div class="calculator_types_block1" >
+
+                <p>Выбрать вид лизинга </p>
+
+                <select class="select_types" name="typel" id="typel">
+                    <option value="Грузовые автомобили">Грузовые автомобили</option>
+                    <option value="Легковые автомобили">Легковые автомобили</option>
+                    <option value="Спецтехника">Спецтехника</option>
+                    <option value="Недвижимость">Недвижимость</option>
+                    <option value="Оборудование">Оборудование</option>
+                </select>
+            </div>
+        </div>
+
+           <div class="calculator_types2" >
+            <div class="calculator_types_block2" >
+                <p> Вид лизинга </p>
+                <input type="text" class="type_lising" id="type2" readonly value="Грузовые автомобили">
+            </div>
+        </div>
+        </div>
+
+        <div class="calculator_block2" >
+        <div class="calculator_types1" >
+            <div class="calculator_types_block1" >
+                <p>Общая сумма договора лизинга с НДС, (руб.) </p>
+                <div class="cost_pol">
+                    <span class="cost1">500 000 руб</span>  <span class="cost2">10млн</span>
+                </div>
+                <input class="cost_inp" id="cost_inp" type="range" min="500000" max="100000000" step="10000"  value="500000" oninput="document.getElementById('cost').value=this.value">
+            </div>
+        </div>
+
+        <div class="calculator_types2" >
+            <div class="calculator_types_block2" >
+                <p> Сумма договора </p>
+                <input type="number" class="type_lising" id="cost"  value="500000">
+            </div>
+        </div>
+    </div>
+
+        <div class="calculator_block3" >
+            <div class="calculator_types1" >
+                <div class="calculator_types_block1" >
+                    <p>Удорожание на весь срок лизинга с НДС, (руб.) </p>
+                    <div class="cost_pol">
+                        <span class="cost1">10 000 руб</span>  <span class="cost2">1 000 000 руб</span>
+                    </div>
+                    <input class="cost_inp" id="rise_inp" type="range" min="10000" max="1000000" step="10000"  value="10000" oninput="document.getElementById('rise').value=this.value">
+                </div>
+            </div>
+
+            <div class="calculator_types2" >
+                <div class="calculator_types_block2" >
+                    <p> Удорожание  лизинга </p>
+                    <input type="number" class="type_lising" id="rise"  value="10000">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="calculator_block4" >
+            <div class="calculator_types1" >
+                <div class="calculator_types_block1" >
+                    <p>Размер ежемесячного платежа с НДС, (руб):  </p>
+                    <div class="cost_pol">
+                        <span class="cost1">10 000 руб</span>  <span class="cost2">10000 000 руб</span>
+                    </div>
+                    <input class="cost_inp" id="payment_inp" type="range" min="10000" max="1000000" step="1"  value="10000" oninput="document.getElementById('payment').value=this.value">
+                </div>
+            </div>
+
+            <div class="calculator_types2" >
+                <div class="calculator_types_block2" >
+                    <p> Размер ежемесячного платежа </p>
+                    <input type="number" class="type_lising" id="payment"  value="10000">
+                </div>
+            </div>
+        </div>
+</div>
+
+
+      <a class="popup-open"  href="#?w=700" rel="popup_contact2"  id="popu1">   <button class="btn-calc" id="btn-calc">Препросмотр</button></a>
+
+    <!--<div class="calculator_itog_err">-->
+        <!--<p>Некоректно введены данные. Срок лизинга больше 10 лет. Увеличте размер ежемесячного платежа</p>-->
+
+    <!--</div>-->
+
+    <div class="popup-fade">
+        <div class="popup">
+            <a class="popup-close" href="#">Закрыть</a>
+
+
+
+                 <div class="calculator_itog">
+
+        <div class="calculator_itog_print" id="calculator_itog_print">
+
+        <img src="img/fon.PNG" class="itog_img" alt="fon">
+
+        <table class="table_calc1"  id="table_calc1" style="border-top: none;width: 70%;"   >
+
+        <tr style="background-color: #ffffff; ">
+        <td style="border-top: none;;width: 70%;">Вид лизинга </td>
+        <td style="border-top: none;width: 30%;"> <span class="tabl_t" id="type"></span> </td>
+
+
+        </tr>
+        <tr style="background-color: #ffffff;">
+        <td style="border-top: none;width: 70%;"> Стоимость предмета лизинга, включая НДС </td>
+        <td style="border-top: none;width:30%"> <span class="tabl_t" id="prise"></span> </td>
+        </tr>
+
+
+
+            <tr style="background-color: #ffffff;">
+                <td style="border-top: none;width: 70%;">Валюта договора лизинга </td>
+                <td style="border-top: none;width:30%"> рубли </td>
+            </tr>
+
+
+            <tr style="background-color: #ffffff;">
+                <td style="border-top: none;width: 70%;"> Аванс лизингополучателя </td>
+                <td style="border-top: none;width:30%"> <span class="tabl_t" id="avanspr"></span> </td>
+            </tr>
+
+            <tr style="background-color: #ffffff;">
+                <td style="border-top: none;width: 70%;">Сумма авансового платежа </td>
+                <td style="border-top: none;width:30%"> <span class="tabl_t" id="Savanspr"></span> </td>
+            </tr>
+
+            <tr style="background-color: #ffffff;">
+                <td style="border-top: none;width: 70%;">Срок лизинга, мес </td>
+                <td style="border-top: none;width:30%"> <span class="tabl_t" id="Nlis"></span> </td>
+            </tr>
+
+            <tr style="background-color: #ffffff;">
+                <td style="border-top: none;width: 70%;">Балансосодержатель </td>
+                <td style="border-top: none;width:30%"> Лизингополучатель </td>
+            </tr>
+
+            <tr style="background-color: #ffffff;">
+                <td style="border-top: none;width: 70%;">Страхование </td>
+                <td style="border-top: none;width:30%"> Лизингополучатель </td>
+            </tr>
+
+
+       </table>
+
+        <div class="itog_table2">
+            <h4>График платежей (включая НДС)</h4>
+
+            <table class="table2" id="table_uv"  style="width: 80%;" >
+            <tr class="block_uv" style="background-color: #cccccc;">
+                <th style="border-right: 3px solid #ffffff;padding: 0 10px;">№ платежа </th>
+                <th style="border-right: 3px solid #ffffff;padding: 0 10px">Сумма платежа </th>
+                <th style="border-right: 3px solid #ffffff;padding: 0 10px">№ платежа </th>
+                <th style="border-right: 3px solid #ffffff;padding: 0 10px">Сумма платежа </th>
+                <th style="border-right: 3px solid #ffffff;padding: 0 10px;">№ платежа </th>
+                <th style="padding: 0 10px;">Сумма платежа </th>
+
+            </tr>
+
+             </table>
+        </div>
+
+
+        <div class="itog_parag">
+
+
+        <p>Данное предложение носит исключительно информационный характер и не является публичной офертой, определяемой положениями Ст. 437 (2) ГК РФ. Данные расчета могут быть изменены после предоставлением Вами полной информации.
+        </p>
+
+        <h4>Будем рады Вас видеть в числе наших клиентов! </h4>
+            <div class="itog_parag1">
+                <p>ООО "ЭКСПО-лизинг" <br> Адрес местонахождения: 111033, г. Москва, <br>
+                    ул. Золоторожский вал, д. 32, стр. 6, эт. 2, пом. 203В <br>
+                    ИНН 7703363177, КПП 772201001, ОГРН 1027703024733
+                </p>
+            </div>
+            <div class="itog_parag2">
+                <p>Тел.: +7(499) 110-72-71 </p>
+                <a>www.expoleasing.ru </a> <br>
+                <a> info@expoleasing.ru</a>
+            </div>
+
+        </div>
+            </div>
+
+        <div class="printpdflock">
+
+            <input class="buttonprn" type="button" value="Распечатать" onclick="PrintElem('#calculator_itog_print')" />
+
+
+           
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+
+        <div class="itog_form">
+        <!--<form id="form1" class="form1" action="send.php" method="post" >-->
+            <!--<form id="form1" class="form1"  method="post" >-->
+                <form id="form1" class="form1"   >
+
+            <div class="param_mail1" id="param_mail1">
+            <input type="text" name="lisingtupe" id="lisingtupe"  value="0"  />
+            <input type="text" name="Slising" id="Slising"  value="0"  />
+            <input type="text" name="dlising" id="dlising"  value="0"  />
+            <input type="text" name="smotch" id="smotch"  value="0"  />
+
+
+
+
+            </div>
+
+                <table class="table2" id="table_uv2"  style="width: 80%;" >
+                    <tr class="block_uv2" style="background-color: #cccccc;">
+                        <th style="border-right: 3px solid #ffffff;padding: 0 10px;">№ платежа </th>
+                        <th style="border-right: 3px solid #ffffff;padding: 0 10px">Сумма платежа </th>
+                        <th style="border-right: 3px solid #ffffff;padding: 0 10px">№ платежа </th>
+                        <th style="border-right: 3px solid #ffffff;padding: 0 10px">Сумма платежа </th>
+                        <th style="border-right: 3px solid #ffffff;padding: 0 10px;">№ платежа </th>
+                        <th style="padding: 0 10px;">Сумма платежа </th>
+
+                    </tr>
+
+                </table>
+
+
+
+            <div class="first">
+                <p> <input type="text" class="form_inp"  name="name" id="name" placeholder="Ваше имя*"  size="30" required />
+                </p>
+            </div>
+
+            <div class="first">
+                <p> <input type="text" class="form_inp"  name="email" id="email" placeholder="Ваш e-mail*"  size="30" required />
+                </p>
+            </div>
+            <div class="first">
+                <p> <input type="text" class="form_inp" name="telefon" id="telefon" placeholder="Ваш номер телефона*"  size="30" required />
+                </p>
+            </div>
+
+            <div class="form_button1" id="form_button1">
+                <button class="submit" name="insert"  id="btn" >ОТПРАВИТЬ</button>
+            </div>
+        </form>
+        </div>
+     </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function($) {
+        $('.popup-open').click(function() {
+            $('.popup-fade').fadeIn();
+            return false;
+        });
+
+        $('.popup-close').click(function() {
+            $(this).parents('.popup-fade').fadeOut();
+            return false;
+        });
+
+        $(document).keydown(function(e) {
+            if (e.keyCode === 27) {
+                e.stopPropagation();
+                $('.popup-fade').fadeOut();
+            }
+        });
+
+        $('.popup-fade').click(function(e) {
+            if ($(e.target).closest('.popup').length == 0) {
+                $(this).fadeOut();
+            }
+        });
+    });
+</script>
+
+<script>
+    var type_lising, cost_lising, rise_lising,  payment_lising,avanspr;
+    //cost_lising=0;
+    //rise_lising=0;
+    //payment_lising=0;
+    avanspr=20;
+//    type_lising=document.getElementById('typel').value;
+//    document.getElementById('lisingtupe').value=type_lising;
+//
+//    cost_lising=document.getElementById('cost').value;
+//    document.getElementById('Slising').value=cost_lising;
+//
+//    rise_lising=document.getElementById('rise').value;
+//    document.getElementById('dlising').value=rise_lising;
+//
+//    payment_lising=document.getElementById('payment').value;
+//    document.getElementById('smotch').value=payment_lising;
+
+    $(document).ready(function() {
+
+        $("#typel").change(function(){
+            type_lising=document.getElementById('typel').value;
+            document.getElementById('type2').value=type_lising;
+            document.getElementById('lisingtupe').value=type_lising;
+        });
+
+        $('#cost_inp').on('input',function(){
+            cost_lising=document.getElementById('cost').value;
+            document.getElementById('Slising').value=cost_lising;
+        });
+        // onchange
+
+        $('#cost').on('change', function () {
+            cost_lising=document.getElementById('cost').value;
+            if (cost_lising<=500000){
+                cost_lising=500000;
+            }
+            if (cost_lising>=100000000){
+                cost_lising=100000000;
+            }
+
+            cost_lising= Math.ceil(cost_lising/10000)*10000;
+            document.getElementById('cost').value=cost_lising;
+            document.getElementById('cost_inp').value=cost_lising;
+            document.getElementById('Slising').value=cost_lising;
+
+
+        });
+
+        $('#rise').on('change', function () {
+            rise_lising=document.getElementById('rise').value;
+            if (rise_lising<=10000){
+                rise_lising=10000;
+            }
+            if (rise_lising>=1000000){
+                rise_lising=1000000;
+            }
+
+            rise_lising= Math.ceil(rise_lising/10000)*10000;
+            document.getElementById('rise').value=rise_lising;
+            document.getElementById('rise_inp').value=rise_lising;
+            document.getElementById('dlising').value=rise_lising;
+
+        });
+        $('#rise_inp').on('input',function(){
+            rise_lising=document.getElementById('rise').value;
+            document.getElementById('dlising').value=rise_lising;
+        });
+
+        $('#payment').on('change', function () {
+            payment_lising=document.getElementById('payment').value;
+            if (payment_lising<=10000){
+                payment_lising=10000;
+            }
+            if (payment_lising>=10000000){
+                payment_lising=10000000;
+            }
+
+            //payment_lising= Math.ceil(payment_lising/10)*10;
+            document.getElementById('payment').value=payment_lising;
+            document.getElementById('payment_inp').value=payment_lising;
+            document.getElementById('smotch').value=payment_lising;
+        });
+
+        $('#payment_inp').on('input',function(){
+            payment_lising=document.getElementById('payment').value;
+            document.getElementById('smotch').value=payment_lising;
+        });
+
+        $('#btn-calc').on('click', function(){
+
+            cost_lising=document.getElementById('cost_inp').value;
+            cost_lising=+cost_lising;
+            rise_lising=document.getElementById('rise_inp').value;
+            rise_lising=+rise_lising;
+            payment_lising=document.getElementById('payment_inp').value;
+            payment_lising=+payment_lising;
+
+            var type= document.getElementById('type2').value;
+            $('#type').text(type);
+
+
+            var Slis=cost_lising;
+            $('#prise').text(Slis);
+
+            var avansprV=avanspr+'%';
+            $('#avanspr').text(avansprV);
+
+            var Savanspr=(Slis/100)*avanspr;
+            $('#Savanspr').text(Savanspr);
+
+            var Nmatch=(cost_lising+rise_lising-Savanspr)/payment_lising;
+            Nmatch=Math.ceil(Nmatch);
+            $('#Nlis').text(Nmatch);
+
+            //if (Nmatch>120) {
+            //    var block2=$('.calculator_itog_err');
+            //    block2.addClass('active');
+            //    var block3=$('.calculator_itog');
+            //    block3.removeClass('active');
+            //}
+            //
+            //if (Nmatch<=120) {
+            //    var block2=$('.calculator_itog_err');
+            //    block2.removeClass('active');
+            //    var block3=$('.calculator_itog');
+            //    block3.addClass('active');
+            //}
+
+            //==== удаление строк таблицы перед заполнением==..//
+            function delete_gameboard(){
+                var table = document.getElementById("table_uv");
+                var rowCount = table.rows.length;
+                for (var i=rowCount-1; i >=1; i--) {
+                    table.deleteRow(i);
+                }
+            }
+            delete_gameboard();
+            //var n=12;
+            var n= Math.ceil(Nmatch/3)*3;
+            var npl= Math.ceil(Nmatch/3)*3;
+            n= (n/3)+1;
+            //alert(n);
+            //==== создание  строк таблицы ==..//
+            for (var i = 1; i < n+1; i++) {	 var newSection = $('<tr class="block_uv"></tr>');
+                newSection.html(
+
+                        '<td >  <span  class="sel_num"></span> </td>\n <td> <span  class="s_num"></span> </td>\n><td >  <span  class="sel_num2"></span> </td>\n <td> <span  class="s_num2" > </span> </td>\n><td >  <span  class="sel_num3" ></span> </td>\n <td> <span class="s_num3" ></span> </td>\n>'
+                );
+                $('#table_uv').append(newSection);
+            }
+
+            var n2=n;
+            //alert(n2);
+            var sel_num = document.getElementsByClassName( "sel_num" ); // находим элементы с классом номер платежа
+            var s_num = document.getElementsByClassName( "s_num" ); // находим элементы с классом номер платежа
+            var sel_num2 = document.getElementsByClassName( "sel_num2" ); // находим элементы с классом номер платежа
+            var s_num2 = document.getElementsByClassName( "s_num2" ); // находим элементы с классом номер платежа
+            var sel_num3 = document.getElementsByClassName( "sel_num3" ); // находим элементы с классом номер платежа
+            var s_num3 = document.getElementsByClassName( "s_num3" ); // находим элементы с классом номер платежа
+
+            //==== заполнение  строк таблицы ==..//
+            for (var i = 0; i < n2; i++) {
+                var spl = 0;
+                // =====Заполнение номера платежа 1 графа======///
+                var num = i;
+                if (num == 0) {
+                    var num1 = 'Аванс';
+                    //  sel_num[0].value=num1; // Заполнение номера платежа 1 графа
+                    //  sel_num[0].text(num1); // Заполнение номера платежа 1 графа
+                    sel_num[0].innerHTML=num1; // Заполнение номера платежа 1 графа
+                    // innerHTML
+                    spl = Savanspr;
+                    s_num[0].innerHTML = spl; // Заполнение суммы платежа 1 графа
+                }
+                else {
+                    sel_num[i].innerHTML = num; // Заполнение номера платежа 1 графа
+                    // ====Заполнение суммы платежа 1 графа====//
+                    //var num = i + 1;
+                    spl = payment_lising;
+                    s_num[i].innerHTML = spl; // Заполнение суммы платежа 1 графа
+                }
+                // =====Заполнение номера платежа 2 графа======///
+                var num2=n2+i;
+                sel_num2[i].innerHTML = num2; // Заполнение номера платежа 2 графа
+
+                // ====Заполнение суммы платежа 2 графа====//
+                //var num = i + 1;
+                spl = payment_lising;
+                s_num2[i].innerHTML = spl; // Заполнение суммы платежа 2 графа
+
+                // =====Заполнение номера платежа 3 графа======///
+                var num3=2*n2+i;
+                sel_num3[i].innerHTML = num3; // Заполнение номера платежа 3 графа
+
+                // ====Заполнение суммы платежа 3 графа====//
+                //var num = i + 1;
+                spl = payment_lising;
+                s_num3[i].innerHTML = spl; // Заполнение суммы платежа 3 графа
+
+                if (num3== npl){
+                    sel_num3[i].innerHTML =  num3; // Заполнение номера платежа 3 графа последний платеж
+                    var Nsum=(cost_lising+rise_lising-Savanspr);
+                    var Nsum2=payment_lising*(Nmatch-1);
+                    var Nz=Nsum-Nsum2;
+
+                    s_num3[i].innerHTML = Nz; // Заполнение суммы платежа 3 графа
+                    //  alert(Nz);
+                    // alert(Nmatch);
+                }
+
+                if (num3== npl+1){
+                    sel_num3[i].innerHTML = 'Итого'; // Заполнение номера платежа 3 графа
+                    var Nsum=(cost_lising+rise_lising);
+                    s_num3[i].innerHTML = Nsum; // Заполнение суммы платежа 3 графа
+                }
+                if (num3>npl+1){
+                    sel_num3[i].innerHTML = ''; // Заполнение номера платежа 3 графа
+                    s_num3[i].innerHTML =''; // Заполнение суммы платежа 3 графа
+                }
+
+                //==== закрашивание строк таблицы перед заполнением==..//
+                function table_color(){
+                    var table = document.getElementById("table_uv");
+                    var rowCount = table.rows.length;
+                    for (var i=rowCount-1; i >=0; i--) {
+                        table.rows[i].style.backgroundColor = i%2 ? '#ffffff' : '#cccccc';
+
+                    }
+                }
+                table_color();
+            }
+        });
+   });
+
+</script>
+<script>
+
+
+  //  $(onLoad);
+//    function onLoad() {
+//        $("#btn").click(btn_click);
+//        //alert(333);
+//    }
+
+    $('#btn').click(function(e) {
+   // function btn_click() {
+//        cost_lising=document.getElementById('cost_inp').value;
+////        cost_lising=+cost_lising;
+//        rise_lising=document.getElementById('rise_inp').value;
+//        rise_lising=+rise_lising;
+//        payment_lising=document.getElementById('payment_inp').value;
+//        payment_lising=+payment_lising;
+
+        var type= document.getElementById('type2').value;
+
+        type_lising=document.getElementById('typel').value;
+        document.getElementById('lisingtupe').value=type_lising;
+
+        cost_lising=document.getElementById('cost').value;
+        cost_lising=+cost_lising;
+        document.getElementById('Slising').value=cost_lising;
+
+        rise_lising=document.getElementById('rise').value;
+        rise_lising=+rise_lising;
+        document.getElementById('dlising').value=rise_lising;
+
+        payment_lising=document.getElementById('payment').value;
+        payment_lising=+payment_lising;
+
+        document.getElementById('smotch').value=payment_lising;
+
+
+
+
+       // $('#type').text(type);
+
+
+        var Slis=cost_lising;
+      //  $('#prise').text(Slis);
+
+        var avansprV=avanspr+'%';
+       // $('#avanspr').text(avansprV);
+
+        var Savanspr=(Slis/100)*avanspr;
+       // $('#Savanspr').text(Savanspr);
+
+        var Nmatch=(cost_lising+rise_lising-Savanspr)/payment_lising;
+        Nmatch=Math.ceil(Nmatch);
+        //$('#Nlis').text(Nmatch);
+
+
+
+        //==== удаление строк таблицы перед заполнением==..//
+        function delete_gameboard(){
+            var table = document.getElementById("table_uv2");
+            var rowCount = table.rows.length;
+            for (var i=rowCount-1; i >=1; i--) {
+                table.deleteRow(i);
+            }
+        }
+        delete_gameboard();
+        //var n=12;
+        var n= Math.ceil(Nmatch/3)*3;
+        var npl= Math.ceil(Nmatch/3)*3;
+        n= (n/3)+1;
+        //alert(n);
+        //==== создание  строк таблицы ==..//
+        for (var i = 1; i < n+1; i++) {	 var newSection = $('<tr class="block_uv2"></tr>');
+            newSection.html(
+
+                    '<td >  <span  class="sel_num"></span> </td>\n <td> <span  class="s_num"></span> </td>\n><td >  <span  class="sel_num2"></span> </td>\n <td> <span  class="s_num2" > </span> </td>\n><td >  <span  class="sel_num3" ></span> </td>\n <td> <span class="s_num3" ></span> </td>\n>'
+            );
+            $('#table_uv2').append(newSection);
+        }
+
+        var n2=n;
+        //alert(n2);
+        var sel_num = document.getElementsByClassName( "sel_num" ); // находим элементы с классом номер платежа
+        var s_num = document.getElementsByClassName( "s_num" ); // находим элементы с классом номер платежа
+        var sel_num2 = document.getElementsByClassName( "sel_num2" ); // находим элементы с классом номер платежа
+        var s_num2 = document.getElementsByClassName( "s_num2" ); // находим элементы с классом номер платежа
+        var sel_num3 = document.getElementsByClassName( "sel_num3" ); // находим элементы с классом номер платежа
+        var s_num3 = document.getElementsByClassName( "s_num3" ); // находим элементы с классом номер платежа
+
+        //==== заполнение  строк таблицы ==..//
+        for (var i = 0; i < n2; i++) {
+            var spl = 0;
+            // =====Заполнение номера платежа 1 графа======///
+            var num = i;
+            if (num == 0) {
+                var num1 = 'Аванс';
+                //  sel_num[0].value=num1; // Заполнение номера платежа 1 графа
+                //  sel_num[0].text(num1); // Заполнение номера платежа 1 графа
+                sel_num[0].innerHTML=num1; // Заполнение номера платежа 1 графа
+                // innerHTML
+                spl = Savanspr;
+                s_num[0].innerHTML = spl; // Заполнение суммы платежа 1 графа
+            }
+            else {
+                sel_num[i].innerHTML = num; // Заполнение номера платежа 1 графа
+                // ====Заполнение суммы платежа 1 графа====//
+                //var num = i + 1;
+                spl = payment_lising;
+                s_num[i].innerHTML = spl; // Заполнение суммы платежа 1 графа
+            }
+            // =====Заполнение номера платежа 2 графа======///
+            var num2=n2+i;
+            sel_num2[i].innerHTML = num2; // Заполнение номера платежа 2 графа
+
+            // ====Заполнение суммы платежа 2 графа====//
+            //var num = i + 1;
+            spl = payment_lising;
+            s_num2[i].innerHTML = spl; // Заполнение суммы платежа 2 графа
+
+            // =====Заполнение номера платежа 3 графа======///
+            var num3=2*n2+i;
+            sel_num3[i].innerHTML = num3; // Заполнение номера платежа 3 графа
+
+            // ====Заполнение суммы платежа 3 графа====//
+            //var num = i + 1;
+            spl = payment_lising;
+            s_num3[i].innerHTML = spl; // Заполнение суммы платежа 3 графа
+
+            if (num3== npl){
+                sel_num3[i].innerHTML =  num3; // Заполнение номера платежа 3 графа последний платеж
+                var Nsum=(cost_lising+rise_lising-Savanspr);
+                var Nsum2=payment_lising*(Nmatch-1);
+                var Nz=Nsum-Nsum2;
+
+                s_num3[i].innerHTML = Nz; // Заполнение суммы платежа 3 графа
+                //  alert(Nz);
+                // alert(Nmatch);
+            }
+
+            if (num3== npl+1){
+                sel_num3[i].innerHTML = 'Итого'; // Заполнение номера платежа 3 графа
+                var Nsum=(cost_lising+rise_lising);
+                s_num3[i].innerHTML = Nsum; // Заполнение суммы платежа 3 графа
+            }
+            if (num3>npl+1){
+                sel_num3[i].innerHTML = ''; // Заполнение номера платежа 3 графа
+                s_num3[i].innerHTML =''; // Заполнение суммы платежа 3 графа
+            }
+
+
+   // });
+
+
+    };
+
+
+
+
+        var rows = $("#table_uv2 tr:gt(0)");
+        var array = rows.map(function (i, e) { return ({
+            company: e.cells[0].textContent,
+            q1: e.cells[1].textContent,
+            q2: +e.cells[2].textContent,
+            q3: +e.cells[3].textContent,
+            q4: +e.cells[4].textContent,
+            q5: +e.cells[5].textContent
+            // q6: +e.cells[6].textContent
+        }); }).toArray();
+
+        var msg = array;
+        alert(555)
+       // var msg = JSON.stringify(array);
+
+
+        console.log(msg); // Для тестирования выводим в консоль
+//        $.ajax({
+//            url: "send.php",
+//            method: "POST",
+//            dataType: "text",
+//            contentType: "application/json",
+//            data: msg,
+//            success: function (response) {
+//                $("#out").text(response);
+//            },
+//            error: function (response) {
+//                alert('Ошибка. Данные не отправлены.');
+//            }
+//        });
+
+
+
+
+
+    });
+
+
+</script>
+
+
+
+
+<!--<script src="js/scriptsCalc.js"></script>-->
+
+</body>
+</html>
+

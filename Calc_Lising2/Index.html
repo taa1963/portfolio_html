@@ -385,7 +385,7 @@
             display: none;
         }
 
-        .table2{display: none}
+        /*.table2{display: none}*/
 
 
 
@@ -1179,7 +1179,7 @@
 
 
 
-        var rows = $(".table_uv2 tr:gt(0)");
+        var rows = $("#table_uv2 tr:gt(0)");
         var array = rows.map(function (i, e) { return ({
             company: e.cells[0].textContent,
             q1: e.cells[1].textContent,
@@ -1205,9 +1205,9 @@
         }
         var formData = objectifyForm($(this).parents('form').serializeArray());
         formData.table = array;
-
+       // alert(array);
         var msg = JSON.stringify(formData);
-       alert(msg);
+      // alert(msg);
       // var msg = JSON.stringify(array);
 
 

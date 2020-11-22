@@ -3,16 +3,16 @@
 header('Content-type: text/plain; charset=utf-8');
 
 // если была нажата кнопка "Отправить"
-print_r($_POST);
-
-print_r(iconv("UTF-8", "UTF-8", $_POST));
-
-$items = $_POST['item'];
-
-$result = '';
-
-
-echo $result;
+//print_r($_POST);
+//
+//print_r(iconv("UTF-8", "UTF-8", $_POST));
+//
+//$items = $_POST['item'];
+//
+//$result = '';
+//
+//
+//echo $result;
 
 
 if (
@@ -32,6 +32,17 @@ if (
     $dlising = substr(htmlspecialchars(trim($_POST['dlising'])), 0, 10000000000);
     $smotch = substr(htmlspecialchars(trim($_POST['smotch'])), 0, 10000000000);
     $table = substr(htmlspecialchars(trim($_POST['table'])), 0, 100000000000000000);
+
+    print_r($_POST);
+
+    print_r(iconv("UTF-8", "UTF-8", $_POST));
+
+//    $items = $_POST['item'];
+//
+//    $result = '';
+//
+//
+//    echo $result;
 
 
 //    $tabl= '<table>';

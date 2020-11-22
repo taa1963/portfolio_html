@@ -1217,7 +1217,9 @@
             contentType: "application/json",
             data: msg,
             success: function (response) {
-                $("#out").text(response);
+
+                alert('Данные отправлены.');
+                //$("#out").text(response);
             },
             error: function (response) {
                 alert('Ошибка. Данные не отправлены.');

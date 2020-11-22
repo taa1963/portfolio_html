@@ -1189,8 +1189,23 @@
         }); }).toArray();
 
 //        var msg = array;
-    //    alert(5553);
-       var msg = JSON.stringify(array);
+  //      alert(555)
+
+        function objectifyForm(formArray) {
+            //serialize data function
+            alert(555)
+
+            var returnArray = {};
+            for (var i = 0; i < formArray.length; i++){
+                returnArray[formArray[i]['name']] = formArray[i]['value'];
+            }
+            return returnArray;
+        }
+        var formData = objectifyForm($(this).parents('form').serializeArray());
+        formData.table = array;
+
+        var msg = JSON.stringify(formData);
+      // var msg = JSON.stringify(array);
 
 
         console.log(msg); // Для тестирования выводим в консоль

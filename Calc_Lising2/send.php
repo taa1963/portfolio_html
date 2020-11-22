@@ -3,16 +3,16 @@
 header('Content-type: text/plain; charset=utf-8');
 
 // если была нажата кнопка "Отправить"
-//print_r($_POST);
+print_r($_POST);
 
-//print_r(iconv("UTF-8", "UTF-8", $_POST));
+print_r(iconv("UTF-8", "UTF-8", $_POST));
 
-//$items = $_POST['item'];
+$items = $_POST['item'];
 
-//$result = '';
+$result = '';
 
 
-//echo $result;
+echo $result;
 
 
 if (

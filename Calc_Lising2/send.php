@@ -34,17 +34,17 @@ if (
     $table = substr(htmlspecialchars(trim($_POST['table'])), 0, 100000000000000000);
 
 
-    $tabl= '<table>';
-    for ($i=0; $i<count($table); $i++)
-    {
-        $tabl='<tr>';
-        for ($j=1; $j<3; $j++)
-        {
-            $tabl='<td>'.$table[$i][$j].'</td>';
-        }
-        $tabl='</tr>';
-    }
-    $tabl='</table>';
+//    $tabl= '<table>';
+//    for ($i=0; $i<count($table); $i++)
+//    {
+//        $tabl='<tr>';
+//        for ($j=1; $j<3; $j++)
+//        {
+//            $tabl='<td>'.$table[$i][$j].'</td>';
+//        }
+//        $tabl='</tr>';
+//    }
+//    $tabl='</table>';
 
 
         //$to = 'clublaser@mail.ru';
@@ -60,7 +60,7 @@ if (
         Сумма договора:$Slising
         Сумма удорожания:$dlising
         Ежемесячный платеж:$smotch
-        График платежей:$tabl
+//        График платежей:$tabl
 
         
        ";

@@ -71,21 +71,21 @@ if (
         Сумма договора:$Slising
         Сумма удорожания:$dlising
         Ежемесячный платеж:$smotch
-//        График платежей:$tabl
+       График платежей:$tabl
 
         
        ";
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
 
 
-    if ($verify) {
-
-        header('Location: https://eco-lab.kz/services/podbor-postavka-laboratornogo-oborudovaniya/', true, 302);
-        exit;
-    } else {
-        header('Location: https://eco-lab.kz/services/podbor-postavka-laboratornogo-oborudovaniya/', true, 302);
-        exit;
-    }
+//    if ($verify) {
+//
+//        header('Location: https://eco-lab.kz/services/podbor-postavka-laboratornogo-oborudovaniya/', true, 302);
+//        exit;
+//    } else {
+//        header('Location: https://eco-lab.kz/services/podbor-postavka-laboratornogo-oborudovaniya/', true, 302);
+//        exit;
+//    }
 
 
 

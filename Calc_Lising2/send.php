@@ -2,80 +2,62 @@
 
 header('Content-type: text/plain; charset=utf-8');
 
-// если была нажата кнопка "Отправить"
-//print_r($_POST);
-//
-//print_r(iconv("UTF-8", "UTF-8", $_POST));
-//
-//$items = $_POST['item'];
-//
-//$result = '';
-//
-//
-//echo $result;
-
+$json = file_get_contents('php://input');
+$data = json_decode($json, true, 512);
 
 if (
-    isset($_POST['table']) && !empty($_POST['table']) &&
-    isset($_POST['name']) && !empty($_POST['name']) &&
-    isset($_POST['email']) && !empty($_POST['email']) &&
-    isset($_POST['lisingtupe']) && !empty($_POST['lisingtupe']) &&
-    isset($_POST['Slising']) && !empty($_POST['Slising']) &&
-    isset($_POST['dlising']) && !empty($_POST['dlising']) &&
-    isset($_POST['smotch']) && !empty($_POST['smotch']) &&
-    isset($_POST['telefon']) && !empty($_POST['telefon'])) {
-    $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 1000);
-    $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 1000);
-    $telefon = substr(htmlspecialchars(trim($_POST['telefon'])), 0, 100);
-    $lisingtupe = substr(htmlspecialchars(trim($_POST['lisingtupe'])), 0, 10000000000);
-    $Slising = substr(htmlspecialchars(trim($_POST['Slising'])), 0, 10000000000);
-    $dlising = substr(htmlspecialchars(trim($_POST['dlising'])), 0, 10000000000);
-    $smotch = substr(htmlspecialchars(trim($_POST['smotch'])), 0, 10000000000);
-    $table = substr(htmlspecialchars(trim($_POST['table'])), 0, 100000000000000000);
+    is_array($data) && !empty($data) &&
+    isset($data['table']) && !empty($data['table']) && is_array($data['table']) &&
+    isset($data['name']) && !empty($data['name']) &&
+    isset($data['email']) && !empty($data['email']) &&
+    isset($data['lisingtupe']) && !empty($data['lisingtupe']) &&
+    isset($data['Slising']) && !empty($data['Slising']) &&
+    isset($data['dlising']) && !empty($data['dlising']) &&
+    isset($data['smotch']) && !empty($data['smotch']) &&
+    isset($data['telefon']) && !empty($data['telefon'])
+) {
+    $name = substr(htmlspecialchars(trim($data['name'])), 0, 1000);
+    $email = substr(htmlspecialchars(trim($data['email'])), 0, 1000);
+    $telefon = substr(htmlspecialchars(trim($data['telefon'])), 0, 100);
+    $lisingtupe = substr(htmlspecialchars(trim($data['lisingtupe'])), 0, 10000000000);
+    $Slising = substr(htmlspecialchars(trim($data['Slising'])), 0, 10000000000);
+    $dlising = substr(htmlspecialchars(trim($data['dlising'])), 0, 10000000000);
+    $smotch = substr(htmlspecialchars(trim($data['smotch'])), 0, 10000000000);
+    $table = $data['table'];
 
-    print_r($_POST);
-
-    print_r(iconv("UTF-8", "UTF-8", $_POST));
-
-//    $items = $_POST['item'];
-//
-//    $result = '';
-//
-//
-//    echo $result;
-
-
-    $tabl= '<table>';
-    for ($i=0; $i<count($table); $i++)
-    {
-        $tabl='<tr>';
-        for ($j=1; $j<3; $j++)
-        {
-            $tabl='<td>'.$table[$i][$j].'</td>';
+    $tabl = '<table>';
+    foreach ($table as $row) {
+        $tabl .= '<tr>';
+        foreach ($row as $item) {
+            $tabl .= '<td>' . $item . '</td>';
         }
-        $tabl='</tr>';
+        $tabl .= '</tr>';
     }
-    $tabl='</table>';
+    $tabl .= '</table>';
 
 
-        //$to = 'clublaser@mail.ru';
+    //$to = 'clublaser@mail.ru';
     $to = 'alexandr.tupichenkov@yandex.ru';
     //$to = 'info@partwork.ru';
     $title = 'Лизинг';
-    $message = "
-        Был получен заказ с сайта от:
-        Имя:$name
-        E_MAIL: $email
-        Телефон: $telefon
-        Тип лизинга:$lisingtupe
-        Сумма договора:$Slising
-        Сумма удорожания:$dlising
-        Ежемесячный платеж:$smotch
-       График платежей:$tabl
 
-        
-       ";
-    $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
+
+    $html = "<html>
+        <head><title>$title</title></head>
+        <body>
+            <div>Был получен заказ с сайта от:</div>
+            <div>Имя:$name</div>
+            <div>E_MAIL: $email</div>
+            <div>Телефон: $telefon</div>
+            <div>Тип лизинга:$lisingtupe</div>
+            <div>Сумма договора:$Slising</div>
+            <div>Сумма удорожания:$dlising</div>
+            <div>Ежемесячный платеж:$smotch</div>
+            <div>График платежей:$tabl</div>
+        </body>
+    </html>";
+
+    $verify = mail($to, $title, $html, "Content-type:text/html; Charset=utf-8\r\n");
 
 
 //    if ($verify) {
@@ -86,7 +68,6 @@ if (
 //        header('Location: https://eco-lab.kz/services/podbor-postavka-laboratornogo-oborudovaniya/', true, 302);
 //        exit;
 //    }
-
 
 
 }

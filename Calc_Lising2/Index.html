@@ -382,8 +382,10 @@
         }
 
         .param_mail1{
-            display: block;
+            display: none;
         }
+
+        .table2{display: none}
 
 
 
@@ -1158,8 +1160,8 @@
             }
 
             if (num3== npl+1){
-                var num123 = 'Аванс';
-                sel_num3[i].innerHTML = num123; // Заполнение номера платежа 3 графа
+                var num123 = 'Итого';
+                sel_num3[i].innerHTML ='Итого'; // Заполнение номера платежа 3 графа
                 var Nsum=(cost_lising+rise_lising);
                 s_num3[i].innerHTML = Nsum; // Заполнение суммы платежа 3 графа
             }
@@ -1177,7 +1179,7 @@
 
 
 
-        var rows = $("#table_uv2 tr:gt(0)");
+        var rows = $(".table_uv2 tr:gt(0)");
         var array = rows.map(function (i, e) { return ({
             company: e.cells[0].textContent,
             q1: e.cells[1].textContent,
@@ -1193,7 +1195,7 @@
 
         function objectifyForm(formArray) {
             //serialize data function
-            alert(555)
+           // alert(555)
 
             var returnArray = {};
             for (var i = 0; i < formArray.length; i++){
@@ -1205,11 +1207,11 @@
         formData.table = array;
 
         var msg = JSON.stringify(formData);
-        alert(msg);
+       alert(msg);
       // var msg = JSON.stringify(array);
 
 
-        console.log(msg); // Для тестирования выводим в консоль
+       // console.log(msg); // Для тестирования выводим в консоль
         $.ajax({
             url: "send.php",
             method: "POST",
@@ -1219,14 +1221,14 @@
             success: function (response) {
 
                 alert('Данные отправлены.');
-                //$("#out").text(response);
+
             },
             error: function (response) {
                 alert('Ошибка. Данные не отправлены.');
             }
         });
 
-
+       window.location.reload();
 
 
 

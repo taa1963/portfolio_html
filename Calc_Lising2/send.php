@@ -53,7 +53,7 @@ if (
             <div>Сумма договора:$Slising</div>
             <div>Сумма удорожания:$dlising</div>
             <div>Ежемесячный платеж:$smotch</div>
-            <div>График платежей:$tabl</div>
+            <div style=\"border: 1px solid #000000;width: 70%;\">График платежей:$tabl</div>
         </body>
     </html>";
 

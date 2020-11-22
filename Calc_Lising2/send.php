@@ -45,17 +45,17 @@ if (
 //    echo $result;
 
 
-//    $tabl= '<table>';
-//    for ($i=0; $i<count($table); $i++)
-//    {
-//        $tabl='<tr>';
-//        for ($j=1; $j<3; $j++)
-//        {
-//            $tabl='<td>'.$table[$i][$j].'</td>';
-//        }
-//        $tabl='</tr>';
-//    }
-//    $tabl='</table>';
+    $tabl= '<table>';
+    for ($i=0; $i<count($table); $i++)
+    {
+        $tabl='<tr>';
+        for ($j=1; $j<3; $j++)
+        {
+            $tabl='<td>'.$table[$i][$j].'</td>';
+        }
+        $tabl='</tr>';
+    }
+    $tabl='</table>';
 
 
         //$to = 'clublaser@mail.ru';

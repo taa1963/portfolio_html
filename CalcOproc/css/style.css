@@ -1,0 +1,391 @@
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+ }
+
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #e38d13 ;
+}
+
+
+
+.header_titel {
+    display: block;
+    width: 100%;
+
+}
+.header_titel h2{
+    font-family: "RobotoLight";
+    font-size:2em ;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 1px;
+    margin-top: 0px;
+}
+
+
+
+.header_titel p{
+    font-family: "RobotoLight";
+    font-size:1em;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 14px;
+ }
+
+
+/*		Линия во весь экран, повторяется несколько раз, описывается  1раз		*/
+
+.line_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+}
+
+.line2_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+    margin-bottom: 10px;
+}
+
+.line3_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/*		Первый блок. Выбор размеров бани		*/
+
+
+.zakas{
+    display: block;
+    width: 100%;
+}
+
+.zakas_block1 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+
+.zakas h1{
+    text-align: center;
+    font-family: "RobotoBold";
+    font-size:28px ;
+    color: #000000;
+    padding-top: 5px;
+    padding-bottom: 10px;
+ }
+
+
+/*//===========================///*/
+
+.zakas_block1_type_vubor{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.zakas_block1_type_vubor label{
+    display: block;
+    width: 100%;
+    font-family: "RobotoBold";
+    font-size:20px ;
+    color: #000000;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+
+.zakas_block1{
+    display: block;
+    position: relative;
+    width: 100%;
+    max-height: 25%;
+    min-height: 25%;
+    /*height: auto;*/
+    /*padding-bottom: 50em;*/
+}
+
+
+
+
+.button_block2{
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+}
+
+.but_block2{
+    margin: 0 auto;
+    display: block;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+
+
+/*		Второй блок. Выбор типа фундамента		*/
+
+.zakas_block2{
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+
+.zakas_block2 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+
+.zakas_block2_type_vubor{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+
+.zakas_block2_type_vubor label{
+    display: block;
+    width: 100%;
+    font-family: "RobotoBold";
+    font-size:20px ;
+    color: #000000;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+
+.button_block2{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.but_block3{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: left;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+    /*////===============================//*/
+
+.type_region {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+}
+
+.type_region:checked {
+    border: 6px solid black;
+}
+
+    /*//-------------------------//*/
+
+.button_block3{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+
+
+.but_block2_1{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: left;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+
+.but_block2_3{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: right;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+.type_prof {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+}
+
+.type_prof:checked {
+    border: 6px solid black;
+}
+
+
+
+/*		Третий. Выбор типа стен		*/
+
+.zakas_block3{
+    display: none;
+}
+
+
+.type_int {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+}
+
+.type_int:checked {
+    border: 6px solid black;
+}
+
+
+
+.but_block3_2{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: left;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+
+.but_block3_4{
+    margin: 0 auto;
+    display: block;
+    /*width: 120px;*/
+    float: right;
+    background-color: #4cae4c;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    border: solid 2px #e38d13;
+}
+
+
+/*		Четвертый блок. Выбор типа печи		*/
+
+.zakas_block4{
+    display: none;
+}
+
+
+.zakas_block5{
+    display: none;
+}
+
+.zakas_block6{
+    display: none;
+}
+
+
+
+
+
+/*		Линия во весь экран, повторяется несколько раз, описывается  1раз		*/
+.line{
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;
+    margin: 0;
+    padding: 0;
+
+}
+
+/*		Блок итогов и предпросмотра		*/
+
+
+
+
+
+/*		старая верстка на удаление		*/
+
+

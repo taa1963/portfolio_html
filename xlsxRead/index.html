@@ -1,0 +1,371 @@
+
+<!-- saved from url=(0039)http://sheetjs.com/demos/writexlsx.html -->
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!--<script type="text/javascript" src="./src/xlsx.core.min.js"></script>-->
+<!--<script type="text/javascript" src="./src/Blob.js"></script>-->
+<!--<script type="text/javascript" src="./src/FileSaver.js"></script>-->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
+
+<script>
+function datenum(v, date1904) {
+	if(date1904) v+=1462;
+	var epoch = Date.parse(v);
+	return (epoch - new Date(Date.UTC(1899, 11, 30))) / (24 * 60 * 60 * 1000);
+}
+ 
+function sheet_from_array_of_arrays(data, opts) {
+	var ws = {};
+	var range = {s: {c:10000000, r:10000000}, e: {c:0, r:0 }};
+	for(var R = 0; R != data.length; ++R) {
+		for(var C = 0; C != data[R].length; ++C) {
+			if(range.s.r > R) range.s.r = R;
+			if(range.s.c > C) range.s.c = C;
+			if(range.e.r < R) range.e.r = R;
+			if(range.e.c < C) range.e.c = C;
+			var cell = {v: data[R][C] };
+			if(cell.v == null) continue;
+			var cell_ref = XLSX.utils.encode_cell({c:C,r:R});
+			
+			if(typeof cell.v === 'number') cell.t = 'n';
+			else if(typeof cell.v === 'boolean') cell.t = 'b';
+			else if(cell.v instanceof Date) {
+				cell.t = 'n'; cell.z = XLSX.SSF._table[14];
+				cell.v = datenum(cell.v);
+			}
+			else cell.t = 's';
+			
+			if(C == 0){
+				cell.s={
+					font:{
+						bold:true
+					}
+				}
+			}
+			if(R == 0){
+				cell.s={
+					fill:{
+						fgColor:{ rgb: "FFFFAA00" }
+					}
+				}
+			}
+			
+			ws[cell_ref] = cell;
+		}
+	}
+	if(range.s.c < 10000000) ws['!ref'] = XLSX.utils.encode_range(range);
+	return ws;
+}
+ 
+
+function Workbook() {
+	if(!(this instanceof Workbook)) return new Workbook();
+	this.SheetNames = [];
+	this.Sheets = {};
+}
+ 
+
+function s2ab(s) {
+	var buf = new ArrayBuffer(s.length);
+	var view = new Uint8Array(buf);
+	for (var i=0; i!=s.length; ++i) view[i] = s.charCodeAt(i) & 0xFF;
+	return buf;
+}
+
+function save(){
+	/* original data */
+	var data = [[1,2,3,4],["Sample", "Sample", "Sample", "Sample"],["foo","bar","Hello","0.3"], ["baz", null, "qux"]]
+	var ws_name = "SheetJS";
+	 
+	var wb = new Workbook(), ws = sheet_from_array_of_arrays(data);
+	 
+	/* add worksheet to workbook */
+	wb.SheetNames.push(ws_name);
+	wb.Sheets[ws_name] = ws;
+	var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+	saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), "sample.xlsx")
+}
+
+function read(){
+
+
+    var request = new XMLHttpRequest();
+    // may be necessary to escape path string?
+    request.open("GET", "data.xlsx");
+
+
+   // request.open("GET", "C:\\Users\\PalFS\\Downloads\\Fiverr_Example_List (1).xlsx");
+
+    request.responseType = "arraybuffer";
+    console.log(request);
+    console.log(arraybuffer);
+
+    request.onload = function() {
+        // this.response should be `ArrayBuffer` of `.xlsx` file
+        var file = new File(this.response, "data33.xlsx");
+        // do stuff with `file`
+    };
+    request.send();
+
+
+
+    var blob = new Blob([JSON.stringify(data)]);
+    var url = URL.createObjectURL(blob);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', "data.xlsx", true);
+    var arraybuffer = xhr.response;
+    // define new form
+    var formData = new FormData();
+    formData.append('someUploadIdentifier', blob, 'someFileName.json');
+
+    // action after uploading happens
+    xhr.onload = function(e) {
+        console.log("File uploading completed!");
+        console.log(arraybuffer);
+    };
+
+    // do the uploading
+    console.log("File uploading started!");
+    xhr.send(formData);
+    console.log(arraybuffer);
+    console.log(blob);
+
+//   var url='filename.dat',
+//            success: function(data) {
+//        console.log(data); // ??????? ?????????? ????? ? ???????
+//    }
+   // var url = "data.xlsx";
+   // var json = require(url); //(with path)
+  // console.log(json); // this will show the info it in firebug console
+
+ //   fetch(url);
+
+//            .then(response => response.json())
+//.then(json => console.log(json));
+//
+//    var json = require('data.xlsx'); //(with path)
+//    console.log(json); // this will show the info it in firebug console
+
+//    $.getJSON("data.xlsx", function(json) {
+//        console.log(json); // this will show the info it in firebug console
+//    });
+
+
+    var url = "data.xlsx";
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", url, true);
+
+    console.log(oReq);
+    oReq.responseType = "arraybuffer";
+    var arraybuffer = oReq.response;
+
+    /* convert data to binary string */
+    var data = new Uint8Array(arraybuffer);
+    var arr = new Array();
+    for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+    var bstr = arr.join("");
+
+    /* Call XLSX */
+    var workbook = XLSX.read(bstr, {type:"binary"});
+
+    /* DO SOMETHING WITH workbook HERE */
+    var first_sheet_name = workbook.SheetNames[0];
+    /* Get worksheet */
+    var worksheet = workbook.Sheets[first_sheet_name];
+    console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+
+
+
+
+    oReq.onload = function(e) {
+        var arraybuffer = oReq.response;
+
+        /* convert data to binary string */
+        var data = new Uint8Array(arraybuffer);
+        var arr = new Array();
+        for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+        var bstr = arr.join("");
+
+        /* Call XLSX */
+        var workbook = XLSX.read(bstr, {type:"binary"});
+
+        /* DO SOMETHING WITH workbook HERE */
+        var first_sheet_name = workbook.SheetNames[0];
+        /* Get worksheet */
+        var worksheet = workbook.Sheets[first_sheet_name];
+        console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+    }
+
+    oReq.send();
+
+//   readXlsxFile("data.xlsx", { dateFormat: 'MM/DD/YY' }).then(function(data) {
+//     alert(data);
+//
+//     console.log(data);
+//			    // `data` is an array of rows
+//			    // each row being an array of cells.
+//			    document.getElementById('result').innerText = JSON.stringify(data, null, 2)
+//
+//  });
+
+
+//    var url = "data.xlsx";
+//    var oReq = new XMLHttpRequest();
+//    oReq.open("GET", url, true);
+//    oReq.responseType = "arraybuffer";
+//    var arraybuffer = oReq.response;
+//
+//  console.log(arraybuffer);
+//
+//    oReq.onload = function(e) {
+//        alert(22);
+//        var arraybuffer = oReq.response;
+//
+//        /* convert data to binary string */
+//        var data = new Uint8Array(arraybuffer);
+//        var arr = new Array();
+//        for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+//        var bstr = arr.join("");
+//
+//        /* Call XLSX */
+//        var workbook = XLSX.read(bstr, {type:"binary"});
+//
+//        /* DO SOMETHING WITH workbook HERE */
+//        var first_sheet_name = workbook.SheetNames[0];
+//        /* Get worksheet */
+//        var worksheet = workbook.Sheets[first_sheet_name];
+//        console.log(worksheet);
+//        alert(10);
+//
+//        console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+//    }
+
+
+//    fetch('http:/127.0.0.1/Arbait/DopArbaiten/xlsxRead/data.xlsx').then(function(resp) {
+//        // Process the data here...
+//        alert(123);
+//        console.log('Data Response: ', resp);
+//    });
+
+
+
+    /* set up XMLHttpRequest */
+	alert(1);
+	var url = "data.xlsx";
+	var oReq = new XMLHttpRequest();
+	oReq.open("GET", url, true);
+   // console.log(oReq);
+
+
+    var workbook = XLSX.read(url, {type:"binary"});
+      console.log(workbook);
+    var firstSheet = workbook.SheetNames[0];
+    console.log(firstSheet);
+
+	var arraybuffer = oReq.response;
+	var data = new Uint8Array(arraybuffer);
+     console.log(arraybuffer);
+		
+alert(2);
+
+
+		/* convert data to binary string */
+		var arr = new Array();
+		for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+    console.log(data);
+
+
+
+			var bstr = arr.join("");
+			/* Call XLSX */
+//			var workbook = new FileReader('data.xlsx');// ?????? ?????*
+
+
+         var workbook = XLSX.read("data.xlsx", {type:"binary"});
+
+
+    var firstSheet = workbook.SheetNames[0];
+    console.log(firstSheet);
+
+
+
+
+    /*  var workbook = new FileReader('sample.xlsx');// ?????? ?????*/
+		alert(3);
+   // var workbook = new FileReader('sample.xlsx');// ?????? ?????*/
+
+		console.log(workbook);
+
+
+
+
+		/* DO SOMETHING WITH workbook HERE */
+		var first_sheet_name = workbook.SheetNames[0];
+			/*var first_sheet_name = 'SheetJS';*/
+			var address_of_cell = 'B2';
+			/*var worksheet = workbook.Sheets[first_sheet_name];*/
+			var worksheet = workbook.Sheets;
+    console.log(worksheet);
+		
+		alert(4);
+		
+		/* Find desired cell */
+		var desired_cell = worksheet[address_of_cell];
+
+		/* Get the value */
+	//	var desired_value = desired_cell.value;
+	//	alert(desired_value);
+	
+	
+	
+
+	oReq.onload = function(e) {
+		var arraybuffer = oReq.response;
+
+		/* convert data to binary string */
+		var data = new Uint8Array(arraybuffer);
+		var arr = new Array();
+		for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+		var bstr = arr.join("");
+
+		/* Call XLSX */
+		var workbook = XLSX.read(bstr, {type:"binary"});
+		console.log(workbook);
+		/* DO SOMETHING WITH workbook HERE */
+
+		var first_sheet_name = workbook.SheetNames[0];
+		var address_of_cell = 'A1';
+
+		/* Get worksheet */
+		var worksheet = workbook.Sheets[first_sheet_name];
+		
+		/* Find desired cell */
+		var desired_cell = worksheet[address_of_cell];
+
+		/* Get the value */
+		var desired_value = desired_cell.v;
+	  
+	  
+		var wb = new Workbook(), ws = worksheet;
+	 
+		/* add worksheet to workbook */
+		wb.SheetNames.push("new");
+		wb.Sheets["new"] = ws;
+		var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+		saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), "sample.xlsx")
+	}
+
+//	oReq.send();
+}
+</script>
+
+
+</head><body>
+	<div>Click the button below to save a sample excel file with minimal styles.</div>
+	<button onclick="read()">save</button>
+	<pre id="result"></pre>
+</body></html>

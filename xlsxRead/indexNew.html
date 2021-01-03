@@ -1,0 +1,57 @@
+
+<html>
+<Head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.12.4/xlsx.core.min.js"></script>
+</head>
+
+<body>
+<script>
+	/* set up XMLHttpRequest */
+
+
+    // replace it with your file path in local server
+    var url = "https://aleksandr.tupichenkov.com/xlsxRead/data.xlsx";
+
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", url, true);
+    oReq.responseType = "arraybuffer";
+
+    oReq.onload = function(e) {
+        var arraybuffer = oReq.response;
+
+		/* convert data to binary string */
+        var data = new Uint8Array(arraybuffer);
+
+        var arr = new Array();
+        for (var i = 0; i != data.length; ++i) {
+            arr[i] = String.fromCharCode(data[i]);
+        }
+
+        var bstr = arr.join("");
+
+        var cfb = XLSX.read(bstr, { type: 'binary' });
+
+        cfb.SheetNames.forEach(function(sheetName, index) {
+
+            // Obtain The Current Row As CSV
+            var fieldsObjs = XLS.utils.sheet_to_json(cfb.Sheets[sheetName]);
+
+            fieldsObjs.map(function(field) {
+                $("#my_file_output").append('<input type="checkbox" value="' + field.Fields + '">' + field.Fields + '<br>');
+            });
+
+        });
+    }
+
+    oReq.send();
+</script>
+</body>
+<div id="my_file_output">
+</div>
+
+
+
+
+
+</html>

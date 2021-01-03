@@ -42,7 +42,11 @@
         var worksheet = workbook.Sheets[first_sheet_name];
         console.log(worksheet);
 
-
+        var address_of_cell = 'B2';
+        var desired_cell = worksheet[address_of_cell];
+        var desired_value = desired_cell.v;
+        console.log(desired_value);
+        alert(desired_value);
 
         cfb.SheetNames.forEach(function(sheetName, index) {
 

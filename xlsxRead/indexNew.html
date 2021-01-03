@@ -26,13 +26,13 @@
         var arr = new Array();
         for (var i = 0; i != data.length; ++i) {
             arr[i] = String.fromCharCode(data[i]);
-            console.log(arr[i]);
+//           console.log(arr[i]);
         }
 
         var bstr = arr.join("");
 
         var cfb = XLSX.read(bstr, { type: 'binary' });
-        console.log(bstr);
+//        console.log(bstr);
         console.log(cfb);
 
         cfb.SheetNames.forEach(function(sheetName, index) {

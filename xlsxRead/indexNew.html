@@ -35,6 +35,15 @@
 //        console.log(bstr);
         console.log(cfb);
 
+        //=======================================//
+        var workbook = XLSX.read(bstr, {type:"binary"});
+        var first_sheet_name = workbook.SheetNames[0];
+		/* Get worksheet */
+        var worksheet = workbook.Sheets[first_sheet_name];
+        console.log(worksheet);
+
+
+
         cfb.SheetNames.forEach(function(sheetName, index) {
 
             // Obtain The Current Row As CSV

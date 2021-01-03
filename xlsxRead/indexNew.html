@@ -19,7 +19,7 @@
 
     oReq.onload = function(e) {
         var arraybuffer = oReq.response;
-        console.log(arraybuffer);
+      //  console.log(arraybuffer);
 		/* convert data to binary string */
         var data = new Uint8Array(arraybuffer);
 
@@ -33,20 +33,43 @@
 
         var cfb = XLSX.read(bstr, { type: 'binary' });
 //        console.log(bstr);
-        console.log(cfb);
+       // console.log(cfb);
 
         //=======================================//
         var workbook = XLSX.read(bstr, {type:"binary"});
         var first_sheet_name = workbook.SheetNames[0];
 		/* Get worksheet */
         var worksheet = workbook.Sheets[first_sheet_name];
-        console.log(worksheet);
+      //  console.log(worksheet);
+
+
 
         var address_of_cell = 'B2';
         var desired_cell = worksheet[address_of_cell];
         var desired_value = desired_cell.v;
         console.log(desired_value);
         alert(desired_value);
+
+        var address_of_cell = 'B3';
+
+        var desired_cell = worksheet[address_of_cell];
+        var desired_value2 = desired_cell.v;
+        //console.log(desired_value);
+        alert(desired_value2);
+
+        var address_of_cell = 'B4';
+
+        var desired_cell = worksheet[address_of_cell];
+        var desired_value3 = desired_cell.v;
+        //console.log(desired_value);
+        alert(desired_value3);
+
+
+
+
+
+
+
 
         cfb.SheetNames.forEach(function(sheetName, index) {
 

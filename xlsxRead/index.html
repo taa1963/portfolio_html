@@ -93,7 +93,7 @@ function read(){
 
     var request = new XMLHttpRequest();
     // may be necessary to escape path string?
-    request.open("GET", "data.xlsx");
+    request.open("GET", "https://aleksandr.tupichenkov.com/xlsxRead/data.xlsx");
 
 
    // request.open("GET", "C:\\Users\\PalFS\\Downloads\\Fiverr_Example_List (1).xlsx");
@@ -114,7 +114,7 @@ function read(){
     var blob = new Blob([JSON.stringify(data)]);
     var url = URL.createObjectURL(blob);
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', "data.xlsx", true);
+    xhr.open('GET', "https://aleksandr.tupichenkov.com/xlsxRead/data.xlsx", true);
     var arraybuffer = xhr.response;
     // define new form
     var formData = new FormData();
@@ -153,7 +153,7 @@ function read(){
 //    });
 
 
-    var url = "data.xlsx";
+    var url = "https://aleksandr.tupichenkov.com/xlsxRead/data.xlsx";
     var oReq = new XMLHttpRequest();
     oReq.open("GET", url, true);
 
@@ -253,7 +253,7 @@ function read(){
 
     /* set up XMLHttpRequest */
 	alert(1);
-	var url = "data.xlsx";
+	var url = "https://aleksandr.tupichenkov.com/xlsxRead/data.xlsx";
 	var oReq = new XMLHttpRequest();
 	oReq.open("GET", url, true);
    // console.log(oReq);
@@ -283,7 +283,7 @@ alert(2);
 //			var workbook = new FileReader('data.xlsx');// ?????? ?????*
 
 
-         var workbook = XLSX.read("data.xlsx", {type:"binary"});
+         var workbook = XLSX.read("https://aleksandr.tupichenkov.com/xlsxRead/data.xlsx", {type:"binary"});
 
 
     var firstSheet = workbook.SheetNames[0];

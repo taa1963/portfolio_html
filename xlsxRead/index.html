@@ -176,12 +176,12 @@ function read(){
     var worksheet = workbook.Sheets[first_sheet_name];
     //=====================================================//
 
-    var worksheet = workbook.Sheets;
-    // console.log(worksheet);
-    var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[firstSheet]);
-    console.log(excelRows);
-    var ZenaBeton= excelRows[1].Vvalue;// ????? ??????
-    alert(ZenaBeton);
+//    var worksheet = workbook.Sheets;
+//    // console.log(worksheet);
+//    var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[firstSheet]);
+//    console.log(excelRows);
+//    var ZenaBeton= excelRows[1].Vvalue;// ????? ??????
+//    alert(ZenaBeton);
 
     //=====================================================//
 
@@ -223,6 +223,13 @@ function read(){
         /* Get worksheet */
         var worksheet = workbook.Sheets[first_sheet_name];
         console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+        var worksheet = workbook.Sheets;
+        // console.log(worksheet);
+        var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[firstSheet]);
+        console.log(excelRows);
+        var ZenaBeton= excelRows[1].Vvalue;// ????? ??????
+        alert(ZenaBeton);
+
     }
 
     oReq.send();
@@ -315,6 +322,12 @@ alert(2);
 
     var firstSheet = workbook.SheetNames[0];
     console.log(firstSheet);
+    var worksheet = workbook.Sheets;
+    // console.log(worksheet);
+    var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[firstSheet]);
+    console.log(excelRows);
+    var ZenaBeton= excelRows[1].Vvalue;// ????? ??????
+    alert(ZenaBeton);
 
 
 
@@ -373,7 +386,13 @@ alert(2);
 		var desired_cell = worksheet[address_of_cell];
 
 		/* Get the value */
-		var desired_value = desired_cell.v;
+		//var desired_value = desired_cell.v;
+        var worksheet = workbook.Sheets;
+        // console.log(worksheet);
+        var excelRows = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[firstSheet]);
+        console.log(excelRows);
+        var ZenaBeton= excelRows[1].Vvalue;// ????? ??????
+        alert(ZenaBeton);
 	  
 	  
 		var wb = new Workbook(), ws = worksheet;
@@ -382,6 +401,8 @@ alert(2);
 		wb.SheetNames.push("new");
 		wb.Sheets["new"] = ws;
 		var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+
+
 
 		saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), "sample.xlsx")
 	}

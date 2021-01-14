@@ -1389,8 +1389,10 @@ $(document).ready(function() {
 		  var address_of_cell = 'B269';
          var desired_cell = worksheet[address_of_cell];
          Sezon= desired_cell.v;
-	
-	
+
+    }
+
+    oReq.send();
 	
 	
 	

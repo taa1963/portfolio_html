@@ -319,7 +319,7 @@ VarSM=1;
 
 $(document).ready(function() {
 	
-	  var url = "https://aleksandr.tupichenkov.com/\CalcFund6\js\data.xlsx";
+	  var url = "https://aleksandr.tupichenkov.com/CalcFund6/js/data.xlsx";
      alert(url);
     var oReq = new XMLHttpRequest();
     oReq.open("GET", url, true);

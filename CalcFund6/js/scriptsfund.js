@@ -724,7 +724,7 @@ $(document).ready(function() {
 		
 		var address_of_cell = 'B99';
          var desired_cell = worksheet[address_of_cell];
-        NRZenaProvPlitaNR= desired_cell.v;
+        ZenaProvPlitaNR= desired_cell.v;
 		
 		var address_of_cell = 'B100';
          var desired_cell = worksheet[address_of_cell];
@@ -1056,7 +1056,7 @@ $(document).ready(function() {
 		
 		var address_of_cell = 'B184';
          var desired_cell = worksheet[address_of_cell];
-        ZenaDrenagUSP= desired_cell.v;
+        ZenaDrenag2USP= desired_cell.v;
 		
 		var address_of_cell = 'B185';
          var desired_cell = worksheet[address_of_cell];
@@ -1208,7 +1208,7 @@ $(document).ready(function() {
 		
 		var address_of_cell = 'B223';
          var desired_cell = worksheet[address_of_cell];
-        ZenaOpalZOK= desired_cell.v;
+        ZenaOpalZZOK= desired_cell.v;
 		
 		var address_of_cell = 'B224';
          var desired_cell = worksheet[address_of_cell];

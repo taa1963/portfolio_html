@@ -320,7 +320,7 @@ VarSM=1;
 $(document).ready(function() {
 	
 	  var url = "https://aleksandr.tupichenkov.com/CalcFund6/js/data.xlsx";
-     alert(url);
+    // alert(url);
     var oReq = new XMLHttpRequest();
     oReq.open("GET", url, true);
     oReq.responseType = "arraybuffer";
@@ -452,7 +452,7 @@ $(document).ready(function() {
 		
 		var address_of_cell = 'B29';
         var desired_cell = worksheet[address_of_cell];
-        var ZenaDostavMaterL= desired_cell.v;
+        ZenaDostavMaterL= desired_cell.v;
 		
 		var address_of_cell = 'B30';
         var desired_cell = worksheet[address_of_cell];
@@ -4852,7 +4852,7 @@ function smeta() {
         var zkgeomag = kgeomag * ZenaGeomagL;
         zkgeomag = Math.round(zkgeomag);
         $('#zkgeomag').text(zkgeomag);
-        alert(zkgeomag);
+        //alert(zkgeomag);
 
         //Песок строительный (средней крупности или крупный) (Кратно 10 м3) с учетом доставки
         //var kpesoksm =(Math.round(kzacupr/20))*20;
@@ -4873,7 +4873,7 @@ function smeta() {
         var zkpesoksm = kpesoksm *zkpesokpl;
         zkpesoksm = Math.round(zkpesoksm);
         $('#zkpesoksm').text(zkpesoksm);
-        alert(zkpesoksm);
+       // alert(zkpesoksm);
 
 
         //Щебень гранитный фр. 20-40 мм. (Кратно 10 м3) с учетом доставки
@@ -4896,7 +4896,7 @@ function smeta() {
         var zkshebensm = kshebensm *zkshebenpl;
         zkshebensm = Math.round(zkshebensm);
         $('#zkshebensm').text(zkshebensm);
-        alert(zkshebensm);
+        //alert(zkshebensm);
         //===========================================//
 
 
@@ -4910,7 +4910,7 @@ function smeta() {
         // if ($("#gidro input:checkbox:checked").length == 0){
         //     zkgeomemsm=0;
         // }
-        alert(zkgeomemsm);
+       // alert(zkgeomemsm);
 
 
 
@@ -4923,7 +4923,7 @@ function smeta() {
         var zkdoska40 = kdoska40*ZenaDoska40L;
         zkdoska40 = Math.round(zkdoska40);
         $('#zkdoska40').text(zkdoska40);
-        alert(zkdoska40);
+       // alert(zkdoska40);
 
         //Опалубка инвентарная из ламинированной фанеры на деревянном каркасе (амортизация)
 
@@ -4942,7 +4942,7 @@ function smeta() {
         var zkopalsm = kopalsm *zopalpl;
         zkopalsm = Math.round(zkopalsm);
         $('#zkopalsm').text(zkopalsm);
-       alert(zkopalsm);
+      // alert(zkopalsm);
 
 
         //Фанера 18 мм (на подрезку)
@@ -4952,7 +4952,7 @@ function smeta() {
         var zkfanera18 = kfanera18 *ZenaFanera18L;
         zkfanera18 = Math.round(zkfanera18);
         $('#zkfanera18').text(zkfanera18);
-        alert(zkfanera18);
+       // alert(zkfanera18);
 
 
         //Фиксатор для арматуры вертикальной
@@ -4962,7 +4962,7 @@ function smeta() {
         var zkfiksator = kfiksator *ZenaFiksatorL;
         zkfiksator = Math.round(zkfiksator);
         $('#zkfiksator').text(zkfiksator);
-       alert(zkfiksator);
+       //alert(zkfiksator);
 
         //Арматура d12 А500 (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
 
@@ -4973,7 +4973,7 @@ function smeta() {
         var zkarm12 = karm12 *ZenaArm12L;
         zkarm12 = Math.round(zkarm12);
         $('#zkarm12').text(zkarm12);
-        alert(zkarm12);
+       // alert(zkarm12);
 
         // Арматура d8 А500 на хомуты (Количество арматуры указано предварительно согласно типовым решениям и будет скорректированно после разработки проекта)
         var karm8 =karmrfrk39;
@@ -4983,7 +4983,7 @@ function smeta() {
         var zkarm8 = karm8 *ZenaArm8L;
         zkarm8 = Math.round(zkarm8);
         $('#zkarm8').text(zkarm8);
-        alert(zkarm8);
+        //alert(zkarm8);
 
         //Проволока вязальная
         var kprovsm =karm12*12;
@@ -4994,7 +4994,7 @@ function smeta() {
         var zkprovsm = kprovsmr *ZenaProvL;
         zkprovsm = Math.round(zkprovsm);
         $('#zkprovsm').text(zkprovsm);
-        alert(zkprovsm);
+        //alert(zkprovsm);
 
 
         //Бетон B22,5 М300 П4 (С учетом доставки из СПб)
@@ -5019,7 +5019,7 @@ function smeta() {
         var zlbeton22 = lbeton22*kbetonb22;
         zlbeton22 = Math.round(zlbeton22);
         $('#zlbeton22').text(zlbeton22);
-       alert(zlbeton22);
+       //alert(zlbeton22);
 
         //======Itog 2 blok------
 

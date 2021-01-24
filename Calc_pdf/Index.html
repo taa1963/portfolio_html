@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="ru" class="translated-ltr">
+<!--<html lang="en" >-->
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/jspdf.plugin.addimage.js"></script>
+
+    <script src="js/html2canvas.js"></script>
+    <script>
+        function getPDF() {
+            doCanvas();
+        }
+
+        function doCanvas() {
+            html2canvas(document.querySelector("#myDiv")).then(canvas => {
+                doPDF(canvas);
+        });
+
+        }
+
+        function doPDF(canvas) {
+            var doc = new jsPDF({
+                format: 'a4',
+            });
+     //      doc.addImage(canvas.toDataURL(), 'JPEG', 500, 500);
+//            doc.addImage(imgData, 'JPEG', 10, 10, 500, 500);
+   //         doc.save('test.pdf');
+			
+			 var options = {
+  //'width': 800,
+   };
+   var pdf = new jsPDF('p', 'pt', 'a4');
+   pdf.addHTML($("#myDiv"), -1, 220, options, function() {
+     pdf.save('admit_card.pdf');
+   });
+        }
+    </script>
+</head>
+<body>
+
+<a href="#" onclick="getPDF()">Скачать PDF</a>
+
+<h1>Добро пожаловать</h1>
+<input type="text" />
+
+<input type="submit" value="button" />
+<div id="myDiv">
+    <h2>Осень </h2>
+    <p>Test 2344444</p>
+    <!--<img src="sp.png" width="371" height="371" />-->
+    <img src="brevno.jpeg" width="371" height="371" />
+
+    brevno
+    <!--<img src="img/slide4N.png" width="371" height="371" />-->
+    <p>Нетолько 2344444</p>
+
+</div>
+<div id="newDiv"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+    <!--<title>Калькулятор устройств</title>-->
+
+
+    <!--<meta name="author" content="taa">-->
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">-->
+    <!--<meta name="description" content="Калькулятор устройств°">-->
+
+
+    <!--<link href="cssnew/Calc_style.css" rel="stylesheet">-->
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>-->
+    <!--&lt;!&ndash;<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<script src="js/jquery.min.js"></script>&ndash;&gt;-->
+
+    <!--<script src="js/jspdf.js"></script>-->
+
+    <!--&lt;!&ndash;<script src="js/pdfmake.min.js"></script>&ndash;&gt;-->
+
+    <!--<script src="js/html2canvas.js"></script>-->
+    <!--&lt;!&ndash;<script src="js/pdfmake.min.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="js/vfs_fonts.js"></script>&ndash;&gt;-->
+
+
+
+    <!--&lt;!&ndash;<script src="js/html2canvas.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;&lt;!&ndash;<script src="js/jspdf.min.js"></script>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="js/jspdf.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.13.3/exporting/jspdf.plugin.addimage.js"></script>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<script src="js/html2canvas.min.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;<script src="js/html2canvas.js"></script>&ndash;&gt;-->
+
+
+
+    <!--&lt;!&ndash;<script src="js/scriptsCalc.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;<script>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;function getPDF() {&ndash;&gt;-->
+            <!--&lt;!&ndash;doCanvas();&ndash;&gt;-->
+
+            <!--&lt;!&ndash;$(document).bind('function_a_complete', doPDF);&ndash;&gt;-->
+        <!--&lt;!&ndash;}&ndash;&gt;-->
+
+        <!--&lt;!&ndash;function doCanvas() {&ndash;&gt;-->
+            <!--&lt;!&ndash;html2canvas(document.querySelector("#div2image")).then(canvas => {&ndash;&gt;-->
+                <!--&lt;!&ndash;document.querySelector("#div2image").appendChild(canvas);&ndash;&gt;-->
+        <!--&lt;!&ndash;});&ndash;&gt;-->
+        <!--&lt;!&ndash;$(document).trigger('function_a_complete');&ndash;&gt;-->
+        <!--&lt;!&ndash;}&ndash;&gt;-->
+        <!--&lt;!&ndash;function doPDF() {&ndash;&gt;-->
+
+            <!--&lt;!&ndash;console.log("do pdf");&ndash;&gt;-->
+            <!--&lt;!&ndash;var doc = new jsPDF();&ndash;&gt;-->
+            <!--&lt;!&ndash;doc.fromHTML($('#div2image').html(), 20, 20, {'width':500});&ndash;&gt;-->
+            <!--&lt;!&ndash;doc.text(50,50, "Новый текст");&ndash;&gt;-->
+            <!--&lt;!&ndash;doc.save('test.pdf');&ndash;&gt;-->
+        <!--&lt;!&ndash;}&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;</script>&ndash;&gt;-->
+    <!--<script>-->
+    <!--function getPDF() {-->
+    <!--doCanvas();-->
+<!--//        alert(1);-->
+    <!--}-->
+
+<!--//    function doCanvas() {-->
+<!--//        var googleMapsView = document.querySelector("#single");-->
+<!--//-->
+<!--//        html2canvas(googleMapsView).then((canvas) => {-->
+<!--//           let imgData = canvas.toDataURL('image/png');-->
+<!--//        console.log(imgData);-->
+<!--//    };-->
+
+
+    <!--function doCanvas() {-->
+    <!--html2canvas(document.querySelector("#single")).then(canvas => {doPDF(canvas);-->
+    <!--});-->
+
+    <!--}-->
+
+    <!--function doPDF(canvas) {-->
+        <!--alert(2);-->
+    <!--var doc = new jsPDF({-->
+    <!--format: 'a4',-->
+    <!--});-->
+<!--//        alert(2);-->
+    <!--doc.addImage(canvas.toDataURL(), 'PNG', 0, 0);-->
+    <!--doc.save('test.pdf');-->
+    <!--}-->
+    <!--</script>-->
+
+
+
+
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash;//<?php /* Template name: Калькулятор Новый */&ndash;&gt;-->
+
+<!--<div class="savedraft">Convert</div>-->
+<!--<button class="btn btn-primary" onclick="doCanvas('single');">Скачать матрицу</button>-->
+
+<!--&lt;!&ndash;<button class="btn btn-primary" onclick="saveMatrix('single');">Скачать матрицу</button>&ndash;&gt;-->
+
+
+
+
+
+<!--&lt;!&ndash;<canvas>&ndash;&gt;-->
+<!--<div  class="div2image" id="single" >-->
+
+
+ <!--<div class="synastry-result-1" id="synastry-result-1">-->
+     <!--<p> Проблема с русскими буквами?  trtrtrttrtr'hfhfhfhf-->
+    <!--hfhfhhfhfhfhfhfhfh</p>-->
+ <!--</div>-->
+
+<!--<div class="synastry-result-2" id ="synastry-result-2">-->
+
+    <!--<img src="img/slide4N.png">-->
+<!--</div>-->
+
+    <!--<div class="synastry-result-3" id ="synastry-result-3">-->
+        <!--<p> Проблема с русскими буквами?  trtrtrttrtr'hfhfhfhf-->
+            <!--hfhfhhfhfhfhfhfhfh</p>-->
+    <!--</div>-->
+
+
+<!--</div>-->
+<!--&lt;!&ndash;</canvas>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;//<?php get_header(); ?>&ndash;&gt;-->
+
+
+
+
+
+
+<!--<main id="content" class="content">-->
+
+<!--&lt;!&ndash;//<?php do_action( 'basic_main_content_inner_begin' ); ?>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;//<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/Calc_style.css" rel="stylesheet">&ndash;&gt;-->
+    <!--&lt;!&ndash;//<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;//<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/scriptsCalc.js"></script>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;<canvas id="tutorial">&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;</canvas>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<canvas>&ndash;&gt;-->
+    <!--&lt;!&ndash;</canvas>&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;<div class="calculator">&ndash;&gt;-->
+
+
+
+
+
+
+
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+<!--</main>-->
+<!--&lt;!&ndash;<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>&ndash;&gt;-->
+
+<!--&lt;!&ndash;https://html2canvas.hertzen.com/dist/html2canvas.js&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;<script src="js/jquery.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="js/pdfmake.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="js/vfs_fonts.js"></script>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<script src="js/html2canvas.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="js/html2canvas.js"></script>&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;<script src="js/scriptsCalc.js"></script>&ndash;&gt;-->
+
+
+
+
+<!--</body>-->
+<!--</html>-->
+

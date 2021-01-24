@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<html lang="ru" class="translated-ltr">
+<!--<html lang="en" >-->
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/jspdf.plugin.addimage.js"></script>
+    <script src="js/jspdf.plugin.addimage.js"></script>
+    <script src="js/FileSaver.js"></script>
+
+
+
+
+</head>
+<body>
+<div id="content">
+    <h3>Hello, this is a H3 tag</h3>
+
+    <p>a pararaph</p>
+    <img src="img/logo1.png">
+</div>
+
+    <div class="zakas_smeta_lenta "  id="zakas_smeta_lenta">
+
+                         <h1>СМЕТА СТОИМОСТИ СТРОИТЕЛЬСТВА ЛЕНТОЧНОГО ФУНДАМЕНТА</h1>
+                <!--         <div class="table_bl">-->
+                <table class="table">
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td  style="width:30%"></td>
+                        <td style="width:10%"></td>
+                        <td style="width:10%"></td>
+                        <td style="width:40%"></td>
+
+                    </tr>
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td colspan="5"  style="width:70%"> <img src="img/logo1.png"> </td>
+                        <td style="width:10%"></td>
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%"></td>
+
+                        <td colspan="5" style="width:50%">ООО «Фундамент-СПб», г. Санкт-Петербург, ул. Оптиков, дом 4, корпус 3, офис № 309 www.fundament-spb.ru, т.: 936-16-65. </td>
+                        <td style="width:10%"></td>
+
+                    </tr>
+
+                    <tr>
+                        <th style="width:0%"></th>
+                        <th colspan="5" style="width:100%; font-size:24px; text-align:center;">СМЕТА СТОИМОСТИ СТРОИТЕЛЬСТВА ЛЕНТОЧНОГО ФУНДАМЕНТА</th>
+
+                        <th  style="width:0%">  </th>
+
+                    </tr>
+                    <tr style="display:none"  >
+                        <th style="width:40%"></th>
+                        <th style="width:10%"> </th>
+                        <th  style="width:10%">  </th>
+                        <th  style="width:40%"> </th>
+
+                    </tr>
+
+                    <tr >
+
+                        <th style="width:0%"></th>
+                        <th style="width:40%">Длина </th>
+                        <th  style="width:20%"> <span id="landlfsm"></span> </th>
+                        <th  style="width:10%">м  </th>
+
+
+
+                    </tr>
+
+                    <tr >
+                        <th style="width:0%"></th>
+                        <th style="width:40%">Высота </th>
+                        <th  style="width:20%"> <span id="hplsm"></span> </th>
+                        <th  style="width:10%">м.  </th>
+
+                    </tr>
+
+                    <tr >
+                        <th style="width:10%"></th>
+                        <th style="width:70%">Ширина </th>
+                        <th  style="width:20%"> <span id="breadthlfsm"></span> </th>
+                        <th  style="width:10%">м.  </th>
+
+                    </tr>
+
+                    <tr >
+                        <th style="width:10%"></th>
+                        <th style="width:70%">Щебеночная подушка </th>
+                        <th  style="width:10%"> <span id="hsheblpsm"></span> </th>
+                        <th  style="width:10%">м.  </th>
+
+                    </tr>
+
+
+
+                    <tr >
+                        <th style="width:10%"></th>
+                        <th style="width:70%">Толщина выбираемого слоя грунта </th>
+                        <th  style="width:10%"> <span id="hgruntsm"></span> </th>
+                        <th  style="width:10%">м.  </th>
+
+                    </tr>
+
+                    <tr >
+                        <th style="width:10%"></th>
+                        <th style="width:70%">Площадь пятна застройки </th>
+                        <th  style="width:20%"> <span id="splsm"></span> </th>
+                        <th  style="width:10%">м2.  </th>
+
+                    </tr>
+
+                    <tr >
+                        <th style="width:10%"></th>
+                        <th style="width:40%">Периметр наружных стен </th>
+                        <th  style="width:10%"> <span id="perimplsm"></span> </th>
+                        <th  style="width:10%">м.  </th>
+
+                    </tr>
+
+                    <tr >
+                        <th style="width:10%"></th>
+                        <th style="width:40%">Глубина заложения фундамента </th>
+                        <th  style="width:10%"> <span id="hfundaentsm"></span> </th>
+                        <th  style="width:10%">м.  </th>
+
+                    </tr>
+
+
+
+                    <tr >
+                        <th style="width:10%"></th>
+                        <th style="width:40%">Расстояние от КАД </th>
+                        <th  style="width:10%"> <span id="lkadplsm"></span> </th>
+                        <th  style="width:10%">км.  </th>
+
+                    </tr>
+
+
+
+                </table>
+                <table class="table">
+                    <tr>
+                        <td style="width:2%"></td>
+                        <td  style="width:70%"></td>
+                        <td style="width:10%"></td>
+                        <td style="width:10%"></td>
+
+
+                    </tr>
+
+                    <tr style="display:none;">
+                        <th style="width:2%"> </th>
+                        <th style="width:70%"> </th>
+                        <th  style="width:10%"> </th>
+                        <th  style="width:10%"></th>
+
+                    </tr>
+                    <tr >
+                        <th style="width:10%"> </th>
+                        <th colspan="2" style="width:100%">Гарантируем сдачу объекта в срок. Или выполним все работы бесплатно! Зафиксируем это в договоре.  </th>
+
+                        <th  style="width:10%"></th>
+
+                    </tr>
+
+
+
+                    <tr >
+                        <th style="width:10;border-top: none;%"> </th>
+                        <th colspan="2" style="font-size:20px; text-align:center;border-top: none; line-height: 1;">Работы: </th>
+
+                        <th  style="width:10%;border-top: none;"></th>
+
+                    </tr>
+
+                    <tr>
+                        <th style="width:2%;border-top: none;">№ </th>
+                        <th style="width:40%;;border-top: none;">Наименование </th>
+                        <th style="width:10%;border-top: none;%">Ед.изм  </th>
+                        <th  style="width:10%;border-top: none;">Объем  </th>
+
+                    </tr>
+
+
+                    <tr>
+                        <td style="width:2%">1 </td>
+                        <td style="width:70%">Вынос осей, разбивка участка </td>
+                        <td  style="width:10%">компл.  </td>
+                        <td  style="width:10%">1  </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">2 </td>
+                        <td style="width:70%">Земляные работы (без вывоза грунта)</td>
+                        <td  style="width:10%">м3  </td>
+                        <td  style="width:10%"><span id="zemvsm"></span> </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width:10%">3 </td>
+                        <td style="width:70%">Устройство разделительного слоя из геотекстиля </td>
+                        <td  style="width:10%">м2  </td>
+                        <td  style="width:10%"><span id="kgeotekscm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">4 </td>
+                        <td style="width:70%">Устройство щебеночной подушки с послойной трамбовкой виброплитой  </td>
+                        <td  style="width:10%">м3  </td>
+                        <td  style="width:10%"><span id="sshebsm"></span> </td>
+
+                    </tr>
+                    <tr>
+                        <td style="width:10%">5 </td>
+                        <td style="width:70%">Укладка гидроизоляционной мембраны Planter  </td>
+                        <td  style="width:10%">м.п.  </td>
+                        <td  style="width:10%"><span id="kgidroisol"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">6 </td>
+                        <td style="width:40%">Изготовление и установка арматурных каркасов, монтаж арматурной сетки </td>
+                        <td  style="width:10%">т.  </td>
+                        <td  style="width:10%"><span id="karmrfrk24r"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">7 </td>
+                        <td style="width:40%">Монтаж и демонтаж опалубки  </td>
+                        <td  style="width:10%">м2  </td>
+                        <td  style="width:10%"><span id="kmontagopalsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">8 </td>
+                        <td style="width:40%">Укладка бетона с вибрированием  </td>
+                        <td  style="width:10%">м3  </td>
+                        <td  style="width:10%"><span id="kukbetonr"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">9 </td>
+                        <td style="width:40%">Засыпка наружных пазух песком  </td>
+                        <td  style="width:10%">м3  </td>
+                        <td  style="width:10%"><span id="kzacupr"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <th style="width:10%"> </th>
+                        <th style="width:40%">Итого: </th>
+                        <th  style="width:10%"></th>
+                        <th  style="width:20%"><span id="zitog1sm"></span> </th>
+                    </tr>
+
+
+                    <tr >
+                        <th style="width:10%;border-top: none;"> </th>
+                        <th colspan="2" style="font-size:20px; text-align:center;border-top: none;line-height:1;">Материалы: </th>
+                        <th  style="width:10%;border-top: none;"></th>
+
+                    </tr>
+
+
+                    <tr>
+                        <td style="width:10%;border-top: none;">1 </td>
+                        <td style="width:70%;border-top: none;">Геотекстиль Мегаизол Гео про 200 </td>
+                        <td  style="width:10%;border-top: none;">м2.  </td>
+                        <td  style="width:10%;border-top: none;"><span id="kgeomag"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">2 </td>
+                        <td style="width:70%">Песок строительный с учетом доставки </td>
+                        <td  style="width:10%">м3.  </td>
+                        <td  style="width:10%"><span id="kpesoksm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">3 </td>
+                        <td style="width:70%">Щебень гранитный фр. 20-40 мм.  с учетом доставки </td>
+                        <td  style="width:10%">м3.  </td>
+                        <td  style="width:10%"><span id="kshebensm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">4 </td>
+                        <td style="width:40%">Геомембрана Planter </td>
+                        <td  style="width:10%">м2.  </td>
+                        <td  style="width:10%"><span id="kgeomemsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">5 </td>
+                        <td style="width:40%">Доска 40*150*6000 для раскрепления инвентарных щитов </td>
+                        <td  style="width:10%">м3.  </td>
+                        <td  style="width:10%"><span id="kdoska40r"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">6 </td>
+                        <td style="width:40%">Опалубка инвентарная из ламинированной фанеры на деревянном каркасе</td>
+                        <td  style="width:10%">м2.  </td>
+                        <td  style="width:10%"><span id="kopalsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">7 </td>
+                        <td style="width:40%">Фанера 18 мм (на подрезку) </td>
+                        <td  style="width:10%">м2.  </td>
+                        <td  style="width:10%"><span id="kfanera18"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">8 </td>
+                        <td style="width:40%">Фиксатор для арматуры вертикальной </td>
+                        <td  style="width:10%">шт.  </td>
+                        <td  style="width:10%"><span id="kfiksator"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">9 </td>
+                        <td style="width:40%">Арматура d12 А500 </td>
+                        <td  style="width:10%">т.  </td>
+                        <td  style="width:10%"><span id="karm12r"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">10 </td>
+                        <td style="width:40%">Арматура d8 А500 на хомуты  </td>
+                        <td  style="width:10%">т.  </td>
+                        <td  style="width:10%"><span id="karm8r"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">11 </td>
+                        <td style="width:40%">Проволока вязальная </td>
+                        <td  style="width:10%">кг.  </td>
+                        <td  style="width:10%"><span id="kprovsmr"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">12 </td>
+                        <td style="width:40%">Бетон B22,5 М300 П4 (С учетом доставки из СПб)  </td>
+                        <td  style="width:10%">м3  </td>
+                        <td  style="width:10%"><span id="kbetonb22r"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <th style="width:10%"> </th>
+                        <th style="width:40%">Итого: </th>
+                        <th  style="width:10%"></th>
+                        <th  style="width:20%"><span id="zitog2sm"></span> </th>
+                    </tr>
+
+
+
+                    <tr >
+                        <th style="width:10%;border-top: none;"> </th>
+                        <th colspan="2" style="font-size:20px; text-align:center;border-top: none;line-height:1;">Доставка: </th>
+                        <th  style="width:10%;border-top: none;"></th>
+
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td style="width:10%;border-top: none;">1</td>
+                        <td style="width:40%;border-top: none;">Доставка арматуры шаландой/манипулятором</td>
+                        <td  style="width:10%;border-top: none;">доставка  </td>
+                        <td  style="width:10%;border-top: none;">1 </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">2</td>
+                        <td style="width:40%">Доставка и вывоз опалубки </td>
+                        <td  style="width:10%">доставка  </td>
+                        <td  style="width:10%">1 </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">3</td>
+                        <td style="width:40%">Доставка остальных материалов </td>
+                        <td  style="width:10%">доставка  </td>
+                        <td  style="width:10%">1 </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">4</td>
+                        <td style="width:40%">Доставка и вывоз инструмента на прицепе </td>
+                        <td  style="width:10%">доставка  </td>
+                        <td  style="width:10%"> </td>
+
+                    </tr>
+
+                    <tr>
+                        <th style="width:10%"> </th>
+                        <th style="width:40%"> Итого: </th>
+                        <th  style="width:10%"></th>
+                        <th  style="width:20%"><span id="zdostavmatsm"></span> </th>
+                    </tr>
+
+                    <tr >
+                        <th style="width:10%"> </th>
+                        <th style="width:40%">Итого за материалы: </th>
+
+                        <th  style="width:10%"></th>
+                        <th  style="width:20%"><span id="zdostavmatitogosm"></span> </th>
+                    </tr>
+
+
+                    <tr >
+                        <th style="width:10%;border-top: none;"> </th>
+                        <th colspan="2" style="font-size:20px; text-align:center;border-top: none;">Доп. Работы (данный раздел включает работы и материал): </th>
+                        <th  style="width:10%;border-top: none;"></th>
+
+                    </tr>
+
+
+
+                    <tr>
+                        <td style="width:10%;border-top: none;">1</td>
+                        <td style="width:40%;border-top: none;">Планировка выбранного грунта из котлована по участку </td>
+                        <td  style="width:10%;border-top: none;">м3  </td>
+                        <td  style="width:10%;border-top: none;"><span id="kgruntsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">2</td>
+                        <td style="width:40%">Устройство закладной гильзы для ввода водопровода (Гильза DKC 63 мм) </td>
+                        <td  style="width:10%">м.п.  </td>
+                        <td  style="width:10%"><span id="kzakladsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">3</td>
+                        <td style="width:40%">Устройство закладной для ввода электричества (Гильза DKC d 63 мм с протяжкой) </td>
+                        <td  style="width:10%">м.п.  </td>
+                        <td  style="width:10%"><span id="kzakladelsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">4</td>
+                        <td style="width:40%">Разводка канализации под домом (Трубы Оstendorf d 110 мм и комплект отводов, углов) </td>
+                        <td  style="width:10%">м.п.  </td>
+                        <td  style="width:10%"><span id="kzakladkanalsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">5</td>
+                        <td style="width:40%">Устройство дренажа фундамента </td>
+                        <td  style="width:10%">м.п.  </td>
+                        <td  style="width:10%"><span id="kdrenagsm"></span> </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td style="width:10%">6</td>
+                        <td style="width:40%">Вывоз мусора после завершения работ на объекте</td>
+                        <td  style="width:10%">шт.  </td>
+                        <td  style="width:10%"><span id="kmusorsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <th style="width:10%"> </th>
+                        <th style="width:40%">Итого доп. работы: </th>
+                        <th  style="width:10%"></th>
+                        <th  style="width:20%"><span id="zitogdopsm"></span> </th>
+                    </tr>
+
+                    <tr >
+                        <th style="width:10%;border-top: none;"> </th>
+                        <th colspan="2" style="font-size:20px; text-align:center;border-top: none; line-height: 1;">Спецтехника и доп. оборудование: </th>
+
+                        <th  style="width:10%;border-top: none;"></th>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%;border-top: none;">1</td>
+                        <td style="width:40%;border-top: none;">Бетононасос</td>
+                        <td  style="width:10;border-top: none;%">м3  </td>
+                        <td  style="width:10%;border-top: none;">1 </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">2</td>
+                        <td style="width:40%">Обеспечение строительным вагончиком</td>
+                        <td  style="width:10%">шт.  </td>
+                        <td  style="width:10%"><span id="kvagonsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">3</td>
+                        <td style="width:40%">Обеспечение биотуалетом</td>
+                        <td  style="width:10%">шт.  </td>
+                        <td  style="width:10%"><span id="kbiotualsm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">4</td>
+                        <td style="width:40%">Обеспечение электричеством </td>
+                        <td  style="width:10%">смен.  </td>
+                        <td  style="width:10%"><span id="kelktrosm"></span> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%">5</td>
+                        <td style="width:40%">Обеспечение водой </td>
+                        <td  style="width:10%">компл.  </td>
+                        <td  style="width:10%"><span id="kvatersm"></span> </td>
+
+                    </tr>
+
+
+
+
+                    <tr>
+                        <th style="width:10%"> </th>
+                        <th style="width:40%">Итого за спецтехнику и доп. оборудование: </th>
+                        <th style="width:10%"  ></th>
+                        <th  style="width:20%"><span id="zitogcpezsm"></span> </th>
+                    </tr>
+
+                    <tr>
+                        <th  style="width:10%"> </th>
+                        <th style="width:40%">Итого за работы и материалы: </th>
+                        <th style="width:10%"  ></th>
+                        <th  style="width:20%"><span id="zitogo5sm"></span> </th>
+                    </tr>
+
+                    <tr>
+                        <th  style="width:10%"> </th>
+                        <th style="width:40%">Накладные расходы 2%: </th>
+                        <th style="width:10%"  ></th>
+                        <th  style="width:20%"><span id="zitogSMplpr"></span> </th>
+                    </tr>
+
+                    <tr style="color:#0467a6;"> >
+                        <th  style="width:10%"> </th>
+                        <th style="width:40%">ИТОГО ПО СМЕТЕ: </th>
+                        <th style="width:10%"  ></th>
+                        <th  style="width:30%"><span id="zitogSMpl"></span> </th>
+                    </tr>
+
+
+
+                    <tr>
+                        <th  style="width:10%"> </th>
+                        <th colspan="2" style="width:40%;text-align: center;">Выезд технического специалиста для уточнения сметы бесплатный.</th>
+                        <th  style="width:10%"> </th>
+                    </tr>
+
+
+                    <tr>
+                        <th style="width:10%"> </th>
+                        <th colspan="2" style="width:40%;text-align: center;">Порядок расчетов и суммы по этапам оплат: </th>
+                        <th  style="width:10%"> </th>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="2" style="width:40%;text-align: center">Наименование этапа </td>
+
+                        <td  colspan="2" style="width:40%;text-align: center">Ориентировочная сумма платежа, рублей </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width:10%"> </td>
+                        <td colspan="2" style="width:40%;text-align: left">1 этап: Материалы на устройство фундамента, (за исключением стоимости бетона), доставки: оплачиваются при подписании договора </td>
+                        <td  style="width:10%"> </td>
+                        <td  style="width:10%">  </td>
+                        <td  colspan="2" style="width:40%;text-align: center"><span id="zitog1etapsm"></span> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width:10%"> </td>
+                        <td colspan="2" style="width:40%;text-align: left">2 этап: Стоимость бетона + бетононасос: оплачиваются по факту окончания работ по опалубке </td>
+                        <td  style="width:10%"> </td>
+                        <td  style="width:10%">  </td>
+                        <td  colspan="2" style="width:40%;text-align: center"><span id="zitog2etapsm"></span> </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width:10%"> </td>
+                        <td colspan="2" style="width:40%;text-align: left">3 этап: Оплата работ согласно смете: оплачивается в течение 5 дней после подписания акта приема-передачи всех работ по объекту </td>
+                        <td  style="width:10%"> </td>
+                        <td  style="width:10%">  </td>
+                        <td  colspan="2" style="width:40%;text-align: center"><span id="zitog3etapsm"></span> </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td style="width:10%"> </td>
+                        <th colspan="2" style="width:40%;text-align: center">Данная смета является предварительной. Объемы и стоимость работ будут скорректированы после выезда технического специалиста на участок, разработки рабочей документации по фундаменту и согласования с Заказчиком.</th>
+                        <td style="width:10%"> </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%"> </td>
+                        <th colspan="2" style="width:40%;text-align: center">Актуальный срок данного коммерческого предложения составляет 14 календарных дней, т.к. цены на некоторые материалы могут изменяться.</th>
+                        <td style="width:10%"> </td>
+                    </tr>
+
+
+
+                </table>
+
+                <!--			   </div>-->
+
+            </div>
+
+
+
+
+
+
+<div id="editor"></div>
+<button id="cmd">Generate PDF</button>
+
+<script>
+
+
+    var doc = new jsPDF();
+    var specialElementHandlers = {
+        '#editor': function (element, renderer) {
+            return true;
+        }
+    };
+
+
+    $('#cmd').click(function () {
+        doc.fromHTML($('#zakas_smeta_lenta').html(), 15, 15, {
+            'width': 170,
+            'elementHandlers': specialElementHandlers
+        });
+        doc.save('sample-file1.pdf');
+    });
+
+
+
+
+
+
+
+    var doc = new jsPDF();
+    var specialElementHandlers = {
+        '#editor': function (element, renderer) {
+            return true;
+        }
+    };
+
+    $('#cmd').click(function () {
+
+
+       //doc.fromHTML($('#zakas_smeta_lenta').html(), 15, 15, {
+        doc.fromHTML($('#content').html(), 15, 15, {
+            'width': 670,
+            'elementHandlers': specialElementHandlers
+        });
+        doc.save('sample-file2.pdf');
+    });
+
+    // This code is collected but useful, click below to jsfiddle link.
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+

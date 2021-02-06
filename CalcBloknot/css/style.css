@@ -1,0 +1,556 @@
+
+body{
+    margin: 0;
+	padding:0;
+    width: 100%;
+    height: auto;
+}
+
+
+/*		Описание первого блока - типы блокнотов		*/
+
+.calc_content_img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.calc_content_img h2{
+    text-align: center;
+}
+
+.calc_content_img_block{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.calc_content_img_block1{
+    display: block;
+    width: 30%;
+    float: left;
+  /*//  background-color: #0066cc;*/
+   /*// min-height: 100px;*/
+}
+
+.calc_content_img_block1 img{
+    display: block;
+    max-height: 130px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.calc_content_img_block1 span{
+    display: block;
+    text-align: center;
+}
+
+.active{
+    border: 2px solid #0066cc;
+    border-radius: 3px;
+    color:#0066cc ;
+}
+
+
+
+/*		Описание вторoго блока - параметры блокнотов		*/
+
+.calc_content{
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color:#f3f3f3;
+    min-height: 100px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.calc_content_block1{
+    display: block;
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+    border-right: 1px solid #000000;
+    min-height: 50px;
+}
+
+
+.calc_content_block2{
+    display: block;
+    width: 49%;
+    float: left;
+}
+.calc_content_block2_img{
+    display: block;
+    margin-top: 20px;
+    /*margin: 0 auto;*/
+}
+
+.Lbl{
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 76.5%;
+    background-color: #f3f3f3;
+}
+.Hbl{
+    display: block;
+    position: absolute;
+    top: 81%;
+    left: 72.5%;
+    background-color: #f3f3f3;
+}
+
+.calc_content_block-data{
+    display: block;
+    width: auto;
+    margin-left: 20px;
+}
+
+.calc_content_block-data span{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+
+.calc_content_block2 img{
+    display: block;
+    width: 130px;
+    margin: 0 auto;
+}
+
+.calc_content_format{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*.calc_content_format label{*/
+    /*display: block;*/
+    /*font-weight: bold;*/
+    /*margin-right: 10px;*/
+    /*width: 20%;*/
+    /*float: left;*/
+/*}*/
+
+.name{
+    display: block;
+    font-weight: bold;
+    margin-right: 10px;
+    width: 25%;
+    float: left;
+}
+
+.format{
+    width: 50%;
+}
+.kol{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.calc_content_format2{
+    display: none;
+    margin-top: 20px;
+    margin-left: 21%;
+}
+
+.format2_active{
+    display: block;
+}
+
+/*//====== Втрой блок и его компоненты ===========================//*/
+.line{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    height: 0.5px;
+    background-color:  #000000;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.calc_content_2{
+    display:block;
+    width: 100%;
+    padding-top: 20px;
+    background-color:#f3f3f3;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.calc_content_2_block1{
+    display: block;
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+    border-right: 1px solid #000000;
+    min-height: 50px;
+}
+
+.calc_content_dop1{
+    width: 42%;
+    float: left;
+    margin-left: 20px;
+    min-height: 30px;
+   // background-color: #0066cc;
+}
+.calc_content_dop2{
+    width: 42%;
+    float: left;
+    margin-left: 20px;
+    min-height: 30px;
+
+}
+.typedop{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.calc_content_dop_block{
+    display: block;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+
+}
+.imgobl{
+    display: block;
+    position: relative;
+    height: 35px;
+    width: 40px;
+    top: -39%;
+    left: -6%;
+    z-index: 100;
+    margin-top: -7%;
+}
+.imgbl{
+    display: block;
+    position: relative;
+    height: 35px;
+    width: 40px;
+    top: -39%;
+    left: -6%;
+    z-index: 100;
+    margin-top: -7%;
+}
+
+.obl_text{
+    width: 90%;
+    margin-left: 20px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+
+
+
+
+.calc_content_2_block2{
+    display: block;
+    width: 49%;
+    float: left;
+    margin-top: 20px;
+    min-height: 50px;
+}
+
+.calc_itog{
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.itogdata{
+    font-weight: bold;
+    color: #0066cc;
+}
+.calc_itog a{
+    display: inline-block;
+    width: 100%;
+}
+
+/*//=================================//*/
+
+/*//==================================//  */
+
+/*
+* Оформление контактной формы
+* без дополительных изображений;
+* исключительно средствами CSS;
+
+
+*/
+
+/*--Слой затемнения фона--*/
+
+.popup-fade1 {
+    display: none;
+}
+.popup-fade1:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+.popup-fade2 {
+    display: none;
+}
+.popup-fade2:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+.popup {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    padding: 20px;
+    width: 30em;
+    margin-left: -20em;
+    background: #fff;
+    border: 1px solid orange;
+    border-radius: 4px;
+    z-index: 99999;
+    opacity: 1;
+}
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0056b3;
+}
+
+.popup-close2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0056b3;
+}
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none; /*--по умолчанию скрыт--*/
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .70;/* Полупрозрачность слоя затемнения */
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+/*--Модальное окно--*/
+.popup_block{
+    position: fixed;
+    top: 55%;;
+    left: 45%;
+    z-index: 99999;
+    display: none; /*--по умолчанию скрыт--*/
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    max-height: 100%;
+
+    /*-- скругленные углы--*/
+
+    color: #ffffff;
+    font-size: .9em;
+}
+/*--Фиксированное позиционирование для тупого IE6--*/
+*html #fade {
+    position: absolute;
+}
+*html .popup_block {
+    position: absolute;
+}
+/*--Блок содержания--*/
+
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 20px;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    /*--крутим кнопку при наведении--*/
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.note h2{
+    text-align: center;
+}
+.param{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.param_block{
+    display: block;
+    margin-left: 20px;
+}
+
+.button_param{
+    display: block;
+    margin: 0 auto;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/* конец формы */
+
+
+
+/*//========================================//*/
+
+
+@media only screen  and (max-width: 1024px) {
+    
+    .calc_block1_text p {
+
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    .calc_block2_text p {
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    .calc_block3_text p {
+        font-size: 1em;
+        padding-left: 10px;
+    }
+
+    .calc_block4_check label{
+        font-size: 1em;
+    }
+}
+
+
+@media only screen  and (max-width: 768px) {
+     .calc_block1_pol span{
+        font-size: 17px;
+    }
+    .calc_block2_pol span{
+        font-size: 17px;
+    }
+    .calc_block2_pol input {
+         width: 65%
+    }
+
+    .calc_block2_pol input {
+         width: 65%
+    }
+    .calc_block1_text {
+        display: block;
+        width: 100%;
+        float: right;
+    }
+
+    .calc_block2_text {
+        display: block;
+        width: 100%;
+        float: right;
+    }
+    .calc_block1_pol {
+        display: block;
+        width: 70%;
+        float: left;
+    }
+    .calc_block2_pol {
+        display: block;
+        width: 70%;
+        float: left;
+    }
+
+    .calc_block1 {
+        margin-bottom: 50px;
+    }
+
+    .ServmaxR{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ServmaxST{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media only screen  and (max-width: 480px) {
+
+    .ServmaxR{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ServmaxST{
+        width: 100%;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор изготовления блокнотов</title>
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор изготовления блокнотов">
+    <link href="css/style.css" rel="stylesheet">
+    
+
+</head>
+<body>
+
+<div class="calc_content_img">
+
+    <h2>Типы блокнотов</h2>
+
+    <div class="calc_content_img_block">
+        <div class="calc_content_img_block1 active" id="1">
+            <img src="img/rect1.png">
+            <span>Скоба</span>
+        </div>
+        
+        <div class="calc_content_img_block1" id="2">
+            <img src="img/rect2.png">
+            <span>Пружина</span>
+        </div>
+        
+        <div class="calc_content_img_block1" id="3">
+            <img src="img/rect3.png">
+            <span>Клей</span>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="calc_content">
+
+    <div class="calc_content_block1">
+        <div class="calc_content_block-data">
+            <span id="typeCalck">Блокнот на скобу</span>
+
+          <div class="calc_content_format">
+            <label class="name">Формат</label>
+            <select required class="format" id="format" >
+            </select>
+
+              <div class="calc_content_format2">
+                  <input type="number" class="tirag" id="Llist" min="1" step="1" value="105">
+                  <input type="number" class="tirag" id="Hlist" min="1" step="1" value="148">
+              </div>
+          </div>
+
+           <div class="calc_content_format">
+                <label class="name">Тираж</label>
+                 <input type="number" class="tirag" id="tirag" min="1" step="1" value="35">
+               <label class="kol">шт</label>
+           </div>
+
+            <div class="calc_content_format">
+                <label class="name">Количество страниц   </label>
+                <input type="number" class="tirag" id="list" min="1" step="1" value="100">
+                <label class="kol">шт</label>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="calc_content_block2">
+        <div class="calc_content_block2_img">
+             <img src="img/block9.png">
+               <span id="Lbl" class="Lbl">105</span>
+               <span id="Hbl" class="Hbl">148</span>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+     <div class="calc_content_2">
+         <div class="line"> </div>
+
+
+         <div class="calc_content_2_block1">
+             <div class="calc_content_dop1 popup-open">
+                 <span class="typedop">Обложка</span>
+                 <!--<img src="img/oblogka.png" class="imgobl">-->
+                 <div class="calc_content_dop_block">
+
+                     <img src="img/oblogka.png" class="imgobl">
+                     <span id="type_obl" class="obl_text">мелованная ;</span>
+                     <span id="pl_otbl" class="obl_text">90 ;</span>
+                     <span id="color_obl" class="obl_text">4+0 ;</span>
+                     <span id="lamin_obl" class="obl_text">32_мкн_глянцевая_1+0 ;</span>
+
+                 </div>
+
+             </div>
+
+             <div class="calc_content_dop2 popup-open2">
+                 <span class="typedop">Блок</span>
+                 <div class="calc_content_dop_block">
+
+                     <img src="img/bookFront.png" class="imgbl">
+                     <span id="type_bl" class="obl_text">мелованная ;</span>
+                     <span id="pl_bl" class="obl_text">90 ;</span>
+                     <span id="color_blv" class="obl_text">4+0 ;</span>
+                     <span id="lamin_bl" class="obl_text">32_мкн_глянцевая_1+0 ;</span>
+
+                 </div>
+
+
+             </div>
+         </div>
+
+
+         <div class="calc_content_2_block2">
+
+             <div class="calc_itog">
+                 <h2>Общие параметры</h2>
+                 <a>Тип блокнота &nbsp;<span class="itogdata" id="tupblitog">Блокнот на скобу</span></a>
+                 <a>Ширина блокнота &nbsp;<span class="itogdata" id="Litog">105</span>&nbsp;мм</a>
+                 <a>Высота блокнота &nbsp;<span class="itogdata" id="Hitog">148</span>&nbsp;мм</a>
+                 <h2>Итоговая цена</h2>
+                 <p>Цена обложки&nbsp;<span class="itogdata" id="ZoblItog">0</span>&nbsp;руб</p>
+                 <p>Цена блокнот&nbsp;<span class="itogdata" id="Z_blItog">0</span>&nbsp;руб</p>
+
+                 <p>Цена заказа&nbsp;<span class="itogdata" id="Zitog">0</span>&nbsp;руб</p>
+
+             </div>
+
+
+         </div>
+
+      </div>
+
+<div class="popup-fade1">
+    <div class="popup">
+        <a class="popup-close" href="#">Закрыть</a>
+
+        <div class="note">
+            <h2> Выбор параметров обложки </h2>
+         </div>
+       <div class="param">
+
+        <div class="param_block">
+            <p>Тип бумаги </p>
+            <select required class="format" id="typeb" >
+            </select>
+        </div>
+
+        <div class="param_block">
+             <p>Плотность  бумаги </p>
+             <select required class="format" id="plb" >
+             </select>
+        </div>
+
+        <div class="param_block">
+            <p>Цветность </p>
+            <select required class="format" id="colorb" >
+            </select>
+        </div>
+
+        <div class="param_block">
+            <p>Ламинация </p>
+             <select required class="format" id="laminb" >
+             </select>
+         </div>
+       </div>
+
+
+
+
+            <input type="button" class="button_param" id="button1" value="Сохранить параметры" />
+
+
+
+
+
+    </div>
+</div>
+
+<div class="popup-fade2">
+    <div class="popup">
+    <a class="popup-close2" href="#">Закрыть</a>
+
+    <div class="note">
+        <h2> Выбор параметров блокнота </h2>
+    </div>
+    <div class="param">
+
+        <div class="param_block">
+            <p>Тип бумаги </p>
+            <select required class="format" id="typeb_bl" >
+            </select>
+        </div>
+
+        <div class="param_block">
+            <p>Плотность  бумаги </p>
+            <select required class="format" id="plb_bl" >
+            </select>
+        </div>
+
+        <div class="param_block">
+            <p>Цветность </p>
+            <select required class="format" id="colorb_bl" >
+            </select>
+        </div>
+
+        <div class="param_block">
+            <p>Ламинация </p>
+            <select required class="format" id="laminb_bl" >
+            </select>
+        </div>
+    </div>
+
+
+
+
+    <input type="button" class="button_param" id="button2" value="Сохранить параметры" />
+</div>
+</div>
+
+
+
+<script src="js/jquery.min.js"></script>
+ <!--<script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>-->
+<script src="js/data.js" ></script>
+<script src="js/scriptsCalc.js" ></script>
+
+<script>
+    $(document).ready(function($) {
+        $('.popup-open2').click(function() {
+            $('.popup-fade2').fadeIn();
+            return false;
+        });
+
+        $('.popup-close2').click(function() {
+            $(this).parents('.popup-fade2').fadeOut();
+            return false;
+        });
+        $('#button2').click(function() {
+
+            $(this).parents('.popup-fade2').fadeOut();
+            $('.popup-fade2').fadeOut();
+             return false;
+        });
+
+
+        $(document).keydown(function(e) {
+            if (e.keyCode === 27) {
+                e.stopPropagation();
+                $('.popup-fade2').fadeOut();
+            }
+        });
+
+        $('.popup-fade2').click(function(e) {
+            if ($(e.target).closest('.popup').length == 0) {
+                $(this).fadeOut();
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function($) {
+        $('.popup-open').click(function() {
+            $('.popup-fade1').fadeIn();
+            return false;
+        });
+
+        $('.popup-close').click(function() {
+            $(this).parents('.popup-fade1').fadeOut();
+            return false;
+        });
+        $('#button1').click(function() {
+           // alert(333)
+            $(this).parents('.popup-fade1').fadeOut();
+            $('.popup-fade1').fadeOut();
+            return false;
+        });
+
+        $(document).keydown(function(e) {
+            if (e.keyCode === 27) {
+                e.stopPropagation();
+                $('.popup-fade1').fadeOut();
+            }
+        });
+
+        $('.popup-fade1').click(function(e) {
+            if ($(e.target).closest('.popup').length == 0) {
+                $(this).fadeOut();
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
+

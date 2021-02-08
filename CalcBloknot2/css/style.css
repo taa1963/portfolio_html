@@ -1,0 +1,418 @@
+
+body{
+    margin: 0;
+	padding:0;
+    width: 100%;
+    height: auto;
+}
+
+
+.content{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/*		Описание первого блока - типы блокнотов		*/
+
+.content_block1{
+    display: block;
+    width: 40%;
+    height: auto;
+    float: left;
+    min-width: 400px;
+}
+.content_block1_content{
+    width: 60%;
+    display: block;
+    float: right;
+}
+
+
+.content_block1 h2{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.content_block1_img{
+    display: block;
+    width: 30%;
+    float: left;
+}
+.active{
+    border: 2px solid #0066cc;
+    border-radius: 3px;
+    color:#0066cc ;
+}
+
+.calc_content_img_block1{
+    display: block;
+    margin-left: 20px;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.calc_content_format{
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.name{
+    display: block;
+    font-family: 'Myriad Pro Light';
+    font-size: 1em;
+    margin-right: 10px;
+    width: 25%;
+    float: left;
+}
+.format{
+    width: 50%;
+}
+
+.tirag{
+    display: block;
+    width: 50%;
+}
+
+
+.cont_img_itog{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*.active_none{*/
+    /*display: none;*/
+
+/*}*/
+
+/*.active_bl{*/
+    /*display: block;*/
+
+/*}*/
+
+
+.cont_img_itog1{
+    display: block;
+    height: 200px;
+   
+}
+.cont_img_itog1 img{
+    display:block;
+    width: 94px;
+    height: 158px;
+    margin: 0 auto;
+
+
+}
+
+.Lbl{
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    background-color: #f3f3f3;
+}
+.Hbl{
+    display: block;
+    position: absolute;
+    top: 81%;
+    left: 48%;
+    background-color: #f3f3f3;
+}
+
+
+
+.cont_img_itog2{
+    display: none;
+    height: 200px
+}
+
+.cont_img_itog2 img{
+    display:block;
+    width: 141px;
+    height: 114px;
+    margin: 0 auto;
+
+
+}
+
+.Lb2{
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 63%;
+    background-color: #f3f3f3;
+}
+.Hb2{
+    display: block;
+    position: absolute;
+    top: 61%;
+    left: 48%;
+    background-color: #f3f3f3;
+}
+
+
+.active_img{
+    display: none;
+
+}
+
+.active_bl{
+    display: block;
+
+}
+
+/*		Описание вторго блока - ОБЛОЖКА		*/
+.content_block2{
+    display: block;
+    width: 30%;
+    margin-top: 10px;
+    float: left;
+
+}
+
+
+.content_block2_obl{
+    display: block;
+    width: 90%;
+    height: auto;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    min-height: 50px;
+}
+
+.content_block2_obl h2{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.param_block{
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.format2{
+    width: 80%;
+}
+
+
+.button_param{
+    display: block;
+   /*// background-color: #005697;*/
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: right;
+    margin-top: -11%;
+    margin-right: 15%;
+    border: 1px solid #000000;
+    border-radius: 2px;
+}
+
+
+.content_block2_bl{
+    display: block;
+    width: 90%;
+    height: auto;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    min-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content_block2_bl h2{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: left;
+    margin-left: 20px;
+}
+.tirag2{
+    display: block;
+    width: 80%;
+}
+
+.name2{
+    display: block;
+    font-family: 'Myriad Pro Light';
+    font-size: 1em;
+    margin-right: 10px;
+    width: 85%;
+    float: left;
+}
+
+/*		Описание 3 блока - ИТОГИ		*/
+.content_block3{
+    display: block;
+    width: 30%;
+    margin-top: 10px;
+    float: left;
+}
+.content_block3_cont h2{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    /*margin-left: 20px;*/
+}
+
+.content_block3 p{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    /*margin-left: 20px;*/
+}
+
+.content_block3 a{
+    width: 100%;
+    display: inline-block;
+}
+
+
+
+.itog_obl{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+.active_none{
+    display: none;
+
+}
+
+.itogdata{
+    color: #0066cc;
+}
+
+.content_block1_img img{
+     width: 109px;
+    height: 88px;
+}
+
+/*//========================================//*/
+
+
+@media only screen  and (max-width: 1024px) {
+
+    .Lbl {
+      left: 65%;
+    }
+    .Lb2 {
+        left: 70%;
+    }
+
+    .content_block1 {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+    .content_block2 {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+    .content_block3 {
+        display: block;
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 10px;
+
+    }
+
+}
+
+
+
+@media only screen  and (max-width: 960px) {
+
+    .content_block1 {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+    .content_block2 {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+    .content_block3 {
+        display: block;
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 10px;
+
+    }
+
+    .Lbl {
+        left: 65%;
+    }
+    .Lb2 {
+        left: 70%;
+    }
+}
+
+
+
+@media only screen  and (max-width: 788px) {
+    .content_block1 {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .content_block2 {
+        display: block;
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 10px;
+
+    }
+    .content_block3 {
+        display: block;
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 10px;
+
+    }
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+
+}

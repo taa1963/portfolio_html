@@ -8,8 +8,58 @@ Nobl=1;
 $(document).ready(function() {
 
 
+    $('.content_block1_img1').click (function(){
+       // alert(5);
+        $('.content_block1_img1_2').addClass('active_img2');
+        $('.content_block1_img1_1').addClass('active_imgnone');
 
-    $('.calc_content_img_block1').click (function ()  {
+        $('.content_block1_img2_1').removeClass('active_img2');
+        $('.content_block1_img2_1').addClass('active_imgnone');
+        $('.content_block1_img2_2').addClass('active_img2');
+        $('.content_block1_img2_2').removeClass('active_imgnone');
+
+        $('.content_block1_img3_2').removeClass('active_img2');
+        $('.content_block1_img3_1').removeClass('active_imgnone');
+        $('.pr').addClass('active_none');
+
+        typeCalck=1;
+        Zena();
+
+    });
+
+    $('.content_block1_img2').click (function(){
+        // alert(5);
+        $('.content_block1_img2_1').addClass('active_img2');
+        $('.content_block1_img2_2').addClass('active_imgnone');
+        $('.content_block1_img2_1').removeClass('active_imgnone');
+        $('.content_block1_img1_2').removeClass('active_img2');
+        $('.content_block1_img1_1').removeClass('active_imgnone');
+        $('.content_block1_img3_2').removeClass('active_img2');
+        $('.content_block1_img3_1').removeClass('active_imgnone');
+        $('.pr').removeClass('active_none');
+        typeCalck=2;
+        Zena();
+
+    });
+
+    $('.content_block1_img3').click (function(){
+        // alert(5);
+        $('.content_block1_img3_2').addClass('active_img2');
+        $('.content_block1_img3_1').addClass('active_imgnone');
+        $('.content_block1_img1_2').removeClass('active_img2');
+        $('.content_block1_img1_1').removeClass('active_imgnone');
+        $('.content_block1_img2_1').removeClass('active_img2');
+        $('.content_block1_img2_1').addClass('active_imgnone');
+        $('.content_block1_img2_2').addClass('active_img2');
+        $('.content_block1_img2_2').removeClass('active_imgnone');
+
+        typeCalck=3;
+        $('.pr').addClass('active_none');
+        Zena();
+    });
+
+
+    $('.calc_content_img_block133').click (function ()  {
         $(".calc_content_img_block1").removeClass("active"); // Снимаем чекбокс со всей группы
         $(this). addClass('active'); // Оставляем выбранный чекбокс
         typeCalck=$(this).attr('id');
@@ -396,7 +446,9 @@ $(document).ready(function() {
 
     });
 
-
+     $('#color_pr').click(function (){
+         Zena();
+    });
 
     function Zena(){
 
@@ -405,39 +457,48 @@ $(document).ready(function() {
         //==== формат:  =====//
         var Tbr=$('#format option:selected').text();
        $('#tupblitog').text(Tbr);
+        document.getElementById('tupblitogf').value=Tbr;
         //==== крепление:   =====//
         if (typeCalck==1){
             $('#itogkr').text("Cкоба");
+            document.getElementById('itogkrf').value="Cкоба";
 
         }
         if (typeCalck==2){
             var color_pr=document.getElementById('color_pr').value;
             $('#itogkr').text("Пружина"+'('+color_pr+')');
+            document.getElementById('itogkrf').value="Пружина"+'('+color_pr+')';
 
         }
         if (typeCalck==3){
             $('#itogkr').text("Клей");
+            document.getElementById('itogkrf').value="Клей";
 
         }
         //==== тираж:  =====//
         var tiragvr=document.getElementById('tirag').value;
         $('#tiragv').text(tiragvr);
+        document.getElementById('tiragvf').value=tiragvr;
 
 
         //==== Обложка материал:  =====//
         var mat_oblv=$('#typeb option:selected').text();
       //  var tiragvr=document.getElementById('tirag').value;
         $('#mat_oblv').text(mat_oblv);
+        document.getElementById('mat_oblvf').value=mat_oblv;
+
 
         //==== Обложка цветность:  =====//
         var color_oblv=$('#colorb option:selected').text();
         //  var tiragvr=document.getElementById('tirag').value;
         $('#color_oblv').text(color_oblv);
+        document.getElementById('color_oblvf').value=color_oblv;
 
         //==== Обложка ламинация:  =====//
         var lamin_oblv=$('#laminb option:selected').text();
         //  var tiragvr=document.getElementById('tirag').value;
         $('#lamin_oblv').text(lamin_oblv);
+        document.getElementById('lamin_oblvf').value=lamin_oblv;
 
         //==== Блокнот :  =====//
         //==== Блокнот количестов страниц:  =====//
@@ -445,22 +506,26 @@ $(document).ready(function() {
         //var mat_oblv=$('#typeb option:selected').text();
           var Nstrvr=document.getElementById('list').value;
         $('#Nstr').text(Nstrvr);
+        document.getElementById('Nstrf').value=Nstrvr;
 
         //==== Блокнот материал:  =====//
         var mat_blv=$('#typeb_bl option:selected').text();
         //  var tiragvr=document.getElementById('tirag').value;
         $('#mat_blv').text(mat_blv);
+        document.getElementById('mat_blvf').value=mat_blv;
 
         //==== Блокнот цветность:  =====//
         var color_blv=$('#colorb_bl option:selected').text();
       //  alert(color_blv);
         //  var tiragvr=document.getElementById('tirag').value;
         $('#color_blv').text(color_blv);
+        document.getElementById('color_blvf').value=color_blv;
 
         //==== Блокнот ламинация:  =====//
         var lamin_blv=$('#laminb_bl option:selected').text();
         //  var tiragvr=document.getElementById('tirag').value;
         $('#lamin_blv').text(lamin_blv);
+        document.getElementById('lamin_blvf').value=lamin_blv;
 
 
 
@@ -648,8 +713,27 @@ $(document).ready(function() {
         }
 
         //====== цена прогон &&&&&&&&&&&&&&&&& ===//
+        var Zprogon_bl=0;
+        if (Kcolor_bl==1){
+            Zprogon_bl=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(Nprogon_bl, -0.436))/100;
+        }
+        if (Kcolor_bl==2){
+            Zprogon_bl=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(Nprogon_bl, -0.436))/100;
+        }
+        if (Kcolor_bl==3){
+            var Zprogon_bl1=5.9091*(Math.pow(NSpa3, -0.192));
+            var Zprogon_bl2= Zprogon_bl1+(Zprogon_bl1*0.2);
+            Zprogon_bl= Zprogon_bl2*NSpa3;
+        }
+        if (Kcolor_bl==4){
+            var Zprogon_bl1=5.9091*(Math.pow(NSpa3, -0.192));
+            var Zprogon_bl2= Zprogon_bl1+(Zprogon_bl1*0.2);
+            Zprogon_bl= 2*Zprogon_bl2*NSpa3;
+        }
 
-        var Zprogon_bl=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(Nprogon_bl, -0.436))/100;
+
+
+        //var Zprogon_bl=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(Nprogon_bl, -0.436))/100;
 
         Zprogon_bl=Zprogon_bl.toFixed(5);
 
@@ -684,6 +768,9 @@ $(document).ready(function() {
         //=======cтоимость  ПЕРЕПЛЕТА ===========//
         var NtiragP=document.getElementById('tirag').value;
        // var TypeObl=document.getElementById('typeb').value;
+        if (NtiragP>=100){
+            NtiragP=100;
+        }
         var Kper=0;
         if (typeCalck==1){
             Kper=Kskoba[NtiragP-1];
@@ -714,6 +801,7 @@ $(document).ready(function() {
 
         ZitogV= Math.ceil(ZitogV);
         $('#Zitog').text(ZitogV);
+        document.getElementById('Zitof').value=ZitogV+'p';
 
     };
 });

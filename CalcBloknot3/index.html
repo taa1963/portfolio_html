@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор изготовления блокнотов</title>
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор изготовления блокнотов">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
+
+//            $('#usd').html(data.Valute.EUR.Nominal+" Доллар -> "+ data.Valute.EUR.Value+" Рублей");
+            Kevro=data.Valute.EUR.Value;
+          //  alert(Kevro);
+
+        });
+
+    </script>
+
+    
+
+</head>
+
+<body>
+
+
+<div class="content">
+
+    <div class="content_block1">
+        <!--<h2>Общие</h2>-->
+        <div class="content_block1_img">
+
+            <div class="content_block1_img1">
+                <div class="content_block1_img1_1">
+                  <img src="img/Skoba1.png" alt="kl"  class="calc_content_img_block1" >
+                </div>
+                <div class="content_block1_img1_2">
+                    <img src="img/Skoba2.png" alt="kl"  class="calc_content_img_block1">
+                </div>
+            </div>
+
+            <div class="content_block1_img2">
+                <div class="content_block1_img2_1">
+                   <img src="img/Prug2.png"  alt="pr"  class="calc_content_img_block1"  >
+                </div>
+                <div class="content_block1_img2_2">
+                    <img src="img/Prug1.png"  alt="pr"  class="calc_content_img_block1"  >
+                </div>
+            </div>
+
+            <div class="content_block1_img3">
+                <div class="content_block1_img3_1">
+                  <img src="img/Klei1.png" alt="sk"  class="calc_content_img_block1" >
+                </div>
+                <div class="content_block1_img3_2">
+                    <img src="img/Klei2.png" alt="sk"  class="calc_content_img_block1" >
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="content_block1_content">
+            <div class="calc_content_format">
+                <label class="name">Формат</label>
+                <select required class="format" id="format" >
+                </select>
+            </div>
+
+            <div class="calc_content_format pr">
+                <label class="name">цвет пружины</label>
+                <select required class="format" id="color_pr" >
+                    <option value="Белая"> Белая</option>
+                    <option value="Черная"> Черная</option>
+                    <option value="Серебро">Серебро</option>
+                </select>
+            </div>
+
+           <div class="calc_content_format">
+              <label class="name">Тираж (шт)</label>
+              <input type="number" class="tirag" id="tirag" min="1" step="1" value="30">
+           </div>
+
+            <div class="calc_content_format">
+                <label class="name">ширина (мм)</label>
+                <input type="number" class="tirag" id="Llist" min="1" step="1" value="105" disabled>
+            </div>
+
+            <div class="calc_content_format frech">
+                <label class="name">длинна (мм)</label>
+                <input type="number" class="tirag" id="Hlist" min="1" step="1" value="148" disabled>
+            </div>
+
+        </div>
+
+        <div class="cont_img_itog">
+            <div class="cont_img_itog1">
+                <img src="img/buk.png">
+                <!--<span id="Lbl" class="Lbl">105</span>-->
+                <!--<span id="Hbl" class="Hbl">148</span>-->
+            </div>
+            <div class="cont_img_itog2">
+                <img src="img/albom.png">
+                <!--<span id="Lb2" class="Lb2">105</span>-->
+                <!--<span id="Hb2" class="Hb2">148</span>-->
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="content_block2">
+        <div class="content_block2_obl">
+            <div class="content_block2_cont">
+            <h2>Обложка</h2>
+            <input type="button" class="button_param" id="button1" value="Убрать" />
+            </div>
+
+            <div class="param_obl">
+                <div class="param_block">
+                    <label class="name">Цветность</label>
+                    <select required class="format2" id="colorb" >
+                    </select>
+                </div>
+
+
+                <div class="param_block">
+                    <label class="name">Материал</label>
+                    <select required class="format2" id="typeb" >
+                    </select>
+                </div>
+
+
+                <div class="param_block">
+                    <label class="name">Ламинация</label>
+                    <select required class="format2" id="laminb" >
+                    </select>
+                </div>
+            </div>
+
+
+
+         </div>
+
+        <div class="content_block2_bl">
+            <div class="content_block2_cont">
+                <h2>блок</h2>
+            </div>
+
+            <div class="param_bl">
+
+                <div class="param_block">
+                    <label class="name2">Количество страниц </label>
+                    <input type="number" class="tirag2" id="list" min="0" step="2" value="12">
+                </div>
+
+                <div class="param_block">
+                    <label class="name">Материал</label>
+                    <select required class="format2" id="typeb_bl" >
+                    </select>
+                </div>
+
+                <div class="param_block">
+                    <label class="name">Цветность</label>
+                    <select required class="format2" id="colorb_bl" >
+                    </select>
+                </div>
+
+                <div class="param_block">
+                    <label class="name">Ламинация</label>
+                    <select required class="format2" id="laminb_bl" >
+                    </select>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="content_block3">
+        <div class="content_block3_cont">
+            <h2>Брошюра</h2>
+
+        </div>
+        <div class="itog_obl">
+        <!--<p>брошюра</p>-->
+        <a>формат: &nbsp;<span class="itogdata" id="tupblitog">Книга, A6 (105 × 148 мм)</span></a>
+        <a>крепление: &nbsp;<span class="itogdata" id="itogkr">Пружина</span></a>
+        <a>тираж &nbsp;<span class="itogdata" id="tiragv">30</span></a>
+        </div>
+        <div class="itog_obl">
+        <p>обложка</p>
+        <a>материал: &nbsp;<span class="itogdata" id="mat_oblv">офсетка 80 гр/м2</span></a>
+        <a>цветность: &nbsp;<span class="itogdata" id="color_oblv">Пружина</span></a>
+        <a>ламинация &nbsp;<span class="itogdata" id="lamin_oblv">Глянец 32 мкр</span></a>
+        </div>
+
+        <div class="itog_obl">
+        <p>блок</p>
+        <a>количество страниц: &nbsp;<span class="itogdata" id="Nstr">100</span></a>
+        <a>материал: &nbsp;<span class="itogdata" id="mat_blv">офсетка 80 гр/м2</span></a>
+        <a>цветность: &nbsp;<span class="itogdata" id="color_blv">Пружина</span></a>
+        <a>ламинация &nbsp;<span class="itogdata" id="lamin_blv">Глянец 32 мкр</span></a>
+        </div>
+
+        <div class="itog_obl">
+        <p>Стоимость</p>
+        <span class="itogdata" id="Zitog">0</span>
+        <!--<p>Цена обложки&nbsp;<span class="itogdata" id="ZoblItog">0</span>&nbsp;руб</p>-->
+        <!--<p>Цена блокнот&nbsp;<span class="itogdata" id="Z_blItog">0</span>&nbsp;руб</p>-->
+        <!--<p>Цена переплета&nbsp;<span class="itogdata" id="Z_perepl">0</span>&nbsp;руб</p>-->
+
+        <!--<p>Цена заказа&nbsp;<span class="itogdata" id="Zitog">0</span>&nbsp;руб</p>-->
+         </div>
+
+    </div>
+    <div class="content_block4">
+        <input type="button" class="button_param2 popup-open" id="button2" value="Добавить в корзину">
+    </div>
+
+
+
+
+</div>
+<div class="popup-fade1">
+    <div class="popup">
+        <form id="form1" class="form1" action="send.php" method="post" >
+        <!--<a class="popup-close" href="#">Закрыть</a>-->
+            <button class="submit" name="insert"  id="btn" >КОРЗИИНА</button>
+
+        <div class="note">
+            <div class="content_block3_cont">
+                <h2>Брошюра</h2>
+
+            </div>
+            <div class="itog_oblf">
+
+                <!--<p>брошюра</p>-->
+                <a>формат: &nbsp; <input readonly type="text" name="itogdata" id="tupblitogf"  value="Книга, A6 (105 × 148 мм)"/>
+                </a>
+
+                <a>крепление: &nbsp;<input readonly type="text" name="itogdata" id="itogkrf"  value="Пружина"/>
+                </a>
+
+                <a>тираж &nbsp;<input readonly type="text" name="itogdata" id="tiragvf"  value="30"/>
+                 </a>
+            <!--</div>-->
+            <!--<div class="itog_obl">-->
+                <p>обложка</p>
+                <a>материал: &nbsp;<input readonly type="text" name="itogdata" id="mat_oblvf"  value="офсетка 80 гр/м2"/>
+                </a>
+
+                <a>цветность: &nbsp;<input readonly type="text" name="itogdata" id="color_oblvf"  value="Пружина"/>
+                </a>
+
+                <a>ламинация &nbsp;<input readonly type="text" name="itogdata" id="lamin_oblvf"  value="Глянец 32 мкр"/>
+                </a>
+
+            <!--</div>-->
+
+            <!--<div class="itog_obl">-->
+                <p>блок</p>
+                <a>количество страниц: &nbsp;<input readonly type="text" name="itogdata" id="Nstrf"  value="100"/>
+                </a>
+
+                <a>материал: &nbsp;<input readonly type="text" name="itogdata" id="mat_blvf"  value="офсетка 80 гр/м2"/>
+                </a>
+
+                <a>цветность: &nbsp;<input readonly type="text" name="itogdata" id="color_blvf"  value="Пружина"/>
+                  </a>
+
+                <a>ламинация &nbsp;<input readonly type="text" name="itogdata" id="lamin_blvf"  value="Глянец 32 мкр"/>
+                </a>
+            <!--</div>-->
+
+            <!--<div class="itog_obl">-->
+                <p>Стоимость</p>
+                <input readonly type="text" name="itogdata" id="Zitof"  value="0"/>
+                <!--<span>p</span>-->
+                <!--<span class="itogdata" id="Zitog">0</span>-->
+                <!--<p>Цена обложки&nbsp;<span class="itogdata" id="ZoblItog">0</span>&nbsp;руб</p>-->
+                <!--<p>Цена блокнот&nbsp;<span class="itogdata" id="Z_blItog">0</span>&nbsp;руб</p>-->
+                <!--<p>Цена переплета&nbsp;<span class="itogdata" id="Z_perepl">0</span>&nbsp;руб</p>-->
+
+                <!--<p>Цена заказа&nbsp;<span class="itogdata" id="Zitog">0</span>&nbsp;руб</p>-->
+            </div>
+            <div class="first">
+                <p> <input type="text" class="form_inp"  name="name" id="name" placeholder="Ваше имя*"  size="30" required />
+                </p>
+            </div>
+
+
+            <div class="first">
+                <p> <input type="text" class="form_inp" name="telefon" id="telefon" placeholder="Ваш номер телефона*"  size="30" required />
+                </p>
+            </div>
+
+        </div>
+
+      </form>
+    </div>
+
+<script>
+    $(document).ready(function($) {
+        $('.popup-open').click(function() {
+            $('.popup-fade1').fadeIn();
+            return false;
+        });
+
+        $('.popup-close').click(function() {
+            $(this).parents('.popup-fade1').fadeOut();
+            return false;
+        });
+        $('#button1').click(function() {
+            // alert(333)
+            $(this).parents('.popup-fade1').fadeOut();
+            $('.popup-fade1').fadeOut();
+            return false;
+        });
+
+        $(document).keydown(function(e) {
+            if (e.keyCode === 27) {
+                e.stopPropagation();
+                $('.popup-fade1').fadeOut();
+            }
+        });
+
+        $('.popup-fade1').click(function(e) {
+            if ($(e.target).closest('.popup').length == 0) {
+                $(this).fadeOut();
+            }
+        });
+    });
+</script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/data.js" ></script>
+<script src="js/scriptsCalc.js" ></script>
+
+
+
+</body>
+</html>
+

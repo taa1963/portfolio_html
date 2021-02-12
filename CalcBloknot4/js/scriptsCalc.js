@@ -661,7 +661,14 @@ $(document).ready(function() {
         //=======стоимость  обложка полная ===========//
 
         var ZoblItog=ZlaminObl*1+ZprintObl*1+ZbumObl*1;
-       // console.log(ZoblItog);
+        $('#ZoblItog1').text(ZlaminObl);
+        $('#ZoblItog2').text(ZprintObl);
+        $('#ZoblItog3').text(ZbumObl);
+
+
+
+
+        // console.log(ZoblItog);
 
        // Lsra3
         //=======стоимость  обложка полная печать ===========//
@@ -786,7 +793,7 @@ $(document).ready(function() {
 
         //=======стоимость  Блокнот  полная ===========//
 
-        var Z_blItog=Zlamin_bl*1+Zprint_bl*1+Ztirag_bl*1;
+        var Z_blItog=Zlamin_bl*Kzena+Zprint_bl*Kzena+Ztirag_bl*Kzena;
 
         //console.log(Zlamin_bl);
        // console.log(Zprint_bl);
@@ -794,7 +801,13 @@ $(document).ready(function() {
         // console.log(Z_blItog);
        // console.log('=============================');
         //=======стоимость  обложка полная печать ===========//
-        Z_blItog=Z_blItog*Kzena;
+       // Z_blItog=Z_blItog*Kzena;
+
+        $('#Z_blItog1').text(Zlamin_bl);
+        $('#Z_blItog2').text(Zprint_bl);
+        $('#Z_blItog3').text(Ztirag_bl);
+
+
         Z_blItog= Math.ceil(Z_blItog);
         $('#Z_blItog').text(Z_blItog);
 

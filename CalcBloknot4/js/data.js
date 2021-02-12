@@ -6,7 +6,7 @@ var Hsra3=450;
 //======== Цена за тонну бумаги========//
 var Zmelov=950;
 var Zofsrt=1000;
-var Zdns=2650;
+var Zdns=1500;
 var Zcolorcopi=3200;
 var Zsamokl=4300;
 

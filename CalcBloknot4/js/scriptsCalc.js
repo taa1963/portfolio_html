@@ -418,7 +418,7 @@ $(document).ready(function() {
 
         $('#type_bl').text(typebtext+';');
 
-        var pl_otbl=document.getElementById('type_bl').value;
+        var pl_otbl=document.getElementById('typeb_bl').value;
 
         $('#pl_bl').text(pl_otbl+';');
         Zena();
@@ -440,7 +440,7 @@ $(document).ready(function() {
     $('#colorb_bl').change(function () {
 
         var colorb=$('#colorb_bl option:selected').text();
-       // alert(colorb);
+    //   alert(colorb);
         $('#color_blv').text(colorb+';');
         Zena();
 
@@ -749,12 +749,16 @@ $(document).ready(function() {
         if (Kcolor_bl==1){
             Nprogon_bl=NtiragList_bl;
         }
-        else{
+        else {
             Nprogon_bl=NtiragList_bl*2;
         }
+        //else{
+        //    Nprogon_bl=NtiragList_bl;
+        //}
 
         //====== цена прогон &&&&&&&&&&&&&&&&& ===//
         var Zprogon_bl=0;
+        var  Zprogon_bl1=0;
         if (Kcolor_bl==1){
             Zprogon_bl=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(Nprogon_bl, -0.436))/100;
         }
@@ -762,15 +766,31 @@ $(document).ready(function() {
             Zprogon_bl=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(Nprogon_bl, -0.436))/100;
         }
         if (Kcolor_bl==3){
-            var Zprogon_bl1=5.9091*(Math.pow(NSpa3, -0.192));
-            var Zprogon_bl2= Zprogon_bl1+(Zprogon_bl1*0.2);
-            Zprogon_bl= Zprogon_bl2*NSpa3;
+             Zprogon_bl1=5.9091*(Math.pow(Nprogon_bl, -0.192));
+            //var Zprogon_bl2= Zprogon_bl1+(Zprogon_bl1*0.2);
+            Zprogon_bl= Zprogon_bl1*Nprogon_bl;
         }
         if (Kcolor_bl==4){
-            var Zprogon_bl1=5.9091*(Math.pow(NSpa3, -0.192));
-            var Zprogon_bl2= Zprogon_bl1+(Zprogon_bl1*0.2);
-            Zprogon_bl= 2*Zprogon_bl2*NSpa3;
+            Zprogon_bl1=(5.9091*(Math.pow(Nprogon_bl, -0.192)))+0.19;
+            //var Zprogon_bl2= Zprogon_bl1+(Zprogon_bl1*0.2);
+
+           // Zprogon_bl= Zprogon_bl2*NSpa3;
+            Zprogon_bl= Zprogon_bl1*Nprogon_bl;
+
+            //Zprogon_bl=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(Nprogon_bl, -0.436))/100;
         }
+        //alert(Kcolor_bl);
+        //alert(Nprogon_bl);
+        //alert(Zprogon_bl1);
+
+
+        console.log(Nprogon_bl);
+        console.log(Zprogon_bl1);
+       console.log(Kcolor_bl);
+
+        console.log(Zprogon_bl);
+        console.log('=======================');
+
 
 
 
@@ -782,7 +802,20 @@ $(document).ready(function() {
 
         //====== цена печати БЛОКНОТ  ===//
         var Zprint_bl=Zprogon_bl*Nprogon_bl;
+        if (Kcolor_bl==3){
+            Zprint_bl=Zprogon_bl;
+        }
+        if (Kcolor_bl==4){
+            Zprint_bl=Zprogon_bl;
+            //alert(Kcolor_bl);
+           // alert(Zprint_bl);
+        }
+
+        Zprint_bl=Zprint_bl*1;
+
+
         Zprint_bl=Zprint_bl.toFixed(5);
+        console.log(Nprogon_bl);
        //  console.log(Zprint_bl);
 
         //=======стоимость ламинация БЛОКНОТ===========//

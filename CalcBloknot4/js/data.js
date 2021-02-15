@@ -6,9 +6,10 @@ var Hsra3=450;
 //======== Цена за тонну бумаги========//
 var Zmelov=950;
 var Zofsrt=1000;
-var Zdns=1500;
-var Zcolorcopi=3200;
-var Zsamokl=4300;
+var Zkart=1500;
+var Zdns=2650;
+//var Zcolorcopi=3200;
+//var Zsamokl=4300;
 
 //======== Курс ЕВРО ========//
 var Kevro=92;
@@ -16,10 +17,16 @@ var Kevro=92;
 //======== Курс удорожания ========//
 
 var Kzena=1;
+var KzenaOblColor=1;
+var KzenaOblChb=1;
+var KzenaBlockColor=1;
+var KzenaBlockChb=1;
 
-//======== Приладка ========//
+//======== Цена приладки ========//
 
-var Kpriladra=500;
+var KpriladraSkoba=500;
+var KpriladraPrugina=500;
+var KpriladraKlei=500;
 
 
 
@@ -123,6 +130,10 @@ var typeb = [
     },
     {
         name: 'картон 300 гр/м2',
+        val: '300'
+    },
+    {
+        name: 'dnc 300 гр/м2',
         val: '300'
     }
 

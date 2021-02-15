@@ -514,7 +514,11 @@ $(document).ready(function() {
             Ztonnab=Zofsrt;
         }
         if (TypeObl.includes('картон')){
-            Ztonnab=Zdns;
+            Ztonnab=Zkart;
+        }
+        if (TypeObl.includes('dnc')){
+           Ztonnab=Zdns;
+
         }
 
         document.getElementById('mat_oblvf').value=mat_oblv+'___ '+Ztonnab;
@@ -572,6 +576,9 @@ $(document).ready(function() {
             Ztonna_bl=Zofsrt;
         }
         if (Type_bl.includes('картон')){
+            Ztonna_bl=Zkart;
+        }
+        if (Type_bl.includes('dnc')){
             Ztonna_bl=Zdns;
         }
 
@@ -646,6 +653,10 @@ $(document).ready(function() {
         if (TypeObl.includes('картон')){
             Ztonnab=Zdns;
         }
+        if (TypeObl.includes('dnc')){
+            Ztonnab=Zdns;
+
+        }
         //if (TypeObl==4){
         //    Ztonnab=Zcolorcopi;
         //}
@@ -690,10 +701,11 @@ $(document).ready(function() {
             Zprogon=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(NprogonObk, -0.436))/100;
         }
         if (Kcolorb==3){
-            Zprogon=5.9091*(Math.pow(NprogonObk, -0.192));
+            NprogonObk=NprogonObk/2;
+            Zprogon=(5.9091*(Math.pow(NprogonObk, -0.192)))+0.19;
         }
         if (Kcolorb==4){
-            Zprogon=5.9091*(Math.pow(NprogonObk, -0.192));
+            Zprogon=(5.9091*(Math.pow(NprogonObk, -0.192)))+0.19;
         }
 
 
@@ -719,6 +731,21 @@ $(document).ready(function() {
         //=======стоимость  обложка полная ===========//
 
         var ZoblItog=ZlaminObl*1+ZprintObl*1+ZbumObl*1;
+
+        var KcolorObl = document.getElementById('colorb').value;
+
+        if ((KcolorObl==1)||(KcolorObl==2))
+        {
+            ZoblItog=ZoblItog*KzenaOblColor;
+        }
+        if ((KcolorObl==3)||(KcolorObl==4))
+        {
+            ZoblItog=ZoblItog*KzenaOblChb;
+        }
+
+
+
+
         $('#ZoblItog1').text(ZlaminObl);
         $('#ZoblItog2').text(ZprintObl);
         $('#ZoblItog3').text(ZbumObl);
@@ -730,7 +757,7 @@ $(document).ready(function() {
 
        // Lsra3
         //=======стоимость  обложка полная печать ===========//
-        ZoblItog=ZoblItog*Kzena;
+        ZoblItog=ZoblItog*1;
         ZoblItog= Math.ceil(ZoblItog);
         if (Nobl==0){
             ZoblItog=0;
@@ -772,6 +799,9 @@ $(document).ready(function() {
             Ztonna_bl=Zofsrt;
         }
         if (Type_bl.includes('картон')){
+            Ztonna_bl=Zkart;
+        }
+        if (Type_bl.includes('dnc')){
             Ztonna_bl=Zdns;
         }
         //if (Type_bl==4){
@@ -824,16 +854,24 @@ $(document).ready(function() {
             Zprogon_bl=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(Nprogon_bl, -0.436))/100;
         }
         if (Kcolor_bl==3){
-             Zprogon_bl1=5.9091*(Math.pow(Nprogon_bl, -0.192));
+            Nprogon_bl=Nprogon_bl/2;
+             Zprogon_bl1=(5.9091*(Math.pow(Nprogon_bl, -0.192)))+0.19;
             //var Zprogon_bl2= Zprogon_bl1+(Zprogon_bl1*0.2);
             Zprogon_bl= Zprogon_bl1*Nprogon_bl;
+            console.log(Nprogon_bl);
+            console.log(Zprogon_bl);
+            console.log('=======================');
         }
         if (Kcolor_bl==4){
+            Nprogon_bl=Nprogon_bl;
             Zprogon_bl1=(5.9091*(Math.pow(Nprogon_bl, -0.192)))+0.19;
             //var Zprogon_bl2= Zprogon_bl1+(Zprogon_bl1*0.2);
 
            // Zprogon_bl= Zprogon_bl2*NSpa3;
             Zprogon_bl= Zprogon_bl1*Nprogon_bl;
+            console.log(Nprogon_bl);
+            console.log(Zprogon_bl);
+            console.log('=======================');
 
             //Zprogon_bl=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(Nprogon_bl, -0.436))/100;
         }
@@ -842,12 +880,12 @@ $(document).ready(function() {
         //alert(Zprogon_bl1);
 
 
-        console.log(Nprogon_bl);
-        console.log(Zprogon_bl1);
-       console.log(Kcolor_bl);
+       // console.log(Nprogon_bl);
+       // console.log(Zprogon_bl1);
+      // console.log(Kcolor_bl);
 
-        console.log(Zprogon_bl);
-        console.log('=======================');
+       // console.log(Zprogon_bl);
+       // console.log('=======================');
 
 
 
@@ -873,7 +911,7 @@ $(document).ready(function() {
 
 
         Zprint_bl=Zprint_bl.toFixed(5);
-        console.log(Nprogon_bl);
+      //  console.log(Nprogon_bl);
        //  console.log(Zprint_bl);
 
         //=======стоимость ламинация БЛОКНОТ===========//
@@ -884,7 +922,15 @@ $(document).ready(function() {
 
         //=======стоимость  Блокнот  полная ===========//
 
-        var Z_blItog=Zlamin_bl*Kzena+Zprint_bl*Kzena+Ztirag_bl*Kzena;
+        var Z_blItog=Zlamin_bl*1+Zprint_bl*1+Ztirag_bl*1;
+        var Kcolorbl = document.getElementById('colorb_bl').value;
+
+        if ((Kcolorbl==1)||(Kcolorbl==2)){
+            Z_blItog=Z_blItog*KzenaBlockColor;
+        }
+        if ((Kcolorbl==3)||(Kcolorbl==4)){
+            Z_blItog=Z_blItog*KzenaBlockChb;
+        }
 
         //console.log(Zlamin_bl);
        // console.log(Zprint_bl);
@@ -924,7 +970,22 @@ $(document).ready(function() {
         //
        // alert(Kper);
 
-        var ZPerepl=NtiragP*Kper+Kpriladra;
+
+        var ZPerepl=0;
+
+        if (typeCalck==1){
+           ZPerepl=NtiragP*Kper+KpriladraSkoba;
+        }
+        if (typeCalck==2){
+            ZPerepl=NtiragP*Kper+KpriladraPrugina;
+        }
+        if (typeCalck==3){
+            ZPerepl=NtiragP*Kper+KpriladraKlei;
+        }
+
+
+
+       // var ZPerepl=NtiragP*Kper+Kpriladra;
 
         //=======  Общая стоимость по всему ===========//
         if (Nobl==0){
@@ -932,7 +993,7 @@ $(document).ready(function() {
         }
         var ZitogV=ZPerepl*1+Z_blItog*1+ZoblItog*1;
 
-        ZPerepl=ZPerepl*Kzena;
+        ZPerepl=ZPerepl*1;
         ZPerepl= Math.ceil(ZPerepl);
         $('#Z_perepl').text(ZPerepl);
         //Z_perepl

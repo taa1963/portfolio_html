@@ -20,7 +20,7 @@ $(document).ready(function() {
 
         $('.content_block1_img3_2').removeClass('active_img2');
         $('.content_block1_img3_1').removeClass('active_imgnone');
-        $('.pr').addClass('active_none');
+        //$('.pr').addClass('active_none');
 
         $('.param_block_list2').addClass('act_block');
         $('.param_block_list1').addClass('non_block');
@@ -39,7 +39,7 @@ $(document).ready(function() {
         $('.content_block1_img1_1').removeClass('active_imgnone');
         $('.content_block1_img3_2').removeClass('active_img2');
         $('.content_block1_img3_1').removeClass('active_imgnone');
-        $('.pr').removeClass('active_none');
+       // $('.pr').removeClass('active_none');
 
         $('.param_block_list2').removeClass('act_block');
         $('.param_block_list1').removeClass('non_block');
@@ -62,7 +62,7 @@ $(document).ready(function() {
         $('.param_block_list1').removeClass('non_block');
 
         typeCalck=3;
-        $('.pr').addClass('active_none');
+       // $('.pr').addClass('active_none');
         Zena();
     });
 
@@ -334,6 +334,10 @@ $(document).ready(function() {
             document.getElementById('button1').value='Добавить';
             $('.param_obl').addClass('active_none');
             $('.itog_obl').addClass('active_none');
+            $('.param_oblm').addClass('active_none');
+            $('.itog_oblm').addClass('active_none');
+
+
             Nobl=0;
 
 
@@ -342,6 +346,8 @@ $(document).ready(function() {
             document.getElementById('button1').value='Убрать';
             $('.param_obl').removeClass('active_none');
             $('.itog_obl').removeClass('active_none');
+            $('.param_oblm').removeClass('active_none');
+            $('.itog_oblm').removeClass('active_none');
             Nobl=1;
         }
 
@@ -475,9 +481,9 @@ $(document).ready(function() {
 
         }
         if (typeCalck==2){
-            var color_pr=document.getElementById('color_pr').value;
-            $('#itogkr').text("Пружина"+'('+color_pr+')');
-            document.getElementById('itogkrf').value="Пружина"+'('+color_pr+')';
+           // var color_pr=document.getElementById('color_pr').value;
+            $('#itogkr').text("Пружина");
+            document.getElementById('itogkrf').value="Пружина";
 
         }
         if (typeCalck==3){
@@ -495,7 +501,23 @@ $(document).ready(function() {
         var mat_oblv=$('#typeb option:selected').text();
       //  var tiragvr=document.getElementById('tirag').value;
         $('#mat_oblv').text(mat_oblv);
-        document.getElementById('mat_oblvf').value=mat_oblv;
+
+
+        var TypeObl=$('#typeb option:selected').text();
+
+
+        var Ztonnab=0;
+        if (TypeObl.includes('меловка')){
+            Ztonnab=Zmelov;
+        }
+        if (TypeObl.includes('офсетка')){
+            Ztonnab=Zofsrt;
+        }
+        if (TypeObl.includes('картон')){
+            Ztonnab=Zdns;
+        }
+
+        document.getElementById('mat_oblvf').value=mat_oblv+'___ '+Ztonnab;
 
 
         //==== Обложка цветность:  =====//
@@ -538,7 +560,30 @@ $(document).ready(function() {
         var mat_blv=$('#typeb_bl option:selected').text();
         //  var tiragvr=document.getElementById('tirag').value;
         $('#mat_blv').text(mat_blv);
-        document.getElementById('mat_blvf').value=mat_blv;
+
+        var Type_bl=$('#typeb_bl option:selected').text();
+
+        var Ztonna_bl=0;
+
+        if (Type_bl.includes('меловка')){
+            Ztonna_bl=Zmelov;
+        }
+        if (Type_bl.includes('офсетка')){
+            Ztonna_bl=Zofsrt;
+        }
+        if (Type_bl.includes('картон')){
+            Ztonna_bl=Zdns;
+        }
+
+
+
+
+        document.getElementById('mat_blvf').value=mat_blv+'___'+Ztonna_bl;
+
+
+
+
+
 
         //==== Блокнот цветность:  =====//
         var color_blv=$('#colorb_bl option:selected').text();
@@ -637,8 +682,21 @@ $(document).ready(function() {
         }
 
         //====== цена прогон  ===//
+        var Zprogon=0;
+        if (Kcolorb==1){
+           Zprogon=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(NprogonObk, -0.436))/100;
+        }
+        if (Kcolorb==2){
+            Zprogon=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(NprogonObk, -0.436))/100;
+        }
+        if (Kcolorb==3){
+            Zprogon=5.9091*(Math.pow(NprogonObk, -0.192));
+        }
+        if (Kcolorb==4){
+            Zprogon=5.9091*(Math.pow(NprogonObk, -0.192));
+        }
 
-        var Zprogon=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(NprogonObk, -0.436))/100;
+
 
         Zprogon=Zprogon.toFixed(5);
       //  console.log(Zprogon);
@@ -699,7 +757,7 @@ $(document).ready(function() {
         // console.log(NtiragList_bl);
 
 
-        //======цена листа БЛОКНОТ=====//
+        //======цена листа БЛОК=====//
 
 
         var Type_bl=$('#typeb_bl option:selected').text();
@@ -866,7 +924,7 @@ $(document).ready(function() {
         //
        // alert(Kper);
 
-        var ZPerepl=NtiragP*Kper+100;
+        var ZPerepl=NtiragP*Kper+Kpriladra;
 
         //=======  Общая стоимость по всему ===========//
         if (Nobl==0){
@@ -885,9 +943,6 @@ $(document).ready(function() {
 
     };
 });
-
-
-
 
 
 

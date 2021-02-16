@@ -651,7 +651,7 @@ $(document).ready(function() {
             Ztonnab=Zofsrt;
         }
         if (TypeObl.includes('картон')){
-            Ztonnab=Zdns;
+            Ztonnab=Zkart;
         }
         if (TypeObl.includes('dnc')){
             Ztonnab=Zdns;
@@ -995,11 +995,11 @@ $(document).ready(function() {
 
         ZPerepl=ZPerepl*1;
         ZPerepl= Math.ceil(ZPerepl);
-        $('#Z_perepl').text(ZPerepl);
+        $('#Z_perepl').text(ZPerepl+'p');
         //Z_perepl
 
         ZitogV= Math.ceil(ZitogV);
-        $('#Zitog').text(ZitogV);
+        $('#Zitog').text(ZitogV+'p');
         document.getElementById('Zitof').value=ZitogV+'p';
 
     };

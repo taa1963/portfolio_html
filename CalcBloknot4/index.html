@@ -80,7 +80,7 @@
             </div>
 
             <div class="calc_content_format frech">
-                <label class="name">длинна (мм)</label>
+                <label class="name">высота (мм)</label>
                 <input type="number" class="tirag" id="Hlist" min="1" step="1" value="148" disabled>
             </div>
 
@@ -89,13 +89,13 @@
         <div class="cont_img_itog">
             <div class="cont_img_itog1">
                 <img src="img/buk.png">
-                <!--<span id="Lbl" class="Lbl">105</span>-->
-                <!--<span id="Hbl" class="Hbl">148</span>-->
+                <span id="Lbl" class="Lbl">105</span>
+                <span id="Hbl" class="Hbl">148</span>
             </div>
             <div class="cont_img_itog2">
                 <img src="img/albom.png">
-                <!--<span id="Lb2" class="Lb2">105</span>-->
-                <!--<span id="Hb2" class="Hb2">148</span>-->
+                <span id="Lb2" class="Lb2">105</span>
+                <span id="Hb2" class="Hb2">148</span>
             </div>
 
         </div>
@@ -223,25 +223,25 @@
         <div class="itog_oblo">
         <p>Стоимость</p>
 
-            <p>ОБЛОЖКА</p>
-        <!--<span class="itogdata" id="Zitog">0</span>-->
-            <p>Цена обложки ламинирование&nbsp;<span class="itogdata" id="ZoblItog1">0</span>&nbsp;руб</p>
-            <p>Цена обложки печать&nbsp;<span class="itogdata" id="ZoblItog2">0</span>&nbsp;руб</p>
-            <p>Цена обложки бумага&nbsp;<span class="itogdata" id="ZoblItog3">0</span>&nbsp;руб</p>
+            <!--<p>ОБЛОЖКА</p>-->
+        <!--&lt;!&ndash;<span class="itogdata" id="Zitog">0</span>&ndash;&gt;-->
+            <!--<p>Цена обложки ламинирование&nbsp;<span class="itogdata" id="ZoblItog1">0</span>&nbsp;руб</p>-->
+            <!--<p>Цена обложки печать&nbsp;<span class="itogdata" id="ZoblItog2">0</span>&nbsp;руб</p>-->
+            <!--<p>Цена обложки бумага&nbsp;<span class="itogdata" id="ZoblItog3">0</span>&nbsp;руб</p>-->
 
-        <p>Цена обложки&nbsp;<span class="itogdata" id="ZoblItog">0</span>&nbsp;руб</p>
+        <!--<p>Цена обложки&nbsp;<span class="itogdata" id="ZoblItog">0</span>&nbsp;руб</p>-->
 
-            <p>БЛОК</p>
-            <p>Цена блока ламинирование&nbsp;<span class="itogdata" id="Z_blItog1">0</span>&nbsp;руб</p>
-            <p>Цена блока печать&nbsp;<span class="itogdata" id="Z_blItog2">0</span>&nbsp;руб</p>
-            <p>Цена блока бумага&nbsp;<span class="itogdata" id="Z_blItog3">0</span>&nbsp;руб</p>
+            <!--<p>БЛОК</p>-->
+            <!--<p>Цена блока ламинирование&nbsp;<span class="itogdata" id="Z_blItog1">0</span>&nbsp;руб</p>-->
+            <!--<p>Цена блока печать&nbsp;<span class="itogdata" id="Z_blItog2">0</span>&nbsp;руб</p>-->
+            <!--<p>Цена блока бумага&nbsp;<span class="itogdata" id="Z_blItog3">0</span>&nbsp;руб</p>-->
 
-        <p>Цена блока&nbsp;<span class="itogdata" id="Z_blItog">0</span>&nbsp;руб</p>
-            <p>ПЕРПЛЕТ</p>
-        <p>Цена переплета&nbsp;<span class="itogdata" id="Z_perepl">0</span>&nbsp;руб</p>
+        <!--<p>Цена блока&nbsp;<span class="itogdata" id="Z_blItog">0</span>&nbsp;руб</p>-->
+            <!--<p>ПЕРПЛЕТ</p>-->
+        <!--<p>Цена переплета&nbsp;<span class="itogdata" id="Z_perepl">0</span>&nbsp;руб</p>-->
 
         <!--<p>Цена заказа&nbsp;<span class="itogdata" id="Zitog">0</span>&nbsp;руб</p>-->
-            <p>ИТОГОВАЯ</p>
+            <!--<p>ИТОГОВАЯ</p>-->
             <span class="itogdata" id="Zitog">0</span>
          </div>
 
@@ -258,7 +258,7 @@
     <div class="popup">
         <form id="form1" class="form1" action="send.php" method="post" >
         <!--<a class="popup-close" href="#">Закрыть</a>-->
-            <button class="submit" name="insert"  id="btn" >КОРЗИИНА</button>
+            <button class="sub" name="insert"  id="btn" >КОРЗИИНА</button>
 
         <div class="note">
             <div class="content_block3_cont">
@@ -268,40 +268,40 @@
             <div class="itog_oblf">
 
                 <!--<p>брошюра</p>-->
-                <a>формат: &nbsp; <input readonly type="text" name="itogdata" id="tupblitogf"  value="Книга, A6 (105 × 148 мм)"/>
+                <a>формат: &nbsp; <input readonly type="text" name="tupblitogf" id="tupblitogf"  value="Книга, A6 (105 × 148 мм)"/>
                 </a>
 
-                <a>крепление: &nbsp;<input readonly type="text" name="itogdata" id="itogkrf"  value="Пружина"/>
+                <a>крепление: &nbsp;<input readonly type="text" name="itogkrf" id="itogkrf"  value="Пружина"/>
                 </a>
 
-                <a>тираж &nbsp;<input readonly type="text" name="itogdata" id="tiragvf"  value="30"/>
+                <a>тираж &nbsp;<input readonly type="text" name="tiragvf" id="tiragvf"  value="30"/>
                  </a>
             <!--</div>-->
             <div class="itog_oblm">
                 <p>обложка</p>
-                <a>материал: &nbsp;<input readonly type="text" name="itogdata" id="mat_oblvf"  value="офсетка 80 гр/м2"/>
+                <a>материал: &nbsp;<input readonly type="text" name="mat_oblvf" id="mat_oblvf"  value="офсетка 80 гр/м2"/>
                 </a>
 
-                <a>цветность: &nbsp;<input readonly type="text" name="itogdata" id="color_oblvf"  value="Пружина"/>
+                <a>цветность: &nbsp;<input readonly type="text" name="color_oblvf" id="color_oblvf"  value="Пружина"/>
                 </a>
 
-                <a>ламинация &nbsp;<input readonly type="text" name="itogdata" id="lamin_oblvf"  value="Глянец 32 мкр"/>
+                <a>ламинация &nbsp;<input readonly type="text" name="lamin_oblvf" id="lamin_oblvf"  value="Глянец 32 мкр"/>
                 </a>
 
             </div>
 
             <!--<div class="itog_obl">-->
                 <p>блок</p>
-                <a>количество страниц: &nbsp;<input readonly type="text" name="itogdata" id="Nstrf"  value="100"/>
+                <a>количество страниц: &nbsp;<input readonly type="text" name="Nstrf" id="Nstrf"  value="100"/>
                 </a>
 
-                <a>материал: &nbsp;<input readonly type="text" name="itogdata" id="mat_blvf"  value="офсетка 80 гр/м2"/>
+                <a>материал: &nbsp;<input readonly type="text" name="mat_blvf" id="mat_blvf"  value="офсетка 80 гр/м2"/>
                 </a>
 
-                <a>цветность: &nbsp;<input readonly type="text" name="itogdata" id="color_blvf"  value="Пружина"/>
+                <a>цветность: &nbsp;<input readonly type="text" name="color_blvf" id="color_blvf"  value="Пружина"/>
                   </a>
 
-                <a>ламинация &nbsp;<input readonly type="text" name="itogdata" id="lamin_blvf"  value="Глянец 32 мкр"/>
+                <a>ламинация &nbsp;<input readonly type="text" name="lamin_blvf" id="lamin_blvf"  value="Глянец 32 мкр"/>
                 </a>
             <!--</div>-->
 
@@ -316,18 +316,24 @@
 
                 <!--<p>Цена заказа&nbsp;<span class="itogdata" id="Zitog">0</span>&nbsp;руб</p>-->
             </div>
+
+
+
             <div class="first">
-                <p> <input type="text" class="form_inp"  name="name" id="name" placeholder="Ваше имя*"  size="30" required />
+                <p>
+                    <span>позвоните мне по телефону</span>
+                    <input type="text" class="form_inp" name="telefon" id="phone" placeholder="+7()-___-__-__"  size="30" required />
                 </p>
             </div>
 
-
             <div class="first">
-                <p> <input type="text" class="form_inp" name="telefon" id="telefon" placeholder="Ваш номер телефона*"  size="30" required />
+                <span>имя</span>
+                <p> <input type="text" class="form_inp"  name="name" id="name" placeholder=""  size="30" required />
                 </p>
             </div>
 
         </div>
+            <button class="submit" name="insert"  id="btn1" >ОТПРАВИТЬ</button>
 
       </form>
     </div>
@@ -340,6 +346,13 @@
 <script src="js/data.js" ></script>
 <script src="js/scriptsCalc.js" ></script>
 
+<!--<script>-->
+    <!--$(function(){-->
+        <!--//2. Получить элемент, к которому необходимо добавить маску-->
+        <!--$("#phone").mask("+7()-___-__-__");-->
+    <!--});-->
+
+<!--</script>-->
 <script>
     $(document).ready(function($) {
         $('.popup-open').click(function() {

@@ -177,7 +177,13 @@ body{
     left: 25%;
     background-color: #f3f3f3;
 }
-
+.Lb12{
+    display: block;
+    position: absolute;
+    top: 75%;
+    left: 75%;
+    background-color: #f3f3f3;
+}
 
 
 .cont_img_itog2{
@@ -206,6 +212,13 @@ body{
     position: absolute;
     top: 51%;
     left: 10%;
+    background-color: #f3f3f3;
+}
+.Lb22{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 68%;
     background-color: #f3f3f3;
 }
 

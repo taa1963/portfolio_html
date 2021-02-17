@@ -229,9 +229,16 @@ $(document).ready(function() {
         document.getElementById('Llist').value=Lbloknot;
         document.getElementById('Hlist').value=Hbloknot;
         $('#Lbl').text(Lbloknot);
+        var Lbl2=Lbloknot*2;
+        $('#Lb12').text(Lbl2);
         $('#Hbl').text(Hbloknot);
-        $('#Lb2').text(Lbloknot);
-        $('#Hb2').text(Hbloknot);
+
+
+
+        $('#Lb2').text(Hbloknot);
+        var Lb22=Lbloknot*2;
+        $('#Lb22').text(Lb22);
+        $('#Hb2').text(Lbloknot);
 
 
 
@@ -257,8 +264,12 @@ $(document).ready(function() {
         Lbloknot=document.getElementById('Llist').value;
         Hbloknot=document.getElementById('Hlist').value;
         $('#Lbl').text(Lbloknot);
+        var Lbl2=Lbloknot*2;
+        $('#Lb12').text(Lbl2);
         $('#Hbl').text(Hbloknot);
         $('#Lb2').text(Lbloknot);
+        var Lbl2=Lbloknot*2;
+        $('#Lb22').text(Lbl2);
         $('#Hb2').text(Hbloknot);
         Zena();
     });
@@ -267,8 +278,12 @@ $(document).ready(function() {
         Lbloknot=document.getElementById('Llist').value;
         Hbloknot=document.getElementById('Hlist').value;
         $('#Lbl').text(Lbloknot);
+        var Lbl2=Lbloknot*2;
+        $('#Lb12').text(Lbl2);
         $('#Hbl').text(Hbloknot);
         $('#Lb2').text(Lbloknot);
+        var Lbl2=Lbloknot*2;
+        $('#Lb22').text(Lbl2);
         $('#Hb2').text(Hbloknot);
         Zena();
     });
@@ -287,8 +302,12 @@ $(document).ready(function() {
         document.getElementById('Hlist').value=Hbloknot;
 
         $('#Lbl').text(Lbloknot);
+        var Lbl2=Lbloknot*2;
+        $('#Lb12').text(Lbl2);
         $('#Hbl').text(Hbloknot);
         $('#Lb2').text(Lbloknot);
+        var Lbl2=Lbloknot*2;
+        $('#Lb22').text(Lbl2);
         $('#Hb2').text(Hbloknot);
         Zena();
     });
@@ -307,8 +326,12 @@ $(document).ready(function() {
         document.getElementById('Hlist').value=Hbloknot;
 
         $('#Lbl').text(Lbloknot);
+        var Lbl2=Lbloknot*2;
+        $('#Lb12').text(Lbl2);
         $('#Hbl').text(Hbloknot);
         $('#Lb2').text(Lbloknot);
+        var Lbl2=Lbloknot*2;
+        $('#Lb22').text(Lbl2);
         $('#Hb2').text(Hbloknot);
         Zena();
     });
@@ -521,7 +544,7 @@ $(document).ready(function() {
 
         }
 
-        document.getElementById('mat_oblvf').value=mat_oblv+'___ '+Ztonnab;
+        document.getElementById('mat_oblvf').value=mat_oblv;
 
 
         //==== Обложка цветность:  =====//
@@ -585,7 +608,7 @@ $(document).ready(function() {
 
 
 
-        document.getElementById('mat_blvf').value=mat_blv+'___'+Ztonna_bl;
+        document.getElementById('mat_blvf').value=mat_blv;
 
 
 

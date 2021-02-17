@@ -1,13 +1,6 @@
 <?php
 
-header('Content-type: text/plain; charset=utf-8');
-
-$json = file_get_contents('php://input');
-$data = json_decode($json, true, 512);
-
 if (
-    is_array($data) && !empty($data) &&
-
     isset($data['name']) && !empty($data['name']) &&
     isset($data['phone']) && !empty($data['phone']) &&
     isset($data['tupblitogf']) && !empty($data['tupblitogf']) &&
@@ -19,6 +12,7 @@ if (
     isset($data['mat_blvf']) && !empty($data['mat_blvf']) &&
     isset($data['color_blvf']) && !empty($data['color_blvf']) &&
     isset($data['lamin_blvf']) && !empty($data['lamin_blvf']) &&
+    isset($data['Zitof']) && !empty($data['Zitof']) &&
     isset($data['color_oblvf']) && !empty($data['color_oblvf'])
 ) {
     $name = substr(htmlspecialchars(trim($data['name'])), 0, 1000);
@@ -33,46 +27,43 @@ if (
     $mat_blvf = substr(htmlspecialchars(trim($data['mat_blvf'])), 0, 10000000000);
     $color_blvf = substr(htmlspecialchars(trim($data['color_blvf'])), 0, 10000000000);
     $lamin_blvf = substr(htmlspecialchars(trim($data['lamin_blvf'])), 0, 10000000000);
+    $Zitof = substr(htmlspecialchars(trim($data['Zitof'])), 0, 10000000000);
 
 
    // $to = 'info@groupregion.ru';
     $to = 'alexandr.tupichenkov@yandex.ru';
     //$to = 'info@partwork.ru';
-    $title = 'Блокнот';
+    $title = 'Новый заказ';
 
+    $message = "
+        Был получен заказ с сайта от:
+        Имя: $name
+        Телефон: $telefon
+        Брошюра
+        Формат:$tupblitogf
+        Крепление:$itogkrf
+        Tираж:$tiragvf
+        Oбложка
+        Mатериал:$mat_oblvf
+        Цветность:$color_oblvf
+        Ламинация:$lamin_oblvf
+        Блок
+        Количество страниц:$Nstrf
+        Материал:$mat_blvf
+        Цветность:$color_blvf
+        Ламинация:$lamin_blvf
+        Стоимость:$Zitof
+       ";
 
-    $html = "<html>
-        <head><title>$title</title></head>
-        <body>
-            <div>Был получен заказ с сайта от:</div>
-            <div>Имя:$name</div>
-             <div>Телефон: $telefon</div>
-            <div>Формат:$tupblitogf</div>
-            <div>крепление:$itogkrf</div>
-            <div>тираж:$tiragvf</div>
-            <div>материал:$mat_oblvf</div>
-            <div>цветность:$color_oblvf</div>
-            <div>ламинация:$lamin_oblvf</div>
-            <div>>количество страниц:$Nstrf</div>
-            <div>>материал:$mat_blvf</div>
-            <div>>цветность:$color_blvf</div>
-             <div>>ламинация:$lamin_blvf</div>
-
-        </body>
-    </html>";
-
-    $verify = mail($to, $title, $html, "Content-type:text/html; Charset=utf-8\r\n");
-
+    $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
     if ($verify) {
-        echo '<div class="param_calc_all">';
 
-        //   header('Location: https://eco-lab.kz/services/podbor-postavka-laboratornogo-oborudovaniya/', true, 302);
+        header('Location: https://aleksandr.tupichenkov.com/CalcBloknot4/#popup_success', true, 302);
         exit;
-//    } else {
-//        header('Location: https://eco-lab.kz/services/podbor-postavka-laboratornogo-oborudovaniya/', true, 302);
-//        exit;
+    } else {
+        header('Location: https://aleksandr.tupichenkov.com/CalcBloknot4//#popup_success', true, 302);
+        exit;
     }
-
-
 }
+
 ?>

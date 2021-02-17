@@ -248,6 +248,9 @@ $(document).ready(function() {
 
             document.getElementById('Llist').disabled = false;
             document.getElementById('Hlist').disabled = false;
+            $('.cont_img_itog1').addClass('active_bl');
+            $('.cont_img_itog2').addClass('active_img');
+            $('.cont_img_itog2').removeClass('active_bl');
 
 
         }
@@ -738,6 +741,18 @@ $(document).ready(function() {
 
         //====== цена печати обложка  ===//
         var ZprintObl=Zprogon*NprogonObk;
+
+
+        var KcolorObl = document.getElementById('colorb').value;
+
+        if ((KcolorObl==1)||(KcolorObl==2))
+        {
+            ZprintObl=ZprintObl*KzenaOblColor;
+        }
+        if ((KcolorObl==3)||(KcolorObl==4))
+        {
+            ZprintObl=ZprintObl*KzenaOblChb;
+        }
         ZprintObl=ZprintObl.toFixed(5);
        // console.log(ZprintObl);
        // alert(Zprogon);
@@ -755,16 +770,16 @@ $(document).ready(function() {
 
         var ZoblItog=ZlaminObl*1+ZprintObl*1+ZbumObl*1;
 
-        var KcolorObl = document.getElementById('colorb').value;
-
-        if ((KcolorObl==1)||(KcolorObl==2))
-        {
-            ZoblItog=ZoblItog*KzenaOblColor;
-        }
-        if ((KcolorObl==3)||(KcolorObl==4))
-        {
-            ZoblItog=ZoblItog*KzenaOblChb;
-        }
+        //var KcolorObl = document.getElementById('colorb').value;
+        //
+        //if ((KcolorObl==1)||(KcolorObl==2))
+        //{
+        //    ZoblItog=ZoblItog*KzenaOblColor;
+        //}
+        //if ((KcolorObl==3)||(KcolorObl==4))
+        //{
+        //    ZoblItog=ZoblItog*KzenaOblChb;
+        //}
 
 
 
@@ -931,6 +946,14 @@ $(document).ready(function() {
         }
 
         Zprint_bl=Zprint_bl*1;
+        var Kcolorbl = document.getElementById('colorb_bl').value;
+
+        if ((Kcolorbl==1)||(Kcolorbl==2)){
+            Zprint_bl=Zprint_bl*KzenaBlockColor;
+        }
+        if ((Kcolorbl==3)||(Kcolorbl==4)){
+            Zprint_bl=Zprint_bl*KzenaBlockChb;
+        }
 
 
         Zprint_bl=Zprint_bl.toFixed(5);
@@ -946,14 +969,14 @@ $(document).ready(function() {
         //=======стоимость  Блокнот  полная ===========//
 
         var Z_blItog=Zlamin_bl*1+Zprint_bl*1+Ztirag_bl*1;
-        var Kcolorbl = document.getElementById('colorb_bl').value;
-
-        if ((Kcolorbl==1)||(Kcolorbl==2)){
-            Z_blItog=Z_blItog*KzenaBlockColor;
-        }
-        if ((Kcolorbl==3)||(Kcolorbl==4)){
-            Z_blItog=Z_blItog*KzenaBlockChb;
-        }
+        //var Kcolorbl = document.getElementById('colorb_bl').value;
+        //
+        //if ((Kcolorbl==1)||(Kcolorbl==2)){
+        //    Z_blItog=Z_blItog*KzenaBlockColor;
+        //}
+        //if ((Kcolorbl==3)||(Kcolorbl==4)){
+        //    Z_blItog=Z_blItog*KzenaBlockChb;
+        //}
 
         //console.log(Zlamin_bl);
        // console.log(Zprint_bl);
@@ -1015,6 +1038,7 @@ $(document).ready(function() {
             ZoblItog=0;
         }
         var ZitogV=ZPerepl*1+Z_blItog*1+ZoblItog*1;
+        ZitogV=ZitogV*Kzena;
 
         ZPerepl=ZPerepl*1;
         ZPerepl= Math.ceil(ZPerepl);

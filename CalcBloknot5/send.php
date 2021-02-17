@@ -1,19 +1,18 @@
 <?php
 // если была нажата кнопка "Отправить"
 //print_r($_POST);
-//
+
 //print_r(iconv("UTF-8", "UTF-8", $_POST));
-//
+
 //$items = $_POST['item'];
-//
+
 //$result = '';
-//
-//
+
+
 //echo $result;
 if (
-
     isset($_POST['name']) && !empty($_POST['name']) &&
-    isset($_POST['phone']) && !empty($_POST['phone']) &&
+    isset($_POST['telefon']) && !empty($_POST['telefon']) &&
     isset($_POST['tupblitogf']) && !empty($_POST['tupblitogf']) &&
     isset($_POST['itogkrf']) && !empty($_POST['itogkrf']) &&
     isset($_POST['tiragvf']) && !empty($_POST['tiragvf']) &&
@@ -24,10 +23,10 @@ if (
     isset($_POST['color_blvf']) && !empty($_POST['color_blvf']) &&
     isset($_POST['lamin_blvf']) && !empty($_POST['lamin_blvf']) &&
     isset($_POST['Zitof']) && !empty($_POST['Zitof']) &&
-    isset($_POST['color_oblvf']) && !empty($_POST['color_oblvf'])
-) {
+    isset($_POST['color_oblvf']) && !empty($_POST['color_oblvf'])) 
+	{
     $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 1000);
-    $telefon = substr(htmlspecialchars(trim($_POST['phone'])), 0, 100);
+    $telefon = substr(htmlspecialchars(trim($_POST['telefon'])), 0, 100);
     $tupblitogf = substr(htmlspecialchars(trim($_POST['tupblitogf'])), 0, 10000000000);
     $itogkrf = substr(htmlspecialchars(trim($_POST['itogkrf'])), 0, 10000000000);
     $tiragvf = substr(htmlspecialchars(trim($_POST['tiragvf'])), 0, 10000000000);
@@ -69,10 +68,10 @@ if (
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
     if ($verify) {
 
-        header('Location: https://aleksandr.tupichenkov.com/CalcBloknot4/#popup_success', true, 302);
+        header('Location: https://aleksandr.tupichenkov.com/CalcBloknot4/', true, 302);
         exit;
     } else {
-        header('Location: https://aleksandr.tupichenkov.com/CalcBloknot4//#popup_success', true, 302);
+        header('Location: https://aleksandr.tupichenkov.com/CalcBloknot4/', true, 302);
         exit;
     }
 }

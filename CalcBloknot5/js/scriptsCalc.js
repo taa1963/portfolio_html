@@ -640,12 +640,12 @@ $(document).ready(function() {
         var C26=Lsra3/(Lbloknot*2);
         C26=Math.trunc(C26);
 
-        var D26=Hsra3/(Hbloknot);
+        var D26=Hsra3/(Hbloknot*1);
         D26=Math.trunc(D26);
 
         var V1=C26*D26;
 
-        var C27=Lsra3/(Hbloknot);
+        var C27=Lsra3/(Hbloknot*1);
         C27=Math.trunc(C27);
 
         var D27=Hsra3/(Lbloknot*2);
@@ -654,6 +654,10 @@ $(document).ready(function() {
         var V2=C27*D27;
 
         var NSpa3=4*Math.max(V1, V2);
+        // console.log(Lbloknot)
+       // console.log(Hbloknot)
+       // console.log(NSpa3)
+
 
 
      //======Расчет кол-ва тиражных листов обложки======//

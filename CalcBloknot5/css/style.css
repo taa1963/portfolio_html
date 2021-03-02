@@ -61,6 +61,7 @@ body{
     float: left;
     width: 105px;
     height: 121px;
+
 }
 
 
@@ -138,15 +139,6 @@ body{
     overflow: hidden;
 }
 
-/*.active_none{*/
-    /*display: none;*/
-
-/*}*/
-
-/*.active_bl{*/
-    /*display: block;*/
-
-/*}*/
 
 
 .cont_img_itog1{
@@ -156,11 +148,18 @@ body{
 }
 .cont_img_itog1 img{
     display:block;
-    width: 100%;
+    width: 384px;
+    /*width: 100%;*/
     /*height: 158px;*/
     margin: 0 auto;
-
-
+    margin-top: 20px;
+}
+.NameBl{
+    display: block;
+    position: absolute;
+    top:0;
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.1em;
 }
 
 .Lbl{
@@ -193,9 +192,11 @@ body{
 
 .cont_img_itog2 img{
     display:block;
-    width: 100%;
+    /*width: 100%;*/
+    width: 384px;
     /*height: 114px;*/
     margin: 0 auto;
+    margin-top: 20px;
 
 
 }
@@ -408,6 +409,29 @@ body{
 
 }
 
+.itog_block{
+    display: none;
+}
+
+.itog_block_open{
+    display: block;
+
+}
+.coment{
+    display: block;
+    width: 100%;
+    border: 2px solid #0056b3;
+    min-height: 50px;
+}
+.coment:hover{
+    border: 2px solid #0056b3;
+}
+.coment:active{
+    border: 2px solid #0056b3;
+}
+.coment:focus{
+    border: 2px solid #0056b3;
+}
 /*//==================================//  */
 
 /*
@@ -662,7 +686,9 @@ body{
     margin: 0 auto;
 }
 
-
+.Nobl{
+    display: none;
+}
 
 
 
@@ -861,6 +887,11 @@ body{
         position: fixed;
         top: 10%;
         left: 60%;
+        padding-top: 0;
+    }
+    .itog_oblf {
+        display: block;
+        width: 100%;
     }
     .Hbl {
         top: 25%;
@@ -884,6 +915,43 @@ body{
     }
     .Lb22 {
         top: 45%;
+    }
+    .popup {
+        width: 25em;
+        top: 1%;
+        left: 72%;
+    }
+    .form1 {
+       padding: 0;
+        margin: 0;
+    }
+    .note{
+        margin-top: 0;
+    }
+    .note h2{
+        font-size: 1em;
+    }
+    .form1 a{
+     margin-top: 0;
+     }
+    .itog_oblf p{
+        font-size: 1em;
+        line-height: 1em;
+    }
+    .itog_st{
+        display: inline-block;
+    }
+    .itog_st p{
+        width: 40%;
+        float: left;
+    }
+    .itog_st input{
+        width: 40%;
+        float: left;
+    }
+    .first p{
+        margin: 0;
+        padding: 0;
     }
 
 }

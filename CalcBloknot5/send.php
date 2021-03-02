@@ -23,6 +23,8 @@ if (
     isset($_POST['color_blvf']) && !empty($_POST['color_blvf']) &&
     isset($_POST['lamin_blvf']) && !empty($_POST['lamin_blvf']) &&
     isset($_POST['Zitof']) && !empty($_POST['Zitof']) &&
+    isset($_POST['coment']) && !empty($_POST['coment']) &&
+    isset($_POST['Nobl']) && !empty($_POST['Nobl']) &&
     isset($_POST['color_oblvf']) && !empty($_POST['color_oblvf'])) 
 	{
     $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 1000);
@@ -38,17 +40,23 @@ if (
     $color_blvf = substr(htmlspecialchars(trim($_POST['color_blvf'])), 0, 10000000000);
     $lamin_blvf = substr(htmlspecialchars(trim($_POST['lamin_blvf'])), 0, 10000000000);
     $Zitof = substr(htmlspecialchars(trim($_POST['Zitof'])), 0, 10000000000);
+    $coment = substr(htmlspecialchars(trim($_POST['coment'])), 0, 10000000000);
+    $Nobl = substr(htmlspecialchars(trim($_POST['Nobl'])), 0, 10000000000);
 
 
    // $to = 'info@groupregion.ru';
-    $to = 'alexandr.tupichenkov@yandex.ru';
+     $to = 'alexandr.tupichenkov@yandex.ru';
+   // $to = '1000vp@mail.ru, v.partner@yandex.ru';
+    $menedger = 'v.partner@yandex.ru';
     //$to = 'info@partwork.ru';
     $title = 'Новый заказ';
 
-    $message = "
+        if ($Nobl == 1):
+            $message = "
         Был получен заказ с сайта от:
         Имя: $name
         Телефон: $telefon
+        Комментарий: $coment
         Брошюра
         Формат:$tupblitogf
         Крепление:$itogkrf
@@ -63,7 +71,29 @@ if (
         Цветность:$color_blvf
         Ламинация:$lamin_blvf
         Стоимость:$Zitof
+        Mail_менеджера:$menedger
        ";
+
+        else:
+            $message = "
+        Был получен заказ с сайта от:
+        Имя: $name
+        Телефон: $telefon
+        Комментарий: $coment
+        Брошюра
+        Формат:$tupblitogf
+        Крепление:$itogkrf
+        Tираж:$tiragvf
+        Блок
+        Количество страниц:$Nstrf
+        Материал:$mat_blvf
+        Цветность:$color_blvf
+        Ламинация:$lamin_blvf
+        Стоимость:$Zitof
+        Mail_менеджера:$menedger
+       ";
+
+        endif;
 
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
     if ($verify) {

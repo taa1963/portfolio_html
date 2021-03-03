@@ -45,13 +45,13 @@ if (
 
 
    // $to = 'info@groupregion.ru';
-    $to = 'alexandr.tupichenkov@yandex.ru';
-    //$to = '1000vp@mail.ru, v.partner@yandex.ru';
+   $to = 'alexandr.tupichenkov@yandex.ru';
+   // $to = '1000vp@mail.ru, v.partner@yandex.ru';
     $menedger = 'v.partner@yandex.ru';
     //$to = 'info@partwork.ru';
     $title = 'Новый заказ';
 
-        if ($Nobl == 1):
+        if ($Nobl == 1) {
             $message = "
         Был получен заказ с сайта от:
         Имя: $name
@@ -73,9 +73,10 @@ if (
         Стоимость:$Zitof
         Mail_менеджера:$menedger
        ";
-        endif;
+            echo $message;
+        }
 
-        if ($Nobl == 0):
+        else {
 
             $message = "
         Был получен заказ с сайта от:
@@ -94,15 +95,16 @@ if (
         Стоимость:$Zitof
         Mail_менеджера:$menedger
        ";
-
-        endif;
+            echo $message;
+        }
 
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
     if ($verify) {
-
+       // header('Location: http://gusmanof.ru/CalcBloknot5/', true, 302);
         header('Location: https://aleksandr.tupichenkov.com/CalcBloknot7/', true, 302);
         exit;
     } else {
+       // header('Location: http://gusmanof.ru/CalcBloknot5/', true, 302);
         header('Location: https://aleksandr.tupichenkov.com/CalcBloknot7/', true, 302);
         exit;
     }

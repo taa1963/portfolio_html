@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор свайный фундамент</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор свайный фундамент">
+
+
+
+
+
+     <link href="css/style.css" rel="stylesheet">
+
+   
+
+</head>
+<body>
+
+
+
+
+
+<div class="container">
+
+     <div class="calculator" id="calculator">
+    <h2>Калькулятор</h2>
+
+
+            <div class="calculator_floor" >
+              <div class="calculator_floor_block" >
+                <div class="calculator_text" >
+                    <div class="calculator_text_block" >
+                        <span>Шаг 1</span>
+                    </div>
+                </div>
+
+                <div class="calculator_text2" >
+                        <p>Тип сооружения</p>
+                </div>
+
+                 <div class="calculator_date" >
+                     <select required class="format" id="type_ob" >
+                     </select>
+                 </div>
+              </div>
+            </div>
+
+        <div class="line"></div>
+
+         <div class="calculator_floor" >
+             <div class="calculator_floor_block" >
+                 <div class="calculator_text" >
+                     <div class="calculator_text_block" >
+                         <span>Шаг 2</span>
+                     </div>
+                 </div>
+
+                 <div class="calculator_text2" >
+                     <p>Материал сооружения</p>
+                 </div>
+
+                 <div class="calculator_date" >
+                     <select required class="format" id="material" >
+                     </select>
+                 </div>
+             </div>
+         </div>
+         <div class="line"></div>
+
+         <div class="calculator_floor" >
+             <div class="calculator_floor_block" >
+                 <div class="calculator_text" >
+                     <div class="calculator_text_block" >
+                         <span>Шаг 3</span>
+                     </div>
+                 </div>
+
+                 <div class="calculator_text2" >
+                     <p>Периметр здания или длинна забора</p>
+                 </div>
+
+                 <div class="calculator_date" >
+                     <select required class="format" id="perimetr" >
+                     </select>
+                 </div>
+             </div>
+         </div>
+         <div class="line"></div>
+
+         <div class="calculator_floor" >
+             <div class="calculator_floor_block" >
+                 <div class="calculator_text" >
+                     <div class="calculator_text_block" >
+                         <span>Шаг 4</span>
+                     </div>
+                 </div>
+
+                 <div class="calculator_text2" >
+                     <p>Обвязка</p>
+                 </div>
+
+                 <div class="calculator_date" >
+                     <select required class="format" id="stud" >
+                     </select>
+                 </div>
+             </div>
+         </div>
+
+         <div class="line"></div>
+
+         <div class="calculator_floor" >
+             <div class="calculator_floor_block" >
+                 <div class="calculator_text" >
+                     <div class="calculator_text_block" >
+                         <span>Шаг 5</span>
+                     </div>
+                 </div>
+
+                 <div class="calculator_text2" >
+                     <p>Установка</p>
+                 </div>
+
+                 <div class="calculator_date" >
+                     <select required class="format" id="work" >
+                         <option value="0"> Не требуется</option>
+                         <option value="1"> С установкой</option>
+                     </select>
+                 </div>
+             </div>
+         </div>
+
+         <div class="line"></div>
+
+
+
+
+         <div class="calculator_itog" id="itog1">
+
+
+             <h2>Ваш расчёт: </h2>
+
+             <table class="table">
+                 <tr>
+                     <td style="width:60%">Товары / Работы</td>
+                     <td  style="width:10%">Количество</td>
+                     <td style="width:10%">Стоимость</td>
+                     <td style="width:20%">Общая стоимость</td>
+
+                 </tr>
+
+
+                 <tr>
+                     <th>
+
+                         <span class="typesv" id="typesv"></span>
+
+                     </th>
+
+                     <th>
+                         <span class="typesv2" id="Nsvai"></span>
+
+                     </th>
+                     <th>
+                        <p> <span class="typesv2" id="Ztypesv">  </span> &#8381;  </p>
+
+                     </th>
+                     <th>
+
+
+                         <p> <span class="typesv2" id="Zsvaiv"></span> &#8381;  </p>
+
+
+                     </th>
+
+                 </tr>
+
+                 <tr class="sw1" id="sw1">
+                     <th>
+
+                         <span class="typesv" id="typeswel"></span>
+
+                     </th>
+
+                     <th>
+                         <span class="typesv2" id="Npm1"></span>
+
+                     </th>
+                     <th>
+                         <p> <span class="typesv2" id="Zstud1">  </span> &#8381;  </p>
+
+                     </th>
+                     <th>
+
+
+                         <p> <span class="typesv2" id="ZstudItog1"></span> &#8381;  </p>
+
+
+                     </th>
+                 <tr class="sw3">
+                     <th>
+
+                        <a> Обвязка <span class="typesv" id="typeswe2"></span> (монтаж)</a>
+
+                     </th>
+
+                     <th>
+                         <span class="typesv2" id="Npm2"></span>
+
+                     </th>
+                     <th>
+                         <p> <span class="typesv2" id="Zstud2">  </span> &#8381;  </p>
+
+                     </th>
+                     <th>
+
+
+                         <p> <span class="typesv2" id="ZstudItog2"></span> &#8381;  </p>
+
+
+                     </th>
+
+                 </tr>
+
+
+             </table>
+
+             <div class="itogtext">
+                 <p>Уважаемые клиенты, напоминаем, что данная стоимость приблизительна!<br>
+                     Вы уверены, что все учли?<br>
+                     Точную стоимость и профессиональную поддержку, Вы можете получить у нашего специалиста.</p>
+             </div>
+
+             <div class="itogt_pr">
+                 <p> Общая стоимость:   <span class="Zitosw" id="Zitosw"></span> &#8381;.</p>
+             </div>
+             <!--<p> Общая площадь: &nbsp; <span id="SALL">0</span> &nbsp; кв.м.  </p>-->
+
+             <!--<p> Общий вес эковаты: &nbsp;<span id="PALL">0</span>&nbsp; руб.  </p>-->
+
+             <!--<p> Объем:&nbsp; <span id="VALL">0</span>&nbsp;руб./кв.м.   </p>-->
+
+             <!--<p> Цена с монтажом:&nbsp; <span id="ZALL">0</span>&nbsp;руб./кв.м.   </p>-->
+         </div>
+
+
+</div>
+</div>
+	
+
+
+
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/scriptsCalc.js"></script>
+<script src="js/data.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Кредитный калькулятор</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Кредитный калькулятор">
+
+    <!--Set-Cookie: <cookie-name>=<cookie-value>; SameSite=None-->
+
+
+    <link href="css/modal-contact.css" rel="stylesheet">
+
+    <link href="css/Calc_style.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        function PrintElem(elem)
+        {
+            Popup($(elem).html());
+
+        }
+        function Popup(data)
+        {
+            var mywindow = window.open('', 'my div', 'height=400,width=600');
+            mywindow.document.write('<html><head><title>my div</title>');
+            /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+            mywindow.document.write('</head><body >');
+            mywindow.document.write(data);
+            mywindow.document.write('</body></html>');
+            mywindow.document.close(); // necessary for IE >= 10
+            mywindow.focus(); // necessary for IE >= 10
+            mywindow.print();
+            mywindow.close();
+
+            return true;
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+   
+
+           <!----------Начало блока калькулятора-------->
+
+         <div class="calculator">
+		    <div class="calc_block_titel">
+		 
+		 
+		         <h1>Кредитный калькулятор</h1>
+				 
+			</div>	 
+
+             <div class="calc_param">
+
+             <!----------Начало блока ввода параметров-------->
+           <div class="calc_block_param" id="calc_block_param">
+
+				
+				 <table class="table"  cellspacing="0"; border="1" >
+
+              
+
+                   <tr>
+                       <th style="width:40%"   >Сумма кредита</th>
+                       <th  style="width:40%"  > <input type="number" name="dev" id="summ" class="ekran"  value="3000" > </th>
+								   <th style="text-align:left;width:10%"   >
+
+						</th>
+                   </tr>
+				   
+				   <tr>
+                       <th >Срок кредита:</th>
+                       <th  style="width:40%"  > <input type="number" name="dev" id="period" class="ekran"  value="24" > </th>
+								   <th style="text-align:left;width:15%"   >
+								   <select required class="region" id="period_sel" >
+								        <option value="1">месяцев</option>
+										<option value="12">лет</option>
+										                                     
+                                    </select>  
+						</th>
+                   </tr>
+				   
+				    <tr>
+                       <th style="width:40%"  >Процентная ставка:</th>
+                       <th  style="width:40%"  > <input type="number" name="dev" id="stavka" class="ekran"  value="3" > </th>
+								   <th style="text-align:left;width:15%"   >
+                                       % годовых
+
+						</th>
+                   </tr>
+                     <tr>
+                         <th    >Вид платежа:</th>
+
+                         <th style="text-align:left;width:80%"   >
+
+
+
+
+                             <div class="vid_all">
+                                 <div class="vid1">
+                                     <input name="vid" class="vid" type="radio" id="sort_sel1" checked>  <span class="vid_txt"> Аннуитетный</span>
+
+                                 </div>
+                                 <div class="popup_1">
+                                     i
+                                     <div class="popup_1_1">
+                                         <p>Аннуитетный платеж – вариант ежемесячного платежа по кредиту, когда размер ежемесячного платежа остаётся постоянным на всём периоде кредитования.</p>
+                                     </div>
+                                 </div>
+                             </div>
+
+
+
+                             <div class="vid_all">
+                                 <div class="vid1">
+                                      <input name="vid" class="vid" type="radio" id="sort_sel2">
+                                     <span class="vid_txt">Дифференцированный</span>
+
+                                     </div>
+                             <div class="popup_1">
+                                 i
+                                  <div class="popup_1_1">
+                                     <p>Дифференцированный платеж – вариант ежемесячного платежа по кредиту, когда размер ежемесячного платежа по погашению кредита постепенно уменьшается к концу периода кредитования.</p>
+                                 </div>
+                             </div>
+                             </div>
+
+
+
+                         </th>
+                     </tr>
+                     <tr class="data_n">
+                         <th  >Начало выплат:</th>
+
+                         <th style="text-align:left;width:40%"   >
+                             <select required class="region" id="month_sel" >
+                                 <option class="month" value="0"> январь </option>
+                                 <option class="month" value="1"> февраль</option>
+                                 <option class="month" value="2"> март</option>
+                                 <option class="month" value="3"> апрель</option>
+                                 <option class="month" value="4"> май</option>
+                                 <option class="month" value="5"> июнь</option>
+                                 <option class="month" value="6"> июль</option>
+                                 <option class="month" value="7"> август</option>
+                                 <option class="month" value="8"> сентябрь</option>
+                                 <option class="month" value="9"> октябрь</option>
+                                 <option class="month" value="10"> ноябрь</option>
+                                 <option class="month" value="11"> декабрь</option>
+
+                             </select>
+                         </th>
+                         <th style="text-align:left;width:20%"   >
+                             <select required class="year" id="year_sel" >
+                                 <option class="years" value="2019"> 2019 </option>
+                                 <option class="years" value="2020"> 2020 </option>
+                                 <option class="years" value="2021"> 2021</option>
+                                 <option class="years" value="2022"> 2022</option>
+                                 <option class="years" value="2023"> 2023</option>
+                                 <option class="years" value="2024"> 2024</option>
+                                 <option class="years" value="2025"> 2025</option>
+                                 <option class="years" value="2026"> 2026</option>
+                                 <option class="years" value="2027"> 2027</option>
+                                 <option class="years" value="2028"> 2028</option>
+                                 <option class="years" value="2029"> 2029</option>
+                                 <option class="years" value="2030"> 2030</option>
+                                 <option class="years" value="2031"> 2031</option>
+
+                             </select>
+                         </th>
+                     </tr>
+				   
+				  </table> 
+				  
+	              <!----------Конец вывода расчитанных параметров-------->
+           </div>
+
+
+           <div class="calc_block_param_btn">
+               <button id="calc_price" type="button">Рассчитать</button>
+
+           </div>
+
+             <div class="calc_block_param_text">
+
+
+                 <p>
+                     Нужен кредит или рефинансирование? Ознакомьтесь с предложениями банков  <a href="https://www.vbr.ru/banki/kredity/">Показать предложения</a>
+                 </p>
+                 <!--<a href="https://www.vbr.ru/banki/kredity/">Показать предложения</a>-->
+
+             </div>
+
+
+             <div class="calc_block_diagr_text">
+                 <div class="calc_block_diagr_text1">
+                     <div class="calc_block_text1_text">
+                         <p>Ежемесячный платеж <span id="itog_pl"></span></p>
+                     </div>
+                     <div class="calc_block_text1_text">
+                         <p>Начисленные проценты <span id="pr"></span></p>
+                     </div>
+                     <div class="calc_block_text1_text">
+                         <p>Долг + проценты <span id="itogpl"></span></p>
+                     </div>
+
+                 </div>
+                 <div class="calc_block_diagr1">
+
+
+                     <div class="pie" id="pie">
+                         <div class="popup_1_4">
+                             <div class="grp">
+                             <p><div class="rectangleOs"></div>Сумма кредита: <span id="kros"> </span> <br>
+                               <span id="krosProz"> </span> от всей суммы </p>
+                             </div>
+                             <div class="grp">
+                             <p><div class="rectanglePer"></div>Сумма переплаты:<span id="perepld2"> </span> <br>
+                             <span id="prozd2"> </span> от всей суммы</p>
+                             </div>
+                          </div>
+                     </div>
+                     <div class="pie2">
+                        <p> <div class="rectangleOs"></div>Сумма кредита </p>
+                        <p> <div class="rectanglePer"></div>Сумма переплаты </p>
+
+
+                     </div>
+
+                 </div>
+           </div>
+
+             <div class="calc_block_diagr2">
+
+                 <div class="calc_block_diagr2_tex1">
+                     <p>График погащение</p>
+                 </div>
+
+                 <div class="calc_block_diagr2_tex2">
+                     <p>Ежемесячный платеж</p>
+                 </div>
+
+                 <div class="wrapper" id="wrapper">
+
+                 </div>
+
+
+                 <div class="diagr_coment">
+
+                   <div class="diagr_coment_block">
+                       <div class="diagr_coment_block2">
+                               <div class="rectangleOs2"></div>Основной долг
+                        </div>
+                       <div class="diagr_coment_block2">
+                         <div class="rectanglePr2"></div>Проценты
+                       </div>
+                 </div>
+
+             </div>
+                 </div>
+
+           <div class="calc_block_grafik" id="calc_block_grafik">
+
+
+               <div class="calc_block_detail"  id="calc_block_detail">
+                   <!--<h2>График платежей</h2>-->
+
+
+                   <table class="table_uv"  cellspacing="0"; border="1"  id="table_uv"  class="table_uv">
+                       <thead>
+                       <tr >
+                           <td style="width:10%">№</td>
+                           <td style="width:18%">Месяц </td>
+                           <td style="width:18%">Сумма платежа, руб. </td>
+                           <td style="width:18%">Сумма платежа, руб. </td>
+                           <td style="width:18%">Платеж по процентам, руб. </td>
+                         <!--  <td style="width:15%">Ежемесячные комиссии </td>-->
+                           <td style="width:18%">Остаток долга, руб. </td>
+
+                       </tr>
+                       </thead>
+
+                   </table>
+
+                   <div class="printpdflock">
+
+                       <input class="buttonprn" type="button" value="" onclick="PrintElem('#table_uv')">
+                   </div>
+
+
+               </div>
+
+
+
+
+           </div>
+
+
+
+           <!----------Конец блока калькулятора-------->
+
+
+
+       </div>
+      </div>
+
+
+
+
+
+           <script src="js/jquery.min.js"></script>
+
+           <script src="js/scriptsCalc.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

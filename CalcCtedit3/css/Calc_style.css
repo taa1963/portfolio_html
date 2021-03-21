@@ -1,0 +1,1330 @@
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.calculator{
+
+width:80%;
+margin:0 auto;
+    border: 1px solid #cccccc;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+
+.calc_param{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.calc_block_titel{
+	display: block;
+	width:100%;
+	margin-top:30px;
+	
+}
+.calc_block_titel h1{
+	font-size: 1.4em;
+    padding: 0;
+    margin: 0;
+    line-height: 110%;
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/*.calc_block_line{*/
+	/*display:block;*/
+	/*width:100%;*/
+	/*height:4px;*/
+	/*background-color: #f4f4f4;*/
+	/*margin-bottom:20px;*/
+/*}*/
+
+
+
+
+.calc_block_param{
+    display: block;
+    width: 100%;
+	background-color: #f4f4f4;
+	float:left;
+	/*border-radius:10px;*/
+}
+
+.calc_block_param h2{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    line-height: 110%;
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+	 margin-top: 30px;
+	
+}
+
+
+
+.calc_block_param p{
+    font: 12px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #222;
+    word-wrap: break-word;
+	text-align:center;
+}
+
+
+/*.calc_block_param_line{*/
+	/*display: block;*/
+    /*width: 90%;*/
+    /*margin: 0 auto;*/
+	/*height:2px;*/
+	/*background-color:#F7941D;*/
+	/*margin-bottom:20px;*/
+/*}*/
+
+.table{
+
+    width: 60%;
+    margin-left: 20px;
+    /*margin: 0 auto;*/
+	border:0;
+    table-layout: auto;
+}
+
+select{
+    width: 100%;
+}
+.table th{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.table{
+	border-radius:15px;
+	margin-bottom:20px;
+    margin-top: 20px;
+}
+
+.table td{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+	border: 2px solid #000000;
+ }
+.table th{
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: normal;
+	border:0;
+  }
+
+.table th input{
+    width: 80%;
+    border: 0;
+}
+.table p{
+    width: 100%;
+
+}
+.table_dtext{
+
+    width: 100%;
+    margin-left: 20px;
+    /*margin: 0 auto;*/
+    border:0;
+    table-layout: auto;
+    margin-top: 20px;
+}
+
+.table_dtext th{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    border: none;
+    /*border: 2px solid #000000;*/
+}
+.table_dtext p{
+    width: 90%;
+    margin: 0;
+
+}
+.table_dtext span{
+    font-weight: bold;
+}
+.diagp{
+   color:#758a9a;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.9rem;
+
+}
+
+.vid_all{
+    display: inline-block;
+    width: 100%;
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    margin-bottom: 10px;
+}
+.vid1{
+    display: block;
+
+}
+
+.data_n{
+    display: none;
+}
+.vid{
+    max-width: 10%;
+    float: left;
+}
+.vid_txt{
+    display: block;
+    float: left;
+    margin-right: 3px;
+    margin-top: -3px;
+}
+
+.popup_1{
+    float: left;
+    /*height: 1em;*/
+    /*margin-left: 5px;*/
+    /*margin-top: -5px;*/
+    position: relative;
+
+    display: inline-block;
+    box-sizing: content-box;
+    opacity: 1;
+    cursor: pointer;
+    margin: 0 3px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    border: 2px solid #95a5a6;
+    border-radius: 12px;
+    color: #95A5A6;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Times new roman";
+    transition: opacity 0.3s ease;
+}
+
+.popup_1_1{
+    position: absolute;
+    width: 300px;
+    /*height: 249px;*/
+    z-index: 100;
+   /*// opacity: 0;*/
+    visibility: hidden;
+    /*top: -14em;*/
+    top: -128px;
+    /*height: 100px;*/
+    left: -87px;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 16px 0px #000000;
+    background: #ffffff;
+    /*background: #000;*/
+    color: #000;
+}
+
+.popup_1_1 p {
+    width: 100%;
+    float: left;
+    font-family: 'Museo Sans Cyrl 300', sans-serif, 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.popup_1:hover .popup_1_1, .popup_1_1:hover{
+    /*//opacity:1;*/
+    visibility: visible;
+    display: inline-block;
+    width: 280px;
+    z-index:11;
+
+}
+
+
+
+
+
+
+.calc_block_param_btn{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #dde5e7;
+}
+
+#calc_price{
+    display: block;
+    margin: 0 auto;
+    background-color: #3498db;
+    padding: 10px 20px;
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calc_block_param_text{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.calc_block_param_text p{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+}
+
+.calc_block_param_text a{
+    margin-left: 5px;
+    background-color: #45bb60;
+    border: none;
+    border-bottom: 2px solid #28a745;
+    border-top: 2px solid #45bb60;
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.calc_block_diagr_text{
+    display: none;
+    margin-top: 10px;
+    /*margin-bottom: 10px;*/
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.calc_block_diagr_text1{
+    display: block;
+    width: 50%;
+    float: left;
+    min-height: 100px;
+}
+
+.calc_block_diagr1{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+
+
+.pie {
+    display: block;
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    background: #2f96b4;
+    overflow: hidden;
+    background-image:
+    linear-gradient(to right, transparent 50%, #f49862 0);
+    z-index: 1;
+    float: left;
+    --sq-r:rotate(32deg);
+}
+
+.pie2{
+    display: block;
+    float: left;
+    margin-left: 1em;
+}
+
+.pie::before {
+    content: '';
+    display: block;
+    margin-left: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 / 50%;
+    background-color: #2f96b4;
+    transform-origin: left;
+    z-index: 300;
+    transform:var(--sq-r);
+}
+
+.popup_1_4{
+    position: absolute;
+    width: 300px;
+    /*height: 249px;*/
+    z-index: 100;
+    /*// opacity: 0;*/
+    visibility: hidden;
+    /*top: -14em;*/
+    top: -18px;
+    /*height: 100px;*/
+    left: 57%;
+    border: 1px solid #000000;
+    box-shadow: 0px 0px 16px 0px #000000;
+    /*background: #ffffff;*/
+    background: #000;
+    color: #ffffff;
+}
+
+.popup_1_4 p {
+    width: 100%;
+    float: left;
+    font-family: 'Museo Sans Cyrl 300', sans-serif, 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.pie:hover .popup_1_4, .popup_1_4:hover{
+    /*//opacity:1;*/
+    visibility: visible;
+    display: inline-block;
+    width: 280px;
+    z-index:11;
+
+}
+
+.rectangleOs{
+    width:15px;
+    height:15px;
+    background-color:#2f96b4;
+    display: block;
+    float: left;
+    border: 1px solid #ffffff;
+    margin-right: 5px;
+}
+
+.rectanglePer{
+    width:15px;
+    height:15px;
+    background-color:#f49862;
+    display: block;
+    float: left;
+    border: 1px solid #ffffff;
+    margin-right: 5px;
+}
+
+
+.grp{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+
+
+/*.popup_1_5{*/
+    /*position: absolute;*/
+    /*width: 300px;*/
+    /*height: 249px;*/
+    /*z-index: 100;*/
+    /*// opacity: 0;*/
+    /*visibility: hidden;*/
+    /*top: -14em;*/
+    /*top: -18px;*/
+    /*height: 100px;*/
+    /*left: 57%;*/
+    /*border: 1px solid #000000;*/
+    /*box-shadow: 0px 0px 16px 0px #000000;*/
+    /*background: #ffffff;*/
+    /*background: #000;*/
+    /*color: #000;*/
+/*}*/
+
+/*.popup_1_5 p {*/
+    /*width: 100%;*/
+    /*float: left;*/
+    /*font-family: 'Museo Sans Cyrl 300', sans-serif, 'Arial', sans-serif;*/
+    /*font-size: 16px;*/
+    /*text-align: left;*/
+/*}*/
+
+
+/*button:hover::after, button:focus::after*/
+/*.pie:hover::before  .popup_1_5, .popup_1_5:hover{*/
+    /*//opacity:1;*/
+
+    /*visibility: visible;*/
+    /*display: inline-block;*/
+    /*width: 280px;*/
+    /*z-index:111;*/
+
+/*}*/
+
+
+
+
+
+
+
+.calc_block_text1_text{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.calc_block_text1_text p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.calc_block_text1_text span{
+    font-weight: bold;
+    text-align: right;
+}
+.calc_block_diagr2{
+    display: none;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #eaeaea;
+}
+
+
+
+
+.wrapper{
+    /*border: 1px solid #aeaeae;*/
+    display: block;
+    /*position : relative;*/
+    /*overflow: hidden;*/
+    margin: 0 auto;
+    /*background: #28a745;*/
+    background-color: #eaeaea;
+    width: 90%;
+    height: 20em;
+    /*height: 230px;*/
+    /*width: 900px;*/
+    float: left;
+}
+
+.diagr{
+    bottom: 0px;
+    float: left;
+    width: 100%;
+    /*height:100%;*/
+    position : relative;
+     /*margin: 1px;*/
+    display : block;
+    background: #eff02d;
+}
+.diagr2{
+    bottom: 0px;
+    float: left;
+    height:100%;
+    position : relative;
+    /*margin: 1px;*/
+    display : block;
+    background: #a840ff;
+}
+
+.d2{
+    width:80%;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+}
+
+.pl2, .osnov2, .prg2{
+    width: 40%;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+}
+
+.popup_1_2{
+    position: absolute;
+    width: 250px;
+    /*height: 249px;*/
+    z-index: 100;
+    /*// opacity: 0;*/
+    visibility: hidden;
+    /*top: -14em;*/
+    top: 8px;
+    /*height: 100px;*/
+    left: -87px;
+    border: 1px solid #000000;
+    /*box-shadow: 0px 0px 16px 0px #000000;*/
+    background: #000000;
+    /*background: #000;*/
+    color: #ffffff;
+}
+
+
+
+.popup_1_2 p {
+    width: 100%;
+    float: left;
+    font-family: 'Museo Sans Cyrl 300', sans-serif, 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin: 2px;
+    color: #ffffff;
+}
+
+.rectangle{
+ width:15px;
+ height:15px;
+ background-color:#a840ff;
+ display: block;
+ float: left;
+    border: 1px solid #ffffff;
+    margin-right: 5px;
+}
+.rectangle2{
+    width:15px;
+    height:15px;
+    background-color:#eff02d;
+    display: block;
+    float: left;
+    border: 1px solid #ffffff;
+    margin-right: 5px;
+}
+
+.diagr2:hover .popup_1_2, .popup_1_2:hover{
+    /*//opacity:1;*/
+    visibility: visible;
+    display: inline-block;
+    width: 250px;
+    z-index:11;
+
+}
+
+.calc_block_diagr2_line_date{
+    display: block;
+    /*margin-left: 20%;*/
+}
+.calc_block_diagr2_line_date p{
+    display: block;
+    position: absolute;
+    top: 70%;
+    margin-left: 6px;
+}
+
+
+.lineV{
+    display: block;
+    background-color:#222222;
+    width:2px;
+    height: 22em;
+    position: absolute;
+   top: 3em;
+}
+.diagr_coment{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 8%;
+    padding-top: 50px;
+}
+.diagr_coment_block{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.rectangleOs2{
+    width:35px;
+    height:15px;
+    background-color:#a840ff;
+    display: block;
+    float: left;
+    /*border: 1px solid #ffffff;*/
+    margin-right: 5px;
+}
+
+.rectanglePr2{
+    width:35px;
+    height:15px;
+    background-color:#eff02d;
+    display: block;
+    float: left;
+    /*border: 1px solid #ffffff;*/
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+
+.diagr_coment_block2{
+    display: block;
+    float: left;
+}
+.calc_block_diagr2_tex1{
+    display: block;
+
+    /* float: left; */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.calc_block_diagr2_tex1 p{
+    text-align: left;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 10%;
+}
+
+
+
+
+.calc_block_diagr2_tex2{
+    display: block;
+    position: relative;
+    width: 5%;
+    float: left;
+    margin-top: 10%;
+    /*margin-left: 5%;*/
+    /*left: -9%;*/
+    /*display: block;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*width: 100%;*/
+    /*float: left;*/
+    /*margin-bottom: 20%;*/
+    /*transform: rotate(270deg);*/
+    /*margin-left: 0px;*/
+    /*background: beige;*/
+    z-index: 100;
+    top: 60%;
+    height: auto;
+
+
+    /*display: block;*/
+    /*position: absolute;*/
+    /*overflow: hidden;*/
+    /*width: 100%;*/
+    /*float: left;*/
+    /*bottom: 20%;*/
+    /*transform: rotate(270deg);*/
+}
+.calc_block_diagr2_tex2 p{
+    /*text-align: center;*/
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    transform-origin: center center 0;
+    transform: rotate(270deg);
+    /*margin-left: 10%;*/
+}
+
+.calc_block_itog{
+    display: block;
+    width: 50%;
+	float:right;
+	background:#A2B04E;
+    border-radius: 5px;
+    height: 30em;
+   /*// margin-top: 30px;*/
+}
+
+.calc_block_itog_text{
+    display: block;
+    width: 90%;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.calc_block_itog_text p{
+
+    font: 16px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #ffffff;
+    word-wrap: break-word;
+    text-align:center;
+    font-weight: bold;
+}
+
+
+
+.calc_block_itog_table{
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.table_uv{
+    background: #ffffff;
+    border: 1px solid #000000;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400;
+    color: #566473;
+    font-size: 0.8em;
+    vertical-align: top;
+    text-align: left;
+    border-bottom-width: 2px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+}
+
+.table_uv a{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400;
+    color: #007bff;
+    /*color: #566473;*/
+    font-size: 0.98em;
+    vertical-align: top;
+    text-align: left;
+    border-bottom-width: 2px;
+    margin: 5px;
+    line-height: 2;
+    z-index: 11;
+}
+
+.table_uv a:hover {
+    color: #336699;
+}
+.sum_plgr_itog{
+    font-weight: bold;
+}
+.osn_dolg_itog{
+    font-weight: bold;
+}
+.proz_dolg_itog{
+    font-weight: bold;
+}
+
+.table_uv input{
+    border: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400;
+    color: #566473;
+    font-size: 0.98em;
+    vertical-align: top;
+    text-align: left;
+    border-bottom-width: 2px;
+
+}
+
+.table_visible{
+    display: table-row;
+
+}
+.table_unvisible{
+    display: none;
+
+}
+
+
+
+/*		Описание второго блока вывода итгов калькулятора и его компонент		*/
+.calc_block_grafik{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    /*background-color: #FFDF97;*/
+
+}
+
+.calc_block_detail{
+    display: block;
+    width: 96%;
+    margin: 0 auto;
+}
+.active{
+    display: block;
+}
+
+
+
+
+.calc_block_detail h2{
+    text-align: center;
+}
+
+
+.printpdflock{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.printpdflock2{
+    display: block;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    /* float: inherit; */
+    margin: 0 auto;
+}
+
+.buttonprn{
+    border: 0;
+    background: #fff;
+    /*display: block;*/
+    /*width: 95px;*/
+    /*height: 34px;*/
+    padding: 1px;
+    margin: 0 auto;
+    /*background-image: url("../img/print.PNG") ;*/
+}
+.printpdflock_block{
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.imgb{
+    display: block;
+    float: left;
+    height: 20px;
+}
+
+
+
+.popup-fade1 {
+    display: none;
+}
+.popup-fade1:before {
+    content: '';
+    background: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: 9999;
+}
+.popup-fade2 {
+    display: none;
+}
+.popup-fade2:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+.popup {
+    position: fixed;
+    top: 21%;
+    left: 50%;
+    padding: 20px;
+    width: 30em;
+    margin-left: -20em;
+    background: #fff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    z-index: 99999;
+    opacity: 1;
+}
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0056b3;
+}
+
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none; /*--по умолчанию скрыт--*/
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .70;/* Полупрозрачность слоя затемнения */
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+/*--Модальное окно--*/
+.popup_block{
+    position: fixed;
+    top: 55%;;
+    left: 45%;
+    z-index: 99999;
+    display: none; /*--по умолчанию скрыт--*/
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    max-height: 100%;
+
+    /*-- скругленные углы--*/
+
+    color: #ffffff;
+    font-size: .9em;
+}
+/*--Фиксированное позиционирование для тупого IE6--*/
+*html #fade {
+    position: absolute;
+}
+*html .popup_block {
+    position: absolute;
+}
+/*--Блок содержания--*/
+
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: 40px;
+    right:18px;
+    width: 24px;
+    height: 24px;
+    /*border: 2px solid #ccc;*/
+    /*-webkit-border-radius: 15px;*/
+    /*-moz-border-radius: 15px;*/
+    /*-ms-border-radius: 15px;*/
+    /*-o-border-radius: 15px;*/
+    /*border-radius: 15px;*/
+    /*background-color: rgba(61, 61, 61, 0.8);*/
+    /*-webkit-box-shadow: 0px 0px 10px #000;*/
+    /*-moz-box-shadow: 0px 0px 10px #000;*/
+    /*box-shadow: 0px 0px 10px #000;*/
+    /*text-align: center;*/
+    content: "X";
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+
+    line-height: 20px;
+
+}
+
+.note{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.note h2{
+    text-align: left;
+    margin-left: 2%;
+}
+
+.popup_line{
+    display: block;
+    width: 32.5em;
+    height: 1px;
+    background-color: #95a5a6;
+    margin-right: 28%;
+    margin-left: -4.3%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.poptext{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.button1{
+    display: block;
+    color: #ffffff;
+    background-color: #b0517a;
+    border-color: #b0517a;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 3px 10px;
+    float: right;
+}
+
+/*.param{*/
+    /*display: block;*/
+    /*margin: 0 auto;*/
+    /*border: 1px solid #cccccc;*/
+    /*border-radius: 10px;*/
+    /*padding-bottom: 20px;*/
+    /*margin-bottom: 20px;*/
+/*}*/
+/*.param_block{*/
+    /*display: block;*/
+    /*margin-left: 20px;*/
+    /*margin-bottom: 25px;*/
+/*}*/
+
+
+
+
+/*.table_uvmob{*/
+    /*display: none;*/
+/*}*/
+.calc_block_detai_mob{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.calc_block_detai_all{
+    display: block;
+}
+
+.calc_block_detai_mob{
+    display: none;
+}
+
+
+.calc_block_detail_mobvn{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 96%;
+    margin: 0 auto;
+}
+.table_uv_mob{
+    display: table;
+    width: 88%;
+    background: #ffffff;
+    border: 1px solid #000000;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400;
+    color: #566473;
+    font-size: 0.8em;
+    vertical-align: top;
+    text-align: left;
+    border-bottom-width: 2px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+}
+
+.table_uv_mob a{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400;
+    color: #007bff;
+    /*color: #566473;*/
+    font-size: 0.98em;
+    vertical-align: top;
+    text-align: left;
+    border-bottom-width: 2px;
+    margin: 5px;
+    line-height: 2;
+    z-index: 11;
+}
+
+.table_uv_mob a:hover {
+    color: #336699;
+}
+.sum_plgr_itog{
+    font-weight: bold;
+}
+.osn_dolg_itog{
+    font-weight: bold;
+}
+.proz_dolg_itog{
+    font-weight: bold;
+}
+
+.table_uv_mob input{
+    border: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400;
+    color: #566473;
+    font-size: 0.98em;
+    vertical-align: top;
+    text-align: left;
+    border-bottom-width: 2px;
+
+}
+
+.table_visible_mob{
+    display: table-row;
+
+}
+.table_unvisible_mob{
+    display: none;
+
+}
+
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+    .content{
+        display: block;
+        width: 100%;
+        float: left;
+        position: relative;
+
+    }
+
+    .sidebar{
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+        float: right;
+    }
+    .sidebar ul{
+        list-style: none;
+    }
+
+    .table_uv{
+        font-size: 0.6em;
+    }
+
+
+}
+
+@media only screen  and (max-width: 990px) {
+
+    .table_uv{
+        font-size: 0.6em;
+    }
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+    .calc_param {
+        display: block;
+        width: 100%;
+    }
+
+    .calc_itog{
+        display: block;
+        width: 100%;
+    }
+    .table_uv{
+        font-size: 0.5em;
+        white-space:pre-wrap;
+
+    }
+    .table_uv p{
+        font-size: 0.5em;
+        white-space:pre-wrap;
+        display: table-caption;
+
+    }
+    .calc_block_detai{
+        display: none;
+
+    }
+    .calc_block_detai_all{
+        display: none;
+    }
+
+
+    .calc_block_detai_mob{
+        display: block;
+
+    }
+    .calc_block_detail_mobvn{
+        display: block;
+    }
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+.calc_block_itog2 table{
+	margin:0;
+}
+
+
+.calc_block_itog2 table td {
+	word-wrap: break-word; 
+	}
+.calc_block_detail{
+	 width: 100%;
+}
+    .table_uv{
+        width: 100%;
+        font-size: 0.5em;
+        white-space:pre-wrap;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+
+    }
+    .table_uv p{
+        font-size: 0.5em;
+        white-space:pre-wrap;
+        display: table-caption;
+
+    }
+
+
+}

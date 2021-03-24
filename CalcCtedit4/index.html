@@ -1,0 +1,459 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Кредитный калькулятор</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Кредитный калькулятор">
+
+
+
+    <link href="css/Calc_style.css" rel="stylesheet">
+   <script>
+    function printContents(elem) {
+        var contents = $(elem).html();
+    //var contents = $('#calc_block_detail').html();
+
+    if ($("#printDiv").length == 0) {
+    var printDiv = null;
+    printDiv = document.createElement('div');
+    printDiv.setAttribute('id','printDiv');
+    printDiv.setAttribute('class','printable');
+    $(printDiv).appendTo('body');
+    }
+
+    $("#printDiv").html(contents);
+
+    window.print();
+
+    $("#printDiv").remove();
+    }
+
+    </script>
+
+    <script type="text/javascript">
+        function PrintElem(elem)
+        {
+            Popup($(elem).html());
+
+        }
+        function Popup(data)
+        {
+            var mywindow = window.open('', 'my div', 'height=400,width=600');
+            mywindow.document.write('<html><head><title>График погащения</title>');
+//            optional.stylesheet /
+            mywindow.document.write('<link href="css/Calc_style.css" rel="stylesheet">');
+//            optional stylesheet mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+//            mywindow.document.write('</head><body >');
+            mywindow.document.write(data);
+            mywindow.document.write('</body></html>');
+            mywindow.document.close(); // necessary for IE >= 10
+            mywindow.focus(); // necessary for IE >= 10
+            mywindow.print();
+            mywindow.close();
+
+            return true;
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+   
+
+           <!----------Начало блока калькулятора-------->
+
+         <div class="calculator">
+		    <div class="calc_block_titel">
+		 
+		 
+		         <h1>Кредитный калькулятор</h1>
+				 
+			</div>	 
+
+             <div class="calc_param">
+
+             <!----------Начало блока ввода параметров-------->
+           <div class="calc_block_param" id="calc_block_param">
+
+				
+				 <table class="table"  cellspacing="0"; border="1" >
+
+              
+
+                   <tr>
+                       <th style="width:30%"   >Сумма кредита</th>
+                       <th  style="width:20%"  > <input type="text" name="dev" id="summ" class="ekran"  value="3000" > </th>
+					   <th style="text-align:left;width:50%"   >
+                           <input type="number" name="dev" id="summ2" class="summ2"  value="3000" >
+						</th>
+                   </tr>
+				   
+				   <tr>
+                       <th style="width:30%" >Срок кредита:</th>
+                       <th  style="width:20%"  > <input type="number" name="dev" id="period" class="ekran"  value="24" > </th>
+								   <th style="text-align:left;width:50%"   >
+								   <select required class="region" id="period_sel" >
+								        <option value="1">месяцев</option>
+										<option value="12">лет</option>
+										                                     
+                                    </select>  
+						</th>
+                   </tr>
+				   
+				    <tr>
+                       <th style="width:30%"  >Процентная ставка:</th>
+                       <th  style="width:20%"  > <input type="number" name="dev" id="stavka" class="ekran"  value="3" > </th>
+						<th style="text-align:left;width:50%"   > % годовых
+
+						</th>
+                   </tr>
+                     <tr>
+                         <th   style="text-align:left;width:20%"  >Вид платежа:</th>
+
+                         <th colspan="2" style="text-align:left;width:80%"   >
+                             <div class="vid_all">
+                                 <div class="vid1">
+                                     <input name="vid" class="vid" type="radio" id="sort_sel1" checked>  <span class="vid_txt"> Аннуитетный</span>
+
+                                 </div>
+                                 <div class="popup_1">
+                                     i
+                                     <div class="popup_1_1">
+                                         <p>Аннуитетный платеж – вариант ежемесячного платежа по кредиту, когда размер ежемесячного платежа остаётся постоянным на всём периоде кредитования.</p>
+                                     </div>
+                                 </div>
+                             </div>
+
+
+
+                             <div class="vid_all">
+                                 <div class="vid1">
+                                      <input name="vid" class="vid" type="radio" id="sort_sel2">
+                                     <span class="vid_txt">Дифференцированный</span>
+
+                                     </div>
+                             <div class="popup_1">
+                                 i
+                                  <div class="popup_1_1">
+                                     <p>Дифференцированный платеж – вариант ежемесячного платежа по кредиту, когда размер ежемесячного платежа по погашению кредита постепенно уменьшается к концу периода кредитования.</p>
+                                 </div>
+                             </div>
+                             </div>
+
+
+
+                         </th>
+                     </tr>
+                     <tr class="data_n">
+                         <th  >Начало выплат:</th>
+
+                         <th style="text-align:left;width:40%"   >
+                             <select required class="region" id="month_sel" >
+                                 <option class="month" value="0"> январь </option>
+                                 <option class="month" value="1"> февраль</option>
+                                 <option class="month" value="2"> март</option>
+                                 <option class="month" value="3"> апрель</option>
+                                 <option class="month" value="4"> май</option>
+                                 <option class="month" value="5"> июнь</option>
+                                 <option class="month" value="6"> июль</option>
+                                 <option class="month" value="7"> август</option>
+                                 <option class="month" value="8"> сентябрь</option>
+                                 <option class="month" value="9"> октябрь</option>
+                                 <option class="month" value="10"> ноябрь</option>
+                                 <option class="month" value="11"> декабрь</option>
+
+                             </select>
+                         </th>
+                         <th style="text-align:left;width:20%"   >
+                             <select required class="year" id="year_sel" >
+                                 <option class="years" value="2019"> 2019 </option>
+                                 <option class="years" value="2020"> 2020 </option>
+                                 <option class="years" value="2021"> 2021</option>
+                                 <option class="years" value="2022"> 2022</option>
+                                 <option class="years" value="2023"> 2023</option>
+                                 <option class="years" value="2024"> 2024</option>
+                                 <option class="years" value="2025"> 2025</option>
+                                 <option class="years" value="2026"> 2026</option>
+                                 <option class="years" value="2027"> 2027</option>
+                                 <option class="years" value="2028"> 2028</option>
+                                 <option class="years" value="2029"> 2029</option>
+                                 <option class="years" value="2030"> 2030</option>
+                                 <option class="years" value="2031"> 2031</option>
+
+                             </select>
+                         </th>
+                     </tr>
+				   
+				  </table> 
+				  
+	              <!----------Конец вывода расчитанных параметров-------->
+           </div>
+
+
+           <div class="calc_block_param_btn">
+               <button id="calc_price" type="button">Рассчитать</button>
+
+           </div>
+
+             <div class="calc_block_param_text">
+
+
+                 <p>
+                     Нужен кредит или рефинансирование? Ознакомьтесь с предложениями банков  <a href="https://www.vbr.ru/banki/kredity/">Показать предложения</a>
+                 </p>
+
+
+             </div>
+
+
+             <div class="calc_block_diagr_text">
+                 <div class="calc_block_diagr_text1">
+
+                     <table class="table_dtext"  cellspacing="0"; border="0">
+                         <tr>
+                            <th style="width:60%"> <p>Ежемесячный платеж </p></th>
+                            <th style="width:40%">  <span id="itog_pl"> </span> <span class="diagp">руб. </span> </th>
+
+                         </tr>
+                         <tr>
+                             <th style="width:60%"> <p>Начисленные проценты</p></th>
+                             <th style="width:40%">  <span id="pr"> </span>  <span class="diagp">руб. </span></th>
+
+                         </tr>
+                         <tr>
+                             <th style="width:60%"> <p>Долг + проценты </p></th>
+                             <th style="width:40%">  <span id="itogpl"> </span>  <span class="diagp">руб. </span></th>
+
+                         </tr>
+
+                     </table>
+
+
+
+                 </div>
+                 <div class="calc_block_diagr1">
+
+
+                     <div class="pie" id="pie">
+                         <div class="popup_1_4">
+                             <div class="grp">
+                             <p><div class="rectangleOs"></div>Сумма кредита: <span id="kros"> </span> <br>
+                               <span id="krosProz"> </span> %от всей суммы </p>
+                             </div>
+                             <div class="grp">
+                             <p><div class="rectanglePer"></div>Сумма переплаты:<span id="perepld2"> </span> <br>
+                             <span id="prozd2"> </span> %от всей суммы</p>
+                             </div>
+                          </div>
+                     </div>
+                     <div class="pie2">
+                        <p> <div class="rectangleOs"></div>Сумма кредита </p>
+                        <p> <div class="rectanglePer"></div>Сумма переплаты </p>
+
+
+                     </div>
+
+                 </div>
+           </div>
+
+             <div class="calc_block_diagr2">
+
+                 <div class="calc_block_diagr2_tex1">
+                     <p>График погащение</p>
+                 </div>
+
+                 <div class="calc_block_diagr2_tex2">
+                     <p>Ежемесячный платеж</p>
+                 </div>
+
+                 <div class="wrapper" id="wrapper">
+
+                 </div>
+
+
+                 <div class="diagr_coment">
+
+                   <div class="diagr_coment_block">
+                       <div class="diagr_coment_block2">
+                               <div class="rectangleOs2"></div>Основной долг
+                        </div>
+                       <div class="diagr_coment_block2">
+                         <div class="rectanglePr2"></div>Проценты
+                       </div>
+                 </div>
+
+             </div>
+                 </div>
+
+           <div class="calc_block_grafik" id="calc_block_grafik">
+
+               <div class="calc_block_detai_all" >
+               <div class="calc_block_detail"  id="calc_block_detail">
+
+                   <table class="table_uv"  cellspacing="0"; border="1"  id="table_uv"    >
+                       <thead>
+                       <tr >
+                           <td style="width:3%" >№</td>
+                           <td  style="width:10%" >Месяц </td>
+                           <td class="t3" style="width:20%"><p>Сумма платежа, руб.</p> </td>
+                           <td style="width:20%"><p>Платеж по основному долгу, руб.</p> </td>
+                           <td style="width:20%"><p>Платеж по процентам, руб.<p></p> </td>
+                           <td style="width:20%"><p>Остаток долга, руб.</p> </td>
+                       </tr>
+                       </thead>
+                   </table>
+               </div>
+
+               <div class="printpdflock">
+
+                   <div class="printpdflock2">
+                       <div class="printpdflock_block">
+                           <span> <img class="imgb" src="img/sss.PNG"> <input   class="buttonprn popup-open" type="button" value="Получить ссылку" /></span>
+                       </div>
+
+                       <div class="printpdflock_block">
+                           <span> <img class="imgb" src="img/print22.PNG"> <input   class="buttonprn" type="button" value="Печать" onclick="PrintElem('#calc_block_detail')"/></span>
+                       </div>
+
+                   </div>
+
+
+               </div>
+               </div>
+
+               <div class="calc_block_detai_mob" >
+                   <div class="calc_block_detail_mobvn" id="calc_block_detail_mobvn" >
+
+                       <table class="table_uv_mob"  cellspacing="0"; border="1"  id="table_uv_mob"    >
+                           <thead>
+                           <tr >
+                               <td style="width:5%" >№</td>
+                               <td  style="width:25%" >Месяц </td>
+                               <td  style="width:35%"><p>Сумма платежа, руб.</p> </td>
+                               <td style="width:35%"><p>Остаток долга, руб.</p> </td>
+
+                           </tr>
+                           </thead>
+                       </table>
+                   </div>
+
+                   <div class="printpdflock">
+
+                       <div class="printpdflock2">
+                           <div class="printpdflock_block">
+                               <span> <img class="imgb" src="img/sss.PNG"> <input   class="buttonprn popup-open" type="button" value="Получить ссылку" /></span>
+                           </div>
+
+                           <div class="printpdflock_block">
+                               <span> <img class="imgb" src="img/print22.PNG"> <input   class="buttonprn" type="button" value="Печать" onclick="PrintElem('#calc_block_detail_mobvn')"/></span>
+                           </div>
+
+                       </div>
+
+
+                   </div>
+               </div>
+
+
+
+
+           </div>
+
+
+               <div class="popup-fade1">
+                       <div class="popup">
+
+
+                               <div class="note">
+                                   <div class="content_block3_cont">
+                                       <h2>ссылка на расчет</h2>
+                                       <div class="close">X</div>
+
+                                   </div>
+                               <!--//    <div class="popup_line"></div>-->
+                               </div>
+                           <div class="popup_line"></div>
+                           <div class="popup_block_text">
+                               <input type="text" id="poptext" class="poptext" value="">
+                           </div>
+                           <div class="popup_line"></div>
+
+                           <button class="button1" name="insert"  id="button1" >Закрыть</button>
+
+
+                       </div>
+                   </div>
+            </div>
+
+
+           <!----------Конец блока калькулятора-------->
+
+
+
+       </div>
+      <!--</div>-->
+         <!--</div>-->
+
+
+
+
+           <script src="js/jquery.min.js"></script>
+
+           <script src="js/scriptsCalc.js"></script>
+
+           <script>
+               $(document).ready(function($) {
+                   $('.popup-open').click(function() {
+                       $('.popup-fade1').fadeIn();
+                       return false;
+                   });
+
+                   $('.close').click(function() {
+                       $(this).parents('.popup-fade1').fadeOut();
+                       return false;
+                   });
+                   $('.popup-close').click(function() {
+                       $(this).parents('.popup-fade1').fadeOut();
+                       return false;
+                   });
+                   $('#button1').click(function() {
+                       // alert(333)
+                       $(this).parents('.popup-fade1').fadeOut();
+                       $('.popup-fade1').fadeOut();
+                       return false;
+                   });
+
+                   $(document).keydown(function(e) {
+                       if (e.keyCode === 27) {
+                           e.stopPropagation();
+                           $('.popup-fade1').fadeOut();
+                       }
+                   });
+
+                   $('.popup-fade1').click(function(e) {
+                       if ($(e.target).closest('.popup').length == 0) {
+                           $(this).fadeOut();
+                       }
+                   });
+               });
+           </script>
+
+
+
+
+
+</body>
+</html>

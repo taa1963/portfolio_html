@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Счет фактура</title>
+
+    <meta name="author" content="taa">
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Счет фактура">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
+
+    <script src="js//jquery-1.7.1.min.js"></script>
+
+    <script src="js//html2canvas.js"></script>
+
+    <script src="js/jspdf.min.js"></script>
+    <!--<script src="js/scriptsCalc.js"></script>-->
+    <!--<script src="js/data.js"></script>-->
+
+</head>
+
+<body>
+
+
+<!--<a href="#" onclick="getPDF()">Скачать PDF</a>-->
+
+<div class="content">
+
+<div id="myDiv" class="myDiv">
+
+     <select  id="typecard" class="typecard">
+
+     </select>
+    <select  id="typepl" class="typepl">
+
+    </select>
+
+
+
+		<p class="card"> Номер карты:   <input type="text" class="card" id="card" placeholder="123456789012" maxlength="12"> </p>
+
+         <input type="text" class="name" id="name" placeholder="Иванов Иван Иванович">
+
+       <p class="zakaz" >Заказ покупателя № <input type="text" class="card2" id="card2" maxlength="4" placeholder="2345"> от
+           <select class="zakaz_moth" >
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5</option>
+               <option>6</option>
+               <option>7</option>
+               <option>8</option>
+               <option>9</option>
+               <option>10</option>
+               <option>11</option>
+               <option>12</option>
+               <option>13</option>
+               <option>14</option>
+               <option>15</option>
+               <option>16</option>
+               <option>17</option>
+               <option>18</option>
+               <option>19</option>
+               <option>20</option>
+               <option>21</option>
+               <option>22</option>
+               <option>23</option>
+               <option>24</option>
+               <option>25</option>
+               <option>26</option>
+               <option>27</option>
+               <option>28</option>
+               <option>29</option>
+               <option>30</option>
+               <option>31</option>
+
+           </select>
+           <select class="zakaz" >
+              <option>января</option>
+               <option>февраля</option>
+               <option>марта</option>
+               <option>апреля</option>
+               <option>мая</option>
+               <option>июня</option>
+               <option>июля</option>
+               <option>августа</option>
+               <option>сентября</option>
+               <option>октября0</option>
+               <option>ноября</option>
+               <option>декабря</option>
+           </select>
+           <select class="zakaz" >
+               <option>2021</option>
+               <option>2022</option>
+               <option>2023</option>
+               <option>2024</option>
+               <option>2025</option>
+               <option>2026</option>
+               <option>2027</option>
+               <option>2028</option>
+               <option>2029</option>
+               <option>2030</option>
+
+           </select>
+           г.
+       </p>
+
+    <div class="line"></div>
+
+    <div class="block_param2">
+        <p class="name3p">Поставщик: &ensp; <span id="name3" class="name3">Иванов Иван Иванович</span></p>
+
+    </div>
+
+    <div class="block_param3">
+        <p class="name4p"> Покупатель: &ensp; <input type="text" class="name4" placeholder="Имя покупателя"> </p>
+
+    </div>
+
+    <table class="table" id="table_uv1i" cellspacing="0"; border="1" >
+
+        <tr>
+            <td style="text-align:center;  font-weight: bold;width: 10%">№</td>
+            <td style="text-align:center;  font-weight: bold;width: 40%">Товары (работы, услуги)</td>
+            <td style="text-align:center;  font-weight: bold;width: 10%;">Кол-во</td>
+            <td style="text-align:center;  font-weight: bold;width: 10%;">Ед.</td>
+            <td style="text-align:center;  font-weight: bold;width: 10%;">Цена</td>
+            <td style="text-align:center;  font-weight: bold;width: 20%">Сумма</td>
+
+
+
+        </tr>
+
+        <!--<tr class="block_uv1i">-->
+            <!--<th ><input type="text" class="numt" value="1" readonly></th>-->
+            <!--<th> <input type="text"   class="namet"  placeholder="Название товара" > </th>-->
+            <!--<th> <input type="text"   class="amount"  value="1" oninput="Sel_LineN1i(this)" > </th>-->
+            <!--<th> <input type="text"   class="edism"  value="1" > </th>-->
+            <!--<th> <input type="text"   class="zenaed" value="1000" oninput="Sel_LineN2i(this)"> </th>-->
+            <!--<th> <input type="text" class="zenapoz" value="1000" readonly> </th>-->
+        <!--</tr>-->
+
+        </table>
+
+    <button id="butuv1i">+</button>
+    <p class="block_param4">Итого: <span id="itog1">33333</span></p>
+    <p class="block_param4">Всего к оплате: <span id="itog2">33333</span></p>
+
+    <p class="block_param5">Всего наименований <span id="numitog">1</span>, на сумму <span id="itog3">1000</span> руб. </p>
+    <div class="line2"></div>
+
+
+    <table class="table2">
+        <tr>
+            <th style="text-align:left;  width: 25%" ><p class="param_param6">Исполнитель  </p></th>
+            <th style="text-align:left;  width: 25%" > <span style="text-align:center;  width: 100%">________________</span> </th>
+
+            <th style="text-align:left;  width: 25%"><p class="param_param7">Заказчик  </p></th>
+            <th style="text-align:left;  width: 25%" > <span style="text-align:center;  width: 100%">________________</span> </th>
+
+        </tr>
+
+    </table>
+
+
+
+   </div>
+
+    <a href="#" onclick="getPDF()">Скачать PDF</a>
+
+
+<div id="newDiv" class="newDiv" hidden>
+
+
+
+
+</div>
+</div>
+
+<script>
+function getPDF() {
+  doCanvas();
+}
+
+function doCanvas() {
+//    $("#newDiv").attr("hidden", false);
+  html2canvas(document.querySelector("#myDiv")).then(canvas => {
+    doPDF(canvas);
+  });
+
+}
+
+function doPDF(canvas) {
+  var doc = new jsPDF({
+      unit:'px',
+      format: 'a4',
+      pageMargins: [1, 1]
+
+  });
+  doc.addImage(canvas.toDataURL(), 'PNG', 5, 10);
+  doc.save('test.pdf');
+//    $("#newDiv").attr("hidden", true);
+
+}
+
+</script>
+
+
+
+<script src="js/scriptsCalc.js"></script>
+<script src="js/data.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+

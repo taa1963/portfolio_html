@@ -1,0 +1,461 @@
+
+body{
+    margin: 0;
+	padding:0;
+    width: 100%;
+    height: auto;
+}
+
+
+.content{
+    display: block;
+    width: 90%;
+    /*width: 95%;*/
+    margin: 0 auto;
+    border: 1px solid #000000;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/*		Описание первого блока - типы блокнотов		*/
+
+
+
+.myDiv{
+    display: block;
+    margin: 10px;
+    /*text-align: right;*/
+}
+
+.typecard{
+
+    display: block;
+    font-family: "ArialBold";
+    /*//font-weight: bold;*/
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+}
+
+.typecardpr{
+
+    display: block;
+    font-family: "ArialBold";
+    /*//font-weight: bold;*/
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+
+
+}
+
+
+
+.typepl{
+    display: block;
+    font-family: "ArialRegular";
+    /*//font-weight: bold;*/
+    /*margin-bottom: 10px;*/
+    font-size: 0.7rem;
+}
+
+.card{
+
+    font-family: "ArialRegular";
+    font-size: 0.7rem;
+}
+
+.name{
+    display: block;
+    width: 30%;
+    font-family: "ArialRegular";
+    font-size: 0.7rem;
+}
+
+.card2{
+    font-family: "ArialBold";
+    font-size: 0.9rem;
+    width: 4%;
+}
+
+.zakaz{
+    font-family: "ArialBold";
+     font-size: 0.9rem;
+    border: none;
+    outline: none !important;
+
+}
+.zakaz_moth{
+    font-family: "ArialBold";
+    font-size: 0.9rem;
+    width: 3%;
+    border: none;
+    outline: none !important;
+    /*border: none;*/
+}
+.zakaz_moth:focus{
+    font-family: "ArialBold";
+    font-size: 0.9rem;
+    width: 3%;
+    border: none;
+    outline: none !important;
+}
+
+
+
+.name3p{
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+}
+.name3{
+
+    font-family: "ArialBold";
+    font-size: 0.8rem;
+}
+
+.name4p{
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+}
+.name4{
+
+    font-family: "ArialBold";
+    font-size: 0.8rem;
+    color:#000000;
+    width: 50%;
+}
+
+
+.table{
+    border: 1px solid #000000;
+    max-width: 750px;
+    width: 100%;
+}
+
+#table_uv1ipr{
+    display: table;
+    border: 1px solid #000000;
+    max-width: 710px;
+    width: 90%;
+}
+.parampr{
+    max-width: 710px;
+
+}
+
+.table td{
+    font-family: "ArialBold";
+    font-size: 0.8rem;
+    color:#000000;
+}
+
+.table th{
+
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+    color: #000000;
+    text-align: center;
+
+}
+
+.namet{
+    width: 95%;
+    border: none;
+    text-align: center;
+}
+
+.amount{
+    width: 95%;
+    border: none;
+    text-align: center;
+}
+
+.edism{
+    width: 95%;
+    border: none;
+    text-align: center;
+}
+
+.zenaed{
+    width: 95%;
+    border: none;
+    text-align: center;
+}
+.zenapoz{
+    width: 95%;
+    border: none;
+    text-align: center;
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+    color: #000000;
+    font-weight: normal;
+
+}
+.numt{
+
+    border: none;
+    text-align: center;
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+    color: #000000;
+    font-weight: normal;
+    width: 10%;
+}
+
+
+
+
+.nametpr{
+    width: 95%;
+    border: none;
+    text-align: center;
+}
+
+.amountpr{
+    width: 95%;
+    border: none;
+    text-align: center;
+}
+
+.edismpr{
+    width: 95%;
+    border: none;
+    text-align: center;
+}
+
+.zenaedpr{
+    width: 95%;
+    border: none;
+    text-align: center;
+}
+.zenapozpr{
+    width: 95%;
+    border: none;
+    text-align: center;
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+    color: #000000;
+    font-weight: normal;
+
+}
+.numtpr{
+
+    border: none;
+    text-align: center;
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+    color: #000000;
+    font-weight: normal;
+    width: 10%;
+}
+
+
+
+
+.table input:focus{
+    width: 95%;
+    border: none;
+    text-align: center;
+    outline: none !important;
+}
+
+
+.block_param4{
+    display: block;
+  max-width: 750px;
+    width: auto;
+    margin-top: 10px;
+    /*float: right;*/
+    text-align: right;
+
+    font-family: "ArialBold";
+    font-size: 0.8rem;
+    color:#000000;
+}
+
+.block_param4 span{
+    padding-left: 10%;
+}
+
+.block_param4pr{
+    display: block;
+    max-width: 710px;
+    width: 87%;
+    margin-top: 10px;
+    /*float: right;*/
+    text-align: right;
+}
+
+.block_param4pr span{
+    padding-left: 10%;
+}
+
+
+
+
+.line{
+    display: block;
+    max-width: 750px;
+    width: auto;
+    height: 2px;
+    background-color: #000000;
+}
+.line2{
+    display: block;
+    max-width: 750px;
+    width: auto;
+    height: 2px;
+    background-color: #000000;
+}
+.block_param5{
+    display: block;
+    width: 750px;
+    /*width: auto;*/
+    margin-top: 10px;
+    /*float: right;*/
+    text-align:left;
+
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+    color:#000000;
+
+}
+.line3{
+    display: block;
+    width: 370px;
+    /*width: auto;*/
+    margin-top: 10px;
+    /*float: right;*/
+    text-align:left;
+
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+    color:#000000;
+
+}
+.table2{
+    border: none;
+    max-width: 750px;
+    width: 100%;
+}
+/*.block{*/
+    /*display: block;*/
+    /*width: 750px;*/
+/*}*/
+
+/*.block_param{*/
+    /*width: 50%;*/
+    /*float: left;*/
+/*}*/
+.param_param6{
+      /*display: block;*/
+      width: 90%;
+      text-align: left;
+    font-family: "ArialRegular";
+    font-size: 0.8rem;
+    color: #000000;
+      /*max-width: 380px;*/
+      /*float: left;*/
+  }
+.param_param7{
+    /*display: block;*/
+    width: 90%;
+    text-align: right;
+    /*max-width: 380px;*/
+    /*float: left;*/
+}
+.param_param8{
+    text-align: center;
+    font-family: "ArialRegular";
+    font-size: 0.7rem;
+    vertical-align: sub;
+    margin-top: -5px;
+;
+}
+
+#newDiv{
+    display: block;
+    width: 750px;
+    /*display: block;*/
+
+}
+
+.newDiv{
+    /*display: block;*/
+    width: 750px;
+    /*display: block;*/
+
+}
+
+
+.imgpr{
+    display: block;
+    width: 750px;
+}
+
+
+/*//========================================//*/
+
+/*//========================================//*/
+
+
+@media only screen  and (max-width: 1024px) {
+
+    .content{
+        display: block;
+       width: 95%;
+        margin: 0 auto;
+        border: 1px solid #000000;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+}
+
+
+
+@media only screen  and (max-width: 960px) {
+
+}
+
+
+
+@media only screen  and (max-width: 788px) {
+
+    .zakaz {
+        font-family: "ArialBold";
+        font-size: 0.9rem;
+        border: none;
+        outline: none !important;
+    }
+    .card2 {
+        font-family: "ArialBold";
+        font-size: 0.9rem;
+        width: 14%;
+    }
+
+    .zakaz_moth {
+        font-family: "ArialBold";
+        font-size: 0.9rem;
+        width: 5%;
+        border: none;
+        outline: none !important;
+        /* border: none; */
+    }
+
+
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+
+    }
+
+  @media only screen  and (max-width: 281px) {
+
+  }
+

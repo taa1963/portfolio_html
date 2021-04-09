@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Счет-фактура</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
+
+
+    <script src='js/jquery-1.7.1.min.js'></script>
+  <script src='js/pdfmake.min.js'></script>
+  <script src='js/vfs_fonts.js'></script>
+    <script src='js/data.js'></script>
+    <script src='js/scriptsCalc.js'></script>
+  <!--<script src='js/script.js'></script>-->
+</head>
+<body>
+
+<div class="content">
+
+    <div id="myDiv" class="myDiv">
+
+        <select  id="typecard" class="typecard">
+
+        </select>
+
+        <input type="text" class="typepl" id="typepl" value='Оплата от частного лица' readonly>
+        <!--<select  id="typepl" class="typepl">-->
+
+        <!--</select>-->
+
+
+
+        <p class="card"> Номер карты:   <input type="text" class="card" id="card" value='5644332244'  maxlength="12"> </p>
+
+        <input type="text" class="name" id="name" value="Иванов Иван Иванович">
+
+        <p class="zakaz" >Заказ покупателя № <input type="text" class="card2" id="card2" maxlength="4" value="2345"> от
+            <select class="zakaz_moth" id="zakaz_moth">
+                <option value="2">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+
+            </select>
+            <select class="zakaz" id="zakaz_date">
+                <option value="января">января</option>
+                <option value="февраля">февраля</option>
+                <option value="марта">марта</option>
+                <option value="апреля">апреля</option>
+                <option value="мая">мая</option>
+                <option value="июня">июня</option>
+                <option value="июля">июля</option>
+                <option value="августа">августа</option>
+                <option value="сентября">сентября</option>
+                <option value="октября">октября</option>
+                <option value="ноября">ноября</option>
+                <option value="декабря">декабря</option>
+            </select>
+            <select class="zakaz" id="zakaz_jar">
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2026">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="20230">2030</option>
+
+            </select>
+            г.
+        </p>
+
+        <div class="line"></div>
+
+        <div class="block_param2">
+            <p class="name3p">Поставщик: &ensp; <span id="name3" class="name3">Иванов Иван Иванович</span></p>
+
+        </div>
+
+        <div class="block_param3">
+            <p class="name4p"> Покупатель: &ensp; <input type="text" class="name4" id='name4' value="Имя покупателя"> </p>
+
+        </div>
+
+        <table class="table" id="table_uv1i" cellspacing="0"; border="1" >
+
+            <tr>
+                <td style="text-align:center;  font-weight: bold;width: 10%">№</td>
+                <td style="text-align:center;  font-weight: bold;width: 40%">Товары (работы, услуги)</td>
+                <td style="text-align:center;  font-weight: bold;width: 10%;">Кол-во</td>
+                <td style="text-align:center;  font-weight: bold;width: 10%;">Ед.</td>
+                <td style="text-align:center;  font-weight: bold;width: 10%;">Цена</td>
+                <td style="text-align:center;  font-weight: bold;width: 20%">Сумма</td>
+
+
+
+            </tr>
+
+            <!--<tr class="block_uv1i">-->
+            <!--<th ><input type="text" class="numt" value="1" readonly></th>-->
+            <!--<th> <input type="text"   class="namet"  placeholder="Название товара" > </th>-->
+            <!--<th> <input type="text"   class="amount"  value="1" oninput="Sel_LineN1i(this)" > </th>-->
+            <!--<th> <input type="text"   class="edism"  value="1" > </th>-->
+            <!--<th> <input type="text"   class="zenaed" value="1000" oninput="Sel_LineN2i(this)"> </th>-->
+            <!--<th> <input type="text" class="zenapoz" value="1000" readonly> </th>-->
+            <!--</tr>-->
+
+        </table>
+
+        <button id="butuv1i">+</button>
+        <p class="block_param4">Итого: <span id="itog1">33333</span></p>
+        <p class="block_param4">Всего к оплате: <span id="itog2">33333</span></p>
+
+        <p class="block_param5">Всего наименований <span id="numitog">1</span>, на сумму <span id="itog3">1000</span> руб. </p>
+        <div class="line2"></div>
+
+
+        <table class="table2">
+            <tr>
+                <th style="text-align:left;  width: 25%" ><p class="param_param6">Исполнитель  </p></th>
+                <th style="text-align:left;  width: 25%" > <span style="text-align:center;  width: 100%">________________</span> </th>
+
+                <th style="text-align:left;  width: 25%"><p class="param_param7">Заказчик  </p></th>
+                <th style="text-align:left;  width: 25%" > <span style="text-align:center;  width: 100%">________________</span> </th>
+
+            </tr>
+
+        </table>
+
+
+
+    </div>
+
+    <a href="#" onclick="getPDF()">Скачать PDF</a>
+
+</div>
+
+
+</body>
+</html>

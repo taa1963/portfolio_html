@@ -850,85 +850,121 @@ $(document).ready(function() {
 
 
    // <script type="text/javascript">
-    ymaps.ready(init);
+   // ymaps.ready(init);
+   //
+   // function init() {
+   //     // Стоимость за километр.
+   //     var DELIVERY_TARIFF = 40.726,
+   //     // Минимальная стоимость.
+   //         MINIMUM_COST = 0,
+   //         myMap = new ymaps.Map('map', {
+   //             center: [46.359322, 48.024299],
+   //             zoom: 14,
+   //             controls: []
+   //         }),
+   //     // Создадим панель маршрутизации.
+   //         routePanelControl = new ymaps.control.RoutePanel({
+   //             options: {
+   //                 // Добавим заголовок панели.
+   //                 showHeader: true,
+   //                 title: 'Указать куда'
+   //             }
+   //         }),
+   //         zoomControl = new ymaps.control.ZoomControl({
+   //             options: {
+   //                 size: 'small',
+   //                 float: 'none',
+   //                 position: {
+   //                     bottom: 145,
+   //                     right: 10
+   //                 }
+   //             }
+   //         });
+   //     // Пользователь сможет построить только автомобильный маршрут.
+   //     routePanelControl.routePanel.options.set({
+   //         types: {auto: true}
+   //     });
+   //
+   //     // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
+   //     routePanelControl.routePanel.state.set({
+   //         fromEnabled: false,
+   //         from: 'Астрахань, 1й проезд Рождественского, 1А'
+   //     });
+   //
+   //     myMap.controls.add(routePanelControl).add(zoomControl);
+   //
+   //     // Получим ссылку на маршрут.
+   //     routePanelControl.routePanel.getRouteAsync().then(function (route) {
+   //
+   //         // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+   //         route.model.setParams({results: 1}, true);
+   //
+   //         // Повесим обработчик на событие построения маршрута.
+   //         route.model.events.add('requestsuccess', function () {
+   //
+   //             var activeRoute = route.getActiveRoute();
+   //             if (activeRoute) {
+   //                 // Получим протяженность маршрута.
+   //                 var length = route.getActiveRoute().properties.get("distance"),
+   //                 // Вычислим стоимость доставки.
+   //                     price = calculate(Math.round(length.value / 1000)),
+   //                 // Создадим макет содержимого балуна маршрута.
+   //                     balloonContentLayout = ymaps.templateLayoutFactory.createClass(
+   //                         '<span>Расстояние: ' + length.text + '.</span><br/>' +
+   //                         '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
+   //                 priceV=price;
+   //                 // Зададим этот макет для содержимого балуна.
+   //                 route.options.set('routeBalloonContentLayout', balloonContentLayout);
+   //                 // Откроем балун.
+   //                 activeRoute.balloon.open();
+   //             }
+   //         });
+   //
+   //     });
+   //     // Функция, вычисляющая стоимость доставки.
+   //     function calculate(routeLength) {
+   //         return Math.max(routeLength * DELIVERY_TARIFF, MINIMUM_COST);
+   //     }
+   // }
 
-    function init() {
-        // Стоимость за километр.
-        var DELIVERY_TARIFF = 40.726,
-        // Минимальная стоимость.
-            MINIMUM_COST = 0,
-            myMap = new ymaps.Map('map', {
-                center: [46.359322, 48.024299],
-                zoom: 14,
-                controls: []
-            }),
-        // Создадим панель маршрутизации.
-            routePanelControl = new ymaps.control.RoutePanel({
-                options: {
-                    // Добавим заголовок панели.
-                    showHeader: true,
-                    title: 'Указать куда'
-                }
-            }),
-            zoomControl = new ymaps.control.ZoomControl({
-                options: {
-                    size: 'small',
-                    float: 'none',
-                    position: {
-                        bottom: 145,
-                        right: 10
-                    }
-                }
+   // <script type="text/javascript">
+    /// расстояние по адресам
+  /*  var map;
+    ymaps2.ready(function(){
+        var mapDivId = 'map'; //Id контейнера для карты
+        var mapCenter = [55.76, 37.64]; //Координата центра карты по умолчанию
+        map = new ymaps.Map(mapDivId , { center: mapCenter, zoom: 10 });
+
+        var pointA = "Саратов"; //Откуда считаем
+        var pointB = "Москва"; //Куда считаем
+        ymaps.route([pointA , pointB ]).then(
+            function (route) {
+                var distance = route.getHumanLength(); //Получаем расстояние
+                alert(distance.replace(' ', ' '));
+             //   map.geoObjects.add(route); //Рисуем маршрут на карте
+            },
+            function (error) {
+                alert('Ошибка: ' + error.message);
+            }
+        );
+    });*/
+   // </script>
+
+    $("#adres2_dev").click(function () {
+        alert(2)
+        ymaps.ready(function(){
+        var pointA = "Астрахань, 1й проезд Рождественского, 1А"; //Откуда считаем
+        var pointB = "Москва"; //Куда считаем
+            alert(21)
+        ymaps.route([pointA, pointB]).then(
+            function (route) {
+                alert(23)
+                var distance = route.getHumanLength(); //Получаем расстояние
+                alert(distance.replace(' ', ' '));
+                //   map.geoObjects.add(route); //Рисуем маршрут на карте
             });
-        // Пользователь сможет построить только автомобильный маршрут.
-        routePanelControl.routePanel.options.set({
-            types: {auto: true}
         });
-
-        // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
-        routePanelControl.routePanel.state.set({
-            fromEnabled: false,
-            from: 'Астрахань, 1й проезд Рождественского, 1А'
-        });
-
-        myMap.controls.add(routePanelControl).add(zoomControl);
-
-        // Получим ссылку на маршрут.
-        routePanelControl.routePanel.getRouteAsync().then(function (route) {
-
-            // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
-            route.model.setParams({results: 1}, true);
-
-            // Повесим обработчик на событие построения маршрута.
-            route.model.events.add('requestsuccess', function () {
-
-                var activeRoute = route.getActiveRoute();
-                if (activeRoute) {
-                    // Получим протяженность маршрута.
-                    var length = route.getActiveRoute().properties.get("distance"),
-                    // Вычислим стоимость доставки.
-                        price = calculate(Math.round(length.value / 1000)),
-                    // Создадим макет содержимого балуна маршрута.
-                        balloonContentLayout = ymaps.templateLayoutFactory.createClass(
-                            '<span>Расстояние: ' + length.text + '.</span><br/>' +
-                            '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
-                    priceV=price;
-                    // Зададим этот макет для содержимого балуна.
-                    route.options.set('routeBalloonContentLayout', balloonContentLayout);
-                    // Откроем балун.
-                    activeRoute.balloon.open();
-                }
-            });
-
-        });
-        // Функция, вычисляющая стоимость доставки.
-        function calculate(routeLength) {
-            return Math.max(routeLength * DELIVERY_TARIFF, MINIMUM_COST);
-        }
-    }
-
-
-
+    });
 
     //=================================================//
 
@@ -1055,10 +1091,10 @@ $(document).ready(function() {
 
         var ZsetkaV=Z1*1+Zsetka*1;
         ZsetkaV=ZsetkaV.toFixed(2);
-            console.log(ZsetkaV);
+           // console.log(ZsetkaV);
 
         ZsetkaVuv= ZsetkaVuv*1+ZsetkaV*1;
-            console.log(ZsetkaVuv);
+           // console.log(ZsetkaVuv);
         ZsetkaVuv=ZsetkaVuv.toFixed(2);
         $('#zena_dev').text(ZsetkaVuv);
             $("#dostavka_dev").text(priceV);

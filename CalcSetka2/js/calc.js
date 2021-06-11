@@ -193,19 +193,42 @@ $(document).ready(function() {
     });
 
     $('#but_block6_2_dev').click(function () {
-        var block = $(this).parents('.container');
-        block.find('.call_block1').hide();
-        block.find('.call_titel').hide();
-        block.find('.call_block2').hide();
-        block.find('.call_block3').hide();
-        block.find('.call_block_nes').hide();
-        block.find('.call_block_setka').hide();
-        block.find('.call_block_samer1').hide();
-        block.find('.call_block_samer2').hide();
-        block.find('.call_block4').hide();
-        block.find('.call_block_sam_dev').hide();
-        block.find('.call_block_itog_dev').hide();
-        block.find('.call_block_QR_dev').show();
+
+        sendAjaxForm('result_form', 'form2', '../send2.php');
+        return false;
+
+
+        function sendAjaxForm(result_form, ajax_form, url) {
+            $.ajax({
+                url: url,
+
+                type:     "post", //метод отправки
+                data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
+                //dataType: "text", //формат данных
+                dataType: "json", //формат данных
+                success: function(response) { //Данные отправлены успешно
+                    //console.log(response);
+                    // отправляем данные в ГТМ
+                    dataLayer.push({'event':'formSendCalk'});
+                    if (response.status !== 'ok') {
+                        alert('Somthing went wrong');
+                        return;
+                    }
+
+
+                  //  });
+
+
+
+
+                },
+                error: function(response) { // Данные не отправлены
+                    $('#result_form').html('Ошибка. Данные не отправлены.');
+
+                    $('#post_form_err').show();
+                }
+            });
+        };
 
     });
 
@@ -259,13 +282,7 @@ $(document).ready(function() {
         block.find('.call_block_MAP_dev').hide();
 
     });
-    //var searchControl = new ymaps.control.SearchControl({
-    //    options: {
-    //        // Будет производиться поиск по топонимам и организациям.
-    //        provider: 'yandex#search'
-    //    }
-    //});
-    //myMap.controls.add(searchControl);
+
 
     $('#radio-21').click(function () {
         if (document.getElementById('radio-21').checked){
@@ -280,6 +297,7 @@ $(document).ready(function() {
 
 
     $('#ralc').keyup(function(e){
+        //alert(555)
         color()
 
     });
@@ -287,8 +305,10 @@ $(document).ready(function() {
 
     function color(){
         var colorv=document.getElementById('ralc').value;
+       // alert(colorv)
         if (document.getElementById('radio-31').checked){
             colorv=+colorv;
+        //    alert(557)
             switch (colorv) {
                 case 1000:
                     $('.block2_color').css('background-color', '#CCC58F');
@@ -449,17 +469,17 @@ $(document).ready(function() {
     });
 
     $('#radio-31m').click(function () {
-        color()
+        color_mob()
     });
 
 
     $('#ralcm').keyup(function(e){
-        color()
+        color_mob()
 
     });
 
 
-    function color(){
+    function color_mob(){
         var colorv=document.getElementById('ralcm').value;
         if (document.getElementById('radio-31m').checked){
             colorv=+colorv;
@@ -730,6 +750,44 @@ $(document).ready(function() {
         block.find('.call_block_MAP_mob').hide();
     });
     $('#but_block6_2').click(function () {
+
+        sendAjaxForm('result_form', 'form2', '../send2.php');
+        return false;
+
+
+        function sendAjaxForm(result_form, ajax_form, url) {
+            $.ajax({
+                url: url,
+
+                type:     "post", //метод отправки
+                data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
+                //dataType: "text", //формат данных
+                dataType: "json", //формат данных
+                success: function(response) { //Данные отправлены успешно
+                    //console.log(response);
+                    // отправляем данные в ГТМ
+                    dataLayer.push({'event':'formSendCalk'});
+                    if (response.status !== 'ok') {
+                        alert('Somthing went wrong');
+                        return;
+                    }
+
+
+                    //  });
+
+
+
+
+                },
+                error: function(response) { // Данные не отправлены
+                    $('#result_form').html('Ошибка. Данные не отправлены.');
+
+                    $('#post_form_err').show();
+                }
+            });
+        };
+
+
         var block = $(this).parents('.container_mob');
         block.find('.call_block1_mob').hide();
         block.find('.call_block1_mob_titel').hide();
@@ -950,24 +1008,105 @@ $(document).ready(function() {
     });*/
    // </script>
 
-    $("#adres2_dev").click(function () {
-        alert(2)
-        ymaps.ready(function(){
-        var pointA = "Астрахань, 1й проезд Рождественского, 1А"; //Откуда считаем
-        var pointB = "Москва"; //Куда считаем
-            alert(21)
-        ymaps.route([pointA, pointB]).then(
-            function (route) {
-                alert(23)
-                var distance = route.getHumanLength(); //Получаем расстояние
-                alert(distance.replace(' ', ' '));
-                //   map.geoObjects.add(route); //Рисуем маршрут на карте
+    //$('.sfloor2').on('input', function () {
+    //=================================================//
+    $("#adres2_dev").on('change',function () {
+
+        var chd=document.getElementById('radio-map1_dev');
+
+        if (chd.checked) {
+
+            //alert(2)
+            ymaps.ready(function () {
+                var pointA = "Астрахань, 1й проезд Рождественского, 1А"; //Откуда считаем
+               // var pointB = "Москва"; //Куда считаем
+                //var pointB = "улица Михаила Луконина, 10к1"; //Куда считаем
+                var pointB = document.getElementById('adres2_dev').value; //Куда считаем
+
+                var cit=pointB.includes('Астрахань');
+               // alert(cit)
+                if (cit==false){
+                //  alert(1111)
+                    pointB='Астрахань,'+pointB;
+                }
+
+               // улица Михаила Луконина, 10к1
+               // alert(21)
+                ymaps.route([pointA, pointB]).then(
+                    function (route) {
+                      //  alert(23)
+                        var distance = route.getHumanLength(); //Получаем расстояние
+                      //  alert(distance);
+                      //  console.log(distance)
+                        var Lvv = distance.split('&')[0];
+
+                        priceV=Lvv*1*40.726;
+                        $("#dostavka_dev").text(priceV);
+                        //alert(a)
+                        //  var length2 = route.getActiveRoute().properties.get("distance");
+                      //  alert(length2.value);
+                        //   map.geoObjects.add(route); //Рисуем маршрут на карте
+                    });
             });
-        });
+
+        }
+
+
+
+
+
     });
 
     //=================================================//
 
+    $("#adres2").on('change',function () {
+
+        var chd=document.getElementById('radio-map1');
+
+        if (chd.checked) {
+
+            //alert(2)
+            ymaps.ready(function () {
+                var pointA = "Астрахань, 1й проезд Рождественского, 1А"; //Откуда считаем
+                // var pointB = "Москва"; //Куда считаем
+                //var pointB = "улица Михаила Луконина, 10к1"; //Куда считаем
+                var pointB = document.getElementById('adres2').value; //Куда считаем
+
+                var cit=pointB.includes('Астрахань');
+                // alert(cit)
+                if (cit==false){
+                    //  alert(1111)
+                    pointB='Астрахань,'+pointB;
+                }
+
+                // улица Михаила Луконина, 10к1
+                // alert(21)
+                ymaps.route([pointA, pointB]).then(
+                    function (route) {
+                        //  alert(23)
+                        var distance = route.getHumanLength(); //Получаем расстояние
+                        //  alert(distance);
+                        //  console.log(distance)
+                        var Lvv = distance.split('&')[0];
+
+                        priceV=Lvv*1*40.726;
+                        $("#dostavka").text(priceV);
+                        //alert(a)
+                        //  var length2 = route.getActiveRoute().properties.get("distance");
+                        //  alert(length2.value);
+                        //   map.geoObjects.add(route); //Рисуем маршрут на карте
+                    });
+            });
+
+        }
+
+
+
+
+
+    });
+
+    //=================================================//
     function zena() {
 
 
@@ -987,6 +1126,7 @@ $(document).ready(function() {
             TupeSVspan=TupeSVspan+TupeSV+',   ';
              //=======Вывод на форму итогов===========//
              $('#typepol_dev').text(TupeSVspan);
+            $('#typepol_mail').text(TupeSVspan);
 
             //=== Определяем цвет сетки====//
             var ColorSV='';
@@ -1006,6 +1146,7 @@ $(document).ready(function() {
 
             //=======Вывод на форму итогов===========//
             $('#colorpol_dev').text(ColorSVspan);
+            $('#colorpol_mail').text(ColorSVspan);
 
         //=== Определяем необходимость крепежа====//
             var ZSV='';
@@ -1020,8 +1161,12 @@ $(document).ready(function() {
 
         //=======Вывод на форму итогов===========//
         $('#devpol_dev').text(ZVspan);
+        $('#devpol_mail').text(ZVspan);
+
        //=======Вывод на форму итогов===========//
         $('#num_dev').text(Nok);
+        $('#num_mail').text(Nok);
+
 
           ///var Hs=document.getElementById('Hoknm').value;
           //var Ls=document.getElementById('Loknm').value;
@@ -1029,6 +1174,10 @@ $(document).ready(function() {
         Rok=Rok+Hs+'мм'+' x '+Ls+'мм'+',   ';
        //=======Вывод на форму итогов===========//
         $('#rasmer_dev').text(Rok);
+        $('#rasmer_mail').text(Rok);
+
+
+
         var Pokna=(Hs*2+Ls*2)/1000;
         var Sokna=(Hs/1000)*(Ls/1000);
 
@@ -1096,8 +1245,17 @@ $(document).ready(function() {
         ZsetkaVuv= ZsetkaVuv*1+ZsetkaV*1;
            // console.log(ZsetkaVuv);
         ZsetkaVuv=ZsetkaVuv.toFixed(2);
+
         $('#zena_dev').text(ZsetkaVuv);
+            $('#zena_mail').text(ZsetkaVuv);
+
             $("#dostavka_dev").text(priceV);
+            $("#dostavka_mail").text(priceV);
+
+            var itogzena_devm=ZsetkaVuv*1+priceV*1;
+                $('#itogzena_dev').text(itogzena_devm);
+            $('#itogzena_mail').text(itogzena_devm);
+
      }
 
 
@@ -1118,6 +1276,7 @@ $(document).ready(function() {
 
             //=======Вывод на форму итогов===========//
             $('#typepol').text(TupeSVspan);
+            $('#typepol_mailm').text(TupeSVspan);
 
             //=== Определяем цвет сетки====//
             var ColorSV='';
@@ -1134,6 +1293,7 @@ $(document).ready(function() {
             ColorSVspan=ColorSVspan+colorvsp+',   ';
             //=======Вывод на форму итогов===========//
             $('#colorpol').text(ColorSVspan);
+            $('#colorpol_mailm').text(ColorSVspan);
 
             //=== Определяем необходимость крепежа====//
             var ZSV='';
@@ -1148,8 +1308,10 @@ $(document).ready(function() {
             //}
             //=======Вывод на форму итогов===========//
             $('#devpol').text(ZVspan);
+            $('#devpol_mailm').text(ZVspan);
             //=======Вывод на форму итогов===========//
             $('#num_dev').text(Nok);
+            $('#num_mailm').text(Nok);
 
             /*var Hs=document.getElementById('Hoknm').value;
              var Ls=document.getElementById('Loknm').value;
@@ -1229,8 +1391,12 @@ $(document).ready(function() {
             ZsetkaVuv= ZsetkaVuv*1+ZsetkaV*1;
             ZsetkaVuv=ZsetkaVuv.toFixed(2);
             $('#zena').text(ZsetkaVuv);
+            $('#zena_mailm').text(ZsetkaVuv);
 
-            $("#dostavka").text(priceV);
+            //$("#dostavka").text(priceV);
+            var itogzena_devm=ZsetkaVuv*1+priceV*1;
+            $('#itogzena').text(itogzena_devm);
+            $('#itogzena_mailm').text(itogzena_devm);
 
         }
 

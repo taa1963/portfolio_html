@@ -1,52 +1,74 @@
+<?php
+// РµСЃР»Рё Р±С‹Р»Р° РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° "РћС‚РїСЂР°РІРёС‚СЊ"
+//print_r($_POST);
 
-<?
-// если была нажата кнопка "Отправить"
+//print_r(iconv("UTF-8", "UTF-8", $_POST));
+
+//$items = $_POST['item'];
+
+//$result = '';
+
+
+//echo $result;
 if (
-    isset($_POST['name_client']) && !empty($_POST['name_client']) &&
-    isset($_POST['tel_prod']) && !empty($_POST['tel_prod']) &&
-    isset($_POST['name_prod']) && !empty($_POST['name_prod']) &&
-    isset($_POST['email_prod']) && !empty($_POST['email_prod'])) {
+    isset($_POST['num_mail']) && !empty($_POST['num_mail']) &&
+    isset($_POST['rasmer_mail']) && !empty($_POST['rasmer_mail']) &&
+    isset($_POST['typepol_mail']) && !empty($_POST['typepol_mail']) &&
+    isset($_POST['colorpol_mail']) && !empty($_POST['colorpol_mail']) &&
+    isset($_POST['devpol_mail']) && !empty($_POST['devpol_mail']) &&
+    isset($_POST['zena_mail']) && !empty($_POST['zena_mail']) &&
+    isset($_POST['dostavka_mail']) && !empty($_POST['dostavka_mail']) &&
+    isset($_POST['itogzena_mail']) && !empty($_POST['itogzena_mail']))
+	{
+    $num_mail = substr(htmlspecialchars(trim($_POST['num_mail'])), 0, 1000);
+    $rasmer_mail = substr(htmlspecialchars(trim($_POST['rasmer_mail'])), 0, 100);
+    $typepol_mail = substr(htmlspecialchars(trim($_POST['typepol_mail'])), 0, 10000000000);
+    $colorpol_mail = substr(htmlspecialchars(trim($_POST['devpol_mail'])), 0, 10000000000);
+    $devpol_mail = substr(htmlspecialchars(trim($_POST['tiragvf'])), 0, 10000000000);
+    $zena_mail = substr(htmlspecialchars(trim($_POST['zena_mail'])), 0, 10000000000);
+    $dostavka_mail = substr(htmlspecialchars(trim($_POST['dostavka_mail'])), 0, 10000000000);
+    $itogzena_mail = substr(htmlspecialchars(trim($_POST['itogzena_mail'])), 0, 10000000000);
 
- $name_client = substr(htmlspecialchars(trim($_POST['name_client'])), 0, 1000);
- $tel_prod = substr(htmlspecialchars(trim($_POST['tel_prod'])), 0, 1000000);
- $email_prod = substr(htmlspecialchars(trim($_POST['email_prod'])), 0, 1000);
- $name_prod = substr(htmlspecialchars(trim($_POST['name_prod'])), 0, 1000);
+
+   // $to = 'info@groupregion.ru';
+   $to = 'alexandr.tupichenkov@yandex.ru';
 
 
- $to = 'alexandr.tupichenkov@yandex.ru';
- $title = 'Новый заказ на продукцию';
- $message = "
-        Имя :name_$name_client
-        Телефон :$tel_prod
-		email :$email_prod
-		Наименование продукта :$name_prod
+    //$to = 'info@partwork.ru';
+    $title = 'РќРѕРІС‹Р№ Р·Р°РєР°Р· c СЃР°Р№С‚Р° РјРѕСЃРєРёС‚РЅС‹С… СЃРµС‚РѕРє';
+
+        $message = "
+         Р‘С‹Р» РїРѕР»СѓС‡РµРЅ Р·Р°РєР°Р· СЃ СЃР°Р№С‚Р° РјРѕСЃРєРёС‚РЅС‹С… СЃРµС‚РѕРє:
+
+        РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРµС‚РѕРє: $num_mail
+        Р Р°Р·РјРµСЂ СЃРµС‚РѕРє: $rasmer_mail
+        РўРёРї РїРѕР»РѕС‚РЅР°: $typepol_mail
+        Р¦РІРµС‚ РїРѕР»РѕС‚РЅР°:$colorpol_mail
+        РўРёРї РєСЂРµРїРµР¶Р°:$devpol_mail
+        Р¦РµРЅР° СЃРµС‚РєРё:zena_mail
+        Р”РѕРї РїР°СЂР°РјРµС‚СЂС‹
+        Р¦РµРЅР° РґРѕСЃС‚Р°РІРєРё:$dostavka_mail
+        РС‚РѕРіРѕРІР°СЏ С†РµРЅР°:$itogzena_mail
+
        ";
 
- $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
-
-
- if ($verify == 'true') {
-  echo "
- <div align='center' class='warning_font_big'>Поздравляем!</div>
- <div align='center' class='warning_font' align='left'>Ваше письмо доставлено администратору. Через некоторое время Вы получите ответ!</div>
- <p align='center'><a href='http://xn--80aai0ag2c.xn--80atjc.xn--p1ai/%D0%9A%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8/t3858-%D0%9B%D1%8E%D0%B4%D0%B8%D0%BD%D0%BE%D0%B2%D0%BE' class='all_links'>Вернуться назад</a></div></p>
-
- ";
- }
- else
-
- {
-  echo "
-
- <div align='center' class='warning_font_big'>ОШИБКА!!!</div>
- <div align='center' class='warning_font' align='left'>Ваше письмо не доставлено. Повторите отправку немного позже!</div>
- <p align='center'><a href='http://xn--80aai0ag2c.xn--80atjc.xn--p1ai/%D0%9A%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8/t3858-%D0%9B%D1%8E%D0%B4%D0%B8%D0%BD%D0%BE%D0%B2%D0%BE' class='all_links'>Вернуться назад</a></div></p>
 
 
 
- ";
- }
 
+
+
+
+    $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
+    if ($verify) {
+        header('Location: https://aleksandr.tupichenkov.com/CalcSetka2/', true, 302);
+       //  header('Location: https://aleksandr.tupichenkov.com/CalcBloknot14/', true, 302);
+        exit;
+    } else {
+        header('Location: https://aleksandr.tupichenkov.com/CalcSetka2//', true, 302);
+       // header('Location: https://aleksandr.tupichenkov.com/CalcBloknot14/', true, 302);
+        exit;
+    }
 }
 
 ?>

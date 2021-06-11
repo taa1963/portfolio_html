@@ -10,9 +10,7 @@
 
     <!--<link href="css/modal-contact.css" rel="stylesheet">-->
     <link href="css/fonts.css" rel="stylesheet">
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
     <link href="css/style.css" rel="stylesheet">
-    <!--<link href="css/media.css" rel="stylesheet">-->
 
     <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&amp;width=600&amp;height=600&amp;lang=ru_RU&amp;scroll=true;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9"></script>-->
   <!---->
@@ -451,7 +449,26 @@
 
 
            <div class="call_block_itog">
-               <form id="form2_dev" action="send2.php" method="post" >
+
+                   <form id="form2" action="" method="post" >
+
+                       <div class="form_sp_dev">
+                           <p>ИТОГОВАЯ ЦЕНА ЗА <span id="num_mail" name="num_mail" class="num">1</span> ШТ.</p>
+                           <p> Размеры (ШхB) : <span id="rasmer_mail" name="rasmer_mail"   class="num">500mm x 1500мм</span> </p>
+                           <p>Полотно : <span id="typepol_mail" name="typepol_mai"  class="num"> Антикошка</span> </p>
+                           <p>Цвет рамки: <span id="colorpol_mail" name="colorpol_mail"  class="num"> Белый</span> </p>
+                           <p>Крепёж: <span id="devpol_mail" name="devpol_mail" class="num">  Z-образный металический</span> </p>
+                           <p>Цена изделия: <span id="zena_mail" name="zena_mail" class="num">1000</span> руб </p>
+                           <p class="itog_titel">Доп услуги</p>
+                           <p>Доставка: <span id="dostavka_mail" name="dostavka_mail"  class="num">0р.</span> </p>
+                           <p>Монтаж: <span id="montag_mail" name="montag_mail" class="num">0р.</span> </p>
+                           <p>Самовывоз: <span id="samo_mail" name="samo_mail"  class="num">0р.</span> </p>
+                           <span id="itogzena_mail"  name="itogzena_mail" class="num">1250 руб.</span>
+
+
+                       </div>
+
+
                    <div class="first2">
                        <input type="text" name="name2" id="name2_dev" placeholder="Ваше имя"  size="30" required />
                    </div>
@@ -512,60 +529,43 @@
        <!--Блок 8 MAP-->
        <div class="call_block_MAP_dev">
 
-           <div class="call_block_map_content">
+           <div class="call_block_map_content_dev">
 
                <div class="block_radio">
-                   <input id="radio-map1_dev" type="radio" name="radio_map" value="1" checked>
+                   <input id="radio-map1_dev" type="radio" name="radio_map_dev" value="1" checked>
                    <label for="radio-map1_dev"></label>
                    <span>Введите адрес получения заказа</span>
                </div>
 
-               <p>г. Астрахань</p>
+               <!--<div class="call_block_map1">-->
+
+                   <!--<div id="map1" class="map1"></div>-->
+               <!--</div>-->
+
+               <!--<p>г. Астрахань</p>-->
 
                <input type="text" class="adres2"  id="adres2_dev" placeholder="улица, дом, корпус квартира"  size="300" required />
 
 
                <div class="block_radio">
-                   <input id="radio-map2_dev" type="radio" name="radio_map" value="2" >
+                   <input id="radio-map2_dev" type="radio" name="radio_map_dev" value="2" >
                    <label for="radio-map2_dev"></label>
                    <span>Выбрать место на карте</span>
                </div>
 
                <div class="call_block_map">
-                   <!--<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/37/astrahan/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Астрахань</a><a href="https://yandex.ru/maps/37/astrahan/?ll=48.024299%2C46.359322&mode=usermaps&source=constructorLink&um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&utm_medium=mapframe&utm_source=maps&z=14" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты — транспорт, навигация, поиск мест</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUaJUEb~D" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>-->
-                <!---->
-                   <div id="map"></div>
-                   <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&amp;width=600&amp;height=600&amp;lang=ru_RU&amp;scroll=true;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9"></script>-->
-                   <!--&lt;!&ndash;<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9"></script>&ndash;&gt;-->
+
+                   <div id="map" class="map"></div>
 
 
                <!--</div>-->
 
 
-               <!--<script type="text/javascript">-->
-                   <!--// Функция ymaps.ready() будет вызвана, когда-->
-                   <!--// загрузятся все компоненты API, а также когда будет готово DOM-дерево.-->
-                   <!--ymaps.ready(init);-->
-                   <!--function init(){-->
-                       <!--// Создание карты.-->
-                       <!--var myMap = new ymaps.Map("map", {-->
-                           <!--// Координаты центра карты.-->
-                           <!--// Порядок по умолчанию: «широта, долгота».-->
-                           <!--// Чтобы не определять координаты центра карты вручную,-->
-                           <!--// воспользуйтесь инструментом Определение координат.-->
-                           <!--//center: [46.35, 48.05],-->
-                           <!--center: [46.359322, 48.024299],-->
-                           <!--// Уровень масштабирования. Допустимые значения:-->
-                           <!--// от 0 (весь мир) до 19.-->
-                           <!--zoom: 14-->
-                       <!--});-->
-                   <!--}-->
-               <!--</script>-->
-
 
 
               <script type="text/javascript">
                    ymaps.ready(init);
+                   var townOtkyda = 'Астрахань, 1й проезд Рождественского, 1А';
 
                    function init() {
                    // Стоимость за километр.
@@ -577,6 +577,7 @@
                    zoom: 14,
                    controls: []
                    }),
+
                    // Создадим панель маршрутизации.
                    routePanelControl = new ymaps.control.RoutePanel({
                    options: {
@@ -603,8 +604,9 @@
                    // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
                   routePanelControl.routePanel.state.set({
                    fromEnabled: false,
-                   //from: 'Астрахань, 1й проезд Рождественского, 1А'
-                      from: '46.36663075, 48.04395423'
+                      from: townOtkyda
+                  // from: 'Астрахань, 1й проезд Рождественского, 1А'
+//                      from: '46.36663075, 48.04395423'
 
                    });
 
@@ -629,9 +631,13 @@
                    balloonContentLayout = ymaps.templateLayoutFactory.createClass(
                    '<span>Расстояние: ' + length.text + '.</span><br/>' +
                    '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
-                       alert(length)
-                       alert(price)
+                       //alert(length)
+                       //alert(price)
                        priceV=price;
+                       $("#dostavka_dev").text(priceV);
+                      // var kudav=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value;
+                      // document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value='sssss'
+                      // alert(kudav);
                    // Зададим этот макет для содержимого балуна.
                    route.options.set('routeBalloonContentLayout', balloonContentLayout);
                    // Откроем балун.
@@ -651,7 +657,7 @@
 
            </div>
 
-               <span id="mapadr_dev" class="mapadr">г. Астрахань ул.Кирова 22</span>
+               <!--<span id="mapadr_dev" class="mapadr">г. Астрахань ул.Кирова 22</span>-->
 
                <div class="call_block8_btn">
                    <button class="but_block8_mob" id="but_block8_1_dev"> </button>
@@ -1083,7 +1089,30 @@
 
 
               <div class="call_block_itog">
-                 <form id="form2" action="send2.php" method="post" >
+
+
+
+                 <form id="form2m" action="" method="post">
+
+                     <div class="form_sp_mob">
+                         <p>ИТОГОВАЯ ЦЕНА ЗА <span id="num_mailm" name="num_mail" class="num">1</span> ШТ.</p>
+                         <p> Размеры (ШхB) : <span id="rasmer_mailm" name="rasmer_mail"   class="num">500mm x 1500мм</span> </p>
+                         <p>Полотно : <span id="typepol_mailm" name="typepol_mail"  class="num"> Антикошка</span> </p>
+                         <p>Цвет рамки: <span id="colorpol_mailm" name="colorpol_mail"  class="num"> Белый</span> </p>
+                         <p>Крепёж: <span id="devpol_mailm" name="devpol_mail" class="num">  Z-образный металический</span> </p>
+                         <p>Цена изделия: <span id="zena_mailm" name="zena_mail" class="num">1000</span> руб </p>
+                         <p class="itog_titel">Доп услуги</p>
+                         <p>Доставка: <span id="dostavka_mailm" name="dostavka_mail"  class="num">0р.</span> </p>
+                         <p>Монтаж: <span id="montag_mailm" name="montag_mail" class="num">0р.</span> </p>
+                         <p>Самовывоз: <span id="samo_mailm" name="samo_mail"  class="num">0р.</span> </p>
+                         <span id="itogzena_mailm"  name="itogzena_mail" class="num">1250 руб.</span>
+
+
+                     </div>
+
+
+
+
                   <div class="first2">
                      <input type="text" name="name2" id="name2" placeholder="Ваше имя"  size="30" required />
                   </div>
@@ -1164,7 +1193,7 @@
                    <span>Введите адрес получения заказа</span>
                </div>
 
-               <p>г. Астрахань</p>
+               <!--<p>г. Астрахань</p>-->
 
                <input type="text" class="adres2"  id="adres2" placeholder="улица, дом, корпус квартира"  size="300" required />
 
@@ -1176,34 +1205,108 @@
                </div>
 
                <div class="call_block_map">
-                   <input type="text" id="suggest">
+                   <!--<input type="text" id="suggest">-->
                    <div id="mapmob"></div>
+
                    <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&amp;width=320&amp;height=400&amp;lang=ru_RU&amp;scroll=true;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9"></script>-->
                    <!--&lt;!&ndash;<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9"></script>&ndash;&gt;-->
+                   <script type="text/javascript">
+                       ymaps.ready(init);
+                       var townOtkyda = 'Астрахань, 1й проезд Рождественского, 1А';
 
+                       function init() {
+                           // Стоимость за километр.
+                           var DELIVERY_TARIFF = 40.726,
+                           // Минимальная стоимость.
+                                   MINIMUM_COST = 0,
+                                   myMap = new ymaps.Map('mapmob', {
+                                       center: [46.359322, 48.024299],
+                                       zoom: 14,
+                                       controls: []
+                                   }),
+
+                           // Создадим панель маршрутизации.
+                                   routePanelControl = new ymaps.control.RoutePanel({
+                                       options: {
+                                           // Добавим заголовок панели.
+                                           showHeader: true,
+                                           title: 'Указать куда'
+                                       }
+                                   }),
+                                   zoomControl = new ymaps.control.ZoomControl({
+                                       options: {
+                                           size: 'small',
+                                           float: 'none',
+                                           position: {
+                                               bottom: 145,
+                                               right: 10
+                                           }
+                                       }
+                                   });
+                           // Пользователь сможет построить только автомобильный маршрут.
+                           routePanelControl.routePanel.options.set({
+                               types: {auto: true}
+                           });
+
+                           // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
+                           routePanelControl.routePanel.state.set({
+                               fromEnabled: false,
+                               from: townOtkyda
+                               // from: 'Астрахань, 1й проезд Рождественского, 1А'
+//                      from: '46.36663075, 48.04395423'
+
+                           });
+
+                           myMap.controls.add(routePanelControl).add(zoomControl);
+
+                           // Получим ссылку на маршрут.
+                           routePanelControl.routePanel.getRouteAsync().then(function (route) {
+
+                               // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+                               route.model.setParams({results: 1}, true);
+
+                               // Повесим обработчик на событие построения маршрута.
+                               route.model.events.add('requestsuccess', function () {
+
+                                   var activeRoute = route.getActiveRoute();
+                                   if (activeRoute) {
+                                       // Получим протяженность маршрута.
+                                       var length = route.getActiveRoute().properties.get("distance"),
+                                       // Вычислим стоимость доставки.
+                                               price = calculate(Math.round(length.value / 1000)),
+                                       // Создадим макет содержимого балуна маршрута.
+                                               balloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                                       '<span>Расстояние: ' + length.text + '.</span><br/>' +
+                                                       '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
+                                       //alert(length)
+                                       //alert(price)
+                                       priceV=price;
+                                       $("#dostavka").text(priceV);
+                                       // var kudav=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value;
+                                       // document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value='sssss'
+                                       // alert(kudav);
+                                       // Зададим этот макет для содержимого балуна.
+                                       route.options.set('routeBalloonContentLayout', balloonContentLayout);
+                                       // Откроем балун.
+                                       activeRoute.balloon.open();
+                                   }
+                               });
+
+                           });
+                           // Функция, вычисляющая стоимость доставки.
+                           function calculate(routeLength) {
+                               return Math.max(routeLength * DELIVERY_TARIFF, MINIMUM_COST);
+                           }
+                       }
+
+                   </script>
 
                </div>
-               <script type="text/javascript">
-                   // Функция ymaps.ready() будет вызвана, когда
-                   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-                   ymaps.ready(init);
-                   function init(){
-                       // Создание карты.
-                       var myMap = new ymaps.Map("mapmob", {
-                           // Координаты центра карты.
-                           // Порядок по умолчанию: «широта, долгота».
-                           // Чтобы не определять координаты центра карты вручную,
-                           // воспользуйтесь инструментом Определение координат.
-                           center: [46.35, 48.05],
-                           // Уровень масштабирования. Допустимые значения:
-                           // от 0 (весь мир) до 19.
-                           zoom: 15
-                       });
-                   }
-               </script>
 
 
-              <span id="mapadr" class="mapadr">г. Астрахань ул.Кирова 22</span>
+
+
+              <!--<span id="mapadr" class="mapadr">г. Астрахань ул.Кирова 22</span>-->
 
                <div class="call_block8_btn">
                <button class="but_block8_mob" id="but_block8_1"> </button>

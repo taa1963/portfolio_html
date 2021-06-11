@@ -1,21 +1,21 @@
 
 <?
-// если была нажата кнопка "Отправить"
+// РµСЃР»Рё Р±С‹Р»Р° РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° "РћС‚РїСЂР°РІРёС‚СЊ"
 if (
     isset($_POST['name']) && !empty($_POST['name']) &&
-    isset($_POST['tel']) && !empty($_POST['tel']) &&
-    isset($_POST['email']) && !empty($_POST['email'])) {
+    isset($_POST['tel']) && !empty($_POST['tel']))
+{
 
  $user_name = substr(htmlspecialchars(trim($_POST['name'])), 0, 1000);
  $user_phone = substr(htmlspecialchars(trim($_POST['tel'])), 0, 1000000);
- $user_email = substr(htmlspecialchars(trim($_POST['email'])), 0, 1000);
+
 
  $to = 'alexandr.tupichenkov@yandex.ru';
- $title = 'Новый заказ на остекление';
+ $title = 'РќРѕРІС‹Р№ Р·Р°РєР°Р· РЅР° Р·Р°РјРµСЂ РјРѕСЃРєРёС‚РЅРѕР№ СЃРµС‚РєРё';
  $message = "
-        Имя: $user_name
-        Телефон : $user_phone
-		email : $user_email
+        РРјСЏ: $user_name
+        РўРµР»РµС„РѕРЅ : $user_phone
+
        ";
 
  $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
@@ -23,9 +23,9 @@ if (
 
  if ($verify == 'true') {
   echo "
- <div align='center' class='warning_font_big'>Поздравляем!</div>
- <div align='center' class='warning_font' align='left'>Ваше письмо доставлено администратору. Через некоторое время Вы получите ответ!</div>
- <p align='center'><a href='http://xn--80aai0ag2c.xn--80atjc.xn--p1ai/%D0%9A%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8/t3858-%D0%9B%D1%8E%D0%B4%D0%B8%D0%BD%D0%BE%D0%B2%D0%BE' class='all_links'>Вернуться назад</a></div></p>
+ <div align='center' class='warning_font_big'>РџРѕР·РґСЂР°РІР»СЏРµРј!</div>
+ <div align='center' class='warning_font' align='left'>Р’Р°С€Рµ РїРёСЃСЊРјРѕ РґРѕСЃС‚Р°РІР»РµРЅРѕ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСѓ. Р§РµСЂРµР· РЅРµРєРѕС‚РѕСЂРѕРµ РІСЂРµРјСЏ Р’С‹ РїРѕР»СѓС‡РёС‚Рµ РѕС‚РІРµС‚!</div>
+ <p align='center'><a href='https://aleksandr.tupichenkov.com/CalcSetka2/' class='all_links'>Р’РµСЂРЅСѓС‚СЊСЃСЏ РЅР°Р·Р°Рґ</a></div></p>
 
  ";
  }
@@ -34,9 +34,9 @@ if (
  {
   echo "
 
- <div align='center' class='warning_font_big'>ОШИБКА!!!</div>
- <div align='center' class='warning_font' align='left'>Ваше письмо не доставлено. Повторите отправку немного позже!</div>
- <p align='center'><a href='http://xn--80aai0ag2c.xn--80atjc.xn--p1ai/%D0%9A%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8/t3858-%D0%9B%D1%8E%D0%B4%D0%B8%D0%BD%D0%BE%D0%B2%D0%BE' class='all_links'>Вернуться назад</a></div></p>
+ <div align='center' class='warning_font_big'>РћРЁРР‘РљРђ!!!</div>
+ <div align='center' class='warning_font' align='left'>Р’Р°С€Рµ РїРёСЃСЊРјРѕ РЅРµ РґРѕСЃС‚Р°РІР»РµРЅРѕ. РџРѕРІС‚РѕСЂРёС‚Рµ РѕС‚РїСЂР°РІРєСѓ РЅРµРјРЅРѕРіРѕ РїРѕР·Р¶Рµ!</div>
+ <p align='center'><a href='https://aleksandr.tupichenkov.com/CalcSetka2/' class='all_links'>Р’РµСЂРЅСѓС‚СЊСЃСЏ РЅР°Р·Р°Рґ</a></div></p>
 
 
 

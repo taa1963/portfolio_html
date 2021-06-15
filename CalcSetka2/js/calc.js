@@ -212,7 +212,7 @@ $(document).ready(function() {
                     dataLayer.push({'event':'formSendCalk'});
                     if (response.status !== 'ok') {
                         alert('Somthing went wrong');
-                        return;
+                        return
                     }
 
 
@@ -266,6 +266,12 @@ $(document).ready(function() {
     });
 
     $('#but_block8_1_dev').click(function () {
+        var itogzena_dev=ZsetkaVuv*1+priceV*1;
+       // alert(ZsetkaVuv);
+       // alert(priceV),
+            $('#itogzena_dev').text(itogzena_dev);
+        $('#itogzena_mail').text(itogzena_dev);
+
         var block = $(this).parents('.container');
         block.find('.call_block1').hide();
         block.find('.call_titel').hide();
@@ -280,11 +286,11 @@ $(document).ready(function() {
         block.find('.call_block_itog_dev').show();
         block.find('.call_block_QR_dev').hide();
         block.find('.call_block_MAP_dev').hide();
-        var itogzena_dev=ZsetkaVuv*1+priceV*1;
-        //alert(ZsetkaVuv)
-        //alert(priceV)
-        $('#itogzena_dev').text(itogzena_dev);
-        $('#itogzena_mail').text(itogzena_dev);
+       //  var itogzena_dev=ZsetkaVuv*1+priceV*1;
+       // alert(ZsetkaVuv);
+       // alert(priceV),
+       //  $('#itogzena_dev').text(itogzena_dev);
+       //  $('#itogzena_mail').text(itogzena_dev);
 
     });
 
@@ -756,7 +762,7 @@ $(document).ready(function() {
     });
     $('#but_block6_2').click(function () {
 
-        sendAjaxForm('result_form', 'form2', '../send2.php');
+        sendAjaxForm('result_form', 'form2', 'send2.php');
         return false;
 
 
@@ -844,8 +850,8 @@ $(document).ready(function() {
         var itogzena_dev=ZsetkaVuv*1+priceV*1;
         //alert(ZsetkaVuv)
         //alert(priceV)
-        $('#itogzena').text(itogzena_dev);
-        $('#itogzena_mailm').text(itogzena_dev);
+        $('#itogzena_dev').text(itogzena_dev);
+        $('#itogzena_mail').text(itogzena_dev);
 
     });
     $('#but_block8_2').click(function () {
@@ -1052,6 +1058,11 @@ $(document).ready(function() {
 
                         priceV=Lvv*1*40.726;
                         $("#dostavka_dev").text(priceV);
+                        var itogzena_dev=ZsetkaVuv*1+priceV*1;
+                       // alert(ZsetkaVuv);
+                       // alert(priceV),
+                            $('#itogzena_dev').text(itogzena_dev);
+                        $('#itogzena_mail').text(itogzena_dev);
                         //alert(a)
                         //  var length2 = route.getActiveRoute().properties.get("distance");
                       //  alert(length2.value);
@@ -1101,6 +1112,11 @@ $(document).ready(function() {
 
                         priceV=Lvv*1*40.726;
                         $("#dostavka").text(priceV);
+                        var itogzena=ZsetkaVuv*1+priceV*1;
+                       // alert(ZsetkaVuv);
+                       // alert(priceV),
+                            $('#itogzena').text(itogzena);
+                        $('#itogzena_mailm').text(itogzena);
                         //alert(a)
                         //  var length2 = route.getActiveRoute().properties.get("distance");
                         //  alert(length2.value);
@@ -1262,9 +1278,9 @@ $(document).ready(function() {
             $("#dostavka_dev").text(priceV);
             $("#dostavka_mail").text(priceV);
 
-            var itogzena_devm=ZsetkaVuv*1+priceV*1;
-                $('#itogzena_dev').text(itogzena_devm);
-            $('#itogzena_mail').text(itogzena_devm);
+            ///var itogzena_devm=ZsetkaVuv*1+priceV*1;
+             //   $('#itogzena_dev').text(itogzena_devm);
+            //$('#itogzena_mail').text(itogzena_devm);
 
      }
 

@@ -806,13 +806,11 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 .form_text{
     display: block;
-    float: right;
-    width: 85%;
-    margin: 0;
+    margin: 0 auto;
     font-family: "Roboto Condensed";
     color: #000000;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
 }
 .form_text a{
     color: #0A6CFF;
@@ -1631,24 +1629,23 @@ input[type=range]::-webkit-slider-runnable-track {
 
     .chek_form_text{
         display: block;
-        width: 80%;
+       /* width: 80%;*/
         margin: 0 auto;
+        text-align: center;
     }
 
-    .chekform{
-        display: block;
-        float: left;
-        width: 10%;
-    }
+    /*.chekform{*/
+        /*display: block;*/
+        /*float: left;*/
+        /*width: 10%;*/
+    /*}*/
     .form_text{
         display: block;
-        float: right;
-        width: 85%;
-        margin: 0;
+         margin: 0 auto;
         font-family: "Roboto Condensed";
         color: #000000;
         font-size: 12px;
-        text-align: left;
+        text-align: center;
     }
     .form_text a{
         color: #0A6CFF;

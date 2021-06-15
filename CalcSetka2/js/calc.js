@@ -280,6 +280,11 @@ $(document).ready(function() {
         block.find('.call_block_itog_dev').show();
         block.find('.call_block_QR_dev').hide();
         block.find('.call_block_MAP_dev').hide();
+        var itogzena_dev=ZsetkaVuv*1+priceV*1;
+        //alert(ZsetkaVuv)
+        //alert(priceV)
+        $('#itogzena_dev').text(itogzena_dev);
+        $('#itogzena_mail').text(itogzena_dev);
 
     });
 
@@ -836,6 +841,11 @@ $(document).ready(function() {
         block.find('.call_block_itog_mob').show();
         block.find('.call_block_QR_mob').hide();
         block.find('.call_block_MAP_mob').hide();
+        var itogzena_dev=ZsetkaVuv*1+priceV*1;
+        //alert(ZsetkaVuv)
+        //alert(priceV)
+        $('#itogzena').text(itogzena_dev);
+        $('#itogzena_mailm').text(itogzena_dev);
 
     });
     $('#but_block8_2').click(function () {

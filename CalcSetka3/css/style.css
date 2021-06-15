@@ -1,0 +1,1961 @@
+
+
+
+/*Описание header и его компонентов. При установке нужно будет закрыть контейнер */
+
+
+
+
+.header {
+    display: block;
+    width: 100%;
+
+}
+
+.header_logo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.header_logo img{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+
+
+
+
+/*		Сам калькулятор		*/
+
+/*		При установке нужно будет закрыть контейнер		*/
+.container {
+    position: relative;
+    max-width: 1170px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+
+}
+
+.container_mob{
+    display: none;
+}
+
+.container p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 17px;
+}
+.call_titel{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+/*		Первый блок. Выбор типа	*/
+.call_block1{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.call_block1 p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+}
+.call_block1 span{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.call_block1_img{
+    display: block;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.call_block1_img img{
+    display: block;
+    width: 166px;
+    height: 166px;
+}
+
+/*		Оформление Радио кнопок		*/
+
+.block_radio {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.block_radio input[type=radio] {
+    display: none;
+}
+.block_radio label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 0;
+    line-height: 18px;
+    user-select: none;
+}
+.block_radio label:before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 34px;
+    height: 34px;
+    position: relative;
+    left: 0;
+    bottom: 1px;
+    background: url(../img/radio.png) 0 0 no-repeat;
+    padding-top: 10px;
+}
+
+/* Checked */
+.block_radio input[type=radio]:checked + label:before {
+    background: url(../img/radio_schek.png) 0 0 no-repeat;
+}
+
+/* Hover */
+/*.block_radio label:hover:before {*/
+    /*filter: brightness(120%);*/
+/*}*/
+
+/* Disabled */
+/*.block_radio input[type=radio]:disabled + label:before {*/
+    /*filter: grayscale(100%);*/
+/*}*/
+
+.call_block_btn_dev{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 68%;
+}
+
+/*.call_block_btn{*/
+    /*display: block;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*width: 100%;*/
+/*}*/
+
+.but_block1{
+    display: block;
+    float: right;
+    width: 101px;
+    height: 34px;
+    background: url(../img/button1.png) 0 0 no-repeat;
+    border: none;
+}
+.but_block2{
+    display: block;
+    float: left;
+    width: 113px;
+    height: 34px;
+    background: url(../img/button2.png) 0 0 no-repeat;
+    border: none;
+}
+
+
+
+
+.call_block_line{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 1px;
+    width: 100%;
+    background-color: #000000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+
+/*		Второй блок. Выбор цвета	*/
+.call_block2{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.call_block2 p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+}
+.call_block2 span{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.call_block2_1{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /*float: left;*/
+    margin-bottom: 30px;
+}
+
+.block2_color{
+    display: block;
+    width: 169px;
+    height: 73px;
+    border: 1px solid #000000;
+    /*background-color: 1001;*/
+    background-color: #ffffff;
+}
+
+.call_block2_1_left{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.call_block2_1_richt{
+    display: block;
+    width: 50%;
+    float: right;
+}
+
+.call_block2_1_richt p{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.ral{
+    display: block;
+    margin-top: 10px;
+    padding: 0px;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+
+.ralc{
+    width: 50px;
+    height: 28px;
+    border: 1px solid #000000;
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+.call_block2_2{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /*float: left;*/
+    margin-bottom: 30px
+}
+
+.call_block2_1_richt a{
+    text-decoration: underline;
+    color: #0A6CFF;
+}
+
+.call_block2_2 img{
+    display: block;
+    width: 79px;
+    height: 79px;
+    float: left;
+}
+
+.block_box{
+
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 5%;
+}
+/*		Оформление Радио кнопок		*/
+
+.block_box {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.block_box input[type=checkbox] {
+    display: none;
+}
+.block_radio label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 0;
+    line-height: 18px;
+    user-select: none;
+    float: left;
+}
+.block_box label:before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 34px;
+    height: 29px;
+    position: relative;
+    left: 0;
+    bottom: 1px;
+    /*border: 3px solid #0A6CFF;*/
+    background: url(../img/box_chek_un.png) 0 0 no-repeat;
+    padding-top: 10px;
+    float: left;
+}
+
+/* Checked */
+.block_box input[type=checkbox]:checked + label:before {
+    background: url(../img/box_chek.png) 0 0 no-repeat;
+}
+
+
+
+.block_box span{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+/*		Третий блок. Выбор цвета	*/
+.call_block3{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.call_block3 p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+}
+.call_block3 span{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.call_block3_text{
+    display: block;
+}
+
+.call_block3_itog{
+    display: block;
+    position:relative ;
+    overflow: hidden;
+}
+.call_block3_itog span{
+
+    border: 1px solid #000000;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+.call_block3_img_inp{
+    display: block;
+    width: 100%;
+    height: 520px;
+    position: relative;
+    overflow: hidden;
+}
+.calc_block3_1{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 460px;
+    /*background-color: aqua;*/
+}
+
+
+
+.calc_block3_L{
+
+    display: block;
+    /* position: absolute; */
+    overflow: hidden;
+    width: 40px;
+    height: 460px;
+    float: left;
+    /* transform: rotate(
+270deg
+); */
+    /*background-color: #ffed00;*/
+    /* left: -35%; */
+
+}
+
+.form_sp_dev{
+    display: none;
+}
+
+.form_sp_mob{
+    display: none;
+}
+
+.calc_block3_im{
+    display: block;
+    margin-left: 60px;
+}
+
+.Hokn{
+    display: block;
+    position: absolute;
+    transform: rotate(270deg);
+    top: 220px;
+    width: 350px;
+    left: -150px;
+}
+
+/*.vgazline{*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*margin-top: 10px;*/
+    /*margin-left: 3.7em;*/
+    /*width: 0%;*/
+    /*height: 5px;*/
+    /*background-color:#FF6511 ;*/
+    /*z-index: 12;*/
+    /*transform: rotate(270deg);*/
+/*}*/
+
+.calc_block3_2{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /*background-color: #FF6511;*/
+}
+.calc_block3_Logo{
+    display: block;
+    float: left;
+}
+
+.calc_block3_inp{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    margin-top: 10px;
+}
+/*.Hokn{*/
+    /*display: block;*/
+    /*width: 80%;*/
+    /*margin-left: 20px*/
+/*}*/
+
+.Lokn{
+    display: block;
+    width: 80%;
+    margin-left: 20px
+}
+
+input[type='range'] {
+    overflow: hidden;
+    height: 30px;
+   -webkit-appearance: none;
+  /*background-color: #C4C4C4;*/
+}
+
+/*input[type='range']::-webkit-slider-runnable-track {*/
+    /*-webkit-appearance: none;*/
+    /*border:;*/
+    /*height: 20px;*/
+    /*width: 72px;*/
+    /*border-radius: 8px;*/
+    /*background: lightblue;*/
+    /*cursor: pointer;*/
+    /*margin-top: -6px;*/
+    /*box-shadow:;*/
+/*}*/
+
+
+
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #5b4a38;
+    margin-top: -10px;
+    z-index: 10;
+    /*width: 100px;*/
+    /*-webkit-appearance: none;*/
+    /*height: 10px;*/
+    /*cursor: ew-resize;*/
+    /*background: #434343;*/
+    /*box-shadow: -80px 0 0 80px #FF6511;*/
+}
+
+
+
+
+
+
+
+input[type="range"]::-moz-range-progress {
+    background-color: #FF6511;
+}
+
+input[type="range"]::-moz-range-track {
+    background-color: #FF6511;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background-color: #FF6511;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background-color: #9a905d;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    max-width: 100%;
+    height: 7px;
+    border:none;
+    box-shadow:inset 0px 0px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow:inset 0px 0px 1px rgba(0,0,0,0.1);
+    background-color: #e1d7be;
+    border-radius: 5px;
+}
+
+.call_block3_text2{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.call_block3_text2 ol{
+    text-align: left;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.call_block3_text2 p{
+    text-align: left;
+    font-family: "Roboto Condensed";
+    color: #6B6B6B;
+    font-size: 16px;
+}
+.call_block3_text2 a{
+    text-align: left;
+    font-family: "Roboto Condensed";
+    color: #0A6CFF;
+    font-size: 16px;
+}
+
+.but_zakaz{
+    display: block;
+    margin: 0 auto;
+    width: 164px;
+    height: 34px;
+    background: url(../img/btnzak.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+}
+
+.call_block4{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+.call_block4 p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+}
+.call_block4 span{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.call_block4_radio label{
+    display: block;
+
+}
+.call_block4_radio{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+  /*=======Блок добавить еще сетку======*/
+ .call_block_nes{
+     display:none;
+     position: relative;
+     overflow: hidden;
+     margin: 0 auto;
+     width: 90%;
+ }
+
+
+.call_block_btn_nes {
+    display:block;
+    width: 60%;
+    margin:0 auto ;
+    margin-bottom: 100px;
+}
+
+.call_block_nes p{
+    text-align: center;
+}
+
+.but_block_nes1{
+    display: block;
+    float: left;
+    width: 76px;
+    height: 34px;
+    background: url(../img/btn_yes.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size:16px ;
+}
+.but_block_nes1{
+    text-align: center;
+}
+
+
+.but_block_nes2{
+    display: block;
+    float: right;
+    width: 76px;
+    height: 34px;
+    background: url(../img/btn_no.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size:16px ;
+}
+.call_block_btn_nes_img{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    top: 50px;
+    bottom: 30px;
+    margin-top: 130px;
+    width: 100%;
+}
+.plus{
+    display: block;
+    float: left;
+    width: 40px;
+    height: 41px;
+    margin-top: 40px;
+}
+.canvas{
+    display: block;
+    float: right;
+    width: 127px;
+    height: 179px;
+}
+
+/*=======Блок нужна установка ======*/
+ .call_block_setka{
+     display:none;
+     position: relative;
+     overflow: hidden;
+     margin: 0 auto;
+     width: 90%;
+ }
+
+.call_block_setka p{
+    text-align: center;
+}
+
+.call_block_btn_nes_img_dev{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    margin: 0 auto;
+}
+.canvas2_dev{
+    display: block;
+    margin: 0 auto;
+}
+
+.ruka_dev{
+    display: block;
+    margin: 0 auto;
+}
+
+/*<!--Блок Замер первый экран-->*/
+  .call_block_samer1{
+      display:none;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      width: 90%;
+  }
+
+  .call_block_samer1_bl{
+      display: block;
+  }
+.call_block_samer1_bl img{
+    display: block;
+    margin: 0 auto;
+}
+
+.call_block_samer1_text_dev{
+    display: block;
+}
+
+.call_block_samer1_text_dev p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+ }
+ .but_block_zamer1_dev {
+     display: block;
+     float: right;
+     width: 241px;
+     height: 34px;
+     background: url(../img/zamer1.png) 0 0 no-repeat;
+     border: none;
+     color: #ffffff;
+     font-size: 16px;
+ }
+
+/*.<!--Блок Замер второй экран-->*/
+     .call_block_samer2{
+         display: none;
+         position: relative;
+         overflow: hidden;
+         margin: 0 auto;
+         width: 90%;
+     }
+
+.call_block_samer2_mob-bl{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color:#F2F2F2 ;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.zak_titel{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.first{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.first input{
+    width: 100%;
+}
+.zak_text{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 12px;
+    text-align: center;
+}
+.zak_text span{
+    font-weight: bold;
+}
+
+.chek_form_text{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.chekform{
+    display: block;
+    float: left;
+    width: 10%;
+}
+.form_text{
+    display: block;
+    margin: 0 auto;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 12px;
+    text-align: center;
+}
+.form_text a{
+    color: #0A6CFF;
+}
+
+.form_btn{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.but_block_zamer2{
+    display: block;
+    margin: 0 auto;
+    width: 241px;
+    height: 34px;
+    background: url(../img/zamer1.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size:16px ;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+/*.<!--Блок Тип доставки->*/
+   .call_block4{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+
+.call_block4_im_mob{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.call_block4_left_mob{
+    display: block;
+    float: left;
+    width: 40%;
+}
+
+.call_block4_rigt_mob{
+    display: block;
+    float: right;
+    width: 40%;
+}
+
+.call_block4_btn{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.but_block4{
+    display: block;
+    margin: 0 auto;
+    width: 113px;
+    height: 34px;
+    background: url(../img/btn_dostavka.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size:16px ;
+    float: left;
+
+}
+
+
+/*<!--Блок 5 Самовывоз1-->*/
+.call_block_sam_dev{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.call_block_sam_dev p{
+    text-align: center;
+}
+
+.call_block1_sam{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 45%;
+    height: auto;
+    float: left;
+}
+
+.call_block1_sam span {
+    text-align: left;
+    display: block;
+    position: relative;
+    /*padding-left: 10px;*/
+    /*left: 10px;*/
+    left: 10px;
+}
+
+
+.call_block1_sam_text{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    top: 20px;
+}
+
+.call_block1_sam_text img{
+    display: block;
+    //width: 10%;
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+
+
+
+
+
+
+
+/*<!--Блок 6 Итоги заказа-->*/
+        .call_block_itog_dev{
+            display: none;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            width: 90%;
+        }
+.call_block_itog_content{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    background-color:#F2F2F2 ;
+    margin-top: 20px;
+}
+.call_block_itog_titel{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    background-color:#CFD3D6 ;
+    top: 10px;
+    bottom: 10px;
+}
+.call_block_itog_titel p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+}
+.call_block_itog_titel span {
+    color: #0A6CFF;
+}
+
+
+.call_block_itog_text{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+.call_block_itog_text p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+
+.call_block_itog_text2{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.itog_titel{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.call_block_itog_text2 p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+    width: 100%;
+}
+
+.call_block_itog_text2 span{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+    text-align: right;
+    float: right;
+}
+.call_block_itog_zena{
+    display: block;
+    margin: 0 auto;
+}
+.call_block_itog_zena span{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.call_block_itog{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.first2 {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.first2 input{
+    width: 100%;
+}
+.but_block6_mob {
+    display: block;
+    margin: 0 auto;
+    width: 134px;
+    height: 34px;
+    background: url(../img/btnitog.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+}
+.call_block_itog_text3{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.call_block_itog_text3 p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 12px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.call_block_itog_text3 a{
+    color: #0A6CFF;
+}
+
+.call_block1_t{
+    display: block;
+}
+.call_block1_t p{
+    text-align: center;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.number{
+    color: #FF6511;
+}
+
+/*<!--Блок 7 Итоги QR-->*/
+ .call_block_QR_dev{
+     display: none;
+     position: relative;
+     overflow: hidden;
+     margin: 0 auto;
+     width: 90%;
+ }
+
+ .call_block_QR_content_dev{
+     display: block;
+     width: 60%;
+     margin: 0 auto;
+ }
+
+.call_block_QR_content{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+.call_QR_block1 img{
+    width: 10%;
+    float: left;
+}
+
+.call_QR_block1 p{
+    width: 86%;
+    float: right;
+    margin: 0;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.call_QR_img{
+    padding-bottom: 20px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+    top: 20px;
+    bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/*<!--Блок * Итоги MAP-->*/
+.call_block_MAP_dev{
+    /*display: block;*/
+   display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+.call_block_map_content_dev{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.call_block_map_content{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.call_block_map_content span{
+    margin-left: 10px;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.call_block_map_content_dev span{
+    margin-left: 10px;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.call_block_map_content p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.call_block_map_content_dev p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.adres2{
+    display: block;
+    width: 100%;
+}
+.call_block_map{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+}
+.call_block_map1{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+}
+
+
+#map {
+    display: block;
+    width: 600px;
+    height: 600px;
+    padding: 0;
+    margin: 0;
+}
+#map1 {
+    display: block;
+    width: 600px;
+    height: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+#mapadr{
+    display: block;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.call_block8_btn{
+    display: block;
+    margin-top: 10px;
+}
+
+.but_block8_mob {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 34px;
+    background: url(../img/btn8.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/*   Мобиьная верстка */
+@media only screen and (max-width : 480px) {
+    .container{
+        display: none;
+    }
+
+    .container_mob{
+        display: block;
+    }
+
+
+
+    .container_mob p{
+        font-family: "Roboto Condensed Light";
+        color: #000000;
+        font-size: 17px;
+    }
+
+
+    .call_block1_mob_titel{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .call_block_btn_mob{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    .call_block1_tm{
+        display: block;
+    }
+    .call_block1_tm p{
+        text-align: center;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    .numberm{
+        color: #FF6511;
+    }
+
+   .call_block1_mob{
+       display: block;
+       width: 90%;
+       margin: 0 auto;
+   }
+
+    .call_block1_mob p{
+        font-family: "Roboto Condensed Light";
+        color: #000000;
+        font-size: 17px;
+    }
+    .call_block1_mob span{
+        font-weight: bold;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .call_block1_mob_img{
+        display: block;
+        float: left;
+        width: 40%;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .call_block1_img img{
+        display: block;
+        width: 166px;
+        height: 166px;
+    }
+
+    .call_block2_mob{
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block2_mob p{
+        font-family: "Roboto Condensed Light";
+        color: #000000;
+        font-size: 17px;
+    }
+    .call_block2_mob span{
+        font-weight: bold;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .call_block2_1{
+        display: block;
+        width: 100%;
+    }
+    .call_block2_2{
+        display: block;
+        width: 100%;
+    }
+    .block2_colorm {
+        display: block;
+        width: 169px;
+        height: 169px;
+        border: 1px solid #000000;
+        /*background-color: 1001;*/
+        background-color: #ffffff;
+    }
+    .call_block2_1_richtm {
+        display: block;
+        width: 169px;
+        height: 169px;
+        border: 1px solid #000000;
+    }
+    .call_block3_mob{
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .calc_block3_1 {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 355px;
+    }
+
+    .calc_block3_im {
+        display: block;
+        margin-left: 60px;
+        width: 319px;
+        height: 347px;
+    }
+    .calc_block3_L{
+        height: 347px;
+    }
+
+    .calc_block3_im img{
+        width: 319px;
+        height: 347px;
+    }
+    .Hokn {
+        display: block;
+        position: absolute;
+        transform: rotate(270deg);
+        top: 150px;
+        width: 250px;
+        left: -100px;
+    }
+    .calc_block3_inp {
+        width: 85%;
+        margin-top: 10px;
+    }
+
+    .call_block3_img_inp{
+        height: auto;
+    }
+
+    .call_block4_mob{
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block4_mob p{
+        font-family: "Roboto Condensed Light";
+        color: #000000;
+        font-size: 17px;
+    }
+    .call_block4_mob span{
+        font-weight: bold;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+    .call_block4_im_mob{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block4_left_mob{
+        display: block;
+        float: left;
+        width: 40%;
+    }
+
+    .call_block4_rigt_mob{
+        display: block;
+        float: right;
+        width: 40%;
+    }
+
+    .call_block4_btn{
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .but_block4_mob{
+        display: block;
+        margin: 0 auto;
+        width: 113px;
+        height: 34px;
+        background: url(../img/btn_dostavka.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+
+    }
+
+
+    .call_block_nes_mob{
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block_nes_mob p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 40px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    .call_block_btn_nes_mob {
+        display: block;
+        width: 60%;
+        margin:0 auto ;
+        margin-bottom: 100px;
+    }
+
+    .but_block_nes1_mob{
+        display: block;
+        float: left;
+        width: 76px;
+        height: 34px;
+        background: url(../img/btn_yes.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+    }
+    .but_block_nes2_mob{
+        display: block;
+        float: right;
+        width: 76px;
+        height: 34px;
+        background: url(../img/btn_no.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+    }
+    .call_block_btn_nes_img{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        top: 50px;
+        bottom: 30px;
+        margin-top: 130px;
+        width: 100%;
+    }
+    .plus{
+        display: block;
+        float: left;
+        width: 40px;
+        height: 41px;
+        margin-top: 40px;
+    }
+    .canvas{
+        display: block;
+        float: right;
+        width: 127px;
+        height: 179px;
+    }
+    .call_block_setka_mob{
+        display: none;
+    }
+
+    .call_block_setka_mob p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 40px;
+        font-weight: bold;
+        margin-bottom: 50px;
+
+    }
+
+    .canvas2{
+        display: block;
+        margin: 0 auto;
+        width: 127px;
+        height: 179px;
+    }
+
+    .ruka{
+        display: block;
+        margin: 0 auto;
+        width: 127px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    /*===========Самовывоз================= */
+    .call_block_samer1_mob{
+        display: none;
+    }
+
+    .call_block_samer1_mob-bl{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .zamer1{
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .call_block_samer1_text{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .but_block_zamer1{
+        display: block;
+        float: right;
+        width: 241px;
+        height: 34px;
+        background: url(../img/zamer1.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+    }
+    .call_block_samer2_mob{
+        display: none;
+    }
+    .call_block_samer2_mob-bl{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        background-color:#F2F2F2 ;
+        margin-top: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    .zak_titel{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 18px;
+        text-align: center;
+        padding-top: 40px;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    .first{
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .first input{
+        width: 100%;
+    }
+    .zak_text{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 12px;
+        text-align: center;
+    }
+    .zak_text span{
+        font-weight: bold;
+    }
+
+    .chek_form_text{
+        display: block;
+       /* width: 80%;*/
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /*.chekform{*/
+        /*display: block;*/
+        /*float: left;*/
+        /*width: 10%;*/
+    /*}*/
+    .form_text{
+        display: block;
+         margin: 0 auto;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 12px;
+        text-align: center;
+    }
+    .form_text a{
+        color: #0A6CFF;
+    }
+
+    .form_btn{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .but_block_zamer2{
+        display: block;
+        margin: 0 auto;
+        width: 241px;
+        height: 34px;
+        background: url(../img/zamer1.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+       /*============sam=================*/
+    .call_block_sam_mob{
+        display: none;
+    }
+    .call_block_sam{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .call_block1_sam{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .sam1{
+        display: block;
+    }
+
+    .call_block_sam p{
+
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+        text-align: left;
+    }
+    .call_block1_sam span{
+        display: inline-block;
+        /* left: 20px; */
+        margin-left: 20px;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+
+    .call_block1_sam_text{
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .sam1i{
+        display: block;
+        width: 10%;
+        float: left;
+    }
+    .sam1t{
+        display: block;
+        width: 85%;
+        float: right;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    /*=======Блок итоги=============*/
+    .call_block_itog_mob{
+        display: none;
+    }
+
+    .call_block_itog_content{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+        background-color:#F2F2F2 ;
+        margin-top: 20px;
+    }
+    .call_block_itog_titel{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        background-color:#CFD3D6 ;
+       top: 10px;
+        bottom: 10px;
+    }
+    .call_block_itog_titel p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .call_block_itog_titel span {
+       color: #0A6CFF;
+    }
+
+
+    .call_block_itog_text{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .call_block_itog_text p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+
+    .call_block_itog_text2{
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .itog_titel{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .call_block_itog_text2 p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+       width: 100%;
+    }
+
+    .call_block_itog_text2 span{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+        text-align: right;
+        float: right;
+    }
+    .call_block_itog_zena{
+        display: block;
+        margin: 0 auto;
+    }
+    .call_block_itog_zena span{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .call_block_itog{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .first2 {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .first2 input{
+        width: 100%;
+    }
+    .but_block6_mob {
+        display: block;
+        margin: 0 auto;
+        width: 134px;
+        height: 34px;
+        background: url(../img/btnitog.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size: 12px;
+    }
+    .call_block_itog_text3{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .call_block_itog_text3 p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 12px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+    .call_block_itog_text3 a{
+        color: #0A6CFF;
+    }
+
+        /*===== block QR========*/
+    .call_block_QR_mob{
+        display: none;
+    }
+
+    .call_block_QR_content{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .call_QR_block1 img{
+        width: 10%;
+        float: left;
+    }
+
+    .call_QR_block1 p{
+        width: 86%;
+        float: right;
+        margin: 0;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+    .call_QR_img{
+        padding-bottom: 20px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+        width: 100%;
+        top: 20px;
+        bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    /*=======Block MAP=======*/
+    .call_block_MAP_mob{
+        display: none;
+    }
+    #mapmob {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .call_block_map_content{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block_map_content span{
+        margin-left: 10px;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+    .call_block_map_content p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+    .adres2{
+        display: block;
+        width: 100%;
+    }
+    .call_block_map{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 320px;
+        height: 400px;
+    }
+
+    #mapadr{
+        display: block;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .call_block8_btn{
+        display: block;
+        margin-top: 10px;
+    }
+
+    .but_block8_mob {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 34px;
+        background: url(../img/btn8.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+
+}

@@ -194,7 +194,7 @@ $(document).ready(function() {
 
     $('#but_block6_2_dev').click(function () {
 
-        sendAjaxForm('result_form', 'form2', '../send2.php');
+        sendAjaxForm('result_form', 'form2', 'send2.php');
         return false;
 
 

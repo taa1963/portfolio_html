@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор москитных сеток</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="taa">
+
+
+    <!--<link href="css/modal-contact.css" rel="stylesheet">-->
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&amp;width=600&amp;height=600&amp;lang=ru_RU&amp;scroll=true;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9"></script>-->
+  <!---->
+<!--    <script  src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589?lang=ru_RU;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9>" type="text/javascript"></script>-->
+
+    <!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9>" type="text/javascript"></script>-->
+    <!--<script src="https://yandex.ru/maps/-/CCUaJUEfLA?lang=ru_RU&amp;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9>" type="text/javascript"></script>-->
+
+    <!--https://yandex.ru/maps/-/CCUaJUEfLA-->
+    <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&amp;width=600&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>-->
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=0c7236f8-111d-47fd-8f56-17856475632e" type="text/javascript"></script>
+
+
+    <!--<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp>" type="text/javascript"></script>-->
+
+ <!--<script src="  https://yandex.ru/maps/?um=constructor%3AToGdyru7ibA51uP2Sz9D9c_XvepNC3tm&source=constructorLink/?lang=ru_RU&amp;apikey=0c7236f8-111d-47fd-8f56-17856475632e>" type="text/javascript"></script>-->
+
+
+
+    <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3AToGdyru7ibA51uP2Sz9D9c_XvepNC3tm&amp;width=640&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>-->
+
+</head>
+<body>
+
+
+
+   <div class="header">
+       <div class="header_logo">
+            <img src="img/menu2.png"   alt="logo">
+       </div>
+   </div>
+
+
+   <div class="container">
+
+       <div class="call_titel">
+       <p>С помощью данного сервиса вы можете заказать москитную сетку не выходя из дома</p>
+       </div>
+
+       <div class="call_block1">
+           <!--<p>С помощью данного сервиса вы можете заказать москитную сетку не выходя из дома</p>-->
+           <div class="call_block1_t">
+           <p>СЕТКА №<span id="number" class="number">1</span></p>
+           </div>
+
+           <p>Шаг 1.<span>Выберите тип полотна для москитной сетки</span></p>
+
+           <div class="call_block1_img">
+
+               <img src="img/standart.png"   alt="standart">
+
+               <div class="block_radio">
+                   <input id="radio-1" type="radio" name="radio" value="Стандарт" checked>
+                   <label for="radio-1">Стандарт</label>
+               </div>
+
+           </div>
+
+           <div class="call_block1_img">
+
+               <img src="img/antimoska.png"   alt="standart">
+               <div class="block_radio">
+                   <input id="radio-2" type="radio" name="radio" value="Антимошка">
+                   <label for="radio-2">Антимошка</label>
+               </div>
+
+           </div>
+
+           <div class="call_block1_img">
+
+               <img src="img/antikoshka.png"   alt="standart">
+               <div class="block_radio">
+                   <input id="radio-3" type="radio" name="radio" value="Антикошка">
+                   <label for="radio-3">Антикошка</label>
+               </div>
+
+           </div>
+
+           <div class="call_block_btn_dev">
+               <button class="but_block1" id="but_block1">   </button>
+           </div>
+
+           <div class="call_block_line">
+           </div>
+
+       </div>
+
+       <div class="call_block2">
+
+           <p>Шаг 2.<span>Выберите цвет рамки</span></p>
+
+           <div class="call_block2_1">
+
+             <div class="call_block2_1_left">
+               <div class="block2_color">
+               </div>
+
+               <div class="block_radio">
+                   <input id="radio-21" type="radio" name="radio_color" value="Белый" checked>
+                   <label for="radio-21">Белый</label>
+               </div>
+
+             </div>
+
+               <div class="call_block2_1_richt">
+                   <!--<img src="img/standart.png"   alt="standart">-->
+                   <p>Укажите код цвета по RAL</p>
+
+                   <span class="ral">RAL <input type="text" id="ralc" class="ralc" value="1000">
+
+                       <a id="raldev">Таблица RAL</a></span>
+                       <!--<a href="https://gost-din.ru/information/ral-tcveta-tablitca.html" target="_blank">Таблица RAL</a></span>-->
+
+                   <div class="block_radio">
+                       <input id="radio-31" type="radio" name="radio_color" value="Другой цвет">
+                       <label for="radio-31">Другой цвет</label>
+                   </div>
+
+               </div>
+
+
+               </div>
+
+           <div class="call_block2_2">
+
+               <img src="img/zobr.png"   alt="standart">
+
+               <div class="block_box">
+                   <input id="box1" class="box1"  type="checkbox" name="boxz_dev"  value="Z-образный металический" checked>
+                   <label for="box1"></label>
+                   <span>Используем <br>
+                       Z-образный металический крепёж</span>
+               </div>
+
+           </div>
+
+
+           <div class="call_block_btn_dev">
+               <button class="but_block2" id="but_block2_1">   </button>
+               <button class="but_block1" id="but_block2_2">   </button>
+           </div>
+
+           <div class="call_block_line">
+           </div>
+
+       </div>
+
+       <!--    Блок 2_1. Цвета RAL    -->
+       <div class="call_blockRAL_dev">
+
+           <p>Таблица цветов RAL</p>
+
+           <div class="call_blockRAL_text">
+               <table class="table">
+                   <tr>
+                       <th colspan="4">  Желтые тона </th>
+
+                   </tr>
+                   <tr>
+                       <td class ='colorral' id="colord1000"> RAL 1000 <br> Зелено-бежевый </td>
+                       <td class ='colorral' id="colord1001"> RAL 1001 <br> Бежевый </td>
+                       <td class ='colorral' id="colord1002"> RAL 1002 <br> Песочно-жёлтый </td>
+                       <td class ='colorral' id="colord1003"> RAL 1003 <br> Сигнальный жёлтый </td>
+                   </tr>
+                   <tr>
+                       <td class ='colorral' id="colord1004"> RAL 1004 <br> Жёлто-золотой </td>
+                       <td class ='colorral' id="colord1005"> RAL 1005 <br> Медово-жёлтый </td>
+                       <td class ='colorral' id="colord1006"> RAL 1006 <br> Кукурузно-жёлтый </td>
+                       <td class ='colorral' id="colord1007"> RAL 1007 <br> Нарциссово-жёлтый </td>
+                   </tr>
+
+                   <tr>
+                       <td class ='colorral' id="colord1011"> RAL 1011 <br> Коричнево-бежевый </td>
+                       <td class ='colorral' id="colord1012"> RAL 1012 <br> Лимонно-жёлтый </td>
+                       <td class ='colorral' id="colord1013"> RAL 1013 <br> Жемчужно-белый </td>
+                       <td class ='colorral' id="colord1014"> RAL 1014 <br> Слоновая кость </td>
+                   </tr>
+
+                   <tr>
+                       <td class ='colorral' id="colord1015"> RAL 1015 <br> Светлая слоновая кость </td>
+                       <td class ='colorral' id="colord1016"> RAL 1016 <br> Жёлтая сера </td>
+                       <td class ='colorral' id="colord1017"> RAL 1017 <br> Шафраново-жёлтый </td>
+                       <td class ='colorral' id="colord1018"> RAL 1018 <br> Цинково-жёлтый </td>
+                   </tr>
+
+
+               </table>
+           </div>
+
+
+
+           <div class="call_block2_1_btn_ral">
+               <button class="but_block2" id="but_RALd">  </button>
+           </div>
+
+
+
+
+       </div>
+
+
+
+
+
+
+       <div class="call_block3">
+
+           <p>Шаг 3.<span>Укажите размеры москитной сетки</span></p>
+
+           <div class="call_block3_text">
+           <p>Для того чтобы измерить размеры будующей москитной сетки вам <br>
+               необходимо замерить размер створки со стороны квартиры.<br>
+               Помните что :<span> Размер створки = Размеру москитной сетки.</span></p>
+           </div>
+
+           <div class="call_block3_itog">
+               <p>Ширина:<span id="Lokna"> 500 мм</span> Высота:<span id="Hokna"> 1000 мм</span> </p>
+           </div>
+
+           <div class="call_block3_img_inp">
+               <script>
+                   function sizeH() {
+                       var  Hokna;
+                       Hokna = document.getElementById('Hokn').value;
+                       $('#Hokna').text(Hokna);
+                   }
+               </script>
+               <script>
+                   function sizeL() {
+                       var  Lokna;
+                       Lokna = document.getElementById('Lokn').value;
+                       $('#Lokna').text(Lokna);
+                   }
+               </script>
+
+               <div class="calc_block3_1">
+
+           <div class="calc_block3_L">
+                   <input type="range" class="Hokn" id="Hokn" min="300" max="3000" step="1" value="1000"
+                      oninput="sizeH()">
+                 </div>
+                   <div class="calc_block3_im">
+                       <img src="img/zamer_okna.png"   alt="standart">
+                   </div>
+               </div>
+
+               <div class="calc_block3_2">
+                  <div class="calc_block3_Logo">
+                      <img src="img/logo_zamer_okna.png"   alt="standart">
+                  </div>
+                   <div class="calc_block3_inp">
+                   <input type="range" class="Lokn" id="Lokn" min="500" max="2000" step="1" value="500"
+                   oninput="sizeL()">
+                   </div>
+               </div>
+               </div>
+
+
+           <div class="call_block3_text2">
+               <ol>
+                   <li> Окно должно быть закрыто</li>
+                   <li> Замерьте раму створки по горизонтали и вертикали.</li>
+               </ol>
+               <p> Внимание! Замеры записывайте в миллиметрах,<br>
+                   не округляйте. Не забудьте где горизонталь, а где вертикаль.</p>
+               <p> Если вы не уверены можете <br>
+                   <a id="spez_zamer_dev">пригласить специалиста по замеру!. </a> </p>
+           </div>
+
+           <div class="call_block3_btn">
+               <button class="but_zakaz" id="but_zakaz"> СЕТКУ В ЗАКАЗ  </button>
+           </div>
+
+           <div class="call_block_line">
+           </div>
+
+           </div>
+
+       <!--<div class="call_block4">-->
+
+           <!--<p>Шаг 4.<span>Выберите способ получения заказа</span></p>-->
+
+           <!--<div class="call_block4_radio">-->
+               <!--<div class="block_radio">-->
+                   <!--<input id="radio-z1" type="radio" name="radioz" value="1" checked>-->
+                   <!--<label for="radio-z1">Доставка</label>-->
+               <!--</div>-->
+
+               <!--<div class="block_radio">-->
+                   <!--<input id="radio-z2" type="radio" name="radioz" value="1">-->
+                   <!--<label for="radio-z2">Самовывоз</label>-->
+               <!--</div>-->
+           <!--</div>-->
+       <!--</div>-->
+
+       <!--Блок добавить ЕЩЕ сетку-->
+       <div class="call_block_nes">
+
+           <p>Добавить ещё сетку ?</p>
+
+           <div class="call_block_btn_nes">
+               <button class="but_block_nes1" id="but_block_nes1"> Да   </button>
+               <button class="but_block_nes2" id="but_block_nes2"> Нет  </button>
+
+               <div class="call_block_btn_nes_img">
+                   <img class="plus" src="img/plus.png"   alt="plus">
+                   <img class="canvas" src="img/canva.png"   alt="canva">
+               </div>
+
+           </div>
+
+           <div class="call_block_line">
+           </div>
+
+
+       </div>
+
+       <!--Блок Нужна установка москитной сетки-->
+       <div class="call_block_setka">
+
+           <p>Нужна ли установка <br> москитной сетки?</p>
+
+           <div class="call_block_btn_nes">
+               <button class="but_block_nes1" id="but_block_setka1"> Да   </button>
+               <button class="but_block_nes2" id="but_block_setka2"> Нет  </button>
+           </div>
+
+               <div class="call_block_btn_nes_img_dev">
+                   <img class="canvas2_dev" src="img/canva.png"   alt="canva">
+                   <img class="ruka_dev" src="img/ruka.PNG"   alt="plus">
+
+               </div>
+
+
+
+           <div class="call_block_line">
+           </div>
+       </div>
+
+
+       <!--Блок Замер первый экран-->
+       <div class="call_block_samer1">
+
+           <div class="call_block_samer1_bl">
+               <img class="zamer1" src="img/zamerv.png"   alt="canva">
+
+           </div>
+
+           <div class="call_block_samer1_text_dev">
+               <p>Во избежании недоразумении, установка москитной сетки производится только после бесплатного замера нашим специалистом.</p>
+               <p>После замера, на месте, с Вами будет составлен договор на дому и получения оплаты заказа.</p>
+
+
+           </div>
+
+           <div class="call_block_btn_nes">
+               <button class="but_block_zamer1_dev" id="but_block_zamer1dev"> Записаться на замер   </button>
+
+           </div>
+       </div>
+
+       <!--Блок Замер второй экран-->
+       <div class="call_block_samer2">
+
+           <div class="call_block_samer2_mob-bl">
+
+               <p class="zak_titel">ЗАПИСАТСЯ НА ЗАМЕР <br>
+                   МОСКИТНОЙ СЕТКИ</p>
+
+               <form id="form1dev" action="send.php" method="post" >
+
+                   <div class="first">
+                       <input type="text" name="name" id="namedev" placeholder="Ваше имя"  size="30" required />
+
+                   </div>
+
+                   <div class="first">
+                       <input type="text" name="tel" id="teldev" placeholder="+7 (___) ___-__-__"  size="30" required />
+
+                   </div>
+
+                   <p class="zak_text"><span>Внимание! </span> Обратная связь с менеджерами продаж <br> осуществляеется только в рабочие часы нашей <br> организации</p>
+
+                   <div class="chek_form_text">
+                       <!--<input class="chekform" type="checkbox" required  />-->
+                       <p class="form_text">
+                           Нажимая кнопку «Записаться», вы соглашаетесь<br>
+                           с условиями публичной офферты, а также на <br>
+                           обработку персональных данных в соотвествии с<br>
+                           условиями <a href="https://okna-fabricant.ru/polzovatelskoe-soglashenie/" target="_blank">
+                           пользовательского соглашения</a>
+                       </p>
+
+                   </div>
+
+                   <div class="form_btn">
+                       <button type="submit" class="but_block_zamer2" id="but_block_zamer2dev"> ЗАПИСАТСЯ   </button>
+                   </div>
+               </form>
+           </div>
+       </div>
+
+
+       <!--Блок 4 Способ получения заказа-->
+       <div class="call_block4">
+
+           <p>Шаг 4.<span>Выберите способ получения заказа</span></p>
+           <div class="call_block4_im_mob">
+               <div class="call_block4_left_mob">
+                   <img class="zamer1" src="img/dostabka.png"   alt="canva">
+                   <div class="call_block4_btn">
+                       <button class="but_block4" id="but_block4_1_dev">Доставка </button>
+                   </div>
+               </div>
+
+               <div class="call_block4_rigt_mob">
+                   <img class="zamer1" src="img/vuvus.png"   alt="canva">
+                   <div class="call_block4_btn">
+                       <button class="but_block4" id="but_block4_2dev"> Самовывоз   </button>
+                   </div>
+               </div>
+           </div>
+
+       </div>
+
+       <!--Блок 5 Самовывоз1-->
+       <div class="call_block_sam_dev">
+           <div class="call_block_sam">
+               <p>Выберите откуда вам удобнее забрать заказ</p>
+               <p>г. Астрахань</p>
+
+               <div class="call_block1_sam">
+                   <img class="sam1" src="img/punkt1.png"   alt="canva">
+                   <div class="block_radio">
+                       <input id="radio-dost1_dev" type="radio" name="radio_dost_dev" value="1" checked>
+                       <label for="radio-dost1_dev"> <span  >Шоурум на Рождественского <br>1-й проезд Рождественнского 1A</span></label>
+                       <!--<span for="radio-dost1_dev" >Шоурум на Рождественского <br>1-й проезд Рождественнского 1A</span>-->
+                   </div>
+               </div>
+
+               <div class="call_block1_sam">
+                   <img class="sam1" src="img/punkt2.png"   alt="canva">
+                   <div class="block_radio">
+                       <input id="radio-dost2_dev" type="radio" name="radio_dost_dev" value="2">
+                       <label for="radio-dost2_dev"> <span>Шоурум в ТЦ «Премиум Холл» <br>ул. Адмиралтейская 15</span> </label>
+                       <!--<span for="radio-dost2_dev">Шоурум в ТЦ «Премиум Холл» <br>ул. Адмиралтейская 15</span>-->
+                   </div>
+               </div>
+
+               <div class="call_block1_sam_text">
+                   <img class="sam1i" src="img/znak.png"   alt="canva">
+                   <p class="sam1t"> После изготовления и доставки Вашего заказа до пункта самовывоза, Вам придёт смс-оповещение. Ожидайте.</p>
+               </div>
+
+           </div>
+            <div class="call_block4_im_mob">
+               <div class="call_block4_left_mob">
+                   <div class="call_block4_btn">
+                       <button class="but_block4" id="but_block5_1_dev"><<< НАЗАД </button>
+                   </div>
+               </div>
+               <div class="call_block4_rigt_mob">
+                   <div class="call_block4_btn">
+                       <button class="but_block4" id="but_block5_2_dev"> ДАЛЕЕ >>   </button>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!--Блок 6 Итоги заказа-->
+       <div class="call_block_itog_dev">
+
+           <div class="call_block_itog_content">
+               <div class="call_block_itog_titel">
+                   <p>ИТОГОВАЯ ЦЕНА ЗА <span id="num_dev" class="num">1</span> ШТ.</p>
+               </div>
+               <div class="call_block_itog_text">
+                   <p> <img  src="img/kav.png"   alt="canva">Размеры (ШхB) : <span id="rasmer_dev" class="num">500mm x 1500мм</span> </p>
+                   <p><img  src="img/kav.png"   alt="canva">Полотно : <span id="typepol_dev" class="num"> Антикошка</span> </p>
+                   <p><img  src="img/kav.png"   alt="canva">Цвет рамки: <span id="colorpol_dev" class="num"> Белый</span> </p>
+                   <p><img  src="img/kav.png"   alt="canva">Крепёж: <span id="devpol_dev" class="num">  Z-образный металический</span> </p>
+                   <p>Цена изделия: <span id="zena_dev" class="num">1000</span> руб </p>
+               </div>
+               <div class="call_block_itog_text2">
+                   <p class="itog_titel">Доп услуги</p>
+                   <p>Доставка: <span id="dostavka_dev" class="num">250р.</span> </p>
+                   <p>Монтаж: <span id="montag_dev" class="num">0р.</span> </p>
+                   <p>Самовывоз: <span id="samo_dev" class="num">0р.</span> </p>
+               </div>
+               <div class="call_block_itog_zena">
+                   <span id="itogzena_dev" class="num">1250 руб.</span>
+               </div>
+
+           </div>
+
+
+           <div class="call_block_itog">
+
+                   <form id="form2" action="" method="post" >
+
+                       <div class="form_sp_dev">
+                           <p>ИТОГОВАЯ ЦЕНА ЗА <span id="num_mail" name="num_mail" class="num">1</span> ШТ.</p>
+                           <p> Размеры (ШхB) : <span id="rasmer_mail" name="rasmer_mail"   class="num">500mm x 1500мм</span> </p>
+                           <p>Полотно : <span id="typepol_mail" name="typepol_mai"  class="num"> Антикошка</span> </p>
+                           <p>Цвет рамки: <span id="colorpol_mail" name="colorpol_mail"  class="num"> Белый</span> </p>
+                           <p>Крепёж: <span id="devpol_mail" name="devpol_mail" class="num">  Z-образный металический</span> </p>
+                           <p>Цена изделия: <span id="zena_mail" name="zena_mail" class="num">1000</span> руб </p>
+                           <p class="itog_titel">Доп услуги</p>
+                           <p>Доставка: <span id="dostavka_mail" name="dostavka_mail"  class="num">0р.</span> </p>
+                           <p>Монтаж: <span id="montag_mail" name="montag_mail" class="num">0р.</span> </p>
+                           <p>Самовывоз: <span id="samo_mail" name="samo_mail"  class="num">0р.</span> </p>
+                           <span id="itogzena_mail"  name="itogzena_mail" class="num">1250 руб.</span>
+
+
+                       </div>
+
+
+                   <div class="first2">
+                       <input type="text" name="name2" id="name2_dev" placeholder="Ваше имя"  size="30" required />
+                   </div>
+                   <div class="first2">
+                       <input type="text" name="tel2" id="tel2_dev" placeholder="+7 (___) ___-__-__"  size="30" required />
+                   </div>
+               </form>
+           </div>
+
+
+           <div class="call_block4_im_mob">
+               <div class="call_block4_left_mob">
+                   <div class="call_block4_btn">
+                       <button class="but_block6_mob" id="but_block6_1_dev">ИЗМЕНИТЬ </button>
+                   </div>
+               </div>
+               <div class="call_block4_rigt_mob">
+                   <div class="call_block4_btn">
+                       <button class="but_block6_mob" id="but_block6_2_dev">ОФОРМИТЬ ЗАКАЗ   </button>
+                   </div>
+               </div>
+           </div>
+           <div class="call_block_itog_text3">
+               <p>Нажимая кнопку «Оформить заказ», вы соглашаетесь<br>
+                   с условиями публичной офферты, а также на <br>
+                   обработку персональных данных в соотвествии с<br>
+                   условиями <a href="https://okna-fabricant.ru/polzovatelskoe-soglashenie/" target="_blank">пользовательского соглашения</a></p>
+           </div>
+       </div>
+
+       <!--Блок 7 Итоги QR-->
+       <div class="call_block_QR_dev">
+
+           <div class="call_block_QR_content_dev">
+               <div class="call_QR_block1">
+
+                   <img  src="img/date.png"   alt="canva"><p> <span> Для компьютеров:</span> зайдите в приложение Сбербанк Онлайн и отсканируйте QR-код для оплаты заказа. </p>
+               </div>
+
+               <div class="call_QR_img">
+
+                   <img  src="img/qr.png"   alt="canva">
+               </div>
+
+               <div class="call_QR_block1">
+
+                   <img  src="img/whatsapp.png"   alt="canva"><p> После оплаты, отправьте <br>
+                   чек-оплаты на наш Whatsapp 8(937) <br>
+                   823-83-83 для подтверждения <br>
+                   оплаты. </p>
+               </div>
+           </div>
+       </div>
+
+
+
+       <!--Блок 8 MAP-->
+       <div class="call_block_MAP_dev">
+
+           <div class="call_block_map_content_dev">
+
+               <div class="block_radio">
+                   <input id="radio-map1_dev" type="radio" name="radio_map_dev" value="1" checked>
+                   <label for="radio-map1_dev"></label>
+                   <span>Введите адрес получения заказа</span>
+               </div>
+
+               <!--<div class="call_block_map1">-->
+
+                   <!--<div id="map1" class="map1"></div>-->
+               <!--</div>-->
+
+               <!--<p>г. Астрахань</p>-->
+
+               <input type="text" class="adres2"  id="adres2_dev" placeholder="улица, дом, корпус квартира"  size="300" required />
+
+
+               <div class="block_radio">
+                   <input id="radio-map2_dev" type="radio" name="radio_map_dev" value="2" >
+                   <label for="radio-map2_dev"></label>
+                   <span>Выбрать место на карте</span>
+               </div>
+
+               <div class="call_block_map">
+
+                   <div id="map" class="map"></div>
+
+
+               <!--</div>-->
+
+
+
+
+              <script type="text/javascript">
+                 // alert(123);
+                   ymaps.ready(init);
+                   var townOtkyda = 'Астрахань, 1й проезд Рождественского, 1А';
+
+                   function init() {
+
+
+
+                   // Стоимость за километр.
+                   var DELIVERY_TARIFF = 40.726,
+                   // Минимальная стоимость.
+                   MINIMUM_COST = 0,
+                           locality='Астрахань',
+//                    myMap;
+//                       ymaps.geocode('Астрахань').then(function (res) {
+//                           myMap = new ymaps.Map('map', {
+//                               center: res.geoObjects.get(0).geometry.getCoordinates(),
+//                               zoom :14,
+//                               controls: []
+//                           }),
+           //            });
+
+                   myMap = new ymaps.Map('map', {
+                       center: [46.359322, 48.024299],
+                   zoom: 14,
+                       //kind:'Астрахань',
+                       kind:locality,
+                       controls: ['geolocationControl'],
+                      // controls: [],
+                      // boundedBy:[[46.468159, 47.883314], [46.347609, 48.030168]],
+//                       boundedBy: myMap.getBounds(),
+//                       strictBounds: true
+              //         noPopup:true,
+
+
+                      // ymaps.geocode([55.753994, 37.622093], {kind: ‘district’, boundedBy: [[null,null],[null,null]]});
+
+//                       ymaps.util.bounds.getCenterAndZoom(
+//                           [[55.7, 37.6], [55.8, 37.7]],
+//                           [$mapElement.width(), $mapElement.height()]
+//                   )
+                //       strictBounds:true,
+               //        noSuggestPanel:true
+                      //bounded:([[60,-40], [20,60]])
+
+                      /* searchControlProvider: 'yandex#search',
+                     setBounds:([[60,-40], [20,60]], {
+                               checkZoomRange: true
+                           })*/
+
+                  // controls: ['searchControl']
+                   }),
+//
+
+                   // Создадим панель маршрутизации.
+                   routePanelControl = new ymaps.control.RoutePanel({
+                   options: {
+                       maxWidth: '380px',
+                       display:'none',
+                       visibility: 'collapse',
+                      float: 'left',
+                   //    noSuggestPanel:true,
+                   //    reverseGeocoding: false,
+                  //     noPopup:true,
+
+                   // Добавим заголовок панели.
+                   showHeader: true,
+                      title: 'Указать куда'
+                   },
+                   parameters:{
+                       noPopup:true
+                   }
+                   }),
+                   zoomControl = new ymaps.control.ZoomControl({
+                   options: {
+                   size: 'small',
+                   float: 'none',
+                   position: {
+                   bottom: 145,
+                   right: 10
+                   }
+                   }
+                   });
+                      // ymaps.geoQuery(ymaps.geocode('Санкт-Петербург'));
+                      // console.log(ymaps.control.ZoomControl);
+                   // Пользователь сможет построить только автомобильный маршрут.
+                   routePanelControl.routePanel.options.set({
+                   types: {auto: true}
+                   });
+
+                   // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
+                  routePanelControl.routePanel.state.set({
+                   fromEnabled: false,
+                      from: townOtkyda
+                   //   boundedBy:[[46.468159, 47.883314], [46.347609, 48.030168]],
+                     // boundedBy: myMap.getBounds(),
+                   //   strictBounds: true,
+                   //   noSuggestPanel:true,
+                   //   noPopup:true,
+                   //   display:'none',
+                   //   visibility: 'collapse',
+                   //   toEnabled: 'focus'
+
+
+                   });
+                       var adr=routePanelControl.routePanel.state.get('to');
+                      // console.log(adr);
+                       adr=String(adr);
+                 var tow=routePanelControl.routePanel.state.get('to');
+
+                     var topar=document.getElementsByClassName('ymaps-2-1-78-route-panel-input ymaps-2-1-78-route-panel-input_empty');
+                       $(topar).css("color", "red");
+                       //console.log(topar)
+                      // $(".ymaps-2-1-78-route-panel-input__icon_last").css("color", "red");
+
+                    //   console.log(topar)
+                     // var ww= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
+                      // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
+                     //  console.log(ww)
+
+                       var ww4=$('.ymaps-2-1-78-route-panel-input__input:eq(1)');
+                      // $("td:eq(2)")
+                     //  console.log(ww4)
+
+
+                       var ww5=$('.ymaps-2-1-78-route-panel-input__input');
+                       var N=ww5.length;
+                      // console.log(N)
+                       for(var i=0; i < ww5.length; i++){
+                           var row = ww5[i];
+                           //additionally, you can use it again in a jquery selector
+                           $(row).css("color", "red");
+                           //alert('red')
+                       }
+                      // ww5[1].css("color", "red");
+                       $(ww4).value='2222';
+
+                       $(ww4).addClass('www4');
+                       $(".ymaps-2-1-78-route-panel-input__input:eq(1)").css("color", "red");
+                       $(".ymaps-2-1-78-route-panel-input__input:eq(1)").value='33333'
+                       $(".ymaps-2-1-78-route-panel-input__input").css("color", "red");
+                       $(ww4).css("color", "red");
+
+
+                 //  :eq(2)
+                     //  var ww1=ww[1];
+                    //   console.log(ww1)
+
+                 ww4.on('input', function() {
+                     alert(1);
+                     adr=null;
+                           routePanelControl.routePanel.state.set({to:adr });
+                     // routePanelControl.routePanel.state.get('to')=adr;
+//                     var ww= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
+//                     // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
+//                     console.log(ww)
+
+                 });
+
+                       var ww= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
+                       // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
+                    //   console.log(ww)
+                       //var N1= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').length;
+                       var N1= ww.length;
+                       // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
+                    //   console.log(N1)
+
+
+
+
+
+                      // var myGeocoder = ymaps.geocode("Астрахань");
+                   myMap.controls.add(routePanelControl).add(zoomControl);
+
+//                       var adr=$('div[class^="ymaps-"]').value;
+//                       console.log(adr);
+
+//                       var adr=  $('div[class^="ymaps-"]').filter(()=>{
+//                           return this.class.match(/\d-route-content__taxi-link-text/);
+//                   }).on('click', ()=>{
+//
+//                 });
+                       var ww5=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
+                      // console.log(ww5);
+                       var ww6=$('input.ymaps-2-1-78-route-panel-input__input');
+                      /// console.log(ww6);
+                       var N=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').length;
+
+                       //var N=ww5.length;
+                      // console.log(N)
+                       for(var i=0; i < ww5.length; i++){
+                           var row = ww5[i];
+                           //additionally, you can use it again in a jquery selector
+                           $(row).css("color", "red");
+                           //alert('red')
+                       }
+
+
+
+                   // Получим ссылку на маршрут.
+                   routePanelControl.routePanel.getRouteAsync().then(function (route) {
+                  //    console.log( route.model);
+                       //var adr=$('div[class^="ymaps-"]').value;
+
+//                       var adr=$('.ymaps-2-1-78-route-panel-input__input').value;
+//                       console.log(adr);
+
+                   // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+                   route.model.setParams({ boundedBy:[[46.468159, 47.883314], [46.347609, 48.030168]],strictBounds: false,results: 1}, true);
+                 //   route.model.setParams({results: 1}, true);
+
+                   // Повесим обработчик на событие построения маршрута.
+                   route.model.events.add('requestsuccess', function () {
+                      // var adr=$('.ymaps-2-1-78-route-panel-input__input').value;
+                     // var adr=$('.ymaps-2-1-78-route-panel-input__input');
+                     //  console.log(adr);
+
+                       var adr=routePanelControl.routePanel.state.get('to');
+                      // console.log(adr);
+                       adr=String(adr);
+                       var cit=adr.includes('Астрахань');
+                     //  alert(cit);
+                       if (cit==false){
+                           //  alert(1111);
+//                           adr=null;
+//                           routePanelControl.routePanel.state.set({
+//                               to:adr
+                           //});
+                          // routePanelControl.routePanel.state.get('to')=adr;
+
+                       }
+
+
+//                       var myGeocoder = ymaps.geocode("Астрахань", {
+//                           // Ограничение поиска видимой областью карты.
+//                           boundedBy: myMap.getBounds(),
+//                           // Жесткое ограничение поиска указанной областью.
+//                           strictBounds: true
+//                       });
+//                       myGeocoder.then(function(res) {
+//                           myMap.geoObjects.add(res.geoObjects);
+//                           console.log(res)
+//                       });
+
+
+//
+//
+//                       console.log(adr);
+
+                   var activeRoute = route.getActiveRoute();
+                      // console.log( route.getActiveRoute().properties);
+                   if (activeRoute) {
+                   // Получим протяженность маршрута.
+                   var length = route.getActiveRoute().properties.get("distance"),
+                   // Вычислим стоимость доставки.
+                   price = calculate(Math.round(length.value / 1000)),
+                   // Создадим макет содержимого балуна маршрута.
+                   balloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                   '<span>Расстояние: ' + length.text + '.</span><br/>' +
+                   '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
+                       //alert(length)
+                       //alert(price)
+                       priceV=price;
+                       $("#dostavka_dev").text(priceV);
+                       var itogzena_dev=ZsetkaVuv*1+priceV*1;
+                      // alert(ZsetkaVuv);
+                      // alert(priceV);
+                       $('#itogzena_dev').text(itogzena_dev);
+                       $('#itogzena_mail').text(itogzena_dev);
+
+                      // console.log(activeRoute);
+                      // var kudav=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value;
+                      // document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value='sssss'
+                      // alert(kudav);
+                   // Зададим этот макет для содержимого балуна.
+                   route.options.set('routeBalloonContentLayout', balloonContentLayout);
+                   // Откроем балун.
+                   activeRoute.balloon.open();
+                   }
+                   });
+
+                   });
+                   // Функция, вычисляющая стоимость доставки.
+                   function calculate(routeLength) {
+                   return Math.max(routeLength * DELIVERY_TARIFF, MINIMUM_COST);
+                     //  console.log(activeRoute);
+                   }
+
+                       var ww5=$('.ymaps-2-1-78-route-panel-input__input');
+                       var N=ww5.length;
+                     //  console.log(N)
+                       for(var i=0; i < ww5.length; i++){
+                           var row = ww5[i];
+                           //additionally, you can use it again in a jquery selector
+                           $(row).css("color", "red");
+                           //alert('red')
+                       }
+
+                       }
+
+
+
+
+              </script>
+
+
+           </div>
+
+               <!--<span id="mapadr_dev" class="mapadr">г. Астрахань ул.Кирова 22</span>-->
+
+               <div class="call_block8_btn">
+                   <button class="but_block8_mob" id="but_block8_1_dev"> </button>
+
+
+                   <div class="call_block4_left_mob">
+                       <div class="call_block4_btn">
+                           <button class="but_block4" id="but_block8_2_dev"><<< НАЗАД </button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+
+
+     </div>
+
+
+   <div class="container_mob">
+       <!--Титулка-->
+       <div class="call_block1_mob_titel">
+
+       <p>С помощью данного сервиса вы можете заказать москитную сетку не выходя из дома</p>
+       </div>
+
+       <!--Блок 1. Шаг 1. Тип сетки-->
+       <div class="call_block1_mob">
+
+           <div class="call_block1_tm">
+               <p>СЕТКА №<span id="numberm" class="numberm">1</span></p>
+           </div>
+
+           <p>Шаг 1.<span>Выберите тип полотна для москитной сетки</span></p>
+
+           <div class="call_block1_img">
+
+               <img src="img/standart.png"   alt="standart">
+
+               <div class="block_radio">
+                   <input id="radio-1m" type="radio" name="radio_mob" value="Стандарт" checked>
+                   <label for="radio-1m">Стандарт</label>
+               </div>
+
+           </div>
+
+           <div class="call_block1_img">
+
+               <img src="img/antimoska.png"   alt="standart">
+               <div class="block_radio">
+                   <input id="radio-2m" type="radio" name="radio_mob" value="Антимошка">
+                   <label for="radio-2m">Антимошка</label>
+               </div>
+
+           </div>
+
+           <div class="call_block1_img">
+
+               <img src="img/antikoshka.png"   alt="standart">
+               <div class="block_radio">
+                   <input id="radio-3m" type="radio" name="radio_mob" value="Антикошка">
+                   <label for="radio-3m">Антикошка</label>
+               </div>
+
+           </div>
+
+           <div class="call_block_btn_mob">
+               <button class="but_block1" id="but_block1m">   </button>
+           </div>
+
+
+
+       </div>
+
+       <!--Блок 2. Шаг 2. Цвет  сетки-->
+       <div class="call_block2_mob">
+
+           <p>Шаг 2.<span>Выберите цвет рамки</span></p>
+
+           <div class="call_block2_1">
+
+               <div class="call_block2_1_left">
+                   <div class="block2_colorm">
+                   </div>
+
+                   <div class="block_radio">
+                       <input id="radio-21m" type="radio" name="radio_color_mob" value="Белый" checked>
+                       <label for="radio-21m">Белый</label>
+                   </div>
+
+               </div>
+
+               <div class="call_block2_1_richt">
+                   <div class="call_block2_1_richtm">
+                   <!--<img src="img/standart.png"   alt="standart">-->
+                   <p>Напишите название или укажите код цвета по RAL</p>
+                       <a id="ral">Таблица RAL</a>
+					   <!-- <a href="https://gost-din.ru/information/ral-tcveta-tablitca.html" target="_blank">Таблица RAL</a>-->
+					   
+                   <span class="ral">RAL <input type="text" id="ralcm" class="ralc" value="1000">
+                       </span>
+                   </div>
+                   <div class="block_radio">
+                       <input id="radio-31m" type="radio" name="radio_color_mob" value="Другой цвет">
+                       <label for="radio-31m">Другой цвет</label>
+                   </div>
+
+               </div>
+
+           </div>
+
+           <div class="call_block2_2">
+
+               <img src="img/zobr.png"   alt="standart">
+
+               <div class="block_box">
+                   <input id="box1m" class="box1"  type="checkbox"  value="Z-образный металический крепёж" checked>
+                   <label for="box1m"></label>
+                   <span>Используем <br>
+                       Z-образный металический крепёж</span>
+               </div>
+
+           </div>
+
+
+           <div class="call_block_btn">
+               <button class="but_block2" id="but_block2_1m">   </button>
+               <button class="but_block1" id="but_block2_2m">   </button>
+           </div>
+
+
+
+       </div>
+
+       <!--    Блок 2_1. Цвета RAL    -->
+       <div class="call_blockRAL_mob">
+
+           <p>Таблица цветов RAL</p>
+
+           <div class="call_blockRAL_text">
+               <table class="table">
+                   <tr>
+                       <th colspan="4">  Желтые тона </th>
+
+                   </tr>
+                   <tr>
+                       <td class ='colorralm' id="color1000"> RAL 1000 <br> Зелено-бежевый </td>
+                       <td class ='colorralm' id="color1001"> RAL 1001 <br> Бежевый </td>
+                       <td class ='colorralm' id="color1002"> RAL 1002 <br> Песочно-жёлтый </td>
+                       <td class ='colorralm' id="color1003"> RAL 1003 <br> Сигнальный жёлтый </td>
+                   </tr>
+                   <tr>
+                       <td class ='colorralm' id="color1004"> RAL 1004 <br> Жёлто-золотой </td>
+                       <td class ='colorralm' id="color1005"> RAL 1005 <br> Медово-жёлтый </td>
+                       <td class ='colorralm' id="color1006"> RAL 1006 <br> Кукурузно-жёлтый </td>
+                       <td class ='colorralm' id="color1007"> RAL 1007 <br> Нарциссово-жёлтый </td>
+                   </tr>
+
+                   <tr>
+                       <td class ='colorralm' id="color1011"> RAL 1011 <br> Коричнево-бежевый </td>
+                       <td class ='colorralm' id="color1012"> RAL 1012 <br> Лимонно-жёлтый </td>
+                       <td class ='colorralm' id="color1013"> RAL 1013 <br> Жемчужно-белый </td>
+                       <td class ='colorralm' id="color1014"> RAL 1014 <br> Слоновая кость </td>
+                   </tr>
+
+                   <tr>
+                       <td class ='colorralm' id="color1015"> RAL 1015 <br> Светлая слоновая кость </td>
+                       <td class ='colorralm' id="color1016"> RAL 1016 <br> Жёлтая сера </td>
+                       <td class ='colorralm' id="color1017"> RAL 1017 <br> Шафраново-жёлтый </td>
+                       <td class ='colorralm' id="color1018"> RAL 1018 <br> Цинково-жёлтый </td>
+                   </tr>
+
+
+               </table>
+           </div>
+
+
+
+           <div class="call_block2_1_btn_ral">
+               <button class="but_block2" id="but_RAL">  </button>
+           </div>
+
+
+
+
+       </div>
+
+
+
+
+
+       <!--Блок 3. Шаг 3. Размеры-->
+       <div class="call_block3_mob">
+
+           <p>Шаг 3.<span>Укажите размеры москитной сетки</span></p>
+
+           <div class="call_block3_text">
+               <p>Для того чтобы измерить размеры будующей москитной сетки вам
+                   необходимо замерить размер створки со стороны квартиры.
+                   Помните что :<span> Размер створки = Размеру москитной сетки.</span></p>
+           </div>
+
+           <div class="call_block3_itog">
+               <p>Ширина:<span id="Loknam">500 </span> Высота:<span id="Hoknam">1000 </span> </p>
+           </div>
+
+
+
+           <div class="call_block3_img_inp">
+               <script>
+                   function sizeHm() {
+                       var  Hokna;
+
+                       Hokna = document.getElementById('Hoknm').value;
+                       $('#Hoknam').text(Hokna);
+
+                   }
+               </script>
+               <script>
+                   function sizeLm() {
+                       var  Lokna;
+
+                       Lokna = document.getElementById('Loknm').value;
+                       $('#Loknam').text(Lokna);
+
+                   }
+               </script>
+
+               <div class="calc_block3_1">
+
+                   <div class="calc_block3_L">
+
+                       <input type="range" class="Hokn" id="Hoknm" min="300" max="3000" step="1" value="1000"
+                              oninput="sizeHm()">
+                   </div>
+                   <div class="calc_block3_im">
+                       <img src="img/zamer_okna.png"   alt="standart">
+                   </div>
+               </div>
+
+               <div class="calc_block3_2">
+                   <div class="calc_block3_Logo">
+                       <img src="img/logo_zamer_okna.png"   alt="standart">
+                   </div>
+                   <div class="calc_block3_inp">
+                       <input type="range" class="Lokn" id="Loknm" min="500" max="2000" step="1" value="500"
+                              oninput="sizeLm()">
+                   </div>
+               </div>
+           </div>
+
+           <div class="call_block3_btn">
+               <button class="but_zakaz" id="but_zakazm"> СЕТКУ В ЗАКАЗ  </button>
+           </div>
+
+
+           <div class="call_block3_text2">
+
+               <p> Если вы не уверены можете <br>
+                   <a id="spez_zamer_mob">пригласить специалиста по замеру!. </a> </p>
+           </div>
+
+
+
+           <div class="call_block_btn_mob">
+               <button class="but_block2" id="but_block3_1m">   </button>
+
+           </div>
+
+           <div class="call_block3_text2">
+               <ol>
+                   <li> Окно должно быть закрыто</li>
+                   <li> Замерьте раму створки по горизонтали и вертикали.</li>
+               </ol>
+               <p> Внимание! Замеры записывайте в миллиметрах,<br>
+                   не округляйте. Не забудьте где горизонталь, а где вертикаль.</p>
+
+           </div>
+
+           <!--<div class="call_block_line">-->
+           <!--</div>-->
+
+       </div>
+
+
+
+       <!--Блок добавить ЕЩЕ сетку-->
+       <div class="call_block_nes_mob">
+
+       <p>Добавить ещё сетку ?</p>
+
+       <div class="call_block_btn_nes_mob">
+           <button class="but_block_nes1_mob" id="but_block_nes1_mob"> Да   </button>
+           <button class="but_block_nes2_mob" id="but_block_nes2_mob"> Нет  </button>
+
+           <div class="call_block_btn_nes_img">
+               <img class="plus" src="img/plus.png"   alt="plus">
+               <img class="canvas" src="img/canva.png"   alt="canva">
+           </div>
+
+       </div>
+
+
+
+   </div>
+
+       <!--Блок Нужна установка москитной сетки-->
+       <div class="call_block_setka_mob">
+
+           <p>Нужна ли установка <br> москитной сетки?</p>
+
+           <div class="call_block_btn_nes">
+               <button class="but_block_nes1" id="but_block_setka1_mob"> Да   </button>
+               <button class="but_block_nes2" id="but_block_setka2_mob"> Нет  </button>
+
+               <div class="call_block_btn_nes_img">
+                   <img class="canvas2" src="img/canva.png"   alt="canva">
+                   <img class="ruka" src="img/ruka.PNG"   alt="plus">
+
+               </div>
+           </div>
+       </div>
+
+
+       <!--Блок Замер первый экран-->
+       <div class="call_block_samer1_mob">
+
+           <div class="call_block_samer1_mob-bl">
+               <img class="zamer1" src="img/zamerv.png"   alt="canva">
+
+           </div>
+
+           <div class="call_block_samer1_text">
+               <p>Во избежании недоразумении, установка москитной сетки производится только после бесплатного замера нашим специалистом.</p>
+               <p>После замера, на месте, с Вами будет составлен договор на дому и получения оплаты заказа.</p>
+
+
+           </div>
+
+           <div class="call_block_btn_nes">
+               <button class="but_block_zamer1" id="but_block_zamer1"> Записаться на замер   </button>
+
+            </div>
+       </div>
+
+       <!--Блок Замер второй экран-->
+       <div class="call_block_samer2_mob">
+
+           <div class="call_block_samer2_mob-bl">
+
+               <p class="zak_titel">ЗАПИСАТСЯ НА ЗАМЕР <br>
+                   МОСКИТНОЙ СЕТКИ</p>
+
+               <form id="form1" action="send.php" method="post" >
+
+                   <div class="first">
+                        <input type="text" name="name" id="name" placeholder="Ваше имя"  size="30" required />
+
+                   </div>
+
+                   <div class="first">
+                      <input type="text" name="tel" id="tel" placeholder="+7 (___) ___-__-__"  size="30" required />
+
+                   </div>
+
+                   <p class="zak_text"><span>Внимание! </span> Обратная связь с менеджерами продаж <br> осуществляеется только в рабочие часы нашей <br> организации</p>
+
+                   <div class="chek_form_text">
+                       <!--<input class="chekform" type="checkbox" required  />-->
+                       <p class="form_text">
+                           Нажимая кнопку «Записаться», вы соглашаетесь<br>
+                           с условиями публичной офферты, а также на <br>
+                           обработку персональных данных в соотвествии с<br>
+                           условиями <a href="https://okna-fabricant.ru/polzovatelskoe-soglashenie/" target="_blank">
+                           пользовательского соглашения</a>
+                   </div>
+
+                   <div class="form_btn">
+                   <button type="submit" class="but_block_zamer2" id="but_block_zamer2"> ЗАПИСАТСЯ   </button>
+                   </div>
+               </form>
+           </div>
+       </div>
+
+
+       <!--Блок 4 Способ получения заказа-->
+       <div class="call_block4_mob">
+
+           <p>Шаг 4.<span>Выберите способ получения заказа</span></p>
+           <div class="call_block4_im_mob">
+               <div class="call_block4_left_mob">
+                   <img class="zamer1" src="img/dostabka.png"   alt="canva">
+                   <div class="call_block4_btn">
+                       <button class="but_block4_mob" id="but_block4_1">Доставка </button>
+                   </div>
+               </div>
+
+               <div class="call_block4_rigt_mob">
+                   <img class="zamer1" src="img/vuvus.png"   alt="canva">
+                   <div class="call_block4_btn">
+                       <button class="but_block4_mob" id="but_block4_2"> Самовывоз   </button>
+                   </div>
+               </div>
+           </div>
+
+
+
+
+
+
+
+
+
+       </div>
+
+       <!--Блок 5 Самовывоз1-->
+       <div class="call_block_sam_mob">
+           <div class="call_block_sam">
+               <p>Выберите откуда вам удобнее забрать заказ</p>
+               <p>г. Астрахань</p>
+
+               <div class="call_block1_sam">
+                   <img class="sam1" src="img/punkt1.png"   alt="canva">
+                   <div class="block_radio">
+                       <input id="radio-dost1" type="radio" name="radio_dost" value="1" checked>
+                       <label for="radio-dost1"></label>
+                       <span>Шоурум на Рождественского <br>1-й проезд Рождественнского 1A</span>
+                   </div>
+               </div>
+
+               <div class="call_block1_sam">
+                   <img class="sam1" src="img/punkt2.png"   alt="canva">
+                   <div class="block_radio">
+                       <input id="radio-dost2" type="radio" name="radio_dost" value="2">
+                       <label for="radio-dost2"></label>
+                       <span>Шоурум в ТЦ «Премиум Холл» <br>ул. Адмиралтейская 15</span>
+                   </div>
+               </div>
+
+               <div class="call_block1_sam_text">
+                   <img class="sam1i" src="img/znak.png"   alt="canva">
+                   <p class="sam1t"> После изготовления и доставки Вашего заказа до пункта самовывоза, Вам придёт смс-оповещение. Ожидайте.</p>
+               </div>
+
+           </div>
+           <div class="call_block4_im_mob">
+               <div class="call_block4_left_mob">
+                   <div class="call_block4_btn">
+                       <button class="but_block4_mob" id="but_block5_1"><<< НАЗАД </button>
+                   </div>
+               </div>
+               <div class="call_block4_rigt_mob">
+                   <div class="call_block4_btn">
+                       <button class="but_block4_mob" id="but_block5_2"> ДАЛЕЕ >>   </button>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!--Блок 6 Итоги заказа-->
+       <div class="call_block_itog_mob">
+
+           <div class="call_block_itog_content">
+               <div class="call_block_itog_titel">
+                   <p>ИТОГОВАЯ ЦЕНА ЗА <span id="num" class="num">1</span> ШТ.</p>
+               </div>
+               <div class="call_block_itog_text">
+                   <p> <img  src="img/kav.png"   alt="canva">Размеры (ШхB) : <span id="rasmer" class="num">500mm x 1500мм</span> </p>
+                   <p><img  src="img/kav.png"   alt="canva">Полотно : <span id="typepol" class="num"> Антикошка</span> </p>
+                   <p><img  src="img/kav.png"   alt="canva">Цвет рамки: <span id="colorpol" class="num"> Белый</span> </p>
+                   <p><img  src="img/kav.png"   alt="canva">Крепёж: <span id="devpol" class="num">  Z-образный металический</span> </p>
+                   <p>Цена изделия: <span id="zena" class="num">1000</span> руб </p>
+               </div>
+               <div class="call_block_itog_text2">
+                   <p class="itog_titel">Доп услуги</p>
+                   <p>Доставка: <span id="dostavka" class="num">0р.</span> </p>
+                   <p>Монтаж: <span id="montag" class="num">0р.</span> </p>
+                   <p>Самовывоз: <span id="samo" class="num">0р.</span> </p>
+               </div>
+               <div class="call_block_itog_zena">
+                   <span id="itogzena" class="num">1250 руб.</span>
+               </div>
+
+           </div>
+
+
+              <div class="call_block_itog">
+
+
+
+                 <form id="form2m" action="" method="post">
+
+                     <div class="form_sp_mob">
+                         <p>ИТОГОВАЯ ЦЕНА ЗА <span id="num_mailm" name="num_mail" class="num">1</span> ШТ.</p>
+                         <p> Размеры (ШхB) : <span id="rasmer_mailm" name="rasmer_mail"   class="num">500mm x 1500мм</span> </p>
+                         <p>Полотно : <span id="typepol_mailm" name="typepol_mail"  class="num"> Антикошка</span> </p>
+                         <p>Цвет рамки: <span id="colorpol_mailm" name="colorpol_mail"  class="num"> Белый</span> </p>
+                         <p>Крепёж: <span id="devpol_mailm" name="devpol_mail" class="num">  Z-образный металический</span> </p>
+                         <p>Цена изделия: <span id="zena_mailm" name="zena_mail" class="num">1000</span> руб </p>
+                         <p class="itog_titel">Доп услуги</p>
+                         <p>Доставка: <span id="dostavka_mailm" name="dostavka_mail"  class="num">0р.</span> </p>
+                         <p>Монтаж: <span id="montag_mailm" name="montag_mail" class="num">0р.</span> </p>
+                         <p>Самовывоз: <span id="samo_mailm" name="samo_mail"  class="num">0р.</span> </p>
+                         <span id="itogzena_mailm"  name="itogzena_mail" class="num">1250 руб.</span>
+
+
+                     </div>
+
+
+
+
+                  <div class="first2">
+                     <input type="text" name="name2" id="name2" placeholder="Ваше имя"  size="30" required />
+                  </div>
+                     <div class="first2">
+                         <input type="text" name="tel2" id="tel2" placeholder="+7 (___) ___-__-__"  size="30" required />
+                     </div>
+                </form>
+              </div>
+
+
+       <div class="call_block4_im_mob">
+           <div class="call_block4_left_mob">
+               <div class="call_block4_btn">
+                   <button class="but_block6_mob" id="but_block6_1">ИЗМЕНИТЬ </button>
+               </div>
+           </div>
+           <div class="call_block4_rigt_mob">
+               <div class="call_block4_btn">
+                   <button class="but_block6_mob" id="but_block6_2">ОФОРМИТЬ ЗАКАЗ   </button>
+               </div>
+           </div>
+       </div>
+       <div class="call_block_itog_text3">
+           <p>Нажимая кнопку «Оформить заказ», вы соглашаетесь<br>
+               с условиями публичной офферты, а также на <br>
+               обработку персональных данных в соотвествии с<br>
+               условиями <a href="https://okna-fabricant.ru/polzovatelskoe-soglashenie/" target="_blank">пользовательского соглашения</a></p>
+       </div>
+
+
+
+       </div>
+
+       <!--Блок 7 Итоги QR-->
+       <div class="call_block_QR_mob">
+
+           <div class="call_block_QR_content">
+               <div class="call_QR_block1">
+
+                      <img  src="img/date.png"   alt="canva"><p> <span> Для телефонов:</span> скачайте QR-код на телефон и оплатите через Сбербанк онлайн
+                    </p>
+                </div>
+
+               <div class="call_QR_img">
+
+                   <img  src="img/qr.png"   alt="canva">
+               </div>
+
+               <div class="call_QR_block1">
+
+                   <img  src="img/whatsapp.png"   alt="canva"><p> После оплаты, отправьте <br>
+                   чек-оплаты на наш Whatsapp 8(937) <br>
+                   823-83-83 для подтверждения <br>
+                   оплаты. </p>
+               </div>
+
+
+
+           </div>
+
+
+
+
+
+
+
+
+       </div>
+
+       <!--Блок 8 MAP-->
+       <div class="call_block_MAP_mob">
+
+           <div class="call_block_map_content">
+
+               <div class="block_radio">
+                   <input id="radio-map1" type="radio" name="radio_map" value="1" checked>
+                   <label for="radio-map1"></label>
+                   <span>Введите адрес получения заказа</span>
+               </div>
+
+               <!--<p>г. Астрахань</p>-->
+
+               <input type="text" class="adres2"  id="adres2" placeholder="улица, дом, корпус квартира"  size="300" required />
+
+
+               <div class="block_radio">
+                   <input id="radio-map2" type="radio" name="radio_map" value="2" >
+                   <label for="radio-map2"></label>
+                   <span>Выбрать место на карте</span>
+               </div>
+
+               <div class="call_block_map">
+                   <!--<input type="text" id="suggest">-->
+                   <div id="mapmob"></div>
+
+                   <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&amp;width=320&amp;height=400&amp;lang=ru_RU&amp;scroll=true;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9"></script>-->
+                   <!--&lt;!&ndash;<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A650c1fa79c79bb74a7e8d2ea560435d52ad7eea9b0852a3aa1b44afb7332f589&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true;apikey=d11eb0d2-ee7e-431c-a360-a7b23b8ebdd9"></script>&ndash;&gt;-->
+                   <script type="text/javascript">
+                      // alert(333);
+                       ymaps.ready(init);
+                       var townOtkyda = 'Астрахань, 1й проезд Рождественского, 1А';
+
+                       function init() {
+//                           var city = 'Астрахань';
+//                           var address = new ymaps.SuggestView(
+//                                   'suggest', {
+//                                       provider: {
+//                                           suggest: (function(request, options) {
+//
+//                                               return ymaps.suggest(city + ", " + request)
+//                                           })
+//                                       }}
+//                           )
+                     //  }
+                           // Стоимость за километр.
+                           var DELIVERY_TARIFF = 40.726,
+                           // Минимальная стоимость.
+                                   MINIMUM_COST = 0,
+                                   myMap = new ymaps.Map('mapmob', {
+                                       center: [46.359322, 48.024299],
+                                       zoom: 14,
+                                       controls: ['searchControl']
+                                   }),
+
+                           // Создадим панель маршрутизации.
+                                   routePanelControl = new ymaps.control.RoutePanel({
+                                       options: {
+                                           // Добавим заголовок панели.
+                                           showHeader: true,
+                                           title: 'Указать куда',
+                                           noSuggestPanel:false
+                                       }
+                                   }),
+                                   zoomControl = new ymaps.control.ZoomControl({
+                                       options: {
+                                           size: 'small',
+                                           float: 'none',
+                                           position: {
+                                               bottom: 145,
+                                               right: 10
+                                           }
+                                       }
+                                   });
+                           // Пользователь сможет построить только автомобильный маршрут.
+                           routePanelControl.routePanel.options.set({
+                               types: {auto: true}
+                           });
+
+                           // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
+                           routePanelControl.routePanel.state.set({
+                               fromEnabled: false,
+                               from: townOtkyda,
+                               noSuggestPanel:false
+                               // from: 'Астрахань, 1й проезд Рождественского, 1А'
+//                      from: '46.36663075, 48.04395423'
+
+                           });
+
+                           myMap.controls.add(routePanelControl).add(zoomControl);
+
+                           // Получим ссылку на маршрут.
+                           routePanelControl.routePanel.getRouteAsync().then(function (route) {
+
+                               // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+                               route.model.setParams({results: 1}, true);
+
+                               // Повесим обработчик на событие построения маршрута.
+                               route.model.events.add('requestsuccess', function () {
+
+                                   var activeRoute = route.getActiveRoute();
+                                   if (activeRoute) {
+                                       // Получим протяженность маршрута.
+                                       var length = route.getActiveRoute().properties.get("distance"),
+                                       // Вычислим стоимость доставки.
+                                               price = calculate(Math.round(length.value / 1000)),
+                                       // Создадим макет содержимого балуна маршрута.
+                                               balloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                                                       '<span>Расстояние: ' + length.text + '.</span><br/>' +
+                                                       '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
+                                       //alert(length)
+                                       //alert(price)
+                                       priceV=price;
+                                       $("#dostavka").text(priceV);
+                                       var itogzena=ZsetkaVuv*1+priceV*1;
+                                      // alert(ZsetkaVuv)
+                                      // alert(priceV)
+                                       $('#itogzena').text(itogzena);
+                                       $('#itogzena_mailm').text(itogzena);
+                                       // var kudav=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value;
+                                       // document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value='sssss'
+                                       // alert(kudav);
+                                       // Зададим этот макет для содержимого балуна.
+                                       route.options.set('routeBalloonContentLayout', balloonContentLayout);
+                                       // Откроем балун.
+                                       activeRoute.balloon.open();
+                                   }
+                               });
+
+                           });
+                           // Функция, вычисляющая стоимость доставки.
+                           function calculate(routeLength) {
+                               return Math.max(routeLength * DELIVERY_TARIFF, MINIMUM_COST);
+                           }
+                       }
+
+                   </script>
+
+               </div>
+
+
+
+
+              <!--<span id="mapadr" class="mapadr">г. Астрахань ул.Кирова 22</span>-->
+
+               <div class="call_block8_btn">
+               <button class="but_block8_mob" id="but_block8_1"> </button>
+
+
+               <div class="call_block4_left_mob">
+                   <div class="call_block4_btn">
+                       <button class="but_block4_mob" id="but_block8_2"><<< НАЗАД </button>
+                   </div>
+               </div>
+               </div>
+
+
+           </div>
+
+
+
+
+
+
+
+
+
+
+       </div>
+
+
+
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script src="js/jquery.min.js"></script>
+       <!--<script src="js/bootstrap.min.js"></script>-->
+       <script src="js/calc.js"></script>
+       <!--<script src="js/dm-modal.js"></script>-->
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

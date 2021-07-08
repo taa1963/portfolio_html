@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор 1С</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор 1С">
+
+    <!--<link href="cssnew/modal-contact.css" rel="stylesheet">-->
+    <link href="cssnew/Calc_style.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery00.js"></script>
+    <!--<script src="js/dm-modal.js"></script>-->
+    <script src="js/scriptsCalc.js"></script>
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+           <!----------Начало блока калькулятора-------->
+
+         <div class="calculator">
+
+
+             <!----------Начало блока ввода параметров-------->
+           <div class="calc_block_param" id="calc_block_param">
+               <h1>Калькулятор 1С</h1>
+
+               <div class="calc_block_text"  >
+                  <p>Выберите тип бизнеса</p>
+
+                   <select required="" class="typebisnes" id="typebisnes">
+                       <option value="0" data-index="0"> Выберите тип услуги</option>
+                       <option value="10000" data-index="1">Услуги (Бухгалтерия предприятия)</option>
+                       <option value="30000" data-index="2">Оптовая торговля (Управление торговлей)</option>
+                       <option value="60000" data-index="3">Производство сборное (Комплексная автоматизация)</option>
+                       <option value="100000" data-index="4">Производство на крупном предприятии/завод (Комплексная автоматизация)</option>
+                       <option value="1" data-index="5">Другое</option>
+                   </select>
+               </div>
+
+              <div class="calc_block_text"  >
+                  <p>Планируемое количество пользователей 1С </p>
+
+                       <div class="calc_block_text_inp"  >
+
+                           <input class="callclerk" id="callclerk" type="range" min="1" max="10000" step="1" value="1" oninput="document.getElementById('clerk').value=this.value">
+
+                           <input tupe="text" readonly class="clerk" id="clerk" value="1">
+                       </div>
+
+                  </div>
+
+
+               <div class="calc_block_text"  >
+                   <p>Kоличество филиалов в компании </p>
+
+                   <div class="calc_block_text_inp"  >
+
+                       <input class="callclerk" id="callfill" type="range" min="1" max="100" step="1" value="1" oninput="document.getElementById('fill').value=this.value">
+
+                       <input tupe="text" readonly class="clerk" id="fill" value="1">
+                   </div>
+
+               </div>
+
+
+
+
+
+
+           </div>
+               <!----------Конец блока ввода парамтетров-------->
+
+               <!----------Начало вывода расчитанных параметров-------->
+           <div class="calc_block_itog"  id="calc_block_itog"  >
+               <div class="line"></div>
+
+               <div class="calc_block_itog_text">
+                     <h1>Вы выбрали</h1>
+
+                   <p>Тип бизнеса: <span id="typesp"></span></p>
+                   <p>Ориентировочная цена: <span id="Zenap"></span> руб.</p>
+
+               </div>
+
+
+                 <p>Для отправки заявки на заказ заполните данные и нажмите "Отправить"</p>
+               <form id="form2" class="form1" action="send2.php" method="post" >
+                   <div class="first1">
+                       <p> <input type="text" class="form_inp"  name="typeb" id="typeb" readonly value="" size="300" required />
+                       </p>
+                   </div>
+                   <div class="first">
+                       <p> <input type="text" class="form_inp"  name="name2" id="name2" placeholder="Ваше имя*"  size="30" required />
+                       </p>
+                   </div>
+
+                   <div class="first">
+                       <p> <input type="text" class="form_inp"  name="email2" id="email2" placeholder="Ваш e-mail*"  size="30" required />
+                       </p>
+                   </div>
+                   <div class="first">
+                       <p> <input type="text" class="form_inp" name="telefon2" id="telefon2" placeholder="Ваш номер телефона*"  size="30" required />
+                       </p>
+                   </div>
+
+                   <div class="form_button1" id="form_button2">
+                       <button class="submit" name="insert"  id="btn2" >ОТПРАВИТЬ</button>
+                   </div>
+               </form>
+
+
+               <div class="calc_block_itog_bloc1"  >
+                   <img class="itogimg1" src="img/bugaltet.png" alt="bug">
+                   <img class="itogimg2" src="img/1.gif" alt="bug">
+               </div>
+
+               <div class="calc_block_itog_bloc2"  >
+                   <img class="itogimg1" src="img/torg.png" alt="bug">
+                   <img class="itogimg2" src="img/2.gif" alt="bug">
+               </div>
+
+               <div class="calc_block_itog_bloc3"  >
+                   <img class="itogimg1" src="img/kompleks.png" alt="bug">
+                   <img class="itogimg2" src="img/3.gif" alt="bug">
+               </div>
+
+
+
+
+
+
+           </div>
+
+
+
+               <!----------Конец вывода расчитанных параметров-------->
+
+       </div>
+           <!----------Конец блока калькулятора-------->
+
+
+
+
+
+
+
+
+
+
+
+   <div id="popup_success" class="popup_success">
+
+       <p>
+           Оформить заказ! <br>
+
+
+       </p>
+       <br>
+       <form id="form1" class="form1" action="send.php" method="post" >
+       <div class="first">
+           <p> <input type="text" class="form_inp"  name="name" id="name" placeholder="Ваше имя*"  size="30" required />
+           </p>
+       </div>
+
+       <div class="first">
+           <p> <input type="text" class="form_inp"  name="email" id="email" placeholder="Ваш e-mail*"  size="30" required />
+           </p>
+       </div>
+       <div class="first">
+           <p> <input type="text" class="form_inp" name="telefon" id="telefon" placeholder="Ваш номер телефона*"  size="30" required />
+           </p>
+       </div>
+
+       <div class="form_button1" id="form_button1">
+           <button class="submit" name="insert"  id="btn" >ОТПРАВИТЬ</button>
+       </div>
+       </form>
+
+       <!--<a href="calc.html"><span class="submit">ЗАКРЫТЬ ОКНО</span> </a>-->
+
+   </div>
+
+
+
+
+
+
+<!--<script src="js/jquery.min.js"></script>-->
+   <!--<script src="js/jquery00.js"></script>-->
+   <!--<script src="js/dm-modal.js"></script>-->
+<!--<script src="js/scriptsCalc.js"></script>-->
+
+
+
+</body>
+</html>

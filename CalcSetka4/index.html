@@ -106,7 +106,7 @@
            <div class="call_block2_1">
 
              <div class="call_block2_1_left">
-               <div class="block2_color">
+               <div class="block2_color_left">
                </div>
 
                <div class="block_radio">
@@ -117,18 +117,24 @@
              </div>
 
                <div class="call_block2_1_richt">
-                   <!--<img src="img/standart.png"   alt="standart">-->
-                   <p>Укажите код цвета по RAL</p>
+                   <div class="block2_color">
+                   </div>
 
-                   <span class="ral">RAL <input type="text" id="ralc" class="ralc" value="1000">
+                   <div class="call_block2_1_richt_2">
+                   <!--<img src="img/standart.png"   alt="standart">-->
+                       <p>Укажите код цвета по RAL</p>
+
+                       <span class="ral">RAL <input type="text" id="ralc" class="ralc" value="1000">
 
                        <a id="raldev">Таблица RAL</a></span>
                        <!--<a href="https://gost-din.ru/information/ral-tcveta-tablitca.html" target="_blank">Таблица RAL</a></span>-->
 
-                   <div class="block_radio">
-                       <input id="radio-31" type="radio" name="radio_color" value="Другой цвет">
-                       <label for="radio-31">Другой цвет</label>
-                   </div>
+                       <div class="block_radio">
+                          <input id="radio-31" type="radio" name="radio_color" value="Другой цвет">
+                          <label for="radio-31">Другой цвет</label>
+                        </div>
+
+               </div>
 
                </div>
 
@@ -228,7 +234,7 @@
            </div>
 
            <div class="call_block3_itog">
-               <p>Ширина:<span id="Lokna"> 500 мм</span> Высота:<span id="Hokna"> 1000 мм</span> </p>
+               <p>Ширина:<span id="Lokna"> 500</span> мм Высота:<span id="Hokna"> 1000 </span> мм </p>
            </div>
 
            <div class="call_block3_img_inp">
@@ -629,8 +635,6 @@
 
                    function init() {
 
-
-
                    // Стоимость за километр.
                    var DELIVERY_TARIFF = 40.726,
                    // Минимальная стоимость.
@@ -647,26 +651,82 @@
 
                    myMap = new ymaps.Map('map', {
                        center: [46.359322, 48.024299],
-                   zoom: 14,
-                       //kind:'Астрахань',
-                       kind:locality,
-                       controls: ['geolocationControl'],
-                      // controls: [],
-                      // boundedBy:[[46.468159, 47.883314], [46.347609, 48.030168]],
-//                       boundedBy: myMap.getBounds(),
-//                       strictBounds: true
-              //         noPopup:true,
+                          zoom: 14,
+                        controls: ['geolocationControl']
+                   }),
+
+                       // Создадим панель маршрутизации.
+                               routePanelControl = new ymaps.control.RoutePanel({
+                                   options: {
+                                       // Добавим заголовок панели.
+                                       maxWidth: '380px',
+                                       showHeader: true,
+                                       title: 'Указать куда',
+                                       noSuggestPanel:false
+                                   }
+                               }),
+                               zoomControl = new ymaps.control.ZoomControl({
+                                   options: {
+                                       size: 'small',
+                                       float: 'none',
+                                       position: {
+                                           bottom: 145,
+                                           right: 10
+                                       }
+                                   }
+                               });
+                       // Пользователь сможет построить только автомобильный маршрут.
+                       routePanelControl.routePanel.options.set({
+                           types: {auto: true}
+                       });
+
+                       // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
+                       routePanelControl.routePanel.state.set({
+                           fromEnabled: false,
+                           from: townOtkyda,
+                           noSuggestPanel:false
+                           // from: 'Астрахань, 1й проезд Рождественского, 1А'
+//                      from: '46.36663075, 48.04395423'
+
+                       });
+
+                       myMap.controls.add(routePanelControl).add(zoomControl);
+
+                       // Получим ссылку на маршрут.
+                       routePanelControl.routePanel.getRouteAsync().then(function (route) {
+
+                           // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+                           route.model.setParams({results: 1}, true);
 
 
-                      // ymaps.geocode([55.753994, 37.622093], {kind: ‘district’, boundedBy: [[null,null],[null,null]]});
+
+
+
+
+
+
+//
+//
+//
+//                       //kind:'Астрахань',
+//                       kind:locality,
+//                       controls: ['geolocationControl'],
+//                      // controls: [],
+//                       boundedBy:[[46.468159, 47.883314], [46.347609, 48.030168]],
+////                       boundedBy: myMap.getBounds(),
+////                       strictBounds: true
+//                       noPopup:true,
+//
+//
+//                      // ymaps.geocode([55.753994, 37.622093], {kind: ‘district’, boundedBy: [[null,null],[null,null]]});
 
 //                       ymaps.util.bounds.getCenterAndZoom(
 //                           [[55.7, 37.6], [55.8, 37.7]],
 //                           [$mapElement.width(), $mapElement.height()]
 //                   )
-                //       strictBounds:true,
-               //        noSuggestPanel:true
-                      //bounded:([[60,-40], [20,60]])
+//                       strictBounds:true,
+//                       noSuggestPanel:true
+//                      //bounded:([[60,-40], [20,60]])
 
                       /* searchControlProvider: 'yandex#search',
                      setBounds:([[60,-40], [20,60]], {
@@ -674,165 +734,165 @@
                            })*/
 
                   // controls: ['searchControl']
-                   }),
-//
+//                   }),
+////
 
-                   // Создадим панель маршрутизации.
-                   routePanelControl = new ymaps.control.RoutePanel({
-                   options: {
-                       maxWidth: '380px',
-                       display:'none',
-                       visibility: 'collapse',
-                      float: 'left',
-                   //    noSuggestPanel:true,
-                   //    reverseGeocoding: false,
-                  //     noPopup:true,
+//                   // Создадим панель маршрутизации.
+//                   routePanelControl = new ymaps.control.RoutePanel({
+//                   options: {
+//                       maxWidth: '380px',
+//                       display:'none',
+//                       visibility: 'collapse',
+//                      float: 'left',
+//                       noSuggestPanel:true,
+//                       reverseGeocoding: false,
+//                       noPopup:true,
 
                    // Добавим заголовок панели.
-                   showHeader: true,
-                      title: 'Указать куда'
-                   },
-                   parameters:{
-                       noPopup:true
-                   }
-                   }),
-                   zoomControl = new ymaps.control.ZoomControl({
-                   options: {
-                   size: 'small',
-                   float: 'none',
-                   position: {
-                   bottom: 145,
-                   right: 10
-                   }
-                   }
-                   });
+//                   showHeader: true,
+//                      title: 'Указать куда'
+//                   },
+//                   parameters:{
+//                       noPopup:true
+//                   }
+//                   }),
+//                   zoomControl = new ymaps.control.ZoomControl({
+//                   options: {
+//                   size: 'small',
+//                   float: 'none',
+//                   position: {
+//                   bottom: 145,
+//                   right: 10
+//                   }
+//                   }
+//                   });
                       // ymaps.geoQuery(ymaps.geocode('Санкт-Петербург'));
                       // console.log(ymaps.control.ZoomControl);
                    // Пользователь сможет построить только автомобильный маршрут.
-                   routePanelControl.routePanel.options.set({
-                   types: {auto: true}
-                   });
-
-                   // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
-                  routePanelControl.routePanel.state.set({
-                   fromEnabled: false,
-                      from: townOtkyda
-                   //   boundedBy:[[46.468159, 47.883314], [46.347609, 48.030168]],
-                     // boundedBy: myMap.getBounds(),
-                   //   strictBounds: true,
-                   //   noSuggestPanel:true,
-                   //   noPopup:true,
-                   //   display:'none',
-                   //   visibility: 'collapse',
-                   //   toEnabled: 'focus'
-
-
-                   });
-                       var adr=routePanelControl.routePanel.state.get('to');
-                      // console.log(adr);
-                       adr=String(adr);
-                 var tow=routePanelControl.routePanel.state.get('to');
-
-                     var topar=document.getElementsByClassName('ymaps-2-1-78-route-panel-input ymaps-2-1-78-route-panel-input_empty');
-                       $(topar).css("color", "red");
-                       //console.log(topar)
-                      // $(".ymaps-2-1-78-route-panel-input__icon_last").css("color", "red");
-
-                    //   console.log(topar)
-                     // var ww= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
-                      // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
-                     //  console.log(ww)
-
-                       var ww4=$('.ymaps-2-1-78-route-panel-input__input:eq(1)');
-                      // $("td:eq(2)")
-                     //  console.log(ww4)
-
-
-                       var ww5=$('.ymaps-2-1-78-route-panel-input__input');
-                       var N=ww5.length;
-                      // console.log(N)
-                       for(var i=0; i < ww5.length; i++){
-                           var row = ww5[i];
-                           //additionally, you can use it again in a jquery selector
-                           $(row).css("color", "red");
-                           //alert('red')
-                       }
-                      // ww5[1].css("color", "red");
-                       $(ww4).value='2222';
-
-                       $(ww4).addClass('www4');
-                       $(".ymaps-2-1-78-route-panel-input__input:eq(1)").css("color", "red");
-                       $(".ymaps-2-1-78-route-panel-input__input:eq(1)").value='33333'
-                       $(".ymaps-2-1-78-route-panel-input__input").css("color", "red");
-                       $(ww4).css("color", "red");
-
-
-                 //  :eq(2)
-                     //  var ww1=ww[1];
-                    //   console.log(ww1)
-
-                 ww4.on('input', function() {
-                     alert(1);
-                     adr=null;
-                           routePanelControl.routePanel.state.set({to:adr });
-                     // routePanelControl.routePanel.state.get('to')=adr;
-//                     var ww= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
-//                     // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
-//                     console.log(ww)
-
-                 });
-
-                       var ww= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
-                       // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
-                    //   console.log(ww)
-                       //var N1= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').length;
-                       var N1= ww.length;
-                       // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
-                    //   console.log(N1)
-
-
-
-
-
-                      // var myGeocoder = ymaps.geocode("Астрахань");
-                   myMap.controls.add(routePanelControl).add(zoomControl);
-
-//                       var adr=$('div[class^="ymaps-"]').value;
-//                       console.log(adr);
-
-//                       var adr=  $('div[class^="ymaps-"]').filter(()=>{
-//                           return this.class.match(/\d-route-content__taxi-link-text/);
-//                   }).on('click', ()=>{
+//                   routePanelControl.routePanel.options.set({
+//                   types: {auto: true}
+//                   });
+//
+//                   // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
+//                  routePanelControl.routePanel.state.set({
+//                   fromEnabled: false,
+//                      from: townOtkyda,
+//                     // boundedBy:[[46.468159, 47.883314], [46.347609, 48.030168]],
+//                     // boundedBy: myMap.getBounds(),
+//                      strictBounds: true,
+//                      noSuggestPanel:true,
+//                      noPopup:true,
+//                      display:'none',
+//                      visibility: 'collapse',
+//                      toEnabled: 'focus'
+//
+//
+//                   });
+//                       var adr=routePanelControl.routePanel.state.get('to');
+//                      // console.log(adr);
+//                       adr=String(adr);
+//                 var tow=routePanelControl.routePanel.state.get('to');
+//
+//                     var topar=document.getElementsByClassName('ymaps-2-1-78-route-panel-input ymaps-2-1-78-route-panel-input_empty');
+//                       $(topar).css("color", "red");
+//                       //console.log(topar)
+//                      // $(".ymaps-2-1-78-route-panel-input__icon_last").css("color", "red");
+//
+//                    //   console.log(topar)
+//                     // var ww= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
+//                      // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
+//                     //  console.log(ww)
+//
+//                       var ww4=$('.ymaps-2-1-78-route-panel-input__input:eq(1)');
+//                      // $("td:eq(2)")
+//                     //  console.log(ww4)
+//
+//
+//                       var ww5=$('.ymaps-2-1-78-route-panel-input__input');
+//                       var N=ww5.length;
+//                      // console.log(N)
+//                       for(var i=0; i < ww5.length; i++){
+//                           var row = ww5[i];
+//                           //additionally, you can use it again in a jquery selector
+//                           $(row).css("color", "red");
+//                           //alert('red')
+//                       }
+//                      // ww5[1].css("color", "red");
+//                       $(ww4).value='2222';
+//
+//                       $(ww4).addClass('www4');
+//                       $(".ymaps-2-1-78-route-panel-input__input:eq(1)").css("color", "red");
+//                       $(".ymaps-2-1-78-route-panel-input__input:eq(1)").value='33333'
+//                       $(".ymaps-2-1-78-route-panel-input__input").css("color", "red");
+//                       $(ww4).css("color", "red");
+//
+//
+//                 //  :eq(2)
+//                     //  var ww1=ww[1];
+//                    //   console.log(ww1)
+//
+//                 ww4.on('input', function() {
+//                     alert(1);
+//                     adr=null;
+//                           routePanelControl.routePanel.state.set({to:adr });
+//                     // routePanelControl.routePanel.state.get('to')=adr;
+////                     var ww= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
+////                     // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
+////                     console.log(ww)
 //
 //                 });
-                       var ww5=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
-                      // console.log(ww5);
-                       var ww6=$('input.ymaps-2-1-78-route-panel-input__input');
-                      /// console.log(ww6);
-                       var N=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').length;
-
-                       //var N=ww5.length;
-                      // console.log(N)
-                       for(var i=0; i < ww5.length; i++){
-                           var row = ww5[i];
-                           //additionally, you can use it again in a jquery selector
-                           $(row).css("color", "red");
-                           //alert('red')
-                       }
-
-
-
-                   // Получим ссылку на маршрут.
-                   routePanelControl.routePanel.getRouteAsync().then(function (route) {
-                  //    console.log( route.model);
-                       //var adr=$('div[class^="ymaps-"]').value;
-
-//                       var adr=$('.ymaps-2-1-78-route-panel-input__input').value;
-//                       console.log(adr);
-
-                   // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
-                   route.model.setParams({ boundedBy:[[46.468159, 47.883314], [46.347609, 48.030168]],strictBounds: false,results: 1}, true);
-                 //   route.model.setParams({results: 1}, true);
+//
+//                       var ww= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
+//                       // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
+//                    //   console.log(ww)
+//                       //var N1= document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').length;
+//                       var N1= ww.length;
+//                       // var ww3=$('.ymaps-2-1-78-route-panel-input__input').get(1);
+//                    //   console.log(N1)
+//
+//
+//
+//
+//
+//                      // var myGeocoder = ymaps.geocode("Астрахань");
+//                   myMap.controls.add(routePanelControl).add(zoomControl);
+//
+////                       var adr=$('div[class^="ymaps-"]').value;
+////                       console.log(adr);
+//
+////                       var adr=  $('div[class^="ymaps-"]').filter(()=>{
+////                           return this.class.match(/\d-route-content__taxi-link-text/);
+////                   }).on('click', ()=>{
+////
+////                 });
+//                       var ww5=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input');
+//                      // console.log(ww5);
+//                       var ww6=$('input.ymaps-2-1-78-route-panel-input__input');
+//                      /// console.log(ww6);
+//                       var N=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').length;
+//
+//                       //var N=ww5.length;
+//                      // console.log(N)
+//                       for(var i=0; i < ww5.length; i++){
+//                           var row = ww5[i];
+//                           //additionally, you can use it again in a jquery selector
+//                           $(row).css("color", "red");
+//                           //alert('red')
+//                       }
+//
+//
+//
+//                   // Получим ссылку на маршрут.
+//                   routePanelControl.routePanel.getRouteAsync().then(function (route) {
+//                  //    console.log( route.model);
+//                       //var adr=$('div[class^="ymaps-"]').value;
+//
+////                       var adr=$('.ymaps-2-1-78-route-panel-input__input').value;
+////                       console.log(adr);
+//
+//                   // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
+//                   route.model.setParams({strictBounds: false,results: 1}, true);
+//                 //   route.model.setParams({results: 1}, true);
 
                    // Повесим обработчик на событие построения маршрута.
                    route.model.events.add('requestsuccess', function () {
@@ -879,10 +939,11 @@
                    var length = route.getActiveRoute().properties.get("distance"),
                    // Вычислим стоимость доставки.
                    price = calculate(Math.round(length.value / 1000)),
+                           price=price.toFixed(2);
                    // Создадим макет содержимого балуна маршрута.
                    balloonContentLayout = ymaps.templateLayoutFactory.createClass(
                    '<span>Расстояние: ' + length.text + '.</span><br/>' +
-                   '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
+                   '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' руб.</span>');
                        //alert(length)
                        //alert(price)
                        priceV=price;
@@ -1014,7 +1075,7 @@
            <div class="call_block2_1">
 
                <div class="call_block2_1_left">
-                   <div class="block2_colorm">
+                   <div class="block2_l_colorm">
                    </div>
 
                    <div class="block_radio">
@@ -1025,6 +1086,10 @@
                </div>
 
                <div class="call_block2_1_richt">
+
+                   <div class="block2_colorm">
+                   </div>
+
                    <div class="call_block2_1_richtm">
                    <!--<img src="img/standart.png"   alt="standart">-->
                    <p>Напишите название или укажите код цвета по RAL</p>
@@ -1135,7 +1200,7 @@
            </div>
 
            <div class="call_block3_itog">
-               <p>Ширина:<span id="Loknam">500 </span> Высота:<span id="Hoknam">1000 </span> </p>
+               <p>Ширина:<span id="Loknam">500 </span> мм Высота:<span id="Hoknam">1000 </span> мм</p>
            </div>
 
 
@@ -1618,10 +1683,11 @@
                                        var length = route.getActiveRoute().properties.get("distance"),
                                        // Вычислим стоимость доставки.
                                                price = calculate(Math.round(length.value / 1000)),
+                                               price=price.toFixed(2);
                                        // Создадим макет содержимого балуна маршрута.
                                                balloonContentLayout = ymaps.templateLayoutFactory.createClass(
                                                        '<span>Расстояние: ' + length.text + '.</span><br/>' +
-                                                       '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
+                                                       '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' руб.</span>');
                                        //alert(length)
                                        //alert(price)
                                        priceV=price;

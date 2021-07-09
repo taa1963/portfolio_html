@@ -110,6 +110,9 @@
     margin-right: 0;
     line-height: 18px;
     user-select: none;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
 }
 .block_radio label:before {
     content: "";
@@ -215,7 +218,7 @@
     margin-bottom: 30px;
 }
 
-.block2_color{
+.block2_color_left{
     display: block;
     width: 169px;
     height: 73px;
@@ -224,11 +227,39 @@
     background-color: #ffffff;
 }
 
+.block2_color{
+    display: none;
+    width: 169px;
+    height: 73px;
+    border: 1px solid #000000;
+    /*background-color: 1001;*/
+    background-color: #ffffff;
+    float: left;
+}
+
 .call_block2_1_left{
     display: block;
     width: 50%;
     float: left;
 }
+
+.block2_color_active{
+    display: block;
+}
+
+
+.call_block2_1_richt_2{
+    display: block;
+   /*// width: 169px;*/
+    /*height: 73px;*/
+    /*border: 1px solid #000000;*/
+    /*background-color: 1001;*/
+    /*background-color: #ffffff;*/
+    float: left;
+    margin-left: 10px;
+}
+
+
 
 .call_block2_1_richt{
     display: block;
@@ -1406,6 +1437,24 @@ input[type=range]::-webkit-slider-runnable-track {
         margin-bottom: 30px;
     }
 
+    .call_block2_1_left{
+        display: block;
+        width: 80%;
+       position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        float: none;
+        padding-bottom: 20px;
+    }
+
+    .call_block2_1_richt{
+        display: block;
+        width: 80%;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        float: none;
+    }
 
     .numberm{
         color: #FF6511;
@@ -1491,14 +1540,33 @@ input[type=range]::-webkit-slider-runnable-track {
         display: block;
         width: 100%;
     }
-    .block2_colorm {
+    .block2_l_colorm {
         display: block;
         width: 169px;
         height: 169px;
         border: 1px solid #000000;
         /*background-color: 1001;*/
         background-color: #ffffff;
+
     }
+
+
+    .block2_colorm {
+        display: none;
+        width: 169px;
+        height: 169px;
+        border: 1px solid #000000;
+        /*background-color: 1001;*/
+        background-color: #ffffff;
+        margin-bottom: 5px;
+    }
+
+    .block2_colorm_active {
+        display: block;
+
+    }
+
+
     .call_block2_1_richtm {
         display: block;
         width: 169px;

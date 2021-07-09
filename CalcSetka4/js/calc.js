@@ -300,7 +300,11 @@ $(document).ready(function() {
         var itogzena_dev=ZsetkaVuv*1+priceV*1;
        // alert(ZsetkaVuv);
        // alert(priceV),
-            $('#itogzena_dev').text(itogzena_dev);
+        itogzena_dev=itogzena_dev.toFixed(2);
+        var itogzena_devv=itogzena_dev +' '+'руб' ;
+
+        $('#itogzena_dev').text(itogzena_devv);
+         //   $('#itogzena_dev').text(itogzena_dev);
         $('#itogzena_mail').text(itogzena_dev);
 
         var block = $(this).parents('.container');
@@ -329,92 +333,91 @@ $(document).ready(function() {
     $('#radio-21').click(function () {
         if (document.getElementById('radio-21').checked){
             $('.block2_color').css('background-color', '#ffffff');
+            $('.block2_color').removeClass('block2_color_active');
             colorvsp='Белый';
         }
     });
 
     $('#radio-31').click(function () {
+        $('.block2_color').addClass('block2_color_active');
         color()
     });
 
 
     $('#ralc').keyup(function(e){
-        //alert(555)
-        color()
+         color()
 
     });
 
 
     function color(){
         var colorv=document.getElementById('ralc').value;
-       // alert(colorv)
         if (document.getElementById('radio-31').checked){
             colorv=+colorv;
-        //    alert(557)
-            switch (colorv) {
+             switch (colorv) {
                 case 1000:
                     $('.block2_color').css('background-color', '#CCC58F');
-                    colorvsp='Зелёно-бежевый';
+                    colorvsp='Зелёно-бежевый (1000)';
                     break;
                 case 1001:
                     $('.block2_color').css('background-color', '#D1BC8A');
-                    colorvsp='Бежевый';
+                    colorvsp='Бежевый (1001)';
                     break;
                 case 1002:
                     $('.block2_color').css('background-color', '#D2B773');
-                    colorvsp='Песочно-жёлтый';
+                    colorvsp='Песочно-жёлтый (1002)';
                     break;
                 case 1003:
                     $('.block2_color').css('background-color', '#F7BA0B');
-                    colorvsp='Сигнальный жёлтый';
+                    colorvsp='Сигнальный жёлтый (1003)';
                     break;
                 case 1004:
                     $('.block2_color').css('background-color', '#E2B007');
-                    colorvsp='Жёлто-золотой';
+                    colorvsp='Жёлто-золотой (1004)';
                     break;
                 case 1005:
                     $('.block2_color').css('background-color', '#C89F04');
-                    colorvsp='Медово-жёлтый';
+                    colorvsp='Медово-жёлтый (1005)';
                     break;
                 case 1006:
                     $('.block2_color').css('background-color', '#E1A100');
-                    colorvsp='Кукурузно-жёлтый';
+                    colorvsp='Кукурузно-жёлтый (1006)';
                     break;
                 case 1007:
                     $('.block2_color').css('background-color', '#E79C00');
-                    colorvsp='Нарциссово-жёлтый';
+                    colorvsp='Нарциссово-жёлтый (1007)';
                     break;
                 case 1011:
                     $('.block2_color').css('background-color', '#AF8A54');
-                    colorvsp='Коричнево-бежевый';
+                    colorvsp='Коричнево-бежевый (1011)';
                     break;
                 case 1012:
                     $('.block2_color').css('background-color', '#D9C022');
-                    colorvsp='Лимонно-жёлтый';
+                    colorvsp='Лимонно-жёлтый (1012)';
                     break;
                 case 1013:
                     $('.block2_color').css('background-color', '#E9E5CE');
-                    colorvsp='Жемчужно-белый';
+                    colorvsp='Жемчужно-белый (1012)';
                     break;
                 case 1014:
                     $('.block2_color').css('background-color', '#DED09F');
-                    colorvsp='Слоновая кость';
+                    colorvsp='Слоновая кость (1014) ';
                     break;
                 case 1015:
                     $('.block2_color').css('background-color', '#EADEBD');
-                    colorvsp='Светлая слоновая кость';
+                    colorvsp='Светлая слоновая кость (1015)';
                     break;
                 case 1016:
                     $('.block2_color').css('background-color', '#EAF044');
-                    colorvsp='Жёлтая сера';
+                    colorvsp='Жёлтая сера (1016)';
                     break;
                 case 1017:
                     $('.block2_color').css('background-color', '#F4B752');
-                    colorvsp='Шафраново-жёлтый';
+                    colorvsp='Шафраново-жёлтый (1017)';
                     break;
                 case 1018:
                     $('.block2_color').css('background-color', '#F3E03B');
-                    colorvsp='Цинково-жёлтый';
+                    colorvsp='Цинково-жёлтый (1018)';
                     break;
 
 
@@ -451,67 +454,67 @@ $(document).ready(function() {
         switch (colorvr) {
             case 1000:
                 $('.block2_color').css('background-color', '#CCC58F');
-                colorvsp='Зелёно-бежевый';
+                colorvsp='Зелёно-бежевый (1000)';
                 break;
             case 1001:
                 $('.block2_color').css('background-color', '#D1BC8A');
-                colorvsp='Бежевый';
+                colorvsp='Бежевый (1001)';
                 break;
             case 1002:
                 $('.block2_color').css('background-color', '#D2B773');
-                colorvsp='Песочно-жёлтый';
+                colorvsp='Песочно-жёлтый (1002)';
                 break;
             case 1003:
                 $('.block2_color').css('background-color', '#F7BA0B');
-                colorvsp='Сигнальный жёлтый';
+                colorvsp='Сигнальный жёлтый (1003)';
                 break;
             case 1004:
                 $('.block2_color').css('background-color', '#E2B007');
-                colorvsp='Жёлто-золотой';
+                colorvsp='Жёлто-золотой (1004)';
                 break;
             case 1005:
                 $('.block2_color').css('background-color', '#C89F04');
-                colorvsp='Медово-жёлтый';
+                colorvsp='Медово-жёлтый (1005)';
                 break;
             case 1006:
                 $('.block2_color').css('background-color', '#E1A100');
-                colorvsp='Кукурузно-жёлтый';
+                colorvsp='Кукурузно-жёлтый (1006)';
                 break;
             case 1007:
                 $('.block2_color').css('background-color', '#E79C00');
-                colorvsp='Нарциссово-жёлтый';
+                colorvsp='Нарциссово-жёлтый (1007)';
                 break;
             case 1011:
                 $('.block2_color').css('background-color', '#AF8A54');
-                colorvsp='Коричнево-бежевый';
+                colorvsp='Коричнево-бежевый (1011)';
                 break;
             case 1012:
                 $('.block2_color').css('background-color', '#D9C022');
-                colorvsp='Лимонно-жёлтый';
+                colorvsp='Лимонно-жёлтый (1012)';
                 break;
             case 1013:
                 $('.block2_color').css('background-color', '#E9E5CE');
-                colorvsp='Жемчужно-белый';
+                colorvsp='Жемчужно-белый (1013)';
                 break;
             case 1014:
                 $('.block2_color').css('background-color', '#DED09F');
-                colorvsp='Слоновая кость';
+                colorvsp='Слоновая кость (1014)';
                 break;
             case 1015:
                 $('.block2_color').css('background-color', '#EADEBD');
-                colorvsp='Светлая слоновая кость';
+                colorvsp='Светлая слоновая кость (1015)';
                 break;
             case 1016:
                 $('.block2_color').css('background-color', '#EAF044');
-                colorvsp='Жёлтая сера';
+                colorvsp='Жёлтая сера (1016)';
                 break;
             case 1017:
                 $('.block2_color').css('background-color', '#F4B752');
-                colorvsp='Шафраново-жёлтый';
+                colorvsp='Шафраново-жёлтый (1017)';
                 break;
             case 1018:
                 $('.block2_color').css('background-color', '#F3E03B');
-                colorvsp='Цинково-жёлтый';
+                colorvsp='Цинково-жёлтый (1018)';
                 break;
 
 
@@ -610,11 +613,14 @@ $(document).ready(function() {
     $('#radio-21m').click(function () {
         if (document.getElementById('radio-21m').checked){
             $('.block2_colorm').css('background-color', '#ffffff');
+            $('.block2_colorm').removeClass('block2_colorm_active');
             colorvsp='Белый';
         }
     });
 
     $('#radio-31m').click(function () {
+        $('.block2_colorm').addClass('block2_colorm_active');
+
         color_mob()
     });
 
@@ -632,67 +638,67 @@ $(document).ready(function() {
             switch (colorv) {
                 case 1000:
                     $('.block2_colorm').css('background-color', '#CCC58F');
-                    colorvsp='Зелёно-бежевый';
+                    colorvsp='Зелёно-бежевый (1000)';
                     break;
                 case 1001:
                     $('.block2_colorm').css('background-color', '#D1BC8A');
-                    colorvsp='Бежевый';
+                    colorvsp='Бежевый (1001)';
                     break;
                 case 1002:
                     $('.block2_colorm').css('background-color', '#D2B773');
-                    colorvsp='Песочно-жёлтый';
+                    colorvsp='Песочно-жёлтый (1002)';
                     break;
                 case 1003:
                     $('.block2_colorm').css('background-color', '#F7BA0B');
-                    colorvsp='Сигнальный жёлтый';
+                    colorvsp='Сигнальный жёлтый (1003)';
                     break;
                 case 1004:
                     $('.block2_colorm').css('background-color', '#E2B007');
-                    colorvsp='Жёлто-золотой';
+                    colorvsp='Жёлто-золотой (1004)';
                     break;
                 case 1005:
                     $('.block2_colorm').css('background-color', '#C89F04');
-                    colorvsp='Медово-жёлтый';
+                    colorvsp='Медово-жёлтый (1005)';
                     break;
                 case 1006:
                     $('.block2_colorm').css('background-color', '#E1A100');
-                    colorvsp='Кукурузно-жёлтый';
+                    colorvsp='Кукурузно-жёлтый (1006)';
                     break;
                 case 1007:
                     $('.block2_colorm').css('background-color', '#E79C00');
-                    colorvsp='Нарциссово-жёлтый';
+                    colorvsp='Нарциссово-жёлтый (1007)';
                     break;
                 case 1011:
                     $('.block2_colorm').css('background-color', '#AF8A54');
-                    colorvsp='Коричнево-бежевый';
+                    colorvsp='Коричнево-бежевый (1011)';
                     break;
                 case 1012:
                     $('.block2_colorm').css('background-color', '#D9C022');
-                    colorvsp='Лимонно-жёлтый';
+                    colorvsp='Лимонно-жёлтый (1012)';
                     break;
                 case 1013:
                     $('.block2_colorm').css('background-color', '#E9E5CE');
-                    colorvsp='Жемчужно-белый';
+                    colorvsp='Жемчужно-белый (1013)';
                     break;
                 case 1014:
                     $('.block2_colorm').css('background-color', '#DED09F');
-                    colorvsp='Слоновая кость';
+                    colorvsp='Слоновая кость (1014)';
                     break;
                 case 1015:
                     $('.block2_colorm').css('background-color', '#EADEBD');
-                    colorvsp='Светлая слоновая кость';
+                    colorvsp='Светлая слоновая кость (1015)';
                     break;
                 case 1016:
                     $('.block2_colorm').css('background-color', '#EAF044');
-                    colorvsp='Жёлтая сера';
+                    colorvsp='Жёлтая сера (1016)';
                     break;
                 case 1017:
                     $('.block2_colorm').css('background-color', '#F4B752');
-                    colorvsp='Шафраново-жёлтый';
+                    colorvsp='Шафраново-жёлтый (1017)';
                     break;
                 case 1018:
                     $('.block2_colorm').css('background-color', '#F3E03B');
-                    colorvsp='Цинково-жёлтый';
+                    colorvsp='Цинково-жёлтый (1018)';
                     break;
 
 
@@ -724,67 +730,67 @@ $(".colorralm").click(function (){
     switch (colorvr) {
         case 1000:
             $('.block2_colorm').css('background-color', '#CCC58F');
-            colorvsp='Зелёно-бежевый';
+            colorvsp='Зелёно-бежевый (1000)';
             break;
         case 1001:
             $('.block2_colorm').css('background-color', '#D1BC8A');
-            colorvsp='Бежевый';
+            colorvsp='Бежевый (1001)';
             break;
         case 1002:
             $('.block2_colorm').css('background-color', '#D2B773');
-            colorvsp='Песочно-жёлтый';
+            colorvsp='Песочно-жёлтый (1002)';
             break;
         case 1003:
             $('.block2_colorm').css('background-color', '#F7BA0B');
-            colorvsp='Сигнальный жёлтый';
+            colorvsp='Сигнальный жёлтый (1003)';
             break;
         case 1004:
             $('.block2_colorm').css('background-color', '#E2B007');
-            colorvsp='Жёлто-золотой';
+            colorvsp='Жёлто-золотой (1004)';
             break;
         case 1005:
             $('.block2_colorm').css('background-color', '#C89F04');
-            colorvsp='Медово-жёлтый';
+            colorvsp='Медово-жёлтый (1005)';
             break;
         case 1006:
             $('.block2_colorm').css('background-color', '#E1A100');
-            colorvsp='Кукурузно-жёлтый';
+            colorvsp='Кукурузно-жёлтый (1006)';
             break;
         case 1007:
             $('.block2_colorm').css('background-color', '#E79C00');
-            colorvsp='Нарциссово-жёлтый';
+            colorvsp='Нарциссово-жёлтый (1007)';
             break;
         case 1011:
             $('.block2_colorm').css('background-color', '#AF8A54');
-            colorvsp='Коричнево-бежевый';
+            colorvsp='Коричнево-бежевый (1011)';
             break;
         case 1012:
             $('.block2_colorm').css('background-color', '#D9C022');
-            colorvsp='Лимонно-жёлтый';
+            colorvsp='Лимонно-жёлтый (1012)';
             break;
         case 1013:
             $('.block2_colorm').css('background-color', '#E9E5CE');
-            colorvsp='Жемчужно-белый';
+            colorvsp='Жемчужно-белый (1013)';
             break;
         case 1014:
             $('.block2_colorm').css('background-color', '#DED09F');
-            colorvsp='Слоновая кость';
+            colorvsp='Слоновая кость (1014)';
             break;
         case 1015:
             $('.block2_colorm').css('background-color', '#EADEBD');
-            colorvsp='Светлая слоновая кость';
+            colorvsp='Светлая слоновая кость (1015)';
             break;
         case 1016:
             $('.block2_colorm').css('background-color', '#EAF044');
-            colorvsp='Жёлтая сера';
+            colorvsp='Жёлтая сера (1016)';
             break;
         case 1017:
             $('.block2_colorm').css('background-color', '#F4B752');
-            colorvsp='Шафраново-жёлтый';
+            colorvsp='Шафраново-жёлтый (1017)';
             break;
         case 1018:
             $('.block2_colorm').css('background-color', '#F3E03B');
-            colorvsp='Цинково-жёлтый';
+            colorvsp='Цинково-жёлтый (1018)';
             break;
 
 
@@ -1101,7 +1107,10 @@ $(".colorralm").click(function (){
         var itogzena_dev=ZsetkaVuv*1+priceV*1;
         //alert(ZsetkaVuv)
         //alert(priceV)
-        $('#itogzena_dev').text(itogzena_dev);
+        itogzena_dev=itogzena_dev.toFixed(2);
+        var itogzena_devv=itogzena_dev+' '+'руб';
+
+        $('#itogzena').text(itogzena_devv);
         $('#itogzena_mail').text(itogzena_dev);
 
     });
@@ -1142,140 +1151,7 @@ $(".colorralm").click(function (){
     });
 
 
-    //ymaps.ready(init);
-    //
-    //function init() {
-    //    var suggestView1 = new ymaps.SuggestView('suggest');
-    //}
-    //
-    //var arr = [
-    //    "Астрахань"
-    //
-    //];
-    //
-    //var find = function (arr, find) {
-    //    return arr.filter(function (value) {
-    //        return (value + "").toLowerCase().indexOf(find.toLowerCase()) != -1;
-    //    });
-    //};
-    //
-    //var myProvider = {
-    //    suggest: function (request, options) {
-    //        var res = find(arr, request),
-    //            arrayResult = [],
-    //            results = Math.min(options.results, res.length);
-    //        for (var i = 0; i < results; i++) {
-    //            arrayResult.push({displayName: res[i], value: res[i]})
-    //        }
-    //        return ymaps.vow.resolve(arrayResult);
-    //    }
-    //}
-    //
-    //var suggestView = new ymaps.SuggestView('suggest', {provider: myProvider, results: 3});
 
-
-   // <script type="text/javascript">
-   // ymaps.ready(init);
-   //
-   // function init() {
-   //     // Стоимость за километр.
-   //     var DELIVERY_TARIFF = 40.726,
-   //     // Минимальная стоимость.
-   //         MINIMUM_COST = 0,
-   //         myMap = new ymaps.Map('map', {
-   //             center: [46.359322, 48.024299],
-   //             zoom: 14,
-   //             controls: []
-   //         }),
-   //     // Создадим панель маршрутизации.
-   //         routePanelControl = new ymaps.control.RoutePanel({
-   //             options: {
-   //                 // Добавим заголовок панели.
-   //                 showHeader: true,
-   //                 title: 'Указать куда'
-   //             }
-   //         }),
-   //         zoomControl = new ymaps.control.ZoomControl({
-   //             options: {
-   //                 size: 'small',
-   //                 float: 'none',
-   //                 position: {
-   //                     bottom: 145,
-   //                     right: 10
-   //                 }
-   //             }
-   //         });
-   //     // Пользователь сможет построить только автомобильный маршрут.
-   //     routePanelControl.routePanel.options.set({
-   //         types: {auto: true}
-   //     });
-   //
-   //     // Если вы хотите задать неизменяемую точку "откуда", раскомментируйте код ниже.
-   //     routePanelControl.routePanel.state.set({
-   //         fromEnabled: false,
-   //         from: 'Астрахань, 1й проезд Рождественского, 1А'
-   //     });
-   //
-   //     myMap.controls.add(routePanelControl).add(zoomControl);
-   //
-   //     // Получим ссылку на маршрут.
-   //     routePanelControl.routePanel.getRouteAsync().then(function (route) {
-   //
-   //         // Зададим максимально допустимое число маршрутов, возвращаемых мультимаршрутизатором.
-   //         route.model.setParams({results: 1}, true);
-   //
-   //         // Повесим обработчик на событие построения маршрута.
-   //         route.model.events.add('requestsuccess', function () {
-   //
-   //             var activeRoute = route.getActiveRoute();
-   //             if (activeRoute) {
-   //                 // Получим протяженность маршрута.
-   //                 var length = route.getActiveRoute().properties.get("distance"),
-   //                 // Вычислим стоимость доставки.
-   //                     price = calculate(Math.round(length.value / 1000)),
-   //                 // Создадим макет содержимого балуна маршрута.
-   //                     balloonContentLayout = ymaps.templateLayoutFactory.createClass(
-   //                         '<span>Расстояние: ' + length.text + '.</span><br/>' +
-   //                         '<span style="font-weight: bold; font-style: italic">Стоимость доставки: ' + price + ' р.</span>');
-   //                 priceV=price;
-   //                 // Зададим этот макет для содержимого балуна.
-   //                 route.options.set('routeBalloonContentLayout', balloonContentLayout);
-   //                 // Откроем балун.
-   //                 activeRoute.balloon.open();
-   //             }
-   //         });
-   //
-   //     });
-   //     // Функция, вычисляющая стоимость доставки.
-   //     function calculate(routeLength) {
-   //         return Math.max(routeLength * DELIVERY_TARIFF, MINIMUM_COST);
-   //     }
-   // }
-
-   // <script type="text/javascript">
-    /// расстояние по адресам
-  /*  var map;
-    ymaps2.ready(function(){
-        var mapDivId = 'map'; //Id контейнера для карты
-        var mapCenter = [55.76, 37.64]; //Координата центра карты по умолчанию
-        map = new ymaps.Map(mapDivId , { center: mapCenter, zoom: 10 });
-
-        var pointA = "Саратов"; //Откуда считаем
-        var pointB = "Москва"; //Куда считаем
-        ymaps.route([pointA , pointB ]).then(
-            function (route) {
-                var distance = route.getHumanLength(); //Получаем расстояние
-                alert(distance.replace(' ', ' '));
-             //   map.geoObjects.add(route); //Рисуем маршрут на карте
-            },
-            function (error) {
-                alert('Ошибка: ' + error.message);
-            }
-        );
-    });*/
-   // </script>
-
-    //$('.sfloor2').on('input', function () {
     //=================================================//
     $("#adres2_dev").on('change',function () {
 
@@ -1283,38 +1159,36 @@ $(".colorralm").click(function (){
 
         if (chd.checked) {
 
-            //alert(2)
-            ymaps.ready(function () {
+             ymaps.ready(function () {
                 var pointA = "Астрахань, 1й проезд Рождественского, 1А"; //Откуда считаем
-               // var pointB = "Москва"; //Куда считаем
-                //var pointB = "улица Михаила Луконина, 10к1"; //Куда считаем
+               //var pointB = "улица Михаила Луконина, 10к1"; //Куда считаем
                 var pointB = document.getElementById('adres2_dev').value; //Куда считаем
 
                 var cit=pointB.includes('Астрахань');
-               // alert(cit)
+
                 if (cit==false){
-                //  alert(1111)
+
                     pointB='Астрахань,'+pointB;
                 }
 
                // улица Михаила Луконина, 10к1
-               // alert(21)
+
                 ymaps.route([pointA, pointB]).then(
                     function (route) {
-                      //  alert(23)
+
                         var distance = route.getHumanLength(); //Получаем расстояние
-                      //  alert(distance);
-                      //  console.log(distance)
-                        var Lvv = distance.split('&')[0];
+                       var Lvv = distance.split('&')[0];
 
                         priceV=Lvv*1*40.726;
                         $("#dostavka_dev").text(priceV);
                         var itogzena_dev=ZsetkaVuv*1+priceV*1;
-                       // alert(ZsetkaVuv);
-                       // alert(priceV),
-                            $('#itogzena_dev').text(itogzena_dev);
+
+                        itogzena_dev=itogzena_dev.toFixed(2);
+
+                        var itogzena_devv=itogzena_dev +' '+'руб' ;
+
+                        $('#itogzena_dev').text(itogzena_devv);
                         $('#itogzena_mail').text(itogzena_dev);
-                        //alert(a)
                         //  var length2 = route.getActiveRoute().properties.get("distance");
                       //  alert(length2.value);
                         //   map.geoObjects.add(route); //Рисуем маршрут на карте
@@ -1343,9 +1217,7 @@ $(".colorralm").click(function (){
                var pointB = document.getElementById('adres2').value; //Куда считаем
 
                 var cit=pointB.includes('Астрахань');
-                // alert(cit)
-                if (cit==false){
-
+               if (cit==false){
                     pointB='Астрахань,'+pointB;
                 }
 
@@ -1362,7 +1234,10 @@ $(".colorralm").click(function (){
                         $("#dostavka").text(priceV);
                         var itogzena=ZsetkaVuv*1+priceV*1;
 
-                            $('#itogzena').text(itogzena);
+                        itogzena=itogzena.toFixed(2);
+                        var itogzenav=itogzena+' ' +'руб';
+
+                            $('#itogzena').text(itogzenav);
                         $('#itogzena_mailm').text(itogzena);
 
                         //  var length2 = route.getActiveRoute().properties.get("distance");
@@ -1372,10 +1247,6 @@ $(".colorralm").click(function (){
             });
 
         }
-
-
-
-
 
     });
 
@@ -1668,7 +1539,11 @@ $(".colorralm").click(function (){
 
             //$("#dostavka").text(priceV);
             var itogzena_devm=ZsetkaVuv*1+priceV*1;
-            $('#itogzena').text(itogzena_devm);
+
+            itogzena_devm=itogzena_devm.toFixed(2);
+            var itogzena_devmv=itogzena_devm+' '+'руб';
+
+            $('#itogzena').text(itogzena_devmv);
             $('#itogzena_mailm').text(itogzena_devm);
 
         }

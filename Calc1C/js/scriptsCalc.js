@@ -205,7 +205,7 @@ $(document).ready(function() {
                 Zena=Zena.toFixed(2);
                 $('#Zenap').text(Zena);
             }
-            if((Zena<=100000)&&(Nopt==3)){
+            if((Zena<=100000)&&(Nopt==4)){
                 Zena=100000;
                 Zena=Zena.toFixed(2);
                 $('#Zenap').text(Zena);

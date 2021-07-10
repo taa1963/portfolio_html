@@ -63,7 +63,7 @@
 
                            <input class="callclerk" id="callclerk" type="range" min="1" max="10000" step="1" value="1" oninput="document.getElementById('clerk').value=this.value">
 
-                           <input tupe="text" readonly class="clerk" id="clerk" value="1">
+                           <input tupe="text"  class="clerk" id="clerk" value="1" oninput="this.value = this.value.replace(/\./g, '')">
                        </div>
 
                   </div>
@@ -76,7 +76,7 @@
 
                        <input class="callclerk" id="callfill" type="range" min="1" max="100" step="1" value="1" oninput="document.getElementById('fill').value=this.value">
 
-                       <input tupe="text" readonly class="clerk" id="fill" value="1">
+                       <input tupe="text"  class="clerk" id="fill" value="1" oninput="this.value = this.value.replace(/\./g, '')">
                    </div>
 
                </div>

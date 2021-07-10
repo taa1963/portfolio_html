@@ -62,17 +62,86 @@ $(document).ready(function() {
         return false;
     });
 
+
+
+    $('#ralc').on('input', function() {
+        $(this).val($(this).val().replace(/\,/g));
+        $(this).val($(this).val().replace(
+            /(?=(\d+\.\d{2})).+|(\.(?=\.))|([^\.\d])|(^\D)/gi, '$1'));
+    });
+
     //=====Отслеживание движения ползунка количество пользователей =====\\
     $('#callclerk').on('input',function(){
+
         Zena();
 
     });
+
+
+    $('#clerk').on('input',function(){
+
+        var clerkv=document.getElementById('clerk').value;
+
+        document.getElementById('callclerk').value=clerkv;
+
+        Zena();
+
+    });
+
+
+
+    $('#clerk').keyup(function(e){
+
+        var clerkv=document.getElementById('clerk').value;
+
+        if((clerkv==0)||(clerkv==null)){
+            clerkv=1;
+            document.getElementById('clerk').value=clerkv;
+        }
+
+
+        document.getElementById('callclerk').value=clerkv;
+
+        Zena();
+
+    });
+
+
 
     //=====Отслеживание движения ползунка количество филиалов =====\\
     $('#callfill').on('input',function(){
         Zena();
 
     });
+
+    $('#fill').on('input',function(){
+
+        var fillv=document.getElementById('fill').value;
+
+        document.getElementById('callfill').value=fillv;
+
+        Zena();
+
+    });
+
+
+
+    $('#fill').keyup(function(e){
+
+        var fillv=document.getElementById('fill').value;
+
+        if((fillv==0)||(fillv==null)){
+            fillv=1;
+            document.getElementById('fill').value=fillv;
+        }
+
+        document.getElementById('callfill').value=fillv;
+
+        Zena();
+
+    });
+
+
 
     //Закрываем окно и фон затемнения
     function Zena(){
@@ -83,6 +152,9 @@ $(document).ready(function() {
         Nfill=Nfill*0.33;
 
         var Zena=typeb*Nclerk*Nfill;
+
+
+
         Zena=Zena.toFixed(2);
         $('#Zenap').text(Zena);
 
@@ -101,6 +173,11 @@ $(document).ready(function() {
               $('.calc_block_itog_bloc1').addClass('itog_active');
               $('.calc_block_itog_bloc2').removeClass('itog_active');
               $('.calc_block_itog_bloc3').removeClass('itog_active');
+            if(Zena<=10000){
+                Zena=10000;
+                Zena=Zena.toFixed(2);
+                $('#Zenap').text(Zena);
+            }
 
          }
 
@@ -109,12 +186,33 @@ $(document).ready(function() {
             $('.calc_block_itog_bloc1').removeClass('itog_active');
             $('.calc_block_itog_bloc2').addClass('itog_active');
             $('.calc_block_itog_bloc3').removeClass('itog_active');
+            if(Zena<=30000){
+                Zena=30000;
+                Zena=Zena.toFixed(2);
+                $('#Zenap').text(Zena);
+            }
         }
+
+
         if ((Nopt==3) || (Nopt==4)) {
             $('.calc_block_itog').addClass('itog_active');
             $('.calc_block_itog_bloc1').removeClass('itog_active');
             $('.calc_block_itog_bloc2').removeClass('itog_active');
             $('.calc_block_itog_bloc3').addClass('itog_active');
+
+            if((Zena<=60000)&&(Nopt==3)){
+                Zena=60000;
+                Zena=Zena.toFixed(2);
+                $('#Zenap').text(Zena);
+            }
+            if((Zena<=100000)&&(Nopt==3)){
+                Zena=100000;
+                Zena=Zena.toFixed(2);
+                $('#Zenap').text(Zena);
+            }
+
+
+
         }
         if ((Nopt==0)||(Nopt==5)){
             $('.calc_block_itog').removeClass('itog_active');

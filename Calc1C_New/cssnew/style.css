@@ -1,0 +1,43 @@
+
+
+
+body{
+    background-color: #f4f4f4
+}
+
+
+.wrapper{
+    display: block;
+    border-radius: 10px;
+    margin: 40px auto;
+    background: #fff;
+   width: 80%;
+    height: auto;
+    position: relative;
+    vertical-align: baseline;
+
+}
+
+.header{
+    display: block;
+    /*background: #fff;*/
+    min-height: 18em;
+    height: auto;
+    background: url(../img/logocalc.gif) no-repeat;;
+    /*background-image: url(../img/logocalc.gif) no-repeat;;*/
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    /*background-repeat: no-repeat;*/
+    /*background-position: top center;*/
+    /*background-size: cover;*/
+    /*position: relative;*/
+}
+
+
+
+
+
+
+

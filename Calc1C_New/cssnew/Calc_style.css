@@ -1,0 +1,413 @@
+body{
+    background-color: #f4f4f4
+}
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+
+.calculator{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+.calc_block_param{
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.calc_block_param h1{
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+    line-height: 110%;
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calc_block_text{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.calc_block_param p{
+    font: 16px/140% 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #222;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.typebisnes{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.calc_block_text_inp{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.callclerk{
+    display: block;
+    width: 70%;
+    float: left;
+}
+
+.clerk{
+    display: block;
+    width: 20%;
+    float: right;
+}
+
+
+
+/*#calc_next{*/
+    /*display: block;*/
+    /*margin: 0 auto;*/
+    /*background-color: #048593;*/
+    /*padding: 10px 20px;*/
+    /*font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;*/
+    /*color: #fff;*/
+    /*border-radius: 5px;*/
+/*}*/
+
+    /*==== Оформление блока Итоги =========*/
+
+.calc_block_itog{
+    display: none;
+    width: 100%;
+}
+.calc_block_itog h1{
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+    line-height: 110%;
+    font-family: 'PT Serif', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calc_block_itog_bloc1{
+    display: none;
+    width: 100%;
+}
+.calc_block_itog_bloc2{
+    display: none;
+    width: 100%;
+}
+.calc_block_itog_bloc3{
+    display: none;
+    width: 100%;
+}
+
+.itog_active{
+    display: block;
+}
+.line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+}
+.itogimg1{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+.itogimg2{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+.calc_block_itog p{
+    text-align: center;
+}
+
+
+.calc_block_itog_text p{
+    font: 20px/140% 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #222;
+    text-align: center;
+}
+.calc_block_itog_text span{
+    font-weight: bold;
+    color: red;
+}
+
+
+
+#form2{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #000000;
+}
+
+
+/*=== Оформление формы отправки в всплыващем окне      ====*/
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none; /*--по умолчанию скрыт--*/
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .70;/* Полупрозрачность слоя затемнения */
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+/*--Модальное окно--*/
+.popup_block{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    display: none; /*--по умолчанию скрыт--*/
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 15px;
+    background-color: #ffffff;
+
+    /*-- скругленные углы--*/
+
+    color: #ffffff;
+    font-size: .9em;
+}
+/*--Фиксированное позиционирование для тупого IE6--*/
+*html #fade {
+    position: absolute;
+}
+*html .popup_block {
+    position: absolute;
+}
+/*--Блок содержания--*/
+.note{
+    display: block;
+    overflow: hidden;
+    float: right;
+    /* устанавливаем необходимую ширину формы в зависимости от дизайна
+     ** форма отлично растягивается */
+    width: 100%;
+    background: none repeat scroll 0 0 #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.note p{
+    color: #343434;
+    font:30px "Ubuntu";
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 20px;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    /*--крутим кнопку при наведении--*/
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+/* контактная форма */
+/*#form{*/
+    /*overflow: hidden;*/
+    /*margin: 0 auto;*/
+    /*padding-top: 50px;*/
+    /* устанавливаем необходимую ширину формы в зависимости от дизайна*/
+  /*** форма отлично растягивается */
+    /*width: 100%;*/
+
+/*}*/
+
+
+
+
+#form1{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #222222;
+    background-color: #f4f4f4;
+    margin-bottom: 30px;
+}
+
+
+
+.first{
+    display: block;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+
+}
+.first1{
+    display: none;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+.first1 input{
+    display: block;
+    width: 100%;
+    background-color: blanchedalmond;
+
+}
+
+.first input{
+    display: block;
+    width: 100%;
+    background-color: blanchedalmond;
+
+}
+
+.form_button1 button{
+    display: block;
+    margin: 0 auto;
+    background-color: #048593;
+    padding: 10px 20px;
+    /*padding-top: 5px;*/
+    /*padding-bottom: 5px;*/
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/*		Описание второго блока вывода итгов калькулятора и его компонент		*/
+
+.popup_success{
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 28%;
+    width: 40%;
+    height: auto;
+    background-color:#ffffff;
+    margin: 0 auto;
+    z-index: 9999999;
+    border: 1px solid  #343434;
+}
+
+.popup_success p{
+    display: block;
+    font: 25px "exo_2_regular";
+    font-weight: bold;
+    color: #343434;
+    text-align: center;
+    line-height: 39px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+    .content{
+        display: block;
+        width: 100%;
+        float: left;
+        position: relative;
+
+    }
+
+
+
+
+
+}
+
+@media only screen  and (max-width: 990px) {
+
+
+
+
+}
+
+
+@media only screen  and (max-width: 768px) {
+    .calc_param {
+        display: block;
+        width: 100%;
+    }
+
+    .calc_itog{
+        display: block;
+        width: 100%;
+    }
+   
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+.calc_block_itog2 table{
+	margin:0;
+}
+
+
+.calc_block_itog2 table td {
+	word-wrap: break-word; 
+	}
+.calc_block_detail{
+	 width: 100%;
+}
+
+}

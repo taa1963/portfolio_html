@@ -74,8 +74,29 @@ $(document).ready(function() {
 
 
             var row_count = first_sheet_name.max_row;
-            var column_count = sheet.max_column;
+            var column_count = first_sheet_name.max_column;
             console.log(column_count);
+            var N=column_count-1;
+            var vid1 = [['Выберите вид работ']];
+
+            for (var i = 1; i < N; i++)  {
+                var worksheet = workbook.Sheets[first_sheet_name];
+
+                var adr='A' +i;
+                var address_of_cell = adr;
+                var desired_cell = worksheet[address_of_cell];
+                var TR = desired_cell.v;
+                vid1.push(TR);
+
+
+            };
+            console.log(vid1);
+
+
+
+            console.log(vid1);
+
+
 
             / Get worksheet /
             var worksheet = workbook.Sheets[first_sheet_name];

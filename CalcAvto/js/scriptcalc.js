@@ -61,22 +61,23 @@ $(document).ready(function() {
             for (var i = 0; i != data.length; ++i) {
                 arr[i] = String.fromCharCode(data[i]);
             }
-            console.log(arr);
+            // console.log(arr);
 
             var bstr = arr.join("");
-            console.log(bstr);
+            //console.log(bstr);
             var cfb = XLSX.read(bstr, { type: 'binary' });
-
+            console.log(cfb);
             //=======================================//
             var workbook = XLSX.read(bstr, {type:"binary"});
             var first_sheet_name = workbook.SheetNames[0];
             / Get worksheet /
             var worksheet = workbook.Sheets[first_sheet_name];
-            //  console.log(worksheet);
+            console.log(worksheet);
 
             var address_of_cell = 'B3';
             var desired_cell = worksheet[address_of_cell];
             ZenaZRL = desired_cell.v;
+            console.log(ZenaZRL);
 
 
 
@@ -165,15 +166,11 @@ $(document).ready(function() {
 
 
 
-        console.log(ZKia)
-        console.log(ZGranta)
-        console.log(ZMylt)
-        console.log(ZVesta)
 
 
         var Tavto=document.getElementById('typeavto').value;
 
-        console.log(Tavto)
+
 
         if(Tavto==0){
             Zena=0

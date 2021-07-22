@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 
 
-    var url = "https://aleksandr.tupichenkov.com/CalcFund6/js/price.xlsx";
+    var url = "https://aleksandr.tupichenkov.com/CalcAvto/js/price.xlsx";
         // alert(url);
         var oReq = new XMLHttpRequest();
         oReq.open("GET", url, true);

@@ -71,6 +71,12 @@ $(document).ready(function() {
             var workbook = XLSX.read(bstr, {type:"binary"});
 
             var first_sheet_name = workbook.SheetNames[0];
+
+
+            var row_count = first_sheet_name.max_row;
+            var column_count = sheet.max_column;
+            console.log(column_count);
+
             / Get worksheet /
             var worksheet = workbook.Sheets[first_sheet_name];
             console.log(worksheet);

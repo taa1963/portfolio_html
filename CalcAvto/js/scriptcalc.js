@@ -66,9 +66,10 @@ $(document).ready(function() {
             var bstr = arr.join("");
             //console.log(bstr);
             var cfb = XLSX.read(bstr, { type: 'binary' });
-            console.log(cfb);
+            //console.log(cfb);
             //=======================================//
             var workbook = XLSX.read(bstr, {type:"binary"});
+
             var first_sheet_name = workbook.SheetNames[0];
             / Get worksheet /
             var worksheet = workbook.Sheets[first_sheet_name];

@@ -69,6 +69,14 @@ $(document).ready(function() {
 
           var first_sheet_name = workbook.SheetNames[0];
 
+          var worksheet = workbook.Sheets[first_sheet_name];
+          console.log(worksheet);
+
+          var address_of_cell = 'B3';
+          var desired_cell = worksheet[address_of_cell];
+          ZenaZRL = desired_cell.v;
+          console.log(ZenaZRL);
+
 
           // var row_count = first_sheet_name.max_row;
           // var column_count = first_sheet_name.max_column;
@@ -77,7 +85,7 @@ $(document).ready(function() {
           var vid1 = [['Выберите вид работ']];
 
           for (var i = 1; i != data.length; i++)  {
-              var worksheet = workbook.Sheets[first_sheet_name];
+             // var worksheet = workbook.Sheets[first_sheet_name];
 
               var adr='A' +i;
               alert(adr)
@@ -125,77 +133,77 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-    var url = "https://aleksandr.tupichenkov.com/CalcAvto/js/price.xlsx";
-        // alert(url);
-        var oReq = new XMLHttpRequest();
-        oReq.open("GET", url, true);
-        oReq.responseType = "arraybuffer";
-
-        oReq.onload = function(e) {
-            var arraybuffer = oReq.response;
-            // convert data to binary string //
-            var data = new Uint8Array(arraybuffer);
-
-            var arr = new Array();
-            for (var i = 0; i != data.length; ++i) {
-                arr[i] = String.fromCharCode(data[i]);
-            }
-            // console.log(arr);
-
-            var bstr = arr.join("");
-            //console.log(bstr);
-            var cfb = XLSX.read(bstr, { type: 'binary' });
-            //console.log(cfb);
-            //=======================================//
-            var workbook = XLSX.read(bstr, {type:"binary"});
-
-            var first_sheet_name = workbook.SheetNames[0];
-
-
-            // var row_count = first_sheet_name.max_row;
-            // var column_count = first_sheet_name.max_column;
-            // console.log(column_count);
-           // var N=column_count-1;
-            var vid1 = [['Выберите вид работ']];
-
-            for (var i = 1; i != data.length; i++)  {
-                var worksheet = workbook.Sheets[first_sheet_name];
-
-                var adr='A' +i;
-                var address_of_cell = adr;
-                var desired_cell = worksheet[address_of_cell];
-                var TR = desired_cell.v;
-                vid1.push(TR);
-
-
-            };
-            console.log(vid1);
-
-
-
-            console.log(vid1);
-
-
-
-            / Get worksheet /
-            var worksheet = workbook.Sheets[first_sheet_name];
-            console.log(worksheet);
-
-            var address_of_cell = 'B3';
-            var desired_cell = worksheet[address_of_cell];
-            ZenaZRL = desired_cell.v;
-            console.log(ZenaZRL);
-
-
-
-
-        }
-
-        oReq.send();
+    //
+    //
+    //
+    //
+    // var url = "https://aleksandr.tupichenkov.com/CalcAvto/js/price.xlsx";
+    //     // alert(url);
+    //     var oReq = new XMLHttpRequest();
+    //     oReq.open("GET", url, true);
+    //     oReq.responseType = "arraybuffer";
+    //
+    //     oReq.onload = function(e) {
+    //         var arraybuffer = oReq.response;
+    //         // convert data to binary string //
+    //         var data = new Uint8Array(arraybuffer);
+    //
+    //         var arr = new Array();
+    //         for (var i = 0; i != data.length; ++i) {
+    //             arr[i] = String.fromCharCode(data[i]);
+    //         }
+    //         // console.log(arr);
+    //
+    //         var bstr = arr.join("");
+    //         //console.log(bstr);
+    //         var cfb = XLSX.read(bstr, { type: 'binary' });
+    //         //console.log(cfb);
+    //         //=======================================//
+    //         var workbook = XLSX.read(bstr, {type:"binary"});
+    //
+    //         var first_sheet_name = workbook.SheetNames[0];
+    //
+    //
+    //         // var row_count = first_sheet_name.max_row;
+    //         // var column_count = first_sheet_name.max_column;
+    //         // console.log(column_count);
+    //        // var N=column_count-1;
+    //         var vid1 = [['Выберите вид работ']];
+    //
+    //         for (var i = 1; i != data.length; i++)  {
+    //             var worksheet = workbook.Sheets[first_sheet_name];
+    //
+    //             var adr='A' +i;
+    //             var address_of_cell = adr;
+    //             var desired_cell = worksheet[address_of_cell];
+    //             var TR = desired_cell.v;
+    //             vid1.push(TR);
+    //
+    //
+    //         };
+    //         console.log(vid1);
+    //
+    //
+    //
+    //         console.log(vid1);
+    //
+    //
+    //
+    //         / Get worksheet /
+    //         var worksheet = workbook.Sheets[first_sheet_name];
+    //         console.log(worksheet);
+    //
+    //         var address_of_cell = 'B3';
+    //         var desired_cell = worksheet[address_of_cell];
+    //         ZenaZRL = desired_cell.v;
+    //         console.log(ZenaZRL);
+    //
+    //
+    //
+    //
+    //     }
+    //
+    //     oReq.send();
 
 
 

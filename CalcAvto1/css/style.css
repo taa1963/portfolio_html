@@ -133,7 +133,7 @@ h1{
 }
 
 .first1{
-    display: block;
+    display: none;
 }
 .form_button1{
     display: block;

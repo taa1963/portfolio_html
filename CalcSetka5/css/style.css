@@ -1,0 +1,3487 @@
+
+
+
+/*Описание header и его компонентов. При установке нужно будет закрыть контейнер */
+
+
+
+
+.header {
+    display: block;
+    width: 100%;
+
+}
+
+.header_logo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.header_logo img{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+
+
+
+
+/*		Сам калькулятор		*/
+
+/*		При установке нужно будет закрыть контейнер		*/
+.container {
+    position: relative;
+    max-width: 1170px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+
+}
+
+.container_mob{
+    display: none;
+}
+
+.container p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 17px;
+}
+.call_titel{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+/*		Первый блок. Выбор типа	*/
+.call_block1{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.call_block1 p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+}
+.call_block1 span{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.call_block1_img{
+    display: block;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.call_block1_img img{
+    display: block;
+    width: 166px;
+    height: 166px;
+}
+
+/*		Оформление Радио кнопок		*/
+
+.block_radio {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.block_radio input[type=radio] {
+    display: none;
+}
+.block_radio label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 0;
+    line-height: 18px;
+    user-select: none;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.block_radio label:before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 34px;
+    height: 34px;
+    position: relative;
+    left: 0;
+    bottom: 1px;
+    background: url(../img/radio.png) 0 0 no-repeat;
+    padding-top: 10px;
+}
+
+/* Checked */
+.block_radio input[type=radio]:checked + label:before {
+    background: url(../img/radio_schek.png) 0 0 no-repeat;
+}
+
+/* Hover */
+/*.block_radio label:hover:before {*/
+    /*filter: brightness(120%);*/
+/*}*/
+
+/* Disabled */
+/*.block_radio input[type=radio]:disabled + label:before {*/
+    /*filter: grayscale(100%);*/
+/*}*/
+
+.call_block_btn_dev{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 68%;
+}
+
+/*.call_block_btn{*/
+    /*display: block;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*width: 100%;*/
+/*}*/
+
+.but_block1{
+    display: block;
+    float: right;
+    width: 101px;
+    height: 34px;
+    background: url(../img/button1.png) 0 0 no-repeat;
+    border: none;
+}
+.but_block2{
+    display: block;
+    float: left;
+    width: 113px;
+    height: 34px;
+    background: url(../img/button2.png) 0 0 no-repeat;
+    border: none;
+}
+
+
+
+
+.call_block_line{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 1px;
+    width: 100%;
+    background-color: #000000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+
+/*		Второй блок. Выбор цвета	*/
+.call_block2{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.call_block2 p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+}
+.call_block2 span{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.call_block2_1{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /*float: left;*/
+    margin-bottom: 30px;
+}
+
+.block2_color_left{
+    display: block;
+    width: 169px;
+    height: 73px;
+    border: 1px solid #000000;
+    /*background-color: 1001;*/
+    background-color: #ffffff;
+}
+
+.block2_color{
+    display: none;
+    width: 169px;
+    height: 73px;
+    border: 1px solid #000000;
+    /*background-color: 1001;*/
+    background-color: #ffffff;
+    float: left;
+}
+
+.call_block2_1_left{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.block2_color_active{
+    display: block;
+}
+
+
+.call_block2_1_richt_2{
+    display: block;
+   /*// width: 169px;*/
+    /*height: 73px;*/
+    /*border: 1px solid #000000;*/
+    /*background-color: 1001;*/
+    /*background-color: #ffffff;*/
+    float: left;
+    margin-left: 10px;
+}
+
+
+
+.call_block2_1_richt{
+    display: block;
+    width: 50%;
+    float: right;
+}
+
+.call_block2_1_richt p{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.ral{
+    display: block;
+    margin-top: 10px;
+    padding: 0px;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+
+.ralc{
+    width: 50px;
+    height: 28px;
+    border: 1px solid #000000;
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+.call_block2_2{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /*float: left;*/
+    margin-bottom: 30px
+}
+
+.call_block2_1_richt a{
+    text-decoration: underline;
+    color: #0A6CFF;
+}
+
+.call_block2_2 img{
+    display: block;
+    width: 79px;
+    height: 79px;
+    float: left;
+}
+
+.block_box{
+
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 5%;
+}
+/*		Оформление Радио кнопок		*/
+
+.block_box {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.block_box input[type=checkbox] {
+    display: none;
+}
+.block_radio label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 0;
+    line-height: 18px;
+    user-select: none;
+    float: left;
+}
+.block_box label:before {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 34px;
+    height: 29px;
+    position: relative;
+    left: 0;
+    bottom: 1px;
+    /*border: 3px solid #0A6CFF;*/
+    background: url(../img/box_chek_un.png) 0 0 no-repeat;
+    padding-top: 10px;
+    float: left;
+}
+
+/* Checked */
+.block_box input[type=checkbox]:checked + label:before {
+    background: url(../img/box_chek.png) 0 0 no-repeat;
+}
+
+
+
+.block_box span{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.call_blockRAL_mob{
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+}
+/*//Блок выбора цвета=====*/
+
+.call_blockRAL_dev{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+.table{
+    border: 1px solid #000000;
+    margin-bottom:30px;
+}
+
+.table th{
+    width:100%;
+    text-align: center;
+}
+.table th p{
+    width:100%;
+    text-align: center;
+}
+.table td{
+    border: 1px solid #000000;
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    text-align:center;
+}
+
+
+#colord1000{
+    background-color: #CCC58F;
+}
+#colord1001{
+    background-color: #D1BC8A;
+}
+#colord1002{
+    background-color: #D2B773;
+}
+#colord1003{
+    background-color: #F7BA0B;
+}
+#colord1004{
+    background-color: #E2B007;
+}
+#colord1005{
+    background-color: #E2B007;
+}
+#colord1006{
+    background-color: #E1A100;
+}
+#colord1007{
+    background-color: #E79C00;
+}
+#colord1008{
+    background-color: #E79C00;
+}
+#colord1011{
+    background-color: #AF8A54;
+}
+#colord1012{
+    background-color: #D9C022;
+}
+#colord1013{
+    background-color: #E9E5CE;
+}
+#colord1014{
+    background-color: #DED09F;
+}
+#colord1015{
+    background-color: #EADEBD;
+}
+#colord1016{
+    background-color: #EAF044;
+}
+#colord1017{
+    background-color: #F4B752;
+}
+#colord1018{
+    background-color: #F3E03B;
+}
+#colord1019{
+    background-color: #A4957D;
+}
+
+#colord1020{
+    background-color: #9A9464;
+}
+#colord1021{
+    background-color:#EEC900;
+}
+
+#colord1023{
+    background-color:#F0CA00;
+}
+
+#colord1024{
+    background-color:#B89C50;
+}
+#colord1026{
+    background-color:#F5FF00;
+}
+#colord1027{
+    background-color:#A38C15;
+}
+#colord1028{
+    background-color:#FFAB00;
+}
+#colord1032{
+     background-color:#DDB20F;
+ }
+#colord1033{
+    background-color:#FAAB21;
+}
+#colord1034{
+    background-color:#EDAB56;
+}
+#colord1035{
+    background-color:#A29985;
+}
+#colord1036{
+    background-color:#927549;
+}
+#colord1037{
+    background-color:#EEA205;
+}
+#colord2000{
+    background-color:#DD7907;
+}
+#colord2001{
+    background-color:#BE4E24;
+}
+#colord2002{
+    background-color:#C63927;
+}
+#colord2003{
+     background-color:#FA842B;
+ }
+#colord2004{
+    background-color:#E75B12;
+}
+#colord2005{
+    background-color:#FF2300;
+}
+#colord2007{
+    background-color:#FFA421;
+}
+#colord2008{
+    background-color:#F3752C;
+}
+#colord2009{
+    background-color:#E15501;
+}
+#colord2010{
+     background-color:#D4652F;
+ }
+#colord2011{
+    background-color:#EC7C25;
+}
+#colord2012{
+    background-color:#DB6A50;
+}
+#colord2013{
+    background-color:#954527;
+}
+#colord3000{
+    background-color:#AB2524;
+}
+#colord3001{
+    background-color:#A02128;
+}
+#colord3002{
+    background-color:#A1232B;
+}
+#colord3003{
+    background-color:#8D1D2C;
+}
+#colord3004{
+    background-color:#701F29;
+}
+#colord3005{
+    background-color:#5E2028;
+}
+#colord3007{
+    background-color:#402225;
+}
+#colord3009{
+    background-color:#703731;
+}
+#colord3011{
+    background-color:#7E292C;
+}
+#colord3012{
+     background-color:#CB8D73;
+ }
+#colord3013{
+    background-color:#9C322E;
+}
+#colord3014{
+    background-color:#D47479;
+}
+#colord3015{
+    background-color:#E1A6AD;
+}
+#colord3016{
+    background-color:#AC4034;
+}
+#colord3017{
+    background-color:#D3545F;
+}
+#colord3018{
+    background-color:#D14152;
+}
+#colord3020{
+    background-color:#C1121C;
+}
+#colord3022{
+    background-color:#D56D56;
+}
+#colord3024{
+    background-color:#F70000;
+}
+#colord3026{
+    background-color:#FF0000;
+}
+#colord3027{
+    background-color:#B42041;
+}
+#colord3028{
+    background-color:#CB3334;
+}
+#colord3031{
+    background-color:#AC323B;
+}
+
+#colord3032{
+    background-color:#711521;
+}
+#colord3033{
+    background-color:#B24C43;
+}
+#colord4001{
+    background-color:#8A5A83;
+}
+#colord4002{
+    background-color:#933D50;
+}
+#colord4003{
+    background-color:#D15B8F;
+}
+
+#colord4004{
+    background-color:#691639;
+}
+#colord4005{
+    background-color:#83639D;
+}
+#colord4006{
+    background-color:#992572;
+}
+#colord4007{
+    background-color:#4A203B;
+}
+#colord4008{
+    background-color:#904684;
+}
+#colord4009{
+     background-color:#A38995;
+ }
+#colord4010{
+    background-color:#C63678;
+}
+#colord4011{
+    background-color:#8773A1;
+}
+#colord4012{
+    background-color:#8773A1;
+}
+
+#colord5000{
+     background-color:#384C70;
+ }
+#colord5001{
+    background-color:#384C70;
+}
+#colord5002{
+    background-color:#2B2C7C;
+}
+#colord5003{
+    background-color:#2B2C7C;
+}
+#colord5004{
+    background-color:#1D1F2A;
+}
+#colord5005{
+    background-color:#154889;
+}
+#colord5007{
+    background-color:#41678D;
+}
+#colord5008{
+    background-color:#313C48;
+}
+#colord5009{
+    background-color:#2E5978;
+}
+#colord5010{
+    background-color:#13447C;
+}
+#colord5011{
+    background-color:#232C3F;
+}
+#colord5012{
+    background-color:#3481B8;
+}
+#colord5013{
+    background-color:#232D53;
+}
+#colord5014{
+    background-color:#6C7C98;
+}
+#colord5015{
+    background-color:#2874B2;
+}
+#colord5017{
+    background-color:#0E518D;
+}
+#colord5018{
+    background-color:#21888F;
+}
+#colord5019{
+    background-color:#1A5784;
+}
+#colord5020{
+    background-color:#0B4151;
+}
+#colord5021{
+    background-color:#07737A;
+}
+#colord5022{
+    background-color:#2F2A5A;
+}
+#colord5023{
+    background-color:#4D668E;
+}
+
+#colord5024{
+     background-color:#6A93B0;
+ }
+#colord5025{
+    background-color:#07737A;
+}
+#colord5026{
+    background-color:#102C54;
+}
+#colord6000{
+    background-color:#327662;
+}
+#colord6001{
+    background-color:#28713E;
+}
+#colord6002{
+    background-color:#276235;
+}
+#colord6003{
+    background-color:#4B573E;
+}
+#colord6004{
+    background-color:#0E4243;
+}
+#colord6005{
+    background-color:#0F4336;
+}
+#colord6006{
+    background-color:#40433B;
+}
+#colord6007{
+    background-color:#283424;
+}
+#colord6008{
+    background-color:#35382E;
+}
+#colord6009{
+    background-color:#26392F;
+}
+#colord6010{
+    background-color:#3E753B;
+}
+
+#colord6011{
+    background-color:#66825B;
+}
+#colord6012{
+    background-color:#31403D;
+}
+#colord6013{
+    background-color:#797C5A;
+}
+#colord6014{
+    background-color:#444337;
+}
+#colord6015{
+    background-color:#3D403A;
+}
+#colord6016{
+    background-color:#026A52;
+}
+#colord6017{
+    background-color:#026A52;
+}
+#colord6018{
+    background-color:#48A43F;
+}
+#colord6019{
+    background-color:#B7D9B1;
+}
+#colord6020{
+     background-color:#354733;
+ }
+#colord6021{
+    background-color:#86A47C;
+}
+#colord6022{
+    background-color:#3E3C32;
+}
+#colord6024{
+    background-color:#008754;
+}
+#colord6025{
+    background-color:#53753C;
+}
+#colord6026{
+    background-color:#005D52;
+}
+#colord6027{
+    background-color:#81C0BB;
+}
+
+#colord6028{
+    background-color:#2D5546;
+}
+#colord6029{
+    background-color:#007243;
+}
+#colord6032{
+    background-color:#0F8558;
+}
+#colord6033{
+    background-color:#478A84;
+}
+
+#colord6034{
+     background-color:#7FB0B2;
+ }
+#colord6035{
+    background-color:#1B542C;
+}
+#colord6036{
+    background-color:#005D4C;
+}
+#colord6037{
+    background-color:#008F39;
+}
+#colord6038{
+    background-color:#00BB2E;
+}
+#colord7000{
+    background-color:#00BB2E;
+}
+#colord7001{
+    background-color:#8F999F;
+}
+#colord7002{
+    background-color:#008F39;
+}
+#colord7003{
+    background-color:#7A7B6D;
+}
+#colord7004{
+    background-color:#9EA0A1;
+}
+#colord7005{
+    background-color:#6B716F;
+}
+#colord7006{
+    background-color:#756F61;
+}
+#colord7008{
+    background-color:#746643;
+}
+#colord7009{
+    background-color:#5B6259;
+}
+#colord7010{
+    background-color:#575D57;
+}
+#colord7011{
+    background-color:#555D61;
+}
+#colord7012{
+    background-color:#596163;
+}
+#colord7013{
+    background-color:#555548;
+}
+#colord7015{
+    background-color:#51565C;
+}
+#colord7016{
+    background-color:#373F43;
+}
+#colord7021{
+    background-color:#2E3234;
+}
+#colord7022{
+    background-color:#4B4D46;
+}
+#colord7023{
+    background-color:#818479;
+}
+#colord7024{
+    background-color:#474A50;
+}
+#colord7026{
+    background-color:#474A50;
+}
+#colord7030{
+    background-color:#939388;
+}
+#colord7031{
+    background-color:#5D6970;
+}
+#colord7032{
+    background-color:#B9B9A8;
+}
+#colord7033{
+    background-color:#818979;
+}
+#colord7034{
+    background-color:#939176;
+}
+#colord7035{
+    background-color:#CBD0CC;
+}
+#colord7036{
+    background-color:#9A9697;
+}
+#colord7037{
+    background-color:#7C7F7E;
+}
+#colord7038{
+    background-color:#B4B8B0;
+}
+#colord7039{
+    background-color:#6B695F;
+}
+#colord7040{
+    background-color:#9DA3A6;
+}
+#colord7042{
+    background-color:#8F9695;
+}
+#colord7043{
+    background-color:#4E5451;
+}
+#colord7044{
+    background-color:#BDBDB2;
+}
+#colord7045{
+    background-color:#91969A;
+}
+#colord7046{
+    background-color:#82898E;
+}
+#colord7047{
+    background-color:#CFD0CF;
+}
+#colord7048{
+    background-color:#888175;
+}
+#colord8000{
+    background-color:#887142;
+}
+#colord8001{
+    background-color:#9C6B30;
+}
+#colord8002{
+    background-color:#7B5141;
+}
+#colord8003{
+    background-color:#80542F;
+}
+#colord8004{
+    background-color:#8F4E35;
+}
+#colord8007{
+    background-color:#6F4A2F;
+}
+#colord8008{
+    background-color:#6F4F28;
+}
+#colord8011{
+    background-color:#5A3A29;
+}
+#colord8012{
+    background-color:#673831;
+}
+#colord8014{
+    background-color:#49392D;
+}
+#colord8015{
+    background-color:#633A34;
+}
+#colord8016{
+    background-color:#4C2F26;
+}
+#colord8017{
+    background-color:#44322D;
+}
+#colord8019{
+    background-color:#3F3A3A;
+}
+#colord8022{
+    background-color:#211F20;
+}
+#colord8023{
+    background-color:#A65E2F;
+}
+#colord8024{
+    background-color:#79553C;
+}
+#colord8025{
+    background-color:#755C49;
+}
+
+#colord8028{
+    background-color:#4E3B2B;
+}
+
+#colord8029{
+    background-color:#773C27;
+}
+#colord9001{
+    background-color:#EFEBDC;
+}
+
+#colord9002{
+    background-color:#DDDED4;
+}
+#colord9003{
+    background-color:#F4F8F4;
+}
+#colord9004{
+    background-color:#2E3032;
+}
+#colord9005{
+    background-color:#0A0A0D;
+}
+#colord9006{
+    background-color:#A5A8A6;
+}
+#colord9007{
+    background-color:#8F8F8C;
+}
+#colord9010{
+    background-color:#F7F9EF;
+}
+#colord9011{
+    background-color:#292C2F;
+}
+#colord9016{
+    background-color:#F7FBF5;
+}
+
+#colord9017{
+    background-color:#2A2D2F;
+}
+
+#colord9018{
+    background-color:#CFD3CD;
+}
+#colord9022{
+    background-color:#9C9C9C;
+}
+#colord9023{
+    background-color:#7E8182;
+}
+#colord9025{
+    background-color:#ffffff;
+}
+
+#colord9026{
+    background-color:#ffffff;
+}
+#colord9027{
+    background-color:#ffffff;
+}
+
+
+
+
+/*		Третий блок. Выбор цвета	*/
+.call_block3{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.call_block3 p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+}
+.call_block3 span{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.call_block3_text{
+    display: block;
+}
+
+.call_block3_itog{
+    display: block;
+    position:relative ;
+    overflow: hidden;
+}
+.call_block3_itog span{
+
+    border: 1px solid #000000;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+.call_block3_img_inp{
+    display: block;
+    width: 100%;
+    height: 520px;
+    position: relative;
+    overflow: hidden;
+}
+.calc_block3_1{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 460px;
+    /*background-color: aqua;*/
+}
+
+
+
+.calc_block3_L{
+
+    display: block;
+    /* position: absolute; */
+    overflow: hidden;
+    width: 40px;
+    height: 460px;
+    float: left;
+    /* transform: rotate(
+270deg
+); */
+    /*background-color: #ffed00;*/
+    /* left: -35%; */
+
+}
+
+.form_sp_dev{
+    display: none;
+}
+
+.form_sp_mob{
+    display: none;
+}
+
+.calc_block3_im{
+    display: block;
+    margin-left: 60px;
+}
+
+.Hokn{
+    display: block;
+    position: absolute;
+    transform: rotate(270deg);
+    top: 220px;
+    width: 350px;
+    left: -150px;
+}
+
+/*.vgazline{*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*margin-top: 10px;*/
+    /*margin-left: 3.7em;*/
+    /*width: 0%;*/
+    /*height: 5px;*/
+    /*background-color:#FF6511 ;*/
+    /*z-index: 12;*/
+    /*transform: rotate(270deg);*/
+/*}*/
+
+.calc_block3_2{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /*background-color: #FF6511;*/
+}
+.calc_block3_Logo{
+    display: block;
+    float: left;
+}
+
+.calc_block3_inp{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    margin-top: 10px;
+}
+/*.Hokn{*/
+    /*display: block;*/
+    /*width: 80%;*/
+    /*margin-left: 20px*/
+/*}*/
+
+.Lokn{
+    display: block;
+    width: 80%;
+    margin-left: 20px
+}
+
+input[type='range'] {
+    overflow: hidden;
+    height: 30px;
+   -webkit-appearance: none;
+  /*background-color: #C4C4C4;*/
+}
+
+/*input[type='range']::-webkit-slider-runnable-track {*/
+    /*-webkit-appearance: none;*/
+    /*border:;*/
+    /*height: 20px;*/
+    /*width: 72px;*/
+    /*border-radius: 8px;*/
+    /*background: lightblue;*/
+    /*cursor: pointer;*/
+    /*margin-top: -6px;*/
+    /*box-shadow:;*/
+/*}*/
+
+
+
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #5b4a38;
+    margin-top: -10px;
+    z-index: 10;
+    /*width: 100px;*/
+    /*-webkit-appearance: none;*/
+    /*height: 10px;*/
+    /*cursor: ew-resize;*/
+    /*background: #434343;*/
+    /*box-shadow: -80px 0 0 80px #FF6511;*/
+}
+
+
+
+
+
+
+
+input[type="range"]::-moz-range-progress {
+    background-color: #FF6511;
+}
+
+input[type="range"]::-moz-range-track {
+    background-color: #FF6511;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background-color: #FF6511;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background-color: #9a905d;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    max-width: 100%;
+    height: 7px;
+    border:none;
+    box-shadow:inset 0px 0px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow:inset 0px 0px 1px rgba(0,0,0,0.1);
+    background-color: #e1d7be;
+    border-radius: 5px;
+}
+
+.call_block3_text2{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.call_block3_text2 ol{
+    text-align: left;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.call_block3_text2 p{
+    text-align: left;
+    font-family: "Roboto Condensed";
+    color: #6B6B6B;
+    font-size: 16px;
+}
+.call_block3_text2 a{
+    text-align: left;
+    font-family: "Roboto Condensed";
+    color: #0A6CFF;
+    font-size: 16px;
+}
+
+.but_zakaz{
+    display: block;
+    margin: 0 auto;
+    width: 164px;
+    height: 34px;
+    background: url(../img/btnzak.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+}
+
+.call_block4{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+.call_block4 p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+}
+.call_block4 span{
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.call_block4_radio label{
+    display: block;
+
+}
+.call_block4_radio{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+  /*=======Блок добавить еще сетку======*/
+ .call_block_nes{
+     display:none;
+     position: relative;
+     overflow: hidden;
+     margin: 0 auto;
+     width: 90%;
+ }
+
+
+.call_block_btn_nes {
+    display:block;
+    width: 60%;
+    margin:0 auto ;
+    margin-bottom: 100px;
+}
+
+.call_block_nes p{
+    text-align: center;
+}
+
+.but_block_nes1{
+    display: block;
+    float: left;
+    width: 76px;
+    height: 34px;
+    background: url(../img/btn_yes.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size:16px ;
+}
+.but_block_nes1{
+    text-align: center;
+}
+
+
+.but_block_nes2{
+    display: block;
+    float: right;
+    width: 76px;
+    height: 34px;
+    background: url(../img/btn_no.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size:16px ;
+}
+.call_block_btn_nes_img{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    top: 50px;
+    bottom: 30px;
+    margin-top: 130px;
+    width: 100%;
+}
+.plus{
+    display: block;
+    float: left;
+    width: 40px;
+    height: 41px;
+    margin-top: 40px;
+}
+.canvas{
+    display: block;
+    float: right;
+    width: 127px;
+    height: 179px;
+}
+
+/*=======Блок нужна установка ======*/
+ .call_block_setka{
+     display:none;
+     position: relative;
+     overflow: hidden;
+     margin: 0 auto;
+     width: 90%;
+ }
+
+.call_block_setka p{
+    text-align: center;
+}
+
+.call_block_btn_nes_img_dev{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    margin: 0 auto;
+}
+.canvas2_dev{
+    display: block;
+    margin: 0 auto;
+}
+
+.ruka_dev{
+    display: block;
+    margin: 0 auto;
+}
+
+/*<!--Блок Замер первый экран-->*/
+  .call_block_samer1{
+      display:none;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      width: 90%;
+  }
+
+  .call_block_samer1_bl{
+      display: block;
+  }
+.call_block_samer1_bl img{
+    display: block;
+    margin: 0 auto;
+}
+
+.call_block_samer1_text_dev{
+    display: block;
+}
+
+.call_block_samer1_text_dev p{
+    font-family: "Roboto Condensed Light";
+    color: #000000;
+    font-size: 17px;
+ }
+ .but_block_zamer1_dev {
+     display: block;
+     float: right;
+     width: 241px;
+     height: 34px;
+     background: url(../img/zamer1.png) 0 0 no-repeat;
+     border: none;
+     color: #ffffff;
+     font-size: 16px;
+ }
+
+/*.<!--Блок Замер второй экран-->*/
+     .call_block_samer2{
+         display: none;
+         position: relative;
+         overflow: hidden;
+         margin: 0 auto;
+         width: 90%;
+     }
+
+.call_block_samer2_mob-bl{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color:#F2F2F2 ;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.zak_titel{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.first{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.first input{
+    width: 100%;
+}
+.zak_text{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 12px;
+    text-align: center;
+}
+.zak_text span{
+    font-weight: bold;
+}
+
+.chek_form_text{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.chekform{
+    display: block;
+    float: left;
+    width: 10%;
+}
+.form_text{
+    display: block;
+    margin: 0 auto;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 12px;
+    text-align: center;
+}
+.form_text a{
+    color: #0A6CFF;
+}
+
+.form_btn{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.but_block_zamer2{
+    display: block;
+    margin: 0 auto;
+    width: 241px;
+    height: 34px;
+    background: url(../img/zamer1.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size:16px ;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+/*.<!--Блок Тип доставки->*/
+   .call_block4{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+
+.call_block4_im_mob{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.call_block4_left_mob{
+    display: block;
+    float: left;
+    width: 40%;
+}
+
+.call_block4_rigt_mob{
+    display: block;
+    float: right;
+    width: 40%;
+}
+
+.call_block4_btn{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.but_block4{
+    display: block;
+    margin: 0 auto;
+    width: 113px;
+    height: 34px;
+    background: url(../img/btn_dostavka.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size:16px ;
+    float: left;
+
+}
+
+
+/*<!--Блок 5 Самовывоз1-->*/
+.call_block_sam_dev{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.call_block_sam_dev p{
+    text-align: center;
+}
+
+.call_block1_sam{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 45%;
+    height: auto;
+    float: left;
+}
+
+.call_block1_sam span {
+    text-align: left;
+    display: block;
+    position: relative;
+    /*padding-left: 10px;*/
+    /*left: 10px;*/
+    left: 10px;
+}
+
+
+.call_block1_sam_text{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    top: 20px;
+}
+
+.call_block1_sam_text img{
+    display: block;
+    //width: 10%;
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+
+
+
+
+
+
+
+/*<!--Блок 6 Итоги заказа-->*/
+        .call_block_itog_dev{
+            display: none;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            width: 90%;
+        }
+.call_block_itog_content{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    background-color:#F2F2F2 ;
+    margin-top: 20px;
+}
+.call_block_itog_titel{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    background-color:#CFD3D6 ;
+    top: 10px;
+    bottom: 10px;
+}
+.call_block_itog_titel p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+}
+.call_block_itog_titel span {
+    color: #0A6CFF;
+}
+
+
+.call_block_itog_text{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+.call_block_itog_text p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+
+.call_block_itog_text2{
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.itog_titel{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.call_block_itog_text2 p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+    width: 100%;
+}
+
+.call_block_itog_text2 span{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+    text-align: right;
+    float: right;
+}
+.call_block_itog_zena{
+    display: block;
+    margin: 0 auto;
+}
+.call_block_itog_zena span{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.call_block_itog{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.first2 {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.first2 input{
+    width: 100%;
+}
+.but_block6_mob {
+    display: block;
+    margin: 0 auto;
+    width: 134px;
+    height: 34px;
+    background: url(../img/btnitog.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+}
+.call_block_itog_text3{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.call_block_itog_text3 p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 12px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.call_block_itog_text3 a{
+    color: #0A6CFF;
+}
+
+.call_block1_t{
+    display: block;
+}
+.call_block1_t p{
+    text-align: center;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.number{
+    color: #FF6511;
+}
+
+/*<!--Блок 7 Итоги QR-->*/
+ .call_block_QR_dev{
+     display: none;
+     position: relative;
+     overflow: hidden;
+     margin: 0 auto;
+     width: 90%;
+ }
+
+ .call_block_QR_content_dev{
+     display: block;
+     width: 60%;
+     margin: 0 auto;
+ }
+
+.call_block_QR_content{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+.call_QR_block1 img{
+    width: 10%;
+    float: left;
+}
+
+.call_QR_block1 p{
+    width: 86%;
+    float: right;
+    margin: 0;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.call_QR_block1 span{
+    font-weight: bold;
+}
+
+.call_QR_img{
+    padding-bottom: 20px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+    top: 20px;
+    bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/*<!--Блок * Итоги MAP-->*/
+.call_block_MAP_dev{
+    /*display: block;*/
+ /*// visibility: collapse;*/
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.www4{
+    display: block;
+}
+.ymaps-2-1-78-control-popup__content{
+    display: none;
+    /*opacity:0;*/
+   /*visibility:collapse;*/
+    z-index: -100;
+
+
+}
+
+.call_block_map_content_dev{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.call_block_map_content{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.call_block_map_content span{
+    margin-left: 10px;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.call_block_map_content_dev span{
+    margin-left: 10px;
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.call_block_map_content p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.call_block_map_content_dev p{
+    font-family: "Roboto Condensed";
+    color: #000000;
+    font-size: 16px;
+}
+.adres2{
+    display: block;
+    width: 100%;
+}
+.call_block_map{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+}
+.call_block_map1{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+}
+
+
+#map {
+    display: block;
+    width: 600px;
+    height: 600px;
+    padding: 0;
+    margin: 0;
+}
+#map1 {
+    display: block;
+    width: 600px;
+    height: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+#mapadr{
+    display: block;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.call_block8_btn{
+    display: block;
+    margin-top: 10px;
+}
+
+.but_block8_mob {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 34px;
+    background: url(../img/btn8.png) 0 0 no-repeat;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/*   Мобиьная верстка */
+@media only screen and (max-width : 480px) {
+    .container{
+        display: none;
+    }
+
+    .container_mob{
+        display: block;
+    }
+
+
+
+    .container_mob p{
+        font-family: "Roboto Condensed Light";
+        color: #000000;
+        font-size: 17px;
+    }
+
+
+    .call_block1_mob_titel{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .call_block_btn_mob{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    .call_block1_tm{
+        display: block;
+    }
+    .call_block1_tm p{
+        text-align: center;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .call_block1_img {
+        display: block;
+        width: 45%;
+        float: left;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+
+    .call_block2_1_left{
+        display: block;
+        width: 80%;
+       position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        float: none;
+        padding-bottom: 20px;
+    }
+
+    .call_block2_1_richt{
+        display: block;
+        width: 80%;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .numberm{
+        color: #FF6511;
+    }
+
+   .call_block1_mob{
+       display: block;
+       width: 90%;
+       margin: 0 auto;
+   }
+
+    .call_block1_mob p{
+        font-family: "Roboto Condensed Light";
+        color: #000000;
+        font-size: 17px;
+    }
+    .call_block1_mob span{
+        font-weight: bold;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .call_block1_mob_img{
+        display: block;
+        float: left;
+        width: 40%;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    .call_block1_img {
+        display: block;
+        width: 45%;
+        float: left;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+
+    .call_block1_img img{
+        display: block;
+        width: 130px;
+        height: auto;
+    }
+
+    .call_block2_mob{
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block2_mob p{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        font-family: "Roboto Condensed Light";
+        color: #000000;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .call_block2_1_richt a{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    .call_block2_mob span{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        font-weight: bold;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .call_block2_1{
+        display: block;
+        width: 100%;
+    }
+    .call_block2_2{
+        display: block;
+        width: 100%;
+    }
+    .block2_l_colorm {
+        display: block;
+        width: 169px;
+        height: 169px;
+        border: 1px solid #000000;
+        /*background-color: 1001;*/
+        background-color: #ffffff;
+
+    }
+
+
+    .block2_colorm {
+        display: none;
+        width: 169px;
+        height: 169px;
+        border: 1px solid #000000;
+        /*background-color: 1001;*/
+        background-color: #ffffff;
+        margin-bottom: 5px;
+    }
+
+    .block2_colorm_active {
+        display: block;
+
+    }
+
+
+    .call_block2_1_richtm {
+        display: block;
+        width: 169px;
+        height: 169px;
+        border: 1px solid #000000;
+    }
+
+    .call_blockRAL_mob{
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .table{
+        border: 1px solid #000000;
+		margin-bottom:30px;
+    }
+
+    .table th{
+		width:100%;
+        text-align: center;
+    }
+	.table th p{
+		width:100%;
+        text-align: center;
+    }
+    .table td{
+        border: 1px solid #000000;
+        padding: 0;
+        margin: 0;
+        width: 25%;
+		text-align:center;
+    }
+
+
+    #colorralm1000{
+        background-color: #CCC58F;
+    }
+    #colorralm1001{
+        background-color: #D1BC8A;
+    }
+    #colorralm1002{
+        background-color: #D2B773;
+    }
+    #colorralm1003{
+        background-color: #F7BA0B;
+    }
+    #colorralm1004{
+        background-color: #E2B007;
+    }
+    #colorralm1005{
+        background-color: #E2B007;
+    }
+    #colorralm1006{
+        background-color: #E1A100;
+    }
+    #colorralm1007{
+        background-color: #E79C00;
+    }
+    #colorralm1008{
+        background-color: #E79C00;
+    }
+    #colorralm1011{
+        background-color: #AF8A54;
+    }
+    #colorralm1012{
+        background-color: #D9C022;
+    }
+    #colorralm1013{
+        background-color: #E9E5CE;
+    }
+    #colorralm1014{
+        background-color: #DED09F;
+    }
+    #colorralm1015{
+        background-color: #EADEBD;
+    }
+    #colorralm1016{
+        background-color: #EAF044;
+    }
+    #colorralm1017{
+        background-color: #F4B752;
+    }
+    #colorralm1018{
+        background-color: #F3E03B;
+    }
+    #colorralm1019{
+        background-color: #A4957D;
+    }
+
+    #colorralm1020{
+        background-color: #9A9464;
+    }
+    #colorralm1021{
+        background-color:#EEC900;
+    }
+
+    #colorralm1023{
+        background-color:#F0CA00;
+    }
+
+    #colorralm1024{
+        background-color:#B89C50;
+    }
+    #colorralm1026{
+        background-color:#F5FF00;
+    }
+    #colorralm1027{
+        background-color:#A38C15;
+    }
+    #colorralm1028{
+        background-color:#FFAB00;
+    }
+    #colorralm1032{
+        background-color:#DDB20F;
+    }
+    #colorralm1033{
+        background-color:#FAAB21;
+    }
+    #colorralm1034{
+        background-color:#EDAB56;
+    }
+    #colorralm1035{
+        background-color:#A29985;
+    }
+    #colorralm1036{
+        background-color:#927549;
+    }
+    #colorralm1037{
+        background-color:#EEA205;
+    }
+    #colorralm2000{
+        background-color:#DD7907;
+    }
+    #colorralm2001{
+        background-color:#BE4E24;
+    }
+    #colorralm2002{
+        background-color:#C63927;
+    }
+    #colorralm2003{
+        background-color:#FA842B;
+    }
+    #colorralm2004{
+        background-color:#E75B12;
+    }
+    #colorralm2005{
+        background-color:#FF2300;
+    }
+    #colorralm2007{
+        background-color:#FFA421;
+    }
+    #colorralm2008{
+        background-color:#F3752C;
+    }
+    #colorralm2009{
+        background-color:#E15501;
+    }
+    #colorralm2010{
+        background-color:#D4652F;
+    }
+    #colorralm2011{
+        background-color:#EC7C25;
+    }
+    #colorralm2012{
+        background-color:#DB6A50;
+    }
+    #colorralm2013{
+        background-color:#954527;
+    }
+    #colorralm3000{
+        background-color:#AB2524;
+    }
+    #colorralm3001{
+        background-color:#A02128;
+    }
+    #colorralm3002{
+        background-color:#A1232B;
+    }
+    #colorralm3003{
+        background-color:#8D1D2C;
+    }
+    #colorralm3004{
+        background-color:#701F29;
+    }
+    #colorralm3005{
+        background-color:#5E2028;
+    }
+    #colorralm3007{
+        background-color:#402225;
+    }
+    #colorralm3009{
+        background-color:#703731;
+    }
+    #colorralm3011{
+        background-color:#7E292C;
+    }
+    #colorralm3012{
+        background-color:#CB8D73;
+    }
+    #colorralm3013{
+        background-color:#9C322E;
+    }
+    #colorralm3014{
+        background-color:#D47479;
+    }
+    #colorralm3015{
+        background-color:#E1A6AD;
+    }
+    #colorralm3016{
+        background-color:#AC4034;
+    }
+    #colorralm3017{
+        background-color:#D3545F;
+    }
+    #colorralm3018{
+        background-color:#D14152;
+    }
+    #colorralm3020{
+        background-color:#C1121C;
+    }
+    #colorralm3022{
+        background-color:#D56D56;
+    }
+    #colorralm3024{
+        background-color:#F70000;
+    }
+    #colorralm3026{
+        background-color:#FF0000;
+    }
+    #colorralm3027{
+        background-color:#B42041;
+    }
+    #colorralm3028{
+        background-color:#CB3334;
+    }
+    #colorralm3031{
+        background-color:#AC323B;
+    }
+
+    #colorralm3032{
+        background-color:#711521;
+    }
+    #colorralm3033{
+        background-color:#B24C43;
+    }
+    #colorralm4001{
+        background-color:#8A5A83;
+    }
+    #colorralm4002{
+        background-color:#933D50;
+    }
+    #colorralm4003{
+        background-color:#D15B8F;
+    }
+
+    #colorralm4004{
+        background-color:#691639;
+    }
+    #colorralm4005{
+        background-color:#83639D;
+    }
+    #colorralm4006{
+        background-color:#992572;
+    }
+    #colorralm4007{
+        background-color:#4A203B;
+    }
+    #colorralm4008{
+        background-color:#904684;
+    }
+    #colorralm4009{
+        background-color:#A38995;
+    }
+    #colorralm4010{
+        background-color:#C63678;
+    }
+    #colorralm4011{
+        background-color:#8773A1;
+    }
+    #colorralm4012{
+        background-color:#8773A1;
+    }
+
+    #colorralm5000{
+        background-color:#384C70;
+    }
+    #colorralm5001{
+        background-color:#384C70;
+    }
+    #colorralm5002{
+        background-color:#2B2C7C;
+    }
+    #colorralm5003{
+        background-color:#2B2C7C;
+    }
+    #colorralm5004{
+        background-color:#1D1F2A;
+    }
+    #colorralm5005{
+        background-color:#154889;
+    }
+    #colorralm5007{
+        background-color:#41678D;
+    }
+    #colorralm5008{
+        background-color:#313C48;
+    }
+    #colorralm5009{
+        background-color:#2E5978;
+    }
+    #colorralm5010{
+        background-color:#13447C;
+    }
+    #colorralm5011{
+        background-color:#232C3F;
+    }
+    #colorralm5012{
+        background-color:#3481B8;
+    }
+    #colorralm5013{
+        background-color:#232D53;
+    }
+    #colorralm5014{
+        background-color:#6C7C98;
+    }
+    #colorralm5015{
+        background-color:#2874B2;
+    }
+    #colorralm5017{
+        background-color:#0E518D;
+    }
+    #colorralm5018{
+        background-color:#21888F;
+    }
+    #colorralm5019{
+        background-color:#1A5784;
+    }
+    #colorralm5020{
+        background-color:#0B4151;
+    }
+    #colorralm5021{
+        background-color:#07737A;
+    }
+    #colorralm5022{
+        background-color:#2F2A5A;
+    }
+    #colorralm5023{
+        background-color:#4D668E;
+    }
+
+    #colorralm5024{
+        background-color:#6A93B0;
+    }
+    #colorralm5025{
+        background-color:#07737A;
+    }
+    #colorralm5026{
+        background-color:#102C54;
+    }
+    #colorralm6000{
+        background-color:#327662;
+    }
+    #colorralm6001{
+        background-color:#28713E;
+    }
+    #colorralm6002{
+        background-color:#276235;
+    }
+    #colorralm6003{
+        background-color:#4B573E;
+    }
+    #colorralm6004{
+        background-color:#0E4243;
+    }
+    #colorralm6005{
+        background-color:#0F4336;
+    }
+    #colorralm6006{
+        background-color:#40433B;
+    }
+    #colorralm6007{
+        background-color:#283424;
+    }
+    #colorralm6008{
+        background-color:#35382E;
+    }
+    #colorralm6009{
+        background-color:#26392F;
+    }
+    #colorralm6010{
+        background-color:#3E753B;
+    }
+
+    #colorralm6011{
+        background-color:#66825B;
+    }
+    #colorralm6012{
+        background-color:#31403D;
+    }
+    #colorralm6013{
+        background-color:#797C5A;
+    }
+    #colorralm6014{
+        background-color:#444337;
+    }
+    #colorralm6015{
+        background-color:#3D403A;
+    }
+    #colorralm6016{
+        background-color:#026A52;
+    }
+    #colorralm6017{
+        background-color:#026A52;
+    }
+    #colorralm6018{
+        background-color:#48A43F;
+    }
+    #colorralm6019{
+        background-color:#B7D9B1;
+    }
+    #colorralm6020{
+        background-color:#354733;
+    }
+    #colorralm6021{
+        background-color:#86A47C;
+    }
+    #colorralm6022{
+        background-color:#3E3C32;
+    }
+    #colorralm6024{
+        background-color:#008754;
+    }
+    #colorralm6025{
+        background-color:#53753C;
+    }
+    #colorralm6026{
+        background-color:#005D52;
+    }
+    #colorralm6027{
+        background-color:#81C0BB;
+    }
+
+    #colorralm6028{
+        background-color:#2D5546;
+    }
+    #colorralm6029{
+        background-color:#007243;
+    }
+    #colorralm6032{
+        background-color:#0F8558;
+    }
+    #colorralm6033{
+        background-color:#478A84;
+    }
+
+    #colorralm6034{
+        background-color:#7FB0B2;
+    }
+    #colorralm6035{
+        background-color:#1B542C;
+    }
+    #colorralm6036{
+        background-color:#005D4C;
+    }
+    #colorralm6037{
+        background-color:#008F39;
+    }
+    #colorralm6038{
+        background-color:#00BB2E;
+    }
+    #colorralm7000{
+        background-color:#00BB2E;
+    }
+    #colorralm7001{
+        background-color:#8F999F;
+    }
+    #colorralm7002{
+        background-color:#008F39;
+    }
+    #colorralm7003{
+        background-color:#7A7B6D;
+    }
+    #colorralm7004{
+        background-color:#9EA0A1;
+    }
+    #colorralm7005{
+        background-color:#6B716F;
+    }
+    #colorralm7006{
+        background-color:#756F61;
+    }
+    #colorralm7008{
+        background-color:#746643;
+    }
+    #colorralm7009{
+        background-color:#5B6259;
+    }
+    #colorralm7010{
+        background-color:#575D57;
+    }
+    #colorralm7011{
+        background-color:#555D61;
+    }
+    #colorralm7012{
+        background-color:#596163;
+    }
+    #colorralm7013{
+        background-color:#555548;
+    }
+    #colorralm7015{
+        background-color:#51565C;
+    }
+    #colorralm7016{
+        background-color:#373F43;
+    }
+    #colorralm7021{
+        background-color:#2E3234;
+    }
+    #colorralm7022{
+        background-color:#4B4D46;
+    }
+    #colorralm7023{
+        background-color:#818479;
+    }
+    #colorralm7024{
+        background-color:#474A50;
+    }
+    #colorralm7026{
+        background-color:#474A50;
+    }
+    #colorralm7030{
+        background-color:#939388;
+    }
+    #colorralm7031{
+        background-color:#5D6970;
+    }
+    #colorralm7032{
+        background-color:#B9B9A8;
+    }
+    #colorralm7033{
+        background-color:#818979;
+    }
+    #colorralm7034{
+        background-color:#939176;
+    }
+    #colorralm7035{
+        background-color:#CBD0CC;
+    }
+    #colorralm7036{
+        background-color:#9A9697;
+    }
+    #colorralm7037{
+        background-color:#7C7F7E;
+    }
+    #colorralm7038{
+        background-color:#B4B8B0;
+    }
+    #colorralm7039{
+        background-color:#6B695F;
+    }
+    #colorralm7040{
+        background-color:#9DA3A6;
+    }
+    #colorralm7042{
+        background-color:#8F9695;
+    }
+    #colorralm7043{
+        background-color:#4E5451;
+    }
+    #colorralm7044{
+        background-color:#BDBDB2;
+    }
+    #colorralm7045{
+        background-color:#91969A;
+    }
+    #colorralm7046{
+        background-color:#82898E;
+    }
+    #colorralm7047{
+        background-color:#CFD0CF;
+    }
+    #colorralm7048{
+        background-color:#888175;
+    }
+    #colorralm8000{
+        background-color:#887142;
+    }
+    #colorralm8001{
+        background-color:#9C6B30;
+    }
+    #colorralm8002{
+        background-color:#7B5141;
+    }
+    #colorralm8003{
+        background-color:#80542F;
+    }
+    #colorralm8004{
+        background-color:#8F4E35;
+    }
+    #colorralm8007{
+        background-color:#6F4A2F;
+    }
+    #colorralm8008{
+        background-color:#6F4F28;
+    }
+    #colorralm8011{
+        background-color:#5A3A29;
+    }
+    #colorralm8012{
+        background-color:#673831;
+    }
+    #colorralm8014{
+        background-color:#49392D;
+    }
+    #colorralm8015{
+        background-color:#633A34;
+    }
+    #colorralm8016{
+        background-color:#4C2F26;
+    }
+    #colorralm8017{
+        background-color:#44322D;
+    }
+    #colorralm8019{
+        background-color:#3F3A3A;
+    }
+    #colorralm8022{
+        background-color:#211F20;
+    }
+    #colorralm8023{
+        background-color:#A65E2F;
+    }
+    #colorralm8024{
+        background-color:#79553C;
+    }
+    #colorralm8025{
+        background-color:#755C49;
+    }
+
+    #colorralm8028{
+        background-color:#4E3B2B;
+    }
+
+    #colorralm8029{
+        background-color:#773C27;
+    }
+    #colorralm9001{
+        background-color:#EFEBDC;
+    }
+
+    #colorralm9002{
+        background-color:#DDDED4;
+    }
+    #colorralm9003{
+        background-color:#F4F8F4;
+    }
+    #colorralm9004{
+        background-color:#2E3032;
+    }
+    #colorralm9005{
+        background-color:#0A0A0D;
+    }
+    #colorralm9006{
+        background-color:#A5A8A6;
+    }
+    #colorralm9007{
+        background-color:#8F8F8C;
+    }
+    #colorralm9010{
+        background-color:#F7F9EF;
+    }
+    #colorralm9011{
+        background-color:#292C2F;
+    }
+    #colorralm9016{
+        background-color:#F7FBF5;
+    }
+
+    #colorralm9017{
+        background-color:#2A2D2F;
+    }
+
+    #colorralm9018{
+        background-color:#CFD3CD;
+    }
+    #colorralm9022{
+        background-color:#9C9C9C;
+    }
+    #colorralm9023{
+        background-color:#7E8182;
+    }
+    #colorralm9025{
+        background-color:#ffffff;
+    }
+
+    #colorralm9026{
+        background-color:#ffffff;
+    }
+    #colorralm9027{
+        background-color:#ffffff;
+    }
+	
+	
+	
+	
+	
+
+    .call_block3_mob{
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .calc_block3_1 {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 355px;
+    }
+
+    .calc_block3_im {
+        display: block;
+        margin-left: 60px;
+        width: 319px;
+        height: 347px;
+    }
+    .calc_block3_L{
+        height: 347px;
+    }
+
+    .calc_block3_im img{
+        width: 319px;
+        height: 347px;
+    }
+    .Hokn {
+        display: block;
+        position: absolute;
+        transform: rotate(270deg);
+        top: 150px;
+        width: 250px;
+        left: -100px;
+    }
+    .calc_block3_inp {
+        width: 85%;
+        margin-top: 10px;
+    }
+
+    .call_block3_img_inp{
+        height: auto;
+    }
+
+    .call_block4_mob{
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block4_mob p{
+        font-family: "Roboto Condensed Light";
+        color: #000000;
+        font-size: 17px;
+    }
+    .call_block4_mob span{
+        font-weight: bold;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+    .call_block4_im_mob{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block4_left_mob{
+        display: block;
+        float: left;
+        width: 40%;
+    }
+
+    .call_block4_rigt_mob{
+        display: block;
+        float: right;
+        width: 40%;
+    }
+
+    .call_block4_btn{
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .but_block4_mob{
+        display: block;
+        margin: 0 auto;
+        width: 113px;
+        height: 34px;
+        background: url(../img/btn_dostavka.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+
+    }
+
+
+    .call_block_nes_mob{
+        display: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block_nes_mob p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 40px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    .call_block_btn_nes_mob {
+        display: block;
+        width: 60%;
+        margin:0 auto ;
+        margin-bottom: 100px;
+    }
+
+    .but_block_nes1_mob{
+        display: block;
+        float: left;
+        width: 76px;
+        height: 34px;
+        background: url(../img/btn_yes.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+    }
+    .but_block_nes2_mob{
+        display: block;
+        float: right;
+        width: 76px;
+        height: 34px;
+        background: url(../img/btn_no.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+    }
+    .call_block_btn_nes_img{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        top: 50px;
+        bottom: 30px;
+        margin-top: 130px;
+        width: 100%;
+    }
+    .plus{
+        display: block;
+        float: left;
+        width: 40px;
+        height: 41px;
+        margin-top: 40px;
+    }
+    .canvas{
+        display: block;
+        float: right;
+        width: 127px;
+        height: 179px;
+    }
+    .call_block_setka_mob{
+        display: none;
+    }
+
+    .call_block_setka_mob p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 40px;
+        font-weight: bold;
+        margin-bottom: 50px;
+
+    }
+
+    .canvas2{
+        display: block;
+        margin: 0 auto;
+        width: 127px;
+        height: 179px;
+    }
+
+    .ruka{
+        display: block;
+        margin: 0 auto;
+        width: 127px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    /*===========Самовывоз================= */
+    .call_block_samer1_mob{
+        display: none;
+    }
+
+    .call_block_samer1_mob-bl{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .zamer1{
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    .call_block_samer1_text{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .but_block_zamer1{
+        display: block;
+        float: right;
+        width: 241px;
+        height: 34px;
+        background: url(../img/zamer1.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+    }
+    .call_block_samer2_mob{
+        display: none;
+    }
+    .call_block_samer2_mob-bl{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        background-color:#F2F2F2 ;
+        margin-top: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    .zak_titel{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 18px;
+        text-align: center;
+        padding-top: 40px;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    .first{
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .first input{
+        width: 100%;
+    }
+    .zak_text{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 12px;
+        text-align: center;
+    }
+    .zak_text span{
+        font-weight: bold;
+    }
+
+    .chek_form_text{
+        display: block;
+       /* width: 80%;*/
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /*.chekform{*/
+        /*display: block;*/
+        /*float: left;*/
+        /*width: 10%;*/
+    /*}*/
+    .form_text{
+        display: block;
+         margin: 0 auto;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 12px;
+        text-align: center;
+    }
+    .form_text a{
+        color: #0A6CFF;
+    }
+
+    .form_btn{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .but_block_zamer2{
+        display: block;
+        margin: 0 auto;
+        width: 241px;
+        height: 34px;
+        background: url(../img/zamer1.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size:16px ;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+       /*============sam=================*/
+    .call_block_sam_mob{
+        display: none;
+    }
+    .call_block_sam{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .call_block1_sam{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .sam1{
+        display: block;
+    }
+
+    .call_block_sam p{
+
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+        text-align: left;
+    }
+    .call_block1_sam span{
+        display: inline-block;
+        /* left: 20px; */
+        margin-left: 20px;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+
+    .call_block1_sam_text{
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .sam1i{
+        display: block;
+        width: 10%;
+        float: left;
+    }
+    .sam1t{
+        display: block;
+        width: 85%;
+        float: right;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    /*=======Блок итоги=============*/
+    .call_block_itog_mob{
+        display: none;
+    }
+
+    .call_block_itog_content{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+        background-color:#F2F2F2 ;
+        margin-top: 20px;
+    }
+    .call_block_itog_titel{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        background-color:#CFD3D6 ;
+       top: 10px;
+        bottom: 10px;
+    }
+    .call_block_itog_titel p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .call_block_itog_titel span {
+       color: #0A6CFF;
+    }
+
+
+    .call_block_itog_text{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .call_block_itog_text p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+
+    .call_block_itog_text2{
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .itog_titel{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .call_block_itog_text2 p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+       width: 100%;
+    }
+
+    .call_block_itog_text2 span{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+        text-align: right;
+        float: right;
+    }
+    .call_block_itog_zena{
+        display: block;
+        margin: 0 auto;
+    }
+    .call_block_itog_zena span{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .call_block_itog{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .first2 {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .first2 input{
+        width: 100%;
+    }
+    .but_block6_mob {
+        display: block;
+        margin: 0 auto;
+        width: 134px;
+        height: 34px;
+        background: url(../img/btnitog.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size: 12px;
+    }
+    .call_block_itog_text3{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .call_block_itog_text3 p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 12px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+    .call_block_itog_text3 a{
+        color: #0A6CFF;
+    }
+
+        /*===== block QR========*/
+    .call_block_QR_mob{
+        display: none;
+    }
+
+    .call_block_QR_content{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .call_QR_block1 img{
+        width: 10%;
+        float: left;
+    }
+
+    .call_QR_block1 p{
+        width: 86%;
+        float: right;
+        margin: 0;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+    .call_QR_img{
+        padding-bottom: 20px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+        width: 100%;
+        top: 20px;
+        bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    /*=======Block MAP=======*/
+    .call_block_MAP_mob{
+        display: none;
+    }
+    #mapmob {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .call_block_map_content{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .call_block_map_content span{
+        margin-left: 10px;
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+    .call_block_map_content p{
+        font-family: "Roboto Condensed";
+        color: #000000;
+        font-size: 16px;
+    }
+    .adres2{
+        display: block;
+        width: 100%;
+    }
+    .call_block_map{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 320px;
+        height: 400px;
+    }
+
+    #mapadr{
+        display: block;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .call_block8_btn{
+        display: block;
+        margin-top: 10px;
+    }
+
+    .but_block8_mob {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 34px;
+        background: url(../img/btn8.png) 0 0 no-repeat;
+        border: none;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+
+}

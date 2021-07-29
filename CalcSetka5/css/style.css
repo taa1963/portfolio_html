@@ -2051,21 +2051,19 @@ input[type=range]::-webkit-slider-runnable-track {
 
     .call_block2_1_left{
         display: block;
-        width: 80%;
+        width: 50%;
        position: relative;
         overflow: hidden;
-        margin: 0 auto;
-        float: none;
+        float: left;
         padding-bottom: 20px;
     }
 
     .call_block2_1_richt{
         display: block;
-        width: 80%;
+        width: 50%;
         position: relative;
         overflow: hidden;
-        margin: 0 auto;
-        float: none;
+        float: right;
     }
 
     .numberm{
@@ -2154,8 +2152,8 @@ input[type=range]::-webkit-slider-runnable-track {
     }
     .block2_l_colorm {
         display: block;
-        width: 169px;
-        height: 169px;
+        width: 100px;
+        height:100px;
         border: 1px solid #000000;
         /*background-color: 1001;*/
         background-color: #ffffff;
@@ -2165,25 +2163,25 @@ input[type=range]::-webkit-slider-runnable-track {
 
     .block2_colorm {
         display: none;
-        width: 169px;
-        height: 169px;
+        width: 100px;
+        height: 100px;
         border: 1px solid #000000;
         /*background-color: 1001;*/
         background-color: #ffffff;
         margin-bottom: 5px;
     }
 
+
+    .call_block2_1_richtm {
+        display: none;
+        width: 169px;
+        height:169px;
+        border: 1px solid #000000;
+    }
+
     .block2_colorm_active {
         display: block;
 
-    }
-
-
-    .call_block2_1_richtm {
-        display: block;
-        width: 169px;
-        height: 169px;
-        border: 1px solid #000000;
     }
 
     .call_blockRAL_mob{

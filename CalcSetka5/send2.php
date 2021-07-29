@@ -11,6 +11,8 @@
 
 //echo $result;
 if (
+    isset($_POST['name2']) && !empty($_POST['name2']) &&
+    isset($_POST['tel2']) && !empty($_POST['tel2']) &&
     isset($_POST['num_mail']) && !empty($_POST['num_mail']) &&
     isset($_POST['rasmer_mail']) && !empty($_POST['rasmer_mail']) &&
     isset($_POST['typepol_mail']) && !empty($_POST['typepol_mail']) &&
@@ -20,6 +22,8 @@ if (
     isset($_POST['dostavka_mail']) && !empty($_POST['dostavka_mail']) &&
     isset($_POST['itogzena_mail']) && !empty($_POST['itogzena_mail']))
 	{
+    $name2 = substr(htmlspecialchars(trim($_POST['name2'])), 0, 1000);
+    $tel2 = substr(htmlspecialchars(trim($_POST['tel2'])), 0, 1000);
     $num_mail = substr(htmlspecialchars(trim($_POST['num_mail'])), 0, 1000);
     $rasmer_mail = substr(htmlspecialchars(trim($_POST['rasmer_mail'])), 0, 100);
     $typepol_mail = substr(htmlspecialchars(trim($_POST['typepol_mail'])), 0, 10000000000);
@@ -45,10 +49,13 @@ if (
         Тип полотна: $typepol_mail
         Цвет полотна:$colorpol_mail
         Тип крепежа:$devpol_mail
-        Цена сетки:zena_mail
+        Цена сетки:$zena_mail
         Доп параметры
         Цена доставки:$dostavka_mail
         Итоговая цена:$itogzena_mail
+        От клиента:
+        Имя:$name2
+        Телефон:$tel2
 
        ";
 

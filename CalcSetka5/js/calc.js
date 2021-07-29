@@ -13,22 +13,13 @@ ZsetkaVuv=0;
 priceV=0;
 $(document).ready(function() {
 
-    //$(".ymaps-2-1-78-route-panel-input__input:eq(0)").css("color", "red");
-    //$(".ymaps-2-1-78-route-panel-input__input").css("color", "red");
-    //var topar=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__icon_last');
-    //
-    //$(".ymaps-2-1-78-route-panel-input__icon_last").css("color", "red");
-    //routePanelControl.routePanel.state.get('to').css("color", "red");
+    $("#teldev").mask("+7(999)999-99-99");
+    $("#tel2_dev").mask("+7(999)999-99-99");
+    $("#tel").mask("+7(999)999-99-99");
+    $("#tel2").mask("+7(999)999-99-99");
 
-    //var ww5=$('.ymaps-2-1-78-route-panel-input__input');
-    //var N=ww5.length;
-    //console.log(N)
-    //for(var i=0; i < ww5.length; i++){
-    //    var row = ww5[i];
-    //    //additionally, you can use it again in a jquery selector
-    //    $(row).css("color", "red");
-    //    //alert('red')
-    //}
+
+
 
 
     $('#ralc').on('input', function() {
@@ -225,7 +216,7 @@ $(document).ready(function() {
         //block.find('.call_block_itog_dev').hide();
         //block.find('.call_block_QR_dev').show();
 
-        sendAjaxForm('result_form', 'form2', '../send2.php');
+        sendAjaxForm('result_form', 'form2', 'send2.php');
         return false;
 
 
@@ -1381,12 +1372,14 @@ $(document).ready(function() {
         if (document.getElementById('radio-21m').checked){
             $('.block2_colorm').css('background-color', '#ffffff');
             $('.block2_colorm').removeClass('block2_colorm_active');
+            $('.call_block2_1_richtm').removeClass('block2_colorm_active');
             colorvsp='Белый';
         }
     });
 
     $('#radio-31m').click(function () {
         $('.block2_colorm').addClass('block2_colorm_active');
+        $('.call_block2_1_richtm').addClass('block2_colorm_active');
 
         color_mob()
     });
@@ -2294,7 +2287,7 @@ $(".colorralm").click(function (){
     var colorid = $(this).attr('data-index');
     var colorzv = $(this).attr('data-color');
     var colorzv1 = $(this).attr('data-colorv');
-    $('.block2_l_colorm').css({'background-color':colorzv});
+    $('.block2_colorm').css({'background-color':colorzv});
     colorvsp=colorzv1;
 
     document.getElementById('ralcm').value=colorid;

@@ -1,5 +1,19 @@
 $( document ).ready(function() {
     $('#but_block6_2').click(function () {
+        var block = $(this).parents('.container_mob');
+        block.find('.call_block1_mob').hide();
+        block.find('.call_block1_mob_titel').hide();
+        block.find('.call_block2_mob').hide();
+        block.find('.call_block3_mob').hide();
+        block.find('.call_block_nes_mob').hide();
+        block.find('.call_block_setka_mob').hide();
+        block.find('.call_block_samer1_mob').hide();
+        block.find('.call_block_samer2_mob').hide();
+        block.find('.call_block4_mob').hide();
+        block.find('.call_block_sam_mob').hide();
+        block.find('.call_block_itog_mob').hide();
+        block.find('.call_block_QR_mob').show();
+        block.find('.call_block_MAP_mob').hide();
 
         sendAjaxForm('result_form', 'form2m', 'send2.php');
         return false;
@@ -9,6 +23,19 @@ $( document ).ready(function() {
 
 
     $('#but_block6_2_dev').click(function () {
+        var block = $(this).parents('.container');
+        block.find('.call_block1').hide();
+        block.find('.call_titel').hide();
+        block.find('.call_block2').hide();
+        block.find('.call_block3').hide();
+        block.find('.call_block_nes').hide();
+        block.find('.call_block_setka').hide();
+        block.find('.call_block_samer1').hide();
+        block.find('.call_block_samer2').hide();
+        block.find('.call_block4').hide();
+        block.find('.call_block_sam_dev').hide();
+        block.find('.call_block_itog_dev').hide();
+        block.find('.call_block_QR_dev').show();
 
         sendAjaxForm2('result_form', 'form2', 'send2.php');
         return false;

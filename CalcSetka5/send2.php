@@ -67,15 +67,22 @@ if (
 
 
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
-    if ($verify) {
-        header('Location: https://aleksandr.tupichenkov.com/CalcSetka2/', true, 302);
-       //  header('Location: https://aleksandr.tupichenkov.com/CalcBloknot14/', true, 302);
-        exit;
-    } else {
-        header('Location: https://aleksandr.tupichenkov.com/CalcSetka2//', true, 302);
-       // header('Location: https://aleksandr.tupichenkov.com/CalcBloknot14/', true, 302);
-        exit;
-    }
+
+        if ($verify) {
+            echo json_encode([
+                'status' => 'ok',
+            ]);
+
+//        header('Location: https://aleksandr.tupichenkov.com/CalcFund3/#popup_block', true, 302);
+            exit;
+        } else {
+            echo json_encode([
+                'status' => 'error',
+            ]);
+            //header('Location: https://aleksandr.tupichenkov.com/CalcFund3/?form_error=1', true, 302);
+            exit;
+        }
+
 }
 
 ?>

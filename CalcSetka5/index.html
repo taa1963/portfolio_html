@@ -866,17 +866,22 @@
                    <form id="form2"  method="post"  action="">
 
                        <div class="form_sp_dev">
-                           <p>ИТОГОВАЯ ЦЕНА ЗА <span id="num_mail" name="num_mail" class="num">1</span> ШТ.</p>
-                           <p> Размеры (ШхB) : <span id="rasmer_mail" name="rasmer_mail"   class="num">500mm x 1500мм</span> </p>
-                           <p>Полотно : <span id="typepol_mail" name="typepol_mai"  class="num"> Антикошка</span> </p>
-                           <p>Цвет рамки: <span id="colorpol_mail" name="colorpol_mail"  class="num"> Белый</span> </p>
-                           <p>Крепёж: <span id="devpol_mail" name="devpol_mail" class="num">  Z-образный металический</span> </p>
-                           <p>Цена изделия: <span id="zena_mail" name="zena_mail" class="num">1000</span> руб </p>
+
+                           <p>ИТОГОВАЯ ЦЕНА ЗА<input type="text" name="num_mail" id="num_mail" value="1"> ШТ.</p>
+                           <p>Размеры (ШхB) :<input type="text" name="rasmer_mail" id="rasmer_mail" value="500mm x 1500мм"> </p>
+                           <p>Полотно :<input type="text" name="typepol_mail" id="typepol_mail" value=" Антикошка"> </p>
+                           <p>Цвет рамки:<input type="text" name="colorpol_mail" id="colorpol_mail" value="Белый"> </p>
+                           <p>Крепёж:<input type="text" name="devpol_mail" id="devpol_mail" value="Z-образный металический"> </p>
+                           <p>Цена изделия:<input type="text" name="zena_mail" id="zena_mail" value="1000"> </p>
+
                            <p class="itog_titel">Доп услуги</p>
-                           <p>Доставка: <span id="dostavka_mail" name="dostavka_mail"  class="num">0р.</span> </p>
-                           <p>Монтаж: <span id="montag_mail" name="montag_mail" class="num">0р.</span> </p>
-                           <p>Самовывоз: <span id="samo_mail" name="samo_mail"  class="num">0р.</span> </p>
-                           <span id="itogzena_mail"  name="itogzena_mail" class="num">1250 руб.</span>
+                           <p>Доставка:<input type="text" name="dostavka_mail" id="dostavka_mail" value="0p"> </p>
+                           <p>Монтаж:<input type="text" name="montag_mail" id="montag_mail" value="0p"> </p>
+                           <p>Самовывоз:<input type="text" name="samo_mail" id="samo_mail" value="0p"> </p>
+                           <p>Itog <input type="text" name="itogzena_mail" id="itogzena_mail" value="1250 p"> </p>
+
+
+
 
 
                        </div>
@@ -1295,11 +1300,13 @@
                        //alert(price)
                        priceV=price;
                        $("#dostavka_dev").text(priceV);
+                       document.getElementById('dostavka_mail').value=priceV;
                        var itogzena_dev=ZsetkaVuv*1+priceV*1;
                       // alert(ZsetkaVuv);
                       // alert(priceV);
                        $('#itogzena_dev').text(itogzena_dev);
-                       $('#itogzena_mail').text(itogzena_dev);
+                       //$('#itogzena_mail').text(itogzena_dev);
+                       document.getElementById('itogzena_mail').value=itogzena_dev;
 
                       // console.log(activeRoute);
                       // var kudav=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value;
@@ -2176,17 +2183,21 @@
                  <form id="form2m" action="" method="post">
 
                      <div class="form_sp_mob">
-                         <p>ИТОГОВАЯ ЦЕНА ЗА <span id="num_mailm" name="num_mail" class="num">1</span> ШТ.</p>
-                         <p> Размеры (ШхB) : <span id="rasmer_mailm" name="rasmer_mail"   class="num">500mm x 1500мм</span> </p>
-                         <p>Полотно : <span id="typepol_mailm" name="typepol_mail"  class="num"> Антикошка</span> </p>
-                         <p>Цвет рамки: <span id="colorpol_mailm" name="colorpol_mail"  class="num"> Белый</span> </p>
-                         <p>Крепёж: <span id="devpol_mailm" name="devpol_mail" class="num">  Z-образный металический</span> </p>
-                         <p>Цена изделия: <span id="zena_mailm" name="zena_mail" class="num">1000</span> руб </p>
+
+                         <p>ИТОГОВАЯ ЦЕНА ЗА<input type="text" name="num_mail" id="num_mailm" value="1"> ШТ.</p>
+                         <p>Размеры (ШхB) :<input type="text" name="rasmer_mail" id="rasmer_mailm" value="500mm x 1500мм"> </p>
+                         <p>Полотно :<input type="text" name="typepol_mail" id="typepol_mailm" value=" Антикошка"> </p>
+                         <p>Цвет рамки:<input type="text" name="colorpol_mail" id="colorpol_mailm" value="Белый"> </p>
+                         <p>Крепёж:<input type="text" name="devpol_mail" id="devpol_mailm" value="Z-образный металический"> </p>
+                         <p>Цена изделия:<input type="text" name="zena_mail" id="zena_mailm" value="1000"> </p>
+
                          <p class="itog_titel">Доп услуги</p>
-                         <p>Доставка: <span id="dostavka_mailm" name="dostavka_mail"  class="num">0р.</span> </p>
-                         <p>Монтаж: <span id="montag_mailm" name="montag_mail" class="num">0р.</span> </p>
-                         <p>Самовывоз: <span id="samo_mailm" name="samo_mail"  class="num">0р.</span> </p>
-                         <span id="itogzena_mailm"  name="itogzena_mail" class="num">1250 руб.</span>
+                         <p>Доставка:<input type="text" name="dostavka_mail" id="dostavka_mailm" value="0p"> </p>
+                         <p>Монтаж:<input type="text" name="montag_mail" id="montag_mailm" value="0p"> </p>
+                         <p>Самовывоз:<input type="text" name="samo_mail" id="samo_mailm" value="0p"> </p>
+                         <p>Itog <input type="text" name="itogzena_mail" id="itogzena_mailm" value="1250 p"> </p>
+
+
 
 
                      </div>
@@ -2378,11 +2389,13 @@
                                        //alert(price)
                                        priceV=price;
                                        $("#dostavka").text(priceV);
+                                       document.getElementById('dostavka_mailm').value=priceV;
                                        var itogzena=ZsetkaVuv*1+priceV*1;
                                       // alert(ZsetkaVuv)
                                       // alert(priceV)
                                        $('#itogzena').text(itogzena);
-                                       $('#itogzena_mailm').text(itogzena);
+                                       document.getElementById('itogzena_mailm').value=itogzena;
+                                       //$('#itogzena_mailm').text(itogzena);
                                        // var kudav=document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value;
                                        // document.getElementsByClassName('ymaps-2-1-78-route-panel-input__input').value='sssss'
                                        // alert(kudav);

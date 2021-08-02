@@ -201,96 +201,7 @@ $(document).ready(function() {
 
     });
 
-    // $('#but_block6_2_dev').click(function () {
-    //     //var block = $(this).parents('.container');
-    //     //block.find('.call_block1').hide();
-    //     //block.find('.call_titel').hide();
-    //     //block.find('.call_block2').hide();
-    //     //block.find('.call_block3').hide();
-    //     //block.find('.call_block_nes').hide();
-    //     //block.find('.call_block_setka').hide();
-    //     //block.find('.call_block_samer1').hide();
-    //     //block.find('.call_block_samer2').hide();
-    //     //block.find('.call_block4').hide();
-    //     //block.find('.call_block_sam_dev').hide();
-    //     //block.find('.call_block_itog_dev').hide();
-    //     //block.find('.call_block_QR_dev').show();
-    //
-    //     sendAjaxForm('result_form', 'form2', 'send2.php');
-    //     return false;
-    //
-    //
-    //     //function sendAjaxForm(result_form, ajax_form, url) {
-    //     //    $.ajax({
-    //     //        url: url,
-    //     //
-    //     //        type:     "post", //метод отправки
-    //     //        data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
-    //     //        //dataType: "text", //формат данных
-    //     //        dataType: "json", //формат данных
-    //     //        success: function(response) { //Данные отправлены успешно
-    //     //            //console.log(response);
-    //     //            // отправляем данные в ГТМ
-    //     //            dataLayer.push({'event':'formSendCalk'});
-    //     //            if (response.status !== 'ok') {
-    //     //                alert('Somthing went wrong');
-    //     //                return;
-    //     //            }
-    //     //
-    //     //
-    //     //          //  });
-    //     //
-    //     //
-    //     //
-    //     //
-    //     //        },
-    //     //        error: function(response) { // Данные не отправлены
-    //     //            $('#result_form').html('Ошибка. Данные не отправлены.');
-    //     //
-    //     //            $('#post_form_err').show();
-    //     //        }
-    //     //    });
-    //     //};
-    //
-    // });
-    // function sendAjaxForm(result_form, ajax_form, url) {
-    //     $.ajax({
-    //         url: url,
-    //
-    //         type:     "post", //метод отправки
-    //         data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
-    //         //dataType: "text", //формат данных
-    //         dataType: "json", //формат данных
-    //         success: function(response) { //Данные отправлены успешно
-    //             //console.log(response);
-    //             // отправляем данные в ГТМ
-    //             dataLayer.push({'event':'formSendCalk'});
-    //             if (response.status !== 'ok') {
-    //                 alert('Somthing went wrong');
-    //                 return;
-    //             }
-    //             var block = $(this).parents('.container');
-    //             block.find('.call_block1').hide();
-    //             block.find('.call_titel').hide();
-    //             block.find('.call_block2').hide();
-    //             block.find('.call_block3').hide();
-    //             block.find('.call_block_nes').hide();
-    //             block.find('.call_block_setka').hide();
-    //             block.find('.call_block_samer1').hide();
-    //             block.find('.call_block_samer2').hide();
-    //             block.find('.call_block4').hide();
-    //             block.find('.call_block_sam_dev').hide();
-    //             block.find('.call_block_itog_dev').hide();
-    //             block.find('.call_block_QR_dev').show();
-    //
-    //         },
-    //         error: function(response) { // Данные не отправлены
-    //             $('#result_form').html('Ошибка. Данные не отправлены.');
-    //
-    //             $('#post_form_err').show();
-    //         }
-    //     });
-    // }
+
 
     $('#but_block4_1_dev').click(function () {
         var block = $(this).parents('.container');
@@ -334,7 +245,8 @@ $(document).ready(function() {
 
         $('#itogzena_dev').text(itogzena_devv);
          //   $('#itogzena_dev').text(itogzena_dev);
-        $('#itogzena_mail').text(itogzena_dev);
+        document.getElementById('itogzena_mail').value=itogzena_devv;
+        //$('#itogzena_mail').text(itogzena_dev);
 
         var block = $(this).parents('.container');
         block.find('.call_block1').hide();
@@ -2647,7 +2559,8 @@ $(".colorralm").click(function (){
         var itogzena_devv=itogzena_dev+' '+'руб';
 
         $('#itogzena').text(itogzena_devv);
-        $('#itogzena_mail').text(itogzena_dev);
+        document.getElementById('itogzena_mail').value=itogzena_devv;
+       // $('#itogzena_mail').text(itogzena_dev);
 
     });
     $('#but_block8_2').click(function () {
@@ -2716,7 +2629,9 @@ $(".colorralm").click(function (){
                        var Lvv = distance.split('&')[0];
 
                         priceV=Lvv*1*40.726;
+                        var prm=priceV;
                         $("#dostavka_dev").text(priceV);
+                        document.getElementById('dostavka_mail').value=prm;
                         var itogzena_dev=ZsetkaVuv*1+priceV*1;
 
                         itogzena_dev=itogzena_dev.toFixed(2);
@@ -2724,7 +2639,8 @@ $(".colorralm").click(function (){
                         var itogzena_devv=itogzena_dev +' '+'руб' ;
 
                         $('#itogzena_dev').text(itogzena_devv);
-                        $('#itogzena_mail').text(itogzena_dev);
+                        document.getElementById('itogzena_mail').value=itogzena_devv;
+                        //$('#itogzena_mail').text(itogzena_dev);
                         //  var length2 = route.getActiveRoute().properties.get("distance");
                       //  alert(length2.value);
                         //   map.geoObjects.add(route); //Рисуем маршрут на карте
@@ -2774,7 +2690,8 @@ $(".colorralm").click(function (){
                         var itogzenav=itogzena+' ' +'руб';
 
                             $('#itogzena').text(itogzenav);
-                        $('#itogzena_mailm').text(itogzena);
+                            document.getElementById('itogzena_mailm').value=itogzena;
+                       // $('#itogzena_mailm').text(itogzena);
 
                         //  var length2 = route.getActiveRoute().properties.get("distance");
                         //  alert(length2.value);
@@ -2806,7 +2723,8 @@ $(".colorralm").click(function (){
             TupeSVspan=TupeSVspan+TupeSV+',   ';
              //=======Вывод на форму итогов===========//
              $('#typepol_dev').text(TupeSVspan);
-            $('#typepol_mail').text(TupeSVspan);
+             document.getElementById('typepol_mail').value=TupeSVspan;
+           // $('#typepol_mail').text(TupeSVspan);
 
             //=== Определяем цвет сетки====//
             var ColorSV='';
@@ -2826,7 +2744,8 @@ $(".colorralm").click(function (){
 
             //=======Вывод на форму итогов===========//
             $('#colorpol_dev').text(ColorSVspan);
-            $('#colorpol_mail').text(ColorSVspan);
+            document.getElementById('colorpol_mail').value=ColorSVspan;
+            //$('#colorpol_mail').text(ColorSVspan);
 
         //=== Определяем необходимость крепежа====//
             var ZSV='';
@@ -2841,11 +2760,13 @@ $(".colorralm").click(function (){
 
         //=======Вывод на форму итогов===========//
         $('#devpol_dev').text(ZVspan);
-        $('#devpol_mail').text(ZVspan);
+        document.getElementById('devpol_mail').value=ZVspan;
+        //$('#devpol_mail').text(ZVspan);
 
        //=======Вывод на форму итогов===========//
-        $('#num_dev').text(Nok);
-        $('#num_mail').text(Nok);
+       $('#num_dev').text(Nok);
+        document.getElementById('num_mail').value=Nok;
+        //$('#num_mail').text(Nok);
 
 
           ///var Hs=document.getElementById('Hoknm').value;
@@ -2854,7 +2775,8 @@ $(".colorralm").click(function (){
         Rok=Rok+Hs+'мм'+' x '+Ls+'мм'+',   ';
        //=======Вывод на форму итогов===========//
         $('#rasmer_dev').text(Rok);
-        $('#rasmer_mail').text(Rok);
+        document.getElementById('rasmer_mail').value=Rok;
+        //$('#rasmer_mail').text(Rok);
 
 
 
@@ -2927,10 +2849,13 @@ $(".colorralm").click(function (){
         ZsetkaVuv=ZsetkaVuv.toFixed(2);
 
         $('#zena_dev').text(ZsetkaVuv);
-            $('#zena_mail').text(ZsetkaVuv);
-
+        document.getElementById('zena_mail').value=ZsetkaVuv;
+           // $('#zena_mail').text(ZsetkaVuv);
+            var prm=priceV;
             $("#dostavka_dev").text(priceV);
-            $("#dostavka_mail").text(priceV);
+             //var prm=priceV;
+            document.getElementById('dostavka_mail').value=prm;
+            //$("#dostavka_mail").text(priceV);
 
             ///var itogzena_devm=ZsetkaVuv*1+priceV*1;
              //   $('#itogzena_dev').text(itogzena_devm);
@@ -2956,7 +2881,8 @@ $(".colorralm").click(function (){
 
             //=======Вывод на форму итогов===========//
             $('#typepol').text(TupeSVspan);
-            $('#typepol_mailm').text(TupeSVspan);
+            document.getElementById('typepol_mailm').value=TupeSVspan;
+            //$('#typepol_mailm').text(TupeSVspan);
 
             //=== Определяем цвет сетки====//
             var ColorSV='';
@@ -2973,7 +2899,8 @@ $(".colorralm").click(function (){
             ColorSVspan=ColorSVspan+colorvsp+',   ';
             //=======Вывод на форму итогов===========//
             $('#colorpol').text(ColorSVspan);
-            $('#colorpol_mailm').text(ColorSVspan);
+            document.getElementById('colorpol_mailm').value=ColorSVspan;
+            //$('#colorpol_mailm').text(ColorSVspan);
 
             //=== Определяем необходимость крепежа====//
             var ZSV='';
@@ -2988,10 +2915,12 @@ $(".colorralm").click(function (){
             //}
             //=======Вывод на форму итогов===========//
             $('#devpol').text(ZVspan);
-            $('#devpol_mailm').text(ZVspan);
+            document.getElementById('devpol_mailm').value=ZVspan;
+            //$('#devpol_mailm').text(ZVspan);
             //=======Вывод на форму итогов===========//
             $('#num_dev').text(Nok);
-            $('#num_mailm').text(Nok);
+            document.getElementById('num_mailm').value=Nok;
+           // $('#num_mailm').text(Nok);
 
             /*var Hs=document.getElementById('Hoknm').value;
              var Ls=document.getElementById('Loknm').value;
@@ -2999,6 +2928,7 @@ $(".colorralm").click(function (){
             Rok=Rok+Hs+'мм'+' x '+Ls+'мм'+',   ';
             //=======Вывод на форму итогов===========//
             $('#rasmer').text(Rok);
+            document.getElementById('rasmer_mailm').value=Rok;
             var Pokna=(Hs*2+Ls*2)/1000;
             var Sokna=(Hs/1000)*(Ls/1000);
 
@@ -3071,7 +3001,8 @@ $(".colorralm").click(function (){
             ZsetkaVuv= ZsetkaVuv*1+ZsetkaV*1;
             ZsetkaVuv=ZsetkaVuv.toFixed(2);
             $('#zena').text(ZsetkaVuv);
-            $('#zena_mailm').text(ZsetkaVuv);
+            document.getElementById('zena_mailm').value=ZsetkaVuv;
+           // $('#zena_mailm').text(ZsetkaVuv);
 
             //$("#dostavka").text(priceV);
             var itogzena_devm=ZsetkaVuv*1+priceV*1;
@@ -3080,7 +3011,8 @@ $(".colorralm").click(function (){
             var itogzena_devmv=itogzena_devm+' '+'руб';
 
             $('#itogzena').text(itogzena_devmv);
-            $('#itogzena_mailm').text(itogzena_devm);
+            document.getElementById('itogzena_mailm').value=itogzena_devm;
+            //$('#itogzena_mailm').text(itogzena_devm);
 
         }
 

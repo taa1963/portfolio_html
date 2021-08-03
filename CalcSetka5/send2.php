@@ -28,8 +28,8 @@ if (
     $num_mail = substr(htmlspecialchars(trim($_POST['num_mail'])), 0, 1000);
     $rasmer_mail = substr(htmlspecialchars(trim($_POST['rasmer_mail'])), 0, 100);
     $typepol_mail = substr(htmlspecialchars(trim($_POST['typepol_mail'])), 0, 10000000000);
-    $colorpol_mail = substr(htmlspecialchars(trim($_POST['devpol_mail'])), 0, 10000000000);
-    $devpol_mail = substr(htmlspecialchars(trim($_POST['tiragvf'])), 0, 10000000000);
+    $colorpol_mail = substr(htmlspecialchars(trim($_POST['colorpol_mail'])), 0, 10000000000);
+    $devpol_mail = substr(htmlspecialchars(trim($_POST['devpol_mail'])), 0, 10000000000);
     $zena_mail = substr(htmlspecialchars(trim($_POST['zena_mail'])), 0, 10000000000);
     $dostavka_mail = substr(htmlspecialchars(trim($_POST['dostavka_mail'])), 0, 10000000000);
     $itogzena_mail = substr(htmlspecialchars(trim($_POST['itogzena_mail'])), 0, 10000000000);

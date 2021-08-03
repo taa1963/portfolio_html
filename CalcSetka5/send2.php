@@ -84,5 +84,20 @@ if (
         }
 
 }
+echo json_encode([
+    'status' => 'error',
+    'message' => 'please fill data',
+    'data' => [
+        isset($_POST['name2']) && !empty($_POST['name2']),
+        isset($_POST['tel2']) && !empty($_POST['tel2']),
+        isset($_POST['num_mail']) && !is_int($_POST['num_mail']),
+        isset($_POST['rasmer_mail']) && !is_int($_POST['rasmer_mail']),
+        isset($_POST['typepol_mail']) && !is_int($_POST['typepol_mail']),
+        isset($_POST['colorpol_mail']) && is_int($_POST['colorpol_mail']),
+        isset($_POST['devpol_mail']) && is_int($_POST['devpol_mail']),
+        isset($_POST['zena_mail']) && is_int($_POST['zena_mail']),
+        //isset($_POST['dostavka_mail']) && is_int($_POST['dostavka_mail']) &&
+        isset($_POST['itogzena_mail']) && is_int($_POST['itogzena_mail']),
 
-?>
+    ],
+]);

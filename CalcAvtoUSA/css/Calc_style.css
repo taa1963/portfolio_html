@@ -1,0 +1,466 @@
+
+body{
+  background-color:#99cbff;
+}
+
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.calculator{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.calculator_titel h1{
+    text-align: center;
+    font-size: 33px;
+}
+
+.calculator_block_left{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.calculator_block_right{
+    display: block;
+    width: 50%;
+    float: right;
+}
+
+.calculator_block_left_block{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.calculator_block_left1{
+    display: block;
+    width: 45%;
+    float: left;
+}
+.calculator_block_left2{
+    display: block;
+    width: 45%;
+    float: left;
+}
+
+.calc_label{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 8px;
+    color: #000000;
+}
+
+.calc_input{
+    display: block;
+    background: transparent;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 2px;
+    font-size: 18px;
+    outline: none !important;
+}
+
+.calc_select{
+    display: block;
+    background: transparent;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #000000;
+     color: #000000;
+    padding-bottom: 2px;
+    font-size: 18px;
+    outline: none !important;
+}
+
+.calculator_block_left3{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.calculator_block_right_block{
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.calc_input_res{
+    display: block;
+    background: transparent;
+    width: 30%;
+    border: none;
+   font-weight: bold;
+    color: #000000;
+    padding-bottom: 2px;
+    font-size: 18px;
+    outline: none !important;
+    float: left;
+}
+
+.calc_label_res{
+    display: block;
+    background: transparent;
+    width: 60%;
+    float: left;
+    text-align: left;
+    font-size: 19px;
+}
+.mystate{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.myactive{
+    display: block;
+}
+
+.btn-calc{
+    padding: 8px 30px 5px 30px;
+    font-size: 18px;
+    color: #fff;
+    background: blue;
+    border: 2px solid blue;
+}
+
+/*//==================================//  */
+
+/*
+* Оформление контактной формы
+* без дополительных изображений;
+* исключительно средствами CSS;
+
+
+*/
+
+/*--Слой затемнения фона--*/
+
+.popup-fade1 {
+    display: none;
+}
+.popup-fade1:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+.popup-fade2 {
+    display: none;
+}
+.popup-fade2:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+.popup {
+    position: fixed;
+    top: 1%;
+    left: 50%;
+    padding: 20px;
+    width: 30em;
+    margin-left: -20em;
+    background: #fff;
+    border: 1px solid orange;
+    border-radius: 4px;
+    z-index: 99999;
+    opacity: 1;
+}
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0056b3;
+}
+
+.popup-close2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0056b3;
+}
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none; /*--по умолчанию скрыт--*/
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .70;/* Полупрозрачность слоя затемнения */
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+/*--Модальное окно--*/
+.popup_block{
+    position: fixed;
+    top: 55%;;
+    left: 45%;
+    z-index: 99999;
+    display: none; /*--по умолчанию скрыт--*/
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    max-height: 100%;
+
+    /*-- скругленные углы--*/
+
+    color: #ffffff;
+    font-size: .9em;
+}
+/*--Фиксированное позиционирование для тупого IE6--*/
+*html #fade {
+    position: absolute;
+}
+*html .popup_block {
+    position: absolute;
+}
+/*--Блок содержания--*/
+
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 20px;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    /*--крутим кнопку при наведении--*/
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.note{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.note h2{
+    text-align: left;
+    margin-left: 2%;
+}
+.param{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.param_block{
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.param_block_list1{
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.param_block_list2{
+    display: none;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.act_block{
+    display: block;
+}
+
+.non_block{
+    display: none;
+}
+
+
+
+.button_param3{
+    display: block;
+    margin: 0 auto;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sub{
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.submit{
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.first1{
+    display:block ;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.first{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.itog_vubor{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
+.itog_vuborm{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.form_inp{
+    display: block;
+    background: transparent;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    color: #000000;
+    padding-bottom: 2px;
+    font-size: 18px;
+    outline: none !important;
+
+}
+
+.itog_vubor p{
+    margin: 0;
+}
+
+.calc_select2{
+    display: block;
+    background: transparent;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    color: #000000;
+    padding-bottom: 2px;
+    font-size: 18px;
+    outline: none !important;
+
+}
+
+.spiatog2{
+    width: 30%;
+    float: left;
+}
+
+.labitog2{
+    width: 60%;
+    float: right;
+}
+
+
+
+/* конец формы */
+
+
+
+
+
+@media only screen  and (max-width: 1028px) {
+
+
+}
+
+
+@media only screen  and (max-width: 500px) {
+
+
+
+}

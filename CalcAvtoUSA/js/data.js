@@ -5,43 +5,43 @@ var Zremont=800;
 var copart = [
     {
         name: 'ABILENE - TX',
-        val:390,
+        val:540,
         port:'TX',
-        zkoss:805,
-        zpicap:755,
-        zlogic:100
+        zkoss:9555,
+        zpicap:905,
+        zlogic:250
     },
     {
         name: 'AK - ANCHORAGE',
-        val:1950,
+        val:2100,
         port:'WA',
         zkoss:810,
         zpicap:760,
-        zlogic:100
+        zlogic:250
     },
     {
         name: 'ALBANY - NY',
-        val:295,
+        val:445,
         port:'NJ',
-        zkoss:700,
-        zpicap:650,
-        zlogic:100
+        zkoss:850,
+        zpicap:800,
+        zlogic:250
     },
     {
         name: 'ALBUQUERQUE - NM',
-        val:470,
+        val:620,
         port:'TX',
-        zkoss:805,
-        zpicap:755,
-        zlogic:100
+        zkoss:9555,
+        zpicap:905,
+        zlogic:250
     },
     {
         name: 'ALTOONA - PA',
-        val:420,
+        val:570,
         port:'NJ',
-        zkoss:700,
-        zpicap:650,
-        zlogic:100
+        zkoss:850,
+        zpicap:800,
+        zlogic:250
     },
     {
         name: 'AMARILLO - TX',

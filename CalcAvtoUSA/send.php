@@ -27,7 +27,7 @@ if (
 
     $message = "
         Был получен заказ с сайта :
-        Тип авто:tupeavtom
+        Тип авто:$tupeavtom
         Модель авто:$modelavto
         Год выпуска: $jar1m
         Бюджет до: $butget

@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     document.getElementById('res_brocer').value=Zbroker;
-    document.getElementById('res_remont').value=Zremont;
+    document.getElementById('res_remont').value=0;
 
     $("#phone").mask("+380(99)999-99-99");
 
@@ -69,6 +69,10 @@ $(document).ready(function() {
             zlogict=$("#stat option:selected").attr('data-zlogic');
         }
         document.getElementById('res_logis').value=zlogict;
+
+
+
+       // document.getElementById('res_remont').value=Zremont;
 
 
 
@@ -382,7 +386,7 @@ $(document).ready(function() {
         } else {
             document.getElementById('res_tamog').value=0;
         }
-        document.getElementById('res_tamog').value=ZTitog;
+       // document.getElementById('res_tamog').value=ZTitog;
         Zena();
     };
 
@@ -403,7 +407,10 @@ $(document).ready(function() {
         var z10=document.getElementById('res_remont').value;
         var z11=document.getElementById('res_tamog').value;
         var z12=document.getElementById('res_logis').value;
-        Zinog=z1*1+z2*2+z3*1+z4*1+z5*1+z5*1+z6*1+z7*1+z8*1+z9*1+z10*1+z11*1+z12*1;
+        Zinog=z1*1+z2*1+z3*1+z4*1+z5*1+z6*1+z7*1+z8*1+z9*1+z10*1+z11*1+z12*1;
+
+
+
         Zinog=Math.floor(Zinog);
         document.getElementById('res_itog').value=Zinog;
 
@@ -553,7 +560,7 @@ $(document).ready(function() {
 
         }
         else{
-            zlogict=document.getElementById('logict').value;;
+            zlogict=document.getElementById('logict').value;
         }
         document.getElementById('res_logis').value=zlogict;
 
@@ -577,6 +584,18 @@ $(document).ready(function() {
             $('.mystate').removeClass('myactive');
             document.getElementById('res_ukr').value=zukr;
         }
+
+        if (logict2==750){
+        document.getElementById('res_remont').value=Zremont;
+        }
+        else {
+            document.getElementById('res_remont').value=0;
+        }
+
+
+
+
+
         Zena();
      });
 

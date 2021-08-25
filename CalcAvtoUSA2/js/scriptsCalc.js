@@ -62,13 +62,18 @@ $(document).ready(function() {
         var zlogict=0;
         var logict=document.getElementById('logict').value;
 
+        var logict=document.getElementById('logict').value;
+
         if (logict==0){
             zlogict=0;
+
+
         }
         else{
-            zlogict=$("#stat option:selected").attr('data-zlogic');
+            zlogict=document.getElementById('logict').value;
         }
         document.getElementById('res_logis').value=zlogict;
+        //document.getElementById('res_logis').value=zlogict;
 
 
 
@@ -227,45 +232,95 @@ $(document).ready(function() {
                 Zsbor=240;
             }
             if((prise1>=1400)&&(prise1<1500)){
-                Zsbor=259;
+                Zsbor=255;
             }
             if((prise1>=1500)&&(prise1<1600)){
                 Zsbor=270;
             }
-            if((prise1>=1600)&&(prise1<1800)){
+            if((prise1>=1600)&&(prise1<1700)){
                 Zsbor=290;
+            }
+            if((prise1>=1700)&&(prise1<1800)){
+                Zsbor=300;
             }
             if((prise1>=1800)&&(prise1<2000)){
                 Zsbor=310;
             }
             if((prise1>=2000)&&(prise1<2200)){
-                Zsbor=335;
+                Zsbor=325;
             }
             if((prise1>=2200)&&(prise1<2400)){
-                Zsbor=350;
+                Zsbor=330;
             }
-            if((prise1>=2400)&&(prise1<2600)){
-                Zsbor=365;
+            if((prise1>=2400)&&(prise1<2500)){
+                Zsbor=345;
             }
-            if((prise1>=2600)&&(prise1<2800)){
+            if((prise1>=2500)&&(prise1<2600)){
+                Zsbor=360;
+            }
+            if((prise1>=2600)&&(prise1<3000)){
                 Zsbor=385;
             }
-            if((prise1>=2800)&&(prise1<3000)){
+
+            if((prise1>=3000)&&(prise1<3500)){
                 Zsbor=400;
             }
-            if((prise1>=3000)&&(prise1<3500)){
-                Zsbor=415;
-            }
             if((prise1>=3500)&&(prise1<4000)){
-                Zsbor=430;
-            }
-            if((prise1>=4000)&&(prise1<5000)){
                 Zsbor=450;
             }
-            if(prise1>=5000){
-                Zsbor=450+(prise1/100);
+            if((prise1>=4000)&&(prise1<4500)){
+                Zsbor=475;
             }
-            Zsbor=Zsbor+89+59;
+            if((prise1>=4500)&&(prise1<5000)){
+                Zsbor=500;
+            }
+            if((prise1>=5000)&&(prise1<6000)){
+                Zsbor=520;
+            }
+            if((prise1>=6000)&&(prise1<7500)){
+                Zsbor=550;
+            }
+
+            if((prise1>=7500)&&(prise1<20000)){
+                Zsbor=500+(prise1/100);
+            }
+
+            if(prise1>20000){
+                Zsbor=4*(prise1/100);
+            }
+
+            var Zproksi=0;
+            if((prise1>=0)&&(prise1<100)){
+                Zproksi=0;
+            }
+            if((prise1>=100)&&(prise1<500)){
+                Zproksi=39;
+            }
+            if((prise1>=500)&&(prise1<1000)){
+                Zproksi=49;
+            }
+            if((prise1>=1000)&&(prise1<1500)){
+                Zproksi=69;
+            }
+            if((prise1>=1500)&&(prise1<2000)){
+                Zproksi=79;
+            }
+            if((prise1>=2000)&&(prise1<4000)){
+                Zproksi=89;
+            }
+            if((prise1>=4000)&&(prise1<6000)){
+                Zproksi=99;
+            }
+            if((prise1>=6000)&&(prise1<8000)){
+                Zproksi=119;
+            }
+            if(prise1>=8000){
+                Zproksi=129;
+            }
+
+            Zsbor=Zsbor+Zproksi+59;
+
+            // Zsbor=Zsbor+89+59;
 
 
         }

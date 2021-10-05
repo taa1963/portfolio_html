@@ -1,3 +1,4 @@
+var Zbroker2;
 
 $(document).ready(function() {
    // Первоначальное заполнение " Услуги брокера и экспедитора";
@@ -6,7 +7,7 @@ $(document).ready(function() {
 
 
     var url = "https://aleksandr.tupichenkov.com/CalcAvtoUSA_New1/js/price_copart.xlsx";
-    alert(url);
+   // alert(url);
     var oReq = new XMLHttpRequest();
     oReq.open("GET", url, true);
     oReq.responseType = "arraybuffer";
@@ -39,7 +40,7 @@ $(document).ready(function() {
         var address_of_cell = 'H25';
         var desired_cell = worksheet[address_of_cell];
         var desired_value = desired_cell.v;
-        var Zbroker2=desired_value;
+        Zbroker2=desired_value;
 
 
 }

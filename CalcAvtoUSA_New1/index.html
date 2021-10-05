@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор доствки авто из США</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор доствки авто из США">
+
+
+    <link href="css/Calcstyle.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div class="calculator" id="calculator">
+    <div class="calculator_titel" >
+        <h1>Калькулятор - расчет доставки авто из США</h1>
+     </div>
+
+
+    <div class="calculator_block_left" >
+
+        <div class="calculator_block_left_block" >
+
+        <div class="calculator_block_left1" >
+            <label class="calc_label">Стоимость лота, $</label>
+            <input class="calc_input" type="text" name="lot_price" id="lot_price" value="1000">
+        </div>
+
+
+
+        <div class="calculator_block_left2" >
+            <label class="calc_label"> Тип транс-го средства </label>
+            <select class="calc_select"  id="type_avto">
+                <option value="passenger">Легковой</option>
+                <option value="crossover">Кроссовер</option>
+                <option value="pickup">Пикап / Микроавтобус</option>
+                <option value="motorcycle">Мотоцикл</option>
+            </select>
+        </div>
+        </div>
+
+
+
+    <div class="calculator_block_left_block" >
+        <div class="calculator_block_left1" >
+            <label class="calc_label">Аукцион</label>
+
+            <select class="calc_select"  id="type_auction">
+                <option value="copart">Copart</option>
+                <option value="iaai">Iaai</option>
+            </select>
+        </div>
+
+
+        <div class="calculator_block_left2" >
+            <label class="calc_label"> Штат аукциона </label>
+            <select class="calc_select"  id="stat">
+                <option value="390" data-port="TX" data-zkoss="805" data-zpicap="755" data-zlogic="100"  >ABILENE - TX</option>
+
+            </select>
+        </div>
+    </div>
+
+        <div class="calculator_block_left3" >
+            <label class="calc_label">Из порта в США </label>
+            <input class="calc_input" type="text" name="lot_price" id="import2" value="1000" readonly>
+        </div>
+
+        <div class="calculator_block_left3" >
+            <label class="calc_label">Страна  и порт назначения </label>
+            <select class="calc_select"  id="strana">
+                <option value="ukr">Украина, Одесса </option>
+
+            </select>
+        </div>
+
+
+
+        <div class="calculator_block_left3" >
+            <label class="calc_label">Услуги My America </label>
+            <select class="calc_select"  id="logict">
+                <option value="0"></option>
+                <option value="350">Доставка Lite</option>
+                <option value="500">Доставка Standart</option>
+                <option value="750">Доставка Под Ключ с ремонтом</option>
+            </select>
+        </div>
+
+        <div class="mystate"  >
+            <label class="calc_label">Укажите Ваш город </label>
+            <select class="calc_select"  id="state">
+
+            </select>
+        </div>
+
+        <div class="calculator_block_left3" >
+        <label class="calc_label_res" id="tamogv"> <input type="checkbox" id="tamog">Таможенный платеж</label>
+        </div>
+
+        <div class="calculator_block_left3_TZ"  >
+            <div class="itog_vubor">
+                <p>Год выпуска авто</p>
+                <select class="calc_select2"  id="jar1">
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2015</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+
+                </select>
+            </div>
+
+            <div class="itog_vubor">
+                <p>Тип двигателя</p>
+                <select class="calc_select2"  id="tupedv">
+                    <option value="1">Бензин</option>
+                    <option value="2">Дизель</option>
+                    <option value="3">Гибрид</option>
+                    <option value="4">Электро</option>
+                </select>
+            </div>
+            <div class="itog_vubor">
+                <p>Объем двигателя, куб см</p>
+                <input class="calc_input" type="text" name="lot_price" id="Vdv" value="1">
+            </div>
+
+
+        <div class="first1">
+            <div class="first">
+                <span class="spiatog2" id="nds"> </span>
+                <label class="labitog2">НДС</label>
+            </div>
+
+            <div class="first">
+                <span class="spiatog2" id="poshlina"> </span>
+                <label class="labitog2">Пошлина</label>
+            </div>
+
+            <div class="first">
+                <span class="spiatog2" id="akzis"> </span>
+                <label class="labitog2">Акцизный сбор</label>
+            </div>
+            <div class="first">
+                <span class="spiatog2" id="ZTitog"> </span>
+                <label class="labitog2">Итоговая цена</label>
+            </div>
+        </div>
+
+    </div>
+
+
+        <div class="calculator_block_left3" >
+           <p>  * Все тарифы актуальны на время расчета и могут быть изменены на момент отправки в соответствии с изменениями тарифов грузоотправителей. Стоимость доставки
+               указана
+               для одного автомобиля, при погрузке 3-х автомобилей типа седана 40 футовый контейнер, включая загрузку контейнера.<br>
+               ** Страхование от полной потери контейнера во время морской перевозки. <br>
+               *** Цена доставки по городам Украины может изменяться в связи с изменением тарифов, если Вашего города нет в выпадающем списке - цену доставки необходимо уточнить у  менеджера.
+           </p>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="calculator_block_right" >
+        <div class="calculator_block_right_block" >
+           <input class="calc_input_res" type="text" name="lot_price" id="res_lot" readonly value="1000">
+           <label class="calc_label_res">Стоимость лота</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_auction" readonly value="328">
+            <label class="calc_label_res">Аукционный сбор</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_ekcport" readonly value="145">
+            <label class="calc_label_res">Экспортное оформление США</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_port1" readonly value="0">
+            <label class="calc_label_res">Доставка в порт (суша, по США)</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_port2" readonly value="0">
+            <label class="calc_label_res">Международная доставка (море)</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+        <input class="calc_input_res" type="text" name="lot_price" id="res_ukr" readonly value="0">
+        <label class="calc_label_res">Доставка по Украине***</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_strah" readonly value="0">
+            <label class="calc_label_res" id="strahv"> <input type="checkbox" id="strah">Страховка от полной гибели**</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_strah2" readonly value="0">
+            <label class="calc_label_res" id="strahv2"> <input type="checkbox" id="strah2">Страховка авто от повреждений</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_brocer" readonly value="0">
+            <label class="calc_label_res" id="brocerv"> Услуги брокера и экспедитора</label>
+        </div>
+
+
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_tamog" readonly value="0">
+            <label class="calc_label_res" > Таможенный платеж</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_logis" readonly value="0">
+            <label class="calc_label_res"> Комиссия My America</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_remont" readonly value="0">
+            <label class="calc_label_res" id="remontv"> Сопровождение по ремонту и закупка зап.частей</label>
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <input class="calc_input_res" type="text" name="lot_price" id="res_itog" readonly value="0">
+            <label class="calc_label_res"> Итоговая цена</label>
+        </div>
+
+
+
+        <div class="calculator_block_right_block" >
+            <button class="btn-calc" id="btn-calc">Заказать авто</button>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+<div class="popup-fade2">
+    <div class="popup">
+        <form id="form1" class="form1" action="send.php" method="post" >
+
+        <div class="note">
+            <div class="content_block3_cont">
+                <h2>Укажите данные автомобиля и ваши контактый</h2>
+
+            </div>
+
+            <div class="itog_vuborm">
+                  <select class="calc_select2" name="tupeavtom"  id="tupeavtom" required>
+                    <option value="">Выберите марку авто</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Cadilla">Cadillac</option>
+                    <option value="Chrysle">Chrysler</option>
+                    <option value="Dodge">Dodge</option>
+                    <option value="Ford">Ford</option>
+                    <option value="GMC">GMC</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Infinit">Infiniti</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Lexu">Lexus</option>
+                    <option value="Mazda2">Mazda</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Pontiac">Pontiac</option>
+                    <option value="Subaru">Subaru</option>
+                    <option value="Suzuk">Suzuki</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Volkswage">Volkswagen</option>
+                    <option value="Volvo">Volvo</option>
+                    <option value="Land Rover">Land Rover</option>
+                    <option value="Harley">Harley</option>
+                    <option value="Acura">Acura</option>
+                    <option value="Другое">Другое</option>
+                </select>
+            </div>
+
+            <div class="itog_vuborm">
+                <input type="text" class="form_inp"  name="modelavto" id="modelavto" placeholder="Модель авто"  size="30" required />
+            </div>
+
+
+            <div class="itog_vuborm">
+
+                <select class="calc_select2" name="jar1m" id="jar1m" required>
+                    <option value="0">Выберите год</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2015</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+
+                </select>
+            </div>
+
+            <div class="itog_vuborm">
+                <input type="text" class="form_inp"  name="budget" id="butget" placeholder="Бюджет до"  size="30" required />
+            </div>
+            <div class="itog_vuborm">
+                <input type="text" class="form_inp"  name="name" id="name" placeholder="Имя"  size="30" required />
+            </div>
+            <div class="itog_vuborm">
+                <input type="text" class="form_inp" name="telefon" id="phone" placeholder="+380()-___-__-__"  size="30" required />
+            </div>
+        </div>
+
+
+
+        <button class="submit" name="insert"  id="btn2" >Отправить</button>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+
+<script src="js/scriptsCalc.js"></script>
+<script src="js/data.js"></script>
+
+<script src="js/xlsx.full.min.js"></script>
+<script src="js/dropsheet.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+
+
+
+</body>
+</html>
+

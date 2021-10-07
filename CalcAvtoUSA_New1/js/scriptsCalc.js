@@ -67,10 +67,10 @@ oReq.send();
     else{
         Zbroker2=Zbroker2;
     }
-    console.log('============');
-    console.log(Zbroker2);
-    console.log(Zremont2);
-    console.log('============');
+    //console.log('============');
+    //console.log(Zbroker2);
+    //console.log(Zremont2);
+    //console.log('============');
     document.getElementById('res_brocer').value=700;
 
     // Первоначальное заполнение " Сопровождение по ремонту и закупка зап.частей";
@@ -290,7 +290,7 @@ oReq.send();
                 var Zkrossi = [];
                 var Zpikapi = [];
                 var Zlogici= [];
-
+                console.log('============');
 
                 for (var i = 2; i != 300; i++)  {
                     var address_of_cell = 'A' +i;
@@ -301,13 +301,16 @@ oReq.send();
                         var address_of_cell2 = 'A' +i;
                         var desired_cell2 = worksheet[address_of_cell2];
                         var Name = desired_cell2.v;
+                        console.log(Name);
                         nameauctioni.push(Name);
 
                         // if (typearbd==TR){
 
-                        var address_of_cell3 = 'С' +i;
+
+                        var address_of_cell3 = 'A' +i;
                         var desired_cell3 = worksheet[address_of_cell3];
                         var Va = desired_cell3.v;
+                        console.log(Va);
                         valauci.push(Va);
 
                         var address_of_cell4 = 'B' +i;
@@ -393,7 +396,7 @@ oReq.send();
                 };
 
                 var opt12=document.getElementById('stat');
-                for (var i = 0; i < Zkross.length; i++)  {
+                for (var i = 0; i < Zkrossi.length; i++)  {
                     $('<option value='+valauci[i]+' '+'data-port='+portaui[i]+ ' data-zkoss= '+Zkrossi[i]+ ' data-zpicap='+Zpikapi[i]+ ' data-zlogic='+ Zlogici[i]+ ' >' + nameauctioni[i] + '</option>').appendTo(opt12);
                 }
 
@@ -585,12 +588,17 @@ oReq.send();
                             var address_of_cell4 = 'C' +i;
                             var desired_cell4 = worksheet[address_of_cell4];
                             Zsbor = desired_cell4.v;
+                            console.log('=========');
+                            console.log(prise1);
+                            console.log(Zlotmin);
+                            console.log(Zlotmax);
+                            console.log(Zsbor);
                         }
 
                         if(Zsbor<0){
                             Zsbor=prise1*Zsbor;
                         }
-                        console.log(Zsbor);
+                       // console.log(Zsbor);
 
                     }
                     else{

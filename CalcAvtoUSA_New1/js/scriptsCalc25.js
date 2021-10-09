@@ -359,7 +359,7 @@ $(document).ready(function() {
                     $('<option value='+valauc[i]+' '+'data-port='+portau[i]+ ' data-zkoss= '+Zkross[i]+ ' data-zpicap='+Zpikap[i]+ ' data-zlogic='+ Zlogic[i]+ ' >' + nameauction[i] + '</option>').appendTo(opt12);
                 }
 
-
+                
                 $("#stat:first").focus();
                 Port();
             }

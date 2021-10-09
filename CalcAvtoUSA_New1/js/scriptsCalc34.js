@@ -666,7 +666,7 @@ $(document).ready(function() {
     function sbor2(){
         var prise1 = document.getElementById('lot_price').value;
         console.log('=======');
-        alert(34);
+        alert(33);
         if(Zsbor<1){
             Zsbor=prise1*Zsbor;
             // sbor1();
@@ -972,7 +972,7 @@ $(document).ready(function() {
        // }
 
 
-
+           
 
 
 

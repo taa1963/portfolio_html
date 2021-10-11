@@ -1036,12 +1036,12 @@ $(document).ready(function() {
         if (logict2>0){
             $('.mystate').addClass('myactive');
 
-            $('#state').find('option').remove();
-            var opt10=document.getElementById('state');
-
-            for (var i = 0; i < state.length; i++)  {
-                $('<option value='+state[i].val+'>' + state[i].name + '</option>').appendTo(opt10);
-            }
+            // $('#state').find('option').remove();
+            // var opt10=document.getElementById('state');
+            //
+            // for (var i = 0; i < state.length; i++)  {
+            //     $('<option value='+state[i].val+'>' + state[i].name + '</option>').appendTo(opt10);
+            // }
 
 
 

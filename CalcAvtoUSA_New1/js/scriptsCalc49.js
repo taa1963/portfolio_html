@@ -778,6 +778,84 @@ $(document).ready(function() {
 
     function tsbor2() {
         var prise1 = document.getElementById('lot_price').value;
+        function tproksi_iaai() {
+            alert('iaai_2')
+            var prise1 = document.getElementById('lot_price').value;
+
+            //==== Вычисление цены  "За участие в интернет торгах «Internet Bid Fee» Zproksi в заивисмотсти от стоимости лота prise1
+
+            var url = "https://aleksandr.tupichenkov.com/CalcAvtoUSA_New1/js/proksi_iaai.xlsx";
+            var oReq = new XMLHttpRequest();
+            oReq.open("GET", url, true);
+            oReq.responseType = "arraybuffer";
+            oReq.onload = function (e) {
+                var arraybuffer = oReq.response;
+                var data = new Uint8Array(arraybuffer);
+
+                var arr = new Array();
+                for (var i = 0; i != data.length; ++i) {
+                    arr[i] = String.fromCharCode(data[i]);
+                }
+                var bstr = arr.join("");
+                var cfb = XLSX.read(bstr, {type: 'binary'});
+
+                var workbook = XLSX.read(bstr, {type: "binary"});
+
+                var first_sheet_name = workbook.SheetNames[0];
+
+                var worksheet = workbook.Sheets[first_sheet_name];
+
+                // var typearbd=$("#typearb option:selected").html();
+
+
+                for (var i = 2; i != 300; i++) {
+                    var address_of_cell = 'A' + i;
+                    var desired_cell = worksheet[address_of_cell];
+                    // console.log(desired_cell);
+
+
+                    if (typeof(desired_cell) !== 'undefined') {
+
+                        var address_of_cell2 = 'A' + i;
+                        var desired_cell2 = worksheet[address_of_cell2];
+                        var Zlotmin = desired_cell2.v;
+                        Zlotmin = Zlotmin * 1;
+
+
+                        var address_of_cell3 = 'B' + i;
+                        var desired_cell3 = worksheet[address_of_cell3];
+                        var Zlotmax = desired_cell3.v;
+                        Zlotmax = Zlotmax * 1;
+
+
+                        if ((prise1 >= Zlotmin) && (prise1 < Zlotmax)) {
+                            var address_of_cell4 = 'C' + i;
+                            var desired_cell4 = worksheet[address_of_cell4];
+                            Zproksi = desired_cell4.v;
+                            alert(Zproksi);
+                            console.log('====froksi=====');
+                            console.log(prise1);
+                            console.log(Zlotmin);
+                            console.log(Zlotmax);
+                            console.log(Zproksi);
+                            sbor2();
+                        }
+
+
+                    }
+                    else {
+                        break;
+                    }
+                }
+
+
+            }
+
+            //sbor2();
+            oReq.send();
+        }
+
+
 
         function tsbor_iaai() {
             alert('iaai_1')
@@ -845,6 +923,7 @@ $(document).ready(function() {
                             console.log(Zlotmin);
                             console.log(Zlotmax);
                             console.log(Zsbor);
+                            tproksi_iaai();
                             //  sbor1();
                         }
 
@@ -875,82 +954,82 @@ $(document).ready(function() {
 
 
 
-        function tproksi_iaai() {
-            alert('iaai_2')
-            var prise1 = document.getElementById('lot_price').value;
-
-            //==== Вычисление цены  "За участие в интернет торгах «Internet Bid Fee» Zproksi в заивисмотсти от стоимости лота prise1
-
-            var url = "https://aleksandr.tupichenkov.com/CalcAvtoUSA_New1/js/proksi_iaai.xlsx";
-            var oReq = new XMLHttpRequest();
-            oReq.open("GET", url, true);
-            oReq.responseType = "arraybuffer";
-            oReq.onload = function (e) {
-                var arraybuffer = oReq.response;
-                var data = new Uint8Array(arraybuffer);
-
-                var arr = new Array();
-                for (var i = 0; i != data.length; ++i) {
-                    arr[i] = String.fromCharCode(data[i]);
-                }
-                var bstr = arr.join("");
-                var cfb = XLSX.read(bstr, {type: 'binary'});
-
-                var workbook = XLSX.read(bstr, {type: "binary"});
-
-                var first_sheet_name = workbook.SheetNames[0];
-
-                var worksheet = workbook.Sheets[first_sheet_name];
-
-                // var typearbd=$("#typearb option:selected").html();
-
-
-                for (var i = 2; i != 300; i++) {
-                    var address_of_cell = 'A' + i;
-                    var desired_cell = worksheet[address_of_cell];
-                  // console.log(desired_cell);
-
-
-                    if (typeof(desired_cell) !== 'undefined') {
-
-                        var address_of_cell2 = 'A' + i;
-                        var desired_cell2 = worksheet[address_of_cell2];
-                        var Zlotmin = desired_cell2.v;
-                        Zlotmin = Zlotmin * 1;
-
-
-                        var address_of_cell3 = 'B' + i;
-                        var desired_cell3 = worksheet[address_of_cell3];
-                        var Zlotmax = desired_cell3.v;
-                        Zlotmax = Zlotmax * 1;
-
-
-                        if ((prise1 >= Zlotmin) && (prise1 < Zlotmax)) {
-                            var address_of_cell4 = 'C' + i;
-                            var desired_cell4 = worksheet[address_of_cell4];
-                            Zproksi = desired_cell4.v;
-                            alert(Zproksi);
-                            console.log('====froksi=====');
-                            console.log(prise1);
-                            console.log(Zlotmin);
-                            console.log(Zlotmax);
-                            console.log(Zproksi);
-                        }
-
-
-                    }
-                    else {
-                        break;
-                    }
-                }
-                ;
-
-
-            }
-
-            //sbor2();
-            oReq.send();
-        }
+        // function tproksi_iaai() {
+        //     alert('iaai_2')
+        //     var prise1 = document.getElementById('lot_price').value;
+        //
+        //     //==== Вычисление цены  "За участие в интернет торгах «Internet Bid Fee» Zproksi в заивисмотсти от стоимости лота prise1
+        //
+        //     var url = "https://aleksandr.tupichenkov.com/CalcAvtoUSA_New1/js/proksi_iaai.xlsx";
+        //     var oReq = new XMLHttpRequest();
+        //     oReq.open("GET", url, true);
+        //     oReq.responseType = "arraybuffer";
+        //     oReq.onload = function (e) {
+        //         var arraybuffer = oReq.response;
+        //         var data = new Uint8Array(arraybuffer);
+        //
+        //         var arr = new Array();
+        //         for (var i = 0; i != data.length; ++i) {
+        //             arr[i] = String.fromCharCode(data[i]);
+        //         }
+        //         var bstr = arr.join("");
+        //         var cfb = XLSX.read(bstr, {type: 'binary'});
+        //
+        //         var workbook = XLSX.read(bstr, {type: "binary"});
+        //
+        //         var first_sheet_name = workbook.SheetNames[0];
+        //
+        //         var worksheet = workbook.Sheets[first_sheet_name];
+        //
+        //         // var typearbd=$("#typearb option:selected").html();
+        //
+        //
+        //         for (var i = 2; i != 300; i++) {
+        //             var address_of_cell = 'A' + i;
+        //             var desired_cell = worksheet[address_of_cell];
+        //           // console.log(desired_cell);
+        //
+        //
+        //             if (typeof(desired_cell) !== 'undefined') {
+        //
+        //                 var address_of_cell2 = 'A' + i;
+        //                 var desired_cell2 = worksheet[address_of_cell2];
+        //                 var Zlotmin = desired_cell2.v;
+        //                 Zlotmin = Zlotmin * 1;
+        //
+        //
+        //                 var address_of_cell3 = 'B' + i;
+        //                 var desired_cell3 = worksheet[address_of_cell3];
+        //                 var Zlotmax = desired_cell3.v;
+        //                 Zlotmax = Zlotmax * 1;
+        //
+        //
+        //                 if ((prise1 >= Zlotmin) && (prise1 < Zlotmax)) {
+        //                     var address_of_cell4 = 'C' + i;
+        //                     var desired_cell4 = worksheet[address_of_cell4];
+        //                     Zproksi = desired_cell4.v;
+        //                     alert(Zproksi);
+        //                     console.log('====froksi=====');
+        //                     console.log(prise1);
+        //                     console.log(Zlotmin);
+        //                     console.log(Zlotmax);
+        //                     console.log(Zproksi);
+        //                 }
+        //
+        //
+        //             }
+        //             else {
+        //                 break;
+        //             }
+        //         }
+        //         ;
+        //
+        //
+        //     }
+        //
+        //     //sbor2();
+        //     oReq.send();
+        // }
 
 
 
@@ -963,10 +1042,10 @@ $(document).ready(function() {
 
 
         //  Zsbor=Zsbor+Zproksi+59;
-        tsbor_iaai();
-        tproksi_iaai();
+       tsbor_iaai();
+       // tproksi_iaai();
         // alert(43)
-        sbor2();
+       // sbor2();
     }
 
     //sbor2();

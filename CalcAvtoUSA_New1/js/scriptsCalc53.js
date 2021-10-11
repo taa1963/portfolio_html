@@ -1,14 +1,15 @@
 var Zbroker2, Zremont2,Zsbor,Zproksi;
-//Zproksi=0;
+
 
 $(document).ready(function() {
+
+
+
     function Brok(){
-        //alert(23)
-      //  console.log('============');
-      //  console.log(Zbroker2);
+        // Первоначальное заполнение "Услуги брокера и экспедитора.
         document.getElementById('res_brocer').value=Zbroker2;
 
-        // Первоначальное заполнение " Сопровождение по ремонту и закупка зап.частей";
+        // Первоначальное заполнение "Сопровождение по ремонту и закупка зап.частей";
         document.getElementById('res_remont').value=0;
     }
 
@@ -17,15 +18,15 @@ $(document).ready(function() {
 
     function BrokMore() {
 
-        // Первоначальное заполнение " Услуги брокера и экспедитора. Вычитываем значение из файла price_copart.xlsx
-        // Данные (цена) для поля Услуги брокера хранятся в ячейке H25;
+        // Вычитываем значения для полей  "Услуги брокера и экспедитора" и "Сопровождение по ремонту и закупка зап.частей";. Вычитываем значение из файла price_copart.xlsx
+        // Данные (цена) для поля Услуги брокера хранятся в ячейке H25; Ремонт в ячейке H26;
 
 
         var typavto = document.getElementById('type_avto').value;
 
 
         var url = "https://aleksandr.tupichenkov.com/CalcAvtoUSA_New1/js/price_copart.xlsx";
-        // alert(url);
+
         var oReq = new XMLHttpRequest();
         oReq.open("GET", url, true);
         oReq.responseType = "arraybuffer";
@@ -58,81 +59,26 @@ $(document).ready(function() {
             var desired_value = desired_cell.v;
             Zbroker2 = desired_value;
             Zbroker2 = Zbroker2 * 1;
-           // console.log(Zbroker2);
-            // alert(Zbroker2);
 
             var address_of_cell2 = 'H26';
             var desired_cell2 = worksheet[address_of_cell2];
             Zremont2 = desired_cell2.v;
             Zremont2 = Zremont2 * 1;
-           // console.log(Zremont2);
 
             if (typavto=='pickup'){
                 Zbroker2=Zbroker2+200;
-              //  console.log('1'+Zbroker2);
-                Brok();
+                 Brok();
             }
             else{
                 Zbroker2=Zbroker2*1;
-              //  console.log('2'+Zbroker2);
                 Brok();
             }
-
-
         };
 
         oReq.send();
-
-        // if (typavto=='pickup'){
-        //     Zbroker2=Zbroker2+200;
-        //     console.log('1'+Zremont2);
-        //     Brok();
-        // }
-        // else{
-        //     Zbroker2=Zbroker2*1;
-        //     console.log('2'+Zremont2);
-        //     Brok();
-        // }
-
-
-
-
     }
 
 
-
-
-   // var typavto = document.getElementById('type_avto').value;
-
-
-    // if (typavto=='pickup'){
-    //     Zbroker2=Zbroker2+200;
-    //     Brok();
-    // }
-    // else{
-    //     Zbroker2=Zbroker2*1;
-    //     Brok();
-    // }
-    //console.log('============');
-    //console.log(Zbroker2);
-    //console.log(Zremont2);
-    //console.log('============');
-
-    // function Brok(){
-    //     alert(1)
-    //     console.log('============');
-    //     console.log(Zbroker2);
-    //     document.getElementById('res_brocer').value=Zbroker2;
-    //
-    //     // Первоначальное заполнение " Сопровождение по ремонту и закупка зап.частей";
-    //     document.getElementById('res_remont').value=0;
-    // }
-
-    //========================
-   // document.getElementById('res_brocer').value=700;
-
-    // Первоначальное заполнение " Сопровождение по ремонту и закупка зап.частей";
-  //  document.getElementById('res_remont').value=0;
 
     // Задаем маску телефона для формы заказа авто;
     $("#phone").mask("+380(99)999-99-99");
@@ -148,11 +94,10 @@ $(document).ready(function() {
 
 
     function Port() {
-        //alert(26);
+
         //==Заполнение  поля "Доставка в порт (суша, по США)"
         var port1=document.getElementById('stat').value;
-       // console.log('=======');
-        //console.log(port1);
+
         document.getElementById('res_port1').value=port1;
         var typavto=document.getElementById('type_avto').value;
         if (typavto=='pickup'){
@@ -172,7 +117,7 @@ $(document).ready(function() {
         if((type_avto=='passenger')||(type_avto=='motorcycle')){
             zmore= zmore=$("#stat option:selected").attr('data-zpicap');
         }
-       // console.log(zmore)
+
         document.getElementById('res_port2').value=zmore;
 
         //==Заполнение  поля   "Из порта в США "
@@ -195,8 +140,6 @@ $(document).ready(function() {
             zlogict=document.getElementById('logict').value;
         }
         document.getElementById('res_logis').value=zlogict;
-
-
 
     };
 
@@ -255,18 +198,16 @@ $(document).ready(function() {
                         var address_of_cell2 = 'A' +i;
                         var desired_cell2 = worksheet[address_of_cell2];
                         var Name = desired_cell2.v;
-                      //  console.log(Name);
 
                         nameauction.push(Name);
 
-                       // if (typearbd==TR){
+
 
                             var address_of_cell3 = 'C' +i;
                             var desired_cell3 = worksheet[address_of_cell3];
                             var Va = desired_cell3.v;
-
                             valauc.push(Va);
-                        //console.log(Va);
+
 
 
                             var address_of_cell4 = 'B' +i;
@@ -313,15 +254,12 @@ $(document).ready(function() {
                            // var address_of_cell5 = 'E' +i;
                             var desired_cell5 = worksheet[address_of_cell5];
                         var KRos = desired_cell5.v;
-                           // var KRos = desired_cell5.v;
-                        //console.log(KRos);
-                            Zkross.push(KRos);
+                           Zkross.push(KRos);
 
 
-                           // var address_of_cell6 = 'F' +i;
+
                             var desired_cell6 = worksheet[address_of_cell6];
                             var Zpik = desired_cell6.v;
-                        //console.log(Zpik);
                             Zpikap.push(Zpik);
 
                             var address_of_cell7 = 'D' +i;
@@ -359,17 +297,11 @@ $(document).ready(function() {
                     $('<option value='+valauc[i]+' '+'data-port='+portau[i]+ ' data-zkoss= '+Zkross[i]+ ' data-zpicap='+Zpikap[i]+ ' data-zlogic='+ Zlogic[i]+ ' >' + nameauction[i] + '</option>').appendTo(opt12);
                 }
 
-
                 $("#stat:first").focus();
                 Port();
             }
             oReq.send();
-            //Port();
-
-
         }
-
-
 
 
 
@@ -399,7 +331,6 @@ $(document).ready(function() {
 
                 var worksheet = workbook.Sheets[first_sheet_name];
 
-                // var typearbd=$("#typearb option:selected").html();
 
                 var nameauctioni = [];
                 var valauci = [];
@@ -407,33 +338,29 @@ $(document).ready(function() {
                 var Zkrossi = [];
                 var Zpikapi = [];
                 var Zlogici= [];
-               // console.log('============');
+
 
                 for (var i = 2; i != 300; i++)  {
                     var address_of_cell = 'A' +i;
                     var desired_cell = worksheet[address_of_cell];
 
                     if (typeof(desired_cell) !== 'undefined') {
-                        // var TR = desired_cell.v;
                         var address_of_cell2 = 'A' +i;
                         var desired_cell2 = worksheet[address_of_cell2];
                         var Name = desired_cell2.v;
-                       // console.log(Name);
+
                         nameauctioni.push(Name);
 
-                        // if (typearbd==TR){
 
 
                         var address_of_cell3 = 'C' +i;
                         var desired_cell3 = worksheet[address_of_cell3];
                         var Va = desired_cell3.v;
-                       // console.log(Va);
                         valauci.push(Va);
 
                         var address_of_cell4 = 'B' +i;
                         var desired_cell4 = worksheet[address_of_cell4];
                         var Pau = desired_cell4.v;
-                       // console.log(Pau);
                         portaui.push(Pau);
 
                         if (Pau=='QC'){
@@ -471,14 +398,11 @@ $(document).ready(function() {
                         }
 
 
-
-                        // var address_of_cell5 = 'E' +i;
                         var desired_cell5 = worksheet[address_of_cell5];
                         var KRos = desired_cell5.v;
                         Zkrossi.push(KRos);
 
 
-                        // var address_of_cell6 = 'F' +i;
                         var desired_cell6 = worksheet[address_of_cell6];
                         var Zpik = desired_cell6.v;
                         Zpikapi.push(Zpik);
@@ -505,8 +429,7 @@ $(document).ready(function() {
                         var desired_cell8 = worksheet[address_of_cell8];
                         var Zl = desired_cell8.v;
                         Zlogici.push(Zl);
-                        //console.log(Zl);
-                        // }
+
                     }
                     else{
                         break;
@@ -523,121 +446,11 @@ $(document).ready(function() {
             }
             oReq.send();
 
-
-
-            // var opt12=document.getElementById('stat');
-            // for (var i = 0; i < iaai.length; i++)  {
-            //     $('<option value='+iaai[i].val+' data-port='+iaai[i].port+ ' data-zkoss= '+iaai[i].zkoss+ ' data-zpicap='+iaai[i].zpicap+ ' data-zlogic='+ iaai[i].zlogic+ ' >' + iaai[i].name + '</option>').appendTo(opt12);
-            // }
-
         };
 
 
 
-
-     //    //==Заполнение  поля "Доставка в порт (суша, по США)"
-     //    var port1=document.getElementById('stat').value;
-     //    document.getElementById('res_port1').value=port1;
-     //    var typavto=document.getElementById('type_avto').value;
-     //    if (typavto=='pickup'){
-     //        port1=port1*1.5;
-     //    }
-     //    //==Заполнение  поля "Международная доставка (море)"
-     //    var zmore=0;
-     //    var type_avto=document.getElementById('type_avto').value;
-     //    if(type_avto=='crossover'){
-     //        zmore=$("#stat option:selected").attr('data-zkoss');
-     //                 }
-     //    if (type_avto=='pickup'){
-     //        zmore= zmore=$("#stat option:selected").attr('data-zpicap');
-     //        zmore=zmore*2;
-     //
-     //    }
-     //    if((type_avto=='passenger')||(type_avto=='motorcycle')){
-     //        zmore= zmore=$("#stat option:selected").attr('data-zpicap');
-     //    }
-     //
-     //    document.getElementById('res_port2').value=zmore;
-     //
-     //    //==Заполнение  поля   "Из порта в США "
-     //    var potrimport=$("#stat option:selected").attr('data-port');
-     //
-     //    $('#import').find('option').remove();
-     //    var opt11=document.getElementById('import');
-     //    $('<option value='+potrimport+'  >' + potrimport + '</option>').appendTo(opt11);
-     //    document.getElementById('import2').value='Houston';
-     //
-     // //==Заполнение  поля   "Комиссия My America"
-     //    var zlogict=0;
-     //    var logict=document.getElementById('logict').value;
-     //
-     //
-     //    if (logict==0){
-     //        zlogict=0;
-     //    }
-     //    else{
-     //        zlogict=document.getElementById('logict').value;
-     //    }
-     //    document.getElementById('res_logis').value=zlogict;
-     //   Port();
-
     }
-
-    // function Port() {
-    //     //==Заполнение  поля "Доставка в порт (суша, по США)"
-    //     var port1=document.getElementById('stat').value;
-    //     console.log('=======');
-    //     console.log(port1);
-    //     document.getElementById('res_port1').value=port1;
-    //     var typavto=document.getElementById('type_avto').value;
-    //     if (typavto=='pickup'){
-    //         port1=port1*1.5;
-    //     }
-    //     //==Заполнение  поля "Международная доставка (море)"
-    //     var zmore=0;
-    //     var type_avto=document.getElementById('type_avto').value;
-    //     if(type_avto=='crossover'){
-    //         zmore=$("#stat option:selected").attr('data-zkoss');
-    //     }
-    //     if (type_avto=='pickup'){
-    //         zmore= zmore=$("#stat option:selected").attr('data-zpicap');
-    //         zmore=zmore*2;
-    //
-    //     }
-    //     if((type_avto=='passenger')||(type_avto=='motorcycle')){
-    //         zmore= zmore=$("#stat option:selected").attr('data-zpicap');
-    //     }
-    //     console.log(zmore)
-    //     document.getElementById('res_port2').value=zmore;
-    //
-    //     //==Заполнение  поля   "Из порта в США "
-    //     var potrimport=$("#stat option:selected").attr('data-port');
-    //
-    //     $('#import').find('option').remove();
-    //     var opt11=document.getElementById('import');
-    //     $('<option value='+potrimport+'  >' + potrimport + '</option>').appendTo(opt11);
-    //     document.getElementById('import2').value='Houston';
-    //
-    //     //==Заполнение  поля   "Комиссия My America"
-    //     var zlogict=0;
-    //     var logict=document.getElementById('logict').value;
-    //
-    //
-    //     if (logict==0){
-    //         zlogict=0;
-    //     }
-    //     else{
-    //         zlogict=document.getElementById('logict').value;
-    //     }
-    //     document.getElementById('res_logis').value=zlogict;
-    //
-    //
-    //
-    // };
-    //
-
-
-
 
 
     //==Вызов Функции заполнения поля Штат аукциона и смена выпадающего списка при открытие сайта
@@ -652,32 +465,23 @@ $(document).ready(function() {
         var prise1 = document.getElementById('lot_price').value;
         if(Zsbor<1){
             Zsbor=prise1*Zsbor;
-           // sbor1();
-        }
-       //  alert(27);
-       //console.log(Zsbor);
-        console.log('====Copar++=====');
-        console.log(Zsbor);
+          }
 
 
         Zsbor=Zsbor+99+59;
-       /// console.log(Zsbor);
+
         Zsbor=Math.ceil(Zsbor);
         document.getElementById('res_auction').value=Zsbor;
     };
 
     function sbor2(){
-        alert('iaai_3')
+
         var prise1 = document.getElementById('lot_price').value;
-       // console.log('=======');
-       // alert(38);
+
         if(Zsbor<1){
             Zsbor=prise1*Zsbor;
-            // sbor1();
+
         }
-        console.log('====iaai+=====');
-        console.log(Zsbor);
-        console.log(Zproksi);
 
         Zsbor=Zsbor+Zproksi+59;
 
@@ -690,7 +494,7 @@ $(document).ready(function() {
 
 
     function tsbor1() {
-        console.log('====Copar+N=====');
+
         var prise1 = document.getElementById('lot_price').value;
         var url = "https://aleksandr.tupichenkov.com/CalcAvtoUSA_New1/js/sbor_copart.xlsx";
         var oReq = new XMLHttpRequest();
@@ -713,8 +517,6 @@ $(document).ready(function() {
 
             var worksheet = workbook.Sheets[first_sheet_name];
 
-            // var typearbd=$("#typearb option:selected").html();
-
 
 
             for (var i = 2; i != 300; i++)  {
@@ -734,52 +536,29 @@ $(document).ready(function() {
                     var Zlotmax = desired_cell3.v;
                     Zlotmax=Zlotmax*1;
 
-                    console.log(Zlotmin);
-
 
 
                     if ((prise1>=Zlotmin)&&(prise1<Zlotmax)){
                         var address_of_cell4 = 'C' +i;
                         var desired_cell4 = worksheet[address_of_cell4];
                         Zsbor = desired_cell4.v;
-                        console.log('=========');
-                         console.log(prise1);
-                        console.log(Zlotmin);
-                        console.log(Zlotmax);
-                        console.log(Zsbor);
+
                      sbor1();
                     }
-
-                    // if(Zsbor<0){
-                    //     Zsbor=prise1*Zsbor;
-                    //     sbor1();
-                    // }
-                    // console.log(Zsbor);
-
                 }
                 else{
-                    //return;
+
                     break;
                 }
             };
-
-
-
         }
-       // sbor1();
-        oReq.send();
-       // sbor1();
-
-
+       oReq.send();
     }
 
 
 
-
-    function tsbor2() {
-        var prise1 = document.getElementById('lot_price').value;
         function tproksi_iaai() {
-            alert('iaai_2')
+
             var prise1 = document.getElementById('lot_price').value;
 
             //==== Вычисление цены  "За участие в интернет торгах «Internet Bid Fee» Zproksi в заивисмотсти от стоимости лота prise1
@@ -805,13 +584,11 @@ $(document).ready(function() {
 
                 var worksheet = workbook.Sheets[first_sheet_name];
 
-                // var typearbd=$("#typearb option:selected").html();
-
 
                 for (var i = 2; i != 300; i++) {
                     var address_of_cell = 'A' + i;
                     var desired_cell = worksheet[address_of_cell];
-                    // console.log(desired_cell);
+
 
 
                     if (typeof(desired_cell) !== 'undefined') {
@@ -832,12 +609,7 @@ $(document).ready(function() {
                             var address_of_cell4 = 'C' + i;
                             var desired_cell4 = worksheet[address_of_cell4];
                             Zproksi = desired_cell4.v;
-                            alert(Zproksi);
-                            console.log('====froksi=====');
-                            console.log(prise1);
-                            console.log(Zlotmin);
-                            console.log(Zlotmax);
-                            console.log(Zproksi);
+
                             sbor2();
                         }
 
@@ -847,28 +619,21 @@ $(document).ready(function() {
                         break;
                     }
                 }
-
-
             }
-
-            //sbor2();
             oReq.send();
         }
 
 
 
         function tsbor_iaai() {
-            alert('iaai_1')
 
             var prise1 = document.getElementById('lot_price').value;
 
             var url = "https://aleksandr.tupichenkov.com/CalcAvtoUSA_New1/js/sbor_iaai2.xlsx";
-            //alert('====fbor_Z=====')
-
             var oReq = new XMLHttpRequest();
             oReq.open("GET", url, true);
             oReq.responseType = "arraybuffer";
-            oReq.onload = function (e) {
+            oReq.onload = function(e) {
                 var arraybuffer = oReq.response;
                 var data = new Uint8Array(arraybuffer);
 
@@ -877,183 +642,48 @@ $(document).ready(function() {
                     arr[i] = String.fromCharCode(data[i]);
                 }
                 var bstr = arr.join("");
-                var cfb = XLSX.read(bstr, {type: 'binary'});
+                var cfb = XLSX.read(bstr, { type: 'binary' });
 
-                var workbook = XLSX.read(bstr, {type: "binary"});
+                var workbook = XLSX.read(bstr, {type:"binary"});
 
                 var first_sheet_name = workbook.SheetNames[0];
 
                 var worksheet = workbook.Sheets[first_sheet_name];
 
-                // var typearbd=$("#typearb option:selected").html();
 
-
-                for (var i = 2; i != 300; i++) {
-                    var address_of_cell = 'A' + i;
+                for (var i = 2; i != 300; i++)  {
+                    var address_of_cell = 'A' +i;
                     var desired_cell = worksheet[address_of_cell];
-                    console.log(desired_cell)
 
                     if (typeof(desired_cell) !== 'undefined') {
 
-                        var address_of_cell2 = 'A' + i;
+                        var address_of_cell2 = 'A' +i;
                         var desired_cell2 = worksheet[address_of_cell2];
                         var Zlotmin = desired_cell2.v;
-                        Zlotmin = Zlotmin * 1;
-                        console.log(Zlotmin)
+                        Zlotmin=Zlotmin*1;
 
-                        var address_of_cell3 = 'B' + i;
+
+                        var address_of_cell3 = 'B' +i;
                         var desired_cell3 = worksheet[address_of_cell3];
                         var Zlotmax = desired_cell3.v;
-                        Zlotmax = Zlotmax * 1;
-
-                        console.log('====fbor_1=====');
-                        console.log(prise1);
-                        console.log(Zlotmin);
-                        console.log(Zlotmax);
+                        Zlotmax=Zlotmax*1;
 
 
-                        if ((prise1 >= Zlotmin) && (prise1 < Zlotmax)) {
-                            var address_of_cell4 = 'C' + i;
+                        if ((prise1>=Zlotmin)&&(prise1<Zlotmax)){
+                            var address_of_cell4 = 'C' +i;
                             var desired_cell4 = worksheet[address_of_cell4];
                             Zsbor = desired_cell4.v;
 
-                            // alert(Zsbor);
-                            console.log('====fbor_Z=====');
-                            console.log(prise1);
-                            console.log(Zlotmin);
-                            console.log(Zlotmax);
-                            console.log(Zsbor);
                             tproksi_iaai();
-                            //  sbor1();
                         }
-
-                        // if(Zsbor<0){
-                        //     Zsbor=prise1*Zsbor;
-                        //     sbor1();
-                        // }
-                        // console.log(Zsbor);
-
                     }
-                    else {
-                        //return;
-                        break;
+                    else{
+                       break;
                     }
                 };
-
-
-                // }
-                // sbor1();
-
-                oReq.send();
-
             }
+            oReq.send();
         }
-
-
-
-
-
-
-        // function tproksi_iaai() {
-        //     alert('iaai_2')
-        //     var prise1 = document.getElementById('lot_price').value;
-        //
-        //     //==== Вычисление цены  "За участие в интернет торгах «Internet Bid Fee» Zproksi в заивисмотсти от стоимости лота prise1
-        //
-        //     var url = "https://aleksandr.tupichenkov.com/CalcAvtoUSA_New1/js/proksi_iaai.xlsx";
-        //     var oReq = new XMLHttpRequest();
-        //     oReq.open("GET", url, true);
-        //     oReq.responseType = "arraybuffer";
-        //     oReq.onload = function (e) {
-        //         var arraybuffer = oReq.response;
-        //         var data = new Uint8Array(arraybuffer);
-        //
-        //         var arr = new Array();
-        //         for (var i = 0; i != data.length; ++i) {
-        //             arr[i] = String.fromCharCode(data[i]);
-        //         }
-        //         var bstr = arr.join("");
-        //         var cfb = XLSX.read(bstr, {type: 'binary'});
-        //
-        //         var workbook = XLSX.read(bstr, {type: "binary"});
-        //
-        //         var first_sheet_name = workbook.SheetNames[0];
-        //
-        //         var worksheet = workbook.Sheets[first_sheet_name];
-        //
-        //         // var typearbd=$("#typearb option:selected").html();
-        //
-        //
-        //         for (var i = 2; i != 300; i++) {
-        //             var address_of_cell = 'A' + i;
-        //             var desired_cell = worksheet[address_of_cell];
-        //           // console.log(desired_cell);
-        //
-        //
-        //             if (typeof(desired_cell) !== 'undefined') {
-        //
-        //                 var address_of_cell2 = 'A' + i;
-        //                 var desired_cell2 = worksheet[address_of_cell2];
-        //                 var Zlotmin = desired_cell2.v;
-        //                 Zlotmin = Zlotmin * 1;
-        //
-        //
-        //                 var address_of_cell3 = 'B' + i;
-        //                 var desired_cell3 = worksheet[address_of_cell3];
-        //                 var Zlotmax = desired_cell3.v;
-        //                 Zlotmax = Zlotmax * 1;
-        //
-        //
-        //                 if ((prise1 >= Zlotmin) && (prise1 < Zlotmax)) {
-        //                     var address_of_cell4 = 'C' + i;
-        //                     var desired_cell4 = worksheet[address_of_cell4];
-        //                     Zproksi = desired_cell4.v;
-        //                     alert(Zproksi);
-        //                     console.log('====froksi=====');
-        //                     console.log(prise1);
-        //                     console.log(Zlotmin);
-        //                     console.log(Zlotmax);
-        //                     console.log(Zproksi);
-        //                 }
-        //
-        //
-        //             }
-        //             else {
-        //                 break;
-        //             }
-        //         }
-        //         ;
-        //
-        //
-        //     }
-        //
-        //     //sbor2();
-        //     oReq.send();
-        // }
-
-
-
-
-        // console.log('====f======');
-        // console.log(Zsbor);
-        // console.log(Zproksi);
-        // console.log('====f======');
-        // sbor2();
-
-
-        //  Zsbor=Zsbor+Zproksi+59;
-       tsbor_iaai();
-       // tproksi_iaai();
-        // alert(43)
-       // sbor2();
-    }
-
-    //sbor2();
-
-
-
-//}
-
 
 
     function tsbor() {
@@ -1070,26 +700,14 @@ $(document).ready(function() {
     //var typeauction = document.getElementById('type_auction').value;
 
         if (typeauction=='copart'){
-
-
             tsbor1();
-
         }
-
-
-
-
 
         //=====  Расчет Аукционного сбора для аукциона iaai вычисляем как сумму сбора +За участие в интернет торгах «Internet Bid Fee+59.
         // Сумму сбора Zsbor вычисляем в зависимости от стоимости лота prise1 Таблица передана в переписке по заказу    =======//
         if (typeauction=='iaai'){
-
-
-           tsbor2();
-
+            tsbor_iaai();
         }
-
-
     }
 
 

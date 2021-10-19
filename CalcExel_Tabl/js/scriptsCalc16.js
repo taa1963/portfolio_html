@@ -4,10 +4,11 @@ var Zbroker2, Zremont2,Zsbor,Zproksi;
 $(document).ready(function() {
 
 
-//====Клик на  '+' и '-' первом уровне выпадающего списка ====//
+
     function ClSp1(element) {
         var sss= $(element).parents('.first_level_sp');
         if (sss.hasClass("act1")) {
+          //  alert(1)
             sss.find(".second_level").removeClass('act2');
             sss.find(".second_level").removeClass('act2');
             $(".second_level").removeClass('act2');
@@ -20,7 +21,7 @@ $(document).ready(function() {
         }
         else
         {
-
+           // alert(2)
             sss.find(".second_level").addClass('act2');
             sss.addClass('act1');
             var t2=sss.find(".sp1");
@@ -30,25 +31,24 @@ $(document).ready(function() {
 
     window.ClSp1=ClSp1;
 
-    //====Клик на название на  первом уровне выпадающего списка ====//
     function ClSp11(element) {
         alert(3)
         var t4= $(element.target).children(".sp1");
         ClSp1(t4);
     }
 
+   // $('#sekcion_check').click(function () {
 
-
-    // $('.first_level_sp').click(function(element) {
-    //     alert(3)
-    //     var t4= $(element.target).children(".sp1");
-    //     ClSp1(t4);
-    // });
+    $('.first_level_sp').click(function(element) {
+        alert(3)
+        var t4= $(element.target).children(".sp1");
+        ClSp1(t4);
+    });
 
     window.ClSp11=ClSp11;
 
 
-  //====Клик на  '+' и '-' 2 уровне выпадающего списка ====//
+
    function ClLi(element) {
        $('.sps').css('background', '');
        $(element).css('background', '#ccc');

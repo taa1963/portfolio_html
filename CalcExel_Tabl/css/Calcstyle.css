@@ -13,7 +13,7 @@ body{
     display: block;
     position: relative;
     overflow: hidden;
-    width: 80%;
+    width: 95%;
 	margin:0 auto;
     height: auto;
     font-size: 19px;
@@ -44,7 +44,7 @@ body{
 
 .calculator_block_right{
     display: block;
-    width: 40%;
+    width: 30%;
     float: right;
     border-left: 2px solid #000000;
 }

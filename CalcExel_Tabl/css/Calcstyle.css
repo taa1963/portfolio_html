@@ -64,7 +64,8 @@ display: block;
 
 .second_level{
     list-style-type:  none;
-    display: none;
+    display: block;
+    /*display: none;*/
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -83,6 +84,7 @@ display: block;
 
 .third_level{
     list-style-type:  none;
+    /*display: none;*/
     display: none;
     position: relative;
     overflow: hidden;

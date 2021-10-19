@@ -32,29 +32,14 @@ $(document).ready(function() {
 
     //====Клик на название на  первом уровне выпадающего списка ====//
     function ClSp11(element) {
-       // alert(3)
+
         var t4= $(element.target).children(".sp1");
-       // var t4= $(element).parents('.first_level_sp');
-       // var t4= $(element).children('.sp1');
-        console.log(t4)
+
+        //console.log(t4)
        ClSp1(t4);
     }
 
-   //  $('.first_level_sp').onclick = function(element){
-   //
-   // // $('.first_level_sp').onclick(function(element) {
-   //     // alert(3)
-   //      var t4= $(element.target).children(".sp1");
-   //      console.log('2'  +t4)
-   //      ClSp1(t4);
-   //  };
-   //
-   //  $('#first_level_sp').click(function(element) {
-   //      // alert(3)
-   //      var t4= $(element.target).children(".sp1");
-   //      console.log('2'  +t4)
-   //      ClSp1(t4);
-   //  });
+
 
    window.ClSp11=ClSp11;
 

@@ -46,6 +46,7 @@ body{
     display: block;
     width: 40%;
     float: right;
+    border-left: 2px solid #000000;
 }
 /*.act2{*/
     /*display: block;*/

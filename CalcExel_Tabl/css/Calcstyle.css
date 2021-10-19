@@ -1,0 +1,323 @@
+
+body{
+
+  background-color:#99cbff;
+}
+
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+.calculator{
+   
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+	margin:0 auto;
+    height: auto;
+    font-size: 19px;
+  }
+
+
+.calculator input{
+  
+    border: none;
+    padding: 0;
+    color: #000000;
+    font-family: 'Roboto';
+    font-weight: 800;
+}
+
+
+
+.calculator_titel h1{
+    text-align: center;
+    font-size: 33px;
+}
+
+.calculator_block_left{
+    display: block;
+    width: 60%;
+    float: left;
+}
+
+.calculator_block_right{
+    display: block;
+    width: 40%;
+    float: right;
+}
+/*.act2{*/
+    /*display: block;*/
+/*}*/
+
+
+
+.first_level{
+    list-style-type:  none;
+}
+.act1{
+display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.second_level{
+    list-style-type:  none;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.act2{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+/*.act3{*/
+    /*display: block;*/
+/*}*/
+
+.third_level{
+    list-style-type:  none;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    margin-top: 15px;
+}
+
+.sps{
+    list-style-type:  square;
+}
+.act3{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.sp1{
+    /*width: 19px;*/
+    height: 19px;
+    border: 2px solid #000000;
+    display: inline-block;
+    float: left;
+    padding: 2px;
+    margin: 0;
+    line-height: 19px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.sp2{
+    /*width: 19px;*/
+    height: 19px;
+    border: 2px solid #000000;
+    display: inline-block;
+    float: left;
+    padding: 2px;
+    margin: 0;
+    line-height: 19px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.sp3{
+    /*width: 19px;*/
+    height: 19px;
+    border: 2px solid #000000;
+    display: inline-block;
+    float: left;
+    padding: 2px;
+    margin: 0;
+    line-height: 19px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+
+
+.sp{
+    /*width: 19px;*/
+    height: 19px;
+    border: 1px solid #000000;
+    display: inline-block;
+    float: left;
+    padding: 2px;
+    margin: 0;
+    line-height: 19px;
+    margin-right: 5px;
+}
+
+.fourth_level{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+}
+.third_level li{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.act4{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.calculator_block_left_block{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.calculator_block_left1{
+    display: block;
+    width: 45%;
+    float: left;
+}
+.calculator_block_left2{
+    display: block;
+    width: 45%;
+    float: left;
+}
+
+.calc_label{
+    display: block;
+    width: 100%;
+       color: #000000;
+	    font-size: 18px;
+    font-weight: 800;
+}
+
+.calc_input{
+    display: block;
+    background: transparent;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 2px;
+    font-size: 18px;
+    outline: none !important;
+}
+
+.calc_select{
+    display: block;
+	padding:0;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #000000;
+     color: #000000;
+    padding-bottom: 2px;
+    font-size: 18px;
+    outline: none !important;
+}
+
+.calculator_block_left3{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.calculator_block_left3_TZ{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.calculator_active{
+    display: block;
+}
+
+
+
+
+
+.calculator_block_right_block{
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
+.rsform-input-box{
+    display: block;
+    background: transparent;
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    color: #000000;
+    padding-bottom: 2px;
+    font-size: 18px;
+    outline: none !important;
+    float: left;
+    margin-right: 10px
+}
+
+
+.calc_input_res{
+    display: block;
+    background: transparent;
+    width: 15%;
+    border: none;
+   font-weight: bold;
+    color: #000000;
+    padding-bottom: 2px;
+    font-size: 18px;
+    outline: none !important;
+    float: left;
+	    margin-right: 10px
+}
+
+.calc_label_res{
+    display: block;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    font-size: 19px;
+   
+}
+
+
+
+@media only screen  and (max-width: 960px) {
+.calculator_block_left{
+    display: block;
+    width: 100%;
+}
+    .calculator_block_right{
+        display: block;
+        width: 100%;
+    }
+
+}
+
+
+@media only screen  and (max-width: 500px) {
+
+
+
+}

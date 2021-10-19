@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Из Ехел в список</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Из Ехел в список">
+
+
+    <link href="css/Calcstyle.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div class="calculator" id="calculator">
+    <div class="calculator_titel" >
+        <h1>Вычитка данных из Ехел </h1>
+     </div>
+
+
+    <div class="calculator_block_left" >
+
+        <div  class="spispok" id="spisok">
+
+        <ul class="first_level">
+            <li class="first_level_sp">  <span class="sp1" onclick="ClSp1(this);" >+</span>  Бетоны
+
+                <ul class="second_level">
+                    <li><span class="sp2" onclick="ClSp2(this);">+</span>  Бетоны на заполнителях из пористых горных пород</li>
+
+                    <ul class="third_level">
+                          <li class="sp3l"><span class="sp3" onclick="ClSp3(this);" >+</span>  Бетон на вулканическом шлаке</li>
+
+                          <ul class="fourth_level">
+
+                              <li class="sps" data-suhayaplotnost="1600 " data-suhayaudteplo="0,84" data-suhayateplopr="0,52" data-vlagaa="7" data-vlagab="10" data-teploa="0,64" data-teplob="0,7"  data-teplousvoena="9,2" data-teplousvoenb="10,14" data-papopronizb="0,075"  onclick="ClLi(this);" >100 Бетон на вулканическом шлаке (1600 кг/м³)</li>
+                              <li class="sps" data-suhayaplotnost="1605 " data-suhayaudteplo="0,85" data-suhayateplopr="0,55" data-zlogic="100" onclick="ClLi(this);" >1005 Бетон на вулканическом шлаке (1605 кг/м³)</li>
+
+                              <li class="sps" data-port="TX" data-zkoss="83305" data-zpicap="755" data-zlogic="100" onclick="ClLi(this);">101 Бетон на вулканическом шлаке (1400 кг/м³)</li>
+                              <li class="sps" data-port="TX" data-zkoss="85505" data-zpicap="755" data-zlogic="100" onclick="ClLi(this);">103 Бетон на вулканическом шлаке (1000 кг/м³)</li>
+
+                          </ul>
+
+                          <li class="sp3l"><span class="sp3" onclick="ClSp3(this);">+</span>  Бетон на литоидной пемзе</li>
+                          <ul class="fourth_level">
+                              <li class="sps">95 Бетон на литоидной пемзе (1600 кг/м³)</li>
+                              <li class="sps">96 Бетон на литоидной пемзе (1400 кг/м³)</li>
+                              <li class="sps">97 Бетон на литоидной пемзе (1200 кг/м³)</li>
+
+                          </ul>
+                      </ul>
+
+
+                </ul>
+
+                <ul class="second_level">
+                    <li><span class="sp2" onclick="ClSp2(this);">+</span>  Бетоны на искусственных пористых заполнителях</li>
+                    <ul class="third_level">
+
+                        <li class="sp3l"><span class="sp3" onclick="ClSp3(this);">+</span>  Аглопоритобетон и бетоны на заполнителях из топливных шлаков</li>
+                        <ul class="fourth_level">
+                            <li class="sps">144 Аглопоритобетон и бетоны на заполнителях из топливных шлаков (1800 кг/м³)</li>
+                            <li class="sps">145 Аглопоритобетон и бетоны на заполнителях из топливных шлаков (1600 кг/м³)</li>
+                            <li class="sps">146 Аглопоритобетон и бетоны на заполнителях из топливных шлаков (1400 кг/м³)</li>
+
+                        </ul>
+                        <li class="sp3l"><span class="sp3" onclick="ClSp3(this);">+</span>  Бетон на зольном обжиговом и безобжиговом гравии</li>
+                        <ul class="fourth_level">
+                            <li class="sps">149 Бетон на зольном обжиговом и безобжиговом гравии (1400 кг/м³)</li>
+                            <li class="sps">150 Бетон на зольном обжиговом и безобжиговом гравии (1200 кг/м³)</li>
+                            <li class="sps">97 Бетон на литоидной пемзе (1200 кг/м³)</li>
+
+                        </ul>
+                    </ul>
+
+
+                </ul>
+
+            </li>
+        </ul>
+
+
+         </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="calculator_block_right" >
+
+        <div class="calculator_block_right_block" >
+            <span id="namev"></span>
+
+        </div>
+
+
+        <div class="calculator_block_right_block" >
+            <label class="calc_label_res">Сух - плотность, кг/м³</label>
+            <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="suhaya-plotnost" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <label class="calc_label_res">Сух - удельная теплоемкость, кДж/ (кг·°С)</label>
+            <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="suhaya-udteplo" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <label class="calc_label_res">Сух - теплопроводность     , Вт/ (м·°С)</label>
+            <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="suhaya-teplopr" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+        <div class="calculator_block_right_block" >
+          <label class="calc_label_res">Влажность А</label>
+          <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="vlagaa" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <label class="calc_label_res">Влажность B</label>
+            <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="vlagab" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <label class="calc_label_res">теплопроводность , Вт/(м·°С) А</label>
+            <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="teploa" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+        <div class="calculator_block_right_block" >
+           <label class="calc_label_res">теплопроводность , Вт/(м·°С) Б</label>
+          <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="teplob" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <label class="calc_label_res">теплоусвоение (при периоде 24 ч) , Вт/(м  ·°С) А</label>
+            <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="teplousvoena" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <label class="calc_label_res">теплоусвоение (при периоде 24 ч) , Вт/(м  ·°С) Б</label>
+            <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="teplousvoenb" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+        <div class="calculator_block_right_block" >
+            <label class="calc_label_res">паропроницаемость</label>
+            <input type="text" readonly  value="" size="20" name="form[suhaya-plotnost]" id="papoproniz" class="rsform-input-box form-control rsform-input-box">
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/scriptsCalc.js"></script>
+<!--<script src="js/data.js"></script>-->
+
+<script src="js/xlsx.full.min.js"></script>
+<script src="js/xlsx.js"></script>
+
+
+
+</body>
+</html>
+

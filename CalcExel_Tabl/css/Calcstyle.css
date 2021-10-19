@@ -57,7 +57,7 @@ body{
     list-style-type:  none;
 }
 .act1{
-display: block;
+    display: block;
     position: relative;
     overflow: hidden;
 }

@@ -50,10 +50,11 @@ if (
 
     $verify = mail($to, $title, $message, "Content-type:text/plain; Charset=utf-8\r\n");
     if ($verify) {
-
+        print_r(iconv("UTF-8", "UTF-8", $_POST));
         header('Location: https://aleksandr.tupichenkov.com/CalcBaniPerm/', true, 302);
         exit;
     } else {
+        print_r(iconv("UTF-8", "UTF-8", 'errrrr'));
         header('Location: https://aleksandr.tupichenkov.com/CalcBaniPerm/', true, 302);
         exit;
     }

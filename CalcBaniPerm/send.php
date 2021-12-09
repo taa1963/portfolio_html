@@ -18,7 +18,7 @@ if (
     isset($_POST['Zb2m']) && !empty($_POST['Zb2m']) &&
     isset($_POST['name']) && !empty($_POST['name']) &&
     isset($_POST['tel']) && !empty($_POST['tel']) &&
-    isset($_POST['mail']) && !empty($_POST['mail']))
+    isset($_POST['mailv']) && !empty($_POST['mailv']))
 	{
     $fund2m = substr(htmlspecialchars(trim($_POST['fund2m'])), 0, 1000);
     $Msten2m = substr(htmlspecialchars(trim($_POST['Msten2m'])), 0, 1000);
@@ -27,7 +27,7 @@ if (
     $Zb2m = substr(htmlspecialchars(trim($_POST['Zb2m'])), 0, 10000000000);
     $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 10000000000);
     $tel = substr(htmlspecialchars(trim($_POST['tel'])), 0, 10000000000);
-    $mail = substr(htmlspecialchars(trim($_POST['mail'])), 0, 10000000000);
+    $mailv = substr(htmlspecialchars(trim($_POST['mailv'])), 0, 10000000000);
 
 
        $to = 'alexandr.tupichenkov@yandex.ru';
@@ -38,7 +38,7 @@ if (
         Был получен заказ бани с сайта от:
         Имя: $name
         Телефон: $tel
-        Email: $mail
+        Email: $mailv
         Подробности заказа:
         Тип фундамента:$fund2m
         Материал стен:$Msten2m
@@ -58,5 +58,7 @@ if (
         exit;
     }
 }
+
+
 
 ?>

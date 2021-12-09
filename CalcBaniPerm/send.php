@@ -1,15 +1,15 @@
 <?php
 // если была нажата кнопка "Отправить"
-print_r($_POST);
+//print_r($_POST);
+//
+//print_r(iconv("UTF-8", "UTF-8", $_POST));
+//
+//$items = $_POST['item'];
+//
+//$result = '';
 
-print_r(iconv("UTF-8", "UTF-8", $_POST));
 
-$items = $_POST['item'];
-
-$result = '';
-
-
-echo $result;
+//echo $result;
 if (
     isset($_POST['fund2m']) && !empty($_POST['fund2m']) &&
     isset($_POST['Msten2m']) && !empty($_POST['Msten2m']) &&

@@ -1,0 +1,76 @@
+/* font-family: "RobotoBold"; */
+@font-face {
+    font-family: 'Uk_Arial1 Normal';
+    src: url('../fonts/uk_arial1_normal.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/uk_arial1_normal.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/uk_arial1_normal.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/uk_arial1_normal.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/uk_arial1_normal.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/uk_arial1_normal.svg#uk_arial1_normal') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+    font-family: 'Futura PT Bold';
+    src: url('../fonts/futura_pt_bold.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/futura_pt_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/futura_pt_bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/futura_pt_bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/futura_pt_bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/futura_pt_bold.svg#futura_pt_bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Arial Black';
+    src: url('../fonts/arial_black.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/arial_black.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/arial_black.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/arial_black.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/arial_black.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/arial_black.svg#arial_black') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Futura PT Cond Book';
+    src: url('../fonts/futura_pt_cond_book.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/futura_pt_cond_book.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/futura_pt_cond_book.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/futura_pt_cond_book.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/futura_pt_cond_book.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/futura_pt_cond_book.svg#futura_pt_cond_book') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Futura PT Light';
+    src: url('../fonts/futura_pt_light.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/futura_pt_light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/futura_pt_light.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/futura_pt_light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/futura_pt_light.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/futura_pt_light.svg#futura_pt_light') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Futura PT Light Oblique';
+    src: url('../fonts/futura_pt_light_oblique.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/futura_pt_light_oblique.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/futura_pt_light_oblique.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/futura_pt_light_oblique.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/futura_pt_light_oblique.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/futura_pt_light_oblique.svg#futura_pt_light_oblique') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+    font-family: 'Futura PT Cond Medium';
+    src: url('../fonts/futura_pt_cond_medium.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/futura_pt_cond_medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/futura_pt_cond_medium.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/futura_pt_cond_medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/futura_pt_cond_medium.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/futura_pt_cond_medium.svg#futura_pt_cond_medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+
+@font-face {
+    font-family: 'Roboto-Black';
+    url("../fonts/robotoblack/robotoblack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

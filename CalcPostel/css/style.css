@@ -1,0 +1,342 @@
+
+
+.content{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    width: 90%;
+    height: auto;
+   /*// height: 300px;*/
+   /*// margin-top: 50px;*/
+    margin: 0 auto;
+    padding: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    /*padding-top: 50px;*/
+ }
+
+
+
+.container h1{
+    text-align: center;
+    font-size: 2.0em;
+    /*font-size: 26px;*/
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.calc_menu{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+.calc_menu_talbe{
+	width:auto;
+	margin:0 auto;
+}
+
+
+
+
+.calc_menu_talbe2{
+	width:auto;
+	margin:0 auto;
+}
+
+
+
+/*		Первый блок. Блок ПРОСТЫНЯ		*/
+
+.calc_block_sheet{
+    display: block;
+    width: auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.table_menu{
+    visibility: collapse;
+}
+
+.table_cell{
+    border-left:5px solid #ffffff ;
+    border-right:5px solid #ffffff ;
+}
+
+.table_cell h3{
+    text-align: center;
+    vertical-align:middle ;
+}
+
+.cell_titel{
+    text-align: center;
+}
+
+.cell_select{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+.zakas{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.PazPr{
+	display: block;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 5px;
+}
+
+
+/*		Второй блок. Блок Наволочка		*/
+.calc_block_Pillowcase{
+    display: none;
+    width: auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.table_menu_Pillowcase{
+    visibility: collapse;
+}
+
+/*		Третий блок. Блок Простыня*/
+.calc_block_Duvetcover{
+	  display: none;
+    width: auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.PazPod{
+	display: block;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 5px;
+}
+
+
+
+/*		Четвертый блок. Блок Комплект*/
+.calc_block_complect{
+	 display: none;
+    width: auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+.Scomlekt{
+	display: block;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    background: #fff;
+    margin-bottom: 5px;	
+}
+
+.Scomlekt p{
+	text-align:left;
+	padding-left: 5px;
+}
+
+
+.but_block1{
+    margin: 0 auto;
+    display: block;
+    min-width: 120px;
+     background-color: rgb(247, 162, 7);
+    background-color: #e1e5ca;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+   
+    padding: 15px 25px 15px 45px;
+    border: solid 2px #e38d13;
+    content: '\00a0→';
+    border: 0;
+    border-radius: 15px;
+	margin-top:20px;
+}
+
+
+.container2{
+    display: none;
+    position: relative;
+    width: 90%;
+    height: auto;
+    /*// height: 300px;*/
+    /*// margin-top: 50px;*/
+    margin: 0 auto;
+    padding: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+}
+.but_block2{
+	margin: 0 auto;
+    display: block;
+    min-width: 120px;
+     background-color: rgb(247, 162, 7);
+    background-color: #e1e5ca;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+   
+    padding: 15px 25px 15px 25px;
+    border: solid 2px #e38d13;
+    content: '\00a0→';
+    border: 0;
+    border-radius: 15px;
+	margin-top:20px;
+}
+.but_block112::before {
+    content: "\00a0→";
+    position: absolute;
+    color: #0f0f0f;
+    font-size: bold;
+    line-height: 1.3;
+    transform: rotate(180deg);
+	font-size: 26px;
+    left: 45%;
+}
+
+
+
+
+.form{
+    border: 1px solid #000000;
+	margin: 0 auto;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.zakas_block_content h2{
+	text-align:center;
+	font-size: 1.5em;
+    font-weight: bold;
+	padding-top:5px;
+}
+
+.calc_itog1{
+	display:block;
+	margin-left:5px;
+	text-align:left;
+	
+}
+.calc_itog1 p{
+	
+	text-align:left;
+	font-size: 1.3em;
+    font-weight: bold;
+	padding-top:5px;
+}
+
+.calc_itog1 label{
+	display:block;
+	width:100%;
+	text-align:left;
+	font-size: 1.1em;
+    font-weight: 300;
+	padding-top:5px;
+}
+.calc_itog1 span{
+	color:red;
+	font-weight:bold;
+}
+
+.form label{
+    width: 100%;
+    display: block;
+    margin-left: 10px;
+    font-size: 1.1em;
+    font-weight: 300;
+   // font-family: 'Futura PT Light','Uk_Arial1 Normal',sans-serif;
+}
+
+.form input{
+    width: 30%;
+    margin-left: 10px;
+    font-size: 1.11em;
+    font-weight: 300;
+   // font-family: 'Futura PT Light','Uk_Arial1 Normal',sans-serif;
+}
+
+.form_block{
+    display: none;
+}
+.btns{
+	margin: 0 auto;
+    display: block;
+    min-width: 120px;
+     background-color: rgb(247, 162, 7);
+    background-color: #e1e5ca;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 25px 15px 25px;
+    border: solid 2px #e38d13;
+    content: '\00a0→';
+    border: 0;
+    border-radius: 15px;
+	margin-top:20px;
+	
+}
+
+
+
+
+
+@media only screen and (max-width: 630px) {
+
+    .zakas_block2_type_vubor{
+        display: block;
+        width: 100%;
+    }
+
+    .zakas_block2_type{
+        display: block;
+        width: 100%;
+    }
+
+    .zakas_block2_type_opis_all{
+        display: block;
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Постельное белье</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="taa">
+	
+
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+
+   
+     <link href="css/style.css" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+
+
+
+
+   <div class="content">
+     <div class="container">
+	 
+	 
+         <h1>Калькулятор постельного белья </h1>
+		 
+		 
+		 
+
+         <div class="calc_menu" id='calc_menu'>
+		 <table class="calc_menu_talbe">
+		     <tr >
+			   <td><label for='calcmenu1_1' class="calc_menu1"><input id='calcmenu1_1' type="radio" name="calcmenu" >Рассчитать комплект полностью</label></td>
+			   <td><label for='calcmenu1_2' class="calc_menu1"><input id='calcmenu1_2' type="radio" name="calcmenu" checked >Рассчитать пошив изделия</label></td>
+			 </tr>
+		 
+		 </table>
+
+         </div>
+		 
+		 <div class="calc_menu2">
+		 <table class="calc_menu_talbe2">
+		     <tr >
+			   <td><label for='calcmenu2_1' class="calc_menu2"><input id='calcmenu2_1' type="radio" name="calcmenu2" checked>Простыня</label></td>
+			   <td><label for='calcmenu2_2' class="calc_menu2"><input id='calcmenu2_2' type="radio" name="calcmenu2"  >Наволочка</label></td>
+			   <td><label for='calcmenu2_3' class="calc_menu2"><input id='calcmenu2_3' type="radio" name="calcmenu2"  >Пододеяльник</label></td>
+			 </tr>
+		 
+		 </table>
+
+         </div>
+
+
+
+         <div class="calc_block_sheet">
+
+             <div class="block_table" id="sheet_block_table" >
+                 <table class="table_uv"  id="sheet_uvv"  style="width:100%" >
+                     <tr class="table_menu" style="background: #e1e5ca;">
+                         <th style="width:15%;border-top: none;">Вид </th>
+                         <th style="width:24%;border-top: none;">Тип </th>
+                         <th  style="width:20%;border-top: none;">Размер </th>
+                         <th  style="width:9%;border-top: none;">Количество </th>
+                         <th  style="width:16%;border-top: none;">Ткань  </th>
+						 <th  style="width:14%;border-top: none;"> 777 </th>
+
+                     </tr>
+                     <tr class='proct' style="background: #e1e5ca;">
+					 
+                         <td class="table_cell"> <h3>Простыня</h3></td>
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Тип</p>
+                             <select class="cell_select typepr">
+                                 <option value='1'>Простыня на резинке</option>
+                                 <option value='2'>Простыня без резинки</option>
+                             </select>
+                         </td>
+
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Размер</p>
+                             <select class="cell_select type_pr" id="type_pr">
+                                 <option value='1'>Полуторка</option>
+                                 <option value='2'>Двухспальная</option>
+                                 <option value='3'>евро/макси</option>
+                             </select>
+							 <span class="PazPr" id="PazPr">140*200*25</span>
+							 
+                         </td>
+
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Количество</p>
+							 
+							 <input type="number"  class="Numberin Npost" id='Npost' value='10' step='10' size="10000" min='0'  />
+                            
+
+                         </td>
+
+                         <td class="table_cell" >
+                             <p class="cell_titel">Ткань</p>
+                             <select class="cell_select ColorPr" >
+                                 <option value='1'>Тенсель</option>
+                                 <option value='2'>Сатин</option>
+                                 <option value='3'>Страйп сатин</option>
+                                 <option value='4' >Бязь</option>
+                                 <option value='5'>Поплин</option>
+                                 <option value='6'>Страйп темный</option>
+                             </select>
+                         </td>
+						 
+						 <td class="table_cell">
+                            
+                         </td>
+
+                     </tr>
+			 
+
+                 </table>
+                 <div><button class="but_blockpr" id="block_pr">Добавить объект  </button></div>
+             </div>
+
+
+
+         </div>
+
+         <div class="calc_block_Pillowcase">
+
+             <div class="block_table" id="Pillowcase_block_table" >
+                 <table class="table_uv"  id="Pillowcase_uvv"  style="width:100%" >
+                     <tr class="table_menu_Pillowcase" style="background:#f4edd2;">
+                         <th style="width:15%;border-top: none;">Вид </th>
+                         <th style="width:24%;border-top: none;">Тип </th>
+                         <th  style="width:20%;border-top: none;">Размер </th>
+                         <th  style="width:9%;border-top: none;">Количество </th>
+                         <th  style="width:16%;border-top: none;">Ткань  </th>
+						  <th  style="width:14%;border-top: none;"> </th>
+
+                     </tr>
+                     <tr class="navol" style="background: #f4edd2;">
+                         <td class="table_cell"> <h3>Наволочка</h3></td>
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Тип</p>
+                             <select class="cell_select typenav" id='typenav'>
+                                 <option value='1'>С рюшками</option>
+                                 <option value='2'>С замком</option>
+                             </select>
+                         </td>
+
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Размер</p>
+                             <select class="cell_select pasnav" id='pasnav'>
+                                 <option value='1'>50х70</option>
+                                 <option value='2'>70х70</option>
+
+                             </select>
+                         </td>
+
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Количество</p>
+							 
+							<input type="number"  class="Numberin Nnav"  value="10" step="10" size="10000" min="0"'  />
+							
+                            
+
+                         </td>
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Ткань</p>
+                             <select class="cell_select ColorNav" id='ColorNav'>
+                                 <option value='1'>Тенсель</option>
+                                 <option value='2'>Сатин</option>
+                                 <option value='3'>Страйп сатин</option>
+                                 <option value='4'>Бязь</option>
+                                 <option value='5'>Поплин</option>
+                                 <option value='6'>Страйп- темный</option>
+                             </select>
+                         </td>
+						  <td class="table_cell">
+						   </td>
+
+                     </tr>
+
+                 </table>
+                 <div><button class="but_blocknav" id="block_nav">Добавить объект  </button></div>
+             </div>
+
+
+
+         </div>
+
+
+
+         <div class="calc_block_Duvetcover">
+
+             <div class="block_table" id="Duvetcover_block_table" >
+                 <table class="table_uv"  id="Duvetcover_uvv"  style="width:100%" >
+                     <tr class="table_menu_Pillowcase" style="background:#e1d4cc;">
+                         <th style="width:15%;border-top: none;">Вид </th>
+                         <th style="width:24%;border-top: none;">Тип </th>
+                         <th  style="width:20%;border-top: none;">Размер </th>
+                         <th  style="width:9%;border-top: none;">Количество </th>
+                         <th  style="width:16%;border-top: none;">Ткань  </th>
+						 <th  style="width:14%;border-top: none;">  </th>
+
+                     </tr>
+                     <tr class="podol" style="background: #e1d4cc;">
+                         <td class="table_cell"> <h3>Пододеяльник </h3></td>
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Тип</p>
+                             <select class="cell_select typepodol" >
+                                 <option value="1">1,5-ка</option>
+                                 <option value="2">2-ка</option>
+                                 <option value="3">Евро</option>
+                                 <option value="4">2+евро </option>
+                                 <option value="5">Детский </option>
+                             </select>
+                         </td>
+
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Размер</p>
+							 
+							  <span class="PazPod" >150*210</span>
+                          
+                         </td>
+
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Количество</p>
+							 <input type="number"  class="Numberin Npod"  value="10" step="10" size="10000" min="0"  />
+                             
+
+                         </td>
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Ткань</p>
+                             <select class="cell_select ColorPod" >
+                                 <option value="1">Тенсель</option>
+                                 <option value="2">Сатин</option>
+                                 <option value="3">Страйп сатин</option>
+                                 <option value="4">Бязь</option>
+                                 <option value="5">Поплин</option>
+                                 <option value="6">Страйп- темный</option>
+                             </select>
+                         </td>
+						 <td class="table_cell">
+						 </td>
+
+                     </tr>
+
+                 </table>
+                 <div><button class="but_blockPod" id="block_Pod">Добавить объект  </button></div>
+             </div>
+
+
+
+         </div>
+
+         <div class="calc_block_complect">
+
+             <div class="block_table" id="complect_block_table" >
+                 <table class="table_uv"  id="complect_uvv"  style="width:100%" >
+                     <tr class="table_menu_Pillowcase" style="background:#e1d4cc;">
+                         <th style="width:15%;border-top: none;">Вид </th>
+                         <th style="width:24%;border-top: none;">Тип </th>
+                         <th  style="width:20%;border-top: none;">Размер </th>
+                         <th  style="width:9%;border-top: none;">Количество </th>
+                         <th  style="width:16%;border-top: none;">Ткань  </th>
+						 <th  style="width:16%;border-top: none;">  </th>
+
+                     </tr>
+                     <tr  class="complect" style="background: #e1d4cc;">
+                         <td class="table_cell"> <h3>Комлект </h3></td>
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Тип</p>
+                             <select class="cell_select typecomlekt" >
+                                 <option value="1">1,5-ка</option>
+                                 <option value="2">2-ка</option>
+                                 <option value="3">«Семейный»</option>
+                                 <option value="4">2+евро простыня </option>
+                                 <option value="5">Евро* </option>
+                                 <option value="6">Детский </option>
+                             </select>
+                         </td>
+
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Состав комплекта</p>
+							 <span class="Scomlekt">
+							   Пододеяльник - 150*210,
+							   Простыня - 150*210,
+							   Наволочка - 70*50 2шт.
+                           	</span>
+                             
+                         </td>
+
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Количество</p>
+							 
+							 <input type="number"  class="Numberin Ncompl"  value="10" step="10" size="10000" min="0"  />
+                            
+
+                         </td>
+
+                         <td class="table_cell">
+                             <p class="cell_titel">Ткань</p>
+                             <select class="cell_select colorcompl" >
+                                 <option value="1">Тенсель</option>
+                                 <option value="2" >Сатин</option>
+                                 <option value="3">Страйп сатин</option>
+                                 <option value="4">Бязь</option>
+                                 <option value="5">Поплин</option>
+                                 <option value="6">Страйп- темный</option>
+                             </select>
+                         </td>
+						 
+						 <td class="table_cell">
+						  </td>
+
+                     </tr>
+
+                 </table>
+                 <div><button class="but_blockComplect" id="block_Complect">Добавить объект  </button></div>
+             </div>
+
+
+
+         </div>
+
+
+        <button class="but_block1" id="but_block1">Далее &nbsp; →  </button>
+
+
+     </div>
+	 
+	  <div class="container2">
+          <div class="zakas_block6">
+
+          <div class="zakas_block_content">
+
+          <h2> Итоги выбора </h2>
+
+
+          <div class="calc_itog1">
+
+          <p>Итого Вы выбрали:</p>
+
+          <label class="name">Вид заказа: &nbsp;&nbsp; <span id="NKcompl"></span> </label>
+
+          <label class="name">Вид изделия: &nbsp;&nbsp; <span id="typest1"></span> </label>
+
+          <label class="name">Тип изделия: &nbsp;&nbsp; <span id="typeisd2"></span> </label>
+
+          <label class="name">Размер или состав: &nbsp;&nbsp; <span id="Sisd1"></span> </label>
+		 	  
+		  <label class="name">Количество изделий: &nbsp;&nbsp; <span id="Nisd"></span> </label>
+		  
+		  <label class="name">Цвет изделия: &nbsp;&nbsp; <span id="Colorisd"></span> </label>
+		 
+		 <label class="name">Цена заказа: &nbsp;&nbsp; <span id="Zzakas"></span>&nbsp;руб. </label>
+
+
+
+          </div>
+
+
+          <h2> Отправить заказ </h2>
+
+
+          <form class="form" id="form" action="send2.php" method="post">
+
+          <div class="form_block">
+          <p class="first">
+          <label for="name">Вид заказа:</label>
+          <input type="text" required  name="NKcomplm" id="NKcomplm" size="1000" />
+          </p>
+
+          <p class="first">
+          <label for="name">Вид изделия:</label>
+          <input type="text" required  name="typest1m" id="typest1m" size="100" />
+          </p>
+
+          <p class="first">
+          <label for="name">Тип изделия:</label>
+          <input type="text" required  name="typeisd2m" id="typeisd2m" size="100" />
+          </p>
+          <p class="first">
+          <label for="name">Размер или состав:</label>
+          <input type="text" required  name="Sisd1m" id="Sisd1m" size="1000" />
+          </p>
+		   <p class="first">
+          <label for="name">Количество изделий:</label>
+          <input type="text" required  name="Nisdm" id="Nisdm" size="100" />
+          </p>
+		   <p class="first">
+          <label for="name">Цвет изделия:</label>
+          <input type="text" required  name="Colorisdm" id="Colorisdm" size="100" />
+          </p>
+		  
+		  
+          <p class="first">
+          <label for="name">Ориентировочная цена заказа:</label>
+          <input type="text" required  name="Zzakasm" id="Zzakasm" size="100" />
+          </p>
+
+          </div>
+
+
+          <!--<fieldset>-->
+          <p class="first">
+          <label for="name">Имя</label>
+          <input type="text" required  name="name" id="name" size="100" />
+          </p>
+
+          <p>
+          <label for="tel">Телефон</label>
+          <input type="text" required  name="tel" id="tel" size="30" />
+          </p>
+
+          <p>
+          <label for="tel">Email</label>
+          <input type="text" required  name="mailv" id="mailv" size="50" />
+          </p>
+
+
+
+
+
+          <!--</fieldset>-->
+
+          <p class="submit"><button class="btns" type="submit">Отправить</button></p>
+          </form>
+
+
+
+
+
+          <div class="button_block3">
+
+          <button class="but_block2" id="but_block2"> Назад  </button>
+          <!--<button class="but_block2_3" id="but_block6_6">Далее &nbsp; →  </button>-->
+          </div>
+
+          </div>
+
+
+
+
+          </div>
+	 
+	  </div>
+	 
+	 
+   </div>
+
+
+
+
+
+
+
+
+
+       <script src="js/jquery.min.js"></script>
+       <script src="js/calculator.js"></script>
+       <script src="js/data.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

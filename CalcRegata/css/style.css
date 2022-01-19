@@ -1,0 +1,167 @@
+
+
+body{
+    /*background: #c0c0c0 url(../img/main-bg.jpg) center 0 no-repeat;*/
+    /*background-color: #cccccc;*/
+    /*bgcolor:#c0c0c0;*/
+    background-color: #f4f4f4;
+}
+
+
+/*Описание header и его компонентов */
+
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+
+}
+.container{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #658b01;
+    border-radius: 10px;
+}
+
+h1{
+
+    padding: 0;
+    margin: 0;
+    line-height: 110%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.block_calc{
+    display: block;
+    width: 50%;
+    margin-bottom: 20px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.block_calc p{
+    font-size: 1.5em;
+    color: #222;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.inrange{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.innumber{
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    line-height: 110%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+}
+
+
+.calc_block_itog{
+    display: block;
+    width: 50%;
+    margin-bottom: 20px;
+    float:right;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.calc_block_itog p{
+    font-size: 1.5em;
+    color: #222;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+
+.calc_block_itog_text{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.calc_block_itog_text p{
+    font-size: 1em;
+    color: #222;
+    text-align: left;
+}
+.calc_block_itog_text span{
+    font-size: 1.4em;
+    font-weight: bold;
+    color: red;
+}
+
+
+.form1{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #000000;
+}
+.first input {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: blanchedalmond;
+}
+
+.first1{
+    display: none;
+}
+
+.form_button1{
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.form_button1 button {
+    display: block;
+    margin: 0 auto;
+    background-color: #048593;
+    padding: 10px 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 630px) {
+    .block_calc{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        float: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    .calc_block_itog{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        float:none;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+}

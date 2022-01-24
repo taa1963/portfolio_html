@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Расчет стоимости регаты</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="taa">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+    <h1>2-х часовая регата. Расчет  до 40 участников.</h1>
+
+    <div class="block_calc" id="block_calc_type">
+        <p class="param_title">Укажите количество участников </p>
+
+        <input type="text" class="innumber"  id="innumber" readonly>
+
+        <input type="range" class="inrange" id="inrange" min="1" max="40" step="1" value="1" oninput="sizeV(this)">
+
+       
+      
+
+    </div>
+
+   
+
+    <div class="calc_block_itog"  id="calc_block_itog"  >
+        <p class="param_title">Вы выбрали </p>
+
+        <div class="calc_block_itog_text">
+          
+         
+            <p>Кол-во участников: <span id="nmember"></span> </p>
+            <p>Кол-во яхт: <span id="Jaxt"></span> </p>
+            <p>Наличный расчет: <span id="ZenaNal"></span> руб.</p>
+            <p>Безналичный расчет: <span id="ZenaBezNal"></span> руб. </p>
+            
+            <p>Уточнить стоимость парусной регаты, можно по  по телефону +79857655553; через  WhatsApp на сайте, а так же отправив заявку на почту</p>
+
+        </div>
+
+        <p>Для отправки заявки на заказ заполните данные и нажмите "Отправить"</p>
+        <form id="form" class="form1" action="send.php" method="post" >
+            <div class="first1">
+                <p> <input type="text" class="form_inp"  name="nmemberm" id="nmemberm" readonly value="" size="300" required />
+                </p>
+            </div>
+            <div class="first1">
+                <p> <input type="text" class="form_inp"  name="ZenaNalm" id="ZenaNalm" readonly value="" size="300" required />
+                </p>
+            </div>
+            <div class="first1">
+                <p> <input type="text" class="form_inp"  name="ZenaBezNalm" id="ZenaBezNalm" readonly value="" size="300" required />
+                </p>
+            </div>
+
+            <div class="first1">
+                <p> <input type="text" class="form_inp"  name="Jaxtm" id="Jaxtm" readonly value="" size="300" required />
+                </p>
+            </div>
+           
+          
+
+
+            <div class="first">
+                <p> <input type="text" class="form_inp"  name="name" id="name" placeholder="Ваше имя*"  size="30" required />
+                </p>
+            </div>
+
+            <div class="first">
+                <p> <input type="text" class="form_inp"  name="email" id="email" placeholder="Ваш e-mail*"  size="30" required />
+                </p>
+            </div>
+            <div class="first">
+                <p> <input type="text" class="form_inp" name="telefon" id="telefon" placeholder="Ваш номер телефона*"  size="30" required />
+                </p>
+            </div>
+
+            <div class="form_button1" id="form_button2">
+                <button class="submit" name="insert"  id="btn2" >ОТПРАВИТЬ</button>
+            </div>
+        </form>
+
+
+
+    </div>
+
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/scriptcalc.js"></script>
+
+</body>
+</html>

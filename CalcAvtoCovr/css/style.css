@@ -1,0 +1,981 @@
+
+
+
+
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Описание header и его компонентов */
+
+
+
+
+.header {
+    display: block;
+    margin-bottom: 20px;
+   
+}
+
+.headimg{
+    width: 100%;
+}
+
+
+.content_all{
+    display: block;
+    width: 100%;
+}
+
+.calculator{
+    display: block;
+    width: 100%;
+}
+.calculator_selection{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.calculator_selection_left{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.kovr_sota1{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb1{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+
+.kovr_sota2{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb2{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+.kovr_sota3{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb3{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_sota4{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb4{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_sota5{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb5{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+.kovr_sota6{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb6{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+.kovr_sota7{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb7{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb8{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+.kovr_sota9{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb9{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb10{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb11{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb12{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_romb13{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%
+}
+
+.kovr_sota14{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%  
+}
+
+
+
+
+
+
+.border1{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+
+.border2{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+
+.border3{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border4{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border5{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border6{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border7{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border8{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border9{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border10{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border11{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border12{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border13{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+.border14{
+    display: block;
+    width: 339px;
+    height: 207px;
+    position: absolute;
+    top:10%;
+    left:0%   
+}
+
+
+
+.kovr_close1{
+  display: none;  
+}
+
+
+
+
+
+
+
+.calculator_selection_right{
+    display: block;
+    width: 50%;
+    float: right;
+}
+.kovr{
+    width: 305px;
+    height: 401px;
+    margin: 0 auto;
+}
+
+
+
+.calculator_selection_titel{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.calculator_selection_titel2{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.calculator_selection_button1{
+    display: block;
+    width: 100%;
+
+}
+
+.but_select1{
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: #212529;
+    padding: 5px 10px;
+    border:  2px solid #000000;
+    border-radius: 16px;
+    margin-right: 10px;
+    background: #fff;
+
+}
+.but_select2{
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: #212529;
+    padding: 5px 10px;
+    border:  2px solid #000000;
+    border-radius: 16px; 
+    background: #fff;
+}
+
+.but_select3{
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: #212529;
+    padding: 5px 5px;
+    border:  2px solid #000000;
+    border-radius: 16px;
+    margin-right: 10px;
+    background: #fff;
+
+}
+
+.but_select4{
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: #212529;
+    padding: 5px 5px;
+    border:  2px solid #000000;
+    border-radius: 16px; 
+    background: #fff;
+}
+
+.but_select3 p{
+    margin-top: 5px;
+}
+
+.but_select4 p{
+    margin-top: 5px;
+}
+
+.but_select3 span{
+    color:#ff9900 ;
+}
+
+.but_select4 span{
+    color:#ff9900 ;
+}
+
+.but_select_celect{
+    border:  3px solid #ff9900; 
+}
+
+.complect{
+    display: block;
+    width: 160px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.calculator_selection_titel3{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.calculator_selection_titel3 p{
+    font-size: 15px;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+.calculator_selection_titel3 span{
+    color: #ff9900;
+}
+
+.calculator_selection_chek{
+    display: block;
+    width: 100%;
+}
+.calculator_selection_chek{
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: #212529;
+    
+    background: #fff;
+}
+
+.chek1{
+    display: none;
+    
+}
+
+.chek2{
+    height: 16px;
+    width: 16px;
+    border: 1px solid #ff9900;
+    display: inline-block;
+    position: relative;
+    background-color:#FFF;
+     margin-right: 3px;
+    padding:3px;
+
+}
+ 
+
+  [type=checkbox]:checked + span:before {/* <-- ставим иконку, когда чекбокс включен  */
+    display: block;
+    
+    content: '\2714';
+    position: absolute;
+    top: -11px;
+    left: 0;
+    font-size:23px;
+    color:#ff9900;  
+  }
+
+  .bagag{
+    font-size:16px;
+    color:#ff9900;  
+    margin-left: 10px; 
+    font-weight: bold;
+  }
+
+  .minus{
+    height: 16px;
+    width: 40px;
+    background-color:#ff9900;   
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #212529;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .numshild{
+      height: 16px;
+      max-width: 40px;
+      text-align: center;
+  }
+  
+  .calculator_color{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .calculator_color_left1{
+    display: block;
+    width: 26%;
+    float: left;
+}
+
+  .calculator_color_left{
+      display: block;
+      width: 37%;
+      float: left;
+  }
+
+
+  .calculator_color_left p{
+    font-size: 16px;
+    color: #212529;
+    text-align: left;
+}
+
+.calculator_color_left1 p{
+    font-size: 16px;
+    color: #212529;
+    text-align: left;
+}
+
+
+
+
+
+
+
+  .calculator_color_jacheka{
+      display: block;
+      width: 80px;
+      height: auto;
+      float: left;
+  }
+
+  .calculator_color_jacheka_img_sota{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+  }
+
+  .calculator_color_jacheka_img_romb{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+  }
+
+  .calculator_color_jacheka_img_cl{
+    border: 2px solid #ff9900;
+  }
+
+
+
+  .jacheka{
+      display: block;
+      margin: 0 auto;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      margin-top: 3px;
+  }
+
+  .calculator_color_jacheka_titel{
+      display: block;
+      width: 60px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 10px;
+  }
+
+
+  .calculator_color_color{
+    display: block;
+    width: 42px;
+    height: 42px;
+    float: left;
+    margin-bottom: 50px;
+} 
+.calculator_color_color_romb{
+    display:block;
+    width: 42px;
+    height: 42px;
+    float: left;
+    margin-bottom: 50px;
+} 
+
+
+
+
+
+.calculator_color_color_img_sota{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 20px;
+   }
+   .calculator_color_color_img_cl{
+    width: 42px;
+    height: 42px;
+   border: 2px solid #ff9900;
+   }
+   .color_sota1{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 3px;
+   }
+
+   .color_romb1{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2.5px;
+   }
+
+
+   .calculator_color_color_img_border{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 20px;
+   }
+
+   .calculator_border1{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #050505;
+   }
+
+   .calculator_border2{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #5f5f5f;
+   }
+
+   .calculator_border3{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #c6c6c6;
+   }
+   .calculator_border4{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #5f3104;
+   }
+
+   .calculator_border5{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #cca668;
+   }
+
+   .calculator_border6{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #1e1ee2;
+   }
+
+   .calculator_border7{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #1d1aa8;
+   }
+
+   .calculator_border8{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #ff0000;
+   }
+
+   .calculator_border9{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #9b103d;
+   }
+
+   .calculator_border10{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #f8f400;
+   }
+   .calculator_border11{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #12c460;
+   }
+
+   .calculator_border12{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #108145;
+   }
+
+   .calculator_border13{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #730793;
+   }
+
+   .calculator_border14{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px; 
+    margin: 0 auto;
+    margin-top: 2px;
+    background: #fd8b40;
+   }
+   
+   .border_close{
+       display: none;
+   }
+
+
+
+
+
+
+  .calculator_color_color_titel{
+    display: block;
+    width: 32px;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .calculator_color_color_titel p{
+    font-size: 10px;
+    color: #212529;
+  }
+  .calculator_color_color_sota{
+    display:block;
+    width: 42px;
+    height: 42px;
+    float: left;
+    margin-bottom: 50px;   
+  }
+
+  .calculator_color_color_titel_romb{
+    display: block;
+    width: 32px;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .calculator_color_color_titel_romb p{
+    font-size: 10px;
+    color: #212529;
+  }
+  .calculator_color_close{
+      display: none;
+  }
+
+  .prise{
+      display: block;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 40px;
+  }
+
+  .prise1{
+    display: block;
+    width: 50%;
+   float: left;
+}
+
+.prise1 p{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+.prise1 span{
+    color: #fd8b40;
+}
+
+
+
+.prise2{
+    display: block;
+    width: 50%;
+   float: left;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .calculator_selection_left{
+        display: block;
+        width: 100%;
+        float: left;
+       
+    }
+    .calculator_selection_right{
+        display: block;
+        width: 100%;
+        float: left;
+    }
+    .calculator_color_left{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+    }
+    
+    .calculator_color_left1{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+    }
+
+
+}

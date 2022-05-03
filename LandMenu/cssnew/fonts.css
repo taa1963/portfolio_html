@@ -1,0 +1,28 @@
+
+@font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: url(../font/Museosanscyrl500.ttf);
+    src: url(../font/Museosanscyrl500.woff2);
+    src: url(../font/Museosanscyrl500.woff);    
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../font/Montserrat.ttf);
+    src: url(../font/Montserrat.woff2);
+    src: url(../font/Montserrat.woff);    
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat_Italic';
+    src: url(../font/Montserrat-Italic.ttf);
+    src: url(../font/Montserrat-Italic.otf);
+     
+    font-weight: 500;
+    font-style: italic;
+}
+
+

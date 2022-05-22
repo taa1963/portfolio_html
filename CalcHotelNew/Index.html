@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор Отелей</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор Отелей">
+
+
+    <link href="cssnew/Calc_style.css" rel="stylesheet">
+
+    <script  src="js/jquery.min.js" ></script>
+    <link rel="dns-prefetch" href="https://www.cbr-xml-daily.ru/" />
+    <script defer src="https://www.cbr-xml-daily.ru/daily_jsonp.js"></script> 
+    
+
+
+</head>
+<body>
+    <!----------Начало выбор отеля-------->
+
+    <script>
+        function CBR_XML_Daily_Ru(rates) {
+         // function trend(current, previous) {
+         //   if (current > previous) return ' ▲';
+         //   if (current < previous) return ' ▼';
+         //   return '';
+         // }
+            
+          var USDrate = rates.Valute.USD.Value.toFixed(4).replace('.', ',');
+         // var USD = document.getElementById('USD');
+         // USD.innerHTML = USD.innerHTML.replace('00,0000', USDrate);
+         // USD.innerHTML += trend(rates.Valute.USD.Value, rates.Valute.USD.Previous);
+        
+          var EURrate = rates.Valute.EUR.Value.toFixed(4).replace('.', ',');
+         // var EUR = document.getElementById('EUR');
+         // EUR.innerHTML = EUR.innerHTML.replace('00,0000', EURrate);
+         // EUR.innerHTML += trend(rates.Valute.EUR.Value, rates.Valute.EUR.Previous);
+         // var k1=trend(rates.Valute.EUR.Value, rates.Valute.EUR.Previous);
+         
+        document.getElementById('kursevro1').value=EURrate;
+        document.getElementById('kursusd1').value=USDrate;
+
+
+        }
+        </script>
+
+     <div class="otel">
+        <input type="text" name="otel"  class="otel1" value="Звезда" readonly data-id="3613cee3"/>
+        <input type="text" name="otel"  class="otel2" value="Чакра" readonly data-id="3613cee4"/>
+
+     </div>
+
+    <!----------Завершение выбор отеля--------> 
+
+
+
+<!----------Начало блока калькулятора-------->
+
+
+<div class="calculator">
+
+
+    <div class="valute"> 
+        <span id="kurs1"></span>
+        <input  type="text" name="kurs" id="kursevro1" class="kurs" value="" />
+        <input  type="text" name="kurs" id="kursusd1" class="kurs" value="" />
+    </div>
+   
+   
+    
+
+    <div class="calc_block_hover">
+        <div class="calc_hover_blocks">
+            <h1 class="calc_titel">Рассчитать стоимость программы</h1>
+
+            <div class="calc_hover_block1">
+                <div class="calc_hover_block daaten">
+                <p>Дата заезда </p>
+                <span>от 7 дней</span>
+                <div><input  type="text" name="date" id="date1" class="tcal" value="" /></div>
+                </div>
+            </div>
+        
+
+            <div class="calc_hover_block2">
+                <div class="calc_hover_block">
+                    <p>Дата выезда </p>
+                    <span >от 28 дней</span>
+                <div><input type="text" name="date" id="date2" class="tcal" value="" /></div>
+                </div>
+            </div>
+
+            <div class="calc_hover_block3">
+                <div class="calc_hover_block">
+                    <p>Кол. человек </p>
+                    <span class="calc_sp"></span>
+                <div>
+                    <select class="calc_sel">
+                    <!-- <option class="optamount" value="">DBL</option>
+                    <option class="optamount">SGL</option>
+                    <option class="optamount">EB</option> -->
+                   </select>
+                </div> 
+                </div>
+            </div>
+
+            <div class="calc_hover_block4">
+                <div class="calc_hover_block">
+                    <p>Категория номера </p>
+                    <span class="calc_sp"></span>
+                <div>
+                    <select class="calc_sel2">
+                    <!-- <option class="optnomer">Standard room</option>
+                    <option class="optnomer">Deluxe room</option>
+                    <option class="optnomer">Super Deluxe room</option> -->
+                    </select>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="dateerr">
+            <p><span id="daterrsp"></span></p>
+        </div>
+    </div>
+
+
+    <div class="calc_block_2">
+        <div class="calc_block_2_left">
+            <h2>Выбрать программу лечения</h2>
+            <p>В стоимость расчета не входит размещение <br> без процедур</p>
+        </div>
+
+        <div class="calc_block_2_rigt">
+            <div class="calc_chek">
+                  <input type="checkbox" id="chek1"><label for="chek1">Программа очищения "Панчакарма"</label>
+            </div>
+
+            <div class="calc_chek">
+                <input type="checkbox" id="chek2"><label for="chek2">Программа похудения</label>
+            </div>
+
+            <div class="calc_chek">
+                <input type="checkbox" id="chek3"><label for="chek3">Программа лечения стресса</label>
+            </div>
+
+            <div class="calc_chek">
+                <input type="checkbox" id="chek4"><label for="chek4">Программа долголетия</label>
+            </div>
+
+            <div class="calc_chek">
+                <input type="checkbox" id="chek5"><label for="chek5">Программа красоты</label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="calc_itog">
+        <div class="line"> </div>
+           <div class="calc_itog_left">
+              <p class="calc_zena1">Цена</p>
+              <p class="calc_zena2">от <span id="zena">20 000</span></p>
+            </div>
+
+        <div class="calc_itog_rigt">
+           <div class="itog_v1" id="itog_v1">
+               <p class="itog_text1 itog_text_active ">Руб.</p>
+               <span class="itog_znak1 itog_znak_active">&#8381;</span>
+           </div>
+
+           <div class="itog_v2" id="itog_v2">
+               <p class="itog_text2">Доллар</p>
+               <span class="itog_znak2">&#36;</span>
+           </div>
+
+           <div class="itog_v3" id="itog_v3">
+               <p class="itog_text3">Евро</p>
+              <span class="itog_znak3">&#8364;</span>
+           </div>
+        </div>
+
+        <div class="line2"> </div>
+    </div>
+
+    <div class="calc_block_3">
+        <div class="calc_block_3_left"  >
+        <h2 class="calch2">В стоимость включено</h2>
+        <p class="calcp">Трансфер</p>
+        <p class="calcp">Все аюрведические процедуры</p>
+        <p class="calcp">Ежедневная консультация с врачом</p>
+        <p class="calcp">Медикаменты для аюрведических процедур</p>
+        <p class="calcp">Аюрведическое питание</p>
+        <p class="calcp">Ежедневные классы йоги и медитации</p>
+    </div>
+
+        <div class="calc_block_3_rigt"  >
+            <h2 class="calch2">В стоимость не включено</h2>
+            <p class="calcp">Виза</p>
+            <p class="calcp">Страховка</p>
+            <p class="calcp">Авиа билет</p>
+            <p class="calcp">В стоимость расчета не входит <br> размещение без процедур</p>
+        </div>
+
+         <div class="line2"> </div>
+    </div>
+
+    <div class="calc_block_4">
+        <h2 class="calch2">Вам могут понравиться</h2>
+        <div class="calc_block_4_1">
+
+
+        </div>
+        <div class="calc_block_4_2">
+
+        </div>
+        <div class="calc_block_4_3">
+
+        </div>
+
+
+    </div>
+    
+
+    
+    <script src="js/scriptsCalc.js" ></script> 
+
+    <script  src="js/tcal.js"></script>
+  
+    <script src="js/data.js" ></script>
+    <!----------Конец блока калькулятора-------->
+
+</div>
+
+
+</body>
+
+
+
+</html>

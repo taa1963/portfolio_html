@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор тарифов</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор тарифов">
+
+
+
+
+
+     <link href="css/calc_style.css" rel="stylesheet">
+
+   
+
+</head>
+<body>
+
+
+<section class="sec-calc">
+   
+
+<div class="container_calc">
+
+     <div class="calculator" id="calculator">
+    <h2>Подбор рекомендованного тарифа</h2>
+
+
+            <div class="calculator_floor" >
+              <div class="calculator_floor_block" >
+                <div class="calculator_text2" >
+                        <p>Вид деятельности</p>
+                </div>
+                 <div class="calculator_date" >
+                     <select required class="format" id="type_ob" >
+                     </select>
+                 </div>
+              </div>
+            </div>
+
+        <div class="line"></div>
+
+         <div class="calculator_floor" >
+             <div class="calculator_floor_block" >
+                 <div class="calculator_text2" >
+                     <p>Количество позиций номенклатуры</p>
+                 </div>
+                 <div class="calculator_date" >
+                     <select required class="format" id="col_position" >
+                     </select>
+                 </div>
+             </div>
+         </div>
+
+         <div class="line"></div>
+
+         <div class="calculator_floor" >
+             <div class="calculator_floor_block" >
+                 <div class="calculator_text2" >
+                     <p>Организационная форма</p>
+                 </div>
+                 <div class="calculator_date" >
+                     <select required class="format" id="type_org" >
+                     </select>
+                 </div>
+             </div>
+         </div>
+
+         <div class="line"></div>
+
+         <div class="calculator_floor" >
+             <div class="calculator_floor_block" >
+                 <div class="calculator_text2" >
+                     <p>Количество операций</p>
+                 </div>
+                 <div class="calculator_date" >
+                     <select required class="format" id="col_oper" >
+                     </select>
+                 </div>
+             </div>
+         </div>
+
+         <div class="line"></div>
+
+         <div class="calculator_floor" >
+             <div class="calculator_floor_block" >
+                 <div class="calculator_text2" >
+                     <p>Количество сотрудников</p>
+                 </div>
+                 <div class="calculator_date" >
+                     <select required class="format" id="col_pers" >
+                     </select>
+                 </div>
+             </div>
+         </div>
+
+         <div class="line"></div>
+
+
+
+
+         <div class="calculator_itog" id="itog1">
+             <h2>Доступные рекомендованные пакеты </h2>
+             
+             <div class="calculator_itog_block" id="paket1"   >
+                <div class="calculator_paket"  >
+                    <h3>Пакет "Смелый"</h3>
+                    <p> Базовая стоимость пакета:   <span class="Zitosw" id="ZPaket1">0</span> &#8381;.</p>
+                    <p>Пакет доступен для начинающих предпринимателей</p>
+                    <input type="button"  value="Выбрать"  class="button" id="btnpaket1" />
+                </div>
+             </div>
+
+             <div class="calculator_itog_block" id="paket2">
+                <div class="calculator_paket"  >
+                    <h3>Пакет "Успешный"</h3>
+                    <p> Базовая стоимость пакета:   <span class="Zitosw" id="ZPaket2">0</span> &#8381;.</p>
+                    <p>Полная бухгалтерия.
+                        Можно добавить юриста или бизнес-ассистента.</p>
+                    <input type="button"  value="Выбрать"  class="button" id="btnpaket2" />
+                </div>                
+            </div>
+
+            <div class="calculator_itog_block" id="paket3" >
+                <div class="calculator_paket"  >
+                    <h3>Пакет "Эффективный"</h3>
+                    <p> Базовая стоимость пакета:   <span class="Zitosw" id="ZPaket3">0</span> &#8381;.</p>
+                    <p>Расширенная  бухгалтерия.
+                        Можно добавить юриста или бизнес-ассистента.
+                    </p>
+                    <input type="button"  value="Выбрать"  class="button" id="btnpaket3" />
+                </div>
+             </div>
+         </div>
+
+         
+
+        <div class="calculator_dop_param   itogClose" id="dopparam">
+
+               <h2>Дополнительные услуги</h2>
+
+             <div class="calculator_floor" id="doppaket" >
+                <div class='popup_1'>
+                    <span class="pop1">?</span> 
+                    <div class="popup_1_1" >
+                        <p>
+                            Описание пакета "Дополнительный пакет"
+                        </p>
+                    </div>
+                </div>
+               
+               <div class="calculator_floor_block" >
+                    <div class="calculator_text2" >
+                        <p>Дополнительный  пакет </p>
+                    </div>
+                    <div class="calculator_date" >
+                        <input type="checkbox" class="checkdata" id="doppaketinp">
+                     </div>
+                </div>
+             </div>
+
+         <div class="line"></div>
+
+         <div class="calculator_floor" id="doppodr">
+            <div class='popup_1'>
+                <span class="pop1">?</span> 
+                <div class="popup_1_1" >
+                    <p>
+                        Описание пакета "Кол-во обособленных подраздедений"
+                    </p>
+                </div>
+            </div>
+            <div class="calculator_floor_block" >
+                 <div class="calculator_text2" >
+                     <p>Кол-во обособленных подраздедений</p>
+                  </div>
+                 <div class="calculator_date" >
+                     <input type="text"  value="0"  class="numdata" id="power" >
+                  </div>
+             </div>
+            </div>
+
+      <div class="line"></div>
+
+      <div class="calculator_floor" id="market" >
+        <div class='popup_1'>
+            <span class="pop1">?</span> 
+            <div class="popup_1_1" >
+                <p>
+                    Описание пакета "Маркетплейс"
+                </p>
+            </div>
+        </div>
+            <div class="calculator_floor_block" >
+                 <div class="calculator_text2" >
+                     <p>Маркетплейс</p>
+                  </div>
+                 <div class="calculator_date" >
+                    <select required class="format" id="col_markpl" >
+                        <option value="1">1-2</option>
+                        <option value="2">3-5</option>
+                        <option value="3">более 5</option>
+                    </select>
+                  </div>
+             </div>
+         </div>
+
+      <div class="line"></div>
+
+      <div class="calculator_floor" >
+        <div class='popup_1'>
+            <span class="pop1">?</span> 
+            <div class="popup_1_1" >
+                <p>
+                    Описание пакета "Помощник"
+                </p>
+            </div>
+        </div>
+        <div class="calculator_floor_block" >
+             <div class="calculator_text2" >
+                 <p>Помощник</p>
+              </div>
+             <div class="calculator_date" >
+                <select required class="format" id="col_help1" >
+                    <option value="1">до 10 обращений в мес</option>
+                    <option value="2">более 10 обращений в мес</option>
+                   
+                </select>
+              </div>
+         </div>
+     </div>
+
+  <div class="line"></div>
+
+        <div class="calculator_floor" >
+            <div class='popup_1'>
+                <span class="pop1">?</span> 
+                <div class="popup_1_1" >
+                    <p>
+                        Описание пакета "Помощник+"
+                    </p>
+                </div>
+            </div>
+            <div class="calculator_floor_block" >
+               <div class="calculator_text2" >
+                    <p>Помощник +</p>
+                </div>
+               <div class="calculator_date" >
+                   <input type="checkbox" class="checkdata" id="help2">
+                </div>
+            </div>
+        </div>
+
+     <div class="line"></div>
+
+     <div class="calculator_floor" >
+        <div class='popup_1'>
+            <span class="pop1">?</span> 
+            <div class="popup_1_1" >
+                <p>
+                    Описание пакета "Юрист"
+                </p>
+            </div>
+        </div>
+        <div class="calculator_floor_block" >
+           <div class="calculator_text2" >
+                <p>Юрист</p>
+            </div>
+           <div class="calculator_date" >
+            <select required class="format" id="lawyer" >
+                <option value="1">1 час</option>
+                <option value="2">10 часов</option>
+                <option value="2">20 часов</option>
+               
+            </select>
+            </div>
+        </div>
+    </div>
+
+ <div class="line"></div>
+
+ <div class="calculator_floor" id="vnprogram" >
+    <div class='popup_1'>
+        <span class="pop1">?</span> 
+        <div class="popup_1_1" >
+            <p>
+                Описание пакета "Работа со сторонней программой (УТ, УНФ, Мой склад, Асана,Айко)"
+            </p>
+        </div>
+    </div>
+    <div class="calculator_floor_block" >
+       <div class="calculator_text2" >
+            <p>Работа со сторонней программой (УТ, УНФ, Мой склад, Асана,Айко)</p>
+        </div>
+       <div class="calculator_date" >
+           <input type="checkbox" class="checkdata" id="stprogram">
+        </div>
+    </div>
+</div>
+
+<div class="line"></div>
+
+<div class="calculator_floor" >
+    <div class='popup_1'>
+        <span class="pop1">?</span> 
+        <div class="popup_1_1" >
+            <p>
+                Описание пакета "Управленческий учет БДР + ДДС / ПК + ДДС (факт)"
+            </p>
+        </div>
+    </div>
+    <div class="calculator_floor_block" >
+       <div class="calculator_text2" >
+            <p>Управленческий учет БДР + ДДС / ПК + ДДС (факт)</p>
+        </div>
+       <div class="calculator_date" >
+           <input type="checkbox" class="checkdata" id="ychet">
+        </div>
+    </div>
+</div>
+
+<div class="line"></div>
+
+   
+
+<div class="lesson_form_button">
+    
+    <button class="btn-calc" id="btn-calc">Связаться со мной</button
+</div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+    
+</div>
+
+</section>
+
+	
+
+<div class="popup-fade2">
+    <div class="popup">
+        <form id="form1" class="form1" action="send.php" method="post" >
+
+        <div class="note">
+            <div class="content_block3_cont">
+                <h2>Укажите контактные данные и нажмите "Отправить"</h2>
+
+            </div>
+            <div class="itog_data">
+                <div class="itog_vuborm1">
+                    <p>Вид деятельности
+                    <input type="text" class="form_inp1"  name="tupeobmail" id="tupeobmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Количество позиций номенклатуры
+                    <input type="text" class="form_inp1"  name="posnomelmail" id="posnomelmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Организационная форма
+                    <input type="text" class="form_inp1"  name="orgformmail" id="orgformmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Количество операций
+                    <input type="text" class="form_inp1"  name="colopermail" id="colopermail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Количество сотрудников
+                    <input type="text" class="form_inp1"  name="npersmail" id="npersmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Базовый пакет 
+                    <input type="text" class="form_inp1"  name="basepaketmail" id="basepaketmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Дополнительный пакет 
+                    <input type="text" class="form_inp1"  name="doppaketmail" id="doppaketmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Кол-во обособленных подраздедений 
+                    <input type="text" class="form_inp1"  name="nobpodrmail" id="nobpodrmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Маркетплейс 
+                    <input type="text" class="form_inp1"  name="marketmail" id="marketmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Помощник
+                    <input type="text" class="form_inp1"  name="assistantmail" id="assistantmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Помощник +
+                    <input type="text" class="form_inp1"  name="assistandoptmail" id="assistantdopmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Юрист
+                    <input type="text" class="form_inp1"  name="lawyermail" id="lawyermail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Работа со сторонней программой
+                    <input type="text" class="form_inp1"  name="stprogrammail" id="stprogrammail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Управленческий учет
+                    <input type="text" class="form_inp1"  name="ychetmail" id="ychetmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+                <div class="itog_vuborm1">
+                    <p>Базовый пакет цена
+                    <input type="text" class="form_inp1"  name="zpaketbasmail" id="zpaketbasmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+
+                <div class="itog_vuborm1">
+                    <p>Общая цена с допами
+                    <input type="text" class="form_inp1"  name="zpaketallmail" id="zpaketallmail" value="" size="30" readonly />
+                    </p>
+                </div>
+
+
+
+            </div>
+
+            
+           
+
+
+            
+
+           
+            <div class="itog_vuborm">
+                <input type="text" class="form_inp"  name="name" id="name" placeholder="Имя"  size="30" required />
+            </div>
+            <div class="itog_vuborm">
+                <input type="text" class="form_inp" name="telefon" id="phone" placeholder="Телефон"  size="30" required />
+            </div>
+            <div class="itog_vuborm">
+                <input type="text" class="form_inp"  name="emailmail" id="emailmail" placeholder="E-mail"  size="30" required />
+            </div>
+
+        </div>
+
+
+
+        <button class="submit" name="insert"  id="btn2" >Отправить</button>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/scriptsCalc.js"></script>
+<script src="js/data.js"></script>
+
+
+
+
+
+</body>
+</html>

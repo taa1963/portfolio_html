@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор расчета шторы ПВХ</title>
+
+    <meta name="author" content="taa">
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор расчета шторы ПВХ">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        function PrintElem(elem)
+        {
+            Popup($(elem).html());
+
+        }
+        function Popup(data)
+        {
+            var mywindow = window.open('', 'my div', 'height=auto,width=auto');
+            mywindow.document.write('<html><head><title>my div</title>');
+            /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+            mywindow.document.write('</head><body >');
+            mywindow.document.write(data);
+            mywindow.document.write('</body></html>');
+            mywindow.document.close(); // necessary for IE >= 10
+            mywindow.focus(); // necessary for IE >= 10
+            mywindow.print();
+            mywindow.close();
+
+            return true;
+
+        }
+
+    </script>
+
+    
+</head>
+
+<body>
+
+
+<div class="content">
+
+    <div class="content_titel">
+        <h1>Калькулятор расчета шторы ПВХ</h1>
+    </div>    
+
+    <div class="content_block1">
+
+        <div class="content_block_left">
+            <p class="titelinp">Ширина проёма, м</p>
+            <input class="ipncalk"  type="number" id="shpr" value="0" min="0" step="1">
+
+            <p class="titelinp">Штора - ПВХ</p>
+            <label class="labcalk"><input class="type_pvx" type="radio" name="pvxradio" id="pvx1" value="200" checked="" onchange="pvxf(this)">ПВХ завеса стандартная 2x200 </label>
+            <label class="labcalk"><input class="type_pvx" type="radio" name="pvxradio" id="pvx2" value="300" onchange="pvxf(this)">ПВХ завеса стандартная 3x300 </label>
+            <label class="labcalk"><input class="type_pvx" type="radio" name="pvxradio" id="pvx2" value="400" onchange="pvxf(this)">ПВХ завеса стандартная 4x400 </label>
+
+
+        </div>    
+
+        <div class="content_block_richt">
+            <p class="titelinp">Высота проема, м</p>
+            <input class="ipncalk" type="number" id="lpr" value="0" min="0" step="1">
+
+            <p class="titelinp">Дополнительно</p>
+            <label class="labcalk">Нахлест </label>
+            <select class="naxl" id="naxl">
+                <option value="20">20% </option>
+                <option value="0">Без нахлеста </option>
+                <option value="40">40% </option>
+                <option value="50">50% </option>
+            </select>
+
+            <label class="labcalk plankal">Комплект планок </label>
+            <select class="planka" id="planka">
+                <option class="plankaopt" value="0">Без планок </option>
+                <option class="plankaopt" value="1">Стальные </option>
+                <option class="plankaopt" value="2">Из нержавеющей стали</option>
+            </select>
+
+            <label class="labcalk plankal">Гребенка </label>
+            <select class="planka" id="grebenka">
+                <option value="0">Без гребенки </option>
+                <option value="1">Стальная </option>
+                <option value="2">Из нержавеющей стали</option>
+            </select>
+
+            <label class="labcalk montag">Монтаж </label>
+            <select class="planka" id="montag">
+                <option value="0">Без монтажа </option>
+                <option value="1">Монтаж нужен </option>                
+            </select>
+
+            <!-- <label class="labcalk plankal"><input type="checkbox" id="arb">Изготовление </label> -->
+
+
+        </div>   
+
+
+
+
+      
+
+        <div class="futer_button">
+            <p class="btn1" id="btn1">Рассчитать</p>
+            <p class="btn1" id="btn2" onclick="PrintElem('#itog_all')">Распечатать</p>
+            <p class="btn1" id="btn3">Отправить заявку</p>
+        </div>
+
+        <div class="itog_all" id="itog_all">
+
+            <div class="komtitel">
+                <img src="img/logo.png" alt="log">
+                <p>+7 (4712) 74-61-74, +7-906-692-60-68<br>
+                    тел.8(4712)52-90-23<br>
+                    тел.8(4712)36-00-68<br>
+                    моб.8 906692 60 68<br>
+                    e-mail:kurs.klimat@yandex.ru<br>
+                    <a href="https://kurs-klimat.ru/">kurs-klimat.ru</a></p>
+                <br>
+                <center>Коммерческое предложение</center>
+                <br>
+            </div>          
+
+
+            <div class="tabl1_all" id="tabl1_all">
+
+            </div>
+         
+          <div class="tabl1" id="tabl1">
+          <div class="tabl2" id="tabl2">
+            <p>Итого за все проемы</p>
+           </div> 
+
+          </div>
+
+        </div>
+
+
+
+
+        <div class="mailform">
+            <form id="form1" class="form1" action="send.php" method="post" >
+
+                <!-- <div class="first2">
+                    <textarea  name="metismail" id="metismail">
+
+                    </textarea>
+                </div>     -->
+
+                <div class="first">
+                    <p>
+                        <span>позвоните мне по телефону</span>
+                        <input type="text" class="form_inp" name="telefon" id="phone" placeholder="+7()-___-__-__"  size="30" required />
+                    </p>
+                </div>
+    
+                <div class="first">
+                    <p>
+                    <span>имя</span>
+                     <input type="text" class="form_inp"  name="name" id="name" placeholder=""  size="30" required />
+                    </p>                  
+                </div>
+
+                <div class="first">
+                    <p>
+                    <span>email</span>
+                     <input type="text" class="form_inp"  name="email" id="email" placeholder=""  size="30" required />
+                    </p>                   
+                </div>
+
+
+
+
+    
+           
+                <button class="submit" name="insert"  id="btn1" >ОТПРАВИТЬ</button>
+           </div>    
+
+
+
+            </form>
+
+    </div>
+
+       
+      
+
+    </div>
+
+  
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<!-- <script src="js/data.js" ></script> -->
+<script src="js/scriptsCalc.js" ></script>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,359 @@
+
+body{
+    margin: 0;
+	padding:0;
+    width: 100%;
+    height: auto;
+}
+
+
+.content{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+.content_titel{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* ===================== Описание  блока калькулятора =====================*/
+
+.content_block1{
+    display: block;
+    width: 100%;
+    height: auto;   
+}
+
+.content_block_left{
+    display: block;
+    width: 50%;
+    float: left;
+}
+
+.content_block_richt{
+    display: block;
+    width: 50%;
+    float: right;
+}
+.titelinp{
+    font-weight: 600; 
+}
+
+.ipncalk{
+    background-clip: padding-box;
+    background-image: none;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    color: #495057;
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 80%;
+    text-align: center;
+}
+
+.labcalk{
+    display:block;
+    cursor: pointer;
+    margin-bottom: 7px;
+    font-weight: 400; 
+    font-size: 1.2em;
+}
+
+.naxl{
+    background-clip: padding-box;
+    background-image: none;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    color: #495057;
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 80%;
+    text-align: left;
+    background: #fff;
+
+}
+.plankal{
+    margin-top: 30px;
+}
+
+.planka{
+    background-clip: padding-box;
+    background-image: none;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    color: #495057;
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 80%;
+    text-align: left;
+    background: #fff;
+    
+}
+
+
+.futer_button{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+.btn1{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    background-color: #409eff;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 0.25rem;
+    margin-bottom: 30px;
+    float: left;
+    margin-right: 20px;
+}
+
+
+
+.itog_all{
+    display: none;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.itog_visible{
+    display: block; 
+}
+
+.itog2{
+    width: auto;
+}
+.itog1{
+  width: 90%;
+   table-layout: auto;
+}
+
+
+
+
+.table_cell{
+    border: 1px solid #495057;
+}
+.itog_all_pr{
+    border: none;
+}
+
+.itog_all_NDC{
+    border: none;
+}
+.titelt{
+    font-weight: bold;
+}
+
+.shpvxv{
+    font-weight: 400;
+}
+.delblock{
+    width: auto;
+    margin: 0 auto;      
+    background-color: #dc3545;
+    font-size: 1em;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 15px;   
+}
+.number{
+    text-align: center;
+    border: none;
+}
+.edizm{
+    text-align: left;
+    border: none; 
+}
+.namepvx{
+    text-align: left;
+    border: none; 
+    width: 95%;
+}
+.callmp{
+    text-align: left;
+    border: none; 
+    width: 90%; 
+}
+.pricepvx{
+    text-align: left;
+    border: none; 
+    width: 90%;   
+}
+
+.pricepvxv{
+    text-align: left;
+    border: none; 
+    width: 90%;   
+}
+.cell_select{
+    text-align: left;
+    border: none; 
+    width: 90%; 
+}
+
+.komtitel{
+    display: none;
+    height: auto;
+}
+
+.komtitelp{
+    display: block;
+    width: min-content;
+}
+
+.komtitel2{
+    display: none;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    /* top: 30px;
+    margin-top: 30px; */
+    width: 600px;
+    /* padding-top: 30px; */
+}
+.tabl1{
+    display: block;
+    /* margin-bottom: 30px; */
+}
+.tabl2{
+    display: block;
+    /* margin-bottom: 30px; */
+}
+
+
+.mailform{
+    display: none;
+    margin: 0 auto;
+    background-color: #e1e1e1 !important;
+    border-radius: 10px;
+    width: 90%;
+    /* border: 2px solid #212529; */
+    margin:30px;
+   position: relative;
+ overflow: hidden
+}
+
+.mailformadd{
+    display: block;
+}
+
+.first{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.first3{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+
+.first span{
+   width: 100%;
+   display: inline-block
+}
+.type_mail{
+    width: auto;
+}
+.first input{
+    width: 50%;
+}
+
+
+
+.first2{
+    display: none;
+}
+.submit{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    background-color: orange;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+
+    .content{
+        display: block;
+       width: 100%;
+       
+    }
+    
+}
+
+
+
+@media only screen  and (max-width: 960px) {
+
+   
+}
+
+
+
+@media only screen  and (max-width: 788px) {
+    
+    
+
+}
+
+@media only screen  and (max-width: 500px) {
+    
+
+   
+}
+

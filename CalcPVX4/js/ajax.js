@@ -16,7 +16,7 @@ function sendAjaxForm(result_form, ajax_form, url) {
         data: $("#"+ajax_form).serialize(),  // Сеарилизуем объект
         dataType: "json", //формат данных
         success: function(response) { //Данные отправлены успешно
-            //console.log(response);
+            console.log(response);
             // отправляем данные в ГТМ
 			dataLayer.push({'event':'formSendCalk'});
             if (response.status !== 'ok') {

@@ -2,16 +2,11 @@
 <?php
 // если была нажата кнопка "Отправить"
 if (
-     isset($_POST['itogmail']) && !empty($_POST['itogmail']) &&
-    isset($_POST['tarifb12email']) && !empty($_POST['tarifb12email']) &&   
     isset($_POST['emailmail']) && !empty($_POST['emailmail']) &&
     isset($_POST['name']) && !empty($_POST['name']) &&
-    isset($_POST['telefon']) && !empty($_POST['telefon'])) {
-    
-   
+    isset($_POST['telefon']) && !empty($_POST['telefon']))
+    {
     $itogmail = substr(htmlspecialchars(trim($_POST['itogmail'])), 0, 100000000);
-
-    
     $emailmail = substr(htmlspecialchars(trim($_POST['emailmail'])), 0, 100);
     $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 100);
     $telefon = substr(htmlspecialchars(trim($_POST['telefon'])), 0, 100);

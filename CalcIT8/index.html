@@ -1,0 +1,1241 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор тарифов</title>
+
+
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Стоимость сайта">
+
+
+
+
+
+     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+     <link href="css/calc_style.css" rel="stylesheet"> 
+
+   
+
+</head>
+<body>
+
+
+<section class="sec-calc">
+   
+
+<div class="container_calc">
+
+     <div class="calculator" id="calculator">
+    <h2>Как рассчитать стоимость сайта и услуг по продвижению?</h2>
+    <p>Наведите курсор на нужный Вам раздел калькулятора, нажмите и откроется область для проведения расчётов.</p>
+
+
+            <div class="calculator_floor " >
+                
+
+              <div class="calculator_floor_block calculator_floor1" id="calculator_floor1"  >
+                <div class="calculator_floor_block_img" >
+                    <img src="img/1_development.gif" alt="Разработка сайта" title="Разработка сайта">
+                </div>
+
+                <div class="calculator_floor_block_text" >
+                    <p>Разработка сайта</p>
+                 </div>
+
+                 <div class="calculator_floor_block_cursor" id="fa_prise1">
+                    <p class="curs" ><i class="fa fa-angle-down" aria-hidden="true"></i></p>
+                 </div>
+
+                 <div class="calculator_floor_block_prise" >
+                   <p>Цена: <span id="prise_sait">0</span><i class="fa fa-rub" aria-hidden="true"></i></p> 
+                 </div> 
+            
+
+              </div>
+
+            <div class="calculator_block_param" id="calculator_block_param1" >
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">1 Этап - Дизайн</p>
+                    <p class="param_name">Варианты дизайна
+                        <a class="clear_all" id="clear_sait" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+
+                    </p>
+                   
+
+                    <ul   style="list-style-type:none">
+                      <li><label for="disain-1"><input id="disain-1" type="radio" name="disain1" >Дизайн предоставляет заказчик</label></li>
+                      <li><label for="disain-2"><input id="disain-2" type="radio" name="disain1" >Уникальный адаптивный дизайн</label></li>
+                      <ul   style="list-style-type:none">
+                        <li onclick="disain2(this)"><label for="disain-21"><input id="disain-21" type="radio" name="disain2"  value="20000" data-parent="Лендинг">Лендинг <span class="paramsp"> 20 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="disain2(this)"><label for="disain-22"><input id="disain-22" type="radio" name="disain2"  value="30000" data-parent="Сайт-визитка">Сайт-визитка <span class="paramsp"> 30 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="disain2(this)"><label for="disain-23"><input id="disain-23" type="radio" name="disain2"  value="50000">Корпоративный сайт	 <span class="paramsp"> 50 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="disain2(this)"><label for="disain-24"><input id="disain-24" type="radio" name="disain2"  value="60000">Интернет-магазин  <span class="paramsp"> 60 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="disain2(this)"><label for="disain-25"><input id="disain-25" type="radio" name="disain2" value="100000" >Портал - крупный проект <span class="paramsp"> 100 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       </ul> 
+
+
+
+                      <li onclick="disain3all()"><label for="disain-3"><input id="disain-3" type="radio" name="disain1">Шаблонный дизайн сайта</label></li>
+                          <ul   style="list-style-type:none">
+                           <li onclick="disain3()"><label for="disain-31"><input id="disain-31" type="radio" name="disain2" value="" >Выбрать шаблон сайта<span class="paramsp">  </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                          
+
+
+                          </ul>
+                      
+                   </ul>
+
+                </div>
+
+                <div class="lineparam"></div>
+
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">2 Этап - Дизайн</p>
+                    <p class="param_name">При использовании шаблона верстка не требуется</p>
+                    <p class="param_name"> Адаптивная верстка
+                         <a class="clear_all" id="clear_adapt1" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+                    </p>                   
+
+                    <ul   style="list-style-type:none">
+                        <li onclick="adapt1(this)"><label for="adapt-1"><input id="adapt-1" type="radio" name="adapt1"  value="20000">Лендинг <span class="paramsp">20 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="adapt1(this)"><label for="adapt-2"><input id="adapt-2" type="radio" name="adapt1"  value="30000">Сайт-визитка <span class="paramsp">30 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="adapt1(this)"><label for="adapt-3"><input id="adapt-3" type="radio" name="adapt1"  value="50000">Корпоративный сайт	 <span class="paramsp">50 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="adapt1(this)"><label for="adapt-4"><input id="adapt-4" type="radio" name="adapt1"  value="60000">Интернет-магазин  <span class="paramsp">60 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="adapt1(this)"><label for="adapt-5"><input id="adapt-5" type="radio" name="adapt1" value="100000" >Портал - крупный проект <span class="paramsp">100 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                     </ul>     
+                     
+                     <p class="param_name"> Адаптация верстки действующего сайта под адаптив
+                        <a class="clear_all" id="clear_adapt2" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+                   </p>
+                   <ul   style="list-style-type:none">
+                     
+                    <li onclick="adapt2(this)"><label for="adapt-21"><input id="adapt-21" type="radio" name="adapt2"  value="80000">Адаптация верстки действующего сайта под адаптив <span class="paramsp">80 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                    
+                 </ul>                   
+                </div>
+                <div class="lineparam"></div>
+
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">3 Этап - Лицензирование, хостинг и домен</p>
+                   
+                    <p class="param_name">Подбор лицензии 1С-Bitrix
+                         <a class="clear_all" id="clear_lizen1" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+                    </p>                   
+
+                    <ul   style="list-style-type:none">
+                        <li onclick="lizen1(this)"><label for="lizen1-1"><input id="lizen1-1" type="radio" name="lizen1"  value="5400">«1С-Битрикс: Управление сайтом - Старт»  <span class="paramsp">5 400 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="lizen1(this)"><label for="lizen1-2"><input id="lizen1-2" type="radio" name="lizen1"  value="15900">«1С-Битрикс: Управление сайтом - Стандарт»  <span class="paramsp">15 900 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="lizen1(this)"><label for="lizen1-3"><input id="lizen1-3" type="radio" name="lizen1"  value="35900">«1С-Битрикс: Управление сайтом - Малый бизнес» 	 <span class="paramsp">35 900 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="lizen1(this)"><label for="lizen1-4"><input id="lizen1-4" type="radio" name="lizen1"  value="729000">«1С-Битрикс: Управление сайтом - Бизнес»   <span class="paramsp">72 900 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="lizen1(this)"><label for="lizen1-5"><input id="lizen1-5" type="radio" name="lizen1"  value="1149900" >«1С-Битрикс: Enterprise»  <span class="paramsp">1 149 900 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="lizen1(this)"><label for="lizen1-6"><input id="lizen1-6" type="radio" name="lizen1"  value="99000" >«1С-Битрикс24: Интернет-Магазин + CRM»  <span class="paramsp">99 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                     </ul>     
+                     
+                     <p class="param_name">Подбор SSL-сертификата
+                        <a class="clear_all" id="clear_ssl" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+                   </p>                   
+
+                   <ul   style="list-style-type:none">
+                       <li onclick="ssl1(this)"><label for="ssl1-1"><input id="ssl1-1" type="radio" name="ssl1"  value="3083">Comodo Essential <span class="paramsp">3 083 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="ssl1(this)"><label for="ssl1-2"><input id="ssl1-2" type="radio" name="ssl1"  value="8850">AlphaSSL Wildcard  <span class="paramsp">8 850 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="ssl1(this)"><label for="ssl1-3"><input id="ssl1-3" type="radio" name="ssl1"  value="2300">Alpha SSL <span class="paramsp">2 300 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="ssl1(this)"><label for="ssl1-4"><input id="ssl1-4" type="radio" name="ssl1"  value="4111">Comodo Instant SSL <span class="paramsp">4 111 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="ssl1(this)"><label for="ssl1-5"><input id="ssl1-5" type="radio" name="ssl1"  value="18245" >Comodo Positive SSL Wildcard   <span class="paramsp">18 245 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   </ul>  
+
+                   <p class="param_name">Подбор хостинга
+                    <a class="clear_all" id="clear_host" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+               </p>                   
+
+               <ul   style="list-style-type:none">
+                   <li onclick="host1(this)"><label for="host1-1"><input id="host1-1" type="radio" name="host1"  value="5700">Русоникс XS <span class="paramsp">5 700 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="host1(this)"><label for="host1-2"><input id="host1-2" type="radio" name="host1"  value="11400">Русоникс S  <span class="paramsp">11 400 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="host1(this)"><label for="host1-3"><input id="host1-3" type="radio" name="host1"  value="22800">Русоникс M  <span class="paramsp">22 800 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="host1(this)"><label for="host1-4"><input id="host1-4" type="radio" name="host1"  value="45600">Русоникс L  <span class="paramsp">45 600 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="host1(this)"><label for="host1-5"><input id="host1-5" type="radio" name="host1"  value="91200" >Русоникс L+ <span class="paramsp">91 200 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="host1(this)"><label for="host1-6"><input id="host1-6" type="radio" name="host1"  value="3480" >TimeWeb 1 Сайт <span class="paramsp">3 480 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="host1(this)"><label for="host1-7"><input id="host1-7" type="radio" name="host1"  value="9480" >TimeWeb Eterno <span class="paramsp">9 480 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="host1(this)"><label for="host1-8"><input id="host1-8" type="radio" name="host1"  value="43200" >TimeWeb Premium  <span class="paramsp">43 200 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+               </ul>  
+
+               <p class="param_name">Регистрация домена
+                <a class="clear_all" id="clear_domen" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+           </p>                   
+
+           <ul   style="list-style-type:none">
+               <li onclick="domen1(this)"><label for="domen1-1"><input id="domen1-1" type="radio" name="domen1"  value="600">В зоне RU, РФ <span class="paramsp">600 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+               <li onclick="domen1(this)"><label for="domen1-2"><input id="domen1-2" type="radio" name="domen1"  value="1500">В зоне COM, SU, NET  <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+              
+           </ul> 
+                     
+        </div>
+                <div class="lineparam"></div>
+
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">4 Этап - Функционал и разделы сайта</p>
+                   
+                    <p class="param_name">Разделы сайта
+                         <a class="clear_all" id="add_rasdel"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                         <a class="clear_all" id="clear_rasdel" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+                    </p>                   
+
+                    <ul   style="list-style-type:none">
+                        <li onclick="rasdel1f()"><label for="rasdel1-1"><input id="rasdel1-1" type="checkbox" name="rasdel1"  value="1000">Раздел новости   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-2"><input id="rasdel1-2" type="checkbox" name="rasdel1"  value="1000">Раздел статьи  <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-3"><input id="rasdel1-3" type="checkbox" name="rasdel1"  value="3000">Раздел услуги  <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-4"><input id="rasdel1-4" type="checkbox" name="rasdel1"  value="1000">Раздел вопрос-ответ   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-5"><input id="rasdel1-5" type="checkbox" name="rasdel1"  value="3000" >Раздел наши работы / фотогалерея / видеогалерея  <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-6"><input id="rasdel1-6" type="checkbox" name="rasdel1"  value="1000" >Раздел партнеры <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-7"><input id="rasdel1-7" type="checkbox" name="rasdel1"  value="1000" >Раздел с акциями и спецпредложениями <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-8"><input id="rasdel1-8" type="checkbox" name="rasdel1"  value="1000" >Раздел отзывы <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-9"><input id="rasdel1-9" type="checkbox" name="rasdel1"  value="1000" >Раздел наша команда <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-10"><input id="rasdel1-10" type="checkbox" name="rasdel1"  value="1000" >Раздел сертификаты <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-11"><input id="rasdel1-11" type="checkbox" name="rasdel1"  value="1000" >Раздел контакты <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-12"><input id="rasdel1-12" type="checkbox" name="rasdel1"  value="10000" >Каталог продукции (без корзины) <span class="paramsp">10 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-13"><input id="rasdel1-13" type="checkbox" name="rasdel1"  value="3000" >Блог на сайте <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="rasdel1f()"><label for="rasdel1-14"><input id="rasdel1-14" type="checkbox" name="rasdel1"  value="5000" >Форум <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                    </ul>  
+
+
+                    <p class="param_name">Функциональные модули сайта
+                        <a class="clear_all" id="add_func"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                        <a class="clear_all" id="clear_func" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+                   </p>                   
+
+                   <ul   style="list-style-type:none">
+                       <li onclick="func1f()"><label for="func1-1"><input id="func1-1" type="checkbox" name="funcl1"  value="5000">SMS-уведомления клиентам   <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-2"><input id="func1-2" type="checkbox" name="funcl1"  value="500">Автоматическое резервное копирование (cron)    <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-3"><input id="func1-3" type="checkbox" name="funcl1"  value="1500">Авторизация через социальные сети   <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-4"><input id="func1-4" type="checkbox" name="funcl1"  value="3000">Бренды / Производители  <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                       <li onclick="func1f()"><label for="func1-5"><input id="func1-5" type="checkbox" name="funcl1"  value="1000">Вертикальное выпадающее меню    <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-6"><input id="func1-6" type="checkbox" name="funcl1"  value="8000">Возможность выбора стран и городов     <span class="paramsp">8 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-7"><input id="func1-7" type="checkbox" name="funcl1"  value="15000">Возможность выбора стран и городов с геолокацией    <span class="paramsp">15 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-8"><input id="func1-8" type="checkbox" name="funcl1"  value="4000">Возможность посетителям оставлять комментарии   <span class="paramsp">4 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                       <li onclick="func1f()"><label for="func1-9"><input id="func1-9" type="checkbox" name="funcl1"  value="1000">Гарантия и возврат  <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-10"><input id="func1-10" type="checkbox" name="funcl1"  value="1000">Горизонтальное выпадающее меню     <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-11"><input id="func1-11" type="checkbox" name="funcl1"  value="1000">Динамический слайдер    <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-12"><input id="func1-12" type="checkbox" name="funcl1"  value="5000">Интеграция сайта с CRM   <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                       <li onclick="func1f()"><label for="func1-13"><input id="func1-13" type="checkbox" name="funcl1"  value="1000">Интерактивная карта и/или схема проезда  <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-14"><input id="func1-14" type="checkbox" name="funcl1"  value="1000">Календарь событий      <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-15"><input id="func1-15" type="checkbox" name="funcl1"  value="1000">Карта сайта     <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-16"><input id="func1-16" type="checkbox" name="funcl1"  value="1000">Кнопки социальных сетей/кнопки репоста/рассказать друзьям  <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+
+                       <li onclick="func1f()"><label for="func1-17"><input id="func1-17" type="checkbox" name="funcl1"  value="1000">Модуль (лента) последние новости/статьи/из блога   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-18"><input id="func1-18" type="checkbox" name="funcl1"  value="1500">Модуль баннеры       <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-19"><input id="func1-19" type="checkbox" name="funcl1"  value="2000">Модуль подписки на рассылку    <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-20"><input id="func1-20" type="checkbox" name="funcl1"  value="1000">Модуль поиск по сайту  <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                       <li onclick="func1f()"><label for="func1-21"><input id="func1-21" type="checkbox" name="funcl1"  value="500">Модуль последних отзывов   <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-22"><input id="func1-22" type="checkbox" name="funcl1"  value="3000">Модуль приёма денежных средств на сайте  <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-23"><input id="func1-23" type="checkbox" name="funcl1"  value="5000">Мультиязычность (один язык)     <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-24"><input id="func1-24" type="checkbox" name="funcl1"  value="1000">Навигация «Хлебные крошки»   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+
+                       <li onclick="func1f()"><label for="func1-25"><input id="func1-25" type="checkbox" name="funcl1"  value="1000">Нижнее меню   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-26"><input id="func1-26" type="checkbox" name="funcl1"  value="1000">Обратный звонок  <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-27"><input id="func1-27" type="checkbox" name="funcl1"  value="1000">Онлайн консультант      <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-28"><input id="func1-28" type="checkbox" name="funcl1"  value="7000">Онлайн-калькулятор расчета стоимости    <span class="paramsp">7 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                       <li onclick="func1f()"><label for="func1-29"><input id="func1-29" type="checkbox" name="funcl1"  value="1000">Оплата и доставка    <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-30"><input id="func1-30" type="checkbox" name="funcl1"  value="2000">Опрос/анкетирование/голосование  <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-31"><input id="func1-31" type="checkbox" name="funcl1"  value="5000">Программирование личного кабинета на сайте (кроме ИМ)      <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-32"><input id="func1-32" type="checkbox" name="funcl1"  value="2500">Список магазинов на карте / пункты самовывоза    <span class="paramsp">2 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                       <li onclick="func1f()"><label for="func1-33"><input id="func1-33" type="checkbox" name="funcl1"  value="1000">Таймер обратного отсчета     <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-34"><input id="func1-34" type="checkbox" name="funcl1"  value="500">Установка счетчика Яндекс Метрика  <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="func1f()"><label for="func1-35"><input id="func1-35" type="checkbox" name="funcl1"  value="500">Фавикон (иконка сайта)      <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                      
+                   </ul>  
+
+                   <p class="param_name">Функции интернет-магазина 
+                    <a class="clear_all" id="add_mag"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                    <a class="clear_all" id="clear_mag" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+               </p>                   
+
+               <ul   style="list-style-type:none">
+                   <li onclick="mag1f()"><label for="mag1-1"><input id="mag1-1" type="checkbox" name="mag1"  value="15000">Базовый функционал (корзина, личный кабинет, регистрация, авторизация и др.)    <span class="paramsp">15 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-2"><input id="mag1-2" type="checkbox" name="mag1"  value="5000">Бонусные баллы    <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-3"><input id="mag1-3" type="checkbox" name="mag1"  value="3000">Быстрый просмотр карточки товара  <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-4"><input id="mag1-4" type="checkbox" name="mag1"  value="1000">Выбор варианта отображения списка товаров   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                   <li onclick="mag1f()"><label for="mag1-5"><input id="mag1-5" type="checkbox" name="mag1"  value="1000">Выбор количества отображения товаров на одной странице     <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-6"><input id="mag1-6" type="checkbox" name="mag1"  value="1000">Зачеркнутые цены на товарах   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-7"><input id="mag1-7" type="checkbox" name="mag1"  value="1000">Защита фото товаров водяным знаком   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-8"><input id="mag1-8" type="checkbox" name="mag1"  value="3000">Избранные товары (модуль и раздел)    <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+
+                   <li onclick="mag1f()"><label for="mag1-9"><input id="mag1-9" type="checkbox" name="mag1"  value="2000">Модуль - Вы недавно смотрели     <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-10"><input id="mag1-10" type="checkbox" name="mag1"  value="7000">Модуль - Товар    <span class="paramsp">7 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-11"><input id="mag1-11" type="checkbox" name="mag1"  value="5000">Мультивалютность   <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-12"><input id="mag1-12" type="checkbox" name="mag1"  value="2000">Ограничение доступа на группы товаров и ограничение возраста   <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+
+                   <li onclick="mag1f()"><label for="mag1-13"><input id="mag1-13" type="checkbox" name="mag1"  value="3000">Оптовые и розничные цены     <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-14"><input id="mag1-14" type="checkbox" name="mag1"  value="3500">Партнерская программа   <span class="paramsp">3 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-15"><input id="mag1-16" type="checkbox" name="mag1"  value="3500">Подарочные сертификаты   <span class="paramsp">3 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-17"><input id="mag1-17" type="checkbox" name="mag1"  value="3500">Промо-Акции (бонусы для различных групп покупателей)    <span class="paramsp">3 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+
+                   <li onclick="mag1f()"><label for="mag1-18"><input id="mag1-18" type="checkbox" name="mag1"  value="2000">Протокол защиты https:// (SSL) - установка <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-19"><input id="mag1-19" type="checkbox" name="mag1"  value="5000">Разная цена и артикул для разных вариантов товара - торговые предложения   <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-20"><input id="mag1-20" type="checkbox" name="mag1"  value="1500">Сортировка товаров по параметрам (по цене, алфавиту, новизне, популярности)   <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-21"><input id="mag1-21" type="checkbox" name="mag1"  value="3000">Сравнение товаров (модуль и раздел)   <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+
+                   
+                   <li onclick="mag1f()"><label for="mag1-22"><input id="mag1-22" type="checkbox" name="mag1"  value="1000">Стикеры товаров (новинка, hot, эксклюзив, скидка и т.д.)  <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-23"><input id="mag1-23" type="checkbox" name="mag1"  value="2000">Усовершенствованный поиск по магазину    <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="mag1f()"><label for="mag1-24"><input id="mag1-24" type="checkbox" name="mag1"  value="3000">Штрих-коды    <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                 
+                </ul> 
+
+
+                <p class="param_name">Карточка товара  
+                    <a class="clear_all" id="add_card"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                    <a class="clear_all" id="clear_card" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+               </p>                   
+
+               <ul   style="list-style-type:none">
+                   <li onclick="card1f()"><label for="card1-1"><input id="card1-1" type="checkbox" name="card1"  value="1500">«С этим товаром часто покупают»    <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="card1f()"><label for="card1-2"><input id="card1-2" type="checkbox" name="card1"  value="5000">«Наборы» и «Комплекты»    <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="card1f()"><label for="card1-3"><input id="card1-3" type="checkbox" name="card1"  value="1500">«Нашли дешевле?»  <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="card1f()"><label for="card1-4"><input id="card1-4" type="checkbox" name="card1"  value="1500">«Похожие (сопутствующие) товары»    <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+
+                   <li onclick="card1f()"><label for="card1-5"><input id="card1-5" type="checkbox" name="card1"  value="2000">«Сообщить о снижении цены»     <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="card1f()"><label for="card1-6"><input id="card1-6" type="checkbox" name="card1"  value="2000">«Сообщить, когда товар будет в наличии»    <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="card1f()"><label for="card1-7"><input id="card1-7" type="checkbox" name="card1"  value="1000">Видео-обзоры   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="card1f()"><label for="card1-8"><input id="card1-8" type="checkbox" name="card1"  value="1000">Информация о наличии на складе     <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                   <li onclick="card1f()"><label for="card1-9"><input id="card1-9" type="checkbox" name="card1"  value="1500">Несколько фото товара   <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="card1f()"><label for="card1-10"><input id="card1-10" type="checkbox" name="card1"  value="1000">Отзывы о товаре    <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="card1f()"><label for="card1-11"><input id="card1-11" type="checkbox" name="card1"  value="1500">Рейтинг товара (звезды)   <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="card1f()"><label for="card1-12"><input id="card1-12" type="checkbox" name="card1"  value="1000">Увеличение фото товара     <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                    
+                   <li onclick="card1f()"><label for="card1-13"><input id="card1-13" type="checkbox" name="card1"  value="1500">Файлы для скачивания (лицензии, инструкции и т. д.)    <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                </ul>  
+                
+                
+                <p class="param_name">Оформление заказа  
+                    <a class="clear_all" id="add_zakaz"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                    <a class="clear_all" id="clear_zakaz" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+               </p>                   
+
+               <ul   style="list-style-type:none">
+                   <li onclick="zakaz1f()"><label for="zakaz1-1"><input id="zakaz1-1" type="checkbox" name="zakaz1"  value="2000">Возможность оформления заказа как юр. лицо    <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="zakaz1f()"><label for="zakaz1-2"><input id="zakaz1-2" type="checkbox" name="zakaz1"  value="3000">Заказать товар в 1 клик (быстрый заказ)     <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="zakaz1f()"><label for="zakaz1-3"><input id="zakaz1-3" type="checkbox" name="zakaz1"  value="2500">Оформление заказа  <span class="paramsp">2 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   
+                </ul>  
+
+                <p class="param_name">Варианты доставки   
+                    <a class="clear_all" id="add_dost"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                    <a class="clear_all" id="clear_dost" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+               </p>                   
+
+               <ul   style="list-style-type:none">
+                   <li onclick="dost1f()"><label for="dost-1"><input id="dost-1" type="checkbox" name="dost1"  value="4500">Варианты доставки с функцией онлайн-расчета стоимости    <span class="paramsp">4 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="dost1f()"><label for="dost-2"><input id="dost-2" type="checkbox" name="dost1"  value="500">Курьер    <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="dost1f()"><label for="dost-3"><input id="dost-3" type="checkbox" name="dost1"  value="1000">Почта России   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                   <li onclick="dost1f()"><label for="dost-4"><input id="dost-4" type="checkbox" name="dost1"  value="500">Самовывоз    <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="dost1f()"><label for="dost-5"><input id="dost-5" type="checkbox" name="dost1"  value="500">Транспортная компания  <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   
+                </ul>  
+
+                <p class="param_name">Варианты оплаты   
+                    <a class="clear_all" id="add_oplata"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                    <a class="clear_all" id="clear_oplata" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+               </p>                   
+
+               <ul   style="list-style-type:none">
+                   <li onclick="oplata1f()"><label for="oplata-1"><input id="oplata-1" type="checkbox" name="oplata1"  value="3000">Для юр. лиц - выставление счета по безналу     <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="oplata1f()"><label for="oplata-2"><input id="oplata-2" type="checkbox" name="oplata1"  value="5000">Для юр. лиц - подключение агрегатора со всевозможными вариантами оплат    <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="oplata1f()"><label for="oplata-3"><input id="oplata-3" type="checkbox" name="oplata1"  value="500">Оплата наличными при получении   <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                   
+                </ul>  
+
+                <p class="param_name">Выгрузки и интеграции   
+                    <a class="clear_all" id="add_integr"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                    <a class="clear_all" id="clear_integr" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+               </p>                   
+
+               <ul   style="list-style-type:none">
+                   <li onclick="integr1f()"><label for="integr-1"><input id="integr-1" type="checkbox" name="integr1"  value="15000">Автоматическая интеграция товаров с фотографиями от поставщика(ов) из csv/excel     <span class="paramsp">15 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="integr1f()"><label for="integr-2"><input id="integr-2" type="checkbox" name="integr1"  value="25000">Автоматическая синхронизация товаров с 1С:Предприятие     <span class="paramsp">25 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="integr1f()"><label for="integr-3"><input id="integr-3" type="checkbox" name="integr1"  value="10000">Выгрузка товаров в Яндекс.Маркет    <span class="paramsp">10 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="integr1f()"><label for="integr-4"><input id="integr-4" type="checkbox" name="integr1"  value="20000">Интеграции товаров из магазина в социальные сети     <span class="paramsp">20 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="integr1f()"><label for="integr-5"><input id="integr-5" type="checkbox" name="integr1"  value="30000">Интеграция с 1С     <span class="paramsp">30 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   <li onclick="integr1f()"><label for="integr-6"><input id="integr-6" type="checkbox" name="integr1"  value="7000">Экспорт товаров и различных данных (csv, excel) >Оплата наличными при получении   <span class="paramsp">7 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+ 
+                   
+                </ul>  
+
+
+                </div>  
+
+                               
+                <div class="lineparam"></div>
+
+                <div class="calculator_block_param_block1">
+
+                <p class="param_titel">5 Этап - Подготовка технического задания</p>
+                <p class="param_name">Подготовка технического задания 
+                    <a class="clear_all" id="clear_tz" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+
+                </p>
+               
+
+                <ul   style="list-style-type:none">
+                  <li><label for="tz-1"><input id="tz-1" type="radio" name="tz1" >Техническое задание подготовлено заказчиком</label></li>
+                  <li><label for="tz-2"><input id="tz-2" type="radio" name="tz1" >Разработка технического задания</label></li>
+                  <ul   style="list-style-type:none">
+                    <li onclick="tz1f(this)"><label for="tz-21"><input id="tz-21" type="radio" name="tz2"  value="5000">Простое ТЗ на 5 листов  <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                    <li onclick="tz1f(this)"><label for="tz-22"><input id="tz-22" type="radio" name="tz2"  value="20000">Среднее ТЗ на 20 листов <span class="paramsp">20 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                    <li onclick="tz1f(this)"><label for="tz-23"><input id="tz-23" type="radio" name="tz2"  value="50000">Полноценное ТЗ от 50 листов 	 <span class="paramsp">50 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                    
+                   </ul> 
+                </ul> 
+            </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+            </div>
+
+        <div class="line"></div>
+
+                   
+
+         <div class="line"></div>
+
+         <div class="calculator_floor" >
+                
+
+            <div class="calculator_floor_block calculator_floor2 "  id="calculator_floor2">
+              <div class="calculator_floor_block_img" >
+                  <img src="img/texn.gif" alt="Разработка сайта" >
+              </div>
+
+              <div class="calculator_floor_block_text" >
+                  <p>Наполнение, размещение и техническая поддержка</p>
+               </div>
+
+               <div class="calculator_floor_block_cursor" id="fa_prise2" >
+                  <p class="curs" ><i class="fa fa-angle-down" aria-hidden="true"></i></p>
+               </div>
+
+
+
+
+               <div class="calculator_floor_block_prise" >
+                 <p>Цена: <span id="arbaitprise">0</span><i class="fa fa-rub" aria-hidden="true"></i></p> 
+               </div>
+
+
+            </div>
+
+
+            <div class="calculator_block_param" id="calculator_block_param2" >
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">Отдельные виды работ по техподдержке сайтов</p>
+                    
+                   
+
+                    <ul   style="list-style-type:none">
+                      
+                        <li onclick="tehn2f()"><label for="tehn-1"><input id="tehn-1" type="radio" name="tehn2"  value="8000">Интеграция сайта на Битрикс со СДЕК <span class="paramsp">8 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="tehn2f()"><label for="tehn-2"><input id="tehn-2" type="radio" name="tehn2"  value="10000">Подключение платежных систем <span class="paramsp">10 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="tehn2f()"><label for="tehn-3"><input id="tehn-3" type="radio" name="tehn2"  value="20000">Интеграция с базой 1С 	 <span class="paramsp">20 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="tehn2f()"><label for="tehn-4"><input id="tehn-4" type="radio" name="tehn2"  value="30000">Разработка программы лояльности  <span class="paramsp">30 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="tehn2f()"><label for="tehn-5"><input id="tehn-5" type="radio" name="tehn2"  value="15000" >Создание онлайн калькулятора <span class="paramsp">15 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="tehn2f()"><label for="tehn-6"><input id="tehn-6" type="radio" name="tehn2"  value="20000">Настройка сквозной аналитики  <span class="paramsp">20 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="tehn2f()"><label for="tehn-7"><input id="tehn-7" type="radio" name="tehn2"  value="10000">Очистка сайта от вирусов 	 <span class="paramsp">10 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="tehn2f()"><label for="tehn-8"><input id="tehn-8" type="radio" name="tehn2"  value="80000">Переделать сайт под мобильные устройства  <span class="paramsp">80 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                    </ul>
+
+                </div>
+
+                <div class="lineparam"></div>
+              
+
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">Наполнение</p>
+                   
+                    <p class="param_name">Наполнение
+                         <a class="clear_all" id="add_content"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                         <a class="clear_all" id="clear_content" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+                    </p>                   
+
+                    <ul   style="list-style-type:none">
+                        <li onclick="content1f()"><label for="content1-1"><input id="content1-1" type="checkbox" name="content1"  value="100">Добавление товаров вручную (за 1 шт.)    <span class="paramsp">100 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="content1f()"><label for="content1-2"><input id="content1-2" type="checkbox" name="content1"  value="500">Перевод текстов с иностранного языка на русский и наоборот (1000зн.)  <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="content1f()"><label for="content1-3"><input id="content1-3" type="checkbox" name="content1"  value="250">Перенос контента со старого сайта с сохранением всех позиций в поисковиках (за 1 стр.)   <span class="paramsp">250 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        <li onclick="content1f()"><label for="content1-4"><input id="content1-4" type="checkbox" name="content1"  value="100">Поиск и размещение изображения на сайт (за 1 шт.)    <span class="paramsp">100 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       
+                    </ul>  
+                    <p class="param_name">Подготовка контента
+                        <a class="clear_all" id="add_content2"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                        <a class="clear_all" id="clear_content2" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+                   </p>                   
+
+                   <ul   style="list-style-type:none">
+                       <li onclick="content2f()"><label for="content2-1"><input id="content2-1" type="checkbox" name="content2"  value="1000">Копирайтинг (1000зн.)    <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                       <li onclick="content2f()"><label for="content2-2"><input id="content2-2" type="checkbox" name="content2"  value="750">Рерайтинг (1000зн.)   <span class="paramsp">750 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                      
+                   </ul>  
+                    
+                    
+
+
+                </div>  
+
+                               
+                <div class="lineparam"></div>
+
+            <div class="calculator_block_param_block1">
+
+                <p class="param_titel">Размещение</p>
+                <p class="param_name">Размещение на хостинге и домене заказчика
+                    <a class="clear_all" id="clear_hostd" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+
+                </p>
+                <ul   style="list-style-type:none">
+                     <li onclick="hostd1f(this)"><label for="hostd-1"><input id="hostd-1" type="radio" name="hostd"  value="1500">Размещение на хостинге и домене заказчика   <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                </ul> 
+            </div>
+            <div class="lineparam"></div>
+
+
+            <div class="calculator_block_param_block1">
+
+                <p class="param_titel">Техническая поддержка сайта</p>
+                <p class="param_name">Тарифные планы 
+                    <a class="clear_all" id="clear_tarif" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+
+                </p>
+                <ul   style="list-style-type:none">
+                     <li onclick="tarif1f(this)"><label for="tarif-1"><input id="tarif-1" type="radio" name="tarif"  value="4000">Тарифный план "Мини"   <span class="paramsp">4 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                     <li onclick="tarif1f(this)"><label for="tarif-2"><input id="tarif-2" type="radio" name="tarif"  value="7500">Тарифный план "Стандарт"   <span class="paramsp">7 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                     <li onclick="tarif1f(this)"><label for="tarif-3"><input id="tarif-3" type="radio" name="tarif"  value="1400">Тарифный план "Экстра"   <span class="paramsp">14 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                     <li onclick="tarif1f(this)"><label for="tarif-4"><input id="tarif-4" type="radio" name="tarif"  value="28000">Тарифный план "Ультра"    <span class="paramsp">28 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                     <li onclick="tarif1f(this)"><label for="tarif-5"><input id="tarif-5" type="radio" name="tarif"  value="100000">Тарифный план "Бизнес"    <span class="paramsp">100 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                     <li onclick="tarif1f(this)"><label for="tarif-6"><input id="tarif-6" type="radio" name="tarif"  value="100000">Пакет  <span class="paramsp">100 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                </ul> 
+            </div>
+            <div class="lineparam"></div>
+
+
+            <div class="calculator_block_param_block1">
+
+                <p class="param_titel">Консультации</p>
+                <p class="param_name">Консультации специалистов 
+                    <a class="clear_all" id="clear_konsul" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+
+                </p>
+                <ul   style="list-style-type:none">
+                     <li onclick="konsul1f(this)"><label for="konsul-1"><input id="konsul-1" type="radio" name="konsul"  value="1000">Консультация SEO специалиста (1 час)    <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                     <li onclick="konsul1f(this)"><label for="konsul-2"><input id="konsul-2" type="radio" name="konsul"  value="1000">Консультация интернет-маркетолога (1 час)   <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                   
+                </ul> 
+            </div>
+
+
+
+
+           </div>
+
+        
+        
+        </div>
+
+        
+         <div class="line"></div>
+
+         <div class="calculator_floor" >
+                
+
+            <div class="calculator_floor_block calculator_floor3" id="calculator_floor3" >
+              <div class="calculator_floor_block_img" >
+                  <img src="img/Seo.gif" alt="Разработка сайта" >
+              </div>
+
+              <div class="calculator_floor_block_text" >
+                  <p>Продвижение</p>
+               </div>
+
+               <div class="calculator_floor_block_cursor" id="fa_prise3" >
+                  <p class="curs" ><i class="fa fa-angle-down" aria-hidden="true"></i></p>
+               </div>
+
+
+
+
+               <div class="calculator_floor_block_prise" >
+                 <p>Цена: <span id="tarifSeo">0</span><i class="fa fa-rub" aria-hidden="true"></i></p> 
+               </div>
+
+
+            </div>
+            
+            <div class="calculator_block_param" id="calculator_block_param3" >
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">SEO оптимизация сайта</p>
+                    <p class="param_name">Тарифный план Минимальный 35 000 </p>
+                    
+                   
+
+                    <ul   style="list-style-type:none">
+                      
+                        <li>Количество ключевых слов - до 100</li>
+                        <li>не входит в пакет услуг - Ведение социальных сетей</li>
+                        <li>Ежемесячный отчет о выполненной работе - Полная отчетность</li>
+                        <li>Статьи, Описание разделов/подразделов, Посадочные страницы - Создание уникального контента</li>
+                        <li>Внутренняя и внешняя - Оптимизация</li>
+                        <li>не входит в пакет услуг - Ведение социальных сетей</li>
+                        <li>не входит в пакет услуг - Контекстная реклама</li>
+                    </ul>
+                    <p class="param_name">Тарифный план Минимальный 35 000 </p>
+                    
+                   
+
+                    <ul   style="list-style-type:none">
+                        <li>Количество ключевых слов - до 150</li>
+                        <li>Ежемесячный отчет о выполненной работе - Полная отчетность</li>
+                        <li>Статьи, Описание разделов/подразделов, Посадочные страницы - Создание уникального контента</li>
+                        <li>до 30 постов в месяц - Ведение социальных сетей</li>
+                        <li>не входит в пакет услуг - Контекстная реклама</li>
+                    </ul>
+
+                    <ul   style="list-style-type:none">
+                       
+                        <li>Количество ключевых слов - до 300</li>
+                        <li>Ежемесячный отчет о выполненной работе - Полная отчетность</li>
+                        <li>Статьи, Описание разделов/подразделов, Посадочные страницы - Создание уникального контента</li>
+                        <li>до 60 постов в месяц - Ведение социальных сетей</li>
+                        <li>до 300 ключей, настройка ретаргета, кмс - Контекстная реклам</li>
+                    </ul>
+
+                    <p class="param_name">Тарифные планы 
+                        <a class="clear_all" id="clear_tarif3" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+    
+                    </p>
+                    <ul   style="list-style-type:none">
+                         <li onclick="tarif3f(this)"><label for="tarif3-1"><input id="tarif3-1" type="radio" name="tarif3"  value="35000">Тарифный план "Минимальный"    <span class="paramsp">35 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="tarif3f(this)"><label for="tarif3-2"><input id="tarif3-2" type="radio" name="tarif3"  value="50000">Тарифный план "Расширенный"    <span class="paramsp">50 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="tarif3f(this)"><label for="tarif3-3"><input id="tarif3-3" type="radio" name="tarif3"  value="90000">Тарифный план "Экстра"    <span class="paramsp">90 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="tarif3f(this)"><label for="tarif3-4"><input id="tarif3-4" type="radio" name="tarif3"  value="100000">Тарифный план "Бизнес"     <span class="paramsp">100 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        
+                    </ul> 
+
+
+
+
+
+                </div>
+
+  
+           </div>
+       
+        </div>
+
+       
+            
+
+         <div class="line"></div>
+
+         <div class="calculator_floor calculator_floor4" >
+                
+
+            <div class="calculator_floor_block calculator_floor4" id="calculator_floor4" >
+              <div class="calculator_floor_block_img" >
+                 <img src=""  alt="Контекстная реклама" > 
+              </div>
+
+              <div class="calculator_floor_block_text" >
+                  <p>Контекстная реклама</p>
+               </div>
+
+               <div class="calculator_floor_block_cursor"  id="fa_prise4">
+                  <p class="curs" ><i class="fa fa-angle-down" aria-hidden="true"></i></p>
+               </div>
+
+
+
+
+               <div class="calculator_floor_block_prise" >
+                 <p>Цена: <span id="reklamacont">0</span><i class="fa fa-rub" aria-hidden="true"></i></p> 
+               </div>
+
+
+            </div>
+
+            <div class="calculator_block_param" id="calculator_block_param4" >
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">Контекстная реклама Я.Директ и G.Adwords</p>
+                   
+                   
+
+                    <p class="param_name">Яндекс.Директ  
+                        <a class="clear_all" id="clear_jnd1" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+    
+                    </p>
+                    <ul   style="list-style-type:none">
+                         <li onclick="jnd1f(this)"><label for="jnd1-1"><input id="jnd1-1" type="radio" name="jnd1"  value="3000">Яндекс.Директ до 100 ключевых слов     <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="jnd1f(this)"><label for="jnd1-2"><input id="jnd1-2" type="radio" name="jnd1"  value="6000">Яндекс.Директ до 300 ключевых слов    <span class="paramsp">6 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="jnd1f(this)"><label for="jnd1-3"><input id="jnd1-3" type="radio" name="jnd1"  value="8500">Яндекс.Директ до 500 ключевых слов     <span class="paramsp">8 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="jnd1f(this)"><label for="jnd1-4"><input id="jnd1-4" type="radio" name="jnd1"  value="12000">Яндекс.Директ до 1000 ключевых слов      <span class="paramsp">12 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="jnd1f(this)"><label for="jnd1-5"><input id="jnd1-5" type="radio" name="jnd1"  value="29700">Яндекс.Директ до 3000 ключевых слов    <span class="paramsp">29 700 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="jnd1f(this)"><label for="jnd1-6"><input id="jnd1-6" type="radio" name="jnd1"  value="35000">Яндекс.Директ до 5000 ключевых слов      <span class="paramsp">35 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        
+                    </ul> 
+
+                    <p class="param_name">Google AdWords  
+                        <a class="clear_all" id="clear_googl" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+    
+                    </p>
+                    <ul   style="list-style-type:none">
+                         <li onclick="googl1f(this)"><label for="googl1-1"><input id="googl1-1" type="radio" name="googl1"  value="5000">Google AdWords до 100 ключевых слов     <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="googl1f(this)"><label for="googl1-2"><input id="googl1-2" type="radio" name="googl1"  value="6500">Google AdWords до 300 ключевых слов     <span class="paramsp">6 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="googl1f(this)"><label for="googl1-3"><input id="googl1-3" type="radio" name="googl1"  value="8500">Google AdWords до 500 ключевых слов     <span class="paramsp">8 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="googl1f(this)"><label for="googl1-4"><input id="googl1-4" type="radio" name="googl1"  value="12000">Google AdWords до 1000 ключевых слов       <span class="paramsp">12 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="googl1f(this)"><label for="googl1-5"><input id="googl1-5" type="radio" name="googl1"  value="29700">Google AdWords до 3000 ключевых слов     <span class="paramsp">29 700 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="googl1f(this)"><label for="googl1-6"><input id="googl1-6" type="radio" name="googl1"  value="35000">Google AdWords до 5000 ключевых слов       <span class="paramsp">35 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        
+                    </ul> 
+
+
+
+
+
+                </div>
+
+  
+           </div>
+
+
+        
+        
+       
+        </div>
+
+        
+         <div class="line"></div>
+
+         <div class="calculator_floor" >
+                
+
+            <div class="calculator_floor_block calculator_floor5" id="calculator_floor5" >
+              <div class="calculator_floor_block_img" >
+                  <img src="img/CRM.gif" alt="Разработка сайта" >
+              </div>
+
+              <div class="calculator_floor_block_text" >
+                  <p>CRM</p>
+               </div>
+
+               <div class="calculator_floor_block_cursor" id="fa_prise5" >
+                  <p class="curs" ><i class="fa fa-angle-down" aria-hidden="true"></i></p>
+               </div>
+
+
+
+
+               <div class="calculator_floor_block_prise" >
+                 <p>Цена: <span id="bitricz_price">0</span><i class="fa fa-rub" aria-hidden="true"></i></p> 
+               </div>
+
+
+            </div>
+
+
+            <div class="calculator_block_param" id="calculator_block_param5" >
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">Битрикс24 - внедрение</p>
+                   
+                   
+
+                    <p class="param_name">Общие настройки  
+                        <a class="clear_all" id="add_settings"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                        <a class="clear_all" id="clear_settings" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+    
+                    </p>
+                    <ul   style="list-style-type:none">
+                         <li onclick="settings1f(this)"><label for="settings1-1"><input id="settings1-1" type="checkbox" name="settings1"  value="3000">Назначение прав пользователей и делегирование прав сотрудникам     <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="settings1f(this)"><label for="settings1-2"><input id="settings1-2" type="checkbox" name="settings1"  value="500">Настройка меню интерфейса    <span class="paramsp">500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="settings1f(this)"><label for="settings1-3"><input id="settings1-3" type="checkbox" name="settings1"  value="2000">Настройка стадий лидов и сделок     <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="settings1f(this)"><label for="settings1-4"><input id="settings1-4" type="checkbox" name="settings1"  value="3000">Настройка типовых фильтров лидов, сделок, дел       <span class="paramsp">3 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="settings1f(this)"><label for="settings1-5"><input id="settings1-5" type="checkbox" name="settings1"  value="2500">Оптимизация карточки лида, контакта, сделки    <span class="paramsp">2 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="settings1f(this)"><label for="settings1-6"><input id="settings1-6" type="checkbox" name="settings1"  value="1000">Подбор тарифа и регистрация облачного портала Битрикс24      <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                        
+                         <li><label for="settings2"><input id="settings2" type="radio" name="settings2a">Подключение домена и настройка интеграции почты сотрудников с Битрикс24 </label></li>
+                         <ul   style="list-style-type:none">
+                            <li onclick="settings2f(this)"><label for="settings2-1"><input id="settings2-1" type="radio" name="settings2"  value="1500">5 сотрудников     <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                            <li onclick="settings2f(this)"><label for="settings2-2"><input id="settings2-2" type="radio" name="settings2"  value="2000">10 сотрудников     <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                            <li onclick="settings2f(this)"><label for="settings2-3"><input id="settings2-3" type="radio" name="settings2"  value="2500">20 сотрудников      <span class="paramsp">2 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                            <li onclick="settings2f(this)"><label for="settings2-4"><input id="settings2-4" type="radio" name="settings2"  value="5000">50 сотрудников      <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                            <li onclick="settings2f(this)"><label for="settings2-5"><input id="settings2-5" type="radio" name="settings2"  value="8000">от 100 сотрудников и более     <span class="paramsp">8 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+
+                         </ul>  
+                         <li onclick="settings1f(this)"><label for="settings1-7"><input id="settings1-7" type="checkbox" name="settings1"  value="3000">Создание структуры компании и приглашение сотрудников в CRM      <span class="paramsp">2 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li> 
+                    </ul> 
+
+                    <p class="param_name">Контроль входящих заявок и общения с клиентами  
+                        <a class="clear_all" id="add_zajv"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Отметить все</a>
+                        <a class="clear_all" id="clear_zajv" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+    
+                    </p>
+                    <ul   style="list-style-type:none">
+                         <li onclick="zajv1f(this)"><label for="zajv1-1"><input id="zajv1-1" type="checkbox" name="zajv1"  value="5000">Подключение IP-телефонии для входящих звонков      <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="zajv1f(this)"><label for="zajv1-2"><input id="zajv1-2" type="checkbox" name="zajv1"  value="1500">Подключение и настройка сервиса обратный звонок для одного сайта     <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="zajv1f(this)"><label for="zajv1-3"><input id="zajv1-3" type="checkbox" name="zajv1"  value="1500">Подключение Яндекс Чаты       <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="zajv1f(this)"><label for="zajv1-4"><input id="zajv1-4" type="checkbox" name="zajv1"  value="15000">Интеграция Битрикс24 с социальными сетями и мессенджерами         <span class="paramsp">15 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="zajv1f(this)"><label for="zajv1-5"><input id="zajv1-5" type="checkbox" name="zajv1"  value="1500">Настройка отчета CRM в конструкторе отчетов      <span class="paramsp">1 500 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="zajv1f(this)"><label for="zajv1-6"><input id="zajv1-6" type="checkbox" name="zajv1"  value="5000">Настройка номера для исходящих звонков       <span class="paramsp">5 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="zajv1f(this)"><label for="zajv1-7"><input id="zajv1-7" type="checkbox" name="zajv1"  value="1000">Настройка записи телефонных разговоров     <span class="paramsp">1 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li> 
+                    </ul> 
+                </div>
+                <div class="lineparam"></div>
+
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">Битрикс24 - облако</p>
+                   
+                                     
+
+                    <p class="param_name">Тарифы  
+                        
+                        <a class="clear_all" id="clear_tarifb" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+    
+                    </p>
+                    <ul   style="list-style-type:none">
+                         <li onclick="tarifb1f(this)"><label for="tarifb1-1"><input id="tarifb1-1" type="radio" name="tarifb1"  value="0">Бесплатный      <span class="paramsp">0 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="tarifb1f(this)"><label for="tarifb1-2"><input id="tarifb1-2" type="radio" name="tarifb1"  value="1990">Базовый      <span class="paramsp">1 990 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="tarifb1f(this)"><label for="tarifb1-3"><input id="tarifb1-3" type="radio" name="tarifb1"  value="4790">Стандартный       <span class="paramsp">4 790 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="tarifb1f(this)"><label for="tarifb1-4"><input id="tarifb1-4" type="radio" name="tarifb1"  value="9590">Профессиональный       <span class="paramsp">9 590 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+  
+                   
+                        </ul> 
+                </div>
+
+                <div class="lineparam"></div>
+
+                <div class="calculator_block_param_block1">
+                    <p class="param_titel">Битрикс24 - коробка</p>
+                   
+                                     
+
+                    <p class="param_name">Тарифы  
+                        
+                        <a class="clear_all" id="clear_korob" ><i class="fa fa-ban" aria-hidden="true"></i> Очистить все</a>
+    
+                    </p>
+                    <ul   style="list-style-type:none">
+                         <li onclick="korob1f(this)"><label for="korob1-1"><input id="korob1-1" type="radio" name="korob1"  value="99000">Программа для ЭВМ "1С-Битрикс24". Лицензия Интернет-магазин + CRM (12 мес.)      <span class="paramsp">99 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="korob1f(this)"><label for="korob1-2"><input id="korob1-2" type="radio" name="korob1"  value="139000">Программа для ЭВМ "1С-Битрикс24". Лицензия Корпоративный портал - 50 (12 мес.)       <span class="paramsp">139 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="korob1f(this)"><label for="korob1-3"><input id="korob1-3" type="radio" name="korob1"  value="199000">Программа для ЭВМ "1С-Битрикс24". Лицензия Корпоративный портал - 100 (12 мес.)       <span class="paramsp">199 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="korob1f(this)"><label for="korob1-4"><input id="korob1-4" type="radio" name="korob1"  value="299000">Программа для ЭВМ "1С-Битрикс24". Лицензия Корпоративный портал - 250 (12 мес.)       <span class="paramsp">299 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="korob1f(this)"><label for="korob1-5"><input id="korob1-5" type="radio" name="korob1"  value="499000">Программа для ЭВМ "1С-Битрикс24". Лицензия Корпоративный портал - 500 (12 мес.)       <span class="paramsp">499 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         <li onclick="korob1f(this)"><label for="korob1-6"><input id="korob1-6" type="radio" name="korob1"  value="999000">Программа для ЭВМ "1С-Битрикс24". Лицензия Энтерпрайз (12 мес.)       <span class="paramsp">999 000 </span><i class="fa fa-rub" aria-hidden="true"></i></span></label></li>
+                         
+                        
+  
+                   
+                        </ul> 
+                </div>
+
+  
+           </div>
+
+        
+        
+        </div> 
+
+
+
+
+         <div class="calculator_itog" id="itog1">
+             <h2>Итоги заказа </h2>
+
+             <p class="itogp">Укажите контактные данные и нажмите "Отправить"</p>
+
+             <h2>Итоговая цена заказа <b class="itog_price"><span  id="itog_price">0</span><i class="fa fa-rub" aria-hidden="true"></i></b> </h2>
+             <form id="form1" class="form1"  >
+
+                <div class="note">
+                    
+                    <div class="itog_data">
+                        <div class="itog_vuborm1">
+                              <textarea name="itogmail" id="itogmail">   </textarea>                           
+                        </div>           
+                    </div>  
+
+                    <div class="itog_vuborm">
+                        <input type="text" class="form_inp"  name="name" id="name" placeholder="Имя"  size="30" required />
+                    </div>
+                    <div class="itog_vuborm">
+                        <input type="text" class="form_inp" name="telefon" id="phone" placeholder="Телефон"  size="30" required />
+                    </div>
+                    <div class="itog_vuborm">
+                        <input type="text" class="form_inp"  name="emailmail" id="emailmail" placeholder="E-mail"  size="30" required />
+                    </div>
+        
+                </div>
+        
+        
+        
+                <button  class="submit" name="insert"  id="btn2" >Отправить</button>
+        
+        </form>
+             
+             
+           
+
+
+    
+</div>
+
+</section>
+
+<div class="popup-fade2">
+    <div class="popup">
+        <a href="#" title="Закрыть" class="close" id="close"></a>
+       
+
+       
+            <div class="content_block3_cont">
+                <h2>Шаблоны из Маркетплейс Битрикс</h2>
+
+                <ul class="popli1"  style="list-style-type:none">
+                    <li class="popli">
+                       <div class="popli_block"> 
+                        <img  class="popimg" src="img/pop1.jpg">
+
+                        <p class="pop_titel">Сайт дилера Iveco</p>
+
+                        <p class="pop_price">50 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+
+                        <button onclick="btn2f(this)" data-name="Сайт дилера Iveco 50 000" value='50000' class="pop_btn">Выбрать</button>
+                    
+                    </div>
+
+                    </li>
+
+
+                    <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop2.jpg">
+    
+                            <p class="pop_titel">Сайт дилера Case IH</p>
+    
+                            <p class="pop_price">50 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт дилера Case IH 50 000" value='50000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+ 
+                     </li>
+
+
+                     <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop3.jpg">
+    
+                            <p class="pop_titel">Сайт дилера New Holland Agriculture</p>
+    
+                            <p class="pop_price">50 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт дилера New Holland Agriculture 50 000" value='50000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+ 
+                     </li>
+
+                     <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop4.jpg">
+    
+                            <p class="pop_titel">Сайт дилера КАМАЗ</p>
+    
+                            <p class="pop_price">50 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт дилера КАМАЗ 50 000" value='50000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li>
+
+
+                     <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop5.jpg">
+    
+                            <p class="pop_titel">Сайт репетитора</p>
+    
+                            <p class="pop_price">10 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт репетитора 10 000" value='10000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li>
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop6.jpg">
+    
+                            <p class="pop_titel">Сайт репетитора</p>
+    
+                            <p class="pop_price">29 900 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт репетитора 24 900" value='24900' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li>
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop7.jpg">
+    
+                            <p class="pop_titel">Интернет-магазин OptPRO</p>
+    
+                            <p class="pop_price">25 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Интернет-магазин OptPRO 25 000" value='25000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop8.jpg">
+    
+                            <p class="pop_titel">Сайт нотариуса</p>
+    
+                            <p class="pop_price">10 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт нотариуса 10 000" value='10000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop9.jpg">
+    
+                            <p class="pop_titel">Корпоративный сайт</p>
+    
+                            <p class="pop_price">19 900 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Корпоративный сайт 19 900" value='19900' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop10.jpg">
+    
+                            <p class="pop_titel">Интернет-магазин NextPro</p>
+    
+                            <p class="pop_price">29 900 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Интернет-магазин NextPro 29 900" value='29900' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop11.jpg">
+    
+                            <p class="pop_titel">Сайт мультибренд мото</p>
+    
+                            <p class="pop_price">50 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт мультибренд мото 50 000" value='50000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+
+                     
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop13.jpg">
+    
+                            <p class="pop_titel">Сайт юридической компании</p>
+    
+                            <p class="pop_price">10 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт юридической компании 10 000" value='10000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop14.jpg">
+    
+                            <p class="pop_titel">Сайт мультибрендового дилерского центра</p>
+    
+                            <p class="pop_price">50 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт мультибрендового дилерского центра 50 000" value='50000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop15.jpg">
+    
+                            <p class="pop_titel">Сайт дилера MAN</p>
+    
+                            <p class="pop_price">50 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт дилера MAN 50 000" value='50000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop16.jpg">
+    
+                            <p class="pop_titel">Сайт дилера DAF</p>
+    
+                            <p class="pop_price">50 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт дилера DAF 50 000" value='50000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop17.jpg">
+    
+                            <p class="pop_titel">Интернет-магазин запчастей</p>
+    
+                            <p class="pop_price">50 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Интернет-магазин запчастей 50 000" value='50000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop18.jpg">
+    
+                            <p class="pop_titel">Интернет-магазин автотоваров</p>
+    
+                            <p class="pop_price">25 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Интернет-магазин автотоваров 25 000" value='25000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop19.jpg">
+    
+                            <p class="pop_titel">Интернет-магазин сантехники</p>
+    
+                            <p class="pop_price">15 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Интернет-магазин автотоваров 15 000" value='15000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li> 
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop20.jpg">
+    
+                            <p class="pop_titel">Сайт адвоката</p>
+    
+                            <p class="pop_price">5 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт адвоката 5 000" value='5000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li>
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop21.jpg">
+    
+                            <p class="pop_titel">Сайт юридического центра</p>
+    
+                            <p class="pop_price">10 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт юридического центра 10 000" value='10000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li>  
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop22.jpg">
+    
+                            <p class="pop_titel">Сайт кофейни</p>
+    
+                            <p class="pop_price">5 000 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт кофейни 5 000" value='5000' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li>  
+
+                      <li class="popli">
+                        <div class="popli_block"> 
+                            <img  class="popimg" src="img/pop23.jpg">
+    
+                            <p class="pop_titel">Сайт агентства "Дед Мороз"</p>
+    
+                            <p class="pop_price">3 500 <i class="fa fa-rub" aria-hidden="true"></i></p>
+    
+                            <button onclick="btn2f(this)" data-name="Сайт агентства Дед Мороз" 3 500" value='3500' class="pop_btn">Выбрать</button>
+                        
+                        </div>
+                      </li>  
+
+
+
+
+
+                 </ul>   
+             </div>
+        </div>   
+    </div>             	
+
+
+
+
+
+ <script src="js/jquery.min.js"></script>
+
+<script src="js/scriptsCalc.js"></script>
+<script src="js/ajax.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

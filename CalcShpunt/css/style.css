@@ -1,0 +1,172 @@
+
+body{
+    margin: 0;
+	padding:0;
+    width: 100%;
+    height: auto;
+}
+
+
+.content{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+   background-color: #f2f2f2;
+}
+
+
+.content_titel{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===================== Описание  блока калькулятора =====================*/
+
+.content_block1{
+    display: block;
+    width: 100%;
+    height: auto;
+   
+}
+
+.table_shpunt{
+    width: 90%;
+    height: auto;  
+   padding-top: 30px;
+   background-color: #f2f2f2;
+    border-radius: 10px;
+   padding-bottom: 30px;
+   margin: 0 auto;
+}
+
+.table_shpunt th{
+    color: #212529;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.table_cell{
+    padding-right: 5px; 
+    padding-left: 5px;
+}
+.cell_select{
+    display: block;
+    width: 100%;    
+    /* background-color: #f2f2f2; */
+}
+
+.typeshpunt{
+    width: 90%;
+    padding: 15px;
+    border-radius: 27px;
+    background: #fff;
+    border: none; 
+    background-color: #fff;
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -o-appearance: none;
+  color: #000;
+  font-size: 100%;
+}
+
+.sp1{
+    text-align: center;
+    font-weight: 100;
+    font-size: 100%;
+    display: block;
+    width: 100%;
+}
+
+
+.sp2{
+    text-align: center;
+    font-weight: 100;
+    font-size: 100%;
+    display: block;
+    width: 70%;
+    padding: 15px;
+    border-radius: 27px;
+    background: #fff;
+    border: none; 
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+
+td {
+    border-bottom: 10px solid #f2f2f2;
+   }
+
+
+
+
+
+
+.btn2{
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    background-color: orange;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+
+    .content{
+        display: block;
+       width: 100%;
+       
+    }
+    
+}
+
+
+
+@media only screen  and (max-width: 960px) {
+
+   
+}
+
+
+
+@media only screen  and (max-width: 788px) {
+    
+    
+
+}
+
+@media only screen  and (max-width: 500px) {
+    
+
+    .table_shpunt tr > *{
+        display: block;
+        width: 100%;
+    }
+    /* .table_metis th > *{
+        display: block;
+        width: 100%;
+    } */
+}
+

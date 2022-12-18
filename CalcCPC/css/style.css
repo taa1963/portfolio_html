@@ -1,0 +1,151 @@
+
+
+
+
+
+
+
+/*Описание header и его компонентов */
+
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+
+}
+.container{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.block_calc{
+    display: block;
+    min-width: 350px;
+    max-width: 450px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+    color: #989c9d;
+    border: 1px solid #048593;
+    border-right: 30px solid #f0f0f0;
+}
+
+
+.block_calc_line{
+    display: block;
+    width: 100%;
+   
+}
+
+
+.block_calc_text{
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    float: left;
+    margin-right: 10px;
+    color: #555;
+    margin-left: 10px;
+     padding: 5px 0;
+}
+
+.block_calc_inp{
+    display: block;
+    float: right;
+    padding: 5px 0;
+    border: none;
+    
+}
+.inpcal{
+    border: none;
+    text-align: right;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.line{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1px;
+    background-color: #f0f0f0 ; 
+}
+
+.sps{
+    font-size: 20px; 
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #000000;
+}
+
+.block_btn{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.btn1{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #989c9d;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.imgbtn{
+    width: 80%;
+    height: 70%;
+}
+
+.active{
+    display: block;
+}
+
+
+
+
+#form{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #000000;
+}
+.first input {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: blanchedalmond;
+}
+
+.first1{
+    display: none;
+}
+.form_button1{
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.form_button1 button {
+    display: block;
+    margin: 0 auto;
+    background-color: #048593;
+    padding: 10px 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;
+}

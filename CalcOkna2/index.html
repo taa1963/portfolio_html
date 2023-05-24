@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор расчета мягких окон ПВХ</title>
+
+    <meta name="author" content="taa">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор расчета мягких окон ПВХ">
+    <link href="css/style.css" rel="stylesheet">
+
+    
+</head>
+
+<body>
+
+
+<div class="content">
+
+    <div class="content_titel">
+        <h1>Калькулятор расчета мягких окон ПВХ</h1>
+    </div>    
+
+    <div class="content_block1">
+
+        <div class="content_block_left">
+            <p class="titelinp">Выберите материал</p>
+            <select class="material" id="material">
+               
+            </select>
+
+            <p class="titelinp">Выберите окантовку</p>
+            <select class="material" id="kant">               
+                          
+            </select>
+
+            <p class="titelinp">Выберите крепление</p>
+            <select class="material" id="krepeg">
+                                         
+            </select>
+
+            <p class="titelinp">Укажите общее количество кв.м.</p>
+            <input type="text" class="material" id="allm" value="" placeholder="кв.м.">
+
+            <p class="titelinp">Укажите количество окон</p>
+            <input type="text" class="material" id="Nokon" value="0">
+
+            <p class="titelinp">Стоимость</p>
+
+            <p class="titelinp">Итого: <span id="itog">0</span>  руб.</p>
+
+
+           <form id="form1" class="form1" action="send.php" method="post" > 
+            <div class="first2">
+                <textarea  name="zakas" id="zakas">
+
+                </textarea>
+            </div> 
+
+
+            <p class="titelinp">Ваше имя</p>
+            <input type="text" class="material" id="name" name="name">
+
+            <p class="titelinp">Ваш телефон</p>
+           
+            <input type="text" class="material" name="telefon" id="telefon" data-inputmask="'mask': '+7-[999]-999-9999'"  inputmode="numeric"  placeholder="+7()-___-__-__"  size="30" value="" required="required" />
+
+
+            <button class="submit" name="insert"  id="btnmail" >ОТПРАВИТЬ</button>
+
+            </form>
+
+        
+
+           
+        </div>    
+
+        
+
+
+        </div>
+
+
+
+        
+
+
+    </div>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/data.js" ></script> 
+<script src="js/scriptsCalc.js" ></script>
+<script src="js/ajax.js" ></script>
+<script src="js/jquery.inputmask.js"></script>
+
+<script type="text/javascript">
+    jQuery(function() {
+    jQuery("input[inputmode]").inputmask();
+    });
+    </script>
+
+
+
+
+
+</body>
+</html>
+

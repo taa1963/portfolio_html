@@ -1,0 +1,144 @@
+
+body{
+    margin: 0;
+	padding:0;
+    width: 100%;
+    height: auto;
+}
+
+
+.content{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    /* margin-top: 20px; */
+    background: url(../img/fon1.png) center no-repeat, rebeccapurple;;
+}
+
+
+.content_titel{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/* ===================== Описание  блока калькулятора =====================*/
+
+.content_block1{
+    display: block;
+    width: 100%;
+    height: auto;   
+}
+
+
+
+
+.content_block_left{
+    display: block;
+    width: 50%;
+    margin-left: 10px;
+    float: left;
+}
+
+.content_block_richt{
+    display: block;
+    width: 50%;
+    float: right;
+}
+.titelinp{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Arial;
+}
+
+.material{
+    background-clip: padding-box;
+   
+    border: 1px solid #ced4da;
+   
+    color: #495057;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    border-radius: 20px;
+   line-height: 1.5;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    width: 80%;
+    text-align: left;
+    background: #fff;
+   
+}
+
+
+
+
+.mailform{
+    display: none;
+    margin: 0 auto;
+    background-color: #e1e1e1 !important;
+    border-radius: 10px;
+    width: 90%;
+    /* border: 2px solid #212529; */
+    margin:30px;
+   position: relative;
+ overflow: hidden
+}
+
+
+.submit{
+    display: block;
+    width: auto;
+    color: #ffffff;
+    border: 8px solid transparent;
+    background-color: #51ae6a;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: Montserrat;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.first2{
+    display: none;
+}
+
+
+
+@media only screen  and (max-width: 1024px) {
+
+    .content{
+        display: block;
+       width: 100%;
+       
+    }
+    
+}
+
+
+
+@media only screen  and (max-width: 960px) {
+
+   
+}
+
+
+
+@media only screen  and (max-width: 788px) {
+    
+    
+
+}
+
+@media only screen  and (max-width: 500px) {
+    
+
+   
+}
+

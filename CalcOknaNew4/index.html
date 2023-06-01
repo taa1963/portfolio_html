@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор расчета мягких окон ПВХ</title>
+
+    <meta name="author" content="taa">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"> -->
+    <meta name="description" content="Калькулятор расчета мягких окон ПВХ">
+    <link href="css/style.css" rel="stylesheet">      
+</head>
+<body> 
+   <div class="content">
+        <div class="content_titel">
+            <h1>Калькулятор расчета мягких окон ПВХ</h1>
+        </div>    
+
+       <div class="content_block1">
+            <input class="buttonprn popup-open" type="button" value="Рассчитать стоимость">  
+        </div>    
+    </div>
+
+        <div class="popup-fade1">
+            <div class="popup">
+
+                <div class="popblcockcalc">
+                    <div class="close">X</div>
+
+                    <div class="calc_block1" id="calc_block1">
+                        <h2>Выберите цвет окантовки</h2>
+                        <div class="lineCalcblock"></div>
+                        <div class="calc_titel">
+                            <p>Первый шаг калькулятора. Выберите цвет окантовки или нажмите "Дальше".</p>
+                        </div>
+
+
+                        <div class="slider">
+                            <div class="slide-list">
+                                <div class="slide-wrap">
+                                    <div class="slide-item">
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="okant1" class="img_block1"  src="img/shokolad.JPG" alt="Шоколадный" onclick="okantf(this)" data-name="Шоколадный">
+                                                <p class="calctitelimg" onclick="okantf(this)" data-name="Шоколадный">Шоколадный</p>
+                                            </div>            
+                                        </div>
+                        
+                                    </div>
+                        
+                        
+                                    <div class="slide-item">
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="okant1" class="img_block1" src="img/begev.JPG" alt="Бежевый" onclick="okantf(this)" data-name="Бежевый">
+                                                <p class="calctitelimg" onclick="okantf(this)" data-name="Бежевый">Бежевый</p>
+                                            </div>                                
+                                        </div>
+                        
+                                    </div>
+                                    <div class="slide-item"> 
+                                     <div class="calc_img1">
+                                        <div class="cal_img1_block">
+                                            <img id="okant1" class="img_block1" src="img/white.JPG" alt="Белый" onclick="okantf(this)" data-name="Белый">
+                                            <p class="calctitelimg" onclick="okantf(this)" data-name="Белый">Белый</p>
+                                        </div>    
+                                    </div> 
+                                    </div>                                     
+                        
+                                   
+                                    <div class="slide-item">
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="okant1" class="img_block1" src="img/grey.JPG" alt="Серый" onclick="okantf(this)" data-name="Серый">
+                                                <p class="calctitelimg" onclick="okantf(this)" data-name="Серый" >Серый</p>
+                                            </div>    
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-item">
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="okant1" class="img_block1" src="img/blak1.jpg" alt="Черный" onclick="okantf(this)" data-name="Черный">
+                                                <p class="calctitelimg" onclick="okantf(this)" data-name="Черный" >Черный</p>
+                                            </div>    
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-item">
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="okant1" class="img_block1" src="img/blu1.jpg" alt="Зеленый" onclick="okantf(this)" data-name="Зеленый">
+                                                <p class="calctitelimg" onclick="okantf(this)" data-name="Зеленый" >Зеленый</p>
+                                            </div>    
+                                        </div>
+                                    </div>
+
+
+                                   
+                        
+                        
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="slaider_nav">
+                            <div class="navy prev-slide"></div>
+                            <div class="navy next-slide"></div>                        
+                        </div>
+                      
+                        <div class="lineCalcblock"></div>
+
+
+                      <div class="button_block2">
+                         <button class="but_block2" id="but_block1"> Дальше  </button>
+                      </div>
+
+                    </div>
+
+                    <div class="calc_block2" id="calc_block2">
+                        <h2>Выберите тип  материала</h2>
+                        <div class="lineCalcblock"></div>
+                        <div class="calc_titel">
+                            <p>Второй шаг калькулятора. Выберите тип  материала и нажмите "Дальше".</p>
+                        </div>
+
+                        <select class="material" id="material">
+                            <option class="standart_opt" value="800" selected="selected">ПВХ 500</option>
+                            <option class="standart_opt" value="2000">ПВХ 700</option>
+                            <option class="standart_opt" value="1000">ПВХ 700 Тонированная</option>
+                            <option class="standart_opt" value="2000">ТПУ 700</option>
+                            <option class="standart_opt" value="1800">ТПУ 500</option>               
+                        </select>
+
+                        <div class="lineCalcblock"></div>
+
+                        
+
+                      <div class="button_block2">
+                        <button class="but_block21" id="but_block2_1"> Назад  </button>
+                         <button class="but_block22" id="but_block2_3"> Дальше  </button>
+                      </div>
+
+                    </div>
+
+
+                    <div class="calc_block3" id="calc_block3">
+                        <h2>Выберите тип  крепления</h2>
+                        <div class="lineCalcblock"></div>
+
+                        <div class="calc_titel">
+                            <p>Третий шаг калькулятора. Выберите тип  крепления или нажмите "Дальше".</p>
+                        </div>
+                        <div class="slider">
+                            <div class="slide-list">
+                                <div class="slide-wrap2">
+                                    <div class="slide-item2">                                        
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="krepeg1" class="img_block1"  src="img/krepeg/lureks.jpg" alt="Круглый люверс" onclick="krepegf(this)" data-name="Круглый люверс" data-prise="200">
+                                                <p class="calctitelimg" onclick="krepegf(this)" data-name="Круглый люверс" data-prise="200">Круглый люверс</p>
+                                            </div>           
+                                        </div>
+                        
+                                    </div>
+                        
+                        
+                                    <div class="slide-item2">
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="krepeg1" class="img_block1"  src="img/krepeg/skoba.jpg" alt="Скоба - ремень" onclick="krepegf(this)" data-name="Скоба - ремень" data-prise="400">
+                                                <p class="calctitelimg" onclick="krepegf(this)" data-name="Скоба - ремень" data-prise="400">Скоба - ремень</p>
+                                            </div>                                
+                                        </div>
+                        
+                                    </div>
+                                    <div class="slide-item2"> 
+                                     <div class="calc_img1">
+                                        <div class="cal_img1_block">
+                                            <img id="krepeg2" class="img_block1"  src="img/krepeg/metal.jpg" alt="Скоба поворотная металлическая " onclick="krepegf(this)" data-name="Скоба поворотная металлическая " data-prise="600">
+                                            <p class="calctitelimg" onclick="krepegf(this)" data-name="Скоба поворотная металлическая " data-prise="600">Скоба поворотная металлическая </p>
+                                        </div>     
+                                    </div> 
+                                    </div>                                     
+                        
+                                   
+                                    <div class="slide-item2">
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="krepeg3" class="img_block1"  src="img/krepeg/plastik.jpg" alt="Скоба поворотная полимерная   " onclick="krepegf(this)" data-name="Скоба поворотная полимерная" data-prise="600">
+                                                <p class="calctitelimg" onclick="krepegf(this)" data-name="Скоба поворотная полимерная" data-prise="600">Скоба поворотная полимерная   </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="slide-item2">
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="krepeg4" class="img_block1"  src="img/krepeg/franz.jpg" alt="Французский замок   " onclick="krepegf(this)" data-name="Французский замок   " data-prise="800">
+                                                <p class="calctitelimg" onclick="krepegf(this)" data-name="Французский замок" data-prise="800">Французский замок  </p>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="slide-item2">
+                                        <div class="calc_img1">
+                                            <div class="cal_img1_block">
+                                                <img id="krepeg4" class="img_block1"  src="img/krepeg/rolik.jpg" alt="Ролик сдвижной   " onclick="krepegf(this)" data-name="Ролик сдвижной   " data-prise="2500">
+                                                <p class="calctitelimg" onclick="krepegf(this)" data-name="Ролик сдвижной" data-prise="2500">Ролик сдвижной  </p>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                   
+                        
+                        
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="slaider_nav">
+                            <div class="navy prev-slide2" id="prev2"></div>
+                            <div class="navy next-slide2" id="next2"></div>
+                        
+                        </div>
+
+
+
+
+
+<!--                        
+                        <div class="calc_imgs">
+                            <div class="calc_img3">
+                                <div class="cal_img1_block">
+                                    <img id="krepeg1" class="img_block1"  src="img/krepeg/lureks.jpg" alt="Круглый люверс" onclick="krepegf(this)" data-name="Круглый люверс" data-prise="200">
+                                    <p class="calctitelimg" onclick="krepegf(this)" data-name="Круглый люверс" data-prise="200">Круглый люверс</p>
+                                </div>            
+                            </div>
+
+                            <div class="calc_img3">
+                                <div class="cal_img1_block">
+                                    <img id="krepeg1" class="img_block1"  src="img/krepeg/skoba.jpg" alt="Скоба - ремень" onclick="krepegf(this)" data-name="Скоба - ремень" data-prise="400">
+                                    <p class="calctitelimg" onclick="krepegf(this)" data-name="Скоба - ремень" data-prise="400">Скоба - ремень</p>
+                                </div>            
+                            </div>
+
+                            <div class="calc_img3">
+                                <div class="cal_img1_block">
+                                    <img id="krepeg2" class="img_block1"  src="img/krepeg/metal.jpg" alt="Скоба поворотная металлическая " onclick="krepegf(this)" data-name="Скоба поворотная металлическая " data-prise="600">
+                                    <p class="calctitelimg" onclick="krepegf(this)" data-name="Скоба поворотная металлическая " data-prise="600">Скоба поворотная металлическая </p>
+                                </div>            
+                            </div>
+
+                            <div class="calc_img3">
+                                <div class="cal_img1_block">
+                                    <img id="krepeg3" class="img_block1"  src="img/krepeg/plastik.jpg" alt="Скоба поворотная полимерная   " onclick="krepegf(this)" data-name="Скоба поворотная полимерная" data-prise="600">
+                                    <p class="calctitelimg" onclick="krepegf(this)" data-name="Скоба поворотная полимерная" data-prise="600">Скоба поворотная полимерная   </p>
+                                </div>            
+                            </div>
+
+                            <div class="calc_img3">
+                                <div class="cal_img1_block">
+                                    <img id="krepeg4" class="img_block1"  src="img/krepeg/franz.jpg" alt="Французский замок   " onclick="krepegf(this)" data-name="Французский замок   " data-prise="800">
+                                    <p class="calctitelimg" onclick="krepegf(this)" data-name="Французский замок" data-prise="800">Французский замок  </p>
+                                </div>            
+                            </div>           
+   
+
+                        </div> -->
+
+                        <div class="lineCalcblock"></div>
+
+                       
+
+                      <div class="button_block2">
+                        <button class="but_block21" id="but_block3_2"> Назад  </button>
+                         <button class="but_block22" id="but_block3_4"> Дальше  </button>
+                      </div>
+
+                    </div>
+
+                    <div class="calc_block4" id="calc_block4">
+                        <h2>Выберите материал на который крепиться изделие</h2>
+                        <div class="lineCalcblock"></div>
+                        <div class="calc_titel">
+                            <p>Четвертый шаг калькулятора. Выберите материал на который крепиться изделие и нажмите "Дальше".</p>
+                        </div>
+                        <div class="calc_imgs">
+                            <div class="calc_img4">
+                                <div class="cal_img1_block">
+                                    <img id="osnova1" class="img_block1"  src="img/materialkr/derevo.JPG" alt="На деревянную конструкцию" onclick="osnovaf(this)" data-name="На деревянную конструкцию" data-prise="400">
+                                    <p class="calctitelimg" onclick="osnovaf(this)" data-name="На деревянную конструкцию" data-prise="400">На деревянную конструкцию</p>
+                                </div>            
+                            </div>
+
+                            <div class="calc_img4">
+                                <div class="cal_img1_block">
+                                    <img id="osnova2" class="img_block1"  src="img/materialkr/metal.JPG" alt="На металлическую конструкцию" onclick="osnovaf(this)" data-name="На металлическую конструкцию" data-prise="500">
+                                    <p class="calctitelimg" onclick="osnovaf(this)" data-name="На металлическую конструкцию" data-prise="500">На металлическую конструкцию</p>
+                                </div>            
+                            </div>
+
+                            <div class="calc_img4">
+                                <div class="cal_img1_block">
+                                    <img id="osnova3" class="img_block1"  src="img/materialkr/beton.JPG" alt="На бетонную конструкцию" onclick="osnovaf(this)" data-name="На бетонную конструкцию" data-prise="600">
+                                    <p class="calctitelimg" onclick="osnovaf(this)" data-name="На бетонную конструкцию" data-prise="600">На бетонную конструкцию</p>
+                                </div>            
+                            </div>                   
+
+                        </div>
+
+                        <div class="lineCalcblock"></div>
+
+                        <div class="button_block2">
+                            <button class="but_block21" id="but_block4_3"> Назад  </button>
+                             <button class="but_block22" id="but_block4_5"> Дальше  </button>
+                          </div>
+
+                    </div>
+
+                    <div class="calc_block5" id="calc_block5">
+                        <h2>Размеры окна (окон)</h2>
+                        <div class="lineCalcblock"></div>
+                        <div class="calc_titel">
+                            <p>Пятый  шаг калькулятора. Укажитете размеры окна (окон)  в сантиметрах и нажмите "Рассчитать".</p>
+                        </div>
+                        <!-- <div class="calc_imgs">           -->
+                         <div class="calc_oknos" id="calc_oknos">
+                            <div class="calc_okno">
+                                <p>Длинна  <input type="number" class="lang"  value="0" min="0" step="1" oninput="langf(this)" >    см</p>
+                                <p>Ширина<input type="number" class="breadth"  value="0" min="0" step="1" oninput="langf(this)" >   см</p>
+                                <button class="Oknoadd" > Добавить еще  окно   </button>                                       
+                            </div>
+                        </div>
+                          
+
+                        <div class="lineCalcblock"></div>
+
+                        <div class="button_block2">
+                            <button class="but_block21" id="but_block5_4"> Назад  </button>
+                             <button class="but_block22" id="but_block5_6"> Рассчитать  </button>
+                          </div>
+
+                    </div>
+
+                    <div class="calc_block6" id="calc_block6">
+                        <h2>Итоги заказа</h2>
+                        <form id="form1" class="form1" action="send.php" method="post" > 
+
+                            <div class="calc_titel">
+                                <p>Для Отображения результатов расчтета укажитете имя и телефон и нажмите  "Получить результат".</p>
+                            </div>
+                            <div class="first2" id="first2">
+                                <textarea class="zakas" name="zakas" id="zakas">
+                
+                                </textarea>
+                            </div> 
+                
+                
+                            <p class="titelinp">Ваше имя &nbsp;&nbsp;  <input type="text" class="material2" id="name" name="name" required="required"> </p>
+                           
+                
+                            <p class="titelinp">Ваш телефон <input type="text" class="material2" name="telefon" id="telefon" data-inputmask="'mask': '+7-[999]-999-9999'"  inputmode="numeric"  placeholder="+7()-___-__-__"  size="30" value="" required="required" /></p>
+                           
+                         
+                            <div class="button_block2">
+                                <button class="but_block21" id="but_block6_1"> Получить результат  </button>
+                                 <!-- <button class="but_block22" id="but_block5_6"> Рассчитать  </button> -->
+                              </div>
+
+                
+                            <!-- <button class="submit" name="insert"  id="btnmail" >ОТПРАВИТЬ</button> -->
+                
+                            </form>
+                       
+
+                        <!-- <div class="lineCalcblock"></div> -->
+
+                       
+
+                        <!-- <div class="button_block2">
+                            <button class="but_block21" id="but_block6_1"> Получить результат  </button>
+                            <button class="but_block22" id="but_block5_6"> Рассчитать  </button> 
+                          </div> -->
+
+                    </div>
+
+                    <div class="calc_block7" id="calc_block7">
+                        <h2>Вы заказали заказа</h2>
+                      
+
+                        <div class="lineCalcblock"></div>
+                        <div class="itogv">
+                        <p>Цвет окантовки:<span id="kantvv"></span></p>
+                        <p>Tип материала:<span id="typeMaterialvv"></span></p>
+                        <p>Tип крепления:<span id="typeKrepegvv"></span></p>
+                        <p>Материал на который крепиться изделие:<span id="typeOsnovavv"></span></p>
+                        <p>общая площадь окон:<span id="sOkonvv"></span>кв.м.</p>
+
+                        <p>Стоимость:<span id="Prisevv"></span> руб</p>
+                        <p>Заявка успешно отправлена. Наши сециалисты свяжутся с Вами в ближайщее время</p>
+                    </div>
+                        <div class="lineCalcblock"></div>
+
+                       
+
+
+                    </div>
+
+
+
+
+                  
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+        
+
+
+    </div>
+
+
+
+
+ <script src="js/jquery.min.js"></script> 
+<script src="js/scriptsCalc.js" ></script>
+<script src="js/slider.js"></script>
+
+<script src="js/ajax.js" ></script>
+<script src="js/jquery.inputmask.js"></script>
+ <script type="text/javascript">
+    jQuery(function() {
+    jQuery("input[inputmode]").inputmask();
+    });
+    </script>
+     <script>
+        $(document).ready(function($) {
+            $('.popup-open').click(function() {
+                $('.popup-fade1').fadeIn();
+                $('html, body').animate({scrollTop:0}, 'fast');
+                return false;
+            });
+
+            $('.close').click(function() {
+                $(this).parents('.popup-fade1').fadeOut();
+                return false;
+            });
+            $('.popup-close').click(function() {
+                $(this).parents('.popup-fade1').fadeOut();
+                return false;
+            });
+           
+
+            $(document).keydown(function(e) {
+                if (e.keyCode === 27) {
+                    e.stopPropagation();
+                    $('.popup-fade1').fadeOut();
+                }
+            });
+
+            $('.popup-fade1').click(function(e) {
+                if ($(e.target).closest('.popup').length == 0) {
+                    $(this).fadeOut();
+                }
+            });
+        });
+    </script> 
+
+</body>
+</html>
+

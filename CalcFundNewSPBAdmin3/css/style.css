@@ -1,0 +1,440 @@
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+ }
+
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #cccccc; 
+}
+
+
+
+.header_titel {
+    display: block;
+    width: 100%;
+
+}
+.header_titel h2{
+    font-family: "RobotoLight";
+    font-size:2em ;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    margin-top: 0px;
+}
+
+
+
+
+/*		Линия во весь экран, повторяется несколько раз, описывается  1раз		*/
+
+.line_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+}
+
+.line2_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+    margin-bottom: 10px;
+}
+
+.line3_zakas{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0f0f0f;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/*		Первый блок.*/
+
+
+.zakas{
+    display: block;
+    width: 100%;
+}
+
+.zakas_block1 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+.zakas_block1_type_vubor{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.zakas_block1_type_vubor label{
+    display: block;
+    width: 100%;
+    font-family: "RobotoBold";
+    font-size:20px ;
+    color: #000000;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+
+.zakas_block1{
+    display: block;
+    position: relative;
+    width: 100%;
+    max-height: 25%;
+    min-height: 25%;
+    /*height: auto;*/
+    /*padding-bottom: 50em;*/
+}
+
+
+.button_block2{
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+}
+
+.but_block2{
+    display: block;
+    width: 210px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 0.35px;
+    font-family: 'Museo Sans Cyrl 700';
+    border: 1px solid #81aec7;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #066192;
+
+   
+}
+
+
+
+/*		Второй блок. 		*/
+
+.zakas_block2{
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+
+.zakas_block2 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+
+.zakas_block2_type_vubor{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.land{
+    display: block;
+    width: 90%;   
+}
+.land2{
+    display: block;
+    width: 90%;  
+    position: relative; 
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.langtitel {
+    display: block;
+    width: 30%;
+    float: left;
+  }
+
+.langf{
+    display: block;
+    width: 30%;   
+    float: left;
+    margin-right: 5px;
+}
+
+.langtitel2{
+    display: block;
+    width: 50%;   
+    float: left;
+    margin-right: 5px;
+}
+
+.langf2{
+-webkit-appearance: none; 
+width: 1em;
+height: 1em;
+border: 1px solid #1b6d85;
+border-radius: 50%;
+outline: none;
+box-shadow: 0 0 5px 0px #1b6d85 inset;
+}
+
+
+.langf2:after {
+    content:'';
+    display:block;
+    width:60%;
+    height:60%;
+    margin: 20% auto;
+    border-radius:50%;
+}
+
+.langf2:checked:after {
+    background:#1b6d85;
+}
+
+
+
+.param_title{
+    font-family: "RobotoBold";
+    font-size: 20px;
+    color: #000000;
+    padding-top: 5px;
+}
+.line1{
+    display: block;
+    height: 1px;
+    border-top: 1px solid #2f4152;
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    
+}
+
+.closeelm{
+    display: none;
+}
+
+
+
+.button_block2{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.but_block3{
+    display: block;
+    width: 210px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 0.35px;
+    font-family: 'Museo Sans Cyrl 700';
+    border: 1px solid #81aec7;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #066192;
+    float: left;
+
+}
+   
+
+
+.button_block3{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+
+
+
+.zakas_block3 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+
+.zakas_block4 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+.zakas_block5 h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size:28px ;
+    color: #398439;
+}
+
+
+#test {
+    display: block;
+    width: 210px;
+    height: 35px;
+    line-height: 35px;
+    letter-spacing: 0.35px;
+    font-family: 'Museo Sans Cyrl 700';
+    border: 1px solid #81aec7;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #066192;
+    margin-bottom: 20px;
+}
+
+
+.printpdf{
+    display: none;
+}
+
+.printpdf_active{
+    display: block;
+}
+.zakas_smeta_lenta{
+    display: none;
+    width: 90%;
+    margin-top: 50px;
+    background-color: #cccccc;   
+   
+}
+.smeta_active{
+    display: block;
+}
+
+.zakas_smeta_lenta .table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.zakas_smeta_lenta .table img{
+    display:none;
+    width:30%;
+    margin:0 auto;
+}
+
+
+
+.table_bl{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.table_close{
+    display: none;  
+    visibility:collapse;
+}
+
+.table > tbody > tr > td{
+    border-top: 1px solid #ddd;
+    padding: 4px;
+   
+}
+.printpdflock{
+    display: block;
+    width: 50%;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.buttonprn{
+    display: block;
+width: 210px;
+height: 35px;
+line-height: 35px;
+letter-spacing: 0.35px;
+font-family: 'Museo Sans Cyrl 700';
+border: 1px solid #81aec7;
+text-align: center;
+text-decoration: none;
+border-radius: 25px;
+color: #fff;
+cursor: pointer;
+transition: 0.3s;
+background: #066192;
+margin-bottom: 30px;
+float: left;
+margin-top: 20px;
+margin-right: 20px;
+}
+
+
+
+
+/*		Третий. 		*/
+
+.zakas_block3{
+    display: none;
+}
+
+
+
+/*		Четвертый блок. 		*/
+
+.zakas_block4{
+    display: none;
+}
+
+
+.zakas_block5{
+    display: none;
+}
+
+.zakas_block6{
+    display: none;
+}
+
+
+
+
+
+/*		Линия во весь экран, повторяется несколько раз, описывается  1раз		*/
+.line{
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #adadad;
+    margin: 0;
+    padding: 0;
+
+}

@@ -16,7 +16,7 @@ if (
 	{
     $stsx = substr(htmlspecialchars(trim($_POST['stsx'])), 0, 100000000000000);
 	
-	echo $stsx;
+	//echo $stsx;
 
     // на какие данные рассчитан этот скрипт
      header("Content-Type: application/html");
@@ -24,11 +24,12 @@ if (
 	 unlink('data2.js');
 
      // Берём новую переменную и пишем в неё имя файла
-    // $filename = 'data2.js';
-	 
+     $filename = 'data2.js';
+     $f = 'data2.js';
 
 
-     // 3. Если есть — запоминаем его содержимое, а если такого файла нет — создаём его отдельной командой.
+
+        // 3. Если есть — запоминаем его содержимое, а если такого файла нет — создаём его отдельной командой.
 if (file_exists($filename)) {
     // Если файл есть — открываем его и читаем данные
     $file = file_get_contents('data2.js');
@@ -38,21 +39,16 @@ else
 {
 // …то создаём его сами
     $file = fopen("data2.js", "a+");
-	 if ($f === false) {
-        return 0;
-		 echo 'не открыли';
-    } else {
-       echo 'Открыли  успешно';
-    }
+
 }
 	
     //$fh = fopen('data2.js', 'a');
     //fwrite($fh, '<h1>Привет, мир!</h1>');
     file_put_contents($file, $stsx);
 	
-	$fcontents = file_get_contents($file, $stsx);)
+	$fcontents = file_get_contents($file, $stsx);
       
-      echo $fcontents
+      echo $fcontents;
 	 
 	
 	

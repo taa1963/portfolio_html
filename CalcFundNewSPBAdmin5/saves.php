@@ -38,7 +38,7 @@ if (file_exists($filename)) {
 else 
 {
 // …то создаём его сами
-    $file = fopen("data2.js", "a+");
+    $file = fopen("https://aleksandr.tupichenkov.com/CalcFundNewSPBAdmin5/js/data2.js"+"a+");
 
 }
 	

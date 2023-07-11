@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Админ панель калькулятора</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="taa">
+
+
+
+    <link href="css/style_admin.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+
+   <div class="header">
+       <div class="container">
+
+
+               <div class="header_titel">
+                   <h2>Админ панель калькулятора</h2>                  
+               </div>
+
+       </div>
+   </div>
+
+
+
+
+       <div class="zakas">
+
+        <div class="zakas_block_autoris">
+
+            <div class="line_zakas"></div>
+            <h2>Введите пароль доступа.  </h2>
+ 
+            <div class="zakas_block1_type_vubor">
+
+              <p>Пароль доступа <input type="text" class="paswrd" id="paswrd"></p>
+               
+            </div>
+
+            <div class="zakas_autoris_err">
+                <p class="text_err" id="text_err">Пароль не верный, осталось <span id="errn"></span> попыток</p>                 
+              </div> 
+ 
+        <div class="button_block2">
+ 
+            <button class="but_block2" id="but_block_autoris"> Авторизовать  </button>
+ 
+       </div>
+ 
+          <div class="line2_zakas"></div>
+ 
+        </div>
+
+
+
+
+        <div class="zakas_block_admin1">
+
+            <div class="line_zakas"></div>
+            <h2>Выбор действий администратора.  </h2>
+ 
+           
+ 
+        <div class="button_block2">
+ 
+            <div class="button_block2">
+               <button class="but_block3" id="but_block_adm_1"> Формировать смету  </button>
+
+
+               <button class="but_block2" id="but_block_adm_2"> Редактировать данные  </button>
+
+           </div>
+ 
+       </div>
+ 
+          <div class="line2_zakas"></div>
+ 
+        </div>
+
+        <div class="zakas_block_admin2">
+
+            <div class="line_zakas"></div>
+            <h2>Редактирование исходных данных.  </h2>
+ 
+           
+ 
+        <div class="button_block2">
+ 
+            <div class="button_block2">
+                <table class="table_admin">
+                    <tbody>
+                        <tr>
+                          <th style="width:50%;text-align: left;border: 1px solid #000000;">Наименование позиции</th>
+                          <th style="width:25%;text-align: left;border: 1px solid #000000;">Стоимость руб.</th>
+                          <th style="width:25%;text-align: left;border: 1px solid #000000;">Наценка %</th>
+                        </tr>
+                        <tr>
+                          <td colspan="3" style="width:50%;text-align: center;font-weight: bold;border: 1px solid #000000;">Бытовка металлическая</td>
+                          <!-- <td style="width:25%;text-align: left;font-weight: bold;border: 1px solid #000000;"></td>
+                          <td style="width:25%;text-align: left;font-weight: bold;border: 1px solid #000000;"></td> -->
+                        </tr>
+                        <tr>
+                          <td style="width:50%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZbutovkaNameAdm"></textarea></td>
+                          <td style="width:25%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZbutovkaAdm"></td>
+                          <td style="width:25%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZbutovkaPrAdm"></td>
+                         
+                        </tr>
+                        <tr>
+                          <td>Lamborghini</td>
+                          <td>Smart</td>
+                          <td>Rolls-Royce</td>
+                        </tr>
+                      </tbody>
+                </table>
+              
+
+              <form id="form1" class="form1"  method="post"> 
+               <button type="submit" class="but_block2" id="but_block_adm_3"> Сохранить данные  </button>
+
+               <textarea id="stsx" name="stsx" class="stsx"></textarea>
+
+            </form>
+
+           </div>
+ 
+       </div>
+ 
+          <div class="line2_zakas"></div>
+ 
+        </div>
+
+
+
+
+              
+
+
+       <div class="zakas_block1">
+
+           <div class="line_zakas"></div>
+           <h2>Первый шаг. 	Выберити тип фундамента.  </h2>
+
+           <div class="zakas_block1_type_vubor">
+               <label><input class="type_region" type="radio" name="typefund"  id="typefund1" value="1" checked>Плита </label>
+               <label><input class="type_region" type="radio"  name="typefund" id="typefund2" value="2">Плита с ребрами </label>
+               <label><input class="type_region" type="radio"  name="typefund" id="typefund3" value="3">Ленточный фундамент</label>
+           </div>
+
+
+       <div class="button_block2">
+
+           <button class="but_block2" id="but_block1"> Дальше  </button>
+
+      </div>
+
+         <div class="line2_zakas"></div>
+
+       </div>
+
+
+       <div class="zakas_block2">
+	   <div class="line_zakas"></div>
+
+
+               <h2>Второй  шаг. 2.	Размеры фундамента.  </h2>
+
+                   <div class="zakas_block2_type_vubor" id="zakas_block2_type_vubor">
+
+                    <div class="land" id="land">
+                        <p class="param_title"><span class="langtitel">Длина фундамента </span>  <input type="text" class="langf" id="landf"  value="18.00" min="0" max="200" step="0.1" > <span>м</span> </p>
+                    </div>
+
+                    <div class="line1"> </div>
+
+                    <div class="land" id="land1">
+                        <p class="param_title"><span class="langtitel">Ширина фундамента </span> <input type="text" class="langf" id="breadthf"  value="8.84" min="0" max="200" step="0.1"><span> м</span> </p>
+                    </div>
+
+                    <div class="line1" > </div>
+
+                        <div class="land" id="land2">
+                            <p class="param_title"><span class="langtitel">Толщина плиты </span>   <input type="text" class="langf" id="thickness"  value="0.30" min="0" max="10" step="0.1"><span> м</span> </p>
+                        </div>
+
+                    <div class="line1" id="line1land2"> </div>
+
+                    <div class="land" id="land3">
+                        <p class="param_title"><span class="langtitel">Высота ленты </span> <input type="text" class="langf" id="heightr"  value="0" min="0" max="10" step="0.1"><span> м</span> </p>
+                    </div>
+
+                    <div class="line1" id="line1land3">  </div>
+
+                    <div class="land" id="land4">
+                        <p class="param_title"><span class="langtitel">Ширина ленты </span> <input type="text" class="langf" id="widthr"  value="0" min="0" max="10" step="0.1"><span> м</span> </p>
+                    </div>
+                    <div class="line1" id="line1land4">  </div>
+
+                    <div class="land" id="land3r">
+                        <p class="param_title"><span class="langtitel">Высота ростверка </span> <input type="text" class="langf" id="heightr2"  value="0" min="0" max="10" step="0.1"><span> м</span> </p>
+                    </div>
+
+                    <div class="line1" id="line1land3r">  </div>
+
+                    <div class="land" id="land4r">
+                        <p class="param_title"><span class="langtitel">Ширина ростверка </span> <input type="text" class="langf" id="widthr2"  value="0" min="0" max="10" step="0.1"><span> м</span> </p>
+                    </div>
+
+
+                    <div class="line1" id="line1land4r">  </div>
+
+
+                    <div class="land" id="land5">
+                        <p class="param_title"><span class="langtitel">Толщина песка  </span>  <input type="text" class="langf" id="thicknesspesok"  value="0.30" min="0" max="10" step="0.1"> <span> м</span></p>
+                    </div>
+
+                    <div class="line1"> </div>
+
+                    <div class="land" id="land6">
+                        <p class="param_title"><span class="langtitel">Толщина щебня  </span> <input type="text" class="langf" id="thicknessshebnj"  value="0.20" min="0" max="10" step="0.1"> <span> м</span></p>
+                    </div>
+
+                    <div class="line1">
+                    </div>
+
+                    <div class="land" id="land7">
+                        <p class="param_title"><span class="langtitel">Толщина подбетонки   </span>
+                         <select class="langf" id="thicknesspodbeton"  value="0.0"> 
+                         <option value="0">0</option>
+                         <option value="0.1">0.1</option>  
+                        </select>
+                             <span> м</span></p>
+                    </div>
+
+
+
+                   </div>
+
+
+           <div class="button_block2">
+               <button class="but_block3" id="but_block2_1"> Назад  </button>
+
+
+               <button class="but_block2" id="but_block2_2"> Дальше  </button>
+
+           </div>
+
+		   <div class="line3_zakas"></div>
+
+
+       </div>
+
+
+       <div class="zakas_block3">
+	   
+        <div class="line_zakas"></div>
+
+               <h2>Третий шаг.	Дополнительные Опции  </h2>
+           <div class="zakas_block2_type_vubor">
+
+            <div class="land" id="land7">
+                <p class="param_title"><span class="langtitel2"> Необходимость "Городка строителей"  </span> <input type="checkbox" class="langf2" id="gorod"   </p>
+            </div>
+
+            <div class="line1"></div>
+             
+                <div class="land" id="land8">
+                    <p class="param_title"><span class="langtitel2"> Необходимость устройства дренажа  </span> <input type="checkbox" class="langf2" id="drenag"   </p>
+                </div>
+    
+                <div class="line1">   </div>
+
+                <div class="land" id="land9">
+                    <p class="param_title"><span class="langtitel2"> Необходимость утепления фундамента  </span> <input type="checkbox" class="langf2" id="teplof"   </p>
+                </div>
+    
+                <div class="line1"> </div>
+
+                <div class="land" id="land18">
+                    <p class="param_title"><span class="langtitel2">Толщ. горизонт. утепл. под плитой   </span> 
+                        <select class="langf" id="thicknessgorytep"  value="0.0"> 
+                            <option value="0">0</option>
+                            <option value="0.05">0.05</option>
+                            <option value="0.1">0.1</option>  
+                           </select>
+                      <span> м</span></p>
+                       
+                </div>
+
+                <div class="line1" id="landline18">  </div>
+
+                <div class="land" id="land19">
+                    <p class="param_title"><span class="langtitel2"> Толщ. вертик. утепл. фунд </span> 
+                        <select class="langf" id="thicknessverytep"  value="0.0"> 
+                            <option value="0">0</option>
+                            <option value="0.05">0.05</option>
+                            <option value="0.1">0.1</option>  
+                           </select>
+                      <span> м</span></p>
+                        
+                </div>
+
+                <div class="line1" id="landline19"></div>
+
+                <div class="land" id="land10">
+                    <p class="param_title"><span class="langtitel langtitel2"> канализ. стояк шт. </span>  <input type="text" class="langf" id="kanalst"  value="1" min="0" max="10" step="1"><span> к-т</span> </p>
+                </div>
+
+                <div class="line1">  </div>
+
+                <div class="land" id="land11">
+                    <p class="param_title"><span class="langtitel langtitel2"> ввод воды шт. </span>   <input type="text" class="langf" id="water"  value="1" min="0" max="10" step="1"> <span> к-т</span></p>
+                </div>
+
+                <div class="line1">  </div>
+
+                <div class="land" id="land13">
+                    <p class="param_title"><span class="langtitel langtitel2"> Электричество шт. </span> <input type="text" class="langf" id="elektro"  value="1" min="0" max="10" step="1"><span> к-т</span> </p>
+                </div>
+
+                <div class="line1"> </div>
+
+
+
+
+           <div class="button_block2">
+               <button class="but_block3" id="but_block3_1"> Назад  </button>
+
+
+               <button class="but_block2" id="but_block3_2"> Дальше  </button>
+
+           </div>
+
+          
+       <div class="line3_zakas"></div>
+
+		  </div>
+
+        </div>
+
+
+      <div class="zakas_block4">
+
+               <div class="line_zakas"></div>
+               <h2>Четвертый шаг. 	Данные клиента для отправки сметы  </h2>
+
+               <div class="zakas_block1_type_vubor">
+                <div class="land2" id="land14">
+                    <p class="param_title"><span class="langtitel"> Имя заказчика: </span> <input type="text" class="langf" id="name"> </p>
+                </div>
+
+                <div class="line1">
+                </div>
+                
+                <div class="land2" id="land15">
+                    <p class="param_title"><span class="langtitel"> WhatsApp или Telegram: </span> <input type="text" class="langf" id="phone" > </p>
+                </div>
+
+                <div class="line1">
+                </div>
+                <div class="land2" id="land16">
+                    <p class="param_title"><span class="langtitel"> Растояние от КАД, км:</span> <input type="text" class="langf" id="lkad" > </p>
+                </div>
+
+                <div class="line1">
+                </div>
+                
+
+               </div>
+
+
+
+                   <div class="button_block2">
+                       <button class="but_block3" id="but_block4_1"> Назад  </button>
+
+
+                       <button class="but_block2" id="but_block4_2"> Дальше  </button>
+
+                   </div>
+
+
+
+               <div class="line2_zakas"></div>
+
+           </div>
+
+      <div class="zakas_block5">
+
+               <div class="line_zakas"></div>
+               <h2>Пятый шаг. 	Все данные введены. Отобразить смету?   </h2>
+
+               <div class="zakas_block1_type_vubor">
+                <div id="test">Показать смету</div>
+
+               </div>
+
+
+               <div class="line2_zakas"></div> 
+
+               <div class="zakas_smeta_lenta"  id="zakas_smeta_lenta">
+               
+                        
+                        <table class="table">
+                            <tr>
+                                <td style="width:10%;"></td>
+                                <td  style="width:40%;"></td>
+                                <td style="width:10%;"></td>
+                                <td style="width:10%;"></td>
+                                <td style="width:30%;"></td>
+    
+                            </tr>
+    
+                            <tr >
+                                <td style="width:20%;">(812)409-39-55</td>
+                                <td  style="width:40%;text-align: right;">  </td>
+                                <td style="width:10%;"></td>
+                                <td style="width:10%;"></td>
+                                <td style="width:20%;">УТВЕРЖДАЮ</td>
+                            </tr>
+    
+                           
+    
+                            <tr>
+                                <td style="width:10%;"></td>
+                                <td  style="width:40%;">  </td>
+                                <td style="width:10%;"></td>
+                                <td style="width:10%;"></td>
+                                <td style="width:30%;">Константинов В.Е </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;"></td>
+                                <td  style="width:40%;">  </td>
+                                <td style="width:10%;"></td>
+                                <td style="width:10%;"></td>
+                                <td style="width:30%;"><span id="ddsm"></span></td>
+                            </tr>                       
+    
+                            <tr>
+                                <th style="width:0%;"></th>
+                                <th colspan="5" style="width:100%; font-size:24px; text-align:center;">Бюджетная смета</th>
+                                <th  style="width:0%;">  </th>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: right;">Объект:</td>
+                                <td  style="width:40%;text-align: left;"> <span id="lkadsm"></span> км, за КАД. </td>
+                                <td style="width:10%;"></td>
+                                <td style="width:10%;"></td>
+                                <td style="width:30%;"></td>
+                            </tr>  
+    
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;  font-weight: bold;"> Тип фундамента:  </td>
+                               
+                                <td colspan="2" style="text-align: center;  font-weight: bold;"><span id="TupePlitasm"></span></td>
+                               
+                                <td style="width:30%;"></td>
+                            </tr> 
+    
+                            <tr>
+                                <td style="width:10%;"></td>
+                                <td  style="width:40%;text-align: right;">Площадь фундамента:  </td>
+                                <td style="width:10%;text-align: center;"><span id="Sfundvsm"></span></td>
+                                <td style="width:10%;text-align: center;">м2.</td>
+                                <td style="width:30%;"></td>
+                            </tr> 
+    
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;">Толщина плиты:  </td>
+                                <td style="width:10%;text-align: center;"><span id="thicknesssm"></span></td>
+                                <td style="width:10%;text-align: center;">м.</td>
+                                <td style="width:30%"></td>
+                            </tr> 
+    
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;">Периметр фундамента:  </td>
+                                <td style="width:10%;text-align: center;"><span id="Pfundvsm"></span></td>
+                                <td style="width:10%;text-align: center;">м.п.</td>
+                                <td style="width:30%"></td>
+                            </tr> 
+    
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;">Длина ленты/ребер:  </td>
+                                <td style="width:10%;text-align: center;"><span id="Lrebrasm"></span></td>
+                                <td style="width:10%;text-align: center;">м.п.</td>
+                                <td style="width:30%"></td>
+                            </tr> 
+    
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;">Толщина песчаной подушки:  </td>
+                                <td style="width:10%;text-align: center;"><span id="thicknesspesokvsm"></span></td>
+                                <td style="width:10%;text-align: center;">м.</td>
+                                <td style="width:30%"></td>
+                            </tr> 
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;">Толщина щебеночной подушки:  </td>
+                                <td style="width:10%;text-align: center;"><span id="thicknessshebnjsm"></span></td>
+                                <td style="width:10%;text-align: center;">м.</td>
+                                <td style="width:30%"></td>
+                            </tr> 
+    
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;">Глубина котлована:  </td>
+                                <td style="width:10%;text-align: center;"><span id="hkotlsm"></span></td>
+                                <td style="width:10%;text-align: center;">м.</td>
+                                <td style="width:30%"></td>
+                            </tr> 
+    
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;">Утепление под фундаментом:  </td>
+                                <td style="width:10%;text-align: center;"><span id="thicknessverytepsm"></span></td>
+                                <td style="width:10%;text-align: center;">м.</td>
+                                <td style="width:30%"></td>
+                            </tr> 
+    
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;">Канализационный стояк под фундаментом:  </td>
+                                <td style="width:10%;text-align: center;"><span id="kanalsm"></span></td>
+                                <td style="width:10%;text-align: center;">шт.</td>
+                                <td style="width:30%"></td>
+                            </tr> 
+                            <tr>
+                                <td style="width:10%"></td>
+                                <td  style="width:40%;text-align: right;">Ввод воды, электричества под фундаментом:  </td>
+                                <td style="width:10%;text-align: center;"><span id="vaterelsm"></span></td>
+                                <td style="width:10%;text-align: center;">шт.</td>
+                                <td style="width:30%"></td>
+                            </tr> 
+    
+                          <!-- =========================================================== -->
+    
+    
+    
+    
+                            <tr style="display:none"  >
+                                <th style="width:40%"></th>
+                                <th style="width:10%"> </th>
+                                <th  style="width:10%">  </th>
+                                <th  style="width:40%"> </th>
+    
+                            </tr>   
+    
+    
+                        </table>
+
+
+
+                        <table class="table" >
+
+                            <tr style="display:none"  >
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:30%;border-bottom: 1px solid #000000;"> </td>
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:20%;border-bottom: 1px solid #000000;"></td>
+    
+                            </tr>  
+
+
+
+                            <tr>
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:30%;border-bottom: 1px solid #000000;"> </td>
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:10%;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:20%;border-bottom: 1px solid #000000;"></td>
+                               
+    
+    
+                            </tr>
+                                                  
+    
+                            <tr style="display:none" >
+                                <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">номер</td>
+                                <td  style="width:30%;text-align: center;border-bottom: 1px solid #000000;">позиция</td>
+                                <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">ед. изм.</td>
+                                <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">кол-во</td>
+                                <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">цена</td>
+                                <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">наценка</td>
+                                <td style="width:20%;text-align: center;border-bottom: 1px solid #000000;">стоимость, руб.</td>
+                                
+                            </tr>
+                            </table>
+
+                            <table class="table" id="tablecalnew1">
+
+                            </table>     
+
+
+                            <table class="table"> 
+                                
+                                <tr>
+                                    <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">номер</td>
+                                    <td  style="width:30%;text-align: center;border-bottom: 1px solid #000000;">позиция </td>
+                                    <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">ед. изм.</td>
+                                    <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">кол-во</td>
+                                    <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">цена ед.</td>
+                                    <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;">наценка</td>
+                                    <td style="width:20%;text-align: center;border-bottom: 1px solid #000000;">стоимость, руб.</td>
+                                    
+                                </tr>
+                 
+                            <tr>
+                                <td style="width:10%;text-align: center;font-weight: bold;"><span id="NumberBl2sm"></span></td>
+                                <td  style="width:30%;text-align: left;font-weight: bold;">Подготовка котлована и основания</td>
+                                <td style="width:10%;text-align: center;font-weight: bold;">м2</td>
+                                <td style="width:10%;text-align: center;font-weight: bold;"><span id="SKotlovansm"></span></td>
+                                <td style="width:10%;text-align: center;font-weight: bold;"><span id="Zblock2smSebest"></span></td>
+                                <td style="width:10%;text-align: center;font-weight: bold;"><span id="Zblock2smSebestPr"></span></td>
+                                <td style="width:20%;text-align: center;font-weight: bold;"><span id="Zblock2sm"></span></td>
+                                <!-- <td style="width:15%;text-align: center;"></td> -->
+                            </tr>
+
+
+
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl21sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="PrivjzkaNamesm"></span> </td>
+                                <td style="width:10%;text-align: center;">смена</td>
+                                <td style="width:10%;text-align: center;">2</td>
+                                <td style="width:10%;text-align: center;"><span id="Privjzkasmisx"></span></td>
+                                <td style="width:10%;text-align: center;"><span id="Privjzkasmpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="Privjzkasm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl22sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZKotlovanNamesm"></span>  </td>
+                                <td style="width:10%;text-align: center;">м3</td>
+                                <td style="width:10%;text-align: center;"><span id="NKotlovansm"></span></td>
+                                <td style="width:10%;text-align: center;"><span id="ZKotlovansmisx"></span></td>  
+                                <td style="width:10%;text-align: center;"><span id="ZKotlovansmpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="ZKotlovansm"></span>  </td>
+                            </tr>
+                            
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl23sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZGeoTekstUNamesm"></span>  </td>
+                                <td style="width:10%;text-align: center;">м2</td>
+                                <td style="width:10%;text-align: center;"><span id="NGeoTekstUsm"></span></td>
+                                <td style="width:10%;text-align: center;"><span id="ZGeoTekstUsmisx"></span></td>  
+                                <td style="width:10%;text-align: center;"><span id="ZGeoTekstUsmpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="ZGeoTekstUsm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl24sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZGeoTekst200Namesm"></span>  </td>
+                                <td style="width:10%;text-align: center;">рулон</td>
+                                <td style="width:10%;text-align: center;"><span id="NGeoTekst200sm"></span></td>
+                                <td style="width:10%;text-align: center;"><span id="ZGeoTekst200smisx"></span></td>  
+                                <td style="width:10%;text-align: center;"><span id="ZGeoTekst200smpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="ZGeoTekst200sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl25sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZOtsup200Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">м3</td>
+                                <td style="width:10%;text-align: center;"><span id="NOtsup200sm"></span></td>
+                                <td style="width:10%;text-align: center;"><span id="ZOtsup200smisx"></span></td>  
+                                <td style="width:10%;text-align: center;"><span id="ZOtsup200smpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="ZOtsup200sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl26sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZekskovatorNamesm"></span> </td>
+                                <td style="width:10%;text-align: center;">м/с</td>
+                                <td style="width:10%;text-align: center;">1</span></td>
+                                <td style="width:10%;text-align: center;"><span id="Zekskovatorsmisx"></span></td>  
+                                <td style="width:10%;text-align: center;"><span id="Zekskovatorsmpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="Zekskovatorsm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl27sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZPesokNNamesm"></span> </td>
+                                <td style="width:10%;text-align: center;">м3</td>
+                                <td style="width:10%;text-align: center;"><span id="NPesokNsm"></span></span></td>
+                                <td style="width:10%;text-align: center;"><span id="ZPesokNsmisx"></span></td>  
+                                <td style="width:10%;text-align: center;"><span id="ZPesokNsmpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="ZPesokNsm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl28sm"></span></td>
+                                <td  style="width:30%;text-align: left;"> <span id="ZOtsupSh150Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">м3</td>
+                                <td style="width:10%;text-align: center;"><span id="NOtsupSh150sm"></span></span></td>
+                                <td style="width:10%;text-align: center;"><span id="ZOtsupSh150smisx"></span></td>  
+                                <td style="width:10%;text-align: center;"><span id="ZOtsupSh150smpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="ZOtsupSh150sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl29sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="Zekskovator29Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">м/с</td>
+                                <td style="width:10%;text-align: center;">1</td>
+                                <td style="width:10%;text-align: center;"><span id="Zekskovator29smisx"></span></td>  
+                                <td style="width:10%;text-align: center;"><span id="Zekskovator29smpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="Zekskovator29sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl210sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZSheb2040Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">м3/с</td>
+                                <td style="width:10%;text-align: center;"><span id="NSheb2040sm"></span></td>
+                                <td style="width:10%;text-align: center;"><span id="ZSheb2040smisx"></span></td>  
+                                <td style="width:10%;text-align: center;"><span id="ZSheb2040smpr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="ZSheb2040sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;font-weight: bold;"><span id="NumberBl3sm"></span></td>
+                                <td  style="width:30%;text-align: left;font-weight: bold;">Инженерная подготовка под плитой</td>
+                                <td style="width:10%;text-align: center;font-weight: bold;">компл.</td>
+                                <td style="width:10%;text-align: center;font-weight: bold;"><span id="Nblock3sm"></span></td>
+                                <td style="width:10%;text-align: center;font-weight: bold;"><span id="Zblock3smSebest"></span></td>
+                                <td style="width:10%;text-align: center;font-weight: bold;"><span id="Zblock3smSebestPr"></span></td>
+                                <td style="width:20%;text-align: center;font-weight: bold;"><span id="Zblock3sm"></span></td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl31sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZfanTrNamesm"></span> </td>
+                                <td style="width:10%;text-align: center;">компл.</td>
+                                <td style="width:10%;text-align: center;"><span id="NfanTrsm"></span></td>
+                                <td style="width:10%;text-align: center;"><span id="ZfanTrsmIsx"></span></td>
+                                <td style="width:10%;text-align: center;"><span id="ZfanTrsmPr"></span></td>
+                                <td style="width:20%;text-align: center;"> <span id="ZfanTrsm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl32sm"></span></td>
+                                <td  style="width:30%;text-align: left;"> <span id="ZfanTr110Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">шт.</td>
+                                <td style="width:10%;text-align: center;"><span id="NfanTr110sm"></span></td>
+                                <td style="width:10%;text-align: center;"> <span id="ZfanTr110smIsx"></span>  </td>
+                                <td style="width:10%;text-align: center;"> <span id="ZfanTr110smPr"></span>  </td>
+                                <td style="width:20%;text-align: center;"> <span id="ZfanTr110sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl33sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZOtbod110Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">шт.</td>
+                                <td style="width:10%;text-align: center;"><span id="NOtbod110sm"></span></td>
+                                <td style="width:10%;text-align: center;"> <span id="ZOtbod110smIsx"></span>  </td>
+                                <td style="width:10%;text-align: center;"> <span id="ZOtbod110smPr"></span>  </td>
+                                <td style="width:20%;text-align: center;"> <span id="ZOtbod110sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl34sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="Troyn110Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">шт.</td>
+                                <td style="width:10%;text-align: center;">1</td>
+                                <td style="width:30%;text-align: center;"> <span id="ZTroyn110smIsx"></span>  </td>
+                                <td style="width:30%;text-align: center;"> <span id="ZTroyn110smPr"></span>  </td>
+                                <td style="width:20%;text-align: center;"> <span id="Troyn110sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl35sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="Zaglyshrf110Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">шт.</td>
+                                <td style="width:10%;text-align: center;"><span id="Naglyshrf110sm"></span></td>
+                                <td style="width:10%;text-align: center;"> <span id="Zaglyshrf110smIsx"></span>  </td>
+                                <td style="width:10%;text-align: center;"> <span id="Zaglyshrf110smPr"></span>  </td>
+                                <td style="width:20%;text-align: center;"> <span id="Zaglyshrf110sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl36sm"></span></td>
+                                <td  style="width:40%;text-align: left;"><span id="ZTeplo144Namesm"></span>  </td>
+                                <td style="width:10%;text-align: center;">шт.</td>
+                                <td style="width:10%;text-align: center;"><span id="NTeplo144sm"></span></td>
+                                <td style="width:30%;text-align: center;"> <span id="ZTeplo144smIsx"></span>  </td>
+                                <td style="width:30%;text-align: center;"> <span id="ZTeplo144smPr"></span>  </td>
+                                <td style="width:30%;text-align: center;"> <span id="ZTeplo144sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl37sm"></span></td>
+                                <td  style="width:30%;text-align:left;"><span id="ZGilsaNamesm"></span> </td>
+                                <td style="width:10%;text-align: center;">шт.</td>
+                                <td style="width:10%;text-align: center;"><span id="NGilsasm"></span></td>
+                                <td style="width:10%;text-align: center;"> <span id="ZGilsasmIsx"></span>  </td>
+                                <td style="width:1%;text-align: center;"> <span id="ZGilsasmPr"></span>  </td>
+                                <td style="width:20%;text-align: center;"> <span id="ZGilsasm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl38sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZTruba50Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">пог.м.</td>
+                                <td style="width:10%;text-align: center;"><span id="NTruba50sm"></span></td>
+                                <td style="width:10%;text-align: center;"> <span id="ZTruba50smIsx"></span>  </td>
+                                <td style="width:10%;text-align: center;"> <span id="ZTruba50smPr"></span>  </td>
+                                <td style="width:20%;text-align: center;"> <span id="ZTruba50sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl39sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZTrubaGof110Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">пог.м.</td>
+                                <td style="width:10%;text-align: center;"><span id="NTrubaGof110sm"></span></td>
+                                <td style="width:10%;text-align: center;"> <span id="ZTrubaGof110smIsx"></span>  </td>
+                                <td style="width:10%;text-align: center;"> <span id="ZTrubaGof110smPr"></span>  </td>
+                                <td style="width:20%;text-align: center;"> <span id="ZTrubaGof110sm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"><span id="NumberBl310sm"></span></td>
+                                <td  style="width:30%;text-align: left;"><span id="ZDostavkaBl3Namesm"></span> </td>
+                                <td style="width:10%;text-align: center;">рейс</td>
+                                <td style="width:10%;text-align: center;">1</td>
+                                <td style="width:10%;text-align: center;"> <span id="ZDostavkaBl3smIsx"></span>  </td>
+                                <td style="width:10%;text-align: center;"> <span id="ZDostavkaBl3smPr"></span>  </td>
+                                <td style="width:20%;text-align: center;"> <span id="ZDostavkaBl3sm"></span>  </td>
+                            </tr>
+
+                            <table class="table" id="tablecalnew2">
+                             </table>   
+
+
+                            <table class="table" id="tablecalnew3">
+                              
+                            </table>   
+
+                            <table class="table">
+       
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td style="width:10%;text-align: center;"> </td>
+                                <td style="width:30%;text-align: center;">  </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: left;font-weight: bold;border-top: 2px solid #000000;">Итого по этапу</td>
+                              
+                                <td style="width:30%;text-align: center;font-weight: bold;border-top: 2px solid #000000;"> <span id="ZItog1sm"></span> </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: center;">В том числе:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;">  </td>
+                            </tr>
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: right;">Работы:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;"> <span id="ZItogRabotasm"></span> </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: right;">Материалы:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;"><span id="ZItogMateriaksm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: right;">Механизмы:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;"><span id="ZItogMehanizmsm"></span>  </td>
+                            </tr>
+    
+                            
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: right;border-bottom: 2px solid #000000;">Доставка:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;border-bottom: 2px solid #000000;"><span id="ZItogDostavkasm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: right;font-weight: bold;">накладные расходы:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;font-weight: bold;"><span id="ZNakladsm"></span>  </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: left;font-weight: bold;"></td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;font-weight: bold;"> </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: left;font-weight: bold;">Всего по смете:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;font-weight: bold;"><span id="ZItogAllsm"></span>  </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: left;font-weight: bold;">Себестоимость (стоимость без наценки) руб:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;font-weight: bold;"><span id="ZItogAllSebestsm"></span>  </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: left;font-weight: bold;">Наценка руб:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;font-weight: bold;"><span id="ZItogNazenkasm"></span>  </td>
+                            </tr>
+                              
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td colspan="2"style="width:10%;text-align: left;font-weight: bold;">Наценка %:</td>
+                                <!-- <td style="width:10%;text-align: center;"> </td> -->
+                                <td style="width:30%;text-align: center;font-weight: bold;"><span id="ZItogNazenkaPrsm"></span>  </td>
+                            </tr>
+
+    
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td style="width:10%;text-align: left;font-weight: bold;"></td>
+                                 <td style="width:10%;text-align: center;"> </td> 
+                                <td style="width:30%;text-align: center;font-weight: bold;"> </td>
+                            </tr>
+                            <tr>
+                                <td style="width:10%;text-align: left;border-bottom: 1px solid #000000;">Подрядчик</td>
+                                <td  style="width:40%;text-align: center;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:10%;text-align: left;border-bottom: 1px solid #000000;"></td>
+                                 <td style="width:20%;text-align: center;border-bottom: 1px solid #000000;">"К-Строй" </td>
+                                <td style="width:20%;text-align: center;font-weight: bold;"> </td>
+                            </tr>
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;vertical-align: top;font-size: 10px;">  (подпись)</td>
+                                <td style="width:20%;text-align: left;vertical-align: top;font-size: 10px;">(расшифровка подписи)</td>
+                                 <td style="width:10%;text-align: center;"> </td> 
+                                <td style="width:20%;text-align: center;font-weight: bold;"> </td>
+                            </tr>
+    
+                            <tr>
+                                <td style="width:10%;text-align: left;border-bottom: 1px solid #000000;">Заказчик</td>
+                                <td  style="width:40%;text-align: center;border-bottom: 1px solid #000000;"></td>
+                                <td style="width:10%;text-align: left;border-bottom: 1px solid #000000;"></td>
+                                 <td style="width:10%;text-align: center;border-bottom: 1px solid #000000;"><span id="namesm"></span> </td>
+                                <td style="width:30%;text-align: center;font-weight: bold;"> </td>
+                            </tr>
+                            <tr>
+                                <td style="width:10%;text-align: center;"></td>
+                                <td  style="width:40%;text-align: center;vertical-align: top;font-size: 10px;">  (подпись)</td>
+                                <td style="width:20%;text-align: left;vertical-align: top;font-size: 10px;">(расшифровка подписи)</td>
+                                 <td style="width:10%;text-align: center;"> </td> 
+                                <td style="width:20%;text-align: center;font-weight: bold;"> </td>
+                            </tr>
+                            <tr>
+                                <td style="width:10%;text-align: left;"></td>
+                                <td  style="width:40%;text-align: center;"></td>
+                                <td style="width:10%;text-align: left;"></td>
+                                 <td style="width:10%;text-align: center;"><span id="phonesm"></span> </td>
+                                <td style="width:30%;text-align: center;font-weight: bold;"> </td>
+                            </tr>
+    
+    
+    
+    
+                        </table>         
+   
+            </div>
+    
+            <div class="printpdf">
+                <div class="printpdflock">
+                    <input class="buttonprn" type="button" value="Распечатать" onclick="PrintElem('#zakas_smeta_lenta')" />
+    
+                    <input class="buttonprn" id="wordp"  type="button" value="Word"  />
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+               <div class="button_block2">
+                   <button class="but_block3" id="but_block5_1"> Назад  </button>
+
+
+               </div>
+
+
+
+               <div class="line2_zakas"></div>
+
+           </div>
+
+      
+
+
+			   
+   </div>
+
+
+       <script src="js/jquery.min.js"></script>
+       <script src="js/calculator_admin.js"></script>
+       <script src="js/data.js"></script>
+       <script src="js/skriptprint.js"></script>
+       <script src="js/ajax.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+
+<!doctype html>
+<html lang='en' xmlns="http://www.w3.org/1999/html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset='utf-8'>
+  <title>Смета Экопарковки</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
+
+
+    <script src='js/jquery-1.7.1.min.js'></script>
+  <script src='js/pdfmake.min.js'></script>
+  <script src='js/vfs_fonts.js'></script>
+    <script src='js/data.js'></script>
+    <script src='js/scriptsCalc.js'></script>
+    <!-- <script src="js//html2canvas.js"></script> -->
+    <!-- <script src="js/jspdf.min.js"></script> -->
+  <!--<script src='js/script.js'></script>-->
+</head>
+<body>
+
+<div class="content">
+
+    <div id="myDiv" class="myDiv">
+      
+     <div id="myDivLeft" class="myDivleft">
+        <div id="profilsel" class="profil">
+            <h3>Выберите тип расчета </h3>
+            <select id="profilselect">
+                <option value="1" selected>По длинне и ширине парковки</option>
+                <option value="2">По площади парковки</option>
+            </select>
+        </div>    
+        <div id="profil" class="profil">
+            <h3>Введите размеры парковки в метрах</h3>
+            <div class="line1"></div>
+           <p class="linepark">Длина парковки <input type="text" id="Lpark" value="1">   м.</p>
+           <p class="linepark">Ширина парковки <input type="text" id="Dpark" value="1">   м.</p>
+        </div>   
+        
+        <div id="profil2" class="profil2">
+            <h3>Введите площадь парковки в метрах</h3>
+            <div class="line1"></div>
+           <p class="linepark">Площадь парковки <input type="text" id="Spark" value="1">   м.</p>           
+        </div>    
+
+        <div class="itog">
+               <button type="button" id="smemtaadd" class="smemtaadd">Сформировать смету</button>                
+        </div>
+      </div>
+
+      <div id="myDivRight" class="myDivRight">
+        <div class="SmImgBl">
+            <img class="SmImg" src="img/prime.jpeg" alt="pr">
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="line1"></div>  
+
+      <div class="block_table_meta" id="block_table_meta">
+        <table class="table"  style="border-collapse:collapse;">
+
+
+
+            <tr>
+                <th colspan="6"> <img clas= "imgtable" src="img/logo3.JPG"></th> 	
+               
+            </tr>
+            
+            <tr>
+                <th colspan="6" style="text-align:center; font-size: 16px;font-weight: bold;">Работы </th> 	
+               
+            </tr>
+
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">1</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Разработка котлована до 35 см  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м² </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="kotlovans"></span> </th>
+                <th   style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="kotlovanPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="kotlovanItogsm"></span> &#8381;  </th>              
+            </tr>
+            
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">2</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Уплотнение грунта виброплитой  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м² </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGrunt"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGruntPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGruntItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">3</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Укрытие геотекстилем  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м² </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="GeoTekstil1"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="GeoTekstil1Prsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="GeoTekstil1Itogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">4</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Распределение щебня 10 см  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м² </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Shebenka1"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Shebenka1Prsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Shebenka1Itogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">5</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Уплотнение виброплитой  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м² </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGrunt2"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGruntPr2sm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGruntItog2sm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">6</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Установка садового барюра 20*80*1000  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м.п </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="SadBarud"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="SadBarudPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="SadBarudItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">7</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Укрытие геотекстилем  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м²</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="GeoTekstil2"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="GeoTekstil2Prsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="GeoTekstil2Itogsm"></span> &#8381;  </th>            
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">8</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Распределение песка 10 см  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м²</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Pesok10"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Pesok10Prsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Pesok10Itogsm"></span> &#8381;  </th>            
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">9</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Уплотнение виброплитой  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м²</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGrunt3"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGruntPr3sm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGruntItog3sm"></span> &#8381;  </th>           
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">10</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Укладка экопарковки </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м²</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="EkoPark"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="EkoParkPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="EkoParktogsm"></span> &#8381;  </th>           
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">11</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Уплотнение виброплитой  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м²</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGrunt4"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGruntPr4sm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="YplGruntItog4sm"></span> &#8381;  </th>      
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">12</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Распределение привозного грунта  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м²</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="RaspGrunt1"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="RaspGrunt1Pr1sm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="RaspGrunt1Itog1sm"></span> &#8381;  </th>      
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">13</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Распределение грунта по участку до 15 метров  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м²</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="RaspGrunt2"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="RaspGrunt1Pr2sm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="RaspGrunt1Itog2sm"></span> &#8381;  </th>      
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">14</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Посев семян газона </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м²</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Posev"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="PosevPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="PosevItogsm"></span> &#8381;  </th>      
+            </tr>
+
+            <tr>
+                <th colspan="5" style="width:5%;text-align:right; font-size: 16px;font-weight: bold;">Итого работы:</th>
+              
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: bold;background-color: darkcyan;" ><span id="ItogArb1sm"></span> &#8381;  </th>      
+            </tr>
+            <tr>
+                <th colspan="6" style="text-align:center; font-size: 16px;font-weight: bold;">Материалы </th> 	
+               
+            </tr>
+
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">1</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Песок  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м³ </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Pesoksm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="PesokPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="PesokItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">2</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Цемент м500  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >мешки </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Zement500sm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Zement500Prsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Zement500Itogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">3</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Грунт привозной 3х компонентный  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м³ </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Grunt3ksm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Grunt3kPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Grunt3kItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">4</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Щебень гравийный фр.5-20  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м³ </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="ShebenkaGrsm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="ShebenkaGrPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="ShebenkaGrItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">5</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Геотекстиль 100м2  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м² </th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="GeoTekstil100sm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="GeoTekstil100Prsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="GeoTekstil100Itogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">6</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Борт садовый 200х80х1000  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >мп</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Bortsm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="BortPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="BortItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">7</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Бетонная решетка экопарковки  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >м²</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="BetonReshsm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="BetonReshPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="BetonReshItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">8</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Семена газона  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >кг</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Semenasm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="SemenaPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="SemenaItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">9</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Доставка манипулятором  </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >рейс</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="Manipylsm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="ManipylPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="ManipylItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th  style="width:5%;text-align:center; font-size: 16px;font-weight: 100;">10</th>
+                <th  style="width:40%;text-align:left; font-size: 16px;font-weight: 100;">Доставка сыпучих материалов   </th>
+                <th  style="width:5%;text-align:center; font-size: 16px; font-weight: bold;" >рейс</th>
+                <th  style="width:10%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="DostavkaMatsm"></span> </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="DostavkaMatPrsm"></span> &#8381; </th>
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: 100;" ><span id="DostavkaMatItogsm"></span> &#8381;  </th>              
+            </tr>
+
+            <tr>
+                <th colspan="5" style="width:5%;text-align:right; font-size: 16px;font-weight: bold;">Итого материалы:</th>
+              
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: bold;background-color: darkcyan;" ><span id="ItogMaterialsm"></span> &#8381;  </th>      
+            </tr>
+
+            <tr>
+                <th colspan="5" style="width:5%;text-align:right; font-size: 16px;font-weight: bold;">Итого :</th>
+              
+                <th  style="width:20%;text-align:center; font-size: 16px;font-weight: bold;background-color: aquamarine;" ><span id="ItogSmetasm"></span> &#8381;  </th>      
+            </tr>
+
+
+
+
+           
+        </table>
+
+
+  <!-- <a href="#" onclick="getPDF2()">Скачать PDF как рисунок</a> -->
+  <a class="pdf" id="pdf" href="#" onclick="getPDF()">Скачать PDF</a>
+
+      </div>
+
+     
+
+
+    </div>
+
+    
+
+   
+
+
+<script>
+    function getPDF2() {
+      doCanvas();
+    }
+    
+    function doCanvas() {
+    //    $("#newDiv").attr("hidden", false);
+      html2canvas(document.querySelector("#block_table_meta")).then(canvas => {
+        doPDF(canvas);
+      });
+    
+    }
+    
+    function doPDF(canvas) {
+      var doc = new jsPDF({
+          unit:'px',
+          format: 'A4',
+          pageMargins: [0, 0]
+    
+      });
+      doc.addImage(canvas.toDataURL(), 'PNG', 10,1);
+      doc.save('test.pdf');
+    //    $("#newDiv").attr("hidden", true);
+    
+    }
+    
+    </script>
+
+</div>
+
+
+
+
+</body>
+</html>

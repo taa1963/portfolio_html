@@ -1,0 +1,216 @@
+
+body{
+    margin: 0;
+	padding:0;
+    width: 100%;
+    height: auto;
+}
+
+h3{
+    display: block;
+    font-family: "ArialBold";
+    /*//font-weight: bold;*/
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.content{
+    display: block;
+    width: 90%;
+    /*width: 95%;*/
+    margin: 0 auto;
+    border: 1px solid #000000;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+
+.myDiv{
+    display: block;
+    margin: 10px;
+    margin: 0 auto;
+    width: 90%;
+    /*text-align: right;*/
+}
+
+.myDivleft{
+    display: block;
+  
+    width: 50%;
+    float: left;
+
+    /*text-align: right;*/
+
+}
+.myDivRight{
+    display: block;
+    
+    width: 50%;
+    float: right;    /*text-align: right;*/
+
+}
+.SmImgBl{
+    display: block;
+}
+
+.SmImg{
+    display: block;
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+
+
+
+.profil{
+    display: block;
+}
+.profil2{
+    display: none;
+}
+
+
+.typeprofil{
+    display: block;
+    font-family: "ArialBold";
+    /*//font-weight: bold;*/
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+    width: 40%;
+}
+
+
+.block_table_meta{
+    display: none;
+}
+
+
+
+.table{
+    border: 1px solid #000000;
+    /*max-width: 750px;*/
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#table_uv1ipr{
+    display: table;
+    border: 1px solid #000000;
+    max-width: 710px;
+    width: 90%;
+}
+
+.table td{
+    font-family: "ArialBold";
+    font-size: 0.8rem;
+    color:#000000;
+}
+
+
+.line{
+    display: block;
+    width: 100%;
+    /*max-width: 750px;*/
+    /*width: auto;*/
+    height: 2px;
+    background-color: #000000;
+}
+
+.line1{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    margin-bottom: 10px;
+}
+.itog{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.smemtaadd{   
+        display: block;
+        margin: 0 auto;
+        background-color: #005697;
+        font-family: "ArialBold";
+        font-size: 16px;
+        color: #ffffff;
+        text-align: center;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+}
+
+.table th{
+    border: 1px solid #000000;
+
+}
+.mgtable{
+    display: block;
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+#profilselect{
+    display: block;
+    margin: 0 auto;
+}
+.linepark{
+    display: block;
+    /* width: 50%; */
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+
+@media only screen  and (max-width: 1024px) {
+
+    .content{
+        display: block;
+       width: 95%;
+        margin: 0 auto;
+        border: 1px solid #000000;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px;
+        color: black;
+        
+        
+    }
+
+}
+
+
+
+@media only screen  and (max-width: 960px) {
+
+}
+
+@media only screen  and (max-width: 788px){
+
+
+
+
+
+}
+
+@media only screen  and (max-width: 480px) {
+
+
+    }
+
+  @media only screen  and (max-width: 281px) {
+
+  }
+

@@ -25,7 +25,7 @@ $(document).ready(function() {
    block2[0].remove();
    }
     typefundfunc();
-    $('#land18').addClass('closeelm');
+        $('#land18').addClass('closeelm');
         $('#land19').addClass('closeelm');
         $('#landline18').addClass('closeelm');
         $('#landline19').addClass('closeelm');
@@ -315,29 +315,6 @@ $(document).ready(function() {
         document.getElementById('ZDostavkaTrub2NameAdm').value=ZDostavkaTrub2Name;
         document.getElementById('ZDostavkaTrub2Adm').value=ZDostavkaTrub2;
         document.getElementById('ZDostavkaTrub2prAdm').value=ZDostavkaTrub2pr;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
 
     });
 

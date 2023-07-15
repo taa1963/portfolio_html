@@ -9,7 +9,7 @@ if (
     header("Content-Type: application/html");
 
 // Берём новую переменную и пишем в неё имя файла
-    $filename = 'data.js';
+    $filename = 'data2.js';
     $fullFilePath = __DIR__ . DIRECTORY_SEPARATOR . $filename;
 
 // Выводим на экран то куда сохраняем

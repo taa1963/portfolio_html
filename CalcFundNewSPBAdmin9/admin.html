@@ -97,26 +97,361 @@
                 <table class="table_admin">
                     <tbody>
                         <tr>
-                          <th style="width:50%;text-align: left;border: 1px solid #000000;">Наименование позиции</th>
-                          <th style="width:25%;text-align: left;border: 1px solid #000000;">Стоимость руб.</th>
-                          <th style="width:25%;text-align: left;border: 1px solid #000000;">Наценка %</th>
+                          <th style="width:70%;text-align: left;border: 1px solid #000000;">Наименование позиции</th>
+                          <th style="width:15%;text-align: left;border: 1px solid #000000;">Стоимость руб.</th>
+                          <th style="width:15%;text-align: left;border: 1px solid #000000;">Наценка %</th>
                         </tr>
-                        <tr>
+
+                        <!-- <tr>
                           <td colspan="3" style="width:50%;text-align: center;font-weight: bold;border: 1px solid #000000;">Бытовка металлическая</td>
-                          <!-- <td style="width:25%;text-align: left;font-weight: bold;border: 1px solid #000000;"></td>
-                          <td style="width:25%;text-align: left;font-weight: bold;border: 1px solid #000000;"></td> -->
-                        </tr>
+                           <td style="width:25%;text-align: left;font-weight: bold;border: 1px solid #000000;"></td>
+                          <td style="width:25%;text-align: left;font-weight: bold;border: 1px solid #000000;"></td> 
+                        </tr> -->
+
                         <tr>
-                          <td style="width:50%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZbutovkaNameAdm"></textarea></td>
-                          <td style="width:25%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZbutovkaAdm"></td>
-                          <td style="width:25%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZbutovkaPrAdm"></td>
-                         
+                          <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZbutovkaNameAdm"></textarea></td>
+                          <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZbutovkaAdm"></td>
+                          <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZbutovkaPrAdm"></td>                         
                         </tr>
+
                         <tr>
-                          <td>Lamborghini</td>
-                          <td>Smart</td>
-                          <td>Rolls-Royce</td>
-                        </tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZbutovkaManipNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZbutovkaManipadm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZbutovkaManipprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="BioTyalNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZBioTyalAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZBioTyalprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="DostavkaBioTyalNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="DostavkaBioTyalAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="DostavkaBioTyalprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="PrivjzkaNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZPrivjzkaAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZPrivjzkaprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZKotlovanNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZKotlovanAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZKotlovanprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZGeoTekstUNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZGeoTekstUAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZGeoTekstUprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZGeoTekst200NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZGeoTekst200Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZGeoTekst200prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZOtsup200NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZOtsup200Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZOtsup200prAdm"></td>                         
+                          </tr>
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZekskovatorNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZekskovatorAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZekskovatorprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZPesokNNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZPesokNAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZPesokNprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZOtsupSh150NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZOtsupSh150Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZOtsupSh150prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="Zekskovator29NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="Zekskovator29Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="Zekskovator29prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZSheb2040NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZSheb2040Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZSheb2040prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZfanTrNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZfanTrAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZfanTrprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZfanTr110NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZfanTr110Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZfanTr110prAdm"></td>                         
+                          </tr>
+
+                          
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZOtbod110NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZOtbod110Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZOtbod110prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="Troyn110NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="Troyn110Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="Troyn110prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="Zaglyshrf110NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="Zaglyshrf110Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="Zaglyshrf110prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZTeplo144NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZTeplo144Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZTeplo144prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZGilsaNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZGilsaAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZGilsaprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZTruba50NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZTruba50Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZTruba50prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZTrubaGof110NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZTrubaGof110Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZTrubaGof110prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZDostavkaBl3NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZDostavkaBl3Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZDostavkaBl3prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZOpalybkaNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZOpalybkaAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZOpalybkaprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZPiloMatNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZPiloMatAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZPiloMatprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZYtepPlNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZYtepPlAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZYtepPlprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZGenoPolistirolNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZGenoPolistirolAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZGenoPolistirolprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZYteplTorzNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZYteplTorzAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZYteplTorzprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZGenoPolistirol2NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZGenoPolistirol2Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZGenoPolistirol2prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZDubekTeploNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZDubekTeploAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZDubekTeploprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZKleyPolisNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZKleyPolisAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZKleyPolisprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZGidroFundNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZGidroFundAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZGidroFundprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZMembramaNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZMembramaAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZMembramaprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZVjzkaD12NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZVjzkaD12Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZVjzkaD12prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZArmatura65NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZArmatura65Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZArmatura65prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZKrepegNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZKrepegAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZKrepegprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZBetonFundNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZBetonFundAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZBetonFundprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZBetonM400NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZBetonM400Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZBetonM400prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZMikserNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZMikserAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZMikserprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZNasosNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZNasosAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZNasosprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZDostavkaRachodNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZDostavkaRachodAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZDostavkaRachodprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZDostavkaPenoplNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZDostavkaPenoplAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZDostavkaPenoplprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZDostavkaPilomatNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZDostavkaPilomatAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZDostavkaPilomatprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZUhodFundNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZUhodFundAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZUhodFundprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZDostavkaArmNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZDostavkaArmAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZDostavkaArmprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZLivenNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZLivenAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZLivenprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZDorabTrNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZDorabTrAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZDorabTrprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZUkladkaGeoNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZUkladkaGeoAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZUkladkaGeoprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZGeo150NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZGeo150Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZGeo150prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZUkladkaDrenagTrNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZUkladkaDrenagTrAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZUkladkaDrenagTrprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZDrenagTr110NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZDrenagTr110Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZDrenagTr110prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZMontagKolNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZMontagKolAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZMontagKolprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZKolodezNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZKolodezAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZKolodezprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZShebObratNameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZShebObratAdm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZShebObratprAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZShebObrat2NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZShebObrat2Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZShebObrat2prAdm"></td>                         
+                          </tr>
+
+                          <tr>
+                            <td style="width:70%;text-align: left;border: 1px solid #000000;"><textarea " class="NanePoz" id="ZDostavkaTrub2NameAdm"></textarea></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="ZenaPoz" id="ZDostavkaTrub2Adm"></td>
+                            <td style="width:15%;text-align: left;border: 1px solid #000000;"> <input type="text" class="PrPoz" id="ZDostavkaTrub2prAdm"></td>                         
+                          </tr>
+
+                       
                       </tbody>
                 </table>
               
@@ -1048,7 +1383,10 @@
 
        <script src="js/jquery.min.js"></script>
        <script src="js/calculator_admin.js"></script>
-       <script src="js/data.js"></script>
+   <script>document.write('<script src="data.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
+
+
+       <!--<script src="data.js"></script>-->
        <script src="js/skriptprint.js"></script>
        <script src="js/ajax.js"></script>
 

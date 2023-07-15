@@ -92,6 +92,249 @@ $(document).ready(function() {
         document.getElementById('ZbutovkaAdm').value=Zbutovka;
         document.getElementById('ZbutovkaPrAdm').value=Zbutovkapr;
 
+        document.getElementById('ZbutovkaManipNameAdm').value=ZbutovkaManipName;
+        document.getElementById('ZbutovkaManipadm').value=ZbutovkaManip;
+        document.getElementById('ZbutovkaManipprAdm').value=ZbutovkaManippr;
+
+        document.getElementById('BioTyalNameAdm').value=BioTyalName;
+        document.getElementById('ZBioTyalAdm').value=ZBioTyal;
+        document.getElementById('ZBioTyalprAdm').value=ZBioTyalpr;
+           
+        document.getElementById('DostavkaBioTyalNameAdm').value=DostavkaBioTyalName;
+        document.getElementById('DostavkaBioTyalAdm').value=DostavkaBioTyal;
+        document.getElementById('DostavkaBioTyalprAdm').value=DostavkaBioTyalpr;
+
+        document.getElementById('PrivjzkaNameAdm').value=PrivjzkaName;
+        document.getElementById('ZPrivjzkaAdm').value=ZPrivjzka;
+        document.getElementById('ZPrivjzkaprAdm').value=ZPrivjzkapr;
+
+        document.getElementById('ZKotlovanNameAdm').value=ZKotlovanName;
+        document.getElementById('ZKotlovanAdm').value=ZKotlovan;
+        document.getElementById('ZKotlovanprAdm').value=ZKotlovanpr;
+
+        document.getElementById('ZGeoTekstUNameAdm').value=ZGeoTekstUName;
+        document.getElementById('ZGeoTekstUAdm').value=ZGeoTekstU;
+        document.getElementById('ZGeoTekstUprAdm').value=ZGeoTekstUpr;
+
+        document.getElementById('ZGeoTekst200NameAdm').value=ZGeoTekst200Name;
+        document.getElementById('ZGeoTekst200Adm').value=ZGeoTekst200;
+        document.getElementById('ZGeoTekst200prAdm').value=ZGeoTekst200pr;
+
+        document.getElementById('ZOtsup200NameAdm').value=ZOtsup200Name;
+        document.getElementById('ZOtsup200Adm').value=ZOtsup200;
+        document.getElementById('ZOtsup200prAdm').value=ZOtsup200pr;
+
+        document.getElementById('ZekskovatorNameAdm').value=ZekskovatorName;
+        document.getElementById('ZekskovatorAdm').value=Zekskovator;
+        document.getElementById('ZekskovatorprAdm').value=Zekskovatorpr;
+
+        document.getElementById('ZPesokNNameAdm').value=ZPesokNName;
+        document.getElementById('ZPesokNAdm').value=ZPesokN;
+        document.getElementById('ZPesokNprAdm').value=ZPesokNpr;
+
+        document.getElementById('ZOtsupSh150NameAdm').value=ZOtsupSh150Name;
+        document.getElementById('ZOtsupSh150Adm').value=ZOtsupSh150;
+        document.getElementById('ZOtsupSh150prAdm').value=ZOtsupSh150pr;
+
+        document.getElementById('Zekskovator29NameAdm').value=Zekskovator29Name;
+        document.getElementById('Zekskovator29Adm').value=Zekskovator29;
+        document.getElementById('Zekskovator29prAdm').value=Zekskovator29pr;
+
+        document.getElementById('ZSheb2040NameAdm').value=ZSheb2040Name;
+        document.getElementById('ZSheb2040Adm').value=ZSheb2040;
+        document.getElementById('ZSheb2040prAdm').value=ZSheb2040pr;
+
+        document.getElementById('ZfanTrNameAdm').value=ZfanTrName;
+        document.getElementById('ZfanTrAdm').value=ZfanTr;
+        document.getElementById('ZfanTrprAdm').value=ZfanTrpr;
+
+        document.getElementById('ZfanTr110NameAdm').value=ZfanTr110Name;
+        document.getElementById('ZfanTr110Adm').value=ZfanTr;
+        document.getElementById('ZfanTr110prAdm').value=ZfanTr110pr;
+
+        document.getElementById('ZOtbod110NameAdm').value=ZOtbod110Name;
+        document.getElementById('ZOtbod110Adm').value=ZOtbod110;
+        document.getElementById('ZOtbod110prAdm').value=ZOtbod110pr;
+
+        document.getElementById('Troyn110NameAdm').value=Troyn110Name;
+        document.getElementById('Troyn110Adm').value=Troyn110;
+        document.getElementById('Troyn110prAdm').value=Troyn110pr;
+
+        document.getElementById('Zaglyshrf110NameAdm').value=Zaglyshrf110Name;
+        document.getElementById('Zaglyshrf110Adm').value=Zaglyshrf110;
+        document.getElementById('Zaglyshrf110prAdm').value=Zaglyshrf110pr;
+
+        document.getElementById('ZTeplo144NameAdm').value=ZTeplo144Name;
+        document.getElementById('ZTeplo144Adm').value=ZTeplo144;
+        document.getElementById('ZTeplo144prAdm').value=ZTeplo144pr;
+
+        document.getElementById('ZGilsaNameAdm').value=ZGilsaName;
+        document.getElementById('ZGilsaAdm').value=ZGilsa;
+        document.getElementById('ZGilsaprAdm').value=ZGilsapr;
+
+        document.getElementById('ZTruba50NameAdm').value=ZTruba50Name;
+        document.getElementById('ZTruba50Adm').value=ZTruba50;
+        document.getElementById('ZTruba50prAdm').value=ZTruba50pr;
+
+        document.getElementById('ZTrubaGof110NameAdm').value=ZTrubaGof110Name;
+        document.getElementById('ZTrubaGof110Adm').value=ZTrubaGof110;
+        document.getElementById('ZTrubaGof110prAdm').value=ZTrubaGof110pr;
+
+        document.getElementById('ZDostavkaBl3NameAdm').value=ZDostavkaBl3Name;
+        document.getElementById('ZDostavkaBl3Adm').value=ZDostavkaBl3;
+        document.getElementById('ZDostavkaBl3prAdm').value=ZDostavkaBl3pr;
+
+        document.getElementById('ZOpalybkaNameAdm').value=ZOpalybkaName;
+        document.getElementById('ZOpalybkaAdm').value=ZOpalybka;
+        document.getElementById('ZOpalybkaprAdm').value=ZOpalybkapr;
+
+        document.getElementById('ZPiloMatNameAdm').value=ZPiloMatName;
+        document.getElementById('ZPiloMatAdm').value=ZPiloMat;
+        document.getElementById('ZPiloMatprAdm').value=ZPiloMatpr;
+
+        document.getElementById('ZYtepPlNameAdm').value=ZYtepPlName;
+        document.getElementById('ZYtepPlAdm').value=ZYtepPl;
+        document.getElementById('ZYtepPlprAdm').value=ZYtepPlpr;
+
+        document.getElementById('ZGenoPolistirolNameAdm').value=ZGenoPolistirolName;
+        document.getElementById('ZGenoPolistirolAdm').value=ZGenoPolistirol;
+        document.getElementById('ZGenoPolistirolprAdm').value=ZGenoPolistirolpr;
+
+        document.getElementById('ZYteplTorzNameAdm').value=ZYteplTorzName;
+        document.getElementById('ZYteplTorzAdm').value=ZYteplTorz;
+        document.getElementById('ZYteplTorzprAdm').value=ZYteplTorzpr;
+
+        document.getElementById('ZGenoPolistirol2NameAdm').value=ZGenoPolistirol2Name;
+        document.getElementById('ZGenoPolistirol2Adm').value=ZGenoPolistirol2;
+        document.getElementById('ZGenoPolistirol2prAdm').value=ZGenoPolistirol2pr;
+
+        document.getElementById('ZDubekTeploNameAdm').value=ZDubekTeplosmName;
+        document.getElementById('ZDubekTeploAdm').value=ZDubekTeplo;
+        document.getElementById('ZDubekTeploprAdm').value=ZDubekTeplopr;
+
+        document.getElementById('ZKleyPolisNameAdm').value=ZKleyPolisName;
+        document.getElementById('ZKleyPolisAdm').value=ZKleyPolis;
+        document.getElementById('ZKleyPolisprAdm').value=ZKleyPolispr;
+
+        document.getElementById('ZGidroFundNameAdm').value=ZGidroFundName;
+        document.getElementById('ZGidroFundAdm').value=ZGidroFund;
+        document.getElementById('ZGidroFundprAdm').value=ZGidroFundpr;
+
+        document.getElementById('ZMembramaNameAdm').value=ZMembramaName;
+        document.getElementById('ZMembramaAdm').value=ZMembrama;
+        document.getElementById('ZMembramaprAdm').value=ZMembramapr;
+
+        document.getElementById('ZVjzkaD12NameAdm').value=ZVjzkaD12Name;
+        document.getElementById('ZVjzkaD12Adm').value=ZVjzkaD12;
+        document.getElementById('ZVjzkaD12prAdm').value=ZVjzkaD12pr;
+
+        document.getElementById('ZArmatura65NameAdm').value=ZArmatura65Name;
+        document.getElementById('ZArmatura65Adm').value=ZArmatura65;
+        document.getElementById('ZArmatura65prAdm').value=ZArmatura65pr;
+
+        document.getElementById('ZKrepegNameAdm').value=ZKrepegName;
+        document.getElementById('ZKrepegAdm').value=ZKrepeg;
+        document.getElementById('ZKrepegprAdm').value=ZKrepegpr;
+
+        document.getElementById('ZBetonFundNameAdm').value=ZBetonFundName;
+        document.getElementById('ZBetonFundAdm').value=ZBetonFund;
+        document.getElementById('ZBetonFundprAdm').value=ZBetonFundpr;
+
+        document.getElementById('ZBetonM400NameAdm').value=ZBetonM400Name;
+        document.getElementById('ZBetonM400Adm').value=ZBetonM400;
+        document.getElementById('ZBetonM400prAdm').value=ZBetonM400pr;
+
+        document.getElementById('ZMikserNameAdm').value=ZMikserName;
+        document.getElementById('ZMikserAdm').value=ZMikser;
+        document.getElementById('ZMikserprAdm').value=ZMikserpr;
+
+        document.getElementById('ZNasosNameAdm').value=ZNasosName;
+        document.getElementById('ZNasosAdm').value=ZNasos;
+        document.getElementById('ZNasosprAdm').value=ZNasospr;
+
+        document.getElementById('ZDostavkaRachodNameAdm').value=ZDostavkaRachodName;
+        document.getElementById('ZDostavkaRachodAdm').value=ZDostavkaRachod;
+        document.getElementById('ZDostavkaRachodprAdm').value=ZDostavkaRachodpr;
+
+        document.getElementById('ZDostavkaPenoplNameAdm').value=ZDostavkaPenoplName;
+        document.getElementById('ZDostavkaPenoplAdm').value=ZDostavkaPenopl;
+        document.getElementById('ZDostavkaPenoplprAdm').value=ZDostavkaPenoplpr;
+
+        document.getElementById('ZDostavkaPilomatNameAdm').value=ZDostavkaPilomatName;
+        document.getElementById('ZDostavkaPilomatAdm').value=ZDostavkaPilomat;
+        document.getElementById('ZDostavkaPilomatprAdm').value=ZDostavkaPilomatpr;
+
+        document.getElementById('ZUhodFundNameAdm').value=ZUhodFundName;
+        document.getElementById('ZUhodFundAdm').value=ZUhodFund;
+        document.getElementById('ZUhodFundprAdm').value=ZUhodFundpr;
+
+        document.getElementById('ZDostavkaArmNameAdm').value=ZDostavkaArmName;
+        document.getElementById('ZDostavkaArmAdm').value=ZDostavkaArm;
+        document.getElementById('ZDostavkaArmprAdm').value=ZDostavkaArmpr;
+
+        document.getElementById('ZLivenNameAdm').value=ZLivenName;
+        document.getElementById('ZLivenAdm').value=ZLiven;
+        document.getElementById('ZLivenprAdm').value=ZLivenpr;
+
+        document.getElementById('ZDorabTrNameAdm').value=ZDorabTrName;
+        document.getElementById('ZDorabTrAdm').value=ZDorabTr;
+        document.getElementById('ZDorabTrprAdm').value=ZDorabTrpr;
+
+        document.getElementById('ZUkladkaGeoNameAdm').value=ZUkladkaGeoName;
+        document.getElementById('ZUkladkaGeoAdm').value=ZUkladkaGeo;
+        document.getElementById('ZUkladkaGeoprAdm').value=ZUkladkaGeopr;
+
+        document.getElementById('ZGeo150NameAdm').value=ZGeo150Name;
+        document.getElementById('ZGeo150Adm').value=ZGeo150;
+        document.getElementById('ZGeo150prAdm').value=ZGeo150pr;
+
+        document.getElementById('ZUkladkaDrenagTrNameAdm').value=ZUkladkaDrenagTrName;
+        document.getElementById('ZUkladkaDrenagTrAdm').value=ZUkladkaDrenagTr;
+        document.getElementById('ZUkladkaDrenagTrprAdm').value=ZUkladkaDrenagTrpr;
+
+        document.getElementById('ZDrenagTr110NameAdm').value=ZDrenagTr110Name;
+        document.getElementById('ZDrenagTr110Adm').value=ZDrenagTr110;
+        document.getElementById('ZDrenagTr110prAdm').value=ZDrenagTr110pr;
+
+        document.getElementById('ZMontagKolNameAdm').value=ZMontagKolName;
+        document.getElementById('ZMontagKolAdm').value=ZMontagKol;
+        document.getElementById('ZMontagKolprAdm').value=ZMontagKolpr;
+
+        document.getElementById('ZKolodezNameAdm').value=ZKolodezName;
+        document.getElementById('ZKolodezAdm').value=ZKolodez;
+        document.getElementById('ZKolodezprAdm').value=ZKolodezpr;
+
+        document.getElementById('ZShebObratNameAdm').value=ZShebObratName;
+        document.getElementById('ZShebObratAdm').value=ZShebObrat;
+        document.getElementById('ZShebObratprAdm').value=ZShebObratpr;
+
+        document.getElementById('ZShebObrat2NameAdm').value=ZShebObrat2Name;
+        document.getElementById('ZShebObrat2Adm').value=ZShebObrat2;
+        document.getElementById('ZShebObrat2prAdm').value=ZShebObrat2pr;
+
+        document.getElementById('ZDostavkaTrub2NameAdm').value=ZDostavkaTrub2Name;
+        document.getElementById('ZDostavkaTrub2Adm').value=ZDostavkaTrub2;
+        document.getElementById('ZDostavkaTrub2prAdm').value=ZDostavkaTrub2pr;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         
@@ -99,17 +342,7 @@ $(document).ready(function() {
     });
 
 
-    // $('#but_block_adm_3').click(function () {
-    //     var ZbutovkaAdmv=document.getElementById('ZbutovkaAdm').value;
-
-    //     var strvv=''
-    //     strvv=strvv+'//======== Бытовка металлическая========//'+"\n";
-    //     strvv=strvv+'var Zbutovka='+' '+ZbutovkaAdmv+';'+'//Цена бытовки'+"\n" ;
-    //     strvv=strvv+'var Zbutovkapr='
-
-
-    //      $('#stsx').text(strvv)
-    // });
+    
 
 //=================================================================
 
@@ -374,6 +607,11 @@ $('#drenag').click(function () {
     }
 
 });
+
+  $('.ZenaPoz,.PrPoz').on('input', function(event) {
+    var preg = $(this).val().replace(/[^.\d]+/g,"").replace( /^([^\.]*\.)|\./g, '$1' );
+     $(this).val(preg);
+   });
 
 
  //===== оставляем ввод только цифр и точку в полях ввода данных  =====//

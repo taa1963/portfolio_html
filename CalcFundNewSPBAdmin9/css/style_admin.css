@@ -140,6 +140,9 @@
     font-size:28px ;
     color: #398439;
 }
+.stsx{
+    display: none;
+}
 
 
  /*============== Блок выбора админа редактирование данных  =============*/
@@ -171,15 +174,17 @@
     width: 100%;
     border: none;
     background-color: bisque;
+    padding: 0;
+    margin: 0;
 }
 
 .ZenaPoz{
-    width: 98%;
+    width: 90%;
     border: none;
     text-align: center;
 }
 .PrPoz{
-    width: 98%;
+    width: 90%;
     border: none;
     text-align: center;
 }

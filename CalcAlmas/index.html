@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ПОКУПКА БРИЛЛИАНТА</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="taa">
+
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+   
+
+
+</head>
+<body>
+
+
+
+   <div class="header">
+      
+   </div>
+
+   <div class="container">
+    <div class="block1">
+       
+      
+       
+            <div class="block1_left">
+              <div class="icon_left">
+                 <i class="fa fa-angle-left" id="left1"   aria-hidden="true"> </i>
+            </div>
+               
+
+                <div class="block1_left_video">
+                <video  class="video"  id="video" width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto" webkit-playsinline="" playsinline="" src="video/brilliant.mp4" poster="" muted="">
+                </video>
+                <div class="block1_left_text">
+                       <h3>Выберите бриллиант для вашего украшения <br> по лучшей цене</h3>
+                       <div>
+                          <button class="button_block2"> КУПИТЬ</button>
+                       </div>
+                </div>
+
+            </div>
+             
+            </div>
+
+            <div class="block1_right">
+                <div class="block1_right_img">
+
+                 <div class="icon_lright">
+                    <i class="fa fa-envelope-open-o"  id="envelope-open" aria-hidden="true"></i>
+                 </div>
+                    <img  class="img2"  src="img/fon2.jpg">
+                  
+                    <div class="block1_right_text">
+                           <h3>Оцените ваш бриллиант и выставьте его <br>на продажу на нашей площадке</h3>                         
+                           <div>
+                              <button class="button_block3" id="button_block3"> ОЦЕНИТЬ</button>
+                           </div>                           
+                    </div>  
+                    
+                    <div class="bl2_mail">
+                            <div class="mail_close">
+                                <i class="fa fa-times" aria-hidden="true" id="fa-times"></i>
+                            </div>
+
+                                <h3>Заполните форму для <br> оценки Вашего бриллианта</h3>
+                                <form id="form" class="form1" action="send.php" method="post" >
+                                   
+                        
+                        
+                                    <div class="first">
+                                        <p> <input type="text" class="form_inp"  name="name" id="name" placeholder="Ваше имя*"  size="30" required />
+                                        </p>
+                                    </div>
+
+                       
+                                   
+                                    <div class="first">
+                                        <p> <input type="text" class="form_inp" name="telefon" id="telefon" placeholder="Ваш номер телефона*"  size="30" required />
+                                        </p>
+                                    </div>
+
+                                    <div class="first">
+                                        <p> <input type="text" class="form_inp" name="sertif" id="sertif" placeholder=" № сертификата"  size="30" required />
+                                        </p>
+                                    </div>
+
+                                    <div class="first">
+                                        <p> 
+                                            <textarea class="form_inp" name="detail" id="detail" placeholder=" Дополнительное описание"  size="3000"></textarea>
+                                        </p>
+                                    </div>
+
+                                    <!-- <div class="first">
+                                        <p> <input type="file" class="form_inp" name="file" id="file"  />
+                                        </p>
+                                    </div> -->
+
+                                   
+                        
+                                    <div class="form_button1" id="form_button2">
+                                        <button class="submit" name="insert"  id="btn2" >ОТПРАВИТЬ</button>
+                                    </div>
+
+
+                                </form>
+                    </div>
+
+
+
+                </div>                
+            </div>
+
+         </div>      
+         
+           
+
+         <div class="block3_zakas">
+            <div class="block3_zakas_left">
+
+                <div class="zakas_block">
+                      <h1>Покупка бриллианта:</h1>
+
+                      <div class="zakas_forma">
+                        <h3>Форма бриллианта</h3>
+                        <div class="forma_almaz">
+                            <input type="radio" id="form1" class="form1b" value="1" onclick="form1f(this)" >
+                            <label  for="form1"   class="calc_form1" id="form1_label">
+                                <img src="img/forma/f1a.png" class="formimg" id="formimg1">
+                                <span>Круглый</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_almaz">
+                            <input type="radio" id="form2" class="form1b" value="2" onclick="form1f(this)">
+                            <label  for="form2"   class="calc_form1" id="form2_label">
+                                <img src="img/forma/f2.png" class="formimg" id="formimg2">
+                                <span>Принцесса</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_almaz">
+                            <input type="radio" id="form3" class="form1b" value="3" onclick="form1f(this)">
+                            <label  for="form3"   class="calc_form1" id="form3_label">
+                                <img src="img/forma/f3.png" class="formimg" id="formimg3">
+                                <span>Изумруд</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_almaz">
+                            <input type="radio" id="form4" class="form1b" value="4" onclick="form1f(this)">
+                            <label  for="form4"   class="calc_form1" id="form4_label">
+                                <img src="img/forma/f4.png" class="formimg" id="formimg4">
+                                <span>Овал</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_almaz">
+                            <input type="radio" id="form5" class="form1b" value="5" onclick="form1f(this)">
+                            <label  for="form5"   class="calc_form1" id="form5_label">
+                                <img src="img/forma/f5.png" class="formimg" id="formimg5">
+                                <span>Маркиз</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_almaz">
+                            <input type="radio" id="form6" class="form1b" value="6" onclick="form1f(this)">
+                            <label  for="form6"   class="calc_form1" id="form6_label">
+                                <img src="img/forma/f6.png" class="formimg" id="formimg6">
+                                <span>Груша</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_almaz">
+                            <input type="radio" id="form7" class="form1b" value="7" onclick="form1f(this)">
+                            <label  for="form7"   class="calc_form1" id="form7_label">
+                                <img src="img/forma/f7.png" class="formimg" id="formimg7">
+                                <span>Ашер</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_almaz">
+                            <input type="radio" id="form8" class="form1b" value="8" onclick="form1f(this)">
+                            <label  for="form8"   class="calc_form1" id="form8_label">
+                                <img src="img/forma/f8.png" class="formimg" id="formimg8">
+                                <span>Радиант</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_almaz">
+                            <input type="radio" id="form9" class="form1b" value="9" onclick="form1f(this)">
+                            <label  for="form9"   class="calc_form1" id="form9_label">
+                                <img src="img/forma/f9.png" class="formimg" id="formimg9">
+                                <span>Сердце</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_almaz">
+                            <input type="radio" id="form10" class="form1b" value="10" onclick="form1f(this)">
+                            <label  for="form10"   class="calc_form1" id="form10_label">
+                                <img src="img/forma/f10.png" class="formimg" id="formimg10">
+                                <span>Кушон</span>
+                            </label>
+                        </div>
+                      </div>
+
+                      <div class="zakas_forma2">
+                        <h3>Размер в каратах <span id="spankarat">0.5</span></h3>
+                        <p> 
+                            <i class="fa fa-sort-asc" aria-hidden="true" id="pluskarat"></i>
+                             <input type="text" readonly id="inpkarat" class="inpkarat" value="0.5">  
+                             <i class="fa fa-sort-desc" aria-hidden="true" id="minuskarat"></i> 
+                        </p>                       
+                      </div>  
+                      <div class="zakas_forma3">
+                        <h3>Цвет бриллианта</h3>
+                        <div class="forma_color">
+                            <input type="radio" id="color1" class="color1" value="1" data-color="D"   onclick="color1f(this)" >
+                            <label  for="color1"   class="calc_color1" id="color1_label">
+                                <img src="img/color/z1.png" class="formimg" id="colorimg1">
+                                <span>D</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_color">
+                            <input type="radio" id="color2" class="color1" value="2" data-color="E"  onclick="color1f(this)" >
+                            <label  for="color2"   class="calc_color1" id="color2_label">
+                                <img src="img/color/z2.png" class="formimg" id="colorimg2">
+                                <span>E</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_color">
+                            <input type="radio" id="color3" class="color1" value="3" data-color="F"  onclick="color1f(this)" >
+                            <label  for="color3"   class="calc_color1" id="color3_label">
+                                <img src="img/color/z3a.png" class="formimg" id="colorimg3">
+                                <span>F</span>
+                            </label>
+                        </div>
+                        <div class="forma_color">
+                            <input type="radio" id="color4" class="color1" value="4" data-color="G" onclick="color1f(this)" >
+                            <label  for="color4"   class="calc_color1" id="color4_label">
+                                <img src="img/color/z4.png" class="formimg" id="colorimg4">
+                                <span>G</span>
+                            </label>
+                        </div>
+                        <div class="forma_color">
+                            <input type="radio" id="color5" class="color1" value="5" data-color="H" onclick="color1f(this)" >
+                            <label  for="color5"   class="calc_color1" id="color5_label">
+                                <img src="img/color/z5.png" class="formimg" id="colorimg5">
+                                <span>H</span>
+                            </label>
+                        </div>
+                        <div class="forma_color">
+                            <input type="radio" id="color6" class="color1" value="6" data-color="I" onclick="color1f(this)" >
+                            <label  for="color6"   class="calc_color1" id="color6_label">
+                                <img src="img/color/z6.png" class="formimg" id="colorimg6">
+                                <span>I</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_color">
+                            <input type="radio" id="color7" class="color1" value="7" data-color="J" onclick="color1f(this)" >
+                            <label  for="color7"   class="calc_color1" id="color7_label">
+                                <img src="img/color/z7.png" class="formimg" id="colorimg7">
+                                <span>J</span>
+                            </label>
+                        </div>
+                        <div class="forma_color">
+                            <input type="radio" id="color8" class="color1" value="8" data-color="K" onclick="color1f(this)" >
+                            <label  for="color8"   class="calc_color1" id="color8_label">
+                                <img src="img/color/z8.png" class="formimg" id="colorimg8">
+                                <span>K</span>
+                            </label>
+                        </div>
+
+
+                      </div>  
+
+                      <div class="zakas_forma4">
+                        <h3>Чистота бриллианта</h3>
+                        <div class="forma_purity">
+                            <input type="radio" id="purity1" class="purity1" value="1" data-purity="IF" onclick="purityf(this)" >
+                            <label  for="purity1"   class="calc_color1" id="purity1_label">
+                                <img src="img/purity/h1.png" class="formimg" id="purityimg1">
+                                <span>IF</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_purity">
+                            <input type="radio" id="purity2" class="purity1" value="2" data-purity="VVS1" onclick="purityf(this)" >
+                            <label  for="purity2"   class="calc_color2" id="purity2_label">
+                                <img src="img/purity/h2.png" class="formimg" id="purityimg2">
+                                <span>VVS1</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_purity">
+                            <input type="radio" id="purity3" class="purity1" value="3" data-purity="VVS2" onclick="purityf(this)" >
+                            <label  for="purity3"   class="calc_color2" id="purity3_label">
+                                <img src="img/purity/h3a.png" class="formimg" id="purityimg3">
+                                <span>VVS2</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_purity">
+                            <input type="radio" id="purity4" class="purity1" value="4" data-purity="VS1" onclick="purityf(this)" >
+                            <label  for="purity4"   class="calc_color2" id="purity4_label">
+                                <img src="img/purity/h4.png" class="formimg" id="purityimg4">
+                                <span>VS1</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_purity">
+                            <input type="radio" id="purity5" class="purity1" value="5" data-purity="VS2" onclick="purityf(this)" >
+                            <label  for="purity5"   class="calc_color2" id="purity5_label">
+                                <img src="img/purity/h5.png" class="formimg" id="purityimg5">
+                                <span>VS2</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_purity">
+                            <input type="radio" id="purity6" class="purity1" value="6" data-purity="SI1" onclick="purityf(this)" >
+                            <label  for="purity6"   class="calc_color2" id="purity6_label">
+                                <img src="img/purity/h6.png" class="formimg" id="purityimg6">
+                                <span>SI1</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_purity">
+                            <input type="radio" id="purity7" class="purity1" value="7" data-purity="SI2" onclick="purityf(this)" >
+                            <label  for="purity7"   class="calc_color2" id="purity7_label">
+                                <img src="img/purity/h7.png" class="formimg" id="purityimg7">
+                                <span>SI2</span>
+                            </label>
+                        </div>
+
+                        <div class="forma_purity">
+                            <input type="radio" id="purity8" class="purity1" value="8" data-purity="I1" onclick="purityf(this)" >
+                            <label  for="purity8"   class="calc_color2" id="purity8_label">
+                                <img src="img/purity/h8.png" class="formimg" id="purityimg8">
+                                <span>I1</span>
+                            </label>
+                        </div>
+
+
+
+
+
+                      </div>  
+                      <div class="zakas_forma5">
+                        <h1>Цена: <span id="prisev" class="prisev">000</span><i class="fa fa-rub" aria-hidden="true"></i></h1>
+                        <button class="btnprise" id="btnprise">ЗАКАЗАТЬ ПО ЭТОЙ ЦЕНЕ</button>
+                      </div>
+                      
+                     
+                </div>
+            </div>
+
+            <div class="block3_zakas_right">
+                <div class="icon_lright">
+                    <i class="fa fa-angle-right" aria-hidden="true" id="right2"></i>
+                 </div>
+                 <div class="sakas2">
+                        
+                    <div class="mail_close">
+                        <i class="fa fa-times" aria-hidden="true" id="fa-times3"></i>
+                    </div>
+
+                        <h3>Заполните форму для  заказа <br> бриллианта у нас</h3>
+                        <form id="form" class="form1" action="send2.php" method="post" >
+                           
+                
+                
+                            <div class="first">
+                                <p> <input type="text" class="form_inp"  name="name" id="name" placeholder="Ваше имя*"  size="30" required />
+                                </p>
+                            </div>
+
+               
+                           
+                            <div class="first">
+                                <p> <input type="text" class="form_inp" name="telefon" id="telefon" placeholder="Ваш номер телефона*"  size="30" required />
+                                </p>
+                            </div>
+
+                            <div class="first">
+                                <p> <textarea class="form_inp" name="detail" id="detail" placeholder="Детали заказа" size="3000"></textarea>
+                                </p>
+                            </div>
+
+                           
+                
+                            <div class="form_button1" id="form_button2">
+                                <button class="submit" name="insert"  id="btn2" >ОТПРАВИТЬ</button>
+                            </div>
+
+
+                        </form>
+           
+
+
+              </div>
+
+            </div>
+
+         
+  
+    </div>
+
+    <div class="block4_text">
+        <div class="block4_text_left">
+            
+                <div class="icon_left">
+                   <i class="fa fa-angle-left" id="left4"   aria-hidden="true"> </i>
+              </div>
+
+        </div>
+
+        <div class="block4_text_right">
+            <div class="block4_text_vn">
+                <h1>ПОКУПКА, ПРОДАЖА, ОЦЕНКА БРИЛЛИАНТОВ</h1>
+                <p>
+                    Бриллианты – украшают не только женщин, но и мужчин. Изделия с данным камнем пользуется большим успехом у
+                     покупателей. И чем выше качество изделия, тем выше его стоимость. Но несмотря на высокую стоимость оценки,
+                      а также на необходимость и наличие камня в жизни каждого, может возникнуть такая ситуация, что придется с
+                       изделием расстаться на всегда или на определенное количество времени. И тогда возникает вопрос, кто может 
+                       купить бриллианты в Москве.
+                </p>
+
+                <p>
+                    Обращаться к непроверенным покупателям нет смысла, так как может произойти масса неожиданностей и 
+                    тогда и изделия не будет и денег.Понимая, всю важность продажи бриллиантов, наша компания создала ломбард
+                     бриллиантов, где гарантирована надежность и качество оказываемых услуг
+                </p>
+                <p>
+                    В нашей компании производится скупка бриллиантов, покупка изделий по выгодной стоимости для клиентов.
+                </p>
+                <h2>Преимущества обращения в нашу компанию</h2>
+                <ul>
+                    <li>Наша компания длительное время работает на рынке предоставления услуг, тем самым мы предлагаем более выгодные условия сотрудничества;</li>
+                    <li>Стоимость бриллианта у нас выгодная, тем самым клиент получает большее количество необходимых финансовых средств;</li>
+                    <li>Покупка бриллиантов производится у владельца изделия при предоставлении необходимых документов подтверждающих личность 
+                        владельца. При приеме изделия и в случае возникновения сомнений о принадлежности изделия, сотрудник ломбарда вправе 
+                        затребовать документ, свидетельствующий о его появлении;</li>
+                    <li>При сравнении стоимость кольца с бриллиантами, цена при его приеме выше, чем у других компании. Тем самым клиент может получить больше денег за его продажу.</li>    
+                </ul>
+
+                <p>Работая на территории населенного пункта, мы готовы оказать услуги в течение 7 дней, без перерыва и выходных.</p>
+
+                <h2>Правила работы компании</h2>
+                <p>Для того чтобы у посещающих нас клиентов не было вопросов о надежности сотрудничества с юридической стороны, мы предлагаем ознакомиться с договором о сотрудничестве, оформленным с соблюдением всех правил с юридической точки зрения.</p>
+                 
+                <h2>При скупке драгоценных металлов мы работаем:</h2>
+                <ul>
+                   <li>С изделиями, изготовленными из золота;</li>
+                   <li>Изделия из серебра и столового серебра;</li>
+                   <li>Скупка бриллиантов.</li>
+                  
+                </ul>
+                <p>При необходимости покупки или продажи изделий с бриллиантами, оценочная стоимость производится абсолютно бесплатно.
+                    После ее проведения, клиент вправе принять или отказаться от предложения и цены.<br>
+                    При сдаче изделия на биржу бриллиантов, стоит ознакомиться с правилами приема и получения изделия.
+                 </p>
+                 <ul>
+                    <li>Изделие в ломбард сдается надлежащего качества. 
+                    При обнаруженной поломке на изделие (замок на сережке или цепочке) стоимость приема за грамм снижается;
+                    </li>
+                    <li>Стоимость приемки изделий с бриллиантами оценивается профессиональным сотрудником, который оценивает количество карат, и гранение камня;</li>
+                    <li>В ломбард принимаются изделия при наличии документа подтверждающего личность;</li>
+                    <li>Сроки хранения в ломбарде устанавливаются индивидуально для каждого клиента. Как правило, они составляют 30 дней. Вторые 30 дней процент за хранение начисляется в большем объеме, а при не обращении клиента на 61 день в ломбард за выкупом, изделие может быть продано без предупреждений.</li>
+                 </ul>
+
+                 <p>Для сотрудничества достаточно связаться с нами по контактному номеру телефона или оставить заявку на сайте компании.</p>
+
+
+            </div>
+
+        </div>
+
+
+    </div>    
+
+    </div>
+
+
+
+
+       <script src="js/jquery.min.js"></script>
+       <script src="js/calculator.js"></script>
+       <!-- <script src="data.js"></script> -->
+      <script>document.write('<script src="data.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>')</script>
+        <script src="js/skriptprint.js"></script>
+
+
+
+</body>
+</html>

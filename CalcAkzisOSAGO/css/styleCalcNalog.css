@@ -1,0 +1,432 @@
+
+
+
+/*		Описание блока калькулятора и его компонент		*/
+
+
+.calculator{
+	display: block;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin-top: 25px;
+    background-color: #ffffff;
+    background: #ebebeb;
+}
+
+.calculator_titel {
+    font-size: 1.5em;
+    text-transform: uppercase; 
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #333333;
+    margin: 0 0 40px 0;
+    line-height: 25px;
+}
+
+
+
+.block_calc{
+  display: block;
+  width: 100%;
+  background: #ebebeb;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+.block_calc_left{
+    display: block;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.bloc_titel{
+    font-size: 0.8em;
+    text-transform: uppercase; 
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #333333;   
+}
+
+
+
+ 
+
+ .calc_nalog_btn2{
+    display: block;
+    opacity: 0.5;
+    width: 100%;
+    margin: 0 auto;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    background-color: #3498db;
+    padding: 10px 20px;
+    font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    border-radius: 5px;   
+ }
+
+ .calc_nalog_btn3{
+  display: block;
+  opacity: 0.5;
+  width: 100%;
+  margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  background-color: #3498db;
+  padding: 10px 20px;
+  font: 20px 'Open Sans', Tahoma, Verdana, Segoe, sans-serif;
+  color: #fff;
+  border-radius: 5px;   
+}
+
+
+
+ .calculator_nalog_block2{
+   display: block;   
+    width: 70%;
+    margin: 0 auto;
+}
+
+.calculator_nalog_block3{
+  display: none;   
+    width: 70%;
+    margin: 0 auto;
+}
+
+.inpmoto{
+    display: block;
+}
+
+
+.inpmotoselect{
+    display: none;
+}
+
+  .typeavtoselectn{
+    display: block;
+    background-color: #fff;
+    width: 80%;
+  }
+  .tupecla_block{
+    display: block;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tupecl_blockv{
+    display: block;
+    background-color: #fff;
+  }
+
+  .tupeckp{
+    padding-left: 5px;
+  }
+  .tupeckl{
+    padding-left: 5px;
+  }
+
+
+.tupeavtoln{
+    display: block;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+ .tupeavtomkron{
+    display: none;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+
+ }
+
+ .tupeavtotraktorn{
+    display: none;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+ }
+
+ .tupeavtogrusn{
+    display: none;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+ }
+
+ .tupeavtomotozn{
+    display: none;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+
+ }
+
+ .typeclsel{
+    display: block;
+    width: 80%;
+ }
+
+ .personresidencen{   
+  width: auto;
+  /* background-color: #fff; */
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  margin-left: 10px;
+ }
+
+ .personresidence{   
+  width: auto;
+  background-color: #fff; 
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  margin-left: 10px;
+ }
+
+ .residenceseln{
+  background-color: #fff;
+  width: 80%;
+ }
+
+ .citin{
+  background-color: #fff;
+  width: 80%;
+ }
+
+ /* input box in default state */
+.tcalInput {
+    background: url('../img/cal.gif') 100% 50% no-repeat;
+    padding-right: 20px;
+    cursor: pointer;
+    background-color:#ffffff;
+}
+
+/* additional properties for input boxe in activated state, above still applies unless in conflict */
+.tcalActive {
+    background-image: url('../img/no_cal.gif');
+}
+/* container of calendar's pop-up */
+#tcal {
+    position: absolute;
+    visibility: hidden;
+    z-index: 100;
+    width: 170px;
+    background-color:#ffffff;
+    margin-top: 2px;
+    padding: 0 2px 2px 2px;
+    border: 1px solid silver;
+
+    -moz-box-shadow: 3px 3px 4px silver;
+    -webkit-box-shadow: 3px 3px 4px silver;
+    box-shadow: 3px 3px 4px silver;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='silver')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='silver');
+}
+
+/* table containing navigation and current month */
+#tcalControls {
+    border-collapse: collapse;
+    border: 0;
+    width: 100%;
+}
+#tcalControls td {
+    border-collapse: collapse;
+    border: 0;
+    padding: 0;
+    width: 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+#tcalControls th {
+    border-collapse: collapse;
+    border: 0;
+    padding: 0;
+    line-height: 25px;
+    font-size: 10px;
+    text-align: center;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+#tcalPrevYear { background-image: url('../img/prev_year.gif'); }
+#tcalPrevMonth { background-image: url('../img/prev_mon.gif'); }
+#tcalNextMonth { background-image: url('../img/next_mon.gif'); }
+#tcalNextYear { background-image: url('../img/next_year.gif'); }
+
+/* table containing week days header and calendar grid */
+#tcalGrid {
+    border-collapse: collapse;
+    border: 1px solid silver;
+    width: 100%;
+}
+#tcalGrid th {
+    border: 1px solid silver;
+    border-collapse: collapse;
+    padding: 3px 0;
+    text-align: center;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 10px;
+    background-color: gray;
+    color: white;
+}
+#tcalGrid td {
+    border: 0;
+    border-collapse: collapse;
+    padding: 2px 0;
+    text-align: center;
+    font-family: Tahoma, Geneva, sans-serif;
+    width: 14%;
+    font-size: 11px;
+    cursor: pointer;
+}
+#tcalGrid td.tcalOtherMonth { color: silver; }
+#tcalGrid td.tcalWeekend { background-color: #ACD6F5; }
+#tcalGrid td.tcalToday { border: 1px solid red; }
+#tcalGrid td.tcalSelected { background-color: #FFB3BE; }
+
+ .avarblock{
+    display: none;
+ }
+ .strahovkablockn{
+    display: none;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .strahovkablock1{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+ }
+
+ .strahovkablock2{
+    display: block;
+
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+ }
+
+
+ .databloc{
+    display: block;
+    float: left;
+    width: max-content;
+    border: 1px solid #000;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+ }
+
+ .databloc2{
+    display: block;
+    background-color: #ebebeb;
+    float: left;
+    width: max-content;
+    border: 1px solid #000;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+ }
+
+ .databloc2cp{
+    margin-left: 5px;
+    color: #f60;
+ }
+
+ .calculator_nalog_block_itog{
+    display: none;
+  width: 70%;
+  margin: 0 auto;
+ }
+ .block_calc_itog{
+    display: block;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+ }
+ .blockp1itog1{
+    display: block;
+    width: 50%;
+    float: left;
+ }
+ .blockp1itog2{
+    display: block;
+    width: 50%;
+    float: right;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+ }
+
+ .block_active{
+    display: block;
+ }
+
+ .block_close{
+    display: none;
+ }
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    .blockp2{
+        position: relative;
+        font-size: 0.9em;
+        text-align: left;  
+        margin-bottom: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: #333333;  
+        bottom: 0px;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+      
+    }
+    
+  }
+

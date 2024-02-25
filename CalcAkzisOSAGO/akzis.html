@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор Акцизы </title>
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор Акциз, ОСАГО">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/styleCalcAkzis.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!--<БЛОК КАЛЬКУЛЯТОРА АКЦИЗОВ-->
+
+    <div class="container akzis">
+        <div class="calculator_akzis" id="calculatorakzis">
+            <div class="calculator_titel">Акцизы на импорт авто  ОНЛАЙН КАЛЬКУЛЯТОР
+            </div>
+            <div class="row">
+
+                <div class="col-sm-12 col-xs-12 col-md-12 ">
+                    <div class="calculator_block_titel">Выберите тип автомобиля:</div>
+                </div>
+
+                <div class="col-sm-12 col-xs-12 col-md-12 ">
+                    <div class="calculator_block_typeavto">                     
+
+                        <div class="typeavtos">
+                            <div class="typeavto">
+                                <input type="radio" id="typeavtoli1"  class="typeavtoli" name="typeavtoli" value="1" >
+                                <label for="typeavtoli1">Мотоцикл</label>
+                            </div>
+
+                            <div class="typeavto">
+                                <input type="radio" id="typeavtoli2"  class="typeavtoli" name="typeavtoli" value="2">
+                                <label for="typeavtoli2">Легковой автомобиль</label>
+                            </div>
+
+                            <div class="typeavto">
+                                <input type="radio" id="typeavtoli3"  class="typeavtoli" name="typeavtoli" value="3">
+                                <label for="typeavtoli3">Грузовой автомобиль</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-xs-12 col-md-12 ">
+                    <div class="calculator_block_motor">                     
+                        <div class="calculator_block_titel">Укажите тип мотора:</div>
+                        <div class="motors">
+                            <div class="motor">
+                                <input type="radio" id="motorli1"  class="motorli" name="motorli" value="1" >
+                                <label for="motorli1">дизель</label>
+                            </div>
+
+                            <div class="motor">
+                                <input type="radio" id="motorli2"  class="motorli" name="motorli" value="2">
+                                <label for="motorli2">бензин</label>
+                            </div>
+
+                            <div class="motor">
+                                <input type="radio" id="motorli3"  class="motorli" name="motorli" value="3">
+                                <label for="motorli3">гибрид</label>
+                            </div>
+                            <div class="motor">
+                                <input type="radio" id="motorli4"  class="motorli" name="motorli" value="4">
+                                <label for="motorli4">электромобиль</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-xs-12 col-md-12 ">
+                    <div class="calculator_block_gibrid  gibrid_tupe_block">                     
+                        <div class="calculator_block_titel">Тип гибридной установки:</div>
+                        <div class="gibrids">
+                            
+                            <div class="gibrid">
+                                <input type="radio" id="gibridli1"  class="gibridli" name="gibridli" value="1" >
+                                <label for="gibridli1">Плагин-гибрид</label>
+                            </div>
+
+                            <div class="gibrid">
+                                <input type="radio" id="gibridli2"  class="gibridli" name="gibridli" value="2">
+                                <label for="gibridli2">Полный гибрид</label>
+                            </div>
+
+                            <div class="gibrid">
+                                <input type="radio" id="gibridli3"  class="gibridli" name="gibridli" value="3">
+                                <label for="gibridli3">Мягкий гибрид </label>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-xs-12 col-md-12 ">
+                    <div class="calculator_block_typetop gibrid_typetop_block">                     
+                        <div class="calculator_block_titel">Тип топлива:</div>
+                        <div class="typetops">
+                            
+                            <div class="typetop">
+                                <input type="radio" id="typetopli1"  class="typetopli" name="typetopli" value="1" >
+                                <label for="typetopli1">дизель</label>
+                            </div>
+
+                            <div class="typetop">
+                                <input type="radio" id="typetopli2"  class="typetopli" name="typetopli" value="2">
+                                <label for="typetopli2">бензин</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-xs-12 col-md-12 ">
+                    <div class="calculator_block_param_akzis">                     
+                        <div class="calculator_block_titel">Введите технические характеристики автомобиля:</div>
+
+                        <div class="param_akzis_form">
+                            <div class="param_akzis_form_block">
+                                <div class="row">
+                                <div class="col-sm-12 col-xs-4 col-md-4 ">
+                                <p class="form_block_text">Возраст автомобиля </p> 
+                                </div>
+                                <div class="col-sm-12 col-xs-8 col-md-8 ">
+                                <select class="form_block_param" id="ageakzis">
+                                    <option value="2">0-2 года</option>
+                                    <option value="3">3-4 года</option>
+                                    <option value="5">5-6 лет</option>
+                                    <option value="7">7 лет</option>
+                                    <option value="8">8 лет</option>
+                                    <option value="9">9 лет</option>
+                                    <option value="10">10 лет</option>
+                                    <option value="11">11 лет</option>
+                                    <option value="12">12 лет</option>
+                                    <option value="13">13 лет</option> 
+                                    <option value="14">14 лет</option>
+                                    <option value="15">15 лет</option>
+                                    <option value="16">16 лет</option>
+                                    <option value="17">17 лет</option>
+                                    <option value="18">18 лет</option>
+                                    <option value="19">19 лет</option>
+                                    <option value="20">свыше 20 лет</option> 
+
+                                </select>
+                                </div>
+                            </div>
+                            </div>    
+                            
+                            
+                            <div class="param_akzis_form_block volumeakzis_block ">
+                                <div class="row">
+                                <div class="col-sm-12 col-xs-4 col-md-4 ">
+                                <p class="form_block_text">объём двигателя </p> 
+                                </div>
+                                <div class="col-sm-12 col-xs-8 col-md-8 ">
+                                    <input class="form_block_param  paraminp" type="text" placeholder="см.куб" id="volumeakzis" value="">
+                               
+                                </div>
+                              </div>         
+                            </div>  
+
+
+                            <div class="param_akzis_form_block massakzis_block ">
+                                <div class="row">
+                                <div class="col-sm-12 col-xs-4 col-md-4 ">
+                                <p class="form_block_text">разрешенная максимальная масса </p> 
+                                </div>
+                                <div class="col-sm-12 col-xs-8 col-md-8 ">
+
+                                    <select class="form_block_param" id="massakzis">>
+                                        <option value="1">0-3500 кг</option>
+                                        <option value="2">3501-12000 кг</option>
+                                        <option value="3">от 12000 кг</option>
+                                    </select>
+                               
+                                </div>
+                              </div>         
+                            </div>  
+
+
+
+                            <div class="param_akzis_form_block">
+                                <div class="row">
+                                <div class="col-sm-12 col-xs-4 col-md-4 ">
+                                <p class="form_block_text">цена </p> 
+                                </div>
+                                <div class="col-sm-12 col-xs-8 col-md-8 ">
+                                    <input class="form_block_param  paraminp" type="text" id="prisev" placeholder="Введите цену">
+                               
+                                </div>
+                              </div>         
+                            </div>  
+
+                            <div class="param_akzis_form_block">
+                                <div class="row">
+                                <div class="col-sm-12 col-xs-12 col-md-12 ">
+                                    <button class="calc_akzis_btn" id="calc_akzis_btn1" type="button">РАСЧИТАТЬ</button>
+                                                            
+                                </div>
+                               </div>         
+                            </div> 
+                        </div>     
+                      
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-xs-12 col-md-12 ">
+                    <div class="calculator_block_itog" id="calculator_block_itog">                     
+                        <div class="calculator_block_titel">ИТОГО</div>
+                        <div class="param_akzis_form">
+
+                                                       
+                            <div class="itog_block">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel">Возраст автомобиля</p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2"><span id="jarev"></span></p>
+                                </div>  
+                            </div>
+                            </div> 
+
+                            <div class="itog_block volumeakzis_itog_block ">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel">объём двигателя </p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2"><span id="volumeakzisvv"></span> &nbsp;cm3</p>
+                                </div>  
+                            </div>
+                            </div>  
+
+                            <div class="itog_block">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel">цена  </p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2"><span id="prisevv"></span> &nbsp;лей</p>
+                                </div>  
+                            </div>
+                            </div> 
+
+                            <div class="itog_block massitog">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel">разрешенная максимальная масса  </p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2"><span id="massvv"></span> </p>
+                                </div>  
+                            </div>
+                            </div> 
+
+
+                            
+                            <div class="itog_block">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel">Сумма акцизных сборов  </p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2"><span id="akzisvv"></span> &nbsp;лей</p>
+                                </div>  
+                            </div>
+                            </div>  
+                            
+                            <div class="itog_block roskoh">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel">Акциз на роскошь  </p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2"><span id="roskohvv"></span> &nbsp;лей</p>
+                                </div>  
+                            </div>
+                            </div>  
+
+                            <div class="itog_block nsdmoto">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel" id="nds">НДС  </p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2 "><span id="ndsvv"></span> &nbsp;лей</p>
+                                </div>  
+                            </div>
+                            </div>  
+
+
+
+
+                            <div class="itog_block">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel">Сбор за осуществление таможенных процедур  </p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2"><span id="tamogvv"></span> &nbsp;лей</p>
+                                </div>  
+                            </div>
+                            </div>  
+
+                            <div class="itog_block">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel">ВСЕГО таможенные расходы  </p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2"><span id="tamogallvv"></span> &nbsp;лей</p>
+                                </div>  
+                            </div>
+                            </div>  
+
+                            <div class="itog_block">
+                                <div class="row">
+                                <div class="col-sm-8 col-xs-8 col-md-8 "> 
+                                    <p class="itogtitel">ВСЕГО за автомобиль  </p>
+                                </div>   
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <p class="itogtitel2"><span id="priseavtoallvv"></span> &nbsp;лей</p>
+                                </div>  
+                            </div>
+                            </div> 
+
+                        
+                            <div class="itog_block">
+                                <div class="row">
+                                <div class="col-sm-4 col-xs-4 col-md-4 ">                                    
+                                </div> 
+
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <button class="calc_akzis_btn" id="calc_akzis_btn2" type="button">НОВЫЙ РАСЧЕТ</button>
+                                </div> 
+
+                                <div class="col-sm-4 col-xs-4 col-md-4 "> 
+                                    <button class="calc_akzis_btn" id="calc_akzis_btn3" type="button">ИСПРАВИТЬ</button>
+                                </div> 
+                            </div>
+                            </div> 
+                        </div>        
+                      
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/scriptsCalcAkzis.js" ></script>
+<script src="js/DataAkzis.js" ></script>
+
+
+</html>

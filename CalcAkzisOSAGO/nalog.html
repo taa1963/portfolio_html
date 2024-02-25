@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Калькулятор дорожного налога</title>
+    <meta name="author" content="taa">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="Калькулятор ОСАГО">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styleCalcNalog.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<!--<данный блок нужно интегрировать в ваш сайт-->
+<div class="container">
+    <div class="calculator">
+
+<div class="calculator_titel">Калькулятор дорожного налога</div>
+
+ 
+
+
+
+   <div class="calculator_nalog_block2" id="calculator_nalog_block2">
+       
+       <div class="block_calc" >
+        <div class="row">
+            
+          
+
+          <div class="col-sm-12 col-xs-12 col-md-12 ">
+            <div class="block_calc_left">
+                <div class="bloc_titel">1. Введите данные автомобиляе</div>
+            <p class="blockp1">Тип транспортного средства"  </p>
+           
+             <select class="typeavtoselectn" id="typevtoselec2n" >
+                <option value="1">Легковой атомобиль</option>
+                <option value="2">Автобус/Микроавтобус</option>
+                <option value="3">Трактор</option>
+                <option value="4">Грузовой автомобиль</option>
+                <option value="5">Мотоцикл</option>
+             </select>
+            </div> 
+        </div> 
+
+    </div>
+
+    <div class="tupeavtoln">   
+         <div class="row">         
+
+                <div class="col-sm-6 col-xs-6 col-md-6 ">
+                    <p class="blockp1"> Объём двигателя (см3):</p>
+                    <input type="text" value="" id="inptupeavtol1n"> <span>см3</span>
+
+                </div>
+                <div class="col-sm-6 col-xs-6 col-md-6 ">
+                    <p class="blockp1"> Разрешенная максимальная масca (кг):</p>
+                    <input type="text" value="" id="inptupeavtol2n"> <span>кг</span>
+                </div>
+         </div> 
+    </div> 
+
+    <div class="tupeavtomkron">   
+        <div class="row">         
+
+               <div class="col-sm-6 col-xs-6 col-md-6 ">
+                   <p class="blockp1"> Количество мест</p>
+                   <input type="text" value="" id="numberseats1n"> <span>мест</span>
+
+               </div>
+               <div class="col-sm-6 col-xs-6 col-md-6 ">
+                   <p class="blockp1"> Разрешенная максимальная масca (кг):</p>
+                   <input type="text" value="" id="inptupeavtomikron"> <span>кг</span>
+               </div>
+        </div> 
+   </div> 
+
+   <div class="tupeavtotraktorn">   
+    <div class="row">         
+
+           <div class="col-sm-6 col-xs-6 col-md-6 ">
+               <p class="blockp1"> Мощность двигателя</p>
+               <input type="text" value="" id="traktorlsn"> <span>л.c</span>
+
+           </div>
+           
+      </div> 
+   </div> 
+    
+   <div class="tupeavtogrusn">   
+    <div class="row">         
+
+           <div class="col-sm-6 col-xs-6 col-md-6 ">
+               <p class="blockp1"> Общая масса</p>
+               <input type="text" value="" id="gruskgn"> <span>кг</span>
+
+           </div>
+           
+      </div> 
+   </div> 
+
+   <div class="tupeavtomotozn">   
+    <div class="row">         
+
+           <div class="col-sm-6 col-xs-6 col-md-6 ">
+               <p class="blockp1"> Объём двигателя (см3)</p>
+               <input type="text" value="" id="vmotozn"> <span>см3</span>
+
+           </div>
+           
+      </div> 
+   </div> 
+        </div>
+
+        <div class="block_calc" >
+            <div class="row">
+                
+              
+    
+              <div class="col-sm-12 col-xs-12 col-md-12 ">
+                <div class="block_calc_left">
+                    
+                <p class="blockp1">Владелец транспортного средства является  </p>              
+                
+                </div> 
+            </div> 
+    
+        </div>
+    
+        <div class="tupecla_block">   
+             <div class="row">         
+    
+                    <div class="col-sm-6 col-xs-6 col-md-6 ">
+                        <div class="tupecl_blockv"> 
+                        <p class="tupeckp"><input id="fisl"   type="radio" name="typeclv" value="1"><label class="tupeckl" for="fisl">Физическое лицо</label></p>
+                        </div>    
+                    </div>
+
+                    <div class="col-sm-6 col-xs-6 col-md-6 ">
+                        <div class="tupecl_blockv"> 
+                        <p class="tupeckp"><input id="url"   type="radio" name="typeclv" value="2"><label class="tupeckl" for="url">Юридическое лицо </label></p>
+                        </div>
+                    </div>
+             </div> 
+        </div> 
+    
+        
+      
+    
+      
+        </div>
+
+        <div class="block_calc" >
+      
+     
+            <div class="personresidencen">   
+                <div class="row">    
+                    <div class="col-sm-12 col-xs-12 col-md-12 ">
+                        <div class="block_calc_left">
+                            
+                        <p class="blockp1">Место жительства владельца   </p>              
+                        
+                        </div> 
+                    </div>      
+        
+                       <div class="col-sm-6 col-xs-6 col-md-6 ">
+                           
+                           <select class="residenceseln" id="residenceseln">
+                            <option value="0" disabled="" selected="">Выберите район</option>
+                           
+    
+                           </select>
+                          
+        
+                       </div>
+                       <div class="col-sm-6 col-xs-6 col-md-6 ">
+                          
+                           <select class="citin" id="citin">
+                            <option value="0" disabled="" selected="">Выберите город</option>
+                           </select>                       
+                       </div>
+                </div> 
+           </div> 
+        </div>   
+   
+      
+
+
+   
+   <div class="block_calc" >
+    <div class="row">
+        
+       <div class="col-sm-12 col-xs-12 col-md-12 ">
+        <button  disabled="false" class="calc_nalog_btn2" id="calc_nalog_btn2" type="button">РАСЧИТАТЬ</button>
+       </div>
+
+     
+
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="calculator_nalog_block3" id="calculator_nalog_block3">
+   
+
+    <div class="block_calc" >
+        <div class="row">
+            
+           <div class="col-sm-12 col-xs-12 col-md-12 ">
+             <div class="block_calc_left">
+                <div class="bloc_titel">2. Дополнительные данные для страхования ОСАГО</div>
+                
+             </div>
+           </div>          
+
+        </div>
+     
+        <div class="personresidencen">   
+            <div class="row">    
+                <div class="col-sm-6 col-xs-6 col-md-6 ">
+                    <p class="blockp1">Дата начала действия ОСАГО</p>
+                    <div><input type="text" name="date" id="date1" class="tcal" value="" /></div>
+                                          
+                </div>     
+    
+                   <div class="col-sm-6 col-xs-6 col-md-6 ">
+                       <p class="blockp1"> Стаж вождения владельца:</p>
+                       <select class="residenceseln" id="experiencen">
+                        <option  disabled selected value="0">Выберите</option>
+                        <option value="1">До 1 года</option>
+                        <option value="2">1 год</option>
+                        <option value="3">2 года</option>
+                        <option value="4">3 года</option>
+                        <option value="5">4 года</option>
+                        <option value="6">5 лет</option>
+                        <option value="7">6 лет</option>
+                        <option value="8">7 лет</option>
+                        <option value="9">8 лет</option>
+                        <option value="10">9 лет</option>
+                        <option value="11">10 лет</option>
+                        <option value="12">11 лет</option>
+                        <option value="13">12 лет</option>
+                        <option value="14">13 лет</option>
+                        <option value="15">14 лет</option>
+                        <option value="16">более 15 лет</option>
+
+
+                       </select>
+                      
+    
+                   </div>
+                  
+            </div> 
+       </div> 
+     
+       <div class="personresidencen">   
+        <div class="row">         
+
+               <div class="col-sm-6 col-xs-6 col-md-6 ">
+                   <p class="blockp1"> Была ли у вас раньше страховка ОСАГО?</p>
+                   <select class="residenceseln" id="strahovkan">
+                    <option value="0" selected>Выберите</option>
+                    <option value="1">да</option>
+                    <option value="2">нет</option>
+                   </select>
+               </div>
+               <div class="col-sm-6 col-xs-6 col-md-6 ">
+                   <div class="avarblock">
+                   <p class="blockp1">В скольких ДТП вы виноваты?</p><br> 
+                   
+                   
+                  <select class="residenceseln" id="avarn">
+                    <option value="0" disabled selected>Выберите</option>
+                    <option value="1">Не был(а)</option>
+                    <option value="2">1</option>
+                    <option value="3">2</option>
+                    <option value="4">3</option>
+                    <option value="5">более 3</option>
+                   </select>
+                </div>
+                                         
+               </div>
+               <div class="col-sm-12 col-xs-12 col-md-12 ">
+                <div class="strahovkablockn">
+                <p class="blockp1">Выберите года, когда у вас была страховка ОСАГО</p>
+                <div class="strahovkablock1">
+                    <p>Вы выбрали</p>
+                </div>
+
+
+                <div class="strahovkablock2">
+                    
+                    
+                </div>
+
+
+              
+             </div>
+                                      
+            </div>
+     </div> 
+        </div> 
+   </div> 
+
+
+
+
+    <div class="block_calc" >
+        <div class="row">
+            
+           <div class="col-sm-12 col-xs-12 col-md-12 ">
+            <button  disabled="false" class="calc_nalog_btn3" id="calc_nalog_btn3" type="button">РАСЧИТАТЬ</button>
+           </div>
+
+         
+
+        </div>
+    </div>  
+
+
+
+   </div>
+
+   <div class="calculator_nalog_block_itog" id="calculator_nalog_block_itog">
+
+    <div class="block_calc_itog" >
+        <div class="row">
+            
+           <div class="col-sm-12 col-xs-12 col-md-12 ">
+            <div class="bloc_titel"></div>
+             <div class="block_calc_left">
+                
+                <p class="blockp1itog1">Страховка ОСАГО </p>
+                <p class="blockp1itog2"><span id="osagozv"></span> lei </p>
+                             
+             </div>
+             <div class="block_calc_left">
+                
+                <p class="blockp1itog1">Использование дорог </p>
+                <p class="blockp1itog2"><span id="osagozv"></span> lei </p>
+                             
+             </div>
+           </div>
+          
+        </div>
+    </div>  
+
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+
+<script src="js/tcal.js" ></script>
+<script src="js/jquery.min.js" ></script>
+<script src="js/scriptsCalcNalog.js" ></script>
+<script src="js/DataNalog.js" ></script>
+
+
+
+
+
+
+</body>
+</html>
